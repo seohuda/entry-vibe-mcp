@@ -33,8 +33,10 @@ export function catalogPath(root?: string): string {
 
 export function mediaDir(root?: string): string {
   const r = root ?? findPackageRoot();
-  // Prefer repo-root vendor even when running from dist/
+  // assets/ ships with the package; vendor/ is only present after fetch:entryjs
   const candidates = [
+    join(r, 'assets', 'media'),
+    join(r, '..', 'assets', 'media'),
     join(r, 'vendor', 'entryjs', 'images', 'media'),
     join(r, '..', 'vendor', 'entryjs', 'images', 'media'),
   ];

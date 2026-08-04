@@ -1,8 +1,9 @@
 import { describe, expect, it, beforeAll } from 'vitest';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractCatalog } from '../scripts/extract-catalog.ts';
+import { searchBlocks } from '../server/catalog-api.ts';
 import type { BlockSchema } from '../src/types/block.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -91,5 +92,59 @@ describe.skipIf(!existsSync(ENTRYJS))('catalog extraction (all v1 categories)', 
     ]) {
       expect(cats.has(c)).toBe(true);
     }
+  });
+});
+
+describe('shipped catalog labels', () => {
+  const blocks = (
+    JSON.parse(readFileSync(join(ROOT, 'catalog', 'blocks.json'), 'utf8')) as {
+      blocks: BlockSchema[];
+    }
+  ).blocks;
+
+  it('resolves a Korean label for the vast majority of blocks', () => {
+    // label.ko === type means no label was found; these are mostly Entry's
+    // block-menu buttons and lecture-only internals.
+    const unlabeled = blocks.filter((b) => b.label.ko === b.type);
+    expect(unlabeled.length).toBeLessThanOrEqual(22);
+  });
+
+  it('labels blocks whose template is only placeholders', () => {
+    // These read "%1 %2 %3" in Lang.template; the words live in Lang.Blocks.
+    expect(byType(blocks, 'calc_rand').label.ko).toContain('무작위');
+    expect(byType(blocks, 'is_clicked').label.ko).toContain('클릭');
+    expect(byType(blocks, 'length_of_string').label.ko).toContain('글자');
+    // Filed under `sound`, but keyed CALC_get_sound_volume in Lang.Blocks
+    expect(byType(blocks, 'get_sound_volume').label.ko).toContain('소리');
+  });
+
+  it('excludes block-menu buttons and function param slots', () => {
+    // basic_button / basic_param are not placeable, and the buttons used to be
+    // reported as hat blocks, so validate accepted them as a thread's opener.
+    for (const type of [
+      'variableAddButton',
+      'listAddButton',
+      'functionAddButton',
+      'messageAddButton',
+      'showFunctionPropsButton',
+      'analizyDataAddButton',
+      'function_field_string',
+    ]) {
+      expect(blocks.some((b) => b.type === type), type).toBe(false);
+    }
+    expect(blocks.every((b) => b.skeleton !== 'basic_button')).toBe(true);
+  });
+
+  it('only marks real event blocks as hats', () => {
+    for (const b of blocks.filter((x) => x.isHat)) {
+      expect(['basic_event', 'basic_create', 'basic_create_value'], b.type).toContain(
+        b.skeleton,
+      );
+    }
+  });
+
+  it('finds those blocks by Korean keyword', () => {
+    expect(searchBlocks('무작위').map((b) => b.type)).toContain('calc_rand');
+    expect(searchBlocks('글자 수').map((b) => b.type)).toContain('length_of_string');
   });
 });

@@ -1,24 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-04T07:12:13.248Z",
+  "generatedAt": "2026-08-04T07:59:16.120Z",
   "blocks": [
-    {
-      "type": "messageAddButton",
-      "category": "start",
-      "label": {
-        "ko": "messageAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
     {
       "type": "when_run_button_click",
       "category": "start",
@@ -2227,7 +2210,7 @@
       "type": "is_clicked",
       "category": "judgement",
       "label": {
-        "ko": "is_clicked"
+        "ko": "마우스를 클릭했는가?"
       },
       "params": [
         {
@@ -2245,7 +2228,7 @@
       "type": "is_object_clicked",
       "category": "judgement",
       "label": {
-        "ko": "is_object_clicked"
+        "ko": "오브젝트를 클릭했는가?"
       },
       "params": [
         {
@@ -2263,7 +2246,7 @@
       "type": "is_press_some_key",
       "category": "judgement",
       "label": {
-        "ko": "is_press_some_key"
+        "ko": "키가 눌러져 있는가?"
       },
       "params": [
         {
@@ -2286,7 +2269,7 @@
       "type": "reach_something",
       "category": "judgement",
       "label": {
-        "ko": "reach_something"
+        "ko": "에 닿았는가?"
       },
       "params": [
         {
@@ -2314,7 +2297,7 @@
       "type": "is_type",
       "category": "judgement",
       "label": {
-        "ko": "is_type"
+        "ko": "(이)가 인가?"
       },
       "params": [
         {
@@ -2474,7 +2457,7 @@
       "type": "boolean_not",
       "category": "judgement",
       "label": {
-        "ko": "boolean_not"
+        "ko": "(이)가 아니다"
       },
       "params": [
         {
@@ -2506,7 +2489,7 @@
       "type": "is_boost_mode",
       "category": "judgement",
       "label": {
-        "ko": "is_boost_mode"
+        "ko": "부스트모드가 켜져 있는가?"
       },
       "params": [
         {
@@ -2628,7 +2611,7 @@
       "type": "calc_rand",
       "category": "calc",
       "label": {
-        "ko": "calc_rand"
+        "ko": "부터 사이의 무작위 수"
       },
       "params": [
         {
@@ -2680,7 +2663,7 @@
       "type": "coordinate_mouse",
       "category": "calc",
       "label": {
-        "ko": "coordinate_mouse"
+        "ko": "마우스 좌푯값"
       },
       "params": [
         {
@@ -2718,7 +2701,7 @@
       "type": "coordinate_object",
       "category": "calc",
       "label": {
-        "ko": "coordinate_object"
+        "ko": "의"
       },
       "params": [
         {
@@ -2781,7 +2764,7 @@
       "type": "quotient_and_mod",
       "category": "calc",
       "label": {
-        "ko": "quotient_and_mod"
+        "ko": "/ 의"
       },
       "params": [
         {
@@ -2906,7 +2889,7 @@
       "type": "choose_project_timer_action",
       "category": "calc",
       "label": {
-        "ko": "choose_project_timer_action"
+        "ko": "초시계"
       },
       "params": [
         {
@@ -2996,7 +2979,7 @@
       "type": "get_date",
       "category": "calc",
       "label": {
-        "ko": "get_date"
+        "ko": "현재"
       },
       "params": [
         {
@@ -3054,7 +3037,7 @@
       "type": "distance_something",
       "category": "calc",
       "label": {
-        "ko": "distance_something"
+        "ko": "까지의 거리"
       },
       "params": [
         {
@@ -3106,7 +3089,7 @@
       "type": "length_of_string",
       "category": "calc",
       "label": {
-        "ko": "length_of_string"
+        "ko": "의 글자 수"
       },
       "params": [
         {
@@ -3140,7 +3123,7 @@
       "type": "reverse_of_string",
       "category": "calc",
       "label": {
-        "ko": "reverse_of_string"
+        "ko": "을(를) 뒤집은 값"
       },
       "params": [
         {
@@ -3174,7 +3157,7 @@
       "type": "combine_something",
       "category": "calc",
       "label": {
-        "ko": "combine_something"
+        "ko": "과(와) 을(를) 합친 값"
       },
       "params": [
         {
@@ -3224,7 +3207,7 @@
       "type": "char_at",
       "category": "calc",
       "label": {
-        "ko": "char_at"
+        "ko": "의 번째 글자"
       },
       "params": [
         {
@@ -3275,7 +3258,7 @@
       "type": "substring",
       "category": "calc",
       "label": {
-        "ko": "substring"
+        "ko": "의 번째 글자부터 번째 글자까지의 글자"
       },
       "params": [
         {
@@ -3343,7 +3326,7 @@
       "type": "count_match_string",
       "category": "calc",
       "label": {
-        "ko": "count_match_string"
+        "ko": "에서 의 글자 수"
       },
       "params": [
         {
@@ -3388,7 +3371,7 @@
       "type": "index_of_string",
       "category": "calc",
       "label": {
-        "ko": "index_of_string"
+        "ko": "에서 의 시작 위치"
       },
       "params": [
         {
@@ -3438,7 +3421,7 @@
       "type": "replace_string",
       "category": "calc",
       "label": {
-        "ko": "replace_string"
+        "ko": "의 을(를) (으)로 바꾼 값"
       },
       "params": [
         {
@@ -3504,7 +3487,7 @@
       "type": "change_string_case",
       "category": "calc",
       "label": {
-        "ko": "change_string_case"
+        "ko": "로 바꾼 값"
       },
       "params": [
         {
@@ -3687,40 +3670,6 @@
       "skeleton": "basic_string_field"
     },
     {
-      "type": "variableAddButton",
-      "category": "variable",
-      "label": {
-        "ko": "variableAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
-      "type": "listAddButton",
-      "category": "variable",
-      "label": {
-        "ko": "listAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "ask_and_wait",
       "category": "variable",
       "label": {
@@ -3753,7 +3702,7 @@
       "type": "get_canvas_input_value",
       "category": "variable",
       "label": {
-        "ko": "get_canvas_input_value"
+        "ko": "대답"
       },
       "params": [
         {
@@ -3804,7 +3753,7 @@
       "type": "get_variable",
       "category": "variable",
       "label": {
-        "ko": "get_variable"
+        "ko": "변수"
       },
       "params": [
         {
@@ -3940,7 +3889,7 @@
       "type": "value_of_index_from_list",
       "category": "variable",
       "label": {
-        "ko": "value_of_index_from_list"
+        "ko": "리스트 항목의 값"
       },
       "params": [
         {
@@ -4145,7 +4094,7 @@
       "type": "length_of_list",
       "category": "variable",
       "label": {
-        "ko": "length_of_list"
+        "ko": "리스트의 길이"
       },
       "params": [
         {
@@ -4173,7 +4122,7 @@
       "type": "is_included_in_list",
       "category": "variable",
       "label": {
-        "ko": "is_included_in_list"
+        "ko": "리스트에 포함되어 있는가?"
       },
       "params": [
         {
@@ -4260,23 +4209,6 @@
       "skeleton": "basic"
     },
     {
-      "type": "functionAddButton",
-      "category": "func",
-      "label": {
-        "ko": "functionAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "function_name",
       "category": "func",
       "label": {
@@ -4292,23 +4224,6 @@
       "statementKeys": [],
       "isHat": false,
       "skeleton": "basic_text"
-    },
-    {
-      "type": "showFunctionPropsButton",
-      "category": "func",
-      "label": {
-        "ko": "showFunctionPropsButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
     },
     {
       "type": "set_func_variable",
@@ -4427,87 +4342,6 @@
       "statementKeys": [],
       "isHat": false,
       "skeleton": "basic_string_field"
-    },
-    {
-      "type": "function_field_label",
-      "category": "func",
-      "label": {
-        "ko": "function_field_label"
-      },
-      "params": [
-        {
-          "key": "NAME",
-          "type": "TextInput",
-          "defaultValue": "이름"
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
-    },
-    {
-      "type": "function_field_string",
-      "category": "func",
-      "label": {
-        "ko": "function_field_string"
-      },
-      "params": [
-        {
-          "key": "PARAM",
-          "type": "Block",
-          "accept": "string",
-          "defaultValue": {
-            "type": "text",
-            "params": [
-              "문자/숫자값"
-            ]
-          }
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
-    },
-    {
-      "type": "function_field_boolean",
-      "category": "func",
-      "label": {
-        "ko": "function_field_boolean"
-      },
-      "params": [
-        {
-          "key": "PARAM",
-          "type": "Block",
-          "accept": "boolean",
-          "defaultValue": {
-            "type": "True",
-            "params": [
-              "판단값"
-            ]
-          }
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
     },
     {
       "type": "function_param_string",
@@ -5008,7 +4842,7 @@
       "type": "get_sound_volume",
       "category": "sound",
       "label": {
-        "ko": "get_sound_volume"
+        "ko": "소리 크기"
       },
       "params": [
         {
@@ -5026,7 +4860,7 @@
       "type": "get_sound_duration",
       "category": "sound",
       "label": {
-        "ko": "get_sound_duration"
+        "ko": "소리의 길이"
       },
       "params": [
         {
@@ -5602,23 +5436,6 @@
       "statementKeys": [],
       "isHat": false,
       "skeleton": "basic"
-    },
-    {
-      "type": "analizyDataAddButton",
-      "category": "analysis",
-      "label": {
-        "ko": "analizyDataAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
     },
     {
       "type": "append_row_to_table",

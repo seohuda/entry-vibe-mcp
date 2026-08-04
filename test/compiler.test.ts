@@ -1,11 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { existsSync, mkdirSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as tar from 'tar';
 import { compileProject, CompileError } from '../compiler/compile.ts';
 import { validateProject } from '../compiler/validate.ts';
 import { packEnt } from '../compiler/pack.ts';
+import { ENTRYBOT_MEDIA_FILES } from '../compiler/skeleton.ts';
+import { mediaDir } from '../src/paths.ts';
 import type { EntryIR } from '../src/types/ir.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -37,6 +39,22 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     const result = validateProject(ir);
     expect(result.valid).toBe(false);
     expect(result.errors.some((e) => e.includes('not_a_real_block'))).toBe(true);
+  });
+
+  it('rejects function definition hats as a script thread opener', () => {
+    // function_create is isHat, but it heads a function definition rather than
+    // an object script, so Entry would not accept it here.
+    const result = validateProject({
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [[{ type: 'function_create' }, { type: 'move_direction' }]],
+        },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('event block'))).toBe(true);
   });
 
   it('rejects threads that do not start with a hat', () => {
@@ -88,6 +106,128 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     expect(body[1].type).toBe('bounce_wall');
   });
 
+  it('gives every object, picture and sound a unique id', () => {
+    const thread = [{ type: 'when_run_button_click' }];
+    const project = compileProject({
+      objects: [
+        { name: 'A', sprite: 'entrybot', scripts: [thread] },
+        { name: 'B', sprite: 'entrybot', scripts: [thread] },
+        { name: 'C', sprite: 'entrybot', scripts: [thread] },
+      ],
+    });
+
+    const ids: string[] = [
+      ...project.scenes.map((s) => s.id),
+      ...project.variables.map((v) => String(v.id)),
+    ];
+    for (const obj of project.objects as Array<Record<string, any>>) {
+      ids.push(obj.id);
+      ids.push(...obj.sprite.pictures.map((p: { id: string }) => p.id));
+      ids.push(...obj.sprite.sounds.map((s: { id: string }) => s.id));
+      // selectedPictureId must point at one of this object's own pictures
+      expect(obj.sprite.pictures.map((p: { id: string }) => p.id)).toContain(
+        obj.selectedPictureId,
+      );
+    }
+
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  it('resolves VARIABLE params from name to the generated variable id', () => {
+    const ir: EntryIR = {
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'set_variable', params: { VARIABLE: '점수', VALUE: 10 } },
+            ],
+          ],
+        },
+      ],
+      variables: [{ name: '점수', initialValue: 0 }],
+    };
+
+    expect(validateProject(ir).valid).toBe(true);
+
+    const project = compileProject(ir);
+    const declared = project.variables.find((v) => v.name === '점수')!;
+    expect(declared).toBeDefined();
+
+    const thread = (project.objects[0].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    const params = thread[1].params as unknown[];
+    expect(params[0]).toBe(declared.id);
+    expect(params[0]).not.toBe('점수');
+  });
+
+  it('rejects references to undeclared variables', () => {
+    const result = validateProject({
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'set_variable', params: { VARIABLE: '없는변수', VALUE: 1 } },
+            ],
+          ],
+        },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('없는변수'))).toBe(true);
+  });
+
+  it('rejects duplicate variable names', () => {
+    const result = validateProject({
+      objects: [
+        { name: 'x', sprite: 'entrybot', scripts: [[{ type: 'when_run_button_click' }]] },
+      ],
+      variables: [
+        { name: '점수', initialValue: 0 },
+        { name: '점수', initialValue: 1 },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('duplicate'))).toBe(true);
+  });
+
+  it('accepts an empty statement slot', () => {
+    const ir: EntryIR = {
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'repeat_basic', params: { VALUE: 2 }, statements: { DO: [] } },
+            ],
+          ],
+        },
+      ],
+    };
+    expect(validateProject(ir)).toEqual({ valid: true, errors: [] });
+
+    const thread = (compileProject(ir).objects[0].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    expect(thread[1].statements).toEqual([[]]);
+  });
+
+  it('still requires top-level script threads to be non-empty', () => {
+    const result = validateProject({
+      objects: [{ name: 'x', sprite: 'entrybot', scripts: [[]] }],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('non-empty'))).toBe(true);
+  });
+
   it('throws CompileError on invalid IR', () => {
     expect(() =>
       compileProject({
@@ -103,34 +243,55 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
   });
 });
 
-describe.skipIf(!existsSync(join(ROOT, 'vendor', 'entryjs', 'images', 'media')))(
-  'ent packing',
-  () => {
-    const outDir = join(ROOT, 'output', 'test');
+describe('ent packing', () => {
+  const outDir = join(ROOT, 'output', 'test');
 
-    it('packs a valid tar.gz .ent with temp/project.json', async () => {
-      mkdirSync(outDir, { recursive: true });
-      const ir = loadIR('entrybot-basic.ir.json');
-      const project = compileProject(ir);
-      const entPath = join(outDir, 'entrybot-basic.ent');
+  it('ships every media file .ent packing requires', () => {
+    // Regression guard: these used to live only in gitignored vendor/, so a
+    // fresh clone or npm install could not compile a .ent at all.
+    for (const file of ENTRYBOT_MEDIA_FILES) {
+      expect(existsSync(join(mediaDir(), file)), file).toBe(true);
+    }
+  });
 
-      await packEnt(project, { outputPath: entPath });
-      expect(existsSync(entPath)).toBe(true);
+  it('packs a valid tar.gz .ent with temp/project.json', async () => {
+    mkdirSync(outDir, { recursive: true });
+    const ir = loadIR('entrybot-basic.ir.json');
+    const project = compileProject(ir);
+    const entPath = join(outDir, 'entrybot-basic.ent');
 
-      const extractDir = join(outDir, 'extract');
-      rmSync(extractDir, { recursive: true, force: true });
-      mkdirSync(extractDir, { recursive: true });
+    await packEnt(project, { outputPath: entPath });
+    expect(existsSync(entPath)).toBe(true);
 
-      await tar.x({ file: entPath, cwd: extractDir });
+    const extractDir = join(outDir, 'extract');
+    rmSync(extractDir, { recursive: true, force: true });
+    mkdirSync(extractDir, { recursive: true });
 
-      const projectJson = join(extractDir, 'temp', 'project.json');
-      expect(existsSync(projectJson)).toBe(true);
-      expect(existsSync(join(extractDir, 'temp', 'media', 'entrybot1.svg'))).toBe(true);
+    await tar.x({ file: entPath, cwd: extractDir });
 
-      const loaded = JSON.parse(readFileSync(projectJson, 'utf8'));
-      expect(typeof loaded.objects[0].script).toBe('string');
-      const script = JSON.parse(loaded.objects[0].script);
-      expect(script[0][0].type).toBe('when_run_button_click');
-    });
-  },
-);
+    const projectJson = join(extractDir, 'temp', 'project.json');
+    expect(existsSync(projectJson)).toBe(true);
+    for (const file of ENTRYBOT_MEDIA_FILES) {
+      expect(existsSync(join(extractDir, 'temp', 'media', file)), file).toBe(true);
+    }
+
+    const loaded = JSON.parse(readFileSync(projectJson, 'utf8'));
+    expect(typeof loaded.objects[0].script).toBe('string');
+    const script = JSON.parse(loaded.objects[0].script);
+    expect(script[0][0].type).toBe('when_run_button_click');
+  });
+
+  it('does not let concurrent packs clobber each other', async () => {
+    mkdirSync(outDir, { recursive: true });
+    const project = compileProject(loadIR('entrybot-basic.ir.json'));
+    const paths = [0, 1, 2, 3].map((i) => join(outDir, `concurrent-${i}.ent`));
+
+    await Promise.all(paths.map((outputPath) => packEnt(project, { outputPath })));
+
+    for (const p of paths) {
+      expect(existsSync(p), p).toBe(true);
+    }
+    // every staging dir must be cleaned up
+    expect(readdirSync(outDir).filter((f) => f.startsWith('.ent-staging-'))).toEqual([]);
+  });
+});

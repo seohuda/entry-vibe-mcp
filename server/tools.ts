@@ -1,5 +1,5 @@
 import { mkdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { basename, join } from 'node:path';
 import { z } from 'zod';
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { compileProject, CompileError } from '../compiler/compile.ts';
@@ -43,6 +43,26 @@ export const entryIRSchema = z.object({
     )
     .optional(),
 });
+
+/**
+ * Resolve a caller-supplied filename to a bare `<stem>.ent` name.
+ * The value comes from the host LLM, so anything that could escape outputDir()
+ * (separators, traversal, absolute paths, NUL) is rejected rather than normalized.
+ */
+export function safeEntFilename(filename?: string): string {
+  const raw = (filename ?? 'entry-project.ent').trim();
+  if (!raw) {
+    throw new Error('filename must not be empty');
+  }
+  if (raw.includes('\0') || raw.includes('/') || raw.includes('\\') || basename(raw) !== raw) {
+    throw new Error(`filename must be a bare name without any path: ${JSON.stringify(filename)}`);
+  }
+  const stem = raw.replace(/\.ent$/i, '');
+  if (!stem || stem === '.' || stem === '..') {
+    throw new Error(`invalid filename: ${JSON.stringify(filename)}`);
+  }
+  return `${stem}.ent`;
+}
 
 function textResult(data: unknown) {
   return {
@@ -132,13 +152,13 @@ export function registerTools(server: McpServer): void {
       },
     },
     async ({ ir, filename }) => {
-      const name = (filename ?? 'entry-project.ent').replace(/\.ent$/i, '') + '.ent';
-      const out = outputDir();
-      mkdirSync(out, { recursive: true });
-      const entPath = join(out, name);
-      const jsonPath = join(out, name.replace(/\.ent$/i, '.project.json'));
-
       try {
+        const name = safeEntFilename(filename);
+        const out = outputDir();
+        mkdirSync(out, { recursive: true });
+        const entPath = join(out, name);
+        const jsonPath = join(out, name.replace(/\.ent$/i, '.project.json'));
+
         const project = compileProject(ir as EntryIR);
         writeProjectJson(project, jsonPath);
         await packEnt(project, { outputPath: entPath });

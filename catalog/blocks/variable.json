@@ -2,40 +2,6 @@
   "category": "variable",
   "blocks": [
     {
-      "type": "variableAddButton",
-      "category": "variable",
-      "label": {
-        "ko": "variableAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
-      "type": "listAddButton",
-      "category": "variable",
-      "label": {
-        "ko": "listAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "ask_and_wait",
       "category": "variable",
       "label": {
@@ -68,7 +34,7 @@
       "type": "get_canvas_input_value",
       "category": "variable",
       "label": {
-        "ko": "get_canvas_input_value"
+        "ko": "대답"
       },
       "params": [
         {
@@ -119,7 +85,7 @@
       "type": "get_variable",
       "category": "variable",
       "label": {
-        "ko": "get_variable"
+        "ko": "변수"
       },
       "params": [
         {
@@ -255,7 +221,7 @@
       "type": "value_of_index_from_list",
       "category": "variable",
       "label": {
-        "ko": "value_of_index_from_list"
+        "ko": "리스트 항목의 값"
       },
       "params": [
         {
@@ -460,7 +426,7 @@
       "type": "length_of_list",
       "category": "variable",
       "label": {
-        "ko": "length_of_list"
+        "ko": "리스트의 길이"
       },
       "params": [
         {
@@ -488,7 +454,7 @@
       "type": "is_included_in_list",
       "category": "variable",
       "label": {
-        "ko": "is_included_in_list"
+        "ko": "리스트에 포함되어 있는가?"
       },
       "params": [
         {

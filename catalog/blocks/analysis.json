@@ -2,23 +2,6 @@
   "category": "analysis",
   "blocks": [
     {
-      "type": "analizyDataAddButton",
-      "category": "analysis",
-      "label": {
-        "ko": "analizyDataAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "append_row_to_table",
       "category": "analysis",
       "label": {

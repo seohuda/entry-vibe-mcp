@@ -4,10 +4,13 @@ import babelTraverse from '@babel/traverse';
 import type { NodePath } from '@babel/traverse';
 import * as t from '@babel/types';
 
-const traverse = babelTraverse as unknown as typeof babelTraverse & ((
-  ast: t.File,
-  visitors: object,
-) => void);
+type TraverseFn = (ast: t.File, visitors: object) => void;
+
+// @babel/traverse is CJS: under Node's ESM loader the default import is the
+// module namespace, so the callable lives on `.default`. Bundlers that apply
+// interop hand back the function directly, hence the fallback.
+const traverse = ((babelTraverse as unknown as { default?: TraverseFn }).default ??
+  babelTraverse) as unknown as TraverseFn;
 
 
 export interface LangMaps {
@@ -81,6 +84,50 @@ export function templateToLabel(template: string | undefined, fallback: string):
     .replace(/%\d+/g, '')
     .replace(/\s+/g, ' ')
     .trim() || fallback;
+}
+
+/**
+ * Fallback label source for blocks whose Lang.template is nothing but
+ * placeholders (calc_basic is "%1 %2 %3"). Their Korean words live in
+ * Lang.Blocks under `<CATEGORY>_<type>` or a `_1`, `_2`, ... segment run.
+ */
+export function labelFromLangBlocks(
+  type: string,
+  category: string,
+  lang: LangMaps,
+): string | undefined {
+  const fromPrefix = (prefix: string): string | undefined => {
+    const direct = lang.blocks[prefix]?.trim();
+    if (direct) return direct;
+
+    const parts: string[] = [];
+    for (let i = 1; ; i++) {
+      const segment = lang.blocks[`${prefix}_${i}`];
+      if (segment === undefined) break;
+      const trimmed = segment.trim();
+      if (trimmed) parts.push(trimmed);
+    }
+    return parts.length ? parts.join(' ') : undefined;
+  };
+
+  const fromCategory = fromPrefix(`${category.toUpperCase()}_${type}`);
+  if (fromCategory) return fromCategory;
+
+  // Lang.Blocks prefixes do not always match the category we filed the block
+  // under — get_sound_volume is a `sound` block keyed CALC_get_sound_volume.
+  // Accept any prefix, as long as nothing but a segment number follows the type.
+  const prefixes = new Set<string>();
+  for (const key of Object.keys(lang.blocks)) {
+    const match = key.match(/^([A-Z0-9]+)_(.+?)(?:_\d+)?$/);
+    if (match && match[2] === type) {
+      prefixes.add(`${match[1]}_${type}`);
+    }
+  }
+  for (const prefix of prefixes) {
+    const label = fromPrefix(prefix);
+    if (label) return label;
+  }
+  return undefined;
 }
 
 export function resolveLangRef(

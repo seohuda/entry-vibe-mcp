@@ -7,6 +7,7 @@ import {
   listCategories,
   searchBlocks,
 } from '../server/catalog-api.ts';
+import { safeEntFilename } from '../server/tools.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CATALOG = join(ROOT, 'catalog', 'blocks.json');
@@ -28,10 +29,46 @@ describe.skipIf(!existsSync(CATALOG))('MCP catalog API', () => {
     expect(hits.some((b) => b.type === 'bounce_wall')).toBe(true);
   });
 
+  it('ignores surrounding whitespace and case in the query', () => {
+    const hits = searchBlocks('  반복  ');
+    expect(hits.some((b) => b.type === 'repeat_basic')).toBe(true);
+    expect(searchBlocks('BOUNCE').some((b) => b.type === 'bounce_wall')).toBe(true);
+  });
+
+  it('respects the limit for an empty query', () => {
+    expect(searchBlocks('', undefined, 5)).toHaveLength(5);
+    expect(searchBlocks('   ', 'flow', 3).every((b) => b.category === 'flow')).toBe(true);
+  });
+
   it('returns detailed schemas', () => {
     const schemas = getBlockSchemas(['repeat_basic', 'when_run_button_click']);
     expect(schemas).toHaveLength(2);
     const repeat = schemas.find((s) => s.type === 'repeat_basic')!;
     expect(repeat.statementKeys).toContain('DO');
+  });
+});
+
+describe('safeEntFilename', () => {
+  it('defaults and normalizes the extension', () => {
+    expect(safeEntFilename()).toBe('entry-project.ent');
+    expect(safeEntFilename('cat')).toBe('cat.ent');
+    expect(safeEntFilename('cat.ent')).toBe('cat.ent');
+    expect(safeEntFilename('  cat.ENT  ')).toBe('cat.ent');
+    expect(safeEntFilename('고양이')).toBe('고양이.ent');
+  });
+
+  it('rejects anything that could escape the output directory', () => {
+    for (const bad of [
+      '../../../tmp/pwn',
+      'sub/dir/cat.ent',
+      '..\\windows\\cat',
+      '/etc/passwd',
+      '..',
+      '.ent',
+      '   ',
+      'cat\0.ent',
+    ]) {
+      expect(() => safeEntFilename(bad), bad).toThrow();
+    }
   });
 });

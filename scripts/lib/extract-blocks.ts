@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import type { NodePath } from '@babel/traverse';
 import type { BlockParamSchema, BlockSchema } from '../../src/types/block.ts';
 import {
+  labelFromLangBlocks,
   loadLangMaps,
   parse,
   resolveLangRef,
@@ -11,10 +12,14 @@ import {
   type LangMaps,
 } from './lang.ts';
 
-const HAT_SKELETONS = new Set([
-  'basic_event',
-  'basic_button',
-]);
+const HAT_SKELETONS = new Set(['basic_event']);
+
+/**
+ * Skeletons that are not placeable blocks and must stay out of the catalog:
+ * `basic_button` is a block-menu button ("변수 추가하기") and `basic_param` is a
+ * function-definition parameter slot. Neither can appear in an object's script.
+ */
+const NON_BLOCK_SKELETONS = new Set(['basic_button', 'basic_param']);
 
 function propKey(prop: t.ObjectProperty): string | undefined {
   if (t.isIdentifier(prop.key)) return prop.key.name;
@@ -197,9 +202,12 @@ function extractBlock(
   const paramsNode = getProp(blockObj, 'params');
   const params: BlockParamSchema[] = [];
   if (paramsNode && t.isArrayExpression(paramsNode)) {
+    // Assign by index, never push: the compiler maps schema.params positionally
+    // onto Entry's params array, so an array hole must not shift later entries.
     paramsNode.elements.forEach((el, index) => {
-      if (!el) return;
-      params.push(parseParamSchema(el, index, keyByIndex, defParams, lang));
+      params[index] = el
+        ? parseParamSchema(el, index, keyByIndex, defParams, lang)
+        : { key: keyByIndex.get(index) ?? String(index), type: 'Unknown' };
     });
   }
 
@@ -219,7 +227,11 @@ function extractBlock(
   }
 
   const label = {
-    ko: templateToLabel(lang.template[type], type),
+    // templateToLabel yields '' when the template is only placeholders
+    ko:
+      templateToLabel(lang.template[type], '') ||
+      labelFromLangBlocks(type, category, lang) ||
+      type,
   };
 
   return {
@@ -296,7 +308,9 @@ export function extractBlocksFromFile(
     const type = propKey(prop);
     if (!type) continue;
     if (!t.isObjectExpression(prop.value)) continue;
-    blocks.push(extractBlock(type, prop.value, category, lang));
+    const block = extractBlock(type, prop.value, category, lang);
+    if (block.skeleton && NON_BLOCK_SKELETONS.has(block.skeleton)) continue;
+    blocks.push(block);
   }
   return blocks;
 }

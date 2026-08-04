@@ -24,14 +24,14 @@ npm install
 npm run build
 ```
 
-카탈로그 다시 뽑거나 미디어 패킹할 때만:
+`catalog/blocks.json`과 `.ent`에 들어가는 엔트리봇 미디어(`assets/media/`)는 repo에 포함돼 있어서 clone만 해도 컴파일까지 바로 됩니다.
+
+카탈로그를 entryjs에서 다시 뽑을 때만:
 
 ```bash
 npm run fetch:entryjs
 npm run extract:catalog
 ```
-
-`catalog/blocks.json`은 repo에 포함돼 있어서 clone만 해도 바로 돌아감.
 
 ## MCP 연결
 
@@ -156,14 +156,39 @@ temp/media/bark.mp3
 
 ```
 catalog/          블록 스키마 (entryjs AST 추출)
+assets/media/     .ent에 패킹되는 엔트리봇 이미지/소리
 compiler/         IR → project.json → .ent
 server/           MCP stdio 서버
 scripts/          추출기, fetch
 test/             테스트 + fixture IR
 ```
 
-블록 카탈로그는 entryjs `block_*.js` 파싱해서 만듦. AI/하드웨어 블록은 v1 제외 (12 카테고리, 203개).
+블록 카탈로그는 entryjs `block_*.js` 파싱해서 만듦. AI/하드웨어 블록은 v1 제외, 블록 메뉴 버튼과 함수 파라미터 슬롯처럼 스크립트에 놓을 수 없는 항목도 제외 (12 카테고리, 194개).
+
+## IR에서 변수 쓰기
+
+`variables`에 선언하고, 블록의 `VARIABLE` 파라미터에서는 **이름으로** 참조합니다.
+컴파일 단계에서 Entry 내부 변수 id로 치환됩니다. 선언 안 한 이름은 검증에서 걸립니다.
+
+```json
+{
+  "variables": [{ "name": "점수", "initialValue": 0 }],
+  "objects": [{
+    "name": "엔트리봇",
+    "sprite": "entrybot",
+    "scripts": [[
+      { "type": "when_run_button_click" },
+      { "type": "set_variable", "params": { "VARIABLE": "점수", "VALUE": 0 } }
+    ]]
+  }]
+}
+```
+
+리스트(`LIST` 파라미터)는 v1에서 지원하지 않습니다.
 
 ## 라이선스
 
-MIT
+MIT.
+
+`assets/media/`의 엔트리봇 이미지와 소리는 [entrylabs/entryjs](https://github.com/entrylabs/entryjs)에서
+가져온 파일로 Apache-2.0을 따릅니다. [assets/media/NOTICE.md](assets/media/NOTICE.md) 참고.

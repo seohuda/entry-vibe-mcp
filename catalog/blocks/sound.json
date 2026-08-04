@@ -452,7 +452,7 @@
       "type": "get_sound_volume",
       "category": "sound",
       "label": {
-        "ko": "get_sound_volume"
+        "ko": "소리 크기"
       },
       "params": [
         {
@@ -470,7 +470,7 @@
       "type": "get_sound_duration",
       "category": "sound",
       "label": {
-        "ko": "get_sound_duration"
+        "ko": "소리의 길이"
       },
       "params": [
         {

@@ -65,7 +65,7 @@
       "type": "calc_rand",
       "category": "calc",
       "label": {
-        "ko": "calc_rand"
+        "ko": "부터 사이의 무작위 수"
       },
       "params": [
         {
@@ -117,7 +117,7 @@
       "type": "coordinate_mouse",
       "category": "calc",
       "label": {
-        "ko": "coordinate_mouse"
+        "ko": "마우스 좌푯값"
       },
       "params": [
         {
@@ -155,7 +155,7 @@
       "type": "coordinate_object",
       "category": "calc",
       "label": {
-        "ko": "coordinate_object"
+        "ko": "의"
       },
       "params": [
         {
@@ -218,7 +218,7 @@
       "type": "quotient_and_mod",
       "category": "calc",
       "label": {
-        "ko": "quotient_and_mod"
+        "ko": "/ 의"
       },
       "params": [
         {
@@ -343,7 +343,7 @@
       "type": "choose_project_timer_action",
       "category": "calc",
       "label": {
-        "ko": "choose_project_timer_action"
+        "ko": "초시계"
       },
       "params": [
         {
@@ -433,7 +433,7 @@
       "type": "get_date",
       "category": "calc",
       "label": {
-        "ko": "get_date"
+        "ko": "현재"
       },
       "params": [
         {
@@ -491,7 +491,7 @@
       "type": "distance_something",
       "category": "calc",
       "label": {
-        "ko": "distance_something"
+        "ko": "까지의 거리"
       },
       "params": [
         {
@@ -543,7 +543,7 @@
       "type": "length_of_string",
       "category": "calc",
       "label": {
-        "ko": "length_of_string"
+        "ko": "의 글자 수"
       },
       "params": [
         {
@@ -577,7 +577,7 @@
       "type": "reverse_of_string",
       "category": "calc",
       "label": {
-        "ko": "reverse_of_string"
+        "ko": "을(를) 뒤집은 값"
       },
       "params": [
         {
@@ -611,7 +611,7 @@
       "type": "combine_something",
       "category": "calc",
       "label": {
-        "ko": "combine_something"
+        "ko": "과(와) 을(를) 합친 값"
       },
       "params": [
         {
@@ -661,7 +661,7 @@
       "type": "char_at",
       "category": "calc",
       "label": {
-        "ko": "char_at"
+        "ko": "의 번째 글자"
       },
       "params": [
         {
@@ -712,7 +712,7 @@
       "type": "substring",
       "category": "calc",
       "label": {
-        "ko": "substring"
+        "ko": "의 번째 글자부터 번째 글자까지의 글자"
       },
       "params": [
         {
@@ -780,7 +780,7 @@
       "type": "count_match_string",
       "category": "calc",
       "label": {
-        "ko": "count_match_string"
+        "ko": "에서 의 글자 수"
       },
       "params": [
         {
@@ -825,7 +825,7 @@
       "type": "index_of_string",
       "category": "calc",
       "label": {
-        "ko": "index_of_string"
+        "ko": "에서 의 시작 위치"
       },
       "params": [
         {
@@ -875,7 +875,7 @@
       "type": "replace_string",
       "category": "calc",
       "label": {
-        "ko": "replace_string"
+        "ko": "의 을(를) (으)로 바꾼 값"
       },
       "params": [
         {
@@ -941,7 +941,7 @@
       "type": "change_string_case",
       "category": "calc",
       "label": {
-        "ko": "change_string_case"
+        "ko": "로 바꾼 값"
       },
       "params": [
         {

@@ -2,23 +2,6 @@
   "category": "func",
   "blocks": [
     {
-      "type": "functionAddButton",
-      "category": "func",
-      "label": {
-        "ko": "functionAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "function_name",
       "category": "func",
       "label": {
@@ -34,23 +17,6 @@
       "statementKeys": [],
       "isHat": false,
       "skeleton": "basic_text"
-    },
-    {
-      "type": "showFunctionPropsButton",
-      "category": "func",
-      "label": {
-        "ko": "showFunctionPropsButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
     },
     {
       "type": "set_func_variable",
@@ -169,87 +135,6 @@
       "statementKeys": [],
       "isHat": false,
       "skeleton": "basic_string_field"
-    },
-    {
-      "type": "function_field_label",
-      "category": "func",
-      "label": {
-        "ko": "function_field_label"
-      },
-      "params": [
-        {
-          "key": "NAME",
-          "type": "TextInput",
-          "defaultValue": "이름"
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
-    },
-    {
-      "type": "function_field_string",
-      "category": "func",
-      "label": {
-        "ko": "function_field_string"
-      },
-      "params": [
-        {
-          "key": "PARAM",
-          "type": "Block",
-          "accept": "string",
-          "defaultValue": {
-            "type": "text",
-            "params": [
-              "문자/숫자값"
-            ]
-          }
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
-    },
-    {
-      "type": "function_field_boolean",
-      "category": "func",
-      "label": {
-        "ko": "function_field_boolean"
-      },
-      "params": [
-        {
-          "key": "PARAM",
-          "type": "Block",
-          "accept": "boolean",
-          "defaultValue": {
-            "type": "True",
-            "params": [
-              "판단값"
-            ]
-          }
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
     },
     {
       "type": "function_param_string",

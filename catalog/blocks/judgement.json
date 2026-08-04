@@ -5,7 +5,7 @@
       "type": "is_clicked",
       "category": "judgement",
       "label": {
-        "ko": "is_clicked"
+        "ko": "마우스를 클릭했는가?"
       },
       "params": [
         {
@@ -23,7 +23,7 @@
       "type": "is_object_clicked",
       "category": "judgement",
       "label": {
-        "ko": "is_object_clicked"
+        "ko": "오브젝트를 클릭했는가?"
       },
       "params": [
         {
@@ -41,7 +41,7 @@
       "type": "is_press_some_key",
       "category": "judgement",
       "label": {
-        "ko": "is_press_some_key"
+        "ko": "키가 눌러져 있는가?"
       },
       "params": [
         {
@@ -64,7 +64,7 @@
       "type": "reach_something",
       "category": "judgement",
       "label": {
-        "ko": "reach_something"
+        "ko": "에 닿았는가?"
       },
       "params": [
         {
@@ -92,7 +92,7 @@
       "type": "is_type",
       "category": "judgement",
       "label": {
-        "ko": "is_type"
+        "ko": "(이)가 인가?"
       },
       "params": [
         {
@@ -252,7 +252,7 @@
       "type": "boolean_not",
       "category": "judgement",
       "label": {
-        "ko": "boolean_not"
+        "ko": "(이)가 아니다"
       },
       "params": [
         {
@@ -284,7 +284,7 @@
       "type": "is_boost_mode",
       "category": "judgement",
       "label": {
-        "ko": "is_boost_mode"
+        "ko": "부스트모드가 켜져 있는가?"
       },
       "params": [
         {
