@@ -60,20 +60,14 @@ function validateBlock(
     errors.push(`${path}: hat block "${block.type}" cannot appear mid-thread`);
   }
 
-  const writableKeys = new Set(
-    schema.params
-      .filter((p) => p.type !== 'Indicator' && p.type !== 'LineBreak')
-      .map((p) => p.key),
-  );
-
   if (block.params) {
     for (const key of Object.keys(block.params)) {
-      if (!writableKeys.has(key) && !schema.params.some((p) => p.key === key)) {
+      const paramSchema = schema.params.find((p) => p.key === key);
+      if (!paramSchema) {
         errors.push(`${path}: unknown param key "${key}" on "${block.type}"`);
         continue;
       }
-      const paramSchema = schema.params.find((p) => p.key === key);
-      if (paramSchema && (paramSchema.type === 'Indicator' || paramSchema.type === 'LineBreak')) {
+      if (paramSchema.type === 'Indicator' || paramSchema.type === 'LineBreak') {
         errors.push(`${path}: param "${key}" is not user-settable (${paramSchema.type})`);
         continue;
       }
