@@ -309,13 +309,14 @@ flowchart LR
 
 ### `.ent` 구조
 
-[entry-offline](https://github.com/entrylabs/entry-offline)과 같은 tar.gz 구조입니다.
+[entry-offline](https://github.com/entrylabs/entry-offline) / playentry.org와 같은 tar.gz 구조입니다. 에셋은 `temp/media/`가 아니라 Entry 표준 해시 폴더(`ab/cd/image|thumb|sound`)에 들어갑니다.
 
 ```
 temp/project.json
-temp/media/entrybot1.svg
-temp/media/entrybot2.svg
-temp/media/bark.mp3
+temp/ab/cd/image/{fileId}.svg
+temp/ab/cd/image/{fileId}.png
+temp/ab/cd/thumb/{fileId}.png
+temp/ab/cd/sound/{fileId}.mp3
 ```
 
 ---

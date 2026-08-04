@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import * as tar from 'tar';
 import { compileProject, CompileError } from '../compiler/compile.ts';
 import { validateProject } from '../compiler/validate.ts';
-import { packEnt } from '../compiler/pack.ts';
+import { packEnt, packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
 import { ENTRYBOT_MEDIA_FILES } from '../compiler/skeleton.ts';
 import { mediaDir } from '../src/paths.ts';
 import type { EntryIR } from '../src/types/ir.ts';
@@ -320,13 +320,18 @@ describe('ent packing', () => {
     }
   });
 
-  it('packs a valid tar.gz .ent with temp/project.json', async () => {
+  it('packs a valid tar.gz .ent with hash-layout assets', async () => {
     mkdirSync(outDir, { recursive: true });
     const ir = loadIR('entrybot-basic.ir.json');
     const project = compileProject(ir);
     const entPath = join(outDir, 'entrybot-basic.ent');
+    const jsonPath = join(outDir, 'entrybot-basic.json');
 
-    await packEnt(project, { outputPath: entPath });
+    let seq = 0;
+    const createFileId = () => `abcd${String(++seq).padStart(28, '0')}`;
+    const prepared = prepareExport(project, { createFileId });
+    writePreparedJson(prepared, jsonPath);
+    await packPrepared(prepared, { outputPath: entPath });
     expect(existsSync(entPath)).toBe(true);
 
     const extractDir = join(outDir, 'extract');
@@ -337,14 +342,79 @@ describe('ent packing', () => {
 
     const projectJson = join(extractDir, 'temp', 'project.json');
     expect(existsSync(projectJson)).toBe(true);
-    for (const file of ENTRYBOT_MEDIA_FILES) {
-      expect(existsSync(join(extractDir, 'temp', 'media', file)), file).toBe(true);
-    }
 
     const loaded = JSON.parse(readFileSync(projectJson, 'utf8'));
+    const sidecar = JSON.parse(readFileSync(jsonPath, 'utf8'));
+    expect(loaded.name).toBeTruthy();
+    // Sidecar JSON and .ent project.json must share the same media file ids.
+    expect(sidecar.objects[0].sprite.pictures[0].filename).toBe(
+      loaded.objects[0].sprite.pictures[0].filename,
+    );
     expect(typeof loaded.objects[0].script).toBe('string');
     const script = JSON.parse(loaded.objects[0].script);
     expect(script[0][0].type).toBe('when_run_button_click');
+
+    const pictures = loaded.objects[0].sprite.pictures;
+    const sounds = loaded.objects[0].sprite.sounds;
+    expect(pictures).toHaveLength(2);
+    expect(sounds).toHaveLength(1);
+
+    for (const picture of pictures) {
+      expect(picture.filename).toMatch(/^[0-9a-f]{32}$/);
+      expect(picture.fileurl).toBe(
+        `temp/${picture.filename.slice(0, 2)}/${picture.filename.slice(2, 4)}/image/${picture.filename}.svg`,
+      );
+      expect(
+        existsSync(
+          join(
+            extractDir,
+            'temp',
+            picture.filename.slice(0, 2),
+            picture.filename.slice(2, 4),
+            'image',
+            `${picture.filename}.svg`,
+          ),
+        ),
+      ).toBe(true);
+      expect(
+        existsSync(
+          join(
+            extractDir,
+            'temp',
+            picture.filename.slice(0, 2),
+            picture.filename.slice(2, 4),
+            'thumb',
+            `${picture.filename}.png`,
+          ),
+        ),
+      ).toBe(true);
+    }
+
+    const sound = sounds[0];
+    expect(sound.filename).toMatch(/^[0-9a-f]{32}$/);
+    expect(
+      existsSync(
+        join(
+          extractDir,
+          'temp',
+          sound.filename.slice(0, 2),
+          sound.filename.slice(2, 4),
+          'sound',
+          `${sound.filename}.mp3`,
+        ),
+      ),
+    ).toBe(true);
+
+    // Flat temp/media/ layout must not be used — playentry.org rejects it.
+    expect(existsSync(join(extractDir, 'temp', 'media'))).toBe(false);
+  });
+
+  it('sets a project name so playentry.org does not show undefined', () => {
+    const project = compileProject(loadIR('bounce-cat.ir.json'));
+    expect(project.name).toBe('고양이 프로젝트');
+    const prepared = prepareExport(project);
+    expect(prepared.project.name).toBe('고양이 프로젝트');
+    expect(prepared.assets.some((a) => a.kind === 'picture')).toBe(true);
   });
 
   it('does not let concurrent packs clobber each other', async () => {

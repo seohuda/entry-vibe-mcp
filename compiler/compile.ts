@@ -201,6 +201,7 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
 
   const index = catalogIndex(catalog);
   const project = createStartProjectSkeleton();
+  project.name = ir.objects[0]?.name ? `${ir.objects[0].name} 프로젝트` : '엔트리 프로젝트';
 
   const sceneId = project.scenes[0].id;
   const nextId = createIdFactory([

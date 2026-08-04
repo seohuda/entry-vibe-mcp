@@ -3,7 +3,7 @@ import { basename, join } from 'node:path';
 import { z } from 'zod';
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { compileProject, CompileError } from '../compiler/compile.ts';
-import { packEnt, writeProjectJson } from '../compiler/pack.ts';
+import { packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
 import { validateProject } from '../compiler/validate.ts';
 import type { EntryIR } from '../src/types/ir.ts';
 import { outputDir } from '../src/paths.ts';
@@ -155,7 +155,7 @@ export function registerTools(server: McpServer): void {
   server.registerTool(
     'compile_project',
     {
-      description: `Compile EntryIR into an Entry .ent file (tar.gz with temp/project.json + entrybot media). Writes into the host's working directory. Returns the output path. Fails if the target files already exist — pass overwrite:true to replace them. On failure, returns validation/compile errors — fix IR and retry.\n\n${IR_SCHEMA_DOC}`,
+      description: `Compile EntryIR into an Entry .ent file (tar.gz). Assets use playentry.org's hash-folder layout (temp/ab/cd/image|thumb|sound). Also writes a matching .json sidecar. Writes into the host's working directory. Returns the output path. Fails if the target files already exist — pass overwrite:true to replace them. On failure, returns validation/compile errors — fix IR and retry.\n\n${IR_SCHEMA_DOC}`,
       inputSchema: {
         ir: entryIRSchema.describe('Full EntryIR project'),
         filename: z
@@ -196,13 +196,16 @@ export function registerTools(server: McpServer): void {
         }
 
         const project = compileProject(ir as EntryIR);
-        writeProjectJson(project, jsonPath);
-        await packEnt(project, { outputPath: entPath });
+        // One prepareExport so the sidecar .json and the .ent share the same media file ids.
+        const prepared = prepareExport(project);
+        writePreparedJson(prepared, jsonPath);
+        await packPrepared(prepared, { outputPath: entPath });
         return textResult({
           ok: true,
           entPath,
           projectJsonPath: jsonPath,
           objectCount: project.objects.length,
+          name: prepared.project.name,
           message: `Compiled successfully. Open ${entPath} in Entry Offline or upload to playentry.org.`,
         });
       } catch (err) {

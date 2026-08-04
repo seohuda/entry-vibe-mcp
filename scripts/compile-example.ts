@@ -7,7 +7,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { compileProject, CompileError } from '../compiler/compile.ts';
-import { packEnt } from '../compiler/pack.ts';
+import { packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
 import { findPackageRoot, outputDir } from '../src/paths.ts';
 import type { EntryIR } from '../src/types/ir.ts';
 
@@ -26,12 +26,19 @@ if (!existsSync(irPath)) {
 
 const ir = JSON.parse(readFileSync(irPath, 'utf8')) as EntryIR;
 
-try {
+async function main() {
   const project = compileProject(ir);
-  const entPath = join(outputDir(root), `${name}.ent`);
-  await packEnt(project, { outputPath: entPath });
+  const prepared = prepareExport(project);
+  const out = outputDir(root);
+  const entPath = join(out, `${name}.ent`);
+  const jsonPath = join(out, `${name}.json`);
+  writePreparedJson(prepared, jsonPath);
+  await packPrepared(prepared, { outputPath: entPath });
   console.log(`✔ ${entPath}`);
-} catch (err) {
+  console.log(`  ${jsonPath}`);
+}
+
+main().catch((err) => {
   if (err instanceof CompileError) {
     console.error('검증 실패:');
     for (const e of err.errors) console.error(`  - ${e}`);
@@ -39,4 +46,4 @@ try {
     console.error(err);
   }
   process.exit(1);
-}
+});

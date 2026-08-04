@@ -1,8 +1,12 @@
 /**
  * Hardcoded Entry.getStartProject() skeleton (Korean labels).
- * Media paths use temp/ relative form suitable for .ent packing.
+ *
+ * Media `fileurl` values use internal `temp/media/…` markers. {@link prepareExport}
+ * in pack.ts rewrites them to playentry.org's hash-folder layout before packing.
  */
 export interface EntryProject {
+  /** Work title shown in the Entry editor (playentry.org reads this on import). */
+  name: string;
   category: string;
   scenes: Array<{ name: string; id: string }>;
   variables: Array<Record<string, unknown>>;
@@ -19,6 +23,7 @@ const MEDIA_PREFIX = 'temp/media/';
 
 export function createStartProjectSkeleton(): EntryProject {
   return {
+    name: '엔트리 프로젝트',
     category: '기타',
     scenes: [
       {
@@ -142,9 +147,15 @@ export function createStartProjectSkeleton(): EntryProject {
   };
 }
 
-/** Media files that must be packed into the .ent archive. */
+/**
+ * Media files that must ship in assets/media/ for .ent packing.
+ * SVG is the runtime imageType; PNG is used for Entry's required thumb
+ * (and a raster sibling under image/) so playentry.org import succeeds.
+ */
 export const ENTRYBOT_MEDIA_FILES = [
   'entrybot1.svg',
   'entrybot2.svg',
+  'entrybot1.png',
+  'entrybot2.png',
   'bark.mp3',
 ] as const;
