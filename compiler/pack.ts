@@ -2,7 +2,7 @@
  * Pack an Entry project into a .ent file (tar.gz with temp/project.json + media).
  * Format matches entrylabs/entry-offline FileUtils.pack / MainUtils.saveProject.
  */
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import * as tar from 'tar';
 import {
@@ -31,7 +31,12 @@ export async function packEnt(
   }
 
   const mediaSource = options.mediaDir ?? mediaDir();
-  const stagingRoot = join(dirname(outputPath), `.ent-staging-${Date.now()}`);
+  const outputParent = dirname(outputPath);
+  mkdirSync(outputParent, { recursive: true });
+
+  // mkdtemp rather than a timestamp: two compiles in the same millisecond
+  // shared a staging dir, and whichever finished first deleted it in `finally`.
+  const stagingRoot = mkdtempSync(join(outputParent, '.ent-staging-'));
   const tempDir = join(stagingRoot, 'temp');
   const mediaOut = join(tempDir, 'media');
 
@@ -51,8 +56,6 @@ export async function packEnt(
       }
       writeFileSync(join(mediaOut, file), readFileSync(src));
     }
-
-    mkdirSync(dirname(outputPath), { recursive: true });
 
     await tar.c(
       {

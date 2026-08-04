@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { existsSync, mkdirSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as tar from 'tar';
@@ -263,5 +263,19 @@ describe('ent packing', () => {
     expect(typeof loaded.objects[0].script).toBe('string');
     const script = JSON.parse(loaded.objects[0].script);
     expect(script[0][0].type).toBe('when_run_button_click');
+  });
+
+  it('does not let concurrent packs clobber each other', async () => {
+    mkdirSync(outDir, { recursive: true });
+    const project = compileProject(loadIR('entrybot-basic.ir.json'));
+    const paths = [0, 1, 2, 3].map((i) => join(outDir, `concurrent-${i}.ent`));
+
+    await Promise.all(paths.map((outputPath) => packEnt(project, { outputPath })));
+
+    for (const p of paths) {
+      expect(existsSync(p), p).toBe(true);
+    }
+    // every staging dir must be cleaned up
+    expect(readdirSync(outDir).filter((f) => f.startsWith('.ent-staging-'))).toEqual([]);
   });
 });
