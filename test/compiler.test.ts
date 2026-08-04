@@ -6,6 +6,8 @@ import * as tar from 'tar';
 import { compileProject, CompileError } from '../compiler/compile.ts';
 import { validateProject } from '../compiler/validate.ts';
 import { packEnt } from '../compiler/pack.ts';
+import { ENTRYBOT_MEDIA_FILES } from '../compiler/skeleton.ts';
+import { mediaDir } from '../src/paths.ts';
 import type { EntryIR } from '../src/types/ir.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -225,34 +227,41 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
   });
 });
 
-describe.skipIf(!existsSync(join(ROOT, 'vendor', 'entryjs', 'images', 'media')))(
-  'ent packing',
-  () => {
-    const outDir = join(ROOT, 'output', 'test');
+describe('ent packing', () => {
+  const outDir = join(ROOT, 'output', 'test');
 
-    it('packs a valid tar.gz .ent with temp/project.json', async () => {
-      mkdirSync(outDir, { recursive: true });
-      const ir = loadIR('entrybot-basic.ir.json');
-      const project = compileProject(ir);
-      const entPath = join(outDir, 'entrybot-basic.ent');
+  it('ships every media file .ent packing requires', () => {
+    // Regression guard: these used to live only in gitignored vendor/, so a
+    // fresh clone or npm install could not compile a .ent at all.
+    for (const file of ENTRYBOT_MEDIA_FILES) {
+      expect(existsSync(join(mediaDir(), file)), file).toBe(true);
+    }
+  });
 
-      await packEnt(project, { outputPath: entPath });
-      expect(existsSync(entPath)).toBe(true);
+  it('packs a valid tar.gz .ent with temp/project.json', async () => {
+    mkdirSync(outDir, { recursive: true });
+    const ir = loadIR('entrybot-basic.ir.json');
+    const project = compileProject(ir);
+    const entPath = join(outDir, 'entrybot-basic.ent');
 
-      const extractDir = join(outDir, 'extract');
-      rmSync(extractDir, { recursive: true, force: true });
-      mkdirSync(extractDir, { recursive: true });
+    await packEnt(project, { outputPath: entPath });
+    expect(existsSync(entPath)).toBe(true);
 
-      await tar.x({ file: entPath, cwd: extractDir });
+    const extractDir = join(outDir, 'extract');
+    rmSync(extractDir, { recursive: true, force: true });
+    mkdirSync(extractDir, { recursive: true });
 
-      const projectJson = join(extractDir, 'temp', 'project.json');
-      expect(existsSync(projectJson)).toBe(true);
-      expect(existsSync(join(extractDir, 'temp', 'media', 'entrybot1.svg'))).toBe(true);
+    await tar.x({ file: entPath, cwd: extractDir });
 
-      const loaded = JSON.parse(readFileSync(projectJson, 'utf8'));
-      expect(typeof loaded.objects[0].script).toBe('string');
-      const script = JSON.parse(loaded.objects[0].script);
-      expect(script[0][0].type).toBe('when_run_button_click');
-    });
-  },
-);
+    const projectJson = join(extractDir, 'temp', 'project.json');
+    expect(existsSync(projectJson)).toBe(true);
+    for (const file of ENTRYBOT_MEDIA_FILES) {
+      expect(existsSync(join(extractDir, 'temp', 'media', file)), file).toBe(true);
+    }
+
+    const loaded = JSON.parse(readFileSync(projectJson, 'utf8'));
+    expect(typeof loaded.objects[0].script).toBe('string');
+    const script = JSON.parse(loaded.objects[0].script);
+    expect(script[0][0].type).toBe('when_run_button_click');
+  });
+});

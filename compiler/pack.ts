@@ -44,7 +44,10 @@ export async function packEnt(
     for (const file of ENTRYBOT_MEDIA_FILES) {
       const src = join(mediaSource, file);
       if (!existsSync(src)) {
-        throw new Error(`Missing media file: ${src}. Run npm run fetch:entryjs`);
+        throw new Error(
+          `Missing media file: ${src}. It should ship in assets/media/; ` +
+            'restore it from upstream with `npm run fetch:entryjs`.',
+        );
       }
       writeFileSync(join(mediaOut, file), readFileSync(src));
     }
