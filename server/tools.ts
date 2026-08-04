@@ -165,7 +165,7 @@ export function registerTools(server: McpServer): void {
         const out = outputDir();
         mkdirSync(out, { recursive: true });
         const entPath = join(out, name);
-        const jsonPath = join(out, name.replace(/\.ent$/i, '.project.json'));
+        const jsonPath = join(out, name.replace(/\.ent$/i, '.json'));
 
         const project = compileProject(ir as EntryIR);
         writeProjectJson(project, jsonPath);
