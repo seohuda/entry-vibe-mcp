@@ -12,10 +12,14 @@ import {
   type LangMaps,
 } from './lang.ts';
 
-const HAT_SKELETONS = new Set([
-  'basic_event',
-  'basic_button',
-]);
+const HAT_SKELETONS = new Set(['basic_event']);
+
+/**
+ * Skeletons that are not placeable blocks and must stay out of the catalog:
+ * `basic_button` is a block-menu button ("변수 추가하기") and `basic_param` is a
+ * function-definition parameter slot. Neither can appear in an object's script.
+ */
+const NON_BLOCK_SKELETONS = new Set(['basic_button', 'basic_param']);
 
 function propKey(prop: t.ObjectProperty): string | undefined {
   if (t.isIdentifier(prop.key)) return prop.key.name;
@@ -304,7 +308,9 @@ export function extractBlocksFromFile(
     const type = propKey(prop);
     if (!type) continue;
     if (!t.isObjectExpression(prop.value)) continue;
-    blocks.push(extractBlock(type, prop.value, category, lang));
+    const block = extractBlock(type, prop.value, category, lang);
+    if (block.skeleton && NON_BLOCK_SKELETONS.has(block.skeleton)) continue;
+    blocks.push(block);
   }
   return blocks;
 }

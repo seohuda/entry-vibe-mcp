@@ -1,24 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-04T07:57:38.916Z",
+  "generatedAt": "2026-08-04T07:59:16.120Z",
   "blocks": [
-    {
-      "type": "messageAddButton",
-      "category": "start",
-      "label": {
-        "ko": "messageAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
     {
       "type": "when_run_button_click",
       "category": "start",
@@ -3687,40 +3670,6 @@
       "skeleton": "basic_string_field"
     },
     {
-      "type": "variableAddButton",
-      "category": "variable",
-      "label": {
-        "ko": "variableAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
-      "type": "listAddButton",
-      "category": "variable",
-      "label": {
-        "ko": "listAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "ask_and_wait",
       "category": "variable",
       "label": {
@@ -4260,23 +4209,6 @@
       "skeleton": "basic"
     },
     {
-      "type": "functionAddButton",
-      "category": "func",
-      "label": {
-        "ko": "functionAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "function_name",
       "category": "func",
       "label": {
@@ -4292,23 +4224,6 @@
       "statementKeys": [],
       "isHat": false,
       "skeleton": "basic_text"
-    },
-    {
-      "type": "showFunctionPropsButton",
-      "category": "func",
-      "label": {
-        "ko": "showFunctionPropsButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
     },
     {
       "type": "set_func_variable",
@@ -4427,87 +4342,6 @@
       "statementKeys": [],
       "isHat": false,
       "skeleton": "basic_string_field"
-    },
-    {
-      "type": "function_field_label",
-      "category": "func",
-      "label": {
-        "ko": "function_field_label"
-      },
-      "params": [
-        {
-          "key": "NAME",
-          "type": "TextInput",
-          "defaultValue": "이름"
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
-    },
-    {
-      "type": "function_field_string",
-      "category": "func",
-      "label": {
-        "ko": "function_field_string"
-      },
-      "params": [
-        {
-          "key": "PARAM",
-          "type": "Block",
-          "accept": "string",
-          "defaultValue": {
-            "type": "text",
-            "params": [
-              "문자/숫자값"
-            ]
-          }
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
-    },
-    {
-      "type": "function_field_boolean",
-      "category": "func",
-      "label": {
-        "ko": "function_field_boolean"
-      },
-      "params": [
-        {
-          "key": "PARAM",
-          "type": "Block",
-          "accept": "boolean",
-          "defaultValue": {
-            "type": "True",
-            "params": [
-              "판단값"
-            ]
-          }
-        },
-        {
-          "key": "NEXT",
-          "type": "Output",
-          "accept": "param"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": false,
-      "skeleton": "basic_param"
     },
     {
       "type": "function_param_string",
@@ -5602,23 +5436,6 @@
       "statementKeys": [],
       "isHat": false,
       "skeleton": "basic"
-    },
-    {
-      "type": "analizyDataAddButton",
-      "category": "analysis",
-      "label": {
-        "ko": "analizyDataAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
     },
     {
       "type": "append_row_to_table",

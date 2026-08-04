@@ -2,23 +2,6 @@
   "category": "start",
   "blocks": [
     {
-      "type": "messageAddButton",
-      "category": "start",
-      "label": {
-        "ko": "messageAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "when_run_button_click",
       "category": "start",
       "label": {

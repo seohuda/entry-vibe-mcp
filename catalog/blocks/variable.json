@@ -2,40 +2,6 @@
   "category": "variable",
   "blocks": [
     {
-      "type": "variableAddButton",
-      "category": "variable",
-      "label": {
-        "ko": "variableAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
-      "type": "listAddButton",
-      "category": "variable",
-      "label": {
-        "ko": "listAddButton"
-      },
-      "params": [
-        {
-          "key": "0",
-          "type": "Text"
-        }
-      ],
-      "statementSlots": 0,
-      "statementKeys": [],
-      "isHat": true,
-      "skeleton": "basic_button"
-    },
-    {
       "type": "ask_and_wait",
       "category": "variable",
       "label": {

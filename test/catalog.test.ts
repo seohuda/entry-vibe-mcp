@@ -106,7 +106,7 @@ describe('shipped catalog labels', () => {
     // label.ko === type means no label was found; these are mostly Entry's
     // block-menu buttons and lecture-only internals.
     const unlabeled = blocks.filter((b) => b.label.ko === b.type);
-    expect(unlabeled.length).toBeLessThanOrEqual(31);
+    expect(unlabeled.length).toBeLessThanOrEqual(22);
   });
 
   it('labels blocks whose template is only placeholders', () => {
@@ -116,6 +116,31 @@ describe('shipped catalog labels', () => {
     expect(byType(blocks, 'length_of_string').label.ko).toContain('글자');
     // Filed under `sound`, but keyed CALC_get_sound_volume in Lang.Blocks
     expect(byType(blocks, 'get_sound_volume').label.ko).toContain('소리');
+  });
+
+  it('excludes block-menu buttons and function param slots', () => {
+    // basic_button / basic_param are not placeable, and the buttons used to be
+    // reported as hat blocks, so validate accepted them as a thread's opener.
+    for (const type of [
+      'variableAddButton',
+      'listAddButton',
+      'functionAddButton',
+      'messageAddButton',
+      'showFunctionPropsButton',
+      'analizyDataAddButton',
+      'function_field_string',
+    ]) {
+      expect(blocks.some((b) => b.type === type), type).toBe(false);
+    }
+    expect(blocks.every((b) => b.skeleton !== 'basic_button')).toBe(true);
+  });
+
+  it('only marks real event blocks as hats', () => {
+    for (const b of blocks.filter((x) => x.isHat)) {
+      expect(['basic_event', 'basic_create', 'basic_create_value'], b.type).toContain(
+        b.skeleton,
+      );
+    }
   });
 
   it('finds those blocks by Korean keyword', () => {
