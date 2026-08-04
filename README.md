@@ -1,6 +1,6 @@
 <p align="center">
   <strong>EntryVibe MCP</strong><br/>
-  <em>자연어 한 줄로 Entry 작품을 만드는 MCP 서버</em>
+  <em>텍스트 요청으로 Entry 프로젝트를 생성·컴파일하는 MCP 서버</em>
 </p>
 
 <p align="center">
@@ -11,9 +11,9 @@
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
 </p>
 
-[Entry](https://playentry.org) 작품을 자연어로 만들고 `.ent`로 뽑아주는 MCP 서버.
+[Entry](https://playentry.org) 프로젝트를 텍스트로 구성하고 `.ent`로 패키징하는 MCP 서버.
 
-Cursor / Claude Desktop / Claude Code 등 MCP 붙는 클라이언트에 연결해 쓰면 됨. 서버는 상태 안 들고 있고, 블록 검색·IR 검증·컴파일 툴만 제공.
+MCP 호스트에 연결해서 사용합니다. 서버는 상태를 저장하지 않으며 블록 검색·IR 검증·컴파일만 제공합니다.
 
 ## 설치
 
@@ -65,7 +65,7 @@ Claude Desktop은 `claude_desktop_config.json`에 똑같이 넣으면 됨.
 
 ## 쓰는 법
 
-채팅에 그냥 말하면 됨. 예:
+요청 텍스트로 작업을 지시하면 됩니다. 예:
 
 > 엔트리봇이 4번 반복하면서 10칸씩 움직이고 벽에 튕기게 해줘
 
