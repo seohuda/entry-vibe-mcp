@@ -10,7 +10,7 @@ export const EVENT_SKELETON = 'basic_event';
 
 /** Param key Entry uses for a variable reference (stored as a variable id). */
 export const VARIABLE_PARAM_KEY = 'VARIABLE';
-/** Param key Entry uses for a list reference. Lists are out of scope for v1. */
+/** Param key Entry uses for a list reference (stored as a list/variable id). */
 export const LIST_PARAM_KEY = 'LIST';
 
 export interface ValidationResult {
@@ -43,6 +43,8 @@ interface ValidateContext {
   index: Map<string, BlockSchema>;
   /** Declared user variable names (ir.variables[].name). */
   variableNames: Set<string>;
+  /** Declared user list names (ir.lists[].name). */
+  listNames: Set<string>;
   errors: string[];
 }
 
@@ -79,9 +81,9 @@ function validateBlock(
         validateBlock(value, `${path}.params.${key}`, ctx, { allowHat: false });
         continue;
       }
-      if (key === LIST_PARAM_KEY) {
+      if (key === LIST_PARAM_KEY && !ctx.listNames.has(String(value))) {
         errors.push(
-          `${path}: block "${block.type}" references a list, which v1 does not support (ir has no list declarations)`,
+          `${path}: unknown list ${JSON.stringify(value)} — declare it in ir.lists (known: ${[...ctx.listNames].join(', ') || 'none'})`,
         );
         continue;
       }
@@ -174,7 +176,20 @@ export function validateProject(
     variableNames.add(v.name);
   });
 
-  const ctx: ValidateContext = { index, variableNames, errors };
+  const listNames = new Set<string>();
+  (ir.lists ?? []).forEach((l, li) => {
+    if (!l?.name || typeof l.name !== 'string') {
+      errors.push(`lists[${li}].name is required`);
+      return;
+    }
+    if (listNames.has(l.name)) {
+      errors.push(`lists[${li}]: duplicate list name ${JSON.stringify(l.name)}`);
+      return;
+    }
+    listNames.add(l.name);
+  });
+
+  const ctx: ValidateContext = { index, variableNames, listNames, errors };
 
   ir.objects.forEach((obj, oi) => {
     if (!obj.name || typeof obj.name !== 'string') {

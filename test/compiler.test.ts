@@ -197,6 +197,72 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     expect(result.errors.some((e) => e.includes('duplicate'))).toBe(true);
   });
 
+  it('resolves LIST params from name to the generated list id', () => {
+    const ir: EntryIR = {
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'add_value_to_list', params: { VALUE: 10, LIST: '점수판' } },
+            ],
+          ],
+        },
+      ],
+      lists: [{ name: '점수판', initialValues: [1, 2, 3] }],
+    };
+
+    expect(validateProject(ir).valid).toBe(true);
+
+    const project = compileProject(ir);
+    const declared = project.variables.find((v) => v.name === '점수판')!;
+    expect(declared).toBeDefined();
+    expect(declared.variableType).toBe('list');
+    expect(declared.array).toEqual([{ data: '1' }, { data: '2' }, { data: '3' }]);
+
+    const thread = (project.objects[0].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    const params = thread[1].params as unknown[];
+    expect(params[1]).toBe(declared.id);
+    expect(params[1]).not.toBe('점수판');
+  });
+
+  it('rejects references to undeclared lists', () => {
+    const result = validateProject({
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'add_value_to_list', params: { VALUE: 1, LIST: '없는리스트' } },
+            ],
+          ],
+        },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('없는리스트'))).toBe(true);
+  });
+
+  it('rejects duplicate list names', () => {
+    const result = validateProject({
+      objects: [
+        { name: 'x', sprite: 'entrybot', scripts: [[{ type: 'when_run_button_click' }]] },
+      ],
+      lists: [
+        { name: '점수판', initialValues: [] },
+        { name: '점수판', initialValues: [] },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('duplicate'))).toBe(true);
+  });
+
   it('accepts an empty statement slot', () => {
     const ir: EntryIR = {
       objects: [

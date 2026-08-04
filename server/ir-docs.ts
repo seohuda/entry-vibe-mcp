@@ -11,7 +11,8 @@ EntryIR JSON schema (use named param keys and statementKeys from the catalog):
     "sprite": "entrybot",   // v1 only supports entrybot
     "scripts": [ Thread, ... ]
   }],
-  "variables": [{ "name": string, "initialValue": string|number }]  // optional
+  "variables": [{ "name": string, "initialValue": string|number }],  // optional
+  "lists": [{ "name": string, "initialValues": (string|number)[] }]  // optional
 }
 
 Thread = IRBlock[]  // MUST start with a hat/event block (isHat: true), e.g. when_run_button_click
@@ -30,7 +31,13 @@ variable id. Referencing an undeclared name is a validation error.
   ...
   { "type": "set_variable", "params": { "VARIABLE": "점수", "VALUE": 0 } }
 
-Lists ("LIST" params) are not supported in v1.
+Lists work the same way: declare them in "lists", then reference them from a
+block's "LIST" param by NAME — the compiler rewrites the name to the internal
+list id. Referencing an undeclared name is a validation error.
+
+  "lists": [{ "name": "점수판", "initialValues": [10, 20] }],
+  ...
+  { "type": "add_value_to_list", "params": { "VALUE": 30, "LIST": "점수판" } }
 
 Example — cat that moves and bounces:
 {

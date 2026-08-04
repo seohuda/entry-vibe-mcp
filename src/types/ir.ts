@@ -27,7 +27,14 @@ export interface EntryIRVariable {
   initialValue: string | number;
 }
 
+export interface EntryIRList {
+  name: string;
+  /** Initial items, in order. Defaults to an empty list. */
+  initialValues?: Array<string | number>;
+}
+
 export interface EntryIR {
   objects: EntryIRObject[];
   variables?: EntryIRVariable[];
+  lists?: EntryIRList[];
 }

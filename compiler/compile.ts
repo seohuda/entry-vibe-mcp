@@ -5,6 +5,7 @@ import {
   catalogIndex,
   loadCatalog,
   validateProject,
+  LIST_PARAM_KEY,
   VARIABLE_PARAM_KEY,
 } from './validate.ts';
 
@@ -78,6 +79,8 @@ interface CompileContext {
   index: Map<string, BlockSchema>;
   /** Variable name → generated project variable id. */
   variableIds: Map<string, string>;
+  /** List name → generated project list id. */
+  listIds: Map<string, string>;
 }
 
 function compileParamValue(
@@ -88,9 +91,12 @@ function compileParamValue(
   if (isIRBlock(value)) {
     return compileBlock(value, ctx, { includePosition: false });
   }
-  // Entry stores variable references as ids, but IR authors only know names.
+  // Entry stores variable/list references as ids, but IR authors only know names.
   if (param.key === VARIABLE_PARAM_KEY && typeof value === 'string') {
     return ctx.variableIds.get(value) ?? value;
+  }
+  if (param.key === LIST_PARAM_KEY && typeof value === 'string') {
+    return ctx.listIds.get(value) ?? value;
   }
   if (param.type === 'Dropdown' || param.type === 'DropdownDynamic' || param.type === 'Keyboard') {
     return value;
@@ -222,7 +228,29 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     });
   }
 
-  const ctx: CompileContext = { index, variableIds };
+  // Entry stores lists in the same `variables` array as plain variables,
+  // disambiguated by variableType: 'list' with an `array` of { data } items.
+  const listIds = new Map<string, string>();
+  for (const l of ir.lists ?? []) {
+    const id = nextId();
+    listIds.set(l.name, id);
+    project.variables.push({
+      name: l.name,
+      id,
+      visible: false,
+      value: '0',
+      variableType: 'list',
+      x: 0,
+      y: 0,
+      width: 100,
+      height: 120,
+      array: (l.initialValues ?? []).map((data) => ({ data: String(data) })),
+      object: null,
+      isCloud: false,
+    });
+  }
+
+  const ctx: CompileContext = { index, variableIds, listIds };
 
   // Replace objects from IR
   const template = project.objects[0];

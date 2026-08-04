@@ -42,6 +42,14 @@ export const entryIRSchema = z.object({
       }),
     )
     .optional(),
+  lists: z
+    .array(
+      z.object({
+        name: z.string(),
+        initialValues: z.array(z.union([z.string(), z.number()])).optional(),
+      }),
+    )
+    .optional(),
 });
 
 /**
