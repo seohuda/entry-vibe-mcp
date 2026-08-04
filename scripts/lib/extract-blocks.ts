@@ -197,9 +197,12 @@ function extractBlock(
   const paramsNode = getProp(blockObj, 'params');
   const params: BlockParamSchema[] = [];
   if (paramsNode && t.isArrayExpression(paramsNode)) {
+    // Assign by index, never push: the compiler maps schema.params positionally
+    // onto Entry's params array, so an array hole must not shift later entries.
     paramsNode.elements.forEach((el, index) => {
-      if (!el) return;
-      params.push(parseParamSchema(el, index, keyByIndex, defParams, lang));
+      params[index] = el
+        ? parseParamSchema(el, index, keyByIndex, defParams, lang)
+        : { key: keyByIndex.get(index) ?? String(index), type: 'Unknown' };
     });
   }
 
