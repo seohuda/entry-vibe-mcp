@@ -1,0 +1,10 @@
+node_modules/
+dist/
+vendor/
+output/
+*.ent
+.DS_Store
+*.log
+.env
+.env.*
+coverage/

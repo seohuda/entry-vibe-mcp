@@ -1,0 +1,50 @@
+{
+  "name": "entry-vibe-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for natural-language Entry (playentry.org) project creation",
+  "type": "module",
+  "bin": {
+    "entry-vibe-mcp": "./dist/server/index.js"
+  },
+  "files": [
+    "dist",
+    "catalog",
+    "README.md"
+  ],
+  "scripts": {
+    "fetch:entryjs": "tsx scripts/fetch-entryjs.ts",
+    "extract:catalog": "tsx scripts/extract-catalog.ts",
+    "build": "tsc && node scripts/copy-catalog.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "start": "node dist/server/index.js",
+    "dev:server": "tsx server/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "entry",
+    "playentry",
+    "vibe-coding"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "tar": "^7.5.22",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@babel/parser": "^7.27.2",
+    "@babel/traverse": "^7.27.1",
+    "@babel/types": "^7.27.1",
+    "@types/babel__traverse": "^7.20.7",
+    "@types/node": "^22.15.21",
+    "@types/tar": "^6.1.13",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  }
+}
