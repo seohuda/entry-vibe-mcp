@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { existsSync } from 'node:fs';
+import { existsSync, mkdtempSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -7,7 +8,7 @@ import {
   listCategories,
   searchBlocks,
 } from '../server/catalog-api.ts';
-import { safeEntFilename } from '../server/tools.ts';
+import { findOutputConflicts, safeEntFilename } from '../server/tools.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CATALOG = join(ROOT, 'catalog', 'blocks.json');
@@ -70,5 +71,17 @@ describe('safeEntFilename', () => {
     ]) {
       expect(() => safeEntFilename(bad), bad).toThrow();
     }
+  });
+});
+
+describe('findOutputConflicts', () => {
+  it('reports only the paths that already exist', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'entry-vibe-conflict-'));
+    const existing = join(dir, 'package.json');
+    const missing = join(dir, 'entry-project.ent');
+    writeFileSync(existing, '{}');
+
+    expect(findOutputConflicts([existing, missing])).toEqual([existing]);
+    expect(findOutputConflicts([missing])).toEqual([]);
   });
 });

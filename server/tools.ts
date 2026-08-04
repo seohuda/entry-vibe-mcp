@@ -1,4 +1,4 @@
-import { mkdirSync } from 'node:fs';
+import { existsSync, mkdirSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { z } from 'zod';
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
@@ -70,6 +70,11 @@ export function safeEntFilename(filename?: string): string {
     throw new Error(`invalid filename: ${JSON.stringify(filename)}`);
   }
   return `${stem}.ent`;
+}
+
+/** Which of the given paths already exist (compile_project refuses to clobber these by default). */
+export function findOutputConflicts(paths: string[]): string[] {
+  return paths.filter((p) => existsSync(p));
 }
 
 function textResult(data: unknown) {
@@ -150,22 +155,45 @@ export function registerTools(server: McpServer): void {
   server.registerTool(
     'compile_project',
     {
-      description: `Compile EntryIR into an Entry .ent file (tar.gz with temp/project.json + entrybot media). Returns the output path. On failure, returns validation/compile errors — fix IR and retry.\n\n${IR_SCHEMA_DOC}`,
+      description: `Compile EntryIR into an Entry .ent file (tar.gz with temp/project.json + entrybot media). Writes into the host's working directory. Returns the output path. Fails if the target files already exist — pass overwrite:true to replace them. On failure, returns validation/compile errors — fix IR and retry.\n\n${IR_SCHEMA_DOC}`,
       inputSchema: {
         ir: entryIRSchema.describe('Full EntryIR project'),
         filename: z
           .string()
           .optional()
           .describe('Output filename without path (default entry-project.ent)'),
+        overwrite: z
+          .boolean()
+          .optional()
+          .describe('Replace an existing file at the target path (default false)'),
       },
     },
-    async ({ ir, filename }) => {
+    async ({ ir, filename, overwrite }) => {
       try {
         const name = safeEntFilename(filename);
         const out = outputDir();
         mkdirSync(out, { recursive: true });
         const entPath = join(out, name);
         const jsonPath = join(out, name.replace(/\.ent$/i, '.json'));
+
+        if (!overwrite) {
+          const conflicts = findOutputConflicts([entPath, jsonPath]);
+          if (conflicts.length > 0) {
+            return errorResult(
+              JSON.stringify(
+                {
+                  ok: false,
+                  errors: [
+                    `refusing to overwrite existing file(s): ${conflicts.join(', ')}. ` +
+                      'Pass a different filename, or overwrite: true to replace.',
+                  ],
+                },
+                null,
+                2,
+              ),
+            );
+          }
+        }
 
         const project = compileProject(ir as EntryIR);
         writeProjectJson(project, jsonPath);

@@ -11,6 +11,7 @@
   참조하면 컴파일 시 Entry 내부 리스트 id로 치환됩니다 (`add_value_to_list`,
   `value_of_index_from_list` 등 9개 리스트 블록 활성화).
 - 결과물 저장 위치를 오버라이드하는 `ENTRY_VIBE_OUTPUT_DIR` 환경 변수 추가.
+- `compile_project`에 `overwrite` 옵션 추가.
 
 ### Fixed
 
@@ -21,6 +22,9 @@
   `<이름>.json`을 바로 저장합니다 (별도의 `output/` 하위 폴더 없음).
 - `compile_project`가 만드는 확인용 JSON 파일명을 `<이름>.project.json`에서
   `<이름>.json`으로 변경 (이름이 중복돼 어색했던 부분 정리).
+- `compile_project`가 호스트 cwd에 바로 쓰게 되면서, 흔한 이름(`package` 등)을 filename으로
+  넘기면 프로젝트의 기존 파일(`package.json` 등)을 조용히 덮어쓸 수 있던 문제 수정.
+  대상 경로에 파일이 이미 있으면 기본적으로 컴파일을 거부합니다.
 
 ## [0.1.0] - 2026-08-04
 

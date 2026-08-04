@@ -208,7 +208,7 @@ Windsurf, Cline 등 다수 호스트는 Claude Desktop과 동일하게 `mcpServe
 search_blocks → get_block_schema → validate_project → compile_project
 ```
 
-결과물은 MCP 호스트가 서버를 실행한 디렉터리에 `<이름>.ent`와 확인용 `<이름>.json`으로 바로 저장됩니다(별도의 `output/` 하위 폴더를 만들지 않습니다). `.ent`는 [엔트리 오프라인](https://playentry.org/download)에서 열거나 playentry.org에 업로드하면 됩니다.
+결과물은 MCP 호스트가 서버를 실행한 디렉터리에 `<이름>.ent`와 확인용 `<이름>.json`으로 바로 저장됩니다(별도의 `output/` 하위 폴더를 만들지 않습니다). 같은 이름의 파일이 이미 있으면 실수로 덮어쓰지 않도록 컴파일을 거부합니다 — 다른 이름을 쓰거나 `overwrite: true`를 넘기면 됩니다. `.ent`는 [엔트리 오프라인](https://playentry.org/download)에서 열거나 playentry.org에 업로드하면 됩니다.
 
 다른 위치에 저장하고 싶다면 MCP 설정에서 서버 프로세스에 `ENTRY_VIBE_OUTPUT_DIR` 환경 변수를 지정하면 됩니다 (절대 경로 권장).
 
