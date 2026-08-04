@@ -14,6 +14,37 @@ const THREAD_X = 40;
 const THREAD_Y_START = 50;
 const THREAD_Y_GAP = 200;
 
+const ID_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz';
+
+/**
+ * Deterministic generator for Entry-shaped 4-char ids.
+ * Entry requires object / picture / sound / variable ids to be unique across the
+ * whole project, so every clone of the skeleton object must get fresh ones.
+ */
+function createIdFactory(reserved: Iterable<string> = []): () => string {
+  const used = new Set(reserved);
+  let counter = 0;
+  return function nextId(): string {
+    for (;;) {
+      let value = counter++;
+      let id = '';
+      for (let i = 0; i < 4; i++) {
+        id = ID_CHARS[value % ID_CHARS.length] + id;
+        value = Math.floor(value / ID_CHARS.length);
+      }
+      if (!used.has(id)) {
+        used.add(id);
+        return id;
+      }
+    }
+  };
+}
+
+interface SkeletonSprite {
+  pictures: Array<Record<string, unknown>>;
+  sounds: Array<Record<string, unknown>>;
+}
+
 function isIRBlock(value: IRParamValue): value is IRBlock {
   return typeof value === 'object' && value !== null && 'type' in value;
 }
@@ -148,13 +179,30 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
   const index = catalogIndex(catalog);
   const project = createStartProjectSkeleton();
 
+  const sceneId = project.scenes[0].id;
+  const nextId = createIdFactory([
+    sceneId,
+    ...project.variables.map((v) => String(v.id)),
+  ]);
+
   // Replace objects from IR
-  project.objects = ir.objects.map((obj, oi) => {
-    const base = structuredClone(project.objects[0]) as Record<string, unknown>;
-    base.id = oi === 0 ? '7y0y' : `obj${oi}`;
+  const template = project.objects[0];
+  project.objects = ir.objects.map((obj) => {
+    const base = structuredClone(template) as Record<string, unknown>;
+    base.id = nextId();
     base.name = obj.name;
     base.label = { ko: obj.name, en: obj.name };
-    base.scene = (project.scenes[0] as { id: string }).id;
+    base.scene = sceneId;
+
+    // Picture/sound ids must be unique project-wide, not just per object.
+    const sprite = base.sprite as SkeletonSprite;
+    sprite.pictures.forEach((picture) => {
+      picture.id = nextId();
+    });
+    sprite.sounds.forEach((sound) => {
+      sound.id = nextId();
+    });
+    base.selectedPictureId = sprite.pictures[0]?.id;
 
     const scripts = obj.scripts.map((thread, ti) =>
       compileTopThread(thread, index, THREAD_X + ti * 300, THREAD_Y_START + ti * THREAD_Y_GAP),

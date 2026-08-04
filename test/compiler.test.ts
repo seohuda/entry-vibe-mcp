@@ -88,6 +88,33 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     expect(body[1].type).toBe('bounce_wall');
   });
 
+  it('gives every object, picture and sound a unique id', () => {
+    const thread = [{ type: 'when_run_button_click' }];
+    const project = compileProject({
+      objects: [
+        { name: 'A', sprite: 'entrybot', scripts: [thread] },
+        { name: 'B', sprite: 'entrybot', scripts: [thread] },
+        { name: 'C', sprite: 'entrybot', scripts: [thread] },
+      ],
+    });
+
+    const ids: string[] = [
+      ...project.scenes.map((s) => s.id),
+      ...project.variables.map((v) => String(v.id)),
+    ];
+    for (const obj of project.objects as Array<Record<string, any>>) {
+      ids.push(obj.id);
+      ids.push(...obj.sprite.pictures.map((p: { id: string }) => p.id));
+      ids.push(...obj.sprite.sounds.map((s: { id: string }) => s.id));
+      // selectedPictureId must point at one of this object's own pictures
+      expect(obj.sprite.pictures.map((p: { id: string }) => p.id)).toContain(
+        obj.selectedPictureId,
+      );
+    }
+
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
   it('throws CompileError on invalid IR', () => {
     expect(() =>
       compileProject({
