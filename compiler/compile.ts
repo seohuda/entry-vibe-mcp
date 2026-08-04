@@ -54,6 +54,11 @@ function isIRBlock(value: IRParamValue): value is IRBlock {
   return typeof value === 'object' && value !== null && 'type' in value;
 }
 
+/**
+ * Wrap a literal in the primitive block Entry expects for a value slot.
+ * Only reached for non-dropdown params — compileParamValue passes dropdown
+ * values through untouched.
+ */
 function wrapPrimitive(
   value: string | number | boolean,
   param: BlockParamSchema,
@@ -65,9 +70,6 @@ function wrapPrimitive(
   const defaultType = param.defaultType ?? (typeof value === 'number' ? 'number' : 'text');
   if (defaultType === 'number' || typeof value === 'number') {
     return { type: 'number', params: [String(value)] };
-  }
-  if (param.type === 'Dropdown' || param.type === 'DropdownDynamic' || param.type === 'Keyboard') {
-    return value;
   }
   return { type: 'text', params: [String(value)] };
 }
