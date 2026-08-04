@@ -1,0 +1,19 @@
+{
+  "objects": [
+    {
+      "name": "엔트리봇",
+      "sprite": "entrybot",
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          {
+            "type": "repeat_basic",
+            "statements": {
+              "DO": [{ "type": "move_direction" }]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}
