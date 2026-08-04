@@ -5,6 +5,11 @@ import { catalogPath } from '../src/paths.ts';
 
 const DEFAULT_CATALOG = catalogPath();
 
+/** Param key Entry uses for a variable reference (stored as a variable id). */
+export const VARIABLE_PARAM_KEY = 'VARIABLE';
+/** Param key Entry uses for a list reference. Lists are out of scope for v1. */
+export const LIST_PARAM_KEY = 'LIST';
+
 export interface ValidationResult {
   valid: boolean;
   errors: string[];
@@ -31,13 +36,20 @@ function isIRBlock(value: IRParamValue): value is IRBlock {
   return typeof value === 'object' && value !== null && 'type' in value;
 }
 
+interface ValidateContext {
+  index: Map<string, BlockSchema>;
+  /** Declared user variable names (ir.variables[].name). */
+  variableNames: Set<string>;
+  errors: string[];
+}
+
 function validateBlock(
   block: IRBlock,
   path: string,
-  index: Map<string, BlockSchema>,
-  errors: string[],
+  ctx: ValidateContext,
   opts: { allowHat: boolean },
 ): void {
+  const { index, errors } = ctx;
   const schema = index.get(block.type);
   if (!schema) {
     errors.push(`${path}: unknown block type "${block.type}"`);
@@ -67,7 +79,19 @@ function validateBlock(
       }
       const value = block.params[key];
       if (isIRBlock(value)) {
-        validateBlock(value, `${path}.params.${key}`, index, errors, { allowHat: false });
+        validateBlock(value, `${path}.params.${key}`, ctx, { allowHat: false });
+        continue;
+      }
+      if (key === LIST_PARAM_KEY) {
+        errors.push(
+          `${path}: block "${block.type}" references a list, which v1 does not support (ir has no list declarations)`,
+        );
+        continue;
+      }
+      if (key === VARIABLE_PARAM_KEY && !ctx.variableNames.has(String(value))) {
+        errors.push(
+          `${path}: unknown variable ${JSON.stringify(value)} — declare it in ir.variables (known: ${[...ctx.variableNames].join(', ') || 'none'})`,
+        );
       }
     }
   }
@@ -81,7 +105,10 @@ function validateBlock(
         );
         continue;
       }
-      validateThread(thread, `${path}.statements.${slot}`, index, errors, false);
+      validateThread(thread, `${path}.statements.${slot}`, ctx, {
+        requireHat: false,
+        allowEmpty: true,
+      });
     }
   }
 }
@@ -89,12 +116,21 @@ function validateBlock(
 function validateThread(
   thread: Thread,
   path: string,
-  index: Map<string, BlockSchema>,
-  errors: string[],
-  requireHat: boolean,
+  ctx: ValidateContext,
+  opts: { requireHat: boolean; allowEmpty: boolean },
 ): void {
-  if (!Array.isArray(thread) || thread.length === 0) {
-    errors.push(`${path}: thread must be a non-empty array of blocks`);
+  const { index, errors } = ctx;
+  const { requireHat, allowEmpty } = opts;
+
+  if (!Array.isArray(thread)) {
+    errors.push(`${path}: thread must be an array of blocks`);
+    return;
+  }
+  if (thread.length === 0) {
+    // An empty statement slot is legal in Entry (e.g. a loop with no body).
+    if (!allowEmpty) {
+      errors.push(`${path}: thread must be a non-empty array of blocks`);
+    }
     return;
   }
 
@@ -108,7 +144,7 @@ function validateThread(
   }
 
   thread.forEach((block, i) => {
-    validateBlock(block, `${path}[${i}]`, index, errors, {
+    validateBlock(block, `${path}[${i}]`, ctx, {
       allowHat: requireHat && i === 0,
     });
   });
@@ -126,6 +162,21 @@ export function validateProject(
     return { valid: false, errors };
   }
 
+  const variableNames = new Set<string>();
+  (ir.variables ?? []).forEach((v, vi) => {
+    if (!v?.name || typeof v.name !== 'string') {
+      errors.push(`variables[${vi}].name is required`);
+      return;
+    }
+    if (variableNames.has(v.name)) {
+      errors.push(`variables[${vi}]: duplicate variable name ${JSON.stringify(v.name)}`);
+      return;
+    }
+    variableNames.add(v.name);
+  });
+
+  const ctx: ValidateContext = { index, variableNames, errors };
+
   ir.objects.forEach((obj, oi) => {
     if (!obj.name || typeof obj.name !== 'string') {
       errors.push(`objects[${oi}].name is required`);
@@ -140,7 +191,10 @@ export function validateProject(
       return;
     }
     obj.scripts.forEach((thread, ti) => {
-      validateThread(thread, `objects[${oi}].scripts[${ti}]`, index, errors, true);
+      validateThread(thread, `objects[${oi}].scripts[${ti}]`, ctx, {
+        requireHat: true,
+        allowEmpty: false,
+      });
     });
   });
 

@@ -22,6 +22,16 @@ IRBlock = {
   "statements": { [slotName: string]: Thread }  // e.g. "DO", "STACK_IF", "STACK_ELSE"
 }
 
+Variables: declare them in "variables", then reference them from a block's
+"VARIABLE" param by NAME — the compiler rewrites the name to the internal
+variable id. Referencing an undeclared name is a validation error.
+
+  "variables": [{ "name": "점수", "initialValue": 0 }],
+  ...
+  { "type": "set_variable", "params": { "VARIABLE": "점수", "VALUE": 0 } }
+
+Lists ("LIST" params) are not supported in v1.
+
 Example — cat that moves and bounces:
 {
   "objects": [{

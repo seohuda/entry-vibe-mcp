@@ -115,6 +115,101 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
+  it('resolves VARIABLE params from name to the generated variable id', () => {
+    const ir: EntryIR = {
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'set_variable', params: { VARIABLE: '점수', VALUE: 10 } },
+            ],
+          ],
+        },
+      ],
+      variables: [{ name: '점수', initialValue: 0 }],
+    };
+
+    expect(validateProject(ir).valid).toBe(true);
+
+    const project = compileProject(ir);
+    const declared = project.variables.find((v) => v.name === '점수')!;
+    expect(declared).toBeDefined();
+
+    const thread = (project.objects[0].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    const params = thread[1].params as unknown[];
+    expect(params[0]).toBe(declared.id);
+    expect(params[0]).not.toBe('점수');
+  });
+
+  it('rejects references to undeclared variables', () => {
+    const result = validateProject({
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'set_variable', params: { VARIABLE: '없는변수', VALUE: 1 } },
+            ],
+          ],
+        },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('없는변수'))).toBe(true);
+  });
+
+  it('rejects duplicate variable names', () => {
+    const result = validateProject({
+      objects: [
+        { name: 'x', sprite: 'entrybot', scripts: [[{ type: 'when_run_button_click' }]] },
+      ],
+      variables: [
+        { name: '점수', initialValue: 0 },
+        { name: '점수', initialValue: 1 },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('duplicate'))).toBe(true);
+  });
+
+  it('accepts an empty statement slot', () => {
+    const ir: EntryIR = {
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'repeat_basic', params: { VALUE: 2 }, statements: { DO: [] } },
+            ],
+          ],
+        },
+      ],
+    };
+    expect(validateProject(ir)).toEqual({ valid: true, errors: [] });
+
+    const thread = (compileProject(ir).objects[0].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    expect(thread[1].statements).toEqual([[]]);
+  });
+
+  it('still requires top-level script threads to be non-empty', () => {
+    const result = validateProject({
+      objects: [{ name: 'x', sprite: 'entrybot', scripts: [[]] }],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('non-empty'))).toBe(true);
+  });
+
   it('throws CompileError on invalid IR', () => {
     expect(() =>
       compileProject({

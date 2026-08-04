@@ -1,7 +1,12 @@
 import type { BlockCatalog, BlockParamSchema, BlockSchema } from '../src/types/block.ts';
 import type { EntryIR, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
 import { createStartProjectSkeleton, type EntryProject } from './skeleton.ts';
-import { catalogIndex, loadCatalog, validateProject } from './validate.ts';
+import {
+  catalogIndex,
+  loadCatalog,
+  validateProject,
+  VARIABLE_PARAM_KEY,
+} from './validate.ts';
 
 export class CompileError extends Error {
   constructor(public readonly errors: string[]) {
@@ -67,13 +72,23 @@ function wrapPrimitive(
   return { type: 'text', params: [String(value)] };
 }
 
+interface CompileContext {
+  index: Map<string, BlockSchema>;
+  /** Variable name → generated project variable id. */
+  variableIds: Map<string, string>;
+}
+
 function compileParamValue(
   value: IRParamValue,
   param: BlockParamSchema,
-  index: Map<string, BlockSchema>,
+  ctx: CompileContext,
 ): unknown {
   if (isIRBlock(value)) {
-    return compileBlock(value, index, { includePosition: false });
+    return compileBlock(value, ctx, { includePosition: false });
+  }
+  // Entry stores variable references as ids, but IR authors only know names.
+  if (param.key === VARIABLE_PARAM_KEY && typeof value === 'string') {
+    return ctx.variableIds.get(value) ?? value;
   }
   if (param.type === 'Dropdown' || param.type === 'DropdownDynamic' || param.type === 'Keyboard') {
     return value;
@@ -90,10 +105,10 @@ function defaultForParam(param: BlockParamSchema): unknown {
 
 function compileBlock(
   block: IRBlock,
-  index: Map<string, BlockSchema>,
+  ctx: CompileContext,
   opts: { includePosition: boolean; x?: number; y?: number },
 ): Record<string, unknown> {
-  const schema = index.get(block.type);
+  const schema = ctx.index.get(block.type);
   if (!schema) {
     throw new CompileError([`unknown block type "${block.type}"`]);
   }
@@ -110,7 +125,7 @@ function compileBlock(
     const params: unknown[] = schema.params.map((param) => {
       if (param.type === 'Indicator' || param.type === 'LineBreak') return null;
       if (block.params && Object.prototype.hasOwnProperty.call(block.params, param.key)) {
-        return compileParamValue(block.params[param.key], param, index);
+        return compileParamValue(block.params[param.key], param, ctx);
       }
       return defaultForParam(param);
     });
@@ -129,7 +144,7 @@ function compileBlock(
     for (let i = 0; i < schema.statementSlots; i++) {
       const key = schema.statementKeys[i] ?? String(i);
       const thread = block.statements?.[key] ?? [];
-      statements.push(compileThreadBody(thread, index));
+      statements.push(compileThreadBody(thread, ctx));
     }
     out.statements = statements;
   }
@@ -140,20 +155,20 @@ function compileBlock(
 /** Compile blocks inside a statement slot (no x/y). */
 function compileThreadBody(
   thread: Thread,
-  index: Map<string, BlockSchema>,
+  ctx: CompileContext,
 ): Record<string, unknown>[] {
-  return thread.map((b) => compileBlock(b, index, { includePosition: false }));
+  return thread.map((b) => compileBlock(b, ctx, { includePosition: false }));
 }
 
 /** Compile a top-level script thread (first block gets x/y). */
 function compileTopThread(
   thread: Thread,
-  index: Map<string, BlockSchema>,
+  ctx: CompileContext,
   x: number,
   y: number,
 ): Record<string, unknown>[] {
   return thread.map((b, i) =>
-    compileBlock(b, index, {
+    compileBlock(b, ctx, {
       includePosition: i === 0,
       x,
       y,
@@ -185,6 +200,28 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     ...project.variables.map((v) => String(v.id)),
   ]);
 
+  // User variables are created before scripts: blocks reference them by id,
+  // so the name → id mapping must exist while compiling params.
+  const variableIds = new Map<string, string>();
+  for (const v of ir.variables ?? []) {
+    const id = nextId();
+    variableIds.set(v.name, id);
+    project.variables.push({
+      name: v.name,
+      id,
+      visible: false,
+      value: String(v.initialValue),
+      variableType: 'variable',
+      x: 0,
+      y: 0,
+      array: [],
+      object: null,
+      isCloud: false,
+    });
+  }
+
+  const ctx: CompileContext = { index, variableIds };
+
   // Replace objects from IR
   const template = project.objects[0];
   project.objects = ir.objects.map((obj) => {
@@ -205,29 +242,11 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     base.selectedPictureId = sprite.pictures[0]?.id;
 
     const scripts = obj.scripts.map((thread, ti) =>
-      compileTopThread(thread, index, THREAD_X + ti * 300, THREAD_Y_START + ti * THREAD_Y_GAP),
+      compileTopThread(thread, ctx, THREAD_X + ti * 300, THREAD_Y_START + ti * THREAD_Y_GAP),
     );
     base.script = scripts;
     return base;
   });
-
-  // Optional user variables (append after timer/answer)
-  if (ir.variables?.length) {
-    for (const [i, v] of ir.variables.entries()) {
-      project.variables.push({
-        name: v.name,
-        id: `uv${i}`,
-        visible: false,
-        value: String(v.initialValue),
-        variableType: 'variable',
-        x: 0,
-        y: 0,
-        array: [],
-        object: null,
-        isCloud: false,
-      });
-    }
-  }
 
   return project;
 }
