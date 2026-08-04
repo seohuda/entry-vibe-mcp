@@ -5,6 +5,9 @@ import { catalogPath } from '../src/paths.ts';
 
 const DEFAULT_CATALOG = catalogPath();
 
+/** Skeleton of the event hats an object's script thread may start with. */
+export const EVENT_SKELETON = 'basic_event';
+
 /** Param key Entry uses for a variable reference (stored as a variable id). */
 export const VARIABLE_PARAM_KEY = 'VARIABLE';
 /** Param key Entry uses for a list reference. Lists are out of scope for v1. */
@@ -130,9 +133,11 @@ function validateThread(
 
   if (requireHat) {
     const first = index.get(thread[0].type);
-    if (!first?.isHat) {
+    // Not merely isHat: function_create/function_create_value are hats too, but
+    // they head a function definition, not an object's script.
+    if (first?.skeleton !== EVENT_SKELETON) {
       errors.push(
-        `${path}[0]: script thread must start with a hat/event block (got "${thread[0].type}")`,
+        `${path}[0]: script thread must start with an event block (got "${thread[0].type}")`,
       );
     }
   }

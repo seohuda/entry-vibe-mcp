@@ -41,6 +41,22 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     expect(result.errors.some((e) => e.includes('not_a_real_block'))).toBe(true);
   });
 
+  it('rejects function definition hats as a script thread opener', () => {
+    // function_create is isHat, but it heads a function definition rather than
+    // an object script, so Entry would not accept it here.
+    const result = validateProject({
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [[{ type: 'function_create' }, { type: 'move_direction' }]],
+        },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('event block'))).toBe(true);
+  });
+
   it('rejects threads that do not start with a hat', () => {
     const ir: EntryIR = {
       objects: [
