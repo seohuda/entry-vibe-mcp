@@ -9,7 +9,8 @@
   "files": [
     "dist",
     "catalog",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "fetch:entryjs": "tsx scripts/fetch-entryjs.ts",
