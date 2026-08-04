@@ -31,6 +31,14 @@
     "vibe-coding"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seohuda/entry-vibe-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seohuda/entry-vibe-mcp/issues"
+  },
+  "homepage": "https://github.com/seohuda/entry-vibe-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
     "tar": "^7.5.22",
