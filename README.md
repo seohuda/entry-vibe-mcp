@@ -77,6 +77,21 @@ search_blocks → get_block_schema → validate_project → compile_project
 
 결과물은 `output/`에 `.ent` + `project.json`으로 저장됨.
 
+## 작동원리
+
+서버는 호스트에서 넘긴 IR을 바탕으로 카탈로그 검증과 컴파일을 수행합니다.
+
+```mermaid
+flowchart LR
+  Host[host 요청] --> Search[search_blocks]
+  Search --> Schema[get_block_schema]
+  Schema --> Validate[validate_project]
+  Validate --> Compile[compile_project]
+  Compile --> Out[output/.ent]
+
+  Catalog[blocks.json] --> Validate
+```
+
 ## 툴
 
 | 이름 | 하는 일 |
