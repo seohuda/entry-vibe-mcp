@@ -29,6 +29,17 @@ describe.skipIf(!existsSync(CATALOG))('MCP catalog API', () => {
     expect(hits.some((b) => b.type === 'bounce_wall')).toBe(true);
   });
 
+  it('ignores surrounding whitespace and case in the query', () => {
+    const hits = searchBlocks('  반복  ');
+    expect(hits.some((b) => b.type === 'repeat_basic')).toBe(true);
+    expect(searchBlocks('BOUNCE').some((b) => b.type === 'bounce_wall')).toBe(true);
+  });
+
+  it('respects the limit for an empty query', () => {
+    expect(searchBlocks('', undefined, 5)).toHaveLength(5);
+    expect(searchBlocks('   ', 'flow', 3).every((b) => b.category === 'flow')).toBe(true);
+  });
+
   it('returns detailed schemas', () => {
     const schemas = getBlockSchemas(['repeat_basic', 'when_run_button_click']);
     expect(schemas).toHaveLength(2);

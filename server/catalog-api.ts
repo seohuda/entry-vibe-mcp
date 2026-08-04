@@ -32,16 +32,25 @@ export function searchBlocks(
   category?: string,
   limit = 20,
 ): ReturnType<typeof summarizeBlock>[] {
-  const q = query.toLowerCase().trim();
+  const q = query.trim().toLowerCase();
+  const inCategory = (b: BlockSchema) => (category ? b.category === category : true);
+
   const catalog = getCatalog();
+  // An empty query has nothing to rank by; return the category listing as-is
+  // rather than letting `includes('')` score every block identically.
+  if (!q) {
+    return catalog.blocks.filter(inCategory).slice(0, limit).map(summarizeBlock);
+  }
+
   const scored = catalog.blocks
-    .filter((b) => (category ? b.category === category : true))
+    .filter(inCategory)
     .map((b) => {
-      const hay = `${b.type} ${b.label.ko} ${b.category}`.toLowerCase();
+      const label = b.label.ko.toLowerCase();
+      const hay = `${b.type} ${label} ${b.category}`.toLowerCase();
       let score = 0;
       if (b.type === q) score += 100;
       if (b.type.includes(q)) score += 50;
-      if (b.label.ko.includes(query)) score += 40;
+      if (label.includes(q)) score += 40;
       for (const token of q.split(/\s+/).filter(Boolean)) {
         if (hay.includes(token)) score += 10;
       }
