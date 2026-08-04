@@ -154,6 +154,25 @@ gemini mcp add entry-vibe node /absolute/path/to/entry-vibe-mcp/dist/server/inde
 }
 ```
 
+### Antigravity
+
+`~/.gemini/config/mcp_config.json` (전역) 또는 워크스페이스의 `.agents/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "entry-vibe": {
+      "command": "node",
+      "args": ["/absolute/path/to/entry-vibe-mcp/dist/server/index.js"]
+    }
+  }
+}
+```
+
+IDE에서 직접 열려면: 에이전트 사이드 패널 상단의 `…` → **MCP Servers** → **Manage MCP Servers** → **View raw config**.
+
+IDE와 CLI(`agy`)가 같은 설정 파일을 공유하므로 한 번만 넣으면 둘 다 잡힙니다. CLI에서는 `/mcp`로 확인할 수 있습니다.
+
 ### 그 외 호스트
 
 Windsurf, Cline 등 상당수 호스트가 Claude Desktop과 같은 `mcpServers` + `command` / `args` 형태를 씁니다. 설정 파일 위치만 해당 호스트 문서에서 확인하고 위 JSON을 그대로 넣으면 됩니다.
