@@ -1,0 +1,25 @@
+{
+  "variables": [{ "name": "점수", "initialValue": 0 }],
+  "objects": [
+    {
+      "name": "엔트리봇",
+      "sprite": "entrybot",
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "show_variable", "params": { "VARIABLE": "점수" } },
+          {
+            "type": "repeat_basic",
+            "params": { "VALUE": 4 },
+            "statements": {
+              "DO": [
+                { "type": "change_variable", "params": { "VARIABLE": "점수", "VALUE": 10 } },
+                { "type": "move_direction", "params": { "VALUE": 10 } }
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

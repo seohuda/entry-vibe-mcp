@@ -1,0 +1,17 @@
+{
+  "lists": [{ "name": "할일", "initialValues": ["숙제하기"] }],
+  "objects": [
+    {
+      "name": "엔트리봇",
+      "sprite": "entrybot",
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "show_list", "params": { "LIST": "할일" } },
+          { "type": "add_value_to_list", "params": { "VALUE": "방청소", "LIST": "할일" } },
+          { "type": "add_value_to_list", "params": { "VALUE": "산책", "LIST": "할일" } }
+        ]
+      ]
+    }
+  ]
+}
