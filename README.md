@@ -1,4 +1,15 @@
-# entry-vibe-mcp
+<p align="center">
+  <strong>EntryVibe MCP</strong><br/>
+  <em>자연어 한 줄로 Entry 작품을 만드는 MCP 서버</em>
+</p>
+
+<p align="center">
+  <a href="https://playentry.org"><img src="https://img.shields.io/badge/Entry-playentry.org-FF6B00?style=flat-square" alt="Entry"></a>
+  <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-Model%20Context%20Protocol-6366F1?style=flat-square" alt="MCP"></a>
+  <img src="https://img.shields.io/badge/version-0.1.0-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/node-%3E%3D20-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node">
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
+</p>
 
 [Entry](https://playentry.org) 작품을 자연어로 만들고 `.ent`로 뽑아주는 MCP 서버.
 
