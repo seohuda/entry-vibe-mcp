@@ -48,12 +48,12 @@ export function mediaDir(root?: string): string {
 
 export function outputDir(root?: string): string {
   if (process.env.ENTRY_VIBE_OUTPUT_DIR) return process.env.ENTRY_VIBE_OUTPUT_DIR;
-  // No explicit root: write next to wherever the MCP host launched the
-  // server from, not inside entry-vibe-mcp's own install directory — the
-  // host's cwd is normally the user's project, which is what compile_project
-  // output should land in.
-  if (root === undefined) return join(process.cwd(), 'output');
-  // Explicit root (e.g. the example script): keep it package-relative.
+  // No explicit root: write directly into wherever the MCP host launched the
+  // server from — not a nested output/ subfolder, and not entry-vibe-mcp's
+  // own install directory, which is normally unrelated to the user's project.
+  if (root === undefined) return process.cwd();
+  // Explicit root (e.g. the example script): keep it package-relative,
+  // organized under output/ since that's shared repo scratch space.
   if (existsSync(join(root, 'package.json'))) return join(root, 'output');
   return join(root, '..', 'output');
 }

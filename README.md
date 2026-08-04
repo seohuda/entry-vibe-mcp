@@ -16,7 +16,7 @@
 
 MCP 호스트에 연결해서 사용합니다. 서버 자체는 상태를 저장하지 않으며, 블록 검색·IR 검증·컴파일 세 가지만 담당합니다.
 
-예를 들어 "엔트리봇이 4번 반복하면서 10칸씩 움직이고 벽에 튕기게 해줘"라고 요청하면 `output/entry-project.ent`가 생성됩니다. 이 파일은 엔트리 오프라인이나 playentry.org에서 열 수 있습니다.
+예를 들어 "엔트리봇이 4번 반복하면서 10칸씩 움직이고 벽에 튕기게 해줘"라고 요청하면 `entry-project.ent`가 생성됩니다. 이 파일은 엔트리 오프라인이나 playentry.org에서 열 수 있습니다.
 
 ---
 
@@ -208,7 +208,7 @@ Windsurf, Cline 등 다수 호스트는 Claude Desktop과 동일하게 `mcpServe
 search_blocks → get_block_schema → validate_project → compile_project
 ```
 
-결과물은 MCP 호스트가 서버를 실행한 디렉터리 기준 `output/`에 `.ent`와 `project.json`으로 저장됩니다. `.ent`는 [엔트리 오프라인](https://playentry.org/download)에서 열거나 playentry.org에 업로드하면 됩니다.
+결과물은 MCP 호스트가 서버를 실행한 디렉터리에 `.ent`와 `project.json`으로 바로 저장됩니다(별도의 `output/` 하위 폴더를 만들지 않습니다). `.ent`는 [엔트리 오프라인](https://playentry.org/download)에서 열거나 playentry.org에 업로드하면 됩니다.
 
 다른 위치에 저장하고 싶다면 MCP 설정에서 서버 프로세스에 `ENTRY_VIBE_OUTPUT_DIR` 환경 변수를 지정하면 됩니다 (절대 경로 권장).
 
@@ -234,7 +234,7 @@ flowchart LR
   Search --> Schema[get_block_schema]
   Schema --> Validate[validate_project]
   Validate --> Compile[compile_project]
-  Compile --> Out[output/.ent]
+  Compile --> Out[.ent]
 
   Catalog[blocks.json] --> Validate
 ```
