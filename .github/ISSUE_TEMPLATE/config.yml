@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Entry 공식 사이트
+    url: https://playentry.org
+    about: 엔트리(Entry) 일반 문의 — 이 repo 이슈가 아닙니다
+  - name: MCP 스펙
+    url: https://modelcontextprotocol.io
+    about: MCP 프로토콜/호스트 관련 문서

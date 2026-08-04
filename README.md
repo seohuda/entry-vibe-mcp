@@ -305,6 +305,8 @@ temp/media/bark.mp3
 
 ## 개발
 
+기여 방법은 [CONTRIBUTING.md](CONTRIBUTING.md). 버그·제안은 [Issues](https://github.com/seohuda/entry-vibe-mcp/issues)에 템플릿 골라서 올리면 됩니다.
+
 | 명령 | 설명 |
 |------|------|
 | `npm run build` | tsc + catalog → dist 복사 |

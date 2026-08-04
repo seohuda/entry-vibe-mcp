@@ -1,0 +1,41 @@
+name: 질문 / 설정 도움
+description: MCP 연결, 호스트 설정, 사용법
+title: "[question]: "
+labels: ["question"]
+body:
+  - type: dropdown
+    id: host
+    attributes:
+      label: MCP 호스트
+      options:
+        - Cursor
+        - Claude Desktop
+        - Claude Code
+        - VS Code (Copilot)
+        - Codex CLI
+        - Gemini CLI
+        - Antigravity
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 질문
+      description: README의 MCP 연결 섹션을 먼저 확인해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: mcp 설정 (민감 정보 제거)
+      description: command / args JSON. API 키는 넣지 마세요.
+      render: json
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 로그 / 에러 (있으면)
+      description: Claude Desktop은 ~/Library/Logs/Claude/mcp*.log 등

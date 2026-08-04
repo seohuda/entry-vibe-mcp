@@ -1,0 +1,41 @@
+name: 기능 제안
+description: 새 블록, 새 sprite, MCP 툴 추가 등
+title: "[feat]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 어떤 문제 / 한계인가요?
+      description: "예: entrybot 말고 다른 캐릭터 sprite를 쓰고 싶다"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 제안
+      description: 어떻게 동작하면 좋을지. IR/API 변경이 있으면 같이 적어주세요.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 관련 영역
+      options:
+        - catalog (블록 스키마)
+        - compiler (IR / .ent)
+        - server (MCP 툴)
+        - docs
+        - 기타
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: 범위 (해당하는 것)
+      options:
+        - label: v1 (entrybot, 코어 블록 12카테고리) 안에서 가능해 보임
+        - label: v2 (AI/하드웨어 블록, HTTP transport 등) 쪽 제안

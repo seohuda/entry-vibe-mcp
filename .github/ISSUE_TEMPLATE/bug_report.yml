@@ -1,0 +1,84 @@
+name: 버그 리포트
+description: 동작이 깨졌거나 .ent가 열리지 않을 때
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        재현 가능한 버그만 올려주세요. MCP 호스트 설정 문제는 `question` 템플릿을 쓰는 게 낫습니다.
+
+  - type: dropdown
+    id: host
+    attributes:
+      label: MCP 호스트
+      options:
+        - Cursor
+        - Claude Desktop
+        - Claude Code
+        - VS Code (Copilot)
+        - Codex CLI
+        - Gemini CLI
+        - Antigravity
+        - 기타
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: entry-vibe-mcp 버전 / 커밋
+      description: README 배지 버전, `git rev-parse --short HEAD`, 또는 clone 시점
+      placeholder: "0.1.0 또는 f83095c"
+    validations:
+      required: true
+
+  - type: input
+    id: node
+    attributes:
+      label: Node.js 버전
+      placeholder: "node -v 출력"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 방법
+      description: 호스트에 연결한 뒤 어떤 요청/툴 호출을 했는지
+      placeholder: |
+        1. npm run build
+        2. Cursor mcp.json에 ... 등록
+        3. "엔트리봇이 ..." 요청
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대한 결과
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 실제 결과
+      description: 에러 메시지, validate_project errors[], compile 실패 로그 등
+    validations:
+      required: true
+
+  - type: textarea
+    id: ir
+    attributes:
+      label: IR JSON (있으면)
+      description: validate_project / compile_project에 넘긴 IR. 민감 정보는 지우고 올려주세요.
+      render: json
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 확인
+      options:
+        - label: npm test 를 로컬에서 돌려봤고, 같은 문제가 재현되지 않거나 재현됨을 적었습니다
+          required: true
