@@ -1,0 +1,578 @@
+{
+  "category": "variable",
+  "blocks": [
+    {
+      "type": "variableAddButton",
+      "category": "variable",
+      "label": {
+        "ko": "variableAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "listAddButton",
+      "category": "variable",
+      "label": {
+        "ko": "listAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "ask_and_wait",
+      "category": "variable",
+      "label": {
+        "ko": "을(를) 묻고 대답 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕!"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_canvas_input_value",
+      "category": "variable",
+      "label": {
+        "ko": "get_canvas_input_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "set_visible_answer",
+      "category": "variable",
+      "label": {
+        "ko": "대답"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Dropdown",
+          "defaultValue": "HIDE",
+          "options": [
+            {
+              "label": "보이기",
+              "value": "SHOW"
+            },
+            {
+              "label": "숨기기",
+              "value": "HIDE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_variable",
+      "category": "variable",
+      "label": {
+        "ko": "get_variable"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "change_variable",
+      "category": "variable",
+      "label": {
+        "ko": "에 만큼 더하기"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_variable",
+      "category": "variable",
+      "label": {
+        "ko": "를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "show_variable",
+      "category": "variable",
+      "label": {
+        "ko": "변수 보이기"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "hide_variable",
+      "category": "variable",
+      "label": {
+        "ko": "변수 숨기기"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "value_of_index_from_list",
+      "category": "variable",
+      "label": {
+        "ko": "value_of_index_from_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "add_value_to_list",
+      "category": "variable",
+      "label": {
+        "ko": "항목을 에 추가하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "remove_value_from_list",
+      "category": "variable",
+      "label": {
+        "ko": "번째 항목을 에서 삭제하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "insert_value_to_list",
+      "category": "variable",
+      "label": {
+        "ko": "을(를) 의 번째에 넣기"
+      },
+      "params": [
+        {
+          "key": "DATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_value_list_index",
+      "category": "variable",
+      "label": {
+        "ko": "번째 항목을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "length_of_list",
+      "category": "variable",
+      "label": {
+        "ko": "length_of_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "is_included_in_list",
+      "category": "variable",
+      "label": {
+        "ko": "is_included_in_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "DATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "show_list",
+      "category": "variable",
+      "label": {
+        "ko": "리스트 보이기"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "hide_list",
+      "category": "variable",
+      "label": {
+        "ko": "리스트 숨기기"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    }
+  ]
+}

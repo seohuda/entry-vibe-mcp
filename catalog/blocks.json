@@ -1,0 +1,6267 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-04T07:12:13.248Z",
+  "blocks": [
+    {
+      "type": "messageAddButton",
+      "category": "start",
+      "label": {
+        "ko": "messageAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "when_run_button_click",
+      "category": "start",
+      "label": {
+        "ko": "시작하기 버튼을 클릭했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "when_some_key_pressed",
+      "category": "start",
+      "label": {
+        "ko": "키를 눌렀을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Keyboard",
+          "defaultValue": "81"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "mouse_clicked",
+      "category": "start",
+      "label": {
+        "ko": "마우스를 클릭했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "mouse_click_cancled",
+      "category": "start",
+      "label": {
+        "ko": "마우스 클릭을 해제했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "when_object_click",
+      "category": "start",
+      "label": {
+        "ko": "오브젝트를 클릭했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "when_object_click_canceled",
+      "category": "start",
+      "label": {
+        "ko": "오브젝트 클릭을 해제했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "when_message_cast",
+      "category": "start",
+      "label": {
+        "ko": "신호를 받았을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "message_cast",
+      "category": "start",
+      "label": {
+        "ko": "신호 보내기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "message_cast_wait",
+      "category": "start",
+      "label": {
+        "ko": "신호 보내고 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "when_scene_start",
+      "category": "start",
+      "label": {
+        "ko": "장면이 시작되었을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "start_scene",
+      "category": "start",
+      "label": {
+        "ko": "시작하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next"
+    },
+    {
+      "type": "start_neighbor_scene",
+      "category": "start",
+      "label": {
+        "ko": "장면 시작하기"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "다음",
+              "value": "next"
+            },
+            {
+              "label": "이전",
+              "value": "prev"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next"
+    },
+    {
+      "type": "check_object_property",
+      "category": "start",
+      "label": {
+        "ko": "check_object_property"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "언젠가",
+              "value": "0"
+            },
+            {
+              "label": "지금",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            },
+            {
+              "label": "크기",
+              "value": "size"
+            },
+            {
+              "label": "방향",
+              "value": "rotation"
+            },
+            {
+              "label": "이동 방향",
+              "value": "direction"
+            },
+            {
+              "label": "텍스트",
+              "value": "text"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "=",
+              "value": "EQUAL"
+            },
+            {
+              "label": ">",
+              "value": "GREATER"
+            },
+            {
+              "label": "<",
+              "value": "LESS"
+            },
+            {
+              "label": "≥",
+              "value": "GREATER_OR_EQUAL"
+            },
+            {
+              "label": "≤",
+              "value": "LESS_OR_EQUAL"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "check_block_execution",
+      "category": "start",
+      "label": {
+        "ko": "check_block_execution"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "비슷하게",
+              "value": "0"
+            },
+            {
+              "label": "똑같이",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "TextInput",
+          "defaultValue": "1"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "0"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "switch_scope",
+      "category": "start",
+      "label": {
+        "ko": "switch_scope"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "is_answer_submited",
+      "category": "start",
+      "label": {
+        "ko": "is_answer_submited"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "check_lecture_goal",
+      "category": "start",
+      "label": {
+        "ko": "check_lecture_goal"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput",
+          "defaultValue": 0
+        },
+        {
+          "key": "1",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "달성",
+              "value": "1"
+            },
+            {
+              "label": "실패",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "공식",
+              "value": "1"
+            },
+            {
+              "label": "비공식",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "check_variable_by_name",
+      "category": "start",
+      "label": {
+        "ko": "check_variable_by_name"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput",
+          "defaultValue": "변수"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "show_prompt",
+      "category": "start",
+      "label": {
+        "ko": "show_prompt"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput",
+          "defaultValue": " "
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "check_goal_success",
+      "category": "start",
+      "label": {
+        "ko": "check_goal_success"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput",
+          "defaultValue": "0"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "positive_number",
+      "category": "start",
+      "label": {
+        "ko": "positive_number"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "negative_number",
+      "category": "start",
+      "label": {
+        "ko": "negative_number"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "wildcard_string",
+      "category": "start",
+      "label": {
+        "ko": "wildcard_string"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "wildcard_boolean",
+      "category": "start",
+      "label": {
+        "ko": "wildcard_boolean"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "register_score",
+      "category": "start",
+      "label": {
+        "ko": "register_score"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextInput",
+          "defaultValue": "score"
+        },
+        {
+          "key": "1",
+          "type": "TextInput",
+          "defaultValue": 1
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_direction",
+      "category": "moving",
+      "label": {
+        "ko": "이동 방향으로 만큼 움직이기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "bounce_wall",
+      "category": "moving",
+      "label": {
+        "ko": "화면 끝에 닿으면 튕기기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_x",
+      "category": "moving",
+      "label": {
+        "ko": "x 좌표를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_y",
+      "category": "moving",
+      "label": {
+        "ko": "y 좌표를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_xy_time",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 x: y: 만큼 움직이기"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_x",
+      "category": "moving",
+      "label": {
+        "ko": "x: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_y",
+      "category": "moving",
+      "label": {
+        "ko": "y: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_xy",
+      "category": "moving",
+      "label": {
+        "ko": "x: y: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_xy_time",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 x: y: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate",
+      "category": "moving",
+      "label": {
+        "ko": "위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_object_time",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "TARGET",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "rotate_relative",
+      "category": "moving",
+      "label": {
+        "ko": "방향을 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "direction_relative",
+      "category": "moving",
+      "label": {
+        "ko": "이동 방향을 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "rotate_by_time",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 방향을 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "direction_relative_duration",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 이동 방향 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "AMOUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "rotate_absolute",
+      "category": "moving",
+      "label": {
+        "ko": "방향을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "direction_absolute",
+      "category": "moving",
+      "label": {
+        "ko": "이동 방향을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "see_angle_object",
+      "category": "moving",
+      "label": {
+        "ko": "쪽 바라보기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_to_angle",
+      "category": "moving",
+      "label": {
+        "ko": "방향으로 만큼 움직이기"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "show",
+      "category": "looks",
+      "label": {
+        "ko": "모양 보이기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "hide",
+      "category": "looks",
+      "label": {
+        "ko": "모양 숨기기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "dialog_time",
+      "category": "looks",
+      "label": {
+        "ko": "을(를) 초 동안"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕!"
+            ]
+          }
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "말하기",
+              "value": "speak"
+            },
+            {
+              "label": "생각하기",
+              "value": "think"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "dialog",
+      "category": "looks",
+      "label": {
+        "ko": "을(를)"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕!"
+            ]
+          }
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "말하기",
+              "value": "speak"
+            },
+            {
+              "label": "생각하기",
+              "value": "think"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "remove_dialog",
+      "category": "looks",
+      "label": {
+        "ko": "말풍선 지우기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_to_some_shape",
+      "category": "looks",
+      "label": {
+        "ko": "모양으로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_pictures",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_to_next_shape",
+      "category": "looks",
+      "label": {
+        "ko": "모양으로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "DRIECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "다음",
+              "value": "next"
+            },
+            {
+              "label": "이전",
+              "value": "prev"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "add_effect_amount",
+      "category": "looks",
+      "label": {
+        "ko": "효과를 만큼 주기"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "색깔",
+              "value": "color"
+            },
+            {
+              "label": "밝기",
+              "value": "brightness"
+            },
+            {
+              "label": "투명도",
+              "value": "transparency"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_effect_amount",
+      "category": "looks",
+      "label": {
+        "ko": "효과를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "색깔",
+              "value": "color"
+            },
+            {
+              "label": "밝기",
+              "value": "brightness"
+            },
+            {
+              "label": "투명도",
+              "value": "transparency"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "erase_all_effects",
+      "category": "looks",
+      "label": {
+        "ko": "효과 모두 지우기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_scale_size",
+      "category": "looks",
+      "label": {
+        "ko": "크기를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_scale_size",
+      "category": "looks",
+      "label": {
+        "ko": "크기를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stretch_scale_size",
+      "category": "looks",
+      "label": {
+        "ko": "를 만큼 늘이기"
+      },
+      "params": [
+        {
+          "key": "DIMENSION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가로",
+              "value": "WIDTH"
+            },
+            {
+              "label": "세로",
+              "value": "HEIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "reset_scale_size",
+      "category": "looks",
+      "label": {
+        "ko": "원래 크기로 되돌리기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "flip_x",
+      "category": "looks",
+      "label": {
+        "ko": "상하 모양 뒤집기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "flip_y",
+      "category": "looks",
+      "label": {
+        "ko": "좌우 모양 뒤집기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_object_index",
+      "category": "looks",
+      "label": {
+        "ko": "보내기"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "맨 앞으로",
+              "value": "FRONT"
+            },
+            {
+              "label": "앞으로",
+              "value": "FORWARD"
+            },
+            {
+              "label": "뒤로",
+              "value": "BACKWARD"
+            },
+            {
+              "label": "맨 뒤로",
+              "value": "BACK"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "wait_second",
+      "category": "flow",
+      "label": {
+        "ko": "초 기다리기"
+      },
+      "params": [
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "repeat_basic",
+      "category": "flow",
+      "label": {
+        "ko": "번 반복하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "repeat_inf",
+      "category": "flow",
+      "label": {
+        "ko": "계속 반복하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "Boolean"
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "repeat_while_true",
+      "category": "flow",
+      "label": {
+        "ko": "반복하기"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "이 될 때까지",
+              "value": "until"
+            },
+            {
+              "label": "인 동안",
+              "value": "while"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "stop_repeat",
+      "category": "flow",
+      "label": {
+        "ko": "반복 중단하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "continue_repeat",
+      "category": "flow",
+      "label": {
+        "ko": "이번 반복 건너뛰기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "_if",
+      "category": "flow",
+      "label": {
+        "ko": "만일 (이)라면"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "STACK"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "if_else",
+      "category": "flow",
+      "label": {
+        "ko": "만일 (이)라면 아니면"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "LineBreak"
+        }
+      ],
+      "statementSlots": 2,
+      "statementKeys": [
+        "STACK_IF",
+        "STACK_ELSE"
+      ],
+      "isHat": false,
+      "skeleton": "basic_double_loop"
+    },
+    {
+      "type": "wait_until_true",
+      "category": "flow",
+      "label": {
+        "ko": "이(가) 될 때까지 기다리기"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stop_object",
+      "category": "flow",
+      "label": {
+        "ko": "코드 멈추기"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "모든",
+              "value": "all"
+            },
+            {
+              "label": "자신의",
+              "value": "thisOnly"
+            },
+            {
+              "label": "이",
+              "value": "thisThread"
+            },
+            {
+              "label": "자신의 다른",
+              "value": "otherThread"
+            },
+            {
+              "label": "다른 오브젝트의",
+              "value": "other_objects"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "restart_project",
+      "category": "flow",
+      "label": {
+        "ko": "처음부터 다시 실행하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next"
+    },
+    {
+      "type": "when_clone_start",
+      "category": "flow",
+      "label": {
+        "ko": "복제본이 처음 생성되었을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "create_clone",
+      "category": "flow",
+      "label": {
+        "ko": "의 복제본 만들기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "delete_clone",
+      "category": "flow",
+      "label": {
+        "ko": "이 복제본 삭제하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next"
+    },
+    {
+      "type": "remove_all_clones",
+      "category": "flow",
+      "label": {
+        "ko": "모든 복제본 삭제하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "is_clicked",
+      "category": "judgement",
+      "label": {
+        "ko": "is_clicked"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_object_clicked",
+      "category": "judgement",
+      "label": {
+        "ko": "is_object_clicked"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_press_some_key",
+      "category": "judgement",
+      "label": {
+        "ko": "is_press_some_key"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Keyboard",
+          "defaultValue": "81"
+        },
+        {
+          "key": "1",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "reach_something",
+      "category": "judgement",
+      "label": {
+        "ko": "reach_something"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_type",
+      "category": "judgement",
+      "label": {
+        "ko": "is_type"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "1",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": "number",
+          "options": [
+            {
+              "label": "숫자",
+              "value": "number"
+            },
+            {
+              "label": "영문",
+              "value": "en"
+            },
+            {
+              "label": "한글",
+              "value": "ko"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "boolean_basic_operator",
+      "category": "judgement",
+      "label": {
+        "ko": "boolean_basic_operator"
+      },
+      "params": [
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "EQUAL",
+          "options": [
+            {
+              "label": "=",
+              "value": "EQUAL"
+            },
+            {
+              "label": "!=",
+              "value": "NOT_EQUAL"
+            },
+            {
+              "label": ">",
+              "value": "GREATER"
+            },
+            {
+              "label": "<",
+              "value": "LESS"
+            },
+            {
+              "label": "≥",
+              "value": "GREATER_OR_EQUAL"
+            },
+            {
+              "label": "≤",
+              "value": "LESS_OR_EQUAL"
+            }
+          ]
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "boolean_and_or",
+      "category": "judgement",
+      "label": {
+        "ko": "boolean_and_or"
+      },
+      "params": [
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "AND",
+          "options": [
+            {
+              "label": "그리고",
+              "value": "AND"
+            },
+            {
+              "label": "또는",
+              "value": "OR"
+            }
+          ]
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "boolean_not",
+      "category": "judgement",
+      "label": {
+        "ko": "boolean_not"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_boost_mode",
+      "category": "judgement",
+      "label": {
+        "ko": "is_boost_mode"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_current_device_type",
+      "category": "judgement",
+      "label": {
+        "ko": "에서 실행하는가?"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "데스크톱",
+              "value": "desktop"
+            },
+            {
+              "label": "태블릿",
+              "value": "tablet"
+            },
+            {
+              "label": "스마트폰",
+              "value": "mobile"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_touch_supported",
+      "category": "judgement",
+      "label": {
+        "ko": "화면을 터치할 수 있는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "calc_basic",
+      "category": "calc",
+      "label": {
+        "ko": "calc_basic"
+      },
+      "params": [
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "PLUS",
+          "options": [
+            {
+              "label": "+",
+              "value": "PLUS"
+            },
+            {
+              "label": "-",
+              "value": "MINUS"
+            },
+            {
+              "label": "x",
+              "value": "MULTI"
+            },
+            {
+              "label": "/",
+              "value": "DIVIDE"
+            }
+          ]
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "calc_rand",
+      "category": "calc",
+      "label": {
+        "ko": "calc_rand"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "coordinate_mouse",
+      "category": "calc",
+      "label": {
+        "ko": "coordinate_mouse"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "coordinate_object",
+      "category": "calc",
+      "label": {
+        "ko": "coordinate_object"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "COORDINATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x 좌푯값",
+              "value": "x"
+            },
+            {
+              "label": "y 좌푯값",
+              "value": "y"
+            },
+            {
+              "label": "방향",
+              "value": "rotation"
+            },
+            {
+              "label": "이동방향",
+              "value": "direction"
+            },
+            {
+              "label": "크기",
+              "value": "size"
+            },
+            {
+              "label": "모양 번호",
+              "value": "picture_index"
+            },
+            {
+              "label": "모양 이름",
+              "value": "picture_name"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "quotient_and_mod",
+      "category": "calc",
+      "label": {
+        "ko": "quotient_and_mod"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "몫",
+              "value": "QUOTIENT"
+            },
+            {
+              "label": "나머지",
+              "value": "MOD"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "calc_operation",
+      "category": "calc",
+      "label": {
+        "ko": "calc_operation"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_project_timer_value",
+      "category": "calc",
+      "label": {
+        "ko": "get_project_timer_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "choose_project_timer_action",
+      "category": "calc",
+      "label": {
+        "ko": "choose_project_timer_action"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": "START",
+          "options": [
+            {
+              "label": "시작하기",
+              "value": "START"
+            },
+            {
+              "label": "정지하기",
+              "value": "STOP"
+            },
+            {
+              "label": "초기화하기",
+              "value": "RESET"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_visible_project_timer",
+      "category": "calc",
+      "label": {
+        "ko": "set_visible_project_timer"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": "HIDE",
+          "options": [
+            {
+              "label": "보이기",
+              "value": "SHOW"
+            },
+            {
+              "label": "숨기기",
+              "value": "HIDE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_date",
+      "category": "calc",
+      "label": {
+        "ko": "get_date"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "YEAR",
+          "options": [
+            {
+              "label": "연도",
+              "value": "YEAR"
+            },
+            {
+              "label": "월",
+              "value": "MONTH"
+            },
+            {
+              "label": "일",
+              "value": "DAY"
+            },
+            {
+              "label": "요일",
+              "value": "DAY_OF_WEEK"
+            },
+            {
+              "label": "시각(시)",
+              "value": "HOUR"
+            },
+            {
+              "label": "시각(분)",
+              "value": "MINUTE"
+            },
+            {
+              "label": "시각(초)",
+              "value": "SECOND"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "distance_something",
+      "category": "calc",
+      "label": {
+        "ko": "distance_something"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_user_name",
+      "category": "calc",
+      "label": {
+        "ko": "아이디"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_nickname",
+      "category": "calc",
+      "label": {
+        "ko": "닉네임"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "length_of_string",
+      "category": "calc",
+      "label": {
+        "ko": "length_of_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "reverse_of_string",
+      "category": "calc",
+      "label": {
+        "ko": "reverse_of_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "combine_something",
+      "category": "calc",
+      "label": {
+        "ko": "combine_something"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "char_at",
+      "category": "calc",
+      "label": {
+        "ko": "char_at"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕 엔트리!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "substring",
+      "category": "calc",
+      "label": {
+        "ko": "substring"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕 엔트리!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "count_match_string",
+      "category": "calc",
+      "label": {
+        "ko": "count_match_string"
+      },
+      "params": [
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello Entry!"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "TARGET",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "e"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "index_of_string",
+      "category": "calc",
+      "label": {
+        "ko": "index_of_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕 엔트리!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "replace_string",
+      "category": "calc",
+      "label": {
+        "ko": "replace_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕 엔트리!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "OLD_WORD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "NEW_WORD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "반가워"
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "change_string_case",
+      "category": "calc",
+      "label": {
+        "ko": "change_string_case"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello Entry!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "CASE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "대문자",
+              "value": "toUpperCase"
+            },
+            {
+              "label": "소문자",
+              "value": "toLowerCase"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_block_count",
+      "category": "calc",
+      "label": {
+        "ko": "의 블록 수"
+      },
+      "params": [
+        {
+          "key": "OBJECT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "change_rgb_to_hex",
+      "category": "calc",
+      "label": {
+        "ko": "R:G:B:의 HEX 값"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "change_hex_to_rgb",
+      "category": "calc",
+      "label": {
+        "ko": "HEX의 값"
+      },
+      "params": [
+        {
+          "key": "HEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "#ff0000"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": "r",
+          "options": [
+            {
+              "label": "R",
+              "value": "r"
+            },
+            {
+              "label": "G",
+              "value": "g"
+            },
+            {
+              "label": "B",
+              "value": "b"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_boolean_value",
+      "category": "calc",
+      "label": {
+        "ko": "의 값"
+      },
+      "params": [
+        {
+          "key": "BOOLEAN",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "variableAddButton",
+      "category": "variable",
+      "label": {
+        "ko": "variableAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "listAddButton",
+      "category": "variable",
+      "label": {
+        "ko": "listAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "ask_and_wait",
+      "category": "variable",
+      "label": {
+        "ko": "을(를) 묻고 대답 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕!"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_canvas_input_value",
+      "category": "variable",
+      "label": {
+        "ko": "get_canvas_input_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "set_visible_answer",
+      "category": "variable",
+      "label": {
+        "ko": "대답"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Dropdown",
+          "defaultValue": "HIDE",
+          "options": [
+            {
+              "label": "보이기",
+              "value": "SHOW"
+            },
+            {
+              "label": "숨기기",
+              "value": "HIDE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_variable",
+      "category": "variable",
+      "label": {
+        "ko": "get_variable"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "change_variable",
+      "category": "variable",
+      "label": {
+        "ko": "에 만큼 더하기"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_variable",
+      "category": "variable",
+      "label": {
+        "ko": "를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "show_variable",
+      "category": "variable",
+      "label": {
+        "ko": "변수 보이기"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "hide_variable",
+      "category": "variable",
+      "label": {
+        "ko": "변수 숨기기"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "value_of_index_from_list",
+      "category": "variable",
+      "label": {
+        "ko": "value_of_index_from_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "add_value_to_list",
+      "category": "variable",
+      "label": {
+        "ko": "항목을 에 추가하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "remove_value_from_list",
+      "category": "variable",
+      "label": {
+        "ko": "번째 항목을 에서 삭제하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "insert_value_to_list",
+      "category": "variable",
+      "label": {
+        "ko": "을(를) 의 번째에 넣기"
+      },
+      "params": [
+        {
+          "key": "DATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_value_list_index",
+      "category": "variable",
+      "label": {
+        "ko": "번째 항목을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "length_of_list",
+      "category": "variable",
+      "label": {
+        "ko": "length_of_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "is_included_in_list",
+      "category": "variable",
+      "label": {
+        "ko": "is_included_in_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "DATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "show_list",
+      "category": "variable",
+      "label": {
+        "ko": "리스트 보이기"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "hide_list",
+      "category": "variable",
+      "label": {
+        "ko": "리스트 숨기기"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "functionAddButton",
+      "category": "func",
+      "label": {
+        "ko": "functionAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "function_name",
+      "category": "func",
+      "label": {
+        "ko": "function_name"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text"
+    },
+    {
+      "type": "showFunctionPropsButton",
+      "category": "func",
+      "label": {
+        "ko": "showFunctionPropsButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "set_func_variable",
+      "category": "func",
+      "label": {
+        "ko": "set_func_variable"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_func_variable",
+      "category": "func",
+      "label": {
+        "ko": "get_func_variable"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "function_create_value",
+      "category": "func",
+      "label": {
+        "ko": "함수 정의하기 결괏값을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "FIELD",
+          "type": "Block",
+          "accept": "param"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        },
+        {
+          "key": "2",
+          "type": "LineBreak"
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": true,
+      "skeleton": "basic_create_value"
+    },
+    {
+      "type": "function_general",
+      "category": "func",
+      "label": {
+        "ko": "함수"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "function_value",
+      "category": "func",
+      "label": {
+        "ko": "함수"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "function_field_label",
+      "category": "func",
+      "label": {
+        "ko": "function_field_label"
+      },
+      "params": [
+        {
+          "key": "NAME",
+          "type": "TextInput",
+          "defaultValue": "이름"
+        },
+        {
+          "key": "NEXT",
+          "type": "Output",
+          "accept": "param"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_param"
+    },
+    {
+      "type": "function_field_string",
+      "category": "func",
+      "label": {
+        "ko": "function_field_string"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "문자/숫자값"
+            ]
+          }
+        },
+        {
+          "key": "NEXT",
+          "type": "Output",
+          "accept": "param"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_param"
+    },
+    {
+      "type": "function_field_boolean",
+      "category": "func",
+      "label": {
+        "ko": "function_field_boolean"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": [
+              "판단값"
+            ]
+          }
+        },
+        {
+          "key": "NEXT",
+          "type": "Output",
+          "accept": "param"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_param"
+    },
+    {
+      "type": "function_param_string",
+      "category": "func",
+      "label": {
+        "ko": "문자/숫자값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "function_param_boolean",
+      "category": "func",
+      "label": {
+        "ko": "판단값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "function_create",
+      "category": "func",
+      "label": {
+        "ko": "함수 정의하기"
+      },
+      "params": [
+        {
+          "key": "FIELD",
+          "type": "Block",
+          "accept": "param"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": true,
+      "skeleton": "basic_create"
+    },
+    {
+      "type": "sound_something_with_block",
+      "category": "sound",
+      "label": {
+        "ko": "소리 재생하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_something_second_with_block",
+      "category": "sound",
+      "label": {
+        "ko": "소리 초 재생하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_from_to",
+      "category": "sound",
+      "label": {
+        "ko": "소리 초 부터 초까지 재생하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_something_wait_with_block",
+      "category": "sound",
+      "label": {
+        "ko": "소리 재생하고 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_something_second_wait_with_block",
+      "category": "sound",
+      "label": {
+        "ko": "소리 초 재생하고 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_from_to_and_wait",
+      "category": "sound",
+      "label": {
+        "ko": "소리 초 부터 초까지 재생하고 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_volume_change",
+      "category": "sound",
+      "label": {
+        "ko": "소리 크기를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_volume_set",
+      "category": "sound",
+      "label": {
+        "ko": "소리 크기를 % 로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_sound_speed",
+      "category": "sound",
+      "label": {
+        "ko": "소리 빠르기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "sound_speed_change",
+      "category": "sound",
+      "label": {
+        "ko": "소리 빠르기를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_speed_set",
+      "category": "sound",
+      "label": {
+        "ko": "소리 빠르기를 배로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_silent_all",
+      "category": "sound",
+      "label": {
+        "ko": "소리 멈추기"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "모든",
+              "value": "all"
+            },
+            {
+              "label": "자신의",
+              "value": "thisOnly"
+            },
+            {
+              "label": "다른 오브젝트의",
+              "value": "other_objects"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "play_bgm",
+      "category": "sound",
+      "label": {
+        "ko": "을(를) 배경음악으로 재생하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stop_bgm",
+      "category": "sound",
+      "label": {
+        "ko": "배경음악 멈추기"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_sound_volume",
+      "category": "sound",
+      "label": {
+        "ko": "get_sound_volume"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_sound_duration",
+      "category": "sound",
+      "label": {
+        "ko": "get_sound_duration"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "text_read",
+      "category": "text",
+      "label": {
+        "ko": "글상자 의 내용"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "text_write",
+      "category": "text",
+      "label": {
+        "ko": "(이)라고 글쓰기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_append",
+      "category": "text",
+      "label": {
+        "ko": "을(를) 뒤에 추가하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_prepend",
+      "category": "text",
+      "label": {
+        "ko": "을(를) 앞에 추가하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_change_effect",
+      "category": "text",
+      "label": {
+        "ko": "텍스트에 효과"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Workspace.font_textblock_strikethrough",
+              "value": "strike"
+            },
+            {
+              "label": "Lang.Workspace.font_textblock_underline",
+              "value": "underLine"
+            },
+            {
+              "label": "Lang.Workspace.font_textblock_italic",
+              "value": "fontItalic"
+            },
+            {
+              "label": "Lang.Workspace.font_textblock_bold",
+              "value": "fontBold"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.General.apply",
+              "value": "on"
+            },
+            {
+              "label": "Lang.General.clear",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_change_font",
+      "category": "text",
+      "label": {
+        "ko": "글씨체를 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "FONT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_change_font_color",
+      "category": "text",
+      "label": {
+        "ko": "글씨색을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text_color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_change_bg_color",
+      "category": "text",
+      "label": {
+        "ko": "배경색을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text_color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_flush",
+      "category": "text",
+      "label": {
+        "ko": "텍스트 모두 지우기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "brush_stamp",
+      "category": "brush",
+      "label": {
+        "ko": "도장 찍기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "start_drawing",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 시작하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stop_drawing",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 멈추기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "start_fill",
+      "category": "brush",
+      "label": {
+        "ko": "채우기 시작하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stop_fill",
+      "category": "brush",
+      "label": {
+        "ko": "채우기 멈추기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_color",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 색을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_random_color",
+      "category": "brush",
+      "label": {
+        "ko": "붓의 색을 무작위로 정하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_fill_color",
+      "category": "brush",
+      "label": {
+        "ko": "채우기 색을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_thickness",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 굵기를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_thickness",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 굵기를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_brush_transparency",
+      "category": "brush",
+      "label": {
+        "ko": "붓의 투명도를 % 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_brush_tranparency",
+      "category": "brush",
+      "label": {
+        "ko": "붓의 투명도를 % 로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "brush_erase_all",
+      "category": "brush",
+      "label": {
+        "ko": "모든 붓 지우기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "analizyDataAddButton",
+      "category": "analysis",
+      "label": {
+        "ko": "analizyDataAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "append_row_to_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 에 추가하기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "ROW"
+            },
+            {
+              "label": "열",
+              "value": "COL"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "insert_row_to_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 번째에 추가하기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "ROW"
+            },
+            {
+              "label": "열",
+              "value": "COL"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "delete_row_from_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 번째 삭제하기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "ROW"
+            },
+            {
+              "label": "열",
+              "value": "COL"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_value_from_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 번째 행의 을(를) (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "FIELD",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "save_current_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 을(를) 현재 상태로 남기기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_table_count",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 개수"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "ROW"
+            },
+            {
+              "label": "열",
+              "value": "COL"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_value_from_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 번째 행의 값"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_value_from_last_row",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 마지막 행의 값"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "calc_values_from_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        },
+        {
+          "key": "CALC",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "합",
+              "value": "SUM"
+            },
+            {
+              "label": "최대",
+              "value": "MAX"
+            },
+            {
+              "label": "최소",
+              "value": "MIN"
+            },
+            {
+              "label": "평균",
+              "value": "AVG"
+            },
+            {
+              "label": "표준편차",
+              "value": "STDEV"
+            },
+            {
+              "label": "중앙값",
+              "value": "MEDIAN"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "open_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 창 열기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "CHART_INDEX",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "open_table_wait",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 창을 초 동안 열기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "open_table_chart",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 차트 창 열기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "CHART_INDEX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "close_table_chart",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 차트 창 닫기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_coefficient",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 과(와) 의 상관계수"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "FIELD1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        },
+        {
+          "key": "FIELD2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "set_value_from_cell",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 셀 값을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "CELL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A2"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_value_from_cell",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 셀 값"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "CELL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A2"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_value_v_lookup",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 이(가) 인 행의 값"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "FIELD",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "RETURN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    }
+  ]
+}

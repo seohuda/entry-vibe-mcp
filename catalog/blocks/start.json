@@ -1,0 +1,654 @@
+{
+  "category": "start",
+  "blocks": [
+    {
+      "type": "messageAddButton",
+      "category": "start",
+      "label": {
+        "ko": "messageAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "when_run_button_click",
+      "category": "start",
+      "label": {
+        "ko": "시작하기 버튼을 클릭했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "when_some_key_pressed",
+      "category": "start",
+      "label": {
+        "ko": "키를 눌렀을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Keyboard",
+          "defaultValue": "81"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "mouse_clicked",
+      "category": "start",
+      "label": {
+        "ko": "마우스를 클릭했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "mouse_click_cancled",
+      "category": "start",
+      "label": {
+        "ko": "마우스 클릭을 해제했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "when_object_click",
+      "category": "start",
+      "label": {
+        "ko": "오브젝트를 클릭했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "when_object_click_canceled",
+      "category": "start",
+      "label": {
+        "ko": "오브젝트 클릭을 해제했을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "when_message_cast",
+      "category": "start",
+      "label": {
+        "ko": "신호를 받았을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "message_cast",
+      "category": "start",
+      "label": {
+        "ko": "신호 보내기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "message_cast_wait",
+      "category": "start",
+      "label": {
+        "ko": "신호 보내고 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "when_scene_start",
+      "category": "start",
+      "label": {
+        "ko": "장면이 시작되었을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "start_scene",
+      "category": "start",
+      "label": {
+        "ko": "시작하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next"
+    },
+    {
+      "type": "start_neighbor_scene",
+      "category": "start",
+      "label": {
+        "ko": "장면 시작하기"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "다음",
+              "value": "next"
+            },
+            {
+              "label": "이전",
+              "value": "prev"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next"
+    },
+    {
+      "type": "check_object_property",
+      "category": "start",
+      "label": {
+        "ko": "check_object_property"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "언젠가",
+              "value": "0"
+            },
+            {
+              "label": "지금",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            },
+            {
+              "label": "크기",
+              "value": "size"
+            },
+            {
+              "label": "방향",
+              "value": "rotation"
+            },
+            {
+              "label": "이동 방향",
+              "value": "direction"
+            },
+            {
+              "label": "텍스트",
+              "value": "text"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "=",
+              "value": "EQUAL"
+            },
+            {
+              "label": ">",
+              "value": "GREATER"
+            },
+            {
+              "label": "<",
+              "value": "LESS"
+            },
+            {
+              "label": "≥",
+              "value": "GREATER_OR_EQUAL"
+            },
+            {
+              "label": "≤",
+              "value": "LESS_OR_EQUAL"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "check_block_execution",
+      "category": "start",
+      "label": {
+        "ko": "check_block_execution"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "비슷하게",
+              "value": "0"
+            },
+            {
+              "label": "똑같이",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "TextInput",
+          "defaultValue": "1"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "0"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "switch_scope",
+      "category": "start",
+      "label": {
+        "ko": "switch_scope"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "is_answer_submited",
+      "category": "start",
+      "label": {
+        "ko": "is_answer_submited"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "check_lecture_goal",
+      "category": "start",
+      "label": {
+        "ko": "check_lecture_goal"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput",
+          "defaultValue": 0
+        },
+        {
+          "key": "1",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "달성",
+              "value": "1"
+            },
+            {
+              "label": "실패",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "공식",
+              "value": "1"
+            },
+            {
+              "label": "비공식",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "check_variable_by_name",
+      "category": "start",
+      "label": {
+        "ko": "check_variable_by_name"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput",
+          "defaultValue": "변수"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "show_prompt",
+      "category": "start",
+      "label": {
+        "ko": "show_prompt"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput",
+          "defaultValue": " "
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "check_goal_success",
+      "category": "start",
+      "label": {
+        "ko": "check_goal_success"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput",
+          "defaultValue": "0"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "positive_number",
+      "category": "start",
+      "label": {
+        "ko": "positive_number"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "negative_number",
+      "category": "start",
+      "label": {
+        "ko": "negative_number"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "wildcard_string",
+      "category": "start",
+      "label": {
+        "ko": "wildcard_string"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "wildcard_boolean",
+      "category": "start",
+      "label": {
+        "ko": "wildcard_boolean"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "register_score",
+      "category": "start",
+      "label": {
+        "ko": "register_score"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextInput",
+          "defaultValue": "score"
+        },
+        {
+          "key": "1",
+          "type": "TextInput",
+          "defaultValue": 1
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    }
+  ]
+}

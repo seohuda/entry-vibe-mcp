@@ -1,0 +1,665 @@
+{
+  "category": "analysis",
+  "blocks": [
+    {
+      "type": "analizyDataAddButton",
+      "category": "analysis",
+      "label": {
+        "ko": "analizyDataAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "append_row_to_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 에 추가하기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "ROW"
+            },
+            {
+              "label": "열",
+              "value": "COL"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "insert_row_to_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 번째에 추가하기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "ROW"
+            },
+            {
+              "label": "열",
+              "value": "COL"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "delete_row_from_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 번째 삭제하기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "ROW"
+            },
+            {
+              "label": "열",
+              "value": "COL"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_value_from_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 번째 행의 을(를) (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "FIELD",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "save_current_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 을(를) 현재 상태로 남기기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_table_count",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 개수"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "ROW"
+            },
+            {
+              "label": "열",
+              "value": "COL"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_value_from_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 번째 행의 값"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_value_from_last_row",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 마지막 행의 값"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "calc_values_from_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        },
+        {
+          "key": "CALC",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "합",
+              "value": "SUM"
+            },
+            {
+              "label": "최대",
+              "value": "MAX"
+            },
+            {
+              "label": "최소",
+              "value": "MIN"
+            },
+            {
+              "label": "평균",
+              "value": "AVG"
+            },
+            {
+              "label": "표준편차",
+              "value": "STDEV"
+            },
+            {
+              "label": "중앙값",
+              "value": "MEDIAN"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "open_table",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 창 열기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "CHART_INDEX",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "open_table_wait",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 창을 초 동안 열기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "open_table_chart",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 차트 창 열기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "CHART_INDEX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "close_table_chart",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 차트 창 닫기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_coefficient",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 과(와) 의 상관계수"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "FIELD1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        },
+        {
+          "key": "FIELD2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "set_value_from_cell",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 셀 값을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "CELL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A2"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_value_from_cell",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 셀 값"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "CELL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A2"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_value_v_lookup",
+      "category": "analysis",
+      "label": {
+        "ko": "테이블 의 이(가) 인 행의 값"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "FIELD",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "RETURN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_table_fields",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    }
+  ]
+}

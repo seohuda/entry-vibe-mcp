@@ -1,0 +1,346 @@
+{
+  "category": "judgement",
+  "blocks": [
+    {
+      "type": "is_clicked",
+      "category": "judgement",
+      "label": {
+        "ko": "is_clicked"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_object_clicked",
+      "category": "judgement",
+      "label": {
+        "ko": "is_object_clicked"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_press_some_key",
+      "category": "judgement",
+      "label": {
+        "ko": "is_press_some_key"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Keyboard",
+          "defaultValue": "81"
+        },
+        {
+          "key": "1",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "reach_something",
+      "category": "judgement",
+      "label": {
+        "ko": "reach_something"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_type",
+      "category": "judgement",
+      "label": {
+        "ko": "is_type"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "1",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": "number",
+          "options": [
+            {
+              "label": "숫자",
+              "value": "number"
+            },
+            {
+              "label": "영문",
+              "value": "en"
+            },
+            {
+              "label": "한글",
+              "value": "ko"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "boolean_basic_operator",
+      "category": "judgement",
+      "label": {
+        "ko": "boolean_basic_operator"
+      },
+      "params": [
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "EQUAL",
+          "options": [
+            {
+              "label": "=",
+              "value": "EQUAL"
+            },
+            {
+              "label": "!=",
+              "value": "NOT_EQUAL"
+            },
+            {
+              "label": ">",
+              "value": "GREATER"
+            },
+            {
+              "label": "<",
+              "value": "LESS"
+            },
+            {
+              "label": "≥",
+              "value": "GREATER_OR_EQUAL"
+            },
+            {
+              "label": "≤",
+              "value": "LESS_OR_EQUAL"
+            }
+          ]
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "boolean_and_or",
+      "category": "judgement",
+      "label": {
+        "ko": "boolean_and_or"
+      },
+      "params": [
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "AND",
+          "options": [
+            {
+              "label": "그리고",
+              "value": "AND"
+            },
+            {
+              "label": "또는",
+              "value": "OR"
+            }
+          ]
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "boolean_not",
+      "category": "judgement",
+      "label": {
+        "ko": "boolean_not"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_boost_mode",
+      "category": "judgement",
+      "label": {
+        "ko": "is_boost_mode"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_current_device_type",
+      "category": "judgement",
+      "label": {
+        "ko": "에서 실행하는가?"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "데스크톱",
+              "value": "desktop"
+            },
+            {
+              "label": "태블릿",
+              "value": "tablet"
+            },
+            {
+              "label": "스마트폰",
+              "value": "mobile"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "is_touch_supported",
+      "category": "judgement",
+      "label": {
+        "ko": "화면을 터치할 수 있는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "category": "brush",
+  "blocks": [
+    {
+      "type": "brush_stamp",
+      "category": "brush",
+      "label": {
+        "ko": "도장 찍기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "start_drawing",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 시작하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stop_drawing",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 멈추기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "start_fill",
+      "category": "brush",
+      "label": {
+        "ko": "채우기 시작하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stop_fill",
+      "category": "brush",
+      "label": {
+        "ko": "채우기 멈추기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_color",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 색을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_random_color",
+      "category": "brush",
+      "label": {
+        "ko": "붓의 색을 무작위로 정하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_fill_color",
+      "category": "brush",
+      "label": {
+        "ko": "채우기 색을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_thickness",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 굵기를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_thickness",
+      "category": "brush",
+      "label": {
+        "ko": "그리기 굵기를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_brush_transparency",
+      "category": "brush",
+      "label": {
+        "ko": "붓의 투명도를 % 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_brush_tranparency",
+      "category": "brush",
+      "label": {
+        "ko": "붓의 투명도를 % 로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "brush_erase_all",
+      "category": "brush",
+      "label": {
+        "ko": "모든 붓 지우기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    }
+  ]
+}

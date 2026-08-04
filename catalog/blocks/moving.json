@@ -1,0 +1,650 @@
+{
+  "category": "moving",
+  "blocks": [
+    {
+      "type": "move_direction",
+      "category": "moving",
+      "label": {
+        "ko": "이동 방향으로 만큼 움직이기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "bounce_wall",
+      "category": "moving",
+      "label": {
+        "ko": "화면 끝에 닿으면 튕기기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_x",
+      "category": "moving",
+      "label": {
+        "ko": "x 좌표를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_y",
+      "category": "moving",
+      "label": {
+        "ko": "y 좌표를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_xy_time",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 x: y: 만큼 움직이기"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_x",
+      "category": "moving",
+      "label": {
+        "ko": "x: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_y",
+      "category": "moving",
+      "label": {
+        "ko": "y: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_xy",
+      "category": "moving",
+      "label": {
+        "ko": "x: y: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_xy_time",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 x: y: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate",
+      "category": "moving",
+      "label": {
+        "ko": "위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "locate_object_time",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "TARGET",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "rotate_relative",
+      "category": "moving",
+      "label": {
+        "ko": "방향을 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "direction_relative",
+      "category": "moving",
+      "label": {
+        "ko": "이동 방향을 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "rotate_by_time",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 방향을 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "direction_relative_duration",
+      "category": "moving",
+      "label": {
+        "ko": "초 동안 이동 방향 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "AMOUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "rotate_absolute",
+      "category": "moving",
+      "label": {
+        "ko": "방향을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "direction_absolute",
+      "category": "moving",
+      "label": {
+        "ko": "이동 방향을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "see_angle_object",
+      "category": "moving",
+      "label": {
+        "ko": "쪽 바라보기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "move_to_angle",
+      "category": "moving",
+      "label": {
+        "ko": "방향으로 만큼 움직이기"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": {
+            "type": "angle",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "category": "func",
+  "blocks": [
+    {
+      "type": "functionAddButton",
+      "category": "func",
+      "label": {
+        "ko": "functionAddButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "function_name",
+      "category": "func",
+      "label": {
+        "ko": "function_name"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text"
+    },
+    {
+      "type": "showFunctionPropsButton",
+      "category": "func",
+      "label": {
+        "ko": "showFunctionPropsButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_button"
+    },
+    {
+      "type": "set_func_variable",
+      "category": "func",
+      "label": {
+        "ko": "set_func_variable"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_func_variable",
+      "category": "func",
+      "label": {
+        "ko": "get_func_variable"
+      },
+      "params": [
+        {
+          "key": "VARIABLE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "function_create_value",
+      "category": "func",
+      "label": {
+        "ko": "함수 정의하기 결괏값을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "FIELD",
+          "type": "Block",
+          "accept": "param"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        },
+        {
+          "key": "2",
+          "type": "LineBreak"
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": true,
+      "skeleton": "basic_create_value"
+    },
+    {
+      "type": "function_general",
+      "category": "func",
+      "label": {
+        "ko": "함수"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "function_value",
+      "category": "func",
+      "label": {
+        "ko": "함수"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "function_field_label",
+      "category": "func",
+      "label": {
+        "ko": "function_field_label"
+      },
+      "params": [
+        {
+          "key": "NAME",
+          "type": "TextInput",
+          "defaultValue": "이름"
+        },
+        {
+          "key": "NEXT",
+          "type": "Output",
+          "accept": "param"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_param"
+    },
+    {
+      "type": "function_field_string",
+      "category": "func",
+      "label": {
+        "ko": "function_field_string"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "문자/숫자값"
+            ]
+          }
+        },
+        {
+          "key": "NEXT",
+          "type": "Output",
+          "accept": "param"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_param"
+    },
+    {
+      "type": "function_field_boolean",
+      "category": "func",
+      "label": {
+        "ko": "function_field_boolean"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": [
+              "판단값"
+            ]
+          }
+        },
+        {
+          "key": "NEXT",
+          "type": "Output",
+          "accept": "param"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_param"
+    },
+    {
+      "type": "function_param_string",
+      "category": "func",
+      "label": {
+        "ko": "문자/숫자값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "function_param_boolean",
+      "category": "func",
+      "label": {
+        "ko": "판단값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field"
+    },
+    {
+      "type": "function_create",
+      "category": "func",
+      "label": {
+        "ko": "함수 정의하기"
+      },
+      "params": [
+        {
+          "key": "FIELD",
+          "type": "Block",
+          "accept": "param"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": true,
+      "skeleton": "basic_create"
+    }
+  ]
+}

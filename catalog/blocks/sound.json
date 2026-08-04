@@ -1,0 +1,498 @@
+{
+  "category": "sound",
+  "blocks": [
+    {
+      "type": "sound_something_with_block",
+      "category": "sound",
+      "label": {
+        "ko": "소리 재생하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_something_second_with_block",
+      "category": "sound",
+      "label": {
+        "ko": "소리 초 재생하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_from_to",
+      "category": "sound",
+      "label": {
+        "ko": "소리 초 부터 초까지 재생하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_something_wait_with_block",
+      "category": "sound",
+      "label": {
+        "ko": "소리 재생하고 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_something_second_wait_with_block",
+      "category": "sound",
+      "label": {
+        "ko": "소리 초 재생하고 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_from_to_and_wait",
+      "category": "sound",
+      "label": {
+        "ko": "소리 초 부터 초까지 재생하고 기다리기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_volume_change",
+      "category": "sound",
+      "label": {
+        "ko": "소리 크기를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_volume_set",
+      "category": "sound",
+      "label": {
+        "ko": "소리 크기를 % 로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_sound_speed",
+      "category": "sound",
+      "label": {
+        "ko": "소리 빠르기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "sound_speed_change",
+      "category": "sound",
+      "label": {
+        "ko": "소리 빠르기를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_speed_set",
+      "category": "sound",
+      "label": {
+        "ko": "소리 빠르기를 배로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "sound_silent_all",
+      "category": "sound",
+      "label": {
+        "ko": "소리 멈추기"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "모든",
+              "value": "all"
+            },
+            {
+              "label": "자신의",
+              "value": "thisOnly"
+            },
+            {
+              "label": "다른 오브젝트의",
+              "value": "other_objects"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "play_bgm",
+      "category": "sound",
+      "label": {
+        "ko": "을(를) 배경음악으로 재생하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_sounds",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stop_bgm",
+      "category": "sound",
+      "label": {
+        "ko": "배경음악 멈추기"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_sound_volume",
+      "category": "sound",
+      "label": {
+        "ko": "get_sound_volume"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_sound_duration",
+      "category": "sound",
+      "label": {
+        "ko": "get_sound_duration"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    }
+  ]
+}

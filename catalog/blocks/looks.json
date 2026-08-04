@@ -1,0 +1,535 @@
+{
+  "category": "looks",
+  "blocks": [
+    {
+      "type": "show",
+      "category": "looks",
+      "label": {
+        "ko": "모양 보이기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "hide",
+      "category": "looks",
+      "label": {
+        "ko": "모양 숨기기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "dialog_time",
+      "category": "looks",
+      "label": {
+        "ko": "을(를) 초 동안"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕!"
+            ]
+          }
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "말하기",
+              "value": "speak"
+            },
+            {
+              "label": "생각하기",
+              "value": "think"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "dialog",
+      "category": "looks",
+      "label": {
+        "ko": "을(를)"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕!"
+            ]
+          }
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "말하기",
+              "value": "speak"
+            },
+            {
+              "label": "생각하기",
+              "value": "think"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "remove_dialog",
+      "category": "looks",
+      "label": {
+        "ko": "말풍선 지우기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_to_some_shape",
+      "category": "looks",
+      "label": {
+        "ko": "모양으로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_pictures",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_to_next_shape",
+      "category": "looks",
+      "label": {
+        "ko": "모양으로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "DRIECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "다음",
+              "value": "next"
+            },
+            {
+              "label": "이전",
+              "value": "prev"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "add_effect_amount",
+      "category": "looks",
+      "label": {
+        "ko": "효과를 만큼 주기"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "색깔",
+              "value": "color"
+            },
+            {
+              "label": "밝기",
+              "value": "brightness"
+            },
+            {
+              "label": "투명도",
+              "value": "transparency"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_effect_amount",
+      "category": "looks",
+      "label": {
+        "ko": "효과를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "색깔",
+              "value": "color"
+            },
+            {
+              "label": "밝기",
+              "value": "brightness"
+            },
+            {
+              "label": "투명도",
+              "value": "transparency"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "erase_all_effects",
+      "category": "looks",
+      "label": {
+        "ko": "효과 모두 지우기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_scale_size",
+      "category": "looks",
+      "label": {
+        "ko": "크기를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_scale_size",
+      "category": "looks",
+      "label": {
+        "ko": "크기를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stretch_scale_size",
+      "category": "looks",
+      "label": {
+        "ko": "를 만큼 늘이기"
+      },
+      "params": [
+        {
+          "key": "DIMENSION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가로",
+              "value": "WIDTH"
+            },
+            {
+              "label": "세로",
+              "value": "HEIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "reset_scale_size",
+      "category": "looks",
+      "label": {
+        "ko": "원래 크기로 되돌리기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "flip_x",
+      "category": "looks",
+      "label": {
+        "ko": "상하 모양 뒤집기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "flip_y",
+      "category": "looks",
+      "label": {
+        "ko": "좌우 모양 뒤집기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "change_object_index",
+      "category": "looks",
+      "label": {
+        "ko": "보내기"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "맨 앞으로",
+              "value": "FRONT"
+            },
+            {
+              "label": "앞으로",
+              "value": "FORWARD"
+            },
+            {
+              "label": "뒤로",
+              "value": "BACKWARD"
+            },
+            {
+              "label": "맨 뒤로",
+              "value": "BACK"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    }
+  ]
+}

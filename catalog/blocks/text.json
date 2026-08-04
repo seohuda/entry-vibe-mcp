@@ -1,0 +1,258 @@
+{
+  "category": "text",
+  "blocks": [
+    {
+      "type": "text_read",
+      "category": "text",
+      "label": {
+        "ko": "글상자 의 내용"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "text_write",
+      "category": "text",
+      "label": {
+        "ko": "(이)라고 글쓰기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_append",
+      "category": "text",
+      "label": {
+        "ko": "을(를) 뒤에 추가하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_prepend",
+      "category": "text",
+      "label": {
+        "ko": "을(를) 앞에 추가하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_change_effect",
+      "category": "text",
+      "label": {
+        "ko": "텍스트에 효과"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Workspace.font_textblock_strikethrough",
+              "value": "strike"
+            },
+            {
+              "label": "Lang.Workspace.font_textblock_underline",
+              "value": "underLine"
+            },
+            {
+              "label": "Lang.Workspace.font_textblock_italic",
+              "value": "fontItalic"
+            },
+            {
+              "label": "Lang.Workspace.font_textblock_bold",
+              "value": "fontBold"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.General.apply",
+              "value": "on"
+            },
+            {
+              "label": "Lang.General.clear",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_change_font",
+      "category": "text",
+      "label": {
+        "ko": "글씨체를 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "FONT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_change_font_color",
+      "category": "text",
+      "label": {
+        "ko": "글씨색을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text_color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_change_bg_color",
+      "category": "text",
+      "label": {
+        "ko": "배경색을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text_color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "text_flush",
+      "category": "text",
+      "label": {
+        "ko": "텍스트 모두 지우기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    }
+  ]
+}

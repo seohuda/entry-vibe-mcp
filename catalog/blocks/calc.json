@@ -1,0 +1,1127 @@
+{
+  "category": "calc",
+  "blocks": [
+    {
+      "type": "calc_basic",
+      "category": "calc",
+      "label": {
+        "ko": "calc_basic"
+      },
+      "params": [
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "PLUS",
+          "options": [
+            {
+              "label": "+",
+              "value": "PLUS"
+            },
+            {
+              "label": "-",
+              "value": "MINUS"
+            },
+            {
+              "label": "x",
+              "value": "MULTI"
+            },
+            {
+              "label": "/",
+              "value": "DIVIDE"
+            }
+          ]
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "calc_rand",
+      "category": "calc",
+      "label": {
+        "ko": "calc_rand"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "coordinate_mouse",
+      "category": "calc",
+      "label": {
+        "ko": "coordinate_mouse"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "coordinate_object",
+      "category": "calc",
+      "label": {
+        "ko": "coordinate_object"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "COORDINATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x 좌푯값",
+              "value": "x"
+            },
+            {
+              "label": "y 좌푯값",
+              "value": "y"
+            },
+            {
+              "label": "방향",
+              "value": "rotation"
+            },
+            {
+              "label": "이동방향",
+              "value": "direction"
+            },
+            {
+              "label": "크기",
+              "value": "size"
+            },
+            {
+              "label": "모양 번호",
+              "value": "picture_index"
+            },
+            {
+              "label": "모양 이름",
+              "value": "picture_name"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "quotient_and_mod",
+      "category": "calc",
+      "label": {
+        "ko": "quotient_and_mod"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "몫",
+              "value": "QUOTIENT"
+            },
+            {
+              "label": "나머지",
+              "value": "MOD"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "calc_operation",
+      "category": "calc",
+      "label": {
+        "ko": "calc_operation"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_project_timer_value",
+      "category": "calc",
+      "label": {
+        "ko": "get_project_timer_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "choose_project_timer_action",
+      "category": "calc",
+      "label": {
+        "ko": "choose_project_timer_action"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": "START",
+          "options": [
+            {
+              "label": "시작하기",
+              "value": "START"
+            },
+            {
+              "label": "정지하기",
+              "value": "STOP"
+            },
+            {
+              "label": "초기화하기",
+              "value": "RESET"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "set_visible_project_timer",
+      "category": "calc",
+      "label": {
+        "ko": "set_visible_project_timer"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": "HIDE",
+          "options": [
+            {
+              "label": "보이기",
+              "value": "SHOW"
+            },
+            {
+              "label": "숨기기",
+              "value": "HIDE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "get_date",
+      "category": "calc",
+      "label": {
+        "ko": "get_date"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "YEAR",
+          "options": [
+            {
+              "label": "연도",
+              "value": "YEAR"
+            },
+            {
+              "label": "월",
+              "value": "MONTH"
+            },
+            {
+              "label": "일",
+              "value": "DAY"
+            },
+            {
+              "label": "요일",
+              "value": "DAY_OF_WEEK"
+            },
+            {
+              "label": "시각(시)",
+              "value": "HOUR"
+            },
+            {
+              "label": "시각(분)",
+              "value": "MINUTE"
+            },
+            {
+              "label": "시각(초)",
+              "value": "SECOND"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "distance_something",
+      "category": "calc",
+      "label": {
+        "ko": "distance_something"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_user_name",
+      "category": "calc",
+      "label": {
+        "ko": "아이디"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_nickname",
+      "category": "calc",
+      "label": {
+        "ko": "닉네임"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "length_of_string",
+      "category": "calc",
+      "label": {
+        "ko": "length_of_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "reverse_of_string",
+      "category": "calc",
+      "label": {
+        "ko": "reverse_of_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "combine_something",
+      "category": "calc",
+      "label": {
+        "ko": "combine_something"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "char_at",
+      "category": "calc",
+      "label": {
+        "ko": "char_at"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕 엔트리!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "substring",
+      "category": "calc",
+      "label": {
+        "ko": "substring"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕 엔트리!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "count_match_string",
+      "category": "calc",
+      "label": {
+        "ko": "count_match_string"
+      },
+      "params": [
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello Entry!"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "TARGET",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "e"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "index_of_string",
+      "category": "calc",
+      "label": {
+        "ko": "index_of_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "LEFTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕 엔트리!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "replace_string",
+      "category": "calc",
+      "label": {
+        "ko": "replace_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕 엔트리!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "OLD_WORD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "안녕"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "NEW_WORD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "반가워"
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "change_string_case",
+      "category": "calc",
+      "label": {
+        "ko": "change_string_case"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello Entry!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Text",
+          "defaultValue": null
+        },
+        {
+          "key": "CASE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "대문자",
+              "value": "toUpperCase"
+            },
+            {
+              "label": "소문자",
+              "value": "toLowerCase"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_block_count",
+      "category": "calc",
+      "label": {
+        "ko": "의 블록 수"
+      },
+      "params": [
+        {
+          "key": "OBJECT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "change_rgb_to_hex",
+      "category": "calc",
+      "label": {
+        "ko": "R:G:B:의 HEX 값"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "change_hex_to_rgb",
+      "category": "calc",
+      "label": {
+        "ko": "HEX의 값"
+      },
+      "params": [
+        {
+          "key": "HEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "#ff0000"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": "r",
+          "options": [
+            {
+              "label": "R",
+              "value": "r"
+            },
+            {
+              "label": "G",
+              "value": "g"
+            },
+            {
+              "label": "B",
+              "value": "b"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    },
+    {
+      "type": "get_boolean_value",
+      "category": "calc",
+      "label": {
+        "ko": "의 값"
+      },
+      "params": [
+        {
+          "key": "BOOLEAN",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field"
+    }
+  ]
+}

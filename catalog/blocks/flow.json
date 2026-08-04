@@ -1,0 +1,402 @@
+{
+  "category": "flow",
+  "blocks": [
+    {
+      "type": "wait_second",
+      "category": "flow",
+      "label": {
+        "ko": "초 기다리기"
+      },
+      "params": [
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "repeat_basic",
+      "category": "flow",
+      "label": {
+        "ko": "번 반복하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "repeat_inf",
+      "category": "flow",
+      "label": {
+        "ko": "계속 반복하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "Boolean"
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "repeat_while_true",
+      "category": "flow",
+      "label": {
+        "ko": "반복하기"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "이 될 때까지",
+              "value": "until"
+            },
+            {
+              "label": "인 동안",
+              "value": "while"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "DO"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "stop_repeat",
+      "category": "flow",
+      "label": {
+        "ko": "반복 중단하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "continue_repeat",
+      "category": "flow",
+      "label": {
+        "ko": "이번 반복 건너뛰기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "_if",
+      "category": "flow",
+      "label": {
+        "ko": "만일 (이)라면"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 1,
+      "statementKeys": [
+        "STACK"
+      ],
+      "isHat": false,
+      "skeleton": "basic_loop"
+    },
+    {
+      "type": "if_else",
+      "category": "flow",
+      "label": {
+        "ko": "만일 (이)라면 아니면"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "LineBreak"
+        }
+      ],
+      "statementSlots": 2,
+      "statementKeys": [
+        "STACK_IF",
+        "STACK_ELSE"
+      ],
+      "isHat": false,
+      "skeleton": "basic_double_loop"
+    },
+    {
+      "type": "wait_until_true",
+      "category": "flow",
+      "label": {
+        "ko": "이(가) 될 때까지 기다리기"
+      },
+      "params": [
+        {
+          "key": "BOOL",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": {
+            "type": "True",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "stop_object",
+      "category": "flow",
+      "label": {
+        "ko": "코드 멈추기"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "모든",
+              "value": "all"
+            },
+            {
+              "label": "자신의",
+              "value": "thisOnly"
+            },
+            {
+              "label": "이",
+              "value": "thisThread"
+            },
+            {
+              "label": "자신의 다른",
+              "value": "otherThread"
+            },
+            {
+              "label": "다른 오브젝트의",
+              "value": "other_objects"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "restart_project",
+      "category": "flow",
+      "label": {
+        "ko": "처음부터 다시 실행하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next"
+    },
+    {
+      "type": "when_clone_start",
+      "category": "flow",
+      "label": {
+        "ko": "복제본이 처음 생성되었을 때"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event"
+    },
+    {
+      "type": "create_clone",
+      "category": "flow",
+      "label": {
+        "ko": "의 복제본 만들기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    },
+    {
+      "type": "delete_clone",
+      "category": "flow",
+      "label": {
+        "ko": "이 복제본 삭제하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next"
+    },
+    {
+      "type": "remove_all_clones",
+      "category": "flow",
+      "label": {
+        "ko": "모든 복제본 삭제하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic"
+    }
+  ]
+}
