@@ -4,10 +4,13 @@ import babelTraverse from '@babel/traverse';
 import type { NodePath } from '@babel/traverse';
 import * as t from '@babel/types';
 
-const traverse = babelTraverse as unknown as typeof babelTraverse & ((
-  ast: t.File,
-  visitors: object,
-) => void);
+type TraverseFn = (ast: t.File, visitors: object) => void;
+
+// @babel/traverse is CJS: under Node's ESM loader the default import is the
+// module namespace, so the callable lives on `.default`. Bundlers that apply
+// interop hand back the function directly, hence the fallback.
+const traverse = ((babelTraverse as unknown as { default?: TraverseFn }).default ??
+  babelTraverse) as unknown as TraverseFn;
 
 
 export interface LangMaps {
