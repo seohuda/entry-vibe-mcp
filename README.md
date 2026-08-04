@@ -4,6 +4,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/seohuda/entry-vibe-mcp/actions/workflows/ci.yml"><img src="https://github.com/seohuda/entry-vibe-mcp/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://playentry.org"><img src="https://img.shields.io/badge/Entry-playentry.org-FF6B00?style=flat-square" alt="Entry"></a>
   <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-Model%20Context%20Protocol-6366F1?style=flat-square" alt="MCP"></a>
   <img src="https://img.shields.io/badge/version-0.1.0-blue?style=flat-square" alt="Version">
@@ -209,6 +210,8 @@ search_blocks → get_block_schema → validate_project → compile_project
 
 결과물은 `output/`에 `.ent`와 `project.json`으로 저장됩니다. `.ent`는 [엔트리 오프라인](https://playentry.org/download)에서 열거나 playentry.org에 업로드하면 됩니다.
 
+바로 컴파일해 볼 수 있는 예제는 [`examples/`](examples/)에 있습니다. MCP 호스트 없이도 `npm run example -- bounce-cat`처럼 로컬에서 바로 `.ent`를 뽑아볼 수 있습니다.
+
 ### 툴 목록
 
 | 이름 | 기능 |
@@ -284,7 +287,23 @@ flowchart LR
 }
 ```
 
-리스트(`LIST` 파라미터)는 v1에서 지원하지 않습니다.
+### 리스트
+
+`lists`에 선언한 뒤, 블록의 `LIST` 파라미터에서는 이름으로 참조합니다. 변수와 마찬가지로 컴파일 단계에서 Entry 내부 리스트 id로 치환됩니다.
+
+```json
+{
+  "lists": [{ "name": "할일", "initialValues": ["숙제하기"] }],
+  "objects": [{
+    "name": "엔트리봇",
+    "sprite": "entrybot",
+    "scripts": [[
+      { "type": "when_run_button_click" },
+      { "type": "add_value_to_list", "params": { "VALUE": "방청소", "LIST": "할일" } }
+    ]]
+  }]
+}
+```
 
 ### `.ent` 구조
 
@@ -301,7 +320,7 @@ temp/media/bark.mp3
 
 ## 개발
 
-기여 방법은 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요. 버그나 제안은 [Issues](https://github.com/seohuda/entry-vibe-mcp/issues)에 해당하는 템플릿으로 등록하면 됩니다.
+기여 방법은 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요. 버그나 제안은 [Issues](https://github.com/seohuda/entry-vibe-mcp/issues)에 해당하는 템플릿으로 등록하면 됩니다. 참여자 간 지켜야 할 최소한의 규칙은 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)에, 버전별 변경 사항은 [CHANGELOG.md](CHANGELOG.md)에 있습니다.
 
 | 명령 | 설명 |
 |------|------|
@@ -309,6 +328,7 @@ temp/media/bark.mp3
 | `npm start` | MCP 서버 실행 (stdio) |
 | `npm run dev:server` | tsx로 서버 실행 |
 | `npm test` | vitest 실행 |
+| `npm run example -- <이름>` | `examples/`의 IR을 `.ent`로 컴파일 |
 | `npm run fetch:entryjs` | `vendor/entryjs` clone (카탈로그 재추출용) |
 | `npm run extract:catalog` | entryjs에서 카탈로그 재추출 |
 
@@ -317,7 +337,8 @@ catalog/          블록 스키마 (entryjs AST 추출)
 assets/media/     .ent에 패킹되는 엔트리봇 이미지·소리
 compiler/         IR → project.json → .ent
 server/           MCP stdio 서버
-scripts/          추출기, fetch 스크립트
+scripts/          추출기, fetch, 예제 컴파일 스크립트
+examples/         바로 컴파일해 볼 수 있는 IR 예제
 test/             테스트 및 fixture IR
 ```
 
