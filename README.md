@@ -11,12 +11,11 @@
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License">
 </p>
 
-[Entry](https://playentry.org) 프로젝트를 텍스트로 구성하고 `.ent`로 패키징하는 MCP 서버.
+[Entry](https://playentry.org) 프로젝트를 텍스트 요청으로 작성하고 `.ent` 파일로 컴파일하는 MCP 서버입니다.
 
-MCP 호스트에 연결해서 사용합니다. 서버는 상태를 저장하지 않으며 블록 검색·IR 검증·컴파일만 제공합니다.
+MCP 호스트에 연결해서 사용합니다. 서버 자체는 상태를 저장하지 않으며, 블록 검색·IR 검증·컴파일 세 가지만 담당합니다.
 
-> "엔트리봇이 4번 반복하면서 10칸씩 움직이고 벽에 튕기게 해줘"
-> → `output/entry-project.ent` (엔트리 오프라인에서 열거나 playentry.org에 업로드)
+예를 들어 "엔트리봇이 4번 반복하면서 10칸씩 움직이고 벽에 튕기게 해줘"라고 요청하면 `output/entry-project.ent`가 생성됩니다. 이 파일은 엔트리 오프라인이나 playentry.org에서 열 수 있습니다.
 
 ---
 
@@ -31,7 +30,7 @@ npm install
 npm run build
 ```
 
-빌드가 끝나면 서버 진입점은 `dist/server/index.js`입니다. 아래 설정에 쓸 절대 경로를 미리 확인해 두세요:
+빌드가 끝나면 `dist/server/index.js`가 서버 진입점이 됩니다. MCP 호스트 설정에 절대 경로가 필요하므로 미리 확인해 둡니다.
 
 ```bash
 # macOS / Linux
@@ -41,34 +40,31 @@ echo "$PWD/dist/server/index.js"
 echo "$PWD\dist\server\index.js"
 ```
 
-블록 카탈로그(`catalog/blocks.json`)와 `.ent`에 패킹되는 엔트리봇 미디어(`assets/media/`)는 repo에 포함돼 있어서, clone만 해도 컴파일까지 바로 됩니다. entryjs를 따로 받을 필요 없습니다.
+블록 카탈로그(`catalog/blocks.json`)와 `.ent`에 패킹되는 엔트리봇 미디어(`assets/media/`)는 repo에 포함되어 있습니다. clone 후 별도 다운로드 없이 바로 빌드하고 컴파일할 수 있습니다.
 
 ---
 
 ## MCP 연결
 
-호스트마다 설정 방식이 다릅니다. 아래에서 쓰는 것만 골라 적용하세요.
-`/absolute/path/to/entry-vibe-mcp`는 위에서 확인한 경로로 바꿔야 합니다. **상대 경로는 동작하지 않습니다.**
+호스트마다 설정 방식이 다르므로 사용 중인 항목만 참고하면 됩니다. 아래 예시의 `/absolute/path/to/entry-vibe-mcp`는 위에서 확인한 절대 경로로 바꿔야 합니다. 상대 경로는 지원하지 않습니다.
 
 ### Claude Code
 
-CLI로 한 줄이면 됩니다.
-
 ```bash
-# 이 프로젝트에서만 (기본값)
+# 현재 프로젝트에만 적용 (기본값)
 claude mcp add entry-vibe -- node /absolute/path/to/entry-vibe-mcp/dist/server/index.js
 
-# 모든 프로젝트에서
+# 모든 프로젝트에 적용
 claude mcp add entry-vibe --scope user -- node /absolute/path/to/entry-vibe-mcp/dist/server/index.js
 ```
 
-팀과 공유하려면 `--scope project`를 쓰면 프로젝트 루트에 `.mcp.json`이 생성됩니다.
+팀과 공유하려면 `--scope project`를 사용합니다. 프로젝트 루트에 `.mcp.json`이 생성됩니다.
 
-확인: `claude mcp list` → `entry-vibe  ✔ Connected`
+연결 확인은 `claude mcp list`를 실행해 `entry-vibe ✔ Connected`가 뜨는지 보면 됩니다.
 
 ### Claude Desktop
 
-설정 → Developer → **Edit Config**로 여는 `claude_desktop_config.json`:
+설정 → Developer → Edit Config에서 열리는 `claude_desktop_config.json`을 수정합니다.
 
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -84,11 +80,11 @@ claude mcp add entry-vibe --scope user -- node /absolute/path/to/entry-vibe-mcp/
 }
 ```
 
-저장 후 Claude Desktop을 **완전히 종료했다가** 다시 켜야 반영됩니다.
+저장한 뒤 Claude Desktop을 완전히 종료했다가 다시 실행해야 적용됩니다. 창만 닫으면 반영되지 않습니다.
 
 ### Cursor
 
-`~/.cursor/mcp.json` (전역) 또는 프로젝트 루트의 `.cursor/mcp.json`:
+`~/.cursor/mcp.json`(전역) 또는 프로젝트 루트의 `.cursor/mcp.json`에 추가합니다.
 
 ```json
 {
@@ -103,7 +99,7 @@ claude mcp add entry-vibe --scope user -- node /absolute/path/to/entry-vibe-mcp/
 
 ### VS Code (GitHub Copilot)
 
-키가 `mcpServers`가 아니라 **`servers`**입니다. 프로젝트의 `.vscode/mcp.json`:
+최상위 키가 `mcpServers`가 아니라 `servers`입니다. 프로젝트의 `.vscode/mcp.json`에 추가합니다.
 
 ```json
 {
@@ -117,7 +113,7 @@ claude mcp add entry-vibe --scope user -- node /absolute/path/to/entry-vibe-mcp/
 }
 ```
 
-전역으로 쓰려면 명령 팔레트에서 `MCP: Open User Configuration`을 실행해 같은 내용을 넣습니다.
+전역으로 설정하려면 명령 팔레트에서 `MCP: Open User Configuration`을 실행한 뒤 같은 내용을 입력합니다.
 
 ### Codex CLI
 
@@ -125,7 +121,7 @@ claude mcp add entry-vibe --scope user -- node /absolute/path/to/entry-vibe-mcp/
 codex mcp add entry-vibe -- node /absolute/path/to/entry-vibe-mcp/dist/server/index.js
 ```
 
-또는 `~/.codex/config.toml`에 직접 (JSON이 아니라 **TOML**입니다):
+또는 `~/.codex/config.toml`에 직접 작성합니다 (JSON이 아니라 TOML입니다).
 
 ```toml
 [mcp_servers.entry-vibe]
@@ -133,7 +129,7 @@ command = "node"
 args = ["/absolute/path/to/entry-vibe-mcp/dist/server/index.js"]
 ```
 
-확인: `codex mcp list`
+연결 확인은 `codex mcp list`로 합니다.
 
 ### Gemini CLI
 
@@ -141,7 +137,7 @@ args = ["/absolute/path/to/entry-vibe-mcp/dist/server/index.js"]
 gemini mcp add entry-vibe node /absolute/path/to/entry-vibe-mcp/dist/server/index.js
 ```
 
-또는 `~/.gemini/settings.json` (프로젝트 한정은 `.gemini/settings.json`):
+또는 `~/.gemini/settings.json`(프로젝트 한정은 `.gemini/settings.json`)에 직접 작성합니다.
 
 ```json
 {
@@ -156,7 +152,7 @@ gemini mcp add entry-vibe node /absolute/path/to/entry-vibe-mcp/dist/server/inde
 
 ### Antigravity
 
-`~/.gemini/config/mcp_config.json` (전역) 또는 워크스페이스의 `.agents/mcp_config.json`:
+`~/.gemini/config/mcp_config.json`(전역) 또는 워크스페이스의 `.agents/mcp_config.json`에 추가합니다.
 
 ```json
 {
@@ -169,19 +165,19 @@ gemini mcp add entry-vibe node /absolute/path/to/entry-vibe-mcp/dist/server/inde
 }
 ```
 
-IDE에서 직접 열려면: 에이전트 사이드 패널 상단의 `…` → **MCP Servers** → **Manage MCP Servers** → **View raw config**.
+IDE에서는 에이전트 사이드 패널 상단의 `…` → MCP Servers → Manage MCP Servers → View raw config에서 직접 편집할 수 있습니다.
 
-IDE와 CLI(`agy`)가 같은 설정 파일을 공유하므로 한 번만 넣으면 둘 다 잡힙니다. CLI에서는 `/mcp`로 확인할 수 있습니다.
+IDE와 CLI(`agy`)가 같은 설정 파일을 공유하므로 한 번만 등록하면 둘 다 적용됩니다. CLI에서는 `/mcp` 명령으로 확인합니다.
 
 ### 그 외 호스트
 
-Windsurf, Cline 등 상당수 호스트가 Claude Desktop과 같은 `mcpServers` + `command` / `args` 형태를 씁니다. 설정 파일 위치만 해당 호스트 문서에서 확인하고 위 JSON을 그대로 넣으면 됩니다.
+Windsurf, Cline 등 다수 호스트는 Claude Desktop과 동일하게 `mcpServers` + `command`/`args` 구조를 사용합니다. 설정 파일 위치만 각 호스트 문서에서 확인하면 됩니다.
 
-다만 키 이름이 다른 호스트가 있습니다 — VS Code는 `servers`, Zed는 `context_servers`, Codex는 TOML입니다. 넣기 전에 호스트 문서에서 최상위 키를 확인하세요.
+다만 최상위 키가 다른 경우가 있습니다 — VS Code는 `servers`, Zed는 `context_servers`, Codex는 TOML 형식입니다. 적용 전 해당 호스트 문서에서 확인해야 합니다.
 
-### 개발 중이라면
+### 개발 중 실행
 
-빌드 없이 TypeScript 소스를 바로 실행할 수 있습니다. `command`/`args`만 바꾸면 됩니다.
+빌드 없이 TypeScript 소스를 바로 실행할 수도 있습니다. `command`/`args`만 아래처럼 바꾸면 됩니다.
 
 ```json
 {
@@ -190,22 +186,22 @@ Windsurf, Cline 등 상당수 호스트가 Claude Desktop과 같은 `mcpServers`
 }
 ```
 
-### 연결이 안 될 때
+### 연결 문제 해결
 
-1. 경로가 절대 경로인지, `dist/server/index.js`가 실제로 있는지 (`npm run build` 했는지) 확인
-2. 터미널에서 직접 띄워봐서 에러가 나는지 확인 — `node /absolute/path/.../dist/server/index.js` (stdio 서버라 조용히 대기하는 게 정상, 즉시 종료되면 문제)
-3. 호스트 재시작 (Claude Desktop은 완전 종료 필요)
-4. Claude Desktop 로그: macOS `~/Library/Logs/Claude/mcp*.log`, Windows `%APPDATA%\Claude\logs\`
+1. 경로가 절대 경로인지, `dist/server/index.js`가 실제로 존재하는지 확인합니다 (`npm run build`를 실행했는지 확인).
+2. 터미널에서 직접 실행해 에러가 나는지 확인합니다 — `node /absolute/path/.../dist/server/index.js`. stdio 서버라 조용히 대기하는 것이 정상이며, 즉시 종료되면 문제가 있는 것입니다.
+3. 호스트를 재시작합니다 (Claude Desktop은 완전히 종료해야 합니다).
+4. Claude Desktop 로그는 macOS `~/Library/Logs/Claude/mcp*.log`, Windows `%APPDATA%\Claude\logs\`에서 확인합니다.
 
 ---
 
-## 쓰는 법
+## 사용법
 
-연결했으면 그냥 말로 시키면 됩니다.
+연결이 끝나면 텍스트 요청으로 지시하면 됩니다.
 
 > 엔트리봇이 4번 반복하면서 10칸씩 움직이고 벽에 튕기게 해줘
 
-호스트가 대략 이 순서로 툴을 호출합니다:
+호스트는 다음 순서로 툴을 호출합니다.
 
 ```
 search_blocks → get_block_schema → validate_project → compile_project
@@ -213,19 +209,19 @@ search_blocks → get_block_schema → validate_project → compile_project
 
 결과물은 `output/`에 `.ent`와 `project.json`으로 저장됩니다. `.ent`는 [엔트리 오프라인](https://playentry.org/download)에서 열거나 playentry.org에 업로드하면 됩니다.
 
-### 툴
+### 툴 목록
 
-| 이름 | 하는 일 |
-|------|---------|
-| `list_categories` | 카테고리 목록 |
+| 이름 | 기능 |
+|------|------|
+| `list_categories` | 카테고리 목록 조회 |
 | `search_blocks` | 블록 검색 (`query`, `category`, `limit`) |
-| `get_block_schema` | 블록 상세 스키마 (param 키, statement 키, 기본값) |
+| `get_block_schema` | 블록 상세 스키마 조회 (param 키, statement 키, 기본값) |
 | `validate_project` | IR 검증 (컴파일 없이) |
-| `compile_project` | IR → `.ent` |
+| `compile_project` | IR을 `.ent`로 컴파일 |
 
-### 작동원리
+### 동작 방식
 
-서버는 호스트가 만들어 넘긴 IR을 카탈로그로 검증한 뒤 컴파일합니다. 블록을 고르고 IR을 조립하는 건 호스트 LLM의 몫입니다.
+서버는 호스트가 전달한 IR을 카탈로그 기준으로 검증한 뒤 컴파일합니다. 블록을 고르고 IR을 구성하는 것은 호스트 쪽 LLM이 담당합니다.
 
 ```mermaid
 flowchart LR
@@ -242,7 +238,7 @@ flowchart LR
 
 ## IR 형식
 
-호스트가 만들어서 넘기는 JSON. param은 이름으로, statement 슬롯도 `DO` 같은 이름으로 씁니다.
+호스트가 생성해서 전달하는 JSON입니다. param은 이름으로, statement 슬롯도 `DO`와 같은 이름으로 지정합니다.
 
 ```json
 {
@@ -266,13 +262,13 @@ flowchart LR
 }
 ```
 
-- 스크립트 스레드는 반드시 이벤트 블록(`when_run_button_click` 등)으로 시작해야 합니다.
-- param 키와 statement 키는 `get_block_schema`가 알려주는 값을 그대로 씁니다.
+- 스크립트 스레드는 이벤트 블록(`when_run_button_click` 등)으로 시작해야 합니다.
+- param 키와 statement 키는 `get_block_schema` 응답값을 그대로 사용합니다.
 - v1은 sprite `entrybot`만 지원합니다.
 
 ### 변수
 
-`variables`에 선언하고, 블록의 `VARIABLE` 파라미터에서는 **이름으로** 참조합니다. 컴파일 단계에서 Entry 내부 변수 id로 치환됩니다. 선언하지 않은 이름은 검증에서 걸립니다.
+`variables`에 선언한 뒤, 블록의 `VARIABLE` 파라미터에서는 이름으로 참조합니다. 컴파일 단계에서 Entry 내부 변수 id로 치환됩니다. 선언하지 않은 이름을 쓰면 검증에서 오류가 발생합니다.
 
 ```json
 {
@@ -292,7 +288,7 @@ flowchart LR
 
 ### `.ent` 구조
 
-[entry-offline](https://github.com/entrylabs/entry-offline)과 같은 tar.gz입니다:
+[entry-offline](https://github.com/entrylabs/entry-offline)과 같은 tar.gz 구조입니다.
 
 ```
 temp/project.json
@@ -305,29 +301,29 @@ temp/media/bark.mp3
 
 ## 개발
 
-기여 방법은 [CONTRIBUTING.md](CONTRIBUTING.md). 버그·제안은 [Issues](https://github.com/seohuda/entry-vibe-mcp/issues)에 템플릿 골라서 올리면 됩니다.
+기여 방법은 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요. 버그나 제안은 [Issues](https://github.com/seohuda/entry-vibe-mcp/issues)에 해당하는 템플릿으로 등록하면 됩니다.
 
 | 명령 | 설명 |
 |------|------|
-| `npm run build` | tsc + catalog → dist 복사 |
-| `npm start` | MCP 서버 (stdio) |
-| `npm run dev:server` | tsx로 서버 |
-| `npm test` | vitest |
+| `npm run build` | tsc 컴파일 후 catalog를 dist로 복사 |
+| `npm start` | MCP 서버 실행 (stdio) |
+| `npm run dev:server` | tsx로 서버 실행 |
+| `npm test` | vitest 실행 |
 | `npm run fetch:entryjs` | `vendor/entryjs` clone (카탈로그 재추출용) |
 | `npm run extract:catalog` | entryjs에서 카탈로그 재추출 |
 
 ```
 catalog/          블록 스키마 (entryjs AST 추출)
-assets/media/     .ent에 패킹되는 엔트리봇 이미지/소리
+assets/media/     .ent에 패킹되는 엔트리봇 이미지·소리
 compiler/         IR → project.json → .ent
 server/           MCP stdio 서버
-scripts/          추출기, fetch
-test/             테스트 + fixture IR
+scripts/          추출기, fetch 스크립트
+test/             테스트 및 fixture IR
 ```
 
-블록 카탈로그는 entryjs `block_*.js`를 파싱해서 만듭니다. AI/하드웨어 블록은 v1에서 제외했고, 블록 메뉴 버튼이나 함수 파라미터 슬롯처럼 스크립트에 놓을 수 없는 항목도 뺐습니다 (12 카테고리, 194개).
+블록 카탈로그는 entryjs의 `block_*.js`를 파싱해서 생성합니다. AI·하드웨어 블록은 v1에서 제외했고, 블록 메뉴 버튼이나 함수 파라미터 슬롯처럼 스크립트에 배치할 수 없는 항목도 제외했습니다 (12개 카테고리, 194개 블록).
 
-카탈로그를 다시 뽑으려면 entryjs 소스가 필요합니다:
+카탈로그를 다시 만들려면 entryjs 소스가 필요합니다.
 
 ```bash
 npm run fetch:entryjs
@@ -338,6 +334,6 @@ npm run extract:catalog
 
 ## 라이선스
 
-MIT.
+MIT입니다.
 
-`assets/media/`의 엔트리봇 이미지와 소리는 [entrylabs/entryjs](https://github.com/entrylabs/entryjs)에서 가져온 파일로 Apache-2.0을 따릅니다. [assets/media/NOTICE.md](assets/media/NOTICE.md) 참고.
+`assets/media/`의 엔트리봇 이미지와 소리는 [entrylabs/entryjs](https://github.com/entrylabs/entryjs)에서 가져온 파일로 Apache-2.0을 따릅니다. 자세한 내용은 [assets/media/NOTICE.md](assets/media/NOTICE.md)를 참고하세요.
