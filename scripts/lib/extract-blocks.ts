@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import type { NodePath } from '@babel/traverse';
 import type { BlockParamSchema, BlockSchema } from '../../src/types/block.ts';
 import {
+  labelFromLangBlocks,
   loadLangMaps,
   parse,
   resolveLangRef,
@@ -222,7 +223,11 @@ function extractBlock(
   }
 
   const label = {
-    ko: templateToLabel(lang.template[type], type),
+    // templateToLabel yields '' when the template is only placeholders
+    ko:
+      templateToLabel(lang.template[type], '') ||
+      labelFromLangBlocks(type, category, lang) ||
+      type,
   };
 
   return {
