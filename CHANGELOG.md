@@ -10,6 +10,15 @@
 - IR에 `lists` 지원 추가. `variables`와 같은 방식으로 이름을 선언하고 `LIST` 파라미터에서
   참조하면 컴파일 시 Entry 내부 리스트 id로 치환됩니다 (`add_value_to_list`,
   `value_of_index_from_list` 등 9개 리스트 블록 활성화).
+- 결과물 저장 위치를 오버라이드하는 `ENTRY_VIBE_OUTPUT_DIR` 환경 변수 추가.
+
+### Fixed
+
+- `compile_project`가 MCP 호스트의 실행 디렉터리가 아니라 entry-vibe-mcp 패키지 자신이
+  설치된 경로에 `output/`을 만들던 문제 수정. 여러 프로젝트에서 이 서버를 쓰면 결과물이
+  전부 패키지 설치 폴더 한 곳으로 몰리고, npm 설치 환경에서는 사용자가 찾기 어려운
+  위치(`node_modules/` 등)에 쌓이는 문제였습니다. 이제 서버를 실행한 디렉터리 기준
+  `output/`에 저장합니다.
 
 ## [0.1.0] - 2026-08-04
 

@@ -47,8 +47,13 @@ export function mediaDir(root?: string): string {
 }
 
 export function outputDir(root?: string): string {
-  const r = root ?? findPackageRoot();
-  // Prefer repo root output/, not dist/output
-  if (existsSync(join(r, 'package.json'))) return join(r, 'output');
-  return join(r, '..', 'output');
+  if (process.env.ENTRY_VIBE_OUTPUT_DIR) return process.env.ENTRY_VIBE_OUTPUT_DIR;
+  // No explicit root: write next to wherever the MCP host launched the
+  // server from, not inside entry-vibe-mcp's own install directory — the
+  // host's cwd is normally the user's project, which is what compile_project
+  // output should land in.
+  if (root === undefined) return join(process.cwd(), 'output');
+  // Explicit root (e.g. the example script): keep it package-relative.
+  if (existsSync(join(root, 'package.json'))) return join(root, 'output');
+  return join(root, '..', 'output');
 }
