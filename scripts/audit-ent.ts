@@ -19,7 +19,13 @@ async function audit(path: string) {
   console.log('smoke:', smoke.ok, smoke.errors.slice(0, 3));
   console.log('verify:', verify.ok, verify.errors.slice(0, 5));
   if (verify.simulation) {
-    console.log('sim:', verify.simulation.ok, verify.simulation.errors?.slice(0, 3));
+    console.log(
+      'sim:',
+      verify.simulation.ok,
+      verify.simulation.warnings?.length
+        ? verify.simulation.warnings.slice(0, 3)
+        : [],
+    );
   }
   if (dec.warnings.length) console.log('decompile warnings:', dec.warnings.slice(0, 5));
 
