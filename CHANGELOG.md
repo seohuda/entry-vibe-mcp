@@ -10,8 +10,11 @@
 - 카탈로그 `scope` (`core`\|`ai`\|`hardware`\|`all`, 기본 `core`) — 검색이 하드웨어에 오염되지 않음
 - MCP 툴 `get_build_guide` + 내장 레시피 (bounce/점수/리스트/신호/함수/TTS)
 - MCP 툴 `import_ent`, `add_object`, `patch_script`, `smoke_test_project`
+- MCP 툴 `verify_project`, `simulate_project`, `remove_object`, `patch_object`, `add_scene`, `remove_scene`, `set_learning`
 - `.ent` 역컴파일 (`compiler/decompile.ts`, `compiler/unpack.ts`)
-- IR `scenes` / `background` / `kind:text` / `sprite:custom` 확장
+- IR `scenes` / `background` / `kind:text` / `sprite:custom` / `learning` / `speed` 확장
+- 코어 블록 런타임 시뮬레이터 (`compiler/runtime-sim.ts`)
+- 전체 검증 파이프라인 (`compiler/verify.ts`) — pack roundtrip 포함
 - IR `messages` / `functions` / `objects[].x|y` — 신호·함수·좌표 지원
 - `function_call` 의사 블록 → Entry `func_<id>`
 - `validate_project` / `compile_project`의 `hints` 필드
