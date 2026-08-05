@@ -501,6 +501,9 @@ describe.skipIf(!existsSync(CATALOG))('host assets/', () => {
     expect(sprite.pictures[1].imageType).toBe('svg');
     expect(sprite.pictures[1].name).toBe('blob');
 
+    const entity = project.objects[0].entity as { scaleX: number; scaleY: number };
+    expect(entity.scaleX).toBe(1);
+    expect(entity.scaleY).toBe(1);
     const outDir = join(ROOT, 'output', 'test');
     mkdirSync(outDir, { recursive: true });
     const entPath = join(outDir, 'custom-assets.ent');

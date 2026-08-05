@@ -290,6 +290,10 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
       entity.height = dim.height;
       entity.regX = dim.width / 2;
       entity.regY = dim.height / 2;
+      // Skeleton keeps Entrybot's ~0.51 scale for the built-in 144×246 art.
+      // Custom costumes should render at their native pixel size.
+      entity.scaleX = 1;
+      entity.scaleY = 1;
     } else {
       sprite.pictures.forEach((picture) => {
         picture.id = nextId();

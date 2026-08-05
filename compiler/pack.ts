@@ -23,6 +23,7 @@ import {
   PLACEHOLDER_PNG,
   parseHostAssetMarker,
   resolveHostAsset,
+  siblingPngPath,
   type ImageType,
 } from './assets.ts';
 
@@ -237,7 +238,14 @@ export function writePendingAssets(
     const bytes = readFileSync(asset.source.absolutePath);
     if (asset.source.imageType === 'svg') {
       writeBinary(join(dir, 'image', `${asset.fileId}.svg`), bytes);
-      writeBinary(join(dir, 'thumb', `${asset.fileId}.png`), PLACEHOLDER_PNG);
+      // Prefer a same-stem .png sibling for thumb (and raster image/); otherwise
+      // fall back to a tiny placeholder so Entry still has a thumb file.
+      const sibling = siblingPngPath(asset.source.absolutePath);
+      const thumb = sibling ? readFileSync(sibling) : PLACEHOLDER_PNG;
+      if (sibling) {
+        writeBinary(join(dir, 'image', `${asset.fileId}.png`), thumb);
+      }
+      writeBinary(join(dir, 'thumb', `${asset.fileId}.png`), thumb);
     } else {
       writeBinary(join(dir, 'image', `${asset.fileId}.png`), bytes);
       writeBinary(join(dir, 'thumb', `${asset.fileId}.png`), bytes);

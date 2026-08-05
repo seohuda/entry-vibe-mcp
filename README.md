@@ -293,6 +293,7 @@ flowchart LR
 
 - 경로는 `assets/` 아래만 허용합니다 (`..` 금지).
 - 확장자는 `.png`, `.svg`만 지원합니다.
+- SVG만 넣을 때 같은 stem의 `.png`가 있으면 썸네일로 사용합니다.
 - `compile_project` 실행 시 `assets/` 폴더가 없으면 만들어 둡니다.
 
 ### 변수

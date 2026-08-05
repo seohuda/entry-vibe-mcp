@@ -89,23 +89,28 @@ export function resolveHostAsset(
     );
   }
 
-  // After existence, confirm realpath stays inside assets/ (symlink escape).
+  // Confirm realpath stays inside assets/ (symlink escape). Fail closed if
+  // realpath cannot be resolved — do not pack a path we cannot verify.
+  let realAssets: string;
+  let realFile: string;
   try {
-    const realAssets = realpathSync(dir);
-    const realFile = realpathSync(absolutePath);
-    const rel = relative(realAssets, realFile);
-    if (rel.startsWith('..') || isAbsolute(rel)) {
-      throw new Error(`asset path escapes assets/: ${JSON.stringify(input)}`);
-    }
+    realAssets = realpathSync(dir);
+    realFile = realpathSync(absolutePath);
   } catch (err) {
-    if (err instanceof Error && err.message.includes('escapes')) throw err;
-    // realpath can fail on exotic FS; existence check above already passed.
+    throw new Error(
+      `cannot resolve asset path ${JSON.stringify(input)}: ` +
+        (err instanceof Error ? err.message : String(err)),
+    );
+  }
+  const realRel = relative(realAssets, realFile);
+  if (realRel.startsWith('..') || isAbsolute(realRel)) {
+    throw new Error(`asset path escapes assets/: ${JSON.stringify(input)}`);
   }
 
   const ext = extname(relativePath).toLowerCase() as '.png' | '.svg';
   return {
     relativePath,
-    absolutePath,
+    absolutePath: realFile,
     imageType: ext === '.svg' ? 'svg' : 'png',
     fileName: basename(relativePath),
   };
@@ -164,6 +169,13 @@ export function readImageDimension(
     // fall through
   }
   return fallback;
+}
+
+/** If `file.svg` has a sibling `file.png`, return that path (used for Entry thumbs). */
+export function siblingPngPath(absolutePath: string): string | undefined {
+  if (!absolutePath.toLowerCase().endsWith('.svg')) return undefined;
+  const pngPath = absolutePath.replace(/\.svg$/i, '.png');
+  return existsSync(pngPath) ? pngPath : undefined;
 }
 
 export function defaultPictureName(relativePath: string, explicit?: string): string {
