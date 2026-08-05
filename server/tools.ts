@@ -14,8 +14,17 @@ import {
   listCategories,
   searchBlocks,
   summarizeBlock,
+  type CatalogScope,
 } from './catalog-api.ts';
 import { IR_SCHEMA_DOC } from './ir-docs.ts';
+import { buildGuide } from './recipes.ts';
+
+const catalogScopeSchema = z
+  .enum(['core', 'ai', 'hardware', 'all'])
+  .optional()
+  .describe(
+    'Catalog filter. Default core. Use ai for TTS/번역 등, hardware only when a board is named, all to search everything.',
+  );
 
 const irBlockSchema: z.ZodType<unknown> = z.lazy(() =>
   z.object({
@@ -31,6 +40,8 @@ export const entryIRSchema = z.object({
       z.object({
         name: z.string(),
         sprite: z.literal('entrybot'),
+        x: z.number().optional().describe('Stage x position (optional)'),
+        y: z.number().optional().describe('Stage y position (optional)'),
         pictures: z
           .array(
             z.object({
@@ -74,6 +85,21 @@ export const entryIRSchema = z.object({
       }),
     )
     .optional(),
+  messages: z
+    .array(z.object({ name: z.string() }))
+    .optional()
+    .describe('Broadcast signals; reference by name in message_cast VALUE params'),
+  functions: z
+    .array(
+      z.object({
+        name: z.string(),
+        type: z.enum(['statement', 'string', 'boolean']).optional(),
+        body: z.array(irBlockSchema),
+        returnValue: z.union([z.string(), z.number(), z.boolean(), irBlockSchema]).optional(),
+      }),
+    )
+    .optional()
+    .describe('User functions; call with type function_call and params.NAME'),
 });
 
 /**
@@ -118,28 +144,52 @@ export function registerTools(server: McpServer): void {
   assertCatalogPresent();
 
   server.registerTool(
+    'get_build_guide',
+    {
+      description: `FIRST tool for any Entry build request. Matches the user's Korean/English request to recipes, recommended blocks, and an IR sketch. Then follow search_blocks → get_block_schema → validate_project → compile_project.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        request: z
+          .string()
+          .describe('User request in Korean or English, e.g. "고양이 4번 움직이고 벽에 튕기게"'),
+      },
+    },
+    async ({ request }) => textResult(buildGuide(request)),
+  );
+
+  server.registerTool(
     'list_categories',
     {
-      description: `List Entry block categories in the catalog (core, AI utilize/learning, expansion, hardware, hardwareLite).\n\n${IR_SCHEMA_DOC}`,
+      description: `List Entry block categories. Default scope=core (12 built-in categories). Pass scope=ai|hardware|all when needed.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        scope: catalogScopeSchema,
+      },
     },
-    async () => textResult({ categories: listCategories() }),
+    async ({ scope }) =>
+      textResult({
+        scope: (scope ?? 'core') as CatalogScope,
+        categories: listCategories((scope ?? 'core') as CatalogScope),
+      }),
   );
 
   server.registerTool(
     'search_blocks',
     {
-      description: `Search the Entry block catalog by keyword (Korean label or English type). Returns a compact subset — call get_block_schema for full param details before writing IR.\n\n${IR_SCHEMA_DOC}`,
+      description: `Search the Entry block catalog by keyword. Default scope=core so hardware does not drown results. Call get_block_schema before writing IR.\n\n${IR_SCHEMA_DOC}`,
       inputSchema: {
         query: z.string().describe('Search query, e.g. "반복", "move", "bounce", "시작"'),
         category: z
           .string()
           .optional()
-          .describe('Optional category filter: start, moving, flow, ai_utilize_tts, hardware_arduino, ...'),
+          .describe('Optional category filter: start, moving, flow, ai_utilize_tts, ...'),
         limit: z.number().int().min(1).max(50).optional().describe('Max results (default 20)'),
+        scope: catalogScopeSchema,
       },
     },
-    async ({ query, category, limit }) =>
-      textResult({ blocks: searchBlocks(query, category, limit ?? 20) }),
+    async ({ query, category, limit, scope }) =>
+      textResult({
+        scope: (scope ?? 'core') as CatalogScope,
+        blocks: searchBlocks(query, category, limit ?? 20, (scope ?? 'core') as CatalogScope),
+      }),
   );
 
   server.registerTool(
@@ -168,7 +218,7 @@ export function registerTools(server: McpServer): void {
   server.registerTool(
     'validate_project',
     {
-      description: `Validate an EntryIR object against the catalog without compiling. Fix any errors, then call compile_project.\n\n${IR_SCHEMA_DOC}`,
+      description: `Validate EntryIR against the catalog. Returns { valid, errors, hints }. Apply every hint, then re-validate before compile_project.\n\n${IR_SCHEMA_DOC}`,
       inputSchema: {
         ir: entryIRSchema.describe('Full EntryIR project'),
       },
@@ -179,7 +229,7 @@ export function registerTools(server: McpServer): void {
   server.registerTool(
     'compile_project',
     {
-      description: `Compile EntryIR into an Entry .ent file (tar.gz). Assets use playentry.org's hash-folder layout (temp/ab/cd/image|thumb|sound). Also writes a matching .json sidecar. Writes into the host's working directory. Returns the output path. Fails if the target files already exist — pass overwrite:true to replace them. On failure, returns validation/compile errors — fix IR and retry.\n\n${IR_SCHEMA_DOC}`,
+      description: `Compile EntryIR into an Entry .ent file (tar.gz) plus matching .json sidecar in the host cwd. On failure returns { ok:false, errors, hints } — fix IR and retry. Pass overwrite:true to replace existing files.\n\n${IR_SCHEMA_DOC}`,
       inputSchema: {
         ir: entryIRSchema.describe('Full EntryIR project'),
         filename: z
@@ -197,7 +247,6 @@ export function registerTools(server: McpServer): void {
         const name = safeEntFilename(filename);
         const out = outputDir();
         mkdirSync(out, { recursive: true });
-        // Ensure the host project has an assets/ folder the LLM can write into.
         ensureAssetsDir();
         const entPath = join(out, name);
         const jsonPath = join(out, name.replace(/\.ent$/i, '.json'));
@@ -213,6 +262,9 @@ export function registerTools(server: McpServer): void {
                     `refusing to overwrite existing file(s): ${conflicts.join(', ')}. ` +
                       'Pass a different filename, or overwrite: true to replace.',
                   ],
+                  hints: [
+                    'Use a unique filename, or set overwrite: true if replacing is intentional.',
+                  ],
                 },
                 null,
                 2,
@@ -222,7 +274,6 @@ export function registerTools(server: McpServer): void {
         }
 
         const project = compileProject(ir as EntryIR);
-        // One prepareExport so the sidecar .json and the .ent share the same media file ids.
         const prepared = prepareExport(project);
         writePreparedJson(prepared, jsonPath);
         await packPrepared(prepared, { outputPath: entPath });
@@ -236,11 +287,21 @@ export function registerTools(server: McpServer): void {
         });
       } catch (err) {
         if (err instanceof CompileError) {
-          return errorResult(JSON.stringify({ ok: false, errors: err.errors }, null, 2));
+          return errorResult(
+            JSON.stringify(
+              { ok: false, errors: err.errors, hints: err.hints },
+              null,
+              2,
+            ),
+          );
         }
         return errorResult(
           JSON.stringify(
-            { ok: false, errors: [err instanceof Error ? err.message : String(err)] },
+            {
+              ok: false,
+              errors: [err instanceof Error ? err.message : String(err)],
+              hints: ['Inspect the error, fix the IR, validate_project, then compile again.'],
+            },
             null,
             2,
           ),

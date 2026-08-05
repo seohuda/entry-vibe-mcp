@@ -1,7 +1,22 @@
 import { readFileSync } from 'node:fs';
-import type { BlockCatalog, BlockSchema } from '../src/types/block.ts';
+import type { BlockCatalog, BlockExtensionKind, BlockSchema } from '../src/types/block.ts';
 import { loadCatalog } from '../compiler/validate.ts';
 import { catalogPath, findPackageRoot } from '../src/paths.ts';
+
+/** Search / list filter. Default `core` keeps hardware from drowning results. */
+export type CatalogScope = 'core' | 'ai' | 'hardware' | 'all';
+
+const AI_KINDS = new Set<BlockExtensionKind>(['aiUtilize', 'aiLearning', 'expansion']);
+const HARDWARE_KINDS = new Set<BlockExtensionKind>(['hardware', 'hardwareLite']);
+
+export function blockInScope(block: BlockSchema, scope: CatalogScope): boolean {
+  if (scope === 'all') return true;
+  const kind = block.extension?.kind;
+  if (scope === 'core') return !kind;
+  if (scope === 'ai') return Boolean(kind && AI_KINDS.has(kind));
+  if (scope === 'hardware') return Boolean(kind && HARDWARE_KINDS.has(kind));
+  return true;
+}
 
 export function getCatalog(): BlockCatalog {
   return loadCatalog(catalogPath());
@@ -32,19 +47,21 @@ export function searchBlocks(
   query: string,
   category?: string,
   limit = 20,
+  scope: CatalogScope = 'core',
 ): ReturnType<typeof summarizeBlock>[] {
   const q = query.trim().toLowerCase();
-  const inCategory = (b: BlockSchema) => (category ? b.category === category : true);
+  const inFilter = (b: BlockSchema) =>
+    blockInScope(b, scope) && (category ? b.category === category : true);
 
   const catalog = getCatalog();
   // An empty query has nothing to rank by; return the category listing as-is
   // rather than letting `includes('')` score every block identically.
   if (!q) {
-    return catalog.blocks.filter(inCategory).slice(0, limit).map(summarizeBlock);
+    return catalog.blocks.filter(inFilter).slice(0, limit).map(summarizeBlock);
   }
 
   const scored = catalog.blocks
-    .filter(inCategory)
+    .filter(inFilter)
     .map((b) => {
       const label = b.label.ko.toLowerCase();
       const ext = b.extension ? `${b.extension.kind} ${b.extension.module}` : '';
@@ -70,9 +87,12 @@ export function getBlockSchemas(types: string[]): BlockSchema[] {
   return types.map((t) => index.get(t)).filter((b): b is BlockSchema => Boolean(b));
 }
 
-export function listCategories(): Array<{ category: string; count: number }> {
+export function listCategories(
+  scope: CatalogScope = 'core',
+): Array<{ category: string; count: number }> {
   const counts = new Map<string, number>();
   for (const b of getCatalog().blocks) {
+    if (!blockInScope(b, scope)) continue;
     counts.set(b.category, (counts.get(b.category) ?? 0) + 1);
   }
   return [...counts.entries()]
