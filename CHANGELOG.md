@@ -9,6 +9,9 @@
 
 - 카탈로그 `scope` (`core`\|`ai`\|`hardware`\|`all`, 기본 `core`) — 검색이 하드웨어에 오염되지 않음
 - MCP 툴 `get_build_guide` + 내장 레시피 (bounce/점수/리스트/신호/함수/TTS)
+- MCP 툴 `import_ent`, `add_object`, `patch_script`, `smoke_test_project`
+- `.ent` 역컴파일 (`compiler/decompile.ts`, `compiler/unpack.ts`)
+- IR `scenes` / `background` / `kind:text` / `sprite:custom` 확장
 - IR `messages` / `functions` / `objects[].x|y` — 신호·함수·좌표 지원
 - `function_call` 의사 블록 → Entry `func_<id>`
 - `validate_project` / `compile_project`의 `hints` 필드

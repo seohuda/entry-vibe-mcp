@@ -224,7 +224,7 @@ Windsurf, Cline 등 다수 호스트는 Claude Desktop과 동일하게 `mcpServe
 호스트 LLM은 **반드시** 다음 순서로 툴을 호출합니다 (Unity/Adobe MCP처럼 AI가 툴만으로 작업을 끝내는 계약입니다).
 
 ```
-get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → compile_project
+get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → smoke_test_project → compile_project
 ```
 
 `validate_project` / `compile_project`가 `errors`와 `hints`를 반환하면 힌트대로 IR을 고친 뒤 다시 검증·컴파일합니다. 사람이 IR을 손댈 필요는 없습니다.
@@ -246,7 +246,11 @@ Cursor에서는 [`.cursor/rules/entry-vibe-mcp.mdc`](.cursor/rules/entry-vibe-mc
 | `search_blocks` | 블록 검색 (`query`, `scope` 기본 core, `category`, `limit`) |
 | `get_block_schema` | 블록 상세 스키마 (param 키, statement 키, 기본값) |
 | `validate_project` | IR 검증 — `{ valid, errors, hints }` |
+| `smoke_test_project` | validate + compile + 구조 검사 (자동화 루프용) |
 | `compile_project` | IR → `.ent` — 실패 시 `{ ok:false, errors, hints }` |
+| `import_ent` | `.ent` → EntryIR 역컴파일 (미디어는 `assets/imported/`로 추출) |
+| `add_object` | IR에 오브젝트 하나 추가 (증분 편집) |
+| `patch_script` | named object의 script thread replace/append/prepend |
 
 ### 동작 방식
 
