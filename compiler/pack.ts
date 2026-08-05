@@ -225,7 +225,7 @@ export async function packPrepared(
 
     await tar.c(
       {
-        gzip: { level: 6, memLevel: 6 },
+        gzip: { level: 6 },
         file: outputPath,
         cwd: stagingRoot,
         portable: true,
