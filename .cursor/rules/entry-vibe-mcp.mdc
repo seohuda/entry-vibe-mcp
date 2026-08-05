@@ -1,0 +1,24 @@
+---
+description: Build Entry (.ent) projects via the entry-vibe MCP tools. Use whenever the user asks to make an Entry/playentry project, 엔트리 작품, or .ent file.
+globs:
+alwaysApply: false
+---
+
+# EntryVibe MCP — host agent contract
+
+When creating or editing Entry projects with the **entry-vibe** MCP server:
+
+1. Call **`get_build_guide`** first with the user's request.
+2. **`search_blocks`** with `scope: "core"` by default. Use `scope: "ai"` only for TTS/번역/비디오 등. Use `scope: "hardware"` only if the user names a board.
+3. **`get_block_schema`** for every block type you will emit — never invent param keys.
+4. **`validate_project`** — apply every `hints` entry, then re-validate.
+5. **`compile_project`** — on `{ ok: false, errors, hints }`, fix and retry.
+
+IR rules:
+
+- `sprite` must be `"entrybot"`.
+- Script threads start with an event hat (`when_run_button_click`, `when_message_cast`, …).
+- Declare `variables` / `lists` / `messages` / `functions` at the top level; reference by **name**.
+- Message blocks use param key **`VALUE`** (not MESSAGE).
+- Call functions with `{ "type": "function_call", "params": { "NAME": "..." } }` — never put `function_create` in object scripts.
+- Custom media lives under host `assets/` (png/svg/mp3).

@@ -221,11 +221,13 @@ Windsurf, Cline 등 다수 호스트는 Claude Desktop과 동일하게 `mcpServe
 
 > 엔트리봇이 4번 반복하면서 10칸씩 움직이고 벽에 튕기게 해줘
 
-호스트는 다음 순서로 툴을 호출합니다.
+호스트 LLM은 **반드시** 다음 순서로 툴을 호출합니다 (Unity/Adobe MCP처럼 AI가 툴만으로 작업을 끝내는 계약입니다).
 
 ```
-search_blocks → get_block_schema → validate_project → compile_project
+get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → compile_project
 ```
+
+`validate_project` / `compile_project`가 `errors`와 `hints`를 반환하면 힌트대로 IR을 고친 뒤 다시 검증·컴파일합니다. 사람이 IR을 손댈 필요는 없습니다.
 
 결과물은 MCP 호스트가 서버를 실행한 디렉터리에 `<이름>.ent`와 확인용 `<이름>.json`으로 바로 저장됩니다(별도의 `output/` 하위 폴더를 만들지 않습니다). 같은 이름의 파일이 이미 있으면 실수로 덮어쓰지 않도록 컴파일을 거부합니다 — 다른 이름을 쓰거나 `overwrite: true`를 넘기면 됩니다. `.ent`는 [엔트리 오프라인](https://playentry.org/download)에서 열거나 playentry.org에 업로드하면 됩니다.
 
@@ -233,23 +235,27 @@ search_blocks → get_block_schema → validate_project → compile_project
 
 바로 컴파일해 볼 수 있는 예제는 [`examples/`](examples/)에 있습니다. MCP 호스트 없이도 `npm run example -- bounce-cat`처럼 로컬에서 바로 `.ent`를 뽑아볼 수 있습니다.
 
+Cursor에서는 [`.cursor/rules/entry-vibe-mcp.mdc`](.cursor/rules/entry-vibe-mcp.mdc)와 [`SKILL.md`](SKILL.md)가 위 워크플로를 강제합니다.
+
 ### 툴 목록
 
 | 이름 | 기능 |
 |------|------|
-| `list_categories` | 카테고리 목록 조회 |
-| `search_blocks` | 블록 검색 (`query`, `category`, `limit`) |
-| `get_block_schema` | 블록 상세 스키마 조회 (param 키, statement 키, 기본값) |
-| `validate_project` | IR 검증 (컴파일 없이) |
-| `compile_project` | IR을 `.ent`로 컴파일 |
+| `get_build_guide` | 요청 → 레시피·추천 블록·IR 스케치 (항상 먼저) |
+| `list_categories` | 카테고리 목록 (`scope`: core\|ai\|hardware\|all, 기본 core) |
+| `search_blocks` | 블록 검색 (`query`, `scope` 기본 core, `category`, `limit`) |
+| `get_block_schema` | 블록 상세 스키마 (param 키, statement 키, 기본값) |
+| `validate_project` | IR 검증 — `{ valid, errors, hints }` |
+| `compile_project` | IR → `.ent` — 실패 시 `{ ok:false, errors, hints }` |
 
 ### 동작 방식
 
-서버는 호스트가 전달한 IR을 카탈로그 기준으로 검증한 뒤 컴파일합니다. 블록을 고르고 IR을 구성하는 것은 호스트 쪽 LLM이 담당합니다.
+서버는 호스트가 전달한 IR을 카탈로그 기준으로 검증한 뒤 컴파일합니다. 블록을 고르고 IR을 구성하는 것은 호스트 쪽 LLM이 담당합니다. 기본 검색 범위는 **core**라서 하드웨어 수천 개가 결과를 오염시키지 않습니다.
 
 ```mermaid
 flowchart LR
-  Host[host 요청] --> Search[search_blocks]
+  Host[host 요청] --> Guide[get_build_guide]
+  Guide --> Search[search_blocks scope=core]
   Search --> Schema[get_block_schema]
   Schema --> Validate[validate_project]
   Validate --> Compile[compile_project]
@@ -288,7 +294,8 @@ flowchart LR
 
 - 스크립트 스레드는 이벤트 블록(`when_run_button_click` 등)으로 시작해야 합니다.
 - param 키와 statement 키는 `get_block_schema` 응답값을 그대로 사용합니다.
-- v1은 sprite `entrybot`만 지원합니다. `pictures`를 생략하면 기본 엔트리봇 모양이 쓰입니다.
+- sprite는 `entrybot`만 지원합니다. `pictures`를 생략하면 기본 엔트리봇 모양이 쓰입니다.
+- 오브젝트에 `x` / `y`를 넣으면 무대 좌표가 반영됩니다.
 
 ### 커스텀 미디어 (`assets/`)
 
@@ -355,6 +362,46 @@ flowchart LR
     "scripts": [[
       { "type": "when_run_button_click" },
       { "type": "add_value_to_list", "params": { "VALUE": "방청소", "LIST": "할일" } }
+    ]]
+  }]
+}
+```
+
+### 신호(메시지)
+
+`messages`에 선언한 뒤, `message_cast` / `when_message_cast`의 **`VALUE`** 파라미터에 이름을 넣습니다 (키가 `MESSAGE`가 아님에 주의).
+
+```json
+{
+  "messages": [{ "name": "시작" }],
+  "objects": [{
+    "name": "송신",
+    "sprite": "entrybot",
+    "scripts": [[
+      { "type": "when_run_button_click" },
+      { "type": "message_cast", "params": { "VALUE": "시작" } }
+    ]]
+  }]
+}
+```
+
+### 함수
+
+`functions`에 정의하고, 오브젝트 스크립트에서는 `function_call`로 호출합니다. `function_create`를 오브젝트 스크립트에 넣지 마세요.
+
+```json
+{
+  "functions": [{
+    "name": "한 걸음",
+    "type": "statement",
+    "body": [{ "type": "move_direction", "params": { "VALUE": 10 } }]
+  }],
+  "objects": [{
+    "name": "엔트리봇",
+    "sprite": "entrybot",
+    "scripts": [[
+      { "type": "when_run_button_click" },
+      { "type": "function_call", "params": { "NAME": "한 걸음" } }
     ]]
   }]
 }
