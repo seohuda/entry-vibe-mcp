@@ -8,7 +8,10 @@ Use the **entry-vibe** MCP tools to turn a natural-language Entry request into a
 2. `search_blocks({ query, scope: "core" })` — default **core**; `ai` / `hardware` only when needed
 3. `get_block_schema({ types })`
 4. `validate_project({ ir })` — follow `hints`
-5. `compile_project({ ir, filename? })`
+5. `verify_project({ ir })` — smoke + pack roundtrip + hints
+6. `compile_project({ ir, filename? })`
+
+For an existing `.ent` from another tool: `audit_ent({ filename })` first — catches missing `name`, bad media paths, dangling `func_*` refs.
 
 ## Do not
 

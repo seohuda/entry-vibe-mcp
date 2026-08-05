@@ -3,6 +3,7 @@ import { basename, join } from 'node:path';
 import { z } from 'zod';
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { compileProject, CompileError } from '../compiler/compile.ts';
+import { auditCompiledProject } from '../compiler/audit-export.ts';
 import { decompileProject } from '../compiler/decompile.ts';
 import { packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
 import { smokeTestProject } from '../compiler/smoke.ts';
@@ -375,11 +376,13 @@ export function registerTools(server: McpServer): void {
         const entPath = resolveEntPath(filename);
         ensureAssetsDir();
         const { project, media } = await unpackEnt(entPath);
+        const exportAudit = auditCompiledProject(project);
         const { ir, warnings } = decompileProject(project, { media });
         return textResult({
           ok: true,
           ir,
           warnings: warnings.length ? warnings : undefined,
+          audit: exportAudit,
           mediaExtracted: media.map((m) => m.assetPath),
           objectCount: ir.objects.length,
           sceneCount: ir.scenes?.length ?? 1,
@@ -601,6 +604,36 @@ export function registerTools(server: McpServer): void {
         return textResult({ ok: result.validation.valid, ir: result.ir, validation: result.validation });
       } catch (err) {
         return errorResult(JSON.stringify({ ok: false, errors: [String(err)] }, null, 2));
+      }
+    },
+  );
+
+  server.registerTool(
+    'audit_ent',
+    {
+      description:
+        'Audit an existing .ent file for structural/runtime issues (missing name, bad media paths, dangling function refs, UX hints). Does not modify the file.',
+      inputSchema: {
+        filename: z.string().describe('Input .ent filename in host cwd'),
+      },
+    },
+    async ({ filename }) => {
+      try {
+        const entPath = resolveEntPath(filename);
+        const { project } = await unpackEnt(entPath);
+        const audit = auditCompiledProject(project);
+        return textResult({ ok: audit.ok, audit });
+      } catch (err) {
+        return errorResult(
+          JSON.stringify(
+            {
+              ok: false,
+              errors: [err instanceof Error ? err.message : String(err)],
+            },
+            null,
+            2,
+          ),
+        );
       }
     },
   );

@@ -828,4 +828,19 @@ describe.skipIf(!existsSync(CATALOG))('host assets/', () => {
     expect(next.objects).toHaveLength(1);
     expect(validateProject(next).valid).toBe(true);
   });
+
+  it('auditCompiledProject flags missing name and flat media paths', async () => {
+    const { auditCompiledProject } = await import('../compiler/audit-export.ts');
+    const ir = loadIR('entrybot-basic.ir.json');
+    const project = compileProject(ir);
+    delete (project as { name?: string }).name;
+    const pic = (project.objects[0]!.sprite as { pictures: Array<{ fileurl: string }> })
+      .pictures[0]!;
+    pic.fileurl = 'temp/media/entrybot1.svg';
+
+    const audit = auditCompiledProject(project);
+    expect(audit.ok).toBe(false);
+    expect(audit.errors.some((e) => e.includes('name'))).toBe(true);
+    expect(audit.errors.some((e) => e.includes('temp/media/'))).toBe(true);
+  });
 });

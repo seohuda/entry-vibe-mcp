@@ -11,6 +11,7 @@ import { packPrepared, prepareExport } from './pack.ts';
 import { simulateProject, type SimulateResult } from './runtime-sim.ts';
 import { smokeTestProject, type SmokeCheck, type SmokeResult } from './smoke.ts';
 import { unpackEnt } from './unpack.ts';
+import { auditCompiledProject } from './audit-export.ts';
 import { validateProject } from './validate.ts';
 
 export interface VerifyOptions {
@@ -79,14 +80,33 @@ export async function verifyProject(
   }
 
   const exported = projectForExport(project);
+  const prepared = prepareExport(project);
+  const exportAudit = auditCompiledProject(prepared.project);
+  checks.push({
+    name: 'export_audit',
+    ok: exportAudit.ok,
+    detail: exportAudit.ok
+      ? `${exportAudit.stats.blockCount} block(s) in export`
+      : exportAudit.errors.join('; '),
+  });
+  if (!exportAudit.ok) {
+    errors.push(...exportAudit.errors);
+  }
+  warnings.push(...exportAudit.warnings);
+  if (exportAudit.hints.length) {
+    warnings.push(...exportAudit.hints.map((h) => `hint: ${h}`));
+  }
+
+  let scriptStringifyOk = true;
   for (const obj of exported.objects as Array<Record<string, unknown>>) {
     if (typeof obj.script !== 'string') {
+      scriptStringifyOk = false;
       errors.push(`export: object "${obj.name}" script must be stringified`);
     }
   }
   checks.push({
     name: 'script_stringify',
-    ok: !errors.some((e) => e.includes('script must be stringified')),
+    ok: scriptStringifyOk,
     detail: 'object scripts stringified for .ent export',
   });
 
