@@ -1,5 +1,13 @@
 import type { BlockCatalog, BlockParamSchema, BlockSchema } from '../src/types/block.ts';
-import type { EntryIR, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
+import type {
+  EntryIR,
+  EntryIRScene,
+  EntryIRObject,
+  IRBlock,
+  IRParamValue,
+  IRPicture,
+  Thread,
+} from '../src/types/ir.ts';
 import { createStartProjectSkeleton, type EntryProject } from './skeleton.ts';
 import {
   defaultMediaName,
@@ -100,6 +108,8 @@ export class CompileError extends Error {
 const THREAD_X = 40;
 const THREAD_Y_START = 50;
 const THREAD_Y_GAP = 200;
+const STAGE_W = 960;
+const STAGE_H = 540;
 
 const ID_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz';
 
@@ -357,6 +367,178 @@ export interface CompileOptions {
   strict?: boolean;
 }
 
+function resolveScenes(ir: EntryIR): EntryIRScene[] {
+  if (ir.scenes && ir.scenes.length > 0) return ir.scenes;
+  return [{ name: '장면 1' }];
+}
+
+function buildHostPicture(
+  pic: IRPicture,
+  nextId: () => string,
+): Record<string, unknown> {
+  const resolved = resolveHostAsset(pic.path);
+  const dimension = readImageDimension(resolved.absolutePath, resolved.imageType);
+  return {
+    id: nextId(),
+    fileurl: hostAssetMarker(resolved.relativePath),
+    thumbUrl: hostAssetMarker(resolved.relativePath),
+    name: defaultMediaName(resolved.relativePath, pic.name),
+    imageType: resolved.imageType,
+    dimension,
+  };
+}
+
+function compileBackgroundObject(
+  sceneId: string,
+  background: IRPicture,
+  nextId: () => string,
+): Record<string, unknown> {
+  const picture = buildHostPicture(background, nextId);
+  const dim = picture.dimension as { width: number; height: number };
+  const scale = Math.max(STAGE_W / dim.width, STAGE_H / dim.height);
+  const bgName = background.name ?? '배경';
+  return {
+    id: nextId(),
+    name: bgName,
+    label: { ko: bgName, en: bgName },
+    objectType: 'sprite',
+    rotateMethod: 'none',
+    scene: sceneId,
+    lock: true,
+    active: true,
+    selectedPictureId: picture.id,
+    sprite: {
+      sounds: [],
+      pictures: [picture],
+    },
+    entity: {
+      x: 0,
+      y: 0,
+      regX: dim.width / 2,
+      regY: dim.height / 2,
+      scaleX: scale,
+      scaleY: scale,
+      rotation: 0,
+      direction: 90,
+      width: dim.width,
+      height: dim.height,
+      visible: true,
+    },
+    script: [],
+  };
+}
+
+function compileSpriteObject(
+  obj: EntryIRObject,
+  sceneId: string,
+  template: Record<string, unknown>,
+  ctx: CompileContext,
+  nextId: () => string,
+): Record<string, unknown> {
+  const base = structuredClone(template) as Record<string, unknown>;
+  base.id = nextId();
+  base.name = obj.name;
+  base.label = { ko: obj.name, en: obj.name };
+  base.objectType = 'sprite';
+  base.scene = sceneId;
+
+  const sprite = base.sprite as SkeletonSprite;
+  const useCustom = obj.sprite === 'custom' || (obj.pictures && obj.pictures.length > 0);
+
+  if (useCustom && obj.pictures && obj.pictures.length > 0) {
+    sprite.pictures = obj.pictures.map((pic) => buildHostPicture(pic, nextId));
+    const first = sprite.pictures[0];
+    const dim = first.dimension as { width: number; height: number };
+    const entity = base.entity as Record<string, number>;
+    entity.width = dim.width;
+    entity.height = dim.height;
+    entity.regX = dim.width / 2;
+    entity.regY = dim.height / 2;
+    entity.scaleX = 1;
+    entity.scaleY = 1;
+  } else {
+    sprite.pictures.forEach((picture) => {
+      picture.id = nextId();
+    });
+  }
+
+  if (obj.sounds && obj.sounds.length > 0) {
+    sprite.sounds = obj.sounds.map((snd) => {
+      const resolved = resolveHostSound(snd.path);
+      return {
+        id: nextId(),
+        fileurl: hostAssetMarker(resolved.relativePath),
+        name: defaultMediaName(resolved.relativePath, snd.name),
+        ext: '.mp3',
+        duration: snd.duration && snd.duration > 0 ? snd.duration : 1,
+      };
+    });
+  } else {
+    sprite.sounds.forEach((sound) => {
+      sound.id = nextId();
+    });
+  }
+  base.selectedPictureId = sprite.pictures[0]?.id;
+
+  const entity = base.entity as Record<string, number>;
+  if (typeof obj.x === 'number') entity.x = obj.x;
+  if (typeof obj.y === 'number') entity.y = obj.y;
+
+  const scripts = obj.scripts.map((thread, ti) =>
+    compileTopThread(thread, ctx, THREAD_X + ti * 300, THREAD_Y_START + ti * THREAD_Y_GAP),
+  );
+  base.script = scripts;
+  return base;
+}
+
+function compileTextObject(
+  obj: EntryIRObject,
+  sceneId: string,
+  ctx: CompileContext,
+  nextId: () => string,
+): Record<string, unknown> {
+  const scripts =
+    obj.scripts.length > 0
+      ? obj.scripts.map((thread, ti) =>
+          compileTopThread(thread, ctx, THREAD_X + ti * 300, THREAD_Y_START + ti * THREAD_Y_GAP),
+        )
+      : [];
+
+  return {
+    id: nextId(),
+    name: obj.name,
+    label: { ko: obj.name, en: obj.name },
+    objectType: 'textBox',
+    text: obj.text ?? '',
+    scene: sceneId,
+    lock: false,
+    active: true,
+    rotateMethod: 'free',
+    entity: {
+      x: typeof obj.x === 'number' ? obj.x : 0,
+      y: typeof obj.y === 'number' ? obj.y : 0,
+      rotation: 0,
+      direction: 90,
+      regX: 0,
+      regY: 0,
+      scaleX: 1,
+      scaleY: 1,
+      width: 240,
+      height: 48,
+      visible: true,
+      colour: '#000000',
+      font: '16px Nanum Gothic',
+      bgColor: 'transparent',
+      textAlign: 0,
+      lineBreak: true,
+      underLine: false,
+      strike: false,
+      text: obj.text ?? '',
+    },
+    script: scripts,
+  };
+}
+
 export function compileProject(ir: EntryIR, options: CompileOptions = {}): EntryProject {
   const catalog = options.catalog ?? loadCatalog();
   const strict = options.strict !== false;
@@ -370,11 +552,25 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
   const project = createStartProjectSkeleton();
   project.name = ir.objects[0]?.name ? `${ir.objects[0].name} 프로젝트` : '엔트리 프로젝트';
 
-  const sceneId = project.scenes[0].id;
-  const nextId = createIdFactory([
-    sceneId,
-    ...project.variables.map((v) => String(v.id)),
-  ]);
+  const irScenes = resolveScenes(ir);
+  const defaultSceneName = irScenes[0].name;
+  const sceneNameToId = new Map<string, string>();
+  const nextId = createIdFactory([...project.variables.map((v) => String(v.id))]);
+
+  project.scenes = irScenes.map((scene) => {
+    const id = nextId();
+    sceneNameToId.set(scene.name, id);
+    return { id, name: scene.name };
+  });
+
+  const sceneIdFor = (name?: string): string => {
+    const key = name ?? defaultSceneName;
+    const id = sceneNameToId.get(key);
+    if (!id) {
+      throw new CompileError([`unknown scene ${JSON.stringify(key)}`]);
+    }
+    return id;
+  };
 
   // User variables are created before scripts: blocks reference them by id,
   // so the name → id mapping must exist while compiling params.
@@ -438,74 +634,26 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     return compileFunctionDef(fn, id, ctx);
   });
 
-  // Replace objects from IR
   const template = project.objects[0];
-  project.objects = ir.objects.map((obj) => {
-    const base = structuredClone(template) as Record<string, unknown>;
-    base.id = nextId();
-    base.name = obj.name;
-    base.label = { ko: obj.name, en: obj.name };
-    base.scene = sceneId;
+  const compiledObjects: Record<string, unknown>[] = [];
 
-    // Picture/sound ids must be unique project-wide, not just per object.
-    const sprite = base.sprite as SkeletonSprite;
-    if (obj.pictures && obj.pictures.length > 0) {
-      sprite.pictures = obj.pictures.map((pic) => {
-        const resolved = resolveHostAsset(pic.path);
-        const dimension = readImageDimension(resolved.absolutePath, resolved.imageType);
-        return {
-          id: nextId(),
-          fileurl: hostAssetMarker(resolved.relativePath),
-          thumbUrl: hostAssetMarker(resolved.relativePath),
-          name: defaultMediaName(resolved.relativePath, pic.name),
-          imageType: resolved.imageType,
-          dimension,
-        };
-      });
-      const first = sprite.pictures[0];
-      const dim = first.dimension as { width: number; height: number };
-      const entity = base.entity as Record<string, number>;
-      entity.width = dim.width;
-      entity.height = dim.height;
-      entity.regX = dim.width / 2;
-      entity.regY = dim.height / 2;
-      // Skeleton keeps Entrybot's ~0.51 scale for the built-in 144×246 art.
-      // Custom costumes should render at their native pixel size.
-      entity.scaleX = 1;
-      entity.scaleY = 1;
-    } else {
-      sprite.pictures.forEach((picture) => {
-        picture.id = nextId();
-      });
+  for (const scene of irScenes) {
+    const sceneId = sceneIdFor(scene.name);
+    if (scene.background) {
+      compiledObjects.push(compileBackgroundObject(sceneId, scene.background, nextId));
     }
-    if (obj.sounds && obj.sounds.length > 0) {
-      sprite.sounds = obj.sounds.map((snd) => {
-        const resolved = resolveHostSound(snd.path);
-        return {
-          id: nextId(),
-          fileurl: hostAssetMarker(resolved.relativePath),
-          name: defaultMediaName(resolved.relativePath, snd.name),
-          ext: '.mp3',
-          duration: snd.duration && snd.duration > 0 ? snd.duration : 1,
-        };
-      });
+  }
+
+  for (const obj of ir.objects) {
+    const sceneId = sceneIdFor(obj.scene);
+    if (obj.kind === 'text') {
+      compiledObjects.push(compileTextObject(obj, sceneId, ctx, nextId));
     } else {
-      sprite.sounds.forEach((sound) => {
-        sound.id = nextId();
-      });
+      compiledObjects.push(compileSpriteObject(obj, sceneId, template, ctx, nextId));
     }
-    base.selectedPictureId = sprite.pictures[0]?.id;
+  }
 
-    const entity = base.entity as Record<string, number>;
-    if (typeof obj.x === 'number') entity.x = obj.x;
-    if (typeof obj.y === 'number') entity.y = obj.y;
-
-    const scripts = obj.scripts.map((thread, ti) =>
-      compileTopThread(thread, ctx, THREAD_X + ti * 300, THREAD_Y_START + ti * THREAD_Y_GAP),
-    );
-    base.script = scripts;
-    return base;
-  });
+  project.objects = compiledObjects;
 
   const extensions = collectExtensionModules(ir, index);
   project.aiUtilizeBlocks = extensions.aiUtilizeBlocks;

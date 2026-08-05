@@ -42,21 +42,32 @@ export interface IRSound {
   duration?: number;
 }
 
+export interface EntryIRScene {
+  name: string;
+  /** Optional locked background sprite for this scene (png/svg under assets/). */
+  background?: IRPicture;
+}
+
 export interface EntryIRObject {
   name: string;
+  /** `sprite` (default) or `text` for Entry text boxes. */
+  kind?: 'sprite' | 'text';
   /**
-   * Built-in Entrybot costumes/sounds when `pictures` / `sounds` are omitted.
-   * When set, those host files replace the corresponding media
-   * (sprite stays `"entrybot"` for entity defaults).
+   * Built-in Entrybot when omitted or `"entrybot"`.
+   * `"custom"` requires {@link pictures}; compiler keeps entity defaults unless pictures override size.
    */
-  sprite: 'entrybot';
-  /** Optional host costumes from `assets/` (png/svg). */
+  sprite?: 'entrybot' | 'custom';
+  /** Text box body when kind is `text`. */
+  text?: string;
+  /** Custom costumes from `assets/` (required when sprite is `custom`). */
   pictures?: IRPicture[];
-  /** Optional host sounds from `assets/` (mp3). */
+  /** Optional sounds from `assets/` (mp3). */
   sounds?: IRSound[];
   /** Optional stage position (Entry entity x/y). Defaults to skeleton (0,0). */
   x?: number;
   y?: number;
+  /** Scene name from {@link EntryIR.scenes}. Defaults to the first scene. */
+  scene?: string;
   scripts: Thread[];
 }
 
@@ -93,6 +104,8 @@ export interface EntryIRFunction {
 }
 
 export interface EntryIR {
+  /** Scenes; defaults to a single "장면 1" when omitted. */
+  scenes?: EntryIRScene[];
   objects: EntryIRObject[];
   variables?: EntryIRVariable[];
   lists?: EntryIRList[];

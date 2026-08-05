@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import type { BlockCatalog, BlockSchema } from '../src/types/block.ts';
-import type { EntryIR, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
+import type { EntryIR, EntryIRObject, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
 import { catalogPath } from '../src/paths.ts';
 import { normalizeAssetRelPath, resolveHostAsset, resolveHostSound } from './assets.ts';
 
@@ -249,9 +249,40 @@ export function validateProject(
     return {
       valid: false,
       errors: ['ir.objects must be a non-empty array'],
-      hints: ['Provide at least one object with name, sprite: "entrybot", and scripts.'],
+      hints: ['Provide at least one object with name, sprite/kind, and scripts.'],
     };
   }
+
+  const sceneNames = new Set<string>();
+  (ir.scenes ?? [{ name: '장면 1' }]).forEach((scene, si) => {
+    if (!scene?.name || typeof scene.name !== 'string') {
+      errors.push(`scenes[${si}].name is required`);
+      hints.push('Each scene needs a non-empty name string.');
+      return;
+    }
+    if (sceneNames.has(scene.name)) {
+      errors.push(`scenes[${si}]: duplicate scene name ${JSON.stringify(scene.name)}`);
+      hints.push('Scene names must be unique.');
+      return;
+    }
+    sceneNames.add(scene.name);
+    if (scene.background) {
+      const prefix = `scenes[${si}].background`;
+      if (!scene.background.path) {
+        errors.push(`${prefix}.path is required`);
+      } else {
+        try {
+          normalizeAssetRelPath(scene.background.path, 'image');
+          resolveHostAsset(scene.background.path);
+        } catch (err) {
+          errors.push(
+            `${prefix}: ${err instanceof Error ? err.message : String(err)}`,
+          );
+          hints.push('Write a png/svg under assets/ and reference assets/...');
+        }
+      }
+    }
+  });
 
   const variableNames = new Set<string>();
   (ir.variables ?? []).forEach((v, vi) => {
@@ -355,96 +386,139 @@ export function validateProject(
   });
 
   ir.objects.forEach((obj, oi) => {
-    if (!obj.name || typeof obj.name !== 'string') {
-      pushError(ctx, `objects[${oi}].name is required`);
-    }
-    if (obj.sprite !== 'entrybot') {
-      pushError(
-        ctx,
-        `objects[${oi}].sprite must be "entrybot" (got ${JSON.stringify(obj.sprite)})`,
-        'Use sprite: "entrybot". Customize look via pictures/sounds under assets/.',
-      );
-    }
-    if (obj.x !== undefined && typeof obj.x !== 'number') {
-      pushError(ctx, `objects[${oi}].x must be a number when provided`);
-    }
-    if (obj.y !== undefined && typeof obj.y !== 'number') {
-      pushError(ctx, `objects[${oi}].y must be a number when provided`);
-    }
-    if (obj.pictures !== undefined) {
-      if (!Array.isArray(obj.pictures) || obj.pictures.length === 0) {
-        pushError(
-          ctx,
-          `objects[${oi}].pictures must be a non-empty array when provided ` +
-            '(or omit it to use the built-in entrybot costumes)',
-        );
-      } else {
-        obj.pictures.forEach((pic, pi) => {
-          const prefix = `objects[${oi}].pictures[${pi}]`;
-          if (!pic || typeof pic.path !== 'string') {
-            pushError(ctx, `${prefix}.path is required`);
-            return;
-          }
-          try {
-            normalizeAssetRelPath(pic.path, 'image');
-            resolveHostAsset(pic.path);
-          } catch (err) {
-            pushError(
-              ctx,
-              `${prefix}: ${err instanceof Error ? err.message : String(err)}`,
-              'Write a png/svg under the host assets/ folder and reference assets/...',
-            );
-          }
-        });
-      }
-    }
-    if (obj.sounds !== undefined) {
-      if (!Array.isArray(obj.sounds) || obj.sounds.length === 0) {
-        pushError(
-          ctx,
-          `objects[${oi}].sounds must be a non-empty array when provided ` +
-            '(or omit it to use the built-in bark sound)',
-        );
-      } else {
-        obj.sounds.forEach((snd, si) => {
-          const prefix = `objects[${oi}].sounds[${si}]`;
-          if (!snd || typeof snd.path !== 'string') {
-            pushError(ctx, `${prefix}.path is required`);
-            return;
-          }
-          if (snd.duration !== undefined && (typeof snd.duration !== 'number' || !(snd.duration > 0))) {
-            pushError(ctx, `${prefix}.duration must be a positive number when provided`);
-          }
-          try {
-            normalizeAssetRelPath(snd.path, 'sound');
-            resolveHostSound(snd.path);
-          } catch (err) {
-            pushError(
-              ctx,
-              `${prefix}: ${err instanceof Error ? err.message : String(err)}`,
-              'Write an mp3 under the host assets/ folder and reference assets/....mp3',
-            );
-          }
-        });
-      }
-    }
-    if (!Array.isArray(obj.scripts) || obj.scripts.length === 0) {
-      pushError(
-        ctx,
-        `objects[${oi}].scripts must be a non-empty array of threads`,
-        'Each object needs at least one thread starting with an event hat.',
-      );
-      return;
-    }
-    obj.scripts.forEach((thread, ti) => {
-      validateThread(thread, `objects[${oi}].scripts[${ti}]`, ctx, {
-        requireHat: true,
-        allowEmpty: false,
-      });
-    });
+    validateObject(obj, oi, ctx, sceneNames);
   });
 
   return { valid: errors.length === 0, errors, hints };
+}
+
+function validatePictures(prefix: string, pictures: EntryIRObject['pictures'], ctx: ValidateContext): void {
+  if (!pictures?.length) {
+    pushError(ctx, `${prefix}.pictures must be a non-empty array when sprite is "custom"`);
+    return;
+  }
+  pictures.forEach((pic, pi) => {
+    const picPrefix = `${prefix}.pictures[${pi}]`;
+    if (!pic || typeof pic.path !== 'string') {
+      pushError(ctx, `${picPrefix}.path is required`);
+      return;
+    }
+    try {
+      normalizeAssetRelPath(pic.path, 'image');
+      resolveHostAsset(pic.path);
+    } catch (err) {
+      pushError(
+        ctx,
+        `${picPrefix}: ${err instanceof Error ? err.message : String(err)}`,
+        'Write a png/svg under the host assets/ folder and reference assets/...',
+      );
+    }
+  });
+}
+
+function validateSounds(prefix: string, sounds: EntryIRObject['sounds'], ctx: ValidateContext): void {
+  if (!sounds?.length) return;
+  sounds.forEach((snd, si) => {
+    const sndPrefix = `${prefix}.sounds[${si}]`;
+    if (!snd || typeof snd.path !== 'string') {
+      pushError(ctx, `${sndPrefix}.path is required`);
+      return;
+    }
+    if (snd.duration !== undefined && (typeof snd.duration !== 'number' || !(snd.duration > 0))) {
+      pushError(ctx, `${sndPrefix}.duration must be a positive number when provided`);
+    }
+    try {
+      normalizeAssetRelPath(snd.path, 'sound');
+      resolveHostSound(snd.path);
+    } catch (err) {
+      pushError(
+        ctx,
+        `${sndPrefix}: ${err instanceof Error ? err.message : String(err)}`,
+        'Write an mp3 under the host assets/ folder and reference assets/....mp3',
+      );
+    }
+  });
+}
+
+function validateObject(
+  obj: EntryIRObject,
+  oi: number,
+  ctx: ValidateContext,
+  sceneNames: Set<string>,
+): void {
+  const prefix = `objects[${oi}]`;
+  if (!obj.name || typeof obj.name !== 'string') {
+    pushError(ctx, `${prefix}.name is required`);
+  }
+  if (obj.scene !== undefined && !sceneNames.has(obj.scene)) {
+    pushError(
+      ctx,
+      `${prefix}.scene references unknown scene ${JSON.stringify(obj.scene)} (known: ${[...sceneNames].join(', ')})`,
+      'Add the scene to ir.scenes or omit scene to use the first scene.',
+    );
+  }
+  if (obj.x !== undefined && typeof obj.x !== 'number') {
+    pushError(ctx, `${prefix}.x must be a number when provided`);
+  }
+  if (obj.y !== undefined && typeof obj.y !== 'number') {
+    pushError(ctx, `${prefix}.y must be a number when provided`);
+  }
+
+  const kind = obj.kind ?? 'sprite';
+  if (kind !== 'sprite' && kind !== 'text') {
+    pushError(ctx, `${prefix}.kind must be "sprite" or "text"`);
+    return;
+  }
+
+  if (kind === 'text') {
+    if (obj.text === undefined || typeof obj.text !== 'string') {
+      pushError(ctx, `${prefix}.text is required when kind is "text"`);
+    }
+    if (obj.sprite === 'custom' || obj.pictures?.length) {
+      pushError(ctx, `${prefix}: text objects do not use sprite/pictures`);
+    }
+    if (!Array.isArray(obj.scripts)) {
+      pushError(ctx, `${prefix}.scripts must be an array (can be empty for static text)`);
+      return;
+    }
+    obj.scripts.forEach((thread, ti) => {
+      validateThread(thread, `${prefix}.scripts[${ti}]`, ctx, {
+        requireHat: thread.length > 0,
+        allowEmpty: true,
+      });
+    });
+    return;
+  }
+
+  const sprite = obj.sprite ?? 'entrybot';
+  if (sprite !== 'entrybot' && sprite !== 'custom') {
+    pushError(
+      ctx,
+      `${prefix}.sprite must be "entrybot" or "custom" (got ${JSON.stringify(sprite)})`,
+      'Use sprite: "entrybot" or sprite: "custom" with pictures[].',
+    );
+  }
+  if (sprite === 'custom') {
+    validatePictures(prefix, obj.pictures, ctx);
+  } else if (obj.pictures !== undefined) {
+    validatePictures(prefix, obj.pictures, ctx);
+  }
+  validateSounds(prefix, obj.sounds, ctx);
+
+  if (!Array.isArray(obj.scripts) || obj.scripts.length === 0) {
+    pushError(
+      ctx,
+      `${prefix}.scripts must be a non-empty array of threads`,
+      'Each sprite object needs at least one thread starting with an event hat.',
+    );
+    return;
+  }
+  obj.scripts.forEach((thread, ti) => {
+    validateThread(thread, `${prefix}.scripts[${ti}]`, ctx, {
+      requireHat: true,
+      allowEmpty: false,
+    });
+  });
 }
 
 export { MESSAGE_BLOCK_TYPES };
