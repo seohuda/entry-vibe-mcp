@@ -2,6 +2,7 @@ node_modules/
 dist/
 vendor/
 output/
+assets/imported/
 *.ent
 .DS_Store
 *.log
