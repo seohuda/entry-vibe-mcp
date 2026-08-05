@@ -235,7 +235,9 @@ get_build_guide → search_blocks(scope=core) → get_block_schema → validate_
 
 바로 컴파일해 볼 수 있는 예제는 [`examples/`](examples/)에 있습니다. MCP 호스트 없이도 `npm run example -- bounce-cat`처럼 로컬에서 바로 `.ent`를 뽑아볼 수 있습니다.
 
-Cursor에서는 [`.cursor/rules/entry-vibe-mcp.mdc`](.cursor/rules/entry-vibe-mcp.mdc)와 [`SKILL.md`](SKILL.md)가 위 워크플로를 강제합니다.
+Cursor에서는 [`.cursor/rules/entry-vibe-mcp.mdc`](.cursor/rules/entry-vibe-mcp.mdc), [`SKILL.md`](SKILL.md), **[`AGENT-GUIDE.md`](AGENT-GUIDE.md)**(MCP 호스트 LLM용 전체 계약)가 위 워크플로를 강제합니다.
+
+OpenCode 등 다른 호스트에서는 시스템 프롬프트나 `@AGENT-GUIDE.md`로 가이드를 넣어 주세요.
 
 ### 툴 목록
 
@@ -250,6 +252,7 @@ Cursor에서는 [`.cursor/rules/entry-vibe-mcp.mdc`](.cursor/rules/entry-vibe-mc
 | `verify_project` | smoke + roundtrip + 시뮬레이션 (권장) |
 | `simulate_project` | 코어 블록 실행 예측 (x/y/변수) |
 | `compile_project` | IR → `.ent` — 실패 시 `{ ok:false, errors, hints }` |
+| `audit_ent` | 기존 `.ent` 구조 감사 (name, media, func 참조) |
 | `import_ent` | `.ent` → EntryIR 역컴파일 |
 | `add_object` / `remove_object` / `patch_object` | 오브젝트 증분 편집 |
 | `patch_script` | script thread replace/append/prepend |

@@ -7,7 +7,10 @@
 
 ### Added
 
-- 카탈로그 `scope` (`core`\|`ai`\|`hardware`\|`all`, 기본 `core`) — 검색이 하드웨어에 오염되지 않음
+- **`AGENT-GUIDE.md`** — MCP 호스트 LLM용 전체 계약 (금지 사항, 재시도 루프, 트러블슈팅)
+- MCP `get_build_guide` 응답에 `agentContract` 필드 (모델이 repo 문서를 못 읽어도 핵심 규칙 전달)
+- MCP 툴 `audit_ent` — 기존 `.ent` 구조 감사
+- `compiler/audit-export.ts` — export 감사 (name, media, func 참조)
 - MCP 툴 `get_build_guide` + 내장 레시피 (bounce/점수/리스트/신호/함수/TTS)
 - MCP 툴 `import_ent`, `add_object`, `patch_script`, `smoke_test_project`
 - MCP 툴 `verify_project`, `simulate_project`, `remove_object`, `patch_object`, `add_scene`, `remove_scene`, `set_learning`

@@ -69,6 +69,8 @@ describe('build guide recipes', () => {
     expect(guide.workflow[0]).toContain('get_build_guide');
     expect(guide.matchedRecipes.some((r) => r.id === 'score-counter')).toBe(true);
     expect(guide.recommendedBlocks.length).toBeGreaterThan(0);
+    expect(guide.agentContract.never.length).toBeGreaterThan(0);
+    expect(guide.workflow.some((s) => s.includes('verify_project'))).toBe(true);
   });
 });
 

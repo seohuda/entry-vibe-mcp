@@ -204,12 +204,27 @@ export const BUILD_RECIPES: BuildRecipe[] = [
 ];
 
 const WORKFLOW_STEPS = [
-  'get_build_guide(request) — 레시피·추천 블록·IR 스케치 확인',
+  'get_build_guide(request) — 레시피·추천 블록·IR 스케치 확인 (AGENT-GUIDE.md 계약)',
   'search_blocks(query, scope="core") — 기본은 core. AI면 scope="ai", 하드웨어면 scope="hardware"',
-  'get_block_schema(types) — 정확한 params / statementKeys 확인',
+  'get_block_schema(types) — 정확한 params / statementKeys 확인 (추측 금지)',
   'validate_project(ir) — errors+hints를 보고 IR 수정 후 재검증',
+  'verify_project(ir) — export 감사 + pack 왕복 (compile 전 권장)',
   'compile_project(ir, filename?) — .ent 생성. 실패 시 hints로 수정 후 재시도',
 ] as const;
+
+/** Shown in every get_build_guide response — for models that skip repo docs. */
+export const AGENT_CONTRACT = {
+  readFirst: 'AGENT-GUIDE.md (repo root) — mandatory for all MCP host LLMs',
+  never: [
+    'Do NOT hand-write project.json or zip/tar your own .ent',
+    'Do NOT guess block param keys — always get_block_schema',
+    'Do NOT use search_blocks scope=all unless user names hardware',
+    'Do NOT put function_create in object scripts — use ir.functions + function_call',
+    'Do NOT skip validate_project before compile_project',
+  ],
+  existingEnt: 'audit_ent(filename) before editing foreign .ent files',
+  retry: 'On ok:false, apply errors+hints to IR only, then re-validate — do not retry unchanged IR',
+} as const;
 
 export function matchRecipes(request: string): BuildRecipe[] {
   const q = request.trim().toLowerCase();
@@ -233,6 +248,7 @@ export function buildGuide(request: string) {
   ];
   return {
     request,
+    agentContract: AGENT_CONTRACT,
     workflow: [...WORKFLOW_STEPS],
     scopeDefault: 'core' as const,
     matchedRecipes: recipes.map((r) => ({
@@ -251,7 +267,8 @@ export function buildGuide(request: string) {
         ? `Start from matched recipe "${recipes[0].id}" irSketch, then get_block_schema on its blocks.`
         : 'No recipe matched — search_blocks for verbs in the request (이동, 반복, 변수, …) with scope=core.',
       'Never invent param keys. Always use get_block_schema.',
-      'Call validate_project before compile_project. Apply hints on failure.',
+      'Call validate_project then verify_project before compile_project. Apply hints on failure.',
+      'Read AGENT-GUIDE.md in the repo if the host can load workspace files.',
     ],
   };
 }

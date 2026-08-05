@@ -4,7 +4,9 @@
  */
 export const IR_SCHEMA_DOC = `
 MANDATORY WORKFLOW (do not skip; do not invent IR from memory):
-1) get_build_guide({ request }) — recipe + IR sketch + recommended blocks
+Full agent guide: AGENT-GUIDE.md in the repo root (never-do list, retry loop, troubleshooting).
+
+1) get_build_guide({ request }) — recipe + IR sketch + agentContract
 2) search_blocks({ query, scope: "core" }) — default scope is core (not hardware)
 3) get_block_schema({ types }) — use exact param keys / statementKeys
 4) validate_project({ ir }) — fix using errors[].hints, then re-validate

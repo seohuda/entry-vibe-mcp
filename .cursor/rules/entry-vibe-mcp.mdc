@@ -6,17 +6,24 @@ alwaysApply: false
 
 # EntryVibe MCP — host agent contract
 
+**Read [AGENT-GUIDE.md](../AGENT-GUIDE.md) for the full guide** (never-do list, retry loop, troubleshooting).
+
 When creating or editing Entry projects with the **entry-vibe** MCP server:
 
-1. Call **`get_build_guide`** first with the user's request.
+1. Call **`get_build_guide`** first — follow `agentContract` and `workflow` in the response.
 2. **`search_blocks`** with `scope: "core"` by default. Use `scope: "ai"` only for TTS/번역/비디오 등. Use `scope: "hardware"` only if the user names a board.
 3. **`get_block_schema`** for every block type you will emit — never invent param keys.
 4. **`validate_project`** — apply every `hints` entry, then re-validate.
-5. **`compile_project`** — on `{ ok: false, errors, hints }`, fix and retry.
+5. **`verify_project`** — recommended before compile (catches bad export paths).
+6. **`compile_project`** — on `{ ok: false, errors, hints }`, fix IR and retry from step 4.
+
+**Never** hand-write `project.json` or create `.ent` archives yourself. Always use `compile_project`.
+
+Foreign `.ent`: **`audit_ent`** first.
 
 IR rules:
 
-- `sprite` must be `"entrybot"`.
+- `sprite` must be `"entrybot"` unless `custom` + `pictures[]`.
 - Script threads start with an event hat (`when_run_button_click`, `when_message_cast`, …).
 - Declare `variables` / `lists` / `messages` / `functions` at the top level; reference by **name**.
 - Message blocks use param key **`VALUE`** (not MESSAGE).
