@@ -1,0 +1,27 @@
+{
+  "messages": [{ "name": "시작" }],
+  "objects": [
+    {
+      "name": "송신",
+      "sprite": "entrybot",
+      "x": -120,
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "message_cast", "params": { "VALUE": "시작" } }
+        ]
+      ]
+    },
+    {
+      "name": "수신",
+      "sprite": "entrybot",
+      "x": 120,
+      "scripts": [
+        [
+          { "type": "when_message_cast", "params": { "VALUE": "시작" } },
+          { "type": "move_direction", "params": { "VALUE": 10 } }
+        ]
+      ]
+    }
+  ]
+}

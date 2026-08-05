@@ -5,9 +5,11 @@ export type IRParamValue = string | number | boolean | IRBlock;
 export interface IRBlock {
   type: string;
   /**
-   * Named params from the catalog schema. A `VARIABLE` param takes the
-   * variable *name* declared in {@link EntryIR.variables}; the compiler
-   * rewrites it to the generated variable id Entry expects.
+   * Named params from the catalog schema.
+   * - `VARIABLE` / `LIST`: declare in ir.variables / ir.lists; compiler rewrites name → id.
+   * - Message blocks (`message_cast`, `when_message_cast`, …): use `VALUE` with the
+   *   message *name* from ir.messages; compiler rewrites name → id.
+   * - `function_call`: use `NAME` with a function name from ir.functions.
    */
   params?: Record<string, IRParamValue>;
   /** Named statement slots from catalog statementKeys (e.g. DO, STACK_IF). */
@@ -45,13 +47,16 @@ export interface EntryIRObject {
   /**
    * Built-in Entrybot costumes/sounds when `pictures` / `sounds` are omitted.
    * When set, those host files replace the corresponding media
-   * (sprite stays `"entrybot"` for v1 entity defaults).
+   * (sprite stays `"entrybot"` for entity defaults).
    */
   sprite: 'entrybot';
   /** Optional host costumes from `assets/` (png/svg). */
   pictures?: IRPicture[];
   /** Optional host sounds from `assets/` (mp3). */
   sounds?: IRSound[];
+  /** Optional stage position (Entry entity x/y). Defaults to skeleton (0,0). */
+  x?: number;
+  y?: number;
   scripts: Thread[];
 }
 
@@ -66,8 +71,31 @@ export interface EntryIRList {
   initialValues?: Array<string | number>;
 }
 
+export interface EntryIRMessage {
+  name: string;
+}
+
+/**
+ * User-defined function. Call it from object scripts with
+ * `{ "type": "function_call", "params": { "NAME": "<name>" } }`.
+ */
+export interface EntryIRFunction {
+  name: string;
+  /** `statement` = void function; `string`/`boolean` = value-returning. */
+  type?: 'statement' | 'string' | 'boolean';
+  /**
+   * Function body (no event hat). For value functions, put the return expression
+   * in {@link returnValue} instead of ending the body with a return block.
+   */
+  body: Thread;
+  /** Required when type is `string` or `boolean` — expression block or literal. */
+  returnValue?: IRParamValue;
+}
+
 export interface EntryIR {
   objects: EntryIRObject[];
   variables?: EntryIRVariable[];
   lists?: EntryIRList[];
+  messages?: EntryIRMessage[];
+  functions?: EntryIRFunction[];
 }

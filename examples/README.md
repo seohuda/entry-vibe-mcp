@@ -9,6 +9,8 @@
 | `todo-list.ir.json` | 리스트(`lists`)에 항목을 추가 |
 | `two-objects.ir.json` | 오브젝트 2개(플레이어·방해꾼) |
 | `custom-media.ir.json` | `assets/`의 커스텀 png·소리 |
+| `message-ping.ir.json` | 신호(`messages`) 보내기/받기 |
+| `function-double.ir.json` | 함수(`functions`) 정의 + `function_call` |
 
 `custom-media.ir.json`은 [`examples/assets/`](assets/)의 `dot.png`·`beep.mp3`를 참조합니다.
 (`beep.mp3`는 entryjs bark 샘플 복사본, Apache-2.0.)
@@ -23,6 +25,8 @@ npm run example -- score-counter
 npm run example -- todo-list
 npm run example -- two-objects
 npm run example -- custom-media
+npm run example -- message-ping
+npm run example -- function-double
 ```
 
 `output/<이름>.ent`가 생성되며, [엔트리 오프라인](https://playentry.org/download)이나

@@ -1,0 +1,25 @@
+{
+  "functions": [
+    {
+      "name": "한 걸음",
+      "type": "statement",
+      "body": [
+        { "type": "move_direction", "params": { "VALUE": 10 } },
+        { "type": "bounce_wall" }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "name": "엔트리봇",
+      "sprite": "entrybot",
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "function_call", "params": { "NAME": "한 걸음" } },
+          { "type": "function_call", "params": { "NAME": "한 걸음" } }
+        ]
+      ]
+    }
+  ]
+}

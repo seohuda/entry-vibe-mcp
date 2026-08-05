@@ -114,6 +114,62 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     expect(project.aiUtilizeBlocks).toEqual(['tts']);
   });
 
+  it('compiles messages and rewrites VALUE to message ids', () => {
+    const ir = JSON.parse(
+      readFileSync(join(ROOT, 'examples', 'message-ping.ir.json'), 'utf8'),
+    ) as EntryIR;
+    const result = validateProject(ir);
+    expect(result.valid, result.errors.join('\n')).toBe(true);
+    const project = compileProject(ir);
+    expect(project.messages).toHaveLength(1);
+    expect(project.messages![0].name).toBe('시작');
+    const msgId = project.messages![0].id;
+    const sender = (project.objects[0].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    expect(sender[1].type).toBe('message_cast');
+    expect((sender[1].params as unknown[])[0]).toBe(msgId);
+    const receiver = (project.objects[1].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    expect(receiver[0].type).toBe('when_message_cast');
+    expect((receiver[0].params as unknown[])[1]).toBe(msgId);
+    expect((project.objects[0].entity as { x: number }).x).toBe(-120);
+  });
+
+  it('compiles functions and function_call into func_<id>', () => {
+    const ir = JSON.parse(
+      readFileSync(join(ROOT, 'examples', 'function-double.ir.json'), 'utf8'),
+    ) as EntryIR;
+    const result = validateProject(ir);
+    expect(result.valid, result.errors.join('\n')).toBe(true);
+    const project = compileProject(ir);
+    expect(project.functions).toHaveLength(1);
+    const fn = project.functions![0] as { id: string; content: string };
+    expect(fn.content).toContain('function_create');
+    expect(fn.content).toContain('한 걸음');
+    const thread = (project.objects[0].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    expect(thread[1].type).toBe(`func_${fn.id}`);
+    expect(thread[2].type).toBe(`func_${fn.id}`);
+  });
+
+  it('returns hints when validation fails', () => {
+    const result = validateProject({
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [[{ type: 'move_direction' }]],
+        },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.hints.length).toBe(result.errors.length);
+    expect(result.hints.some((h) => /when_run_button_click|event/i.test(h))).toBe(true);
+  });
+
   it('compiles named params into positional arrays', () => {
     const ir = loadIR('bounce-cat.ir.json');
     const project = compileProject(ir);
@@ -304,7 +360,7 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
         },
       ],
     };
-    expect(validateProject(ir)).toEqual({ valid: true, errors: [] });
+    expect(validateProject(ir)).toEqual({ valid: true, errors: [], hints: [] });
 
     const thread = (compileProject(ir).objects[0].script as unknown[][])[0] as Array<
       Record<string, unknown>

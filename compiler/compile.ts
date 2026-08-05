@@ -14,7 +14,11 @@ import {
   validateProject,
   LIST_PARAM_KEY,
   VARIABLE_PARAM_KEY,
+  MESSAGE_PARAM_KEY,
+  MESSAGE_BLOCK_TYPES,
+  FUNCTION_CALL_TYPE,
 } from './validate.ts';
+import type { EntryIRFunction } from '../src/types/ir.ts';
 
 /** Collect Entry extension module lists from every block referenced in the IR. */
 export function collectExtensionModules(
@@ -70,6 +74,10 @@ export function collectExtensionModules(
       for (const block of thread) visit(block);
     }
   }
+  for (const fn of ir.functions ?? []) {
+    for (const block of fn.body ?? []) visit(block);
+    if (fn.returnValue && isIRBlock(fn.returnValue)) visit(fn.returnValue);
+  }
 
   return {
     aiUtilizeBlocks: [...aiUtilize].sort(),
@@ -80,7 +88,10 @@ export function collectExtensionModules(
 }
 
 export class CompileError extends Error {
-  constructor(public readonly errors: string[]) {
+  constructor(
+    public readonly errors: string[],
+    public readonly hints: string[] = [],
+  ) {
     super(errors.join('\n'));
     this.name = 'CompileError';
   }
@@ -151,22 +162,35 @@ interface CompileContext {
   variableIds: Map<string, string>;
   /** List name → generated project list id. */
   listIds: Map<string, string>;
+  /** Message name → generated project message id. */
+  messageIds: Map<string, string>;
+  /** Function name → generated func_<id> block type suffix id. */
+  functionIds: Map<string, string>;
 }
 
 function compileParamValue(
   value: IRParamValue,
   param: BlockParamSchema,
   ctx: CompileContext,
+  parentType?: string,
 ): unknown {
   if (isIRBlock(value)) {
     return compileBlock(value, ctx, { includePosition: false });
   }
-  // Entry stores variable/list references as ids, but IR authors only know names.
+  // Entry stores variable/list/message references as ids, but IR authors only know names.
   if (param.key === VARIABLE_PARAM_KEY && typeof value === 'string') {
     return ctx.variableIds.get(value) ?? value;
   }
   if (param.key === LIST_PARAM_KEY && typeof value === 'string') {
     return ctx.listIds.get(value) ?? value;
+  }
+  if (
+    parentType &&
+    MESSAGE_BLOCK_TYPES.has(parentType) &&
+    param.key === MESSAGE_PARAM_KEY &&
+    typeof value === 'string'
+  ) {
+    return ctx.messageIds.get(value) ?? value;
   }
   if (param.type === 'Dropdown' || param.type === 'DropdownDynamic' || param.type === 'Keyboard') {
     return value;
@@ -186,6 +210,20 @@ function compileBlock(
   ctx: CompileContext,
   opts: { includePosition: boolean; x?: number; y?: number },
 ): Record<string, unknown> {
+  if (block.type === FUNCTION_CALL_TYPE) {
+    const name = String(block.params?.NAME ?? '');
+    const id = ctx.functionIds.get(name);
+    if (!id) {
+      throw new CompileError([`unknown function "${name}"`]);
+    }
+    const out: Record<string, unknown> = { type: `func_${id}` };
+    if (opts.includePosition) {
+      out.x = opts.x ?? THREAD_X;
+      out.y = opts.y ?? THREAD_Y_START;
+    }
+    return out;
+  }
+
   const schema = ctx.index.get(block.type);
   if (!schema) {
     throw new CompileError([`unknown block type "${block.type}"`]);
@@ -203,7 +241,7 @@ function compileBlock(
     const params: unknown[] = schema.params.map((param) => {
       if (param.type === 'Indicator' || param.type === 'LineBreak') return null;
       if (block.params && Object.prototype.hasOwnProperty.call(block.params, param.key)) {
-        return compileParamValue(block.params[param.key], param, ctx);
+        return compileParamValue(block.params[param.key], param, ctx, block.type);
       }
       return defaultForParam(param);
     });
@@ -228,6 +266,65 @@ function compileBlock(
   }
 
   return out;
+}
+
+function compileReturnValue(value: IRParamValue, ctx: CompileContext): unknown {
+  if (isIRBlock(value)) {
+    return compileBlock(value, ctx, { includePosition: false });
+  }
+  if (typeof value === 'boolean') {
+    return { type: value ? 'True' : 'False' };
+  }
+  if (typeof value === 'number') {
+    return { type: 'number', params: [String(value)] };
+  }
+  return { type: 'text', params: [String(value)] };
+}
+
+function compileFunctionDef(
+  fn: EntryIRFunction,
+  id: string,
+  ctx: CompileContext,
+): Record<string, unknown> {
+  const fnType = fn.type ?? 'statement';
+  const body = compileThreadBody(fn.body ?? [], ctx);
+  const field = {
+    type: 'function_field_label',
+    params: [fn.name],
+  };
+
+  let content: unknown[][];
+  if (fnType === 'statement') {
+    content = [
+      [
+        {
+          type: 'function_create',
+          x: THREAD_X,
+          y: THREAD_Y_START,
+          params: [field, null],
+          statements: [body],
+        },
+      ],
+    ];
+  } else {
+    content = [
+      [
+        {
+          type: 'function_create_value',
+          x: THREAD_X,
+          y: THREAD_Y_START,
+          params: [field, null, null, compileReturnValue(fn.returnValue ?? '', ctx)],
+          statements: [body],
+        },
+      ],
+    ];
+  }
+
+  return {
+    id,
+    type: 'normal',
+    content: JSON.stringify(content),
+  };
 }
 
 /** Compile blocks inside a statement slot (no x/y). */
@@ -266,7 +363,7 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
 
   const validation = validateProject(ir, catalog);
   if (!validation.valid && strict) {
-    throw new CompileError(validation.errors);
+    throw new CompileError(validation.errors, validation.hints);
   }
 
   const index = catalogIndex(catalog);
@@ -321,7 +418,25 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     });
   }
 
-  const ctx: CompileContext = { index, variableIds, listIds };
+  const messageIds = new Map<string, string>();
+  project.messages = [];
+  for (const m of ir.messages ?? []) {
+    const id = nextId();
+    messageIds.set(m.name, id);
+    project.messages.push({ id, name: m.name });
+  }
+
+  const functionIds = new Map<string, string>();
+  for (const fn of ir.functions ?? []) {
+    functionIds.set(fn.name, nextId());
+  }
+
+  const ctx: CompileContext = { index, variableIds, listIds, messageIds, functionIds };
+
+  project.functions = (ir.functions ?? []).map((fn) => {
+    const id = functionIds.get(fn.name)!;
+    return compileFunctionDef(fn, id, ctx);
+  });
 
   // Replace objects from IR
   const template = project.objects[0];
@@ -380,6 +495,10 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
       });
     }
     base.selectedPictureId = sprite.pictures[0]?.id;
+
+    const entity = base.entity as Record<string, number>;
+    if (typeof obj.x === 'number') entity.x = obj.x;
+    if (typeof obj.y === 'number') entity.y = obj.y;
 
     const scripts = obj.scripts.map((thread, ti) =>
       compileTopThread(thread, ctx, THREAD_X + ti * 300, THREAD_Y_START + ti * THREAD_Y_GAP),
