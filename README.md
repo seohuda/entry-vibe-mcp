@@ -24,6 +24,12 @@ MCP 호스트에 연결해서 사용합니다. 서버 자체는 상태를 저장
 
 Node.js 20 이상이 필요합니다.
 
+설치/연결이 복잡하면, 사용하는 MCP 호스트(예: Cursor/Claude Code/OpenCode)에게 아래 한 문장만 그대로 요청하세요.
+
+```text
+이 레포를 로컬에 설치하고(dist/server/index.js 절대 경로 확인까지), 내 환경(OS/에디터)에 맞춰 entry-vibe MCP를 연결해줘.
+```
+
 ```bash
 git clone https://github.com/seohuda/entry-vibe-mcp.git
 cd entry-vibe-mcp
