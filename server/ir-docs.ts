@@ -8,7 +8,10 @@ MANDATORY WORKFLOW (do not skip; do not invent IR from memory):
 2) search_blocks({ query, scope: "core" }) — default scope is core (not hardware)
 3) get_block_schema({ types }) — use exact param keys / statementKeys
 4) validate_project({ ir }) — fix using errors[].hints, then re-validate
-5) compile_project({ ir, filename? }) — writes .ent + .json in host cwd
+5) smoke_test_project({ ir }) — optional but recommended before compile
+6) compile_project({ ir, filename? }) — writes .ent + .json in host cwd
+
+Edit existing .ent: import_ent({ filename }) → patch_script / add_object → validate → compile.
 
 scope values: "core" (default) | "ai" | "hardware" | "all"
 Only use scope="hardware" when the user names a board/device.
@@ -17,10 +20,14 @@ Only use scope="ai" for TTS/번역/비디오 등 AI 활용 요청.
 EntryIR JSON schema:
 
 {
+  "scenes": [{ "name": string, "background"?: { "name"?: string, "path": "assets/...." } }],
   "objects": [{
     "name": string,
-    "sprite": "entrybot",
+    "kind"?: "sprite"|"text",
+    "sprite"?: "entrybot"|"custom",
+    "text"?: string,
     "x"?: number, "y"?: number,
+    "scene"?: string,
     "pictures": [{ "name"?: string, "path": "assets/...." }],
     "sounds": [{ "name"?: string, "path": "assets/....mp3", "duration"?: number }],
     "scripts": [ Thread, ... ]
@@ -31,12 +38,12 @@ EntryIR JSON schema:
   "functions": [{
     "name": string,
     "type": "statement"|"string"|"boolean",
-    "body": IRBlock[],           // no event hat
-    "returnValue"?: string|number|boolean|IRBlock  // required for string/boolean
+    "body": IRBlock[],
+    "returnValue"?: string|number|boolean|IRBlock
   }]
 }
 
-Thread = IRBlock[]  // MUST start with an event hat (skeleton basic_event), e.g. when_run_button_click
+Thread = IRBlock[]  // sprite objects MUST start with an event hat (basic_event)
 
 IRBlock = {
   "type": string,
@@ -45,11 +52,13 @@ IRBlock = {
 }
 
 Special blocks:
-- Messages: declare in messages[], pass name via params.VALUE on message_cast / when_message_cast / message_cast_wait
+- Messages: declare in messages[], pass name via params.VALUE on message_cast / when_message_cast
 - Functions: declare in functions[]; call with { "type": "function_call", "params": { "NAME": "<name>" } }
-  Never put function_create in object scripts.
+- Text boxes: kind "text", text required, scripts optional
+- Custom sprites: sprite "custom" + pictures[] under assets/
+- Scene backgrounds: scenes[].background (locked sprite, not listed in objects[])
 
-Custom media: write files into host assets/, then reference from pictures (png/svg) / sounds (mp3).
+Custom media: write files into host assets/, then reference from pictures / sounds / backgrounds.
 Paths must stay under assets/ (no ..).
 
 Variables / lists: declare then reference by NAME in VARIABLE / LIST params.

@@ -3,9 +3,12 @@ import { basename, join } from 'node:path';
 import { z } from 'zod';
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { compileProject, CompileError } from '../compiler/compile.ts';
+import { decompileProject } from '../compiler/decompile.ts';
 import { packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
+import { smokeTestProject } from '../compiler/smoke.ts';
+import { unpackEnt, resolveEntPath } from '../compiler/unpack.ts';
 import { validateProject } from '../compiler/validate.ts';
-import type { EntryIR } from '../src/types/ir.ts';
+import type { EntryIR, EntryIRObject, Thread } from '../src/types/ir.ts';
 import { outputDir } from '../src/paths.ts';
 import { ensureAssetsDir } from '../compiler/assets.ts';
 import {
@@ -17,6 +20,12 @@ import {
   type CatalogScope,
 } from './catalog-api.ts';
 import { IR_SCHEMA_DOC } from './ir-docs.ts';
+import {
+  addObjectValidated,
+  IREditError,
+  patchScriptValidated,
+  type PatchScriptMode,
+} from './ir-edit.ts';
 import { buildGuide } from './recipes.ts';
 
 const catalogScopeSchema = z
@@ -34,41 +43,47 @@ const irBlockSchema: z.ZodType<unknown> = z.lazy(() =>
   }),
 );
 
+const irPictureSchema = z.object({
+  name: z.string().optional(),
+  path: z.string().describe('Host path under assets/, png or svg'),
+});
+
+const irObjectSchema = z.object({
+  name: z.string(),
+  kind: z.enum(['sprite', 'text']).optional().describe('Default sprite; use text for text boxes'),
+  sprite: z
+    .enum(['entrybot', 'custom'])
+    .optional()
+    .describe('Default entrybot; custom requires pictures[]'),
+  text: z.string().optional().describe('Required when kind=text'),
+  x: z.number().optional(),
+  y: z.number().optional(),
+  scene: z.string().optional().describe('Scene name from ir.scenes (default: first scene)'),
+  pictures: z.array(irPictureSchema).min(1).optional(),
+  sounds: z
+    .array(
+      z.object({
+        name: z.string().optional(),
+        path: z.string(),
+        duration: z.number().positive().optional(),
+      }),
+    )
+    .min(1)
+    .optional(),
+  scripts: z.array(z.array(irBlockSchema)),
+});
+
 export const entryIRSchema = z.object({
-  objects: z
+  scenes: z
     .array(
       z.object({
         name: z.string(),
-        sprite: z.literal('entrybot'),
-        x: z.number().optional().describe('Stage x position (optional)'),
-        y: z.number().optional().describe('Stage y position (optional)'),
-        pictures: z
-          .array(
-            z.object({
-              name: z.string().optional(),
-              path: z
-                .string()
-                .describe('Host path under assets/, e.g. assets/cat.png (png or svg only)'),
-            }),
-          )
-          .min(1)
-          .optional()
-          .describe('Optional costumes from the host assets/ folder; omit to use entrybot'),
-        sounds: z
-          .array(
-            z.object({
-              name: z.string().optional(),
-              path: z.string().describe('Host path under assets/, e.g. assets/meow.mp3'),
-              duration: z.number().positive().optional().describe('Duration in seconds (default 1)'),
-            }),
-          )
-          .min(1)
-          .optional()
-          .describe('Optional sounds from the host assets/ folder; omit to use bark'),
-        scripts: z.array(z.array(irBlockSchema)),
+        background: irPictureSchema.optional().describe('Locked background sprite for the scene'),
       }),
     )
-    .min(1),
+    .optional()
+    .describe('Scenes; defaults to a single "장면 1" when omitted'),
+  objects: z.array(irObjectSchema).min(1),
   variables: z
     .array(
       z.object({
@@ -308,5 +323,138 @@ export function registerTools(server: McpServer): void {
         );
       }
     },
+  );
+
+  server.registerTool(
+    'import_ent',
+    {
+      description: `Import an existing .ent file from the host cwd into EntryIR (decompile). Extracts bundled media into assets/imported/. Use for read/edit workflows.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        filename: z
+          .string()
+          .describe('Input .ent filename in host cwd (bare name, e.g. my-project.ent)'),
+      },
+    },
+    async ({ filename }) => {
+      try {
+        const entPath = resolveEntPath(filename);
+        ensureAssetsDir();
+        const { project, media } = await unpackEnt(entPath);
+        const { ir, warnings } = decompileProject(project, { media });
+        return textResult({
+          ok: true,
+          ir,
+          warnings: warnings.length ? warnings : undefined,
+          mediaExtracted: media.map((m) => m.assetPath),
+          objectCount: ir.objects.length,
+          sceneCount: ir.scenes?.length ?? 1,
+        });
+      } catch (err) {
+        return errorResult(
+          JSON.stringify(
+            {
+              ok: false,
+              errors: [err instanceof Error ? err.message : String(err)],
+              hints: ['Ensure the .ent file exists in the host cwd and is a valid Entry export.'],
+            },
+            null,
+            2,
+          ),
+        );
+      }
+    },
+  );
+
+  server.registerTool(
+    'add_object',
+    {
+      description: `Incrementally append one object to an existing EntryIR without rewriting the whole project. Returns updated ir + validation.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema.describe('Current EntryIR project'),
+        object: irObjectSchema.describe('Object to append (name must be unique)'),
+      },
+    },
+    async ({ ir, object }) => {
+      try {
+        const result = addObjectValidated(ir as EntryIR, object as EntryIRObject);
+        return textResult({
+          ok: result.validation.valid,
+          ir: result.ir,
+          validation: result.validation,
+        });
+      } catch (err) {
+        return errorResult(
+          JSON.stringify(
+            {
+              ok: false,
+              errors: [err instanceof Error ? err.message : String(err)],
+              hints: ['Fix the object definition or choose a unique name.'],
+            },
+            null,
+            2,
+          ),
+        );
+      }
+    },
+  );
+
+  server.registerTool(
+    'patch_script',
+    {
+      description: `Patch one script thread on a named object (replace / append / prepend blocks). Returns updated ir + validation.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema.describe('Current EntryIR project'),
+        objectName: z.string().describe('Target object name'),
+        threadIndex: z.number().int().min(0).describe('0-based script thread index'),
+        mode: z
+          .enum(['replace', 'append', 'prepend'])
+          .describe('replace=full thread; append/prepend=blocks only'),
+        thread: z.array(irBlockSchema).optional().describe('Required when mode=replace'),
+        blocks: z.array(irBlockSchema).optional().describe('Required when mode=append or prepend'),
+      },
+    },
+    async ({ ir, objectName, threadIndex, mode, thread, blocks }) => {
+      try {
+        const result = patchScriptValidated(ir as EntryIR, {
+          objectName,
+          threadIndex,
+          mode: mode as PatchScriptMode,
+          thread: thread as Thread | undefined,
+          blocks: blocks as EntryIRObject['scripts'][0] | undefined,
+        });
+        return textResult({
+          ok: result.validation.valid,
+          ir: result.ir,
+          validation: result.validation,
+        });
+      } catch (err) {
+        return errorResult(
+          JSON.stringify(
+            {
+              ok: false,
+              errors: [err instanceof Error ? err.message : String(err)],
+              hints: [
+                err instanceof IREditError
+                  ? 'Check objectName, threadIndex, and mode-specific fields.'
+                  : 'Fix the patch and retry.',
+              ],
+            },
+            null,
+            2,
+          ),
+        );
+      }
+    },
+  );
+
+  server.registerTool(
+    'smoke_test_project',
+    {
+      description: `Run structural smoke checks on EntryIR: validate, compile, catalog coverage, scene binding. Use before compile_project in automation loops.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema.describe('EntryIR project to smoke-test'),
+      },
+    },
+    async ({ ir }) => textResult(smokeTestProject(ir as EntryIR)),
   );
 }

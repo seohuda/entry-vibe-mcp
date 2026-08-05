@@ -4,11 +4,15 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as tar from 'tar';
 import { compileProject, CompileError } from '../compiler/compile.ts';
+import { decompileProject } from '../compiler/decompile.ts';
+import { smokeTestProject } from '../compiler/smoke.ts';
+import { unpackEnt } from '../compiler/unpack.ts';
 import { validateProject } from '../compiler/validate.ts';
 import { packEnt, packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
 import { ENTRYBOT_MEDIA_FILES } from '../compiler/skeleton.ts';
 import { mediaDir } from '../src/paths.ts';
 import type { EntryIR } from '../src/types/ir.ts';
+import { addObject, patchScript } from '../server/ir-edit.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FIXTURES = join(ROOT, 'test', 'fixtures');
@@ -679,5 +683,107 @@ describe.skipIf(!existsSync(CATALOG))('host assets/', () => {
         ),
       ),
     ).toBe(true);
+  });
+
+  it('compiles multi-scene IR with background objects', () => {
+    const assets = join(FIXTURES, 'assets');
+    process.env.ENTRY_VIBE_ASSETS_DIR = assets;
+    try {
+      const ir: EntryIR = {
+        scenes: [
+          { name: '시작', background: { path: 'assets/dot.png', name: '배경' } },
+          { name: '게임' },
+        ],
+        objects: [
+          {
+            name: '플레이어',
+            sprite: 'entrybot',
+            scene: '게임',
+            scripts: [[{ type: 'when_run_button_click' }]],
+          },
+        ],
+      };
+      expect(validateProject(ir).valid).toBe(true);
+      const project = compileProject(ir);
+      expect(project.scenes).toHaveLength(2);
+      expect(project.objects.length).toBeGreaterThanOrEqual(2);
+      const bg = project.objects.find((o) => o.lock === true);
+      expect(bg).toBeDefined();
+      expect(bg?.scene).toBe(project.scenes.find((s) => s.name === '시작')?.id);
+    } finally {
+      delete process.env.ENTRY_VIBE_ASSETS_DIR;
+    }
+  });
+
+  it('compiles text box objects', () => {
+    const ir: EntryIR = {
+      objects: [
+        {
+          name: '안내',
+          kind: 'text',
+          text: '게임 시작!',
+          x: 10,
+          y: -100,
+          scripts: [],
+        },
+        {
+          name: '봇',
+          sprite: 'entrybot',
+          scripts: [[{ type: 'when_run_button_click' }]],
+        },
+      ],
+    };
+    expect(validateProject(ir).valid).toBe(true);
+    const project = compileProject(ir);
+    const textObj = project.objects.find((o) => o.objectType === 'textBox');
+    expect(textObj?.name).toBe('안내');
+    expect((textObj?.entity as { text: string }).text).toBe('게임 시작!');
+  });
+
+  it('smoke test passes for valid IR', () => {
+    const ir = loadIR('entrybot-basic.ir.json');
+    const smoke = smokeTestProject(ir);
+    expect(smoke.ok).toBe(true);
+    expect(smoke.checks.some((c) => c.name === 'compile_project' && c.ok)).toBe(true);
+  });
+
+  it('round-trips compile → pack → unpack → decompile for entrybot IR', async () => {
+    const roundtripDir = join(ROOT, 'output', 'test');
+    mkdirSync(roundtripDir, { recursive: true });
+    const ir = loadIR('entrybot-basic.ir.json');
+    const project = compileProject(ir);
+    const entPath = join(roundtripDir, 'roundtrip.ent');
+    const prepared = prepareExport(project);
+    await packPrepared(prepared, { outputPath: entPath });
+
+    const { project: unpacked, media } = await unpackEnt(entPath);
+    const { ir: decoded, warnings } = decompileProject(unpacked, { media });
+    expect(warnings.length).toBeLessThan(5);
+    expect(decoded.objects[0].scripts[0][0].type).toBe('when_run_button_click');
+    expect(decoded.objects[0].scripts[0][1].type).toBe('repeat_basic');
+    expect(validateProject(decoded).valid).toBe(true);
+  });
+
+  it('add_object and patch_script produce valid IR', () => {
+    let ir = loadIR('entrybot-basic.ir.json');
+    ir = addObject(ir, {
+      name: '추가',
+      sprite: 'entrybot',
+      scripts: [[{ type: 'when_run_button_click' }, { type: 'move_direction' }]],
+    });
+    expect(ir.objects).toHaveLength(2);
+    ir = patchScript(ir, {
+      objectName: '추가',
+      threadIndex: 0,
+      mode: 'append',
+      blocks: [{ type: 'bounce_wall' }],
+    });
+    const thread = ir.objects[1].scripts[0];
+    expect(thread.map((b) => b.type)).toEqual([
+      'when_run_button_click',
+      'move_direction',
+      'bounce_wall',
+    ]);
+    expect(validateProject(ir).valid).toBe(true);
   });
 });
