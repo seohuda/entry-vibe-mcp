@@ -1,0 +1,470 @@
+{
+  "category": "hardware_robotori",
+  "blocks": [
+    {
+      "type": "robotori_digitalInput",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "robotori_digitalInput"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "디지털 2번 핀 입력 값",
+              "value": "D2"
+            },
+            {
+              "label": "디지털 3번 핀 입력 값",
+              "value": "D3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_analogInput",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "robotori_analogInput"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "아날로그 0번 핀 입력 값",
+              "value": "A0"
+            },
+            {
+              "label": "아날로그 1번 핀 입력 값",
+              "value": "A1"
+            },
+            {
+              "label": "아날로그 2번 핀 입력 값",
+              "value": "A2"
+            },
+            {
+              "label": "아날로그 3번 핀 입력 값",
+              "value": "A3"
+            },
+            {
+              "label": "아날로그 4번 핀 입력 값",
+              "value": "A4"
+            },
+            {
+              "label": "아날로그 5번 핀 입력 값",
+              "value": "A5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_digitalOutput",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "디지털 핀, 출력 값"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "10번",
+              "value": "D10"
+            },
+            {
+              "label": "11번",
+              "value": "D11"
+            },
+            {
+              "label": "12번",
+              "value": "D12"
+            },
+            {
+              "label": "13번",
+              "value": "D13"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜짐",
+              "value": "ON"
+            },
+            {
+              "label": "꺼짐",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_analogOutput",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "아날로그"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "5번 핀 출력 값",
+              "value": "AOUT5"
+            },
+            {
+              "label": "6번 핀 출력 값",
+              "value": "AOUT6"
+            },
+            {
+              "label": "9번 핀 출력 값",
+              "value": "AOUT9"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_servo",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "서보모터 각도"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_dc_direction",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "DC모터 회전"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "오른쪽",
+              "value": "RIGHT_MOTOR"
+            },
+            {
+              "label": "왼쪽",
+              "value": "LEFT_MOTOR"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "정지",
+              "value": "STOP"
+            },
+            {
+              "label": "시계방향",
+              "value": "CW"
+            },
+            {
+              "label": "반시계방향",
+              "value": "CCW"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_dc_forward",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "robotori_dc_forward"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotori_DC_forward",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.robotori_DC_backward",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_dc_stop",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "robotori_dc_stop"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_temperature_sensor",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "robotori_temperature_sensor"
+      },
+      "params": [
+        {
+          "key": "board",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotori_board_type_1",
+              "value": "AT128"
+            },
+            {
+              "label": "Lang.Blocks.robotori_board_type_2",
+              "value": "TORIANO"
+            }
+          ]
+        },
+        {
+          "key": "pin",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "아날로그 0번 핀 입력 값",
+              "value": "A0"
+            },
+            {
+              "label": "아날로그 1번 핀 입력 값",
+              "value": "A1"
+            },
+            {
+              "label": "아날로그 2번 핀 입력 값",
+              "value": "A2"
+            },
+            {
+              "label": "아날로그 3번 핀 입력 값",
+              "value": "A3"
+            },
+            {
+              "label": "아날로그 4번 핀 입력 값",
+              "value": "A4"
+            },
+            {
+              "label": "아날로그 5번 핀 입력 값",
+              "value": "A5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    },
+    {
+      "type": "robotori_gas_sensor",
+      "category": "hardware_robotori",
+      "label": {
+        "ko": "robotori_gas_sensor"
+      },
+      "params": [
+        {
+          "key": "board",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotori_board_type_1",
+              "value": "AT128"
+            },
+            {
+              "label": "Lang.Blocks.robotori_board_type_2",
+              "value": "TORIANO"
+            }
+          ]
+        },
+        {
+          "key": "pin",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "아날로그 0번 핀 입력 값",
+              "value": "A0"
+            },
+            {
+              "label": "아날로그 1번 핀 입력 값",
+              "value": "A1"
+            },
+            {
+              "label": "아날로그 2번 핀 입력 값",
+              "value": "A2"
+            },
+            {
+              "label": "아날로그 3번 핀 입력 값",
+              "value": "A3"
+            },
+            {
+              "label": "아날로그 4번 핀 입력 값",
+              "value": "A4"
+            },
+            {
+              "label": "아날로그 5번 핀 입력 값",
+              "value": "A5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotori"
+      }
+    }
+  ]
+}

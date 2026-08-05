@@ -1,0 +1,637 @@
+{
+  "category": "hardware_etkit",
+  "blocks": [
+    {
+      "type": "etkit_list_analog_basic",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_list_analog_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_get_analog_pin",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_get_analog_pin"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "etkit_list_analog_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_get_digital_ultrasonic",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_get_digital_ultrasonic"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "5"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_set_digital_pwm",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_set_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "etkit_list_digital_pwm",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "254"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_list_digital_pwm",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_list_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "~3",
+              "value": "3"
+            },
+            {
+              "label": "~5",
+              "value": "5"
+            },
+            {
+              "label": "~6",
+              "value": "6"
+            },
+            {
+              "label": "~9",
+              "value": "9"
+            },
+            {
+              "label": "~10",
+              "value": "10"
+            },
+            {
+              "label": "~11",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_list_digital_lcd",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_list_digital_lcd"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.etkit_lcd_first_line",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.etkit_lcd_seconds_line",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_module_digital_lcd",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_module_digital_lcd"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "etkit_list_digital_lcd",
+            "params": []
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "My Entry!!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_get_dht",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_get_dht"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_get_digital_pin",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_get_digital_pin"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "etkit_list_digital_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_get_digital_pin_bool",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_get_digital_pin_bool"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              4
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_set_digital_pin",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_set_digital_pin"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              5
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_list_digital_basic",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_list_digital_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_set_digital_servo",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_set_digital_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_get_digital_bluetooth",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_get_digital_bluetooth"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_module_digital_bluetooth",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_module_digital_bluetooth"
+      },
+      "params": [
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "My Entry!!"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_module_digital_seg",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_module_digital_seg"
+      },
+      "params": [
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1234"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    },
+    {
+      "type": "etkit_get_digital_segment",
+      "category": "hardware_etkit",
+      "label": {
+        "ko": "etkit_get_digital_segment"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ETkit"
+      }
+    }
+  ]
+}

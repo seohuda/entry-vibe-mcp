@@ -1,0 +1,255 @@
+{
+  "category": "hardware_timbo",
+  "blocks": [
+    {
+      "type": "timbo_queen_play",
+      "category": "hardware_timbo",
+      "label": {
+        "ko": "timbo_queen_play"
+      },
+      "params": [
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "동작",
+              "value": "1"
+            },
+            {
+              "label": "반복동작",
+              "value": "2"
+            },
+            {
+              "label": "한번동작",
+              "value": "3"
+            },
+            {
+              "label": "거꾸로동작",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Timbo"
+      }
+    },
+    {
+      "type": "timbo_queen_stop",
+      "category": "hardware_timbo",
+      "label": {
+        "ko": "timbo_queen_stop"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Timbo"
+      }
+    },
+    {
+      "type": "timbo_motion_play",
+      "category": "hardware_timbo",
+      "label": {
+        "ko": "timbo_motion_play"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "동작",
+              "value": "1"
+            },
+            {
+              "label": "반복동작",
+              "value": "2"
+            },
+            {
+              "label": "한번동작",
+              "value": "3"
+            },
+            {
+              "label": "거꾸로동작",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Timbo"
+      }
+    },
+    {
+      "type": "timbo_motion_stop",
+      "category": "hardware_timbo",
+      "label": {
+        "ko": "timbo_motion_stop"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Timbo"
+      }
+    },
+    {
+      "type": "timbo_check_motion",
+      "category": "hardware_timbo",
+      "label": {
+        "ko": "timbo_check_motion"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Timbo"
+      }
+    },
+    {
+      "type": "timbo_check_queen",
+      "category": "hardware_timbo",
+      "label": {
+        "ko": "timbo_check_queen"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Timbo"
+      }
+    }
+  ]
+}

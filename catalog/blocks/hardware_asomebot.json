@@ -1,0 +1,1200 @@
+{
+  "category": "hardware_asomebot",
+  "blocks": [
+    {
+      "type": "asomebot_toggle_led",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_toggle_led"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_prepare_led",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_prepare_led"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_prepare_duty_led",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_prepare_duty_led"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_led_color",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_led_color"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Red",
+              "value": "r"
+            },
+            {
+              "label": "Green",
+              "value": "g"
+            }
+          ]
+        },
+        {
+          "key": "VALUE2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "On",
+              "value": "on"
+            },
+            {
+              "label": "Off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_led_duty",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_led_duty"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Red",
+              "value": "r"
+            },
+            {
+              "label": "Green",
+              "value": "g"
+            }
+          ]
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              298
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_get_ultrasonic_value",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_get_ultrasonic_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_buzzer_open",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_buzzer_open"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_buzzer_note",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_buzzer_note"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "C4"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.3"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_buzzer_tone",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_buzzer_tone"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "400"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.3"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_buzzer_close",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_buzzer_close"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_align",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_align"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_home",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_home"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_angle",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_angle"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_forward",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_forward"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_backward",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_backward"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_turn_left",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_turn_left"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_turn_right",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_turn_right"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_forward2",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_forward2"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "150"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_backward2",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_backward2"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "150"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_turn_left2",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_turn_left2"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_turn_right2",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_turn_right2"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_mouse",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_mouse"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Left",
+              "value": "1"
+            },
+            {
+              "label": "Right",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_flap",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_flap"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_warigari",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_warigari"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_tock",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_tock"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Left",
+              "value": "1"
+            },
+            {
+              "label": "Right",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_tick_tock",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_tick_tock"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_wiggle",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_wiggle"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_swing2",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_swing2"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_ballet",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_ballet"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_yaho",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_yaho"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_swing",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_swing"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Left",
+              "value": "1"
+            },
+            {
+              "label": "Right",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "asomebot_moonwalk",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "asomebot_moonwalk"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "internet_connect",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "internet_connect"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "SSID"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Password"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "internet_open_ap",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "internet_open_ap"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "SSID"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "internet_open_udp",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "internet_open_udp"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1234"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "internet_udp_msg",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "internet_udp_msg"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    },
+    {
+      "type": "internet_send_msg",
+      "category": "hardware_asomebot",
+      "label": {
+        "ko": "internet_send_msg"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Code"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Message"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AsomeBot"
+      }
+    }
+  ]
+}

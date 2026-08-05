@@ -1,0 +1,686 @@
+{
+  "category": "hardware_iotsmartfarm",
+  "blocks": [
+    {
+      "type": "iotsmartfarm_analogValue",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_analogValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_HUM",
+              "value": "hum"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_HEAT_TEMP",
+              "value": "heatertemp"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_TEMP",
+              "value": "temp"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_SOIL",
+              "value": "soil"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_CDS",
+              "value": "cds"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_stopAll",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_stopAll"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_stopAll",
+              "value": "All"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_stopWindow",
+              "value": "Window"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_stopFan",
+              "value": "Fan"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_stopPump",
+              "value": "Pump"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_stopHeater",
+              "value": "Heater"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_stopCamera",
+              "value": "Cam"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_stopLed",
+              "value": "Led"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_stopDisplay",
+              "value": "Display"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_window",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_window"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_open",
+              "value": "Open"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_close",
+              "value": "Close"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_fan",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_fan"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_on",
+              "value": "On"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_off",
+              "value": "Off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_pump",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_pump"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_on",
+              "value": "On"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_off",
+              "value": "Off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_heater",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_heater"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_on",
+              "value": "On"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_off",
+              "value": "Off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_camera",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_camera"
+      },
+      "params": [
+        {
+          "key": "camVal",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_led",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_led"
+      },
+      "params": [
+        {
+          "key": "IDX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_idx1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_idx2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_idx3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_idx4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "LED_R",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val8",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val9",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val11",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val12",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val13",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val14",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val15",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "LED_G",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val8",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val9",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val11",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val12",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val13",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val14",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val15",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "LED_B",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val8",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val9",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val11",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val12",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val13",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val14",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_led_val15",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_led_num",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_led_num"
+      },
+      "params": [
+        {
+          "key": "LED_IDX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "LED_R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "LED_G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "LED_B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_display",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_display"
+      },
+      "params": [
+        {
+          "key": "MSG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "SmartFarm"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    },
+    {
+      "type": "iotsmartfarm_switch",
+      "category": "hardware_iotsmartfarm",
+      "label": {
+        "ko": "iotsmartfarm_switch"
+      },
+      "params": [
+        {
+          "key": "IDX",
+          "type": "Dropdown",
+          "defaultValue": "switch1",
+          "options": [
+            {
+              "label": "Lang.Blocks.iotsmartfarm_switch_idx1",
+              "value": "switch1"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_switch_idx2",
+              "value": "switch2"
+            },
+            {
+              "label": "Lang.Blocks.iotsmartfarm_switch_idx3",
+              "value": "switch3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "iotsmartfarm"
+      }
+    }
+  ]
+}

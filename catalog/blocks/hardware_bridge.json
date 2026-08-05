@@ -1,0 +1,304 @@
+{
+  "category": "hardware_bridge",
+  "blocks": [
+    {
+      "type": "bridge_get_digital1",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital1"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital2",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital2"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital3",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital3"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital4",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital4"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital5",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital5"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital6",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital6"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital7",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital7"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital8",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital8"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital9",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital9"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital10",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital10"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital11",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital11"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital12",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital12"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    },
+    {
+      "type": "bridge_get_digital13",
+      "category": "hardware_bridge",
+      "label": {
+        "ko": "bridge_get_digital13"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Bridge"
+      }
+    }
+  ]
+}

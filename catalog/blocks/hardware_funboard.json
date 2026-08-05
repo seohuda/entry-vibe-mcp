@@ -1,0 +1,2396 @@
+{
+  "category": "hardware_funboard",
+  "blocks": [
+    {
+      "type": "funboard_list_pushbutton_basic",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_pushbutton_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨강(A)",
+              "value": "1"
+            },
+            {
+              "label": "노랑(B)",
+              "value": "2"
+            },
+            {
+              "label": "초록(C)",
+              "value": "3"
+            },
+            {
+              "label": "파랑(D)",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_touchbutton_basic",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_touchbutton_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨강(A)",
+              "value": "1"
+            },
+            {
+              "label": "노랑(B)",
+              "value": "2"
+            },
+            {
+              "label": "초록(C)",
+              "value": "3"
+            },
+            {
+              "label": "파랑(D)",
+              "value": "4"
+            },
+            {
+              "label": "   E",
+              "value": "5"
+            },
+            {
+              "label": "   F",
+              "value": "6"
+            },
+            {
+              "label": "   G",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_analogsensor_basic",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_analogsensor_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "슬라이드 (막대 조정)",
+              "value": "1"
+            },
+            {
+              "label": "Cds (밝기 감지)",
+              "value": "2"
+            },
+            {
+              "label": "마이크 (소리 감지)",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_2_state_basic",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_2_state_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "작다",
+              "value": "1"
+            },
+            {
+              "label": "크다",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_ledcolor_basic",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_ledcolor_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨강",
+              "value": "1"
+            },
+            {
+              "label": "노랑",
+              "value": "2"
+            },
+            {
+              "label": "초록",
+              "value": "3"
+            },
+            {
+              "label": "파랑",
+              "value": "4"
+            },
+            {
+              "label": "모두",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_ledcolor_pwm_basic",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_ledcolor_pwm_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨강",
+              "value": "1"
+            },
+            {
+              "label": "노랑",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_onoff_basic",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_onoff_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_digital_octave",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_digital_octave"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_digital_tone",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_digital_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_matrix_rows",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_matrix_rows"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_matrix_row_or_column",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_matrix_row_or_column"
+      },
+      "params": [
+        {
+          "key": "WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "줄",
+              "value": "1"
+            },
+            {
+              "label": "칸",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_matrix_scroll_option",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_matrix_scroll_option"
+      },
+      "params": [
+        {
+          "key": "RET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "없음",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽으로",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽으로",
+              "value": "4"
+            },
+            {
+              "label": "위쪽으로",
+              "value": "3"
+            },
+            {
+              "label": "아래쪽으로",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_list_matrix_char",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "funboard_list_matrix_char"
+      },
+      "params": [
+        {
+          "key": "RET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            },
+            {
+              "label": "C",
+              "value": "C"
+            },
+            {
+              "label": "D",
+              "value": "D"
+            },
+            {
+              "label": "E",
+              "value": "E"
+            },
+            {
+              "label": "F",
+              "value": "F"
+            },
+            {
+              "label": "G",
+              "value": "G"
+            },
+            {
+              "label": "H",
+              "value": "H"
+            },
+            {
+              "label": "I",
+              "value": "I"
+            },
+            {
+              "label": "J",
+              "value": "J"
+            },
+            {
+              "label": "K",
+              "value": "K"
+            },
+            {
+              "label": "L",
+              "value": "L"
+            },
+            {
+              "label": "M",
+              "value": "M"
+            },
+            {
+              "label": "N",
+              "value": "N"
+            },
+            {
+              "label": "O",
+              "value": "O"
+            },
+            {
+              "label": "P",
+              "value": "P"
+            },
+            {
+              "label": "Q",
+              "value": "Q"
+            },
+            {
+              "label": "R",
+              "value": "R"
+            },
+            {
+              "label": "S",
+              "value": "S"
+            },
+            {
+              "label": "T",
+              "value": "T"
+            },
+            {
+              "label": "U",
+              "value": "U"
+            },
+            {
+              "label": "V",
+              "value": "V"
+            },
+            {
+              "label": "W",
+              "value": "W"
+            },
+            {
+              "label": "X",
+              "value": "X"
+            },
+            {
+              "label": "Y",
+              "value": "Y"
+            },
+            {
+              "label": "Z",
+              "value": "Z"
+            },
+            {
+              "label": "a",
+              "value": "a"
+            },
+            {
+              "label": "b",
+              "value": "b"
+            },
+            {
+              "label": "c",
+              "value": "c"
+            },
+            {
+              "label": "d",
+              "value": "d"
+            },
+            {
+              "label": "e",
+              "value": "e"
+            },
+            {
+              "label": "f",
+              "value": "f"
+            },
+            {
+              "label": "g",
+              "value": "g"
+            },
+            {
+              "label": "h",
+              "value": "h"
+            },
+            {
+              "label": "i",
+              "value": "i"
+            },
+            {
+              "label": "j",
+              "value": "j"
+            },
+            {
+              "label": "k",
+              "value": "k"
+            },
+            {
+              "label": "l",
+              "value": "l"
+            },
+            {
+              "label": "m",
+              "value": "m"
+            },
+            {
+              "label": "n",
+              "value": "n"
+            },
+            {
+              "label": "o",
+              "value": "o"
+            },
+            {
+              "label": "p",
+              "value": "p"
+            },
+            {
+              "label": "q",
+              "value": "q"
+            },
+            {
+              "label": "r",
+              "value": "r"
+            },
+            {
+              "label": "s",
+              "value": "s"
+            },
+            {
+              "label": "t",
+              "value": "t"
+            },
+            {
+              "label": "u",
+              "value": "u"
+            },
+            {
+              "label": "v",
+              "value": "v"
+            },
+            {
+              "label": "w",
+              "value": "w"
+            },
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            },
+            {
+              "label": "z",
+              "value": "z"
+            },
+            {
+              "label": " ",
+              "value": " "
+            },
+            {
+              "label": "!",
+              "value": "!"
+            },
+            {
+              "label": "?",
+              "value": "?"
+            },
+            {
+              "label": "#",
+              "value": "#"
+            },
+            {
+              "label": "$",
+              "value": "$"
+            },
+            {
+              "label": "%",
+              "value": "%"
+            },
+            {
+              "label": "&",
+              "value": "&"
+            },
+            {
+              "label": "*",
+              "value": "*"
+            },
+            {
+              "label": "+",
+              "value": "+"
+            },
+            {
+              "label": "-",
+              "value": "-"
+            },
+            {
+              "label": "/",
+              "value": "/"
+            },
+            {
+              "label": "~",
+              "value": "~"
+            },
+            {
+              "label": "^",
+              "value": "^"
+            },
+            {
+              "label": "_",
+              "value": "_"
+            },
+            {
+              "label": "@",
+              "value": "@"
+            },
+            {
+              "label": "<",
+              "value": "<"
+            },
+            {
+              "label": ">",
+              "value": ">"
+            },
+            {
+              "label": "=",
+              "value": "="
+            },
+            {
+              "label": "(",
+              "value": "("
+            },
+            {
+              "label": ")",
+              "value": ")"
+            },
+            {
+              "label": "[",
+              "value": "["
+            },
+            {
+              "label": "]",
+              "value": "]"
+            },
+            {
+              "label": "{",
+              "value": "{"
+            },
+            {
+              "label": "}",
+              "value": "}"
+            },
+            {
+              "label": ",",
+              "value": ","
+            },
+            {
+              "label": ".",
+              "value": "."
+            },
+            {
+              "label": ":",
+              "value": ":"
+            },
+            {
+              "label": ";",
+              "value": ";"
+            },
+            {
+              "label": "'",
+              "value": "'"
+            },
+            {
+              "label": "`",
+              "value": "`"
+            },
+            {
+              "label": "\\",
+              "value": "\\"
+            },
+            {
+              "label": "|",
+              "value": "|"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_what_button_pressed",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "버튼 눌림"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_pushbutton_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_what_touch_button_pressed",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "터치됨"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_touchbutton_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_get_digital_button_value",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "버튼 값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_pushbutton_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_get_touch_button_value",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "터치 값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_touchbutton_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_get_number_sensor_value",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_analogsensor_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_get_analog_sensor_2state",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_analogsensor_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_2_state_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_convert_scale",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "값 ~ 에서 ~ 으로 변환값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_analogsensor_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_set_digital_buzzer",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "버저를 옥타브 음 초 연주"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_digital_octave",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_digital_tone",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_buzzer_second",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "버저초 동안"
+      },
+      "params": [
+        {
+          "key": "ONOFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_onoff_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_buzzer_tone_simple",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "음을초 연주하기"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_buzzer_onoff",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "버저"
+      },
+      "params": [
+        {
+          "key": "ONOFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_onoff_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_color_led_onoff",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "색 LED"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_ledcolor_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "ONOFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_onoff_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_color_led_on_pwm",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "색 LED %"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_ledcolor_pwm_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "PERCENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_intensity",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "밝기 %"
+      },
+      "params": [
+        {
+          "key": "PERCENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_scroll_option",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "스크롤 방향"
+      },
+      "params": [
+        {
+          "key": "OPTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_scroll_option",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_scroll_rapid",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "스크롤 속도 %"
+      },
+      "params": [
+        {
+          "key": "PERCENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_onoff",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "모두"
+      },
+      "params": [
+        {
+          "key": "ONOFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_onoff_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_char_display",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "문자표시하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_char",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_string_display",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "문자열표시하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_string_display_scroll",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "문자열표시하기스크롤"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A"
+            ]
+          }
+        },
+        {
+          "key": "SCROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_scroll_option",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_symbol",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "기호 표시하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "♥",
+              "value": "1"
+            },
+            {
+              "label": "♡",
+              "value": "2"
+            },
+            {
+              "label": "↑",
+              "value": "3"
+            },
+            {
+              "label": "↓",
+              "value": "4"
+            },
+            {
+              "label": "←",
+              "value": "5"
+            },
+            {
+              "label": "→",
+              "value": "6"
+            },
+            {
+              "label": "■",
+              "value": "7"
+            },
+            {
+              "label": "◆",
+              "value": "8"
+            },
+            {
+              "label": "●",
+              "value": "9"
+            },
+            {
+              "label": "※",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_num",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "숫자 표시하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_big_eng",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "대문자 표시하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            },
+            {
+              "label": "C",
+              "value": "C"
+            },
+            {
+              "label": "D",
+              "value": "D"
+            },
+            {
+              "label": "E",
+              "value": "E"
+            },
+            {
+              "label": "F",
+              "value": "F"
+            },
+            {
+              "label": "G",
+              "value": "G"
+            },
+            {
+              "label": "H",
+              "value": "H"
+            },
+            {
+              "label": "I",
+              "value": "I"
+            },
+            {
+              "label": "J",
+              "value": "J"
+            },
+            {
+              "label": "K",
+              "value": "K"
+            },
+            {
+              "label": "L",
+              "value": "L"
+            },
+            {
+              "label": "M",
+              "value": "M"
+            },
+            {
+              "label": "N",
+              "value": "N"
+            },
+            {
+              "label": "O",
+              "value": "O"
+            },
+            {
+              "label": "P",
+              "value": "P"
+            },
+            {
+              "label": "Q",
+              "value": "Q"
+            },
+            {
+              "label": "R",
+              "value": "R"
+            },
+            {
+              "label": "S",
+              "value": "S"
+            },
+            {
+              "label": "T",
+              "value": "T"
+            },
+            {
+              "label": "U",
+              "value": "U"
+            },
+            {
+              "label": "V",
+              "value": "V"
+            },
+            {
+              "label": "W",
+              "value": "W"
+            },
+            {
+              "label": "X",
+              "value": "X"
+            },
+            {
+              "label": "Y",
+              "value": "Y"
+            },
+            {
+              "label": "Z",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_small_eng",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "소문자 표시하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "a",
+              "value": "a"
+            },
+            {
+              "label": "b",
+              "value": "b"
+            },
+            {
+              "label": "c",
+              "value": "c"
+            },
+            {
+              "label": "d",
+              "value": "d"
+            },
+            {
+              "label": "e",
+              "value": "e"
+            },
+            {
+              "label": "f",
+              "value": "f"
+            },
+            {
+              "label": "g",
+              "value": "g"
+            },
+            {
+              "label": "h",
+              "value": "h"
+            },
+            {
+              "label": "i",
+              "value": "i"
+            },
+            {
+              "label": "j",
+              "value": "j"
+            },
+            {
+              "label": "k",
+              "value": "k"
+            },
+            {
+              "label": "l",
+              "value": "l"
+            },
+            {
+              "label": "m",
+              "value": "m"
+            },
+            {
+              "label": "n",
+              "value": "n"
+            },
+            {
+              "label": "o",
+              "value": "o"
+            },
+            {
+              "label": "p",
+              "value": "p"
+            },
+            {
+              "label": "q",
+              "value": "q"
+            },
+            {
+              "label": "r",
+              "value": "r"
+            },
+            {
+              "label": "s",
+              "value": "s"
+            },
+            {
+              "label": "t",
+              "value": "t"
+            },
+            {
+              "label": "u",
+              "value": "u"
+            },
+            {
+              "label": "v",
+              "value": "v"
+            },
+            {
+              "label": "w",
+              "value": "w"
+            },
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            },
+            {
+              "label": "z",
+              "value": "z"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_extra_char",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "문자 표시하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "!",
+              "value": "!"
+            },
+            {
+              "label": "?",
+              "value": "?"
+            },
+            {
+              "label": "#",
+              "value": "#"
+            },
+            {
+              "label": "$",
+              "value": "$"
+            },
+            {
+              "label": "%",
+              "value": "%"
+            },
+            {
+              "label": "&",
+              "value": "&"
+            },
+            {
+              "label": "*",
+              "value": "*"
+            },
+            {
+              "label": "+",
+              "value": "+"
+            },
+            {
+              "label": "-",
+              "value": "-"
+            },
+            {
+              "label": "/",
+              "value": "/"
+            },
+            {
+              "label": "~",
+              "value": "~"
+            },
+            {
+              "label": "^",
+              "value": "^"
+            },
+            {
+              "label": "_",
+              "value": "_"
+            },
+            {
+              "label": "@",
+              "value": "@"
+            },
+            {
+              "label": "<",
+              "value": "<"
+            },
+            {
+              "label": ">",
+              "value": ">"
+            },
+            {
+              "label": "=",
+              "value": "="
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_1row",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "줄 표시하기"
+      },
+      "params": [
+        {
+          "key": "WHAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_rows",
+            "params": []
+          }
+        },
+        {
+          "key": "BIT8",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "00000000"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_1column",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "칸 표시하기"
+      },
+      "params": [
+        {
+          "key": "WHAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_rows",
+            "params": []
+          }
+        },
+        {
+          "key": "BIT8",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "00000000"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_1row_1column",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "표시하기"
+      },
+      "params": [
+        {
+          "key": "WHAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_rows",
+            "params": []
+          }
+        },
+        {
+          "key": "HOW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_row_or_column",
+            "params": []
+          }
+        },
+        {
+          "key": "BIT8",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "00000000"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    },
+    {
+      "type": "funboard_dotmatrix_set",
+      "category": "hardware_funboard",
+      "label": {
+        "ko": "줄 칸"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_rows",
+            "params": []
+          }
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_matrix_rows",
+            "params": []
+          }
+        },
+        {
+          "key": "ONOFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "funboard_list_onoff_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "funboard"
+      }
+    }
+  ]
+}

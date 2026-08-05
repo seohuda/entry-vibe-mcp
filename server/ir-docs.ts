@@ -39,7 +39,13 @@ reference them from objects[].pictures (png/svg) and/or objects[].sounds (mp3).
   }]
 
 Omit pictures/sounds to keep the built-in Entrybot costumes and bark.
-Paths must stay under assets/ (no ..). jpg/webp/wav/ogg are not supported in v1.
+Paths must stay under assets/ (no ..). jpg/webp/wav/ogg are not supported.
+
+AI utilize / expansion / hardwareLite: using those catalog blocks automatically
+fills project.aiUtilizeBlocks / expansionBlocks / hardwareLiteBlocks on compile.
+Classic hardware blocks set externalModules. AI learning blocks are in the
+catalog but need a trained model (project.learning) which this compiler does
+not generate yet — they validate/compile into scripts only.
 
 Variables: declare them in "variables", then reference them from a block's
 "VARIABLE" param by NAME — the compiler rewrites the name to the internal

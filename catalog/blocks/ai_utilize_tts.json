@@ -1,0 +1,126 @@
+{
+  "category": "ai_utilize_tts",
+  "blocks": [
+    {
+      "type": "tts_title",
+      "category": "ai_utilize_tts",
+      "label": {
+        "ko": "tts_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "tts"
+      }
+    },
+    {
+      "type": "read_text",
+      "category": "ai_utilize_tts",
+      "label": {
+        "ko": "읽어주기"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "tts"
+      }
+    },
+    {
+      "type": "read_text_wait_with_block",
+      "category": "ai_utilize_tts",
+      "label": {
+        "ko": "읽어주고 기다리기"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "tts"
+      }
+    },
+    {
+      "type": "set_tts_property",
+      "category": "ai_utilize_tts",
+      "label": {
+        "ko": "목소리를 속도 음높이로 설정하기"
+      },
+      "params": [
+        {
+          "key": "SPEAKER",
+          "type": "Unknown"
+        },
+        {
+          "key": "SPEED",
+          "type": "Unknown"
+        },
+        {
+          "key": "PITCH",
+          "type": "Unknown"
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "tts"
+      }
+    }
+  ]
+}

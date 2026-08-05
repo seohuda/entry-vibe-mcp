@@ -1,0 +1,4134 @@
+{
+  "category": "hardware_lite_codewiz_lite",
+  "blocks": [
+    {
+      "type": "CodeWizLite_sensor_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_sensor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_get_sensor",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_get_sensor"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "소리",
+              "value": "SOUND"
+            },
+            {
+              "label": "빛",
+              "value": "LIGHT"
+            },
+            {
+              "label": "거리",
+              "value": "DIST"
+            },
+            {
+              "label": "홀",
+              "value": "HALL"
+            },
+            {
+              "label": "온도",
+              "value": "tempSensor"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_get_gyroSensor",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_get_gyroSensor"
+      },
+      "params": [
+        {
+          "key": "GYRO_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X",
+              "value": "GYRO_X"
+            },
+            {
+              "label": "Y",
+              "value": "GYRO_Y"
+            },
+            {
+              "label": "Z",
+              "value": "GYRO_Z"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_isPushedButton",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_isPushedButton"
+      },
+      "params": [
+        {
+          "key": "SWITCH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "switchButton_26"
+            },
+            {
+              "label": "오른쪽",
+              "value": "switchButton_4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_touchPin",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_touchPin"
+      },
+      "params": [
+        {
+          "key": "SWITCH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "🔆(13)",
+              "value": "touchPin_13"
+            },
+            {
+              "label": "⭕(14)",
+              "value": "touchPin_14"
+            },
+            {
+              "label": "🖐(15)",
+              "value": "touchPin_15"
+            },
+            {
+              "label": "👊(27)",
+              "value": "touchPin_27"
+            },
+            {
+              "label": "🐻(32)",
+              "value": "touchPin_32"
+            },
+            {
+              "label": "❌(33)",
+              "value": "touchPin_33"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_buzzer_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_buzzer_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_default_buzzer",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_default_buzzer"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "0"
+            },
+            {
+              "label": "도#",
+              "value": "1"
+            },
+            {
+              "label": "레",
+              "value": "2"
+            },
+            {
+              "label": "미♭",
+              "value": "3"
+            },
+            {
+              "label": "미",
+              "value": "4"
+            },
+            {
+              "label": "파",
+              "value": "5"
+            },
+            {
+              "label": "파#",
+              "value": "6"
+            },
+            {
+              "label": "솔",
+              "value": "7"
+            },
+            {
+              "label": "솔#",
+              "value": "8"
+            },
+            {
+              "label": "라",
+              "value": "9"
+            },
+            {
+              "label": "시♭",
+              "value": "10"
+            },
+            {
+              "label": "시",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "32",
+              "value": "32"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_init",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_init"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "코드위즈",
+              "value": "23"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_brightness",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_brightness"
+      },
+      "params": [
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_setColor_one",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_setColor_one"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_setColor_one2",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_setColor_one2"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "255"
+        },
+        {
+          "key": "G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "255"
+        },
+        {
+          "key": "B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "255"
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_off_one",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_off_one"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_setColor_all",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_setColor_all"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_setColor_all2",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_setColor_all2"
+      },
+      "params": [
+        {
+          "key": "R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "255"
+        },
+        {
+          "key": "G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "255"
+        },
+        {
+          "key": "B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "255"
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_off_all",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_off_all"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_OnPixelRandomColor",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_OnPixelRandomColor"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_fillRandom",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_fillRandom"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_rotate",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_rotate"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "역방향",
+              "value": "0"
+            },
+            {
+              "label": "정방향",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_shift",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_shift"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "역방향",
+              "value": "0"
+            },
+            {
+              "label": "정방향",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_gradationRGB",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_gradationRGB"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "8"
+        },
+        {
+          "key": "S_COLOR",
+          "type": "Color",
+          "defaultValue": "#ff0000"
+        },
+        {
+          "key": "E_COLOR",
+          "type": "Color",
+          "defaultValue": "#00ff00"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_gradationHSL",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_gradationHSL"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "8"
+        },
+        {
+          "key": "S_COLOR",
+          "type": "Color",
+          "defaultValue": "#ff0000"
+        },
+        {
+          "key": "E_COLOR",
+          "type": "Color",
+          "defaultValue": "#611ca1"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_neopixel_wheeeeeeel",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_neopixel_wheeeeeeel"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_clear",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_mirror",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_mirror"
+      },
+      "params": [
+        {
+          "key": "SWITCH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OFF",
+              "value": "0"
+            },
+            {
+              "label": "ON",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_setSize",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_setSize"
+      },
+      "params": [
+        {
+          "key": "SIZE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 3
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_setPosition",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_setPosition"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_println",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_println"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "Hello, World!!"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_isCollision",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_isCollision"
+      },
+      "params": [
+        {
+          "key": "SWITCH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OFF",
+              "value": "0"
+            },
+            {
+              "label": "ON",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_specialChar",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_specialChar"
+      },
+      "params": [
+        {
+          "key": "CHAR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "♥",
+              "value": "3"
+            },
+            {
+              "label": "◆",
+              "value": "4"
+            },
+            {
+              "label": "♣",
+              "value": "5"
+            },
+            {
+              "label": "♠",
+              "value": "6"
+            },
+            {
+              "label": "♬",
+              "value": "14"
+            },
+            {
+              "label": "▲",
+              "value": "30"
+            },
+            {
+              "label": "▼",
+              "value": "31"
+            },
+            {
+              "label": "😧",
+              "value": "1"
+            },
+            {
+              "label": "😀",
+              "value": "2"
+            },
+            {
+              "label": "♂",
+              "value": "11"
+            },
+            {
+              "label": "♀",
+              "value": "12"
+            },
+            {
+              "label": "↑",
+              "value": "24"
+            },
+            {
+              "label": "↓",
+              "value": "25"
+            },
+            {
+              "label": "→",
+              "value": "26"
+            },
+            {
+              "label": "←",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_setFont",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_setFont"
+      },
+      "params": [
+        {
+          "key": "FONT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Serif",
+              "value": "0"
+            },
+            {
+              "label": "Sans",
+              "value": "1"
+            },
+            {
+              "label": "Mono",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "SIZE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "9",
+              "value": "0"
+            },
+            {
+              "label": "12",
+              "value": "1"
+            },
+            {
+              "label": "18",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_startScroll",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_startScroll"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "→",
+              "value": "0"
+            },
+            {
+              "label": "←",
+              "value": "1"
+            },
+            {
+              "label": "↗",
+              "value": "2"
+            },
+            {
+              "label": "↖",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_stopScroll",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_stopScroll"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_drawPoint",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_drawPoint"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 63
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 31
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_drawLine1",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_drawLine1"
+      },
+      "params": [
+        {
+          "key": "SX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "SY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "EX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "EY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_drawLine2",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_drawLine2"
+      },
+      "params": [
+        {
+          "key": "SX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "SY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "LEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_drawLine3",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_drawLine3"
+      },
+      "params": [
+        {
+          "key": "SX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "SY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "LEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_drawRect",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_drawRect"
+      },
+      "params": [
+        {
+          "key": "SX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "SY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "WIDTH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "HEIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "ISFILL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "비움",
+              "value": "0"
+            },
+            {
+              "label": "채움",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "6",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_drawCircle",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_drawCircle"
+      },
+      "params": [
+        {
+          "key": "RX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "30"
+        },
+        {
+          "key": "RY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "30"
+        },
+        {
+          "key": "RAD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "ISFILL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "비움",
+              "value": "0"
+            },
+            {
+              "label": "채움",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_drawPoligon",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_drawPoligon"
+      },
+      "params": [
+        {
+          "key": "X1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "Y1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "9"
+        },
+        {
+          "key": "X2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "6"
+        },
+        {
+          "key": "Y2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "9"
+        },
+        {
+          "key": "X3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "3"
+        },
+        {
+          "key": "Y3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "ISFILL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "비움",
+              "value": "0"
+            },
+            {
+              "label": "채움",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "8",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OLED_printHG",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OLED_printHG"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "코드위즈 Magic!!"
+        },
+        {
+          "key": "isLB",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "❌",
+              "value": "0"
+            },
+            {
+              "label": "⭕",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DIGITAL_OUTPUT_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DIGITAL_OUTPUT_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DIGITAL_OUTPUT_digitalWrite",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DIGITAL_OUTPUT_digitalWrite"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            },
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LOW",
+              "value": "0"
+            },
+            {
+              "label": "HIGH",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DIGITAL_OUTPUT_pwmWrite",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DIGITAL_OUTPUT_pwmWrite"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            },
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_initOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_initOzEye"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_setModeOfOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_setModeOfOzEye"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1.선 인식",
+              "value": "3"
+            },
+            {
+              "label": "2.색 인식",
+              "value": "4"
+            },
+            {
+              "label": "3.태그 인식",
+              "value": "5"
+            },
+            {
+              "label": "4.이미지 인식",
+              "value": "6"
+            },
+            {
+              "label": "5.사물 인식",
+              "value": "2"
+            },
+            {
+              "label": "6.사물 추적",
+              "value": "1"
+            },
+            {
+              "label": "7.선 + 태그",
+              "value": "7"
+            },
+            {
+              "label": "8.얼굴 인식",
+              "value": "0"
+            },
+            {
+              "label": "9.숫자 인식",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_readOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_readOzEye"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_isLearnedOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_isLearnedOzEye"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_isContainOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_isContainOzEye"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "사각형",
+              "value": "42"
+            },
+            {
+              "label": "화살표",
+              "value": "43"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_getCountLearnedOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_getCountLearnedOzEye"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_hasTypeOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_hasTypeOzEye"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "사각형",
+              "value": "42"
+            },
+            {
+              "label": "화살표",
+              "value": "43"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_getArrowInfoOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_getArrowInfoOzEye"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시작 X좌표",
+              "value": "1"
+            },
+            {
+              "label": "시작 Y좌표",
+              "value": "2"
+            },
+            {
+              "label": "종료 X좌표",
+              "value": "3"
+            },
+            {
+              "label": "종료 Y좌표",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_getBoxInfoOzEye2",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_getBoxInfoOzEye2"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "중심 X좌표",
+              "value": "1"
+            },
+            {
+              "label": "중심 Y좌표",
+              "value": "2"
+            },
+            {
+              "label": "너비",
+              "value": "3"
+            },
+            {
+              "label": "높이",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_getBoxInfoOzEye",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_getBoxInfoOzEye"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ID",
+              "value": "0"
+            },
+            {
+              "label": "중심 X좌표",
+              "value": "1"
+            },
+            {
+              "label": "중심 Y좌표",
+              "value": "2"
+            },
+            {
+              "label": "너비",
+              "value": "3"
+            },
+            {
+              "label": "높이",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_setLightLevel",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_setLightLevel"
+      },
+      "params": [
+        {
+          "key": "Level",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_OzEye_LightOff",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_OzEye_LightOff"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_initHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_initHuskyLens"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_setModeOfHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_setModeOfHuskyLens"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1.FACE_RECOGNITION",
+              "value": "0"
+            },
+            {
+              "label": "2.OBJECT_TRACKING",
+              "value": "1"
+            },
+            {
+              "label": "3.OBJECT_RECOGNITION",
+              "value": "2"
+            },
+            {
+              "label": "4.LINE_TRACKING",
+              "value": "3"
+            },
+            {
+              "label": "5.COLOR_RECOGNITION",
+              "value": "4"
+            },
+            {
+              "label": "6.TAG_RECOGNITION",
+              "value": "5"
+            },
+            {
+              "label": "7.OBJECT_CLASSIFICATION",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_readHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_readHuskyLens"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_isLearnedHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_isLearnedHuskyLens"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_isContainHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_isContainHuskyLens"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "사각형",
+              "value": "42"
+            },
+            {
+              "label": "화살표",
+              "value": "43"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_getCountLearnedHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_getCountLearnedHuskyLens"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_hasTypeHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_hasTypeHuskyLens"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "사각형",
+              "value": "42"
+            },
+            {
+              "label": "화살표",
+              "value": "43"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_getArrowInfoHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_getArrowInfoHuskyLens"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시작 X좌표",
+              "value": "1"
+            },
+            {
+              "label": "시작 Y좌표",
+              "value": "2"
+            },
+            {
+              "label": "종료 X좌표",
+              "value": "3"
+            },
+            {
+              "label": "종료 Y좌표",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_getBoxInfoHuskyLens2",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_getBoxInfoHuskyLens2"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "중심 X좌표",
+              "value": "1"
+            },
+            {
+              "label": "중심 Y좌표",
+              "value": "2"
+            },
+            {
+              "label": "너비",
+              "value": "3"
+            },
+            {
+              "label": "높이",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_getBoxInfoHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_getBoxInfoHuskyLens"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ID",
+              "value": "0"
+            },
+            {
+              "label": "중심 X좌표",
+              "value": "1"
+            },
+            {
+              "label": "중심 Y좌표",
+              "value": "2"
+            },
+            {
+              "label": "너비",
+              "value": "3"
+            },
+            {
+              "label": "높이",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_writeTextHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_writeTextHuskyLens"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 0
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 0
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "CodeWizLite"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_HuskyLens_clearTextHuskyLens",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_HuskyLens_clearTextHuskyLens"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Servo_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Servo_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Servo_setAngle",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Servo_setAngle"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "SCON",
+              "value": "18.0"
+            },
+            {
+              "label": "MCON-18",
+              "value": "18.1"
+            },
+            {
+              "label": "MCON-19",
+              "value": "19"
+            },
+            {
+              "label": "MCON-15",
+              "value": "15"
+            },
+            {
+              "label": "MCON-27",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Servo_menuSpeed",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Servo_menuSpeed"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "SCON",
+              "value": "18.0"
+            },
+            {
+              "label": "MCON-18",
+              "value": "18.1"
+            },
+            {
+              "label": "MCON-19",
+              "value": "19"
+            },
+            {
+              "label": "MCON-15",
+              "value": "15"
+            },
+            {
+              "label": "MCON-27",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빠른",
+              "value": "21"
+            },
+            {
+              "label": "보통",
+              "value": "39"
+            },
+            {
+              "label": "느린",
+              "value": "58"
+            },
+            {
+              "label": "멈춘",
+              "value": "76"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Servo_customSpeed",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Servo_customSpeed"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "SCON",
+              "value": "18.0"
+            },
+            {
+              "label": "MCON-18",
+              "value": "18.1"
+            },
+            {
+              "label": "MCON-19",
+              "value": "19"
+            },
+            {
+              "label": "MCON-15",
+              "value": "15"
+            },
+            {
+              "label": "MCON-27",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Dc_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Dc_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Dc_setCarSpeed",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Dc_setCarSpeed"
+      },
+      "params": [
+        {
+          "key": "L_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "600"
+        },
+        {
+          "key": "R_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "600"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Dc_setValue_Waterpump",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Dc_setValue_Waterpump"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "MOTOR_L",
+              "value": "0"
+            },
+            {
+              "label": "MOTOR_R",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1023"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DotMatrix_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DotMatrix_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DotMatrix_init",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DotMatrix_init"
+      },
+      "params": [
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "PIN1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "PIN2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "PIN3",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DotMatrix_setBrightness",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DotMatrix_setBrightness"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "8"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DotMatrix_printString",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DotMatrix_printString"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "HELLO"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DotMatrix_setLine",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DotMatrix_setLine"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "NUM_LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "2"
+        },
+        {
+          "key": "IS_ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "1"
+            },
+            {
+              "label": "열",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "11111111"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DotMatrix_setDot",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DotMatrix_setDot"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "2"
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "2"
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DotMatrix_clear",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DotMatrix_clear"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DotMatrix_clearAll",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DotMatrix_clearAll"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_ColorSensor_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_ColorSensor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_ColorSensor_isColor",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_ColorSensor_isColor"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨강",
+              "value": "0"
+            },
+            {
+              "label": "초록",
+              "value": "1"
+            },
+            {
+              "label": "파랑",
+              "value": "2"
+            },
+            {
+              "label": "검정",
+              "value": "3"
+            },
+            {
+              "label": "흰색",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_ColorSensor_getColorValue",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_ColorSensor_getColorValue"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨강",
+              "value": "0"
+            },
+            {
+              "label": "초록",
+              "value": "1"
+            },
+            {
+              "label": "파랑",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DHT_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DHT_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DHT_init",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DHT_init"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            },
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_DHT_getValue",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_DHT_getValue"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "℃",
+              "value": "0"
+            },
+            {
+              "label": "℉",
+              "value": "1"
+            },
+            {
+              "label": "습도",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Joystick_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Joystick_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Joystick_setPin",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Joystick_setPin"
+      },
+      "params": [
+        {
+          "key": "PIN_X",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "36",
+              "value": "36"
+            },
+            {
+              "label": "39",
+              "value": "39"
+            }
+          ]
+        },
+        {
+          "key": "PIN_Y",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "36",
+              "value": "36"
+            },
+            {
+              "label": "39",
+              "value": "39"
+            }
+          ]
+        },
+        {
+          "key": "PIN_B",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "RANGE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 12
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Joystick_readAxis",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Joystick_readAxis"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X축",
+              "value": "0"
+            },
+            {
+              "label": "Y축",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_Joystick_readButton",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_Joystick_readButton"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_etcReadSensor_title",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_etcReadSensor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_etcReadSensor_mconRead",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_etcReadSensor_mconRead"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가변저항",
+              "value": "0"
+            },
+            {
+              "label": "워터센서",
+              "value": "1"
+            },
+            {
+              "label": "토양수분센서",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "36",
+              "value": "36"
+            },
+            {
+              "label": "39",
+              "value": "39"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_etcReadSensor_digitalRead",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_etcReadSensor_digitalRead"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "버튼",
+              "value": "0"
+            },
+            {
+              "label": "포토인터럽트",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            },
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    },
+    {
+      "type": "CodeWizLite_etcReadSensor_InfraredThermometerRead",
+      "category": "hardware_lite_codewiz_lite",
+      "label": {
+        "ko": "CodeWizLite_etcReadSensor_InfraredThermometerRead"
+      },
+      "params": [
+        {
+          "key": "IS_M",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "SCON",
+              "value": "0"
+            },
+            {
+              "label": "MCON",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "IS_F",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "℃",
+              "value": "0"
+            },
+            {
+              "label": "℉",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "codewiz_lite"
+      }
+    }
+  ]
+}

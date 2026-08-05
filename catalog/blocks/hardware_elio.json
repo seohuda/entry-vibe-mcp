@@ -1,0 +1,1173 @@
+{
+  "category": "hardware_elio",
+  "blocks": [
+    {
+      "type": "elio_config_block",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_config_block"
+      },
+      "params": [
+        {
+          "key": "SONIC",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "OFF",
+              "value": "0"
+            },
+            {
+              "label": "ON",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "LINE1",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "OFF",
+              "value": "0"
+            },
+            {
+              "label": "ON",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "LINE2",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "OFF",
+              "value": "0"
+            },
+            {
+              "label": "ON",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_io_block",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_io_block"
+      },
+      "params": [
+        {
+          "key": "IO",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_io_all_block",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_io_all_block"
+      },
+      "params": [
+        {
+          "key": "IO1",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "V1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO2",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "V2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO3",
+          "type": "Dropdown",
+          "defaultValue": "2",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "V3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO4",
+          "type": "Dropdown",
+          "defaultValue": "3",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "V4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO5",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "V5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO6",
+          "type": "Dropdown",
+          "defaultValue": "5",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "V6",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "12",
+          "type": "Indicator",
+          "defaultValue": "6"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_dc_block",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_dc_block"
+      },
+      "params": [
+        {
+          "key": "DC1",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "DC1",
+              "value": "0"
+            },
+            {
+              "label": "DC2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "V1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_dc_all_block",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_dc_all_block"
+      },
+      "params": [
+        {
+          "key": "DC1",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "DC1",
+              "value": "0"
+            },
+            {
+              "label": "DC2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "V1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "30"
+        },
+        {
+          "key": "DC2",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "DC1",
+              "value": "0"
+            },
+            {
+              "label": "DC2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "V2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "30"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_servo_block",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_servo_block"
+      },
+      "params": [
+        {
+          "key": "SV1",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "방향1",
+              "value": "0"
+            },
+            {
+              "label": "방향2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "V1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_servo_all_block",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_servo_all_block"
+      },
+      "params": [
+        {
+          "key": "SV1",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "방향1",
+              "value": "0"
+            },
+            {
+              "label": "방향2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "V1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "SV2",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "방향1",
+              "value": "0"
+            },
+            {
+              "label": "방향2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "V2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_all_block",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_all_block"
+      },
+      "params": [
+        {
+          "key": "DC1",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "모터1",
+              "value": "0"
+            },
+            {
+              "label": "모터2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "DC1_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "30"
+        },
+        {
+          "key": "DC2",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "모터1",
+              "value": "0"
+            },
+            {
+              "label": "모터2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "DC2_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "30"
+        },
+        {
+          "key": "SV1",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "방향1",
+              "value": "0"
+            },
+            {
+              "label": "방향2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SV1_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "30"
+        },
+        {
+          "key": "SV2",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "방향1",
+              "value": "0"
+            },
+            {
+              "label": "방향2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SV2_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "30"
+        },
+        {
+          "key": "V3",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "V3_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "V5",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "V5_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO1",
+          "type": "Dropdown",
+          "defaultValue": "2",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "IO1_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO2",
+          "type": "Dropdown",
+          "defaultValue": "3",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "IO2_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO3",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "IO3_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "IO4",
+          "type": "Dropdown",
+          "defaultValue": "5",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "IO4_V",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "100"
+        },
+        {
+          "key": "20",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_dc_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_dc_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "DC1",
+              "value": "0"
+            },
+            {
+              "label": "DC2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_servo_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_servo_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "방향1",
+              "value": "0"
+            },
+            {
+              "label": "방향2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_io_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_io_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "3V",
+              "value": "0"
+            },
+            {
+              "label": "5V",
+              "value": "1"
+            },
+            {
+              "label": "IO1",
+              "value": "2"
+            },
+            {
+              "label": "IO2",
+              "value": "3"
+            },
+            {
+              "label": "IO3",
+              "value": "4"
+            },
+            {
+              "label": "IO4",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_distance_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_distance_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_line1_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_line1_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_line2_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_line2_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_temperature_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_temperature_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_humidity_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_humidity_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    },
+    {
+      "type": "elio_water_value",
+      "category": "hardware_elio",
+      "label": {
+        "ko": "elio_water_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "TextInput"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "elio"
+      }
+    }
+  ]
+}

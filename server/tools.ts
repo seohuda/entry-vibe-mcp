@@ -120,7 +120,7 @@ export function registerTools(server: McpServer): void {
   server.registerTool(
     'list_categories',
     {
-      description: `List Entry block categories available in the v1 catalog (AI/hardware excluded).\n\n${IR_SCHEMA_DOC}`,
+      description: `List Entry block categories in the catalog (core, AI utilize/learning, expansion, hardware, hardwareLite).\n\n${IR_SCHEMA_DOC}`,
     },
     async () => textResult({ categories: listCategories() }),
   );
@@ -134,7 +134,7 @@ export function registerTools(server: McpServer): void {
         category: z
           .string()
           .optional()
-          .describe('Optional category filter: start, moving, flow, looks, ...'),
+          .describe('Optional category filter: start, moving, flow, ai_utilize_tts, hardware_arduino, ...'),
         limit: z.number().int().min(1).max(50).optional().describe('Max results (default 20)'),
       },
     },

@@ -1,0 +1,1753 @@
+{
+  "category": "hardware_codeino",
+  "blocks": [
+    {
+      "type": "CODEino_get_sensor_number",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_get_sensor_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "A0"
+            },
+            {
+              "label": "1",
+              "value": "A1"
+            },
+            {
+              "label": "2",
+              "value": "A2"
+            },
+            {
+              "label": "3",
+              "value": "A3"
+            },
+            {
+              "label": "4",
+              "value": "A4"
+            },
+            {
+              "label": "5",
+              "value": "A5"
+            },
+            {
+              "label": "6",
+              "value": "A6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_named_sensor_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "소리",
+              "value": "0"
+            },
+            {
+              "label": "빛",
+              "value": "1"
+            },
+            {
+              "label": "슬라이더",
+              "value": "2"
+            },
+            {
+              "label": "저항-A",
+              "value": "3"
+            },
+            {
+              "label": "저항-B",
+              "value": "4"
+            },
+            {
+              "label": "저항-C",
+              "value": "5"
+            },
+            {
+              "label": "저항-D",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_sound_status",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "소리센서"
+      },
+      "params": [
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "소리큼",
+              "value": "GREAT"
+            },
+            {
+              "label": "소리작음",
+              "value": "SMALL"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_light_status",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "빛센서"
+      },
+      "params": [
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "밝음",
+              "value": "BRIGHT"
+            },
+            {
+              "label": "어두움",
+              "value": "DARK"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_is_button_pressed",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "보드의"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "버튼누름",
+              "value": "4"
+            },
+            {
+              "label": "A 연결됨",
+              "value": "17"
+            },
+            {
+              "label": "B 연결됨",
+              "value": "18"
+            },
+            {
+              "label": "C 연결됨",
+              "value": "19"
+            },
+            {
+              "label": "D 연결됨",
+              "value": "20"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_accelerometer_direction",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "3축 가속도센서"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 기울임",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽 기울임",
+              "value": "RIGHT"
+            },
+            {
+              "label": "위쪽 기울임",
+              "value": "FRONT"
+            },
+            {
+              "label": "아래쪽 기울임",
+              "value": "REAR"
+            },
+            {
+              "label": "뒤집힘",
+              "value": "REVERSE"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_accelerometer_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "3축 가속도센서 축의 센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X",
+              "value": "3"
+            },
+            {
+              "label": "Y",
+              "value": "4"
+            },
+            {
+              "label": "Z",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_analog_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "아날로그 센서의 값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_digital_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "디지털 핀의 값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "accept": "string",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_set_digital_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "디지털 핀의"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "accept": "string",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "255",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "255"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_set_pwm_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "디지털 번 핀을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_pwm_port_number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_convert_scale",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "값의 범위를 ~ 에서 ~ (으)로 바꾼값"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "CODEino_get_analog_value",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_set_rgb_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "컬러 LED의 색상을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨강",
+              "value": "17"
+            },
+            {
+              "label": "초록",
+              "value": "18"
+            },
+            {
+              "label": "파랑",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_set_rgb_add_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "컬러 LED의 색상에 만큼 더하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "빨강",
+              "value": "17"
+            },
+            {
+              "label": "초록",
+              "value": "18"
+            },
+            {
+              "label": "파랑",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_rgb_set_color",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "컬러 LED의 색상을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_set_rgb_off",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "컬러 LED 끄기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_set__led_by_rgb",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "컬러 LED 색상을 빨강 초록 파랑 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "rValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "gValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "bValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_led_by_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "컬러 LED 켜기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_number_sensor_value",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "아날로그 번 센서값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_toggle_led",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "디지털 번 핀"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_toggle_pwm",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "디지털 번 핀을 (으)로 정하기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_default_neopixel_on",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_default_neopixel_on"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_default_neopixel_off",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_default_neopixel_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_default_neopixel_setBrightness",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_default_neopixel_setBrightness"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "22"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_default_buzzer",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_default_buzzer"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "CODEino_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "CODEino_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_custom_buzzer",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_custom_buzzer"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "accept": "string",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "CODEino_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "CODEino_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_tone_list",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_octave_list",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_custom_neopixel_on",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_custom_neopixel_on"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "accept": "string",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_custom_neopixel_off",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_custom_neopixel_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_custom_neopixel_setBrightness",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_custom_neopixel_setBrightness"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "22"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_custom_neopixel_set_led_color",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_custom_neopixel_set_led_color"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "accept": "string",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            },
+            {
+              "label": "13",
+              "value": "12"
+            },
+            {
+              "label": "14",
+              "value": "13"
+            },
+            {
+              "label": "15",
+              "value": "14"
+            },
+            {
+              "label": "16",
+              "value": "15"
+            },
+            {
+              "label": "17",
+              "value": "16"
+            },
+            {
+              "label": "18",
+              "value": "17"
+            },
+            {
+              "label": "19",
+              "value": "18"
+            },
+            {
+              "label": "20",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_custom_neopixel_set_led_off",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_custom_neopixel_set_led_off"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_set_servo",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "accept": "string",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    },
+    {
+      "type": "CODEino_get_ultrasonic",
+      "category": "hardware_codeino",
+      "label": {
+        "ko": "CODEino_get_ultrasonic"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Dropdown",
+          "accept": "string",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "PORT2",
+          "type": "Dropdown",
+          "accept": "string",
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CODEino"
+      }
+    }
+  ]
+}

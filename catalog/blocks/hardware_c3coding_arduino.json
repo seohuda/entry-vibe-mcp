@@ -1,0 +1,238 @@
+{
+  "category": "hardware_c3coding_arduino",
+  "blocks": [
+    {
+      "type": "c3coding_arduino_analog_list",
+      "category": "hardware_c3coding_arduino",
+      "label": {
+        "ko": "c3coding_arduino_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "c3coding_arduino"
+      }
+    },
+    {
+      "type": "c3coding_arduino_get_analog_value",
+      "category": "hardware_c3coding_arduino",
+      "label": {
+        "ko": "c3coding_arduino_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "c3coding_arduino_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "c3coding_arduino"
+      }
+    },
+    {
+      "type": "c3coding_arduino_get_digital",
+      "category": "hardware_c3coding_arduino",
+      "label": {
+        "ko": "c3coding_arduino_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              2
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "c3coding_arduino"
+      }
+    },
+    {
+      "type": "c3coding_arduino_toggle_led",
+      "category": "hardware_c3coding_arduino",
+      "label": {
+        "ko": "c3coding_arduino_toggle_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              3
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "c3coding_arduino"
+      }
+    },
+    {
+      "type": "c3coding_arduino_digital_pwm",
+      "category": "hardware_c3coding_arduino",
+      "label": {
+        "ko": "c3coding_arduino_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_pwm_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "c3coding_arduino"
+      }
+    },
+    {
+      "type": "c3coding_arduino_set_servo",
+      "category": "hardware_c3coding_arduino",
+      "label": {
+        "ko": "c3coding_arduino_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "c3coding_arduino"
+      }
+    }
+  ]
+}

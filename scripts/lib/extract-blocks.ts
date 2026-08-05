@@ -12,7 +12,7 @@ import {
   type LangMaps,
 } from './lang.ts';
 
-const HAT_SKELETONS = new Set(['basic_event']);
+const HAT_SKELETONS = new Set(['basic_event', 'basic_create', 'basic_create_value']);
 
 /**
  * Skeletons that are not placeable blocks and must stay out of the catalog:
@@ -241,41 +241,73 @@ function extractBlock(
     params,
     statementSlots,
     statementKeys,
-    isHat: skeleton ? HAT_SKELETONS.has(skeleton) || Boolean(getProp(blockObj, 'event')) : false,
+    isHat: Boolean(skeleton && HAT_SKELETONS.has(skeleton)),
     skeleton,
   };
 }
 
-/** Find the object literal returned by getBlocks(). */
+function takeFirstObjectReturn(
+  path: NodePath<t.Function>,
+  setFound: (obj: t.ObjectExpression) => void,
+): void {
+  path.traverse({
+    Function(inner: NodePath<t.Function>) {
+      // Don't look inside nested functions (helpers inside getBlocks).
+      if (inner.node !== path.node) inner.skip();
+    },
+    ReturnStatement(retPath: NodePath<t.ReturnStatement>) {
+      if (retPath.node.argument && t.isObjectExpression(retPath.node.argument)) {
+        setFound(retPath.node.argument);
+        retPath.stop();
+      }
+    },
+  });
+}
+
+/**
+ * Find the object literal returned by getBlocks().
+ *
+ * Core categories use `getBlocks() { return {…} }` on a plain object.
+ * AI utilize / expansion / hardware assign
+ * `Entry.X.getBlocks = function () { return {…}; }` instead.
+ */
 function findGetBlocksReturnObject(ast: t.File): t.ObjectExpression | null {
   let found: t.ObjectExpression | null = null;
+  const setFound = (obj: t.ObjectExpression) => {
+    if (!found) found = obj;
+  };
 
   traverse(ast, {
     ObjectMethod(path: NodePath<t.ObjectMethod>) {
+      if (found) return;
       if (!t.isIdentifier(path.node.key, { name: 'getBlocks' })) return;
-      path.traverse({
-        ReturnStatement(retPath: NodePath<t.ReturnStatement>) {
-          // Only the outermost return of getBlocks
-          if (retPath.node.argument && t.isObjectExpression(retPath.node.argument)) {
-            // Prefer the first ObjectExpression return that looks like a block map
-            if (!found) found = retPath.node.argument;
-          }
-        },
-      });
+      takeFirstObjectReturn(path as NodePath<t.Function>, setFound);
+      path.skip();
+    },
+    ClassMethod(path: NodePath<t.ClassMethod>) {
+      if (found) return;
+      if (!t.isIdentifier(path.node.key, { name: 'getBlocks' })) return;
+      takeFirstObjectReturn(path as NodePath<t.Function>, setFound);
       path.skip();
     },
     ObjectProperty(path: NodePath<t.ObjectProperty>) {
+      if (found) return;
       if (!t.isIdentifier(path.node.key, { name: 'getBlocks' })) return;
       if (!t.isFunctionExpression(path.node.value) && !t.isArrowFunctionExpression(path.node.value)) {
         return;
       }
-      path.traverse({
-        ReturnStatement(retPath: NodePath<t.ReturnStatement>) {
-          if (retPath.node.argument && t.isObjectExpression(retPath.node.argument)) {
-            if (!found) found = retPath.node.argument;
-          }
-        },
-      });
+      const fnPath = path.get('value') as NodePath<t.Function>;
+      takeFirstObjectReturn(fnPath, setFound);
+      path.skip();
+    },
+    AssignmentExpression(path: NodePath<t.AssignmentExpression>) {
+      if (found) return;
+      const { left, right } = path.node;
+      if (!t.isMemberExpression(left) || left.computed) return;
+      if (!t.isIdentifier(left.property, { name: 'getBlocks' })) return;
+      if (!t.isFunctionExpression(right) && !t.isArrowFunctionExpression(right)) return;
+      const fnPath = path.get('right') as NodePath<t.Function>;
+      takeFirstObjectReturn(fnPath, setFound);
       path.skip();
     },
   });

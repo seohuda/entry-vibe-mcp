@@ -1,0 +1,457 @@
+{
+  "category": "hardware_ev3",
+  "blocks": [
+    {
+      "type": "ev3_color_sensor",
+      "category": "hardware_ev3",
+      "label": {
+        "ko": "의 값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "RGB",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "RGB",
+              "value": "RGB"
+            },
+            {
+              "label": "R",
+              "value": "R"
+            },
+            {
+              "label": "G",
+              "value": "G"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "EV3"
+      }
+    },
+    {
+      "type": "ev3_get_sensor_value",
+      "category": "hardware_ev3",
+      "label": {
+        "ko": "의 값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "EV3"
+      }
+    },
+    {
+      "type": "ev3_motor_degrees",
+      "category": "hardware_ev3",
+      "label": {
+        "ko": "의 값을 으로 도 만큼 회전"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            },
+            {
+              "label": "C",
+              "value": "C"
+            },
+            {
+              "label": "D",
+              "value": "D"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계",
+              "value": "CW"
+            },
+            {
+              "label": "반시계",
+              "value": "CCW"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "angle",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "EV3"
+      }
+    },
+    {
+      "type": "ev3_motor_power",
+      "category": "hardware_ev3",
+      "label": {
+        "ko": "의 값을 으로 출력"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            },
+            {
+              "label": "C",
+              "value": "C"
+            },
+            {
+              "label": "D",
+              "value": "D"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "EV3"
+      }
+    },
+    {
+      "type": "ev3_motor_power_on_time",
+      "category": "hardware_ev3",
+      "label": {
+        "ko": "의 값을 초 동안 으로 출력"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            },
+            {
+              "label": "C",
+              "value": "C"
+            },
+            {
+              "label": "D",
+              "value": "D"
+            }
+          ]
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "EV3"
+      }
+    },
+    {
+      "type": "ev3_touch_sensor",
+      "category": "hardware_ev3",
+      "label": {
+        "ko": "의 터치센서가 작동되었는가?"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "EV3"
+      }
+    },
+    {
+      "type": "ev3_button_pressed",
+      "category": "hardware_ev3",
+      "label": {
+        "ko": "ev3_button_pressed"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "위",
+              "value": "UP"
+            },
+            {
+              "label": "아래",
+              "value": "DOWN"
+            },
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "가운데",
+              "value": "ENTER"
+            },
+            {
+              "label": "뒤로",
+              "value": "BACK"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "EV3"
+      }
+    },
+    {
+      "type": "ev3_status_led",
+      "category": "hardware_ev3",
+      "label": {
+        "ko": "ev3_status_led"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "주황",
+              "value": "ORANGE"
+            },
+            {
+              "label": "끄기",
+              "value": "OFF"
+            },
+            {
+              "label": "초록",
+              "value": "GREEN"
+            },
+            {
+              "label": "빨강",
+              "value": "RED"
+            },
+            {
+              "label": "초록 깜박임",
+              "value": "GREEN_FLASH"
+            },
+            {
+              "label": "빨강 깜박임",
+              "value": "RED_FLASH"
+            },
+            {
+              "label": "주황 깜박임",
+              "value": "ORANGE_FLASH"
+            },
+            {
+              "label": "초록 진동",
+              "value": "GREEN_PULSE"
+            },
+            {
+              "label": "빨강 진동",
+              "value": "RED_PULSE"
+            },
+            {
+              "label": "주황 진동",
+              "value": "ORANGE_PULSE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "EV3"
+      }
+    }
+  ]
+}

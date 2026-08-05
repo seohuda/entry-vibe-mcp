@@ -1,0 +1,191 @@
+{
+  "category": "hardware_creamo",
+  "blocks": [
+    {
+      "type": "creamo_get_number_sensor_value",
+      "category": "hardware_creamo",
+      "label": {
+        "ko": "가변저항_블록 번 센서값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "creamo"
+      }
+    },
+    {
+      "type": "creamo_get_port_number",
+      "category": "hardware_creamo",
+      "label": {
+        "ko": "creamo_get_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "creamo"
+      }
+    },
+    {
+      "type": "creamo_toggle_led",
+      "category": "hardware_creamo",
+      "label": {
+        "ko": "LED_블록 번 핀"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "creamo"
+      }
+    },
+    {
+      "type": "creamo_toggle_motor",
+      "category": "hardware_creamo",
+      "label": {
+        "ko": "Motor_블록 번 핀"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "creamo"
+      }
+    },
+    {
+      "type": "creamo_motor_port_number",
+      "category": "hardware_creamo",
+      "label": {
+        "ko": "creamo_motor_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "creamo"
+      }
+    },
+    {
+      "type": "creamo_toggle_pwm",
+      "category": "hardware_creamo",
+      "label": {
+        "ko": "디지털 번 핀을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "creamo_get_pwm_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "255"
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "creamo"
+      }
+    },
+    {
+      "type": "creamo_get_pwm_port_number",
+      "category": "hardware_creamo",
+      "label": {
+        "ko": "creamo_get_pwm_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "creamo"
+      }
+    }
+  ]
+}

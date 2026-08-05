@@ -1,0 +1,272 @@
+{
+  "category": "hardware_kingcoding",
+  "blocks": [
+    {
+      "type": "kingcoding_set_motor",
+      "category": "hardware_kingcoding",
+      "label": {
+        "ko": "kingcoding_set_motor"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1번 정회전",
+              "value": "1"
+            },
+            {
+              "label": "1번 역회전",
+              "value": "2"
+            },
+            {
+              "label": "1번 정지",
+              "value": "3"
+            },
+            {
+              "label": "2번 정회전",
+              "value": "4"
+            },
+            {
+              "label": "2번 역회전",
+              "value": "5"
+            },
+            {
+              "label": "2번 정지",
+              "value": "6"
+            },
+            {
+              "label": "1,2번 정회전",
+              "value": "7"
+            },
+            {
+              "label": "1,2번 역회전",
+              "value": "8"
+            },
+            {
+              "label": "1번 정회전, 2번 역회전",
+              "value": "9"
+            },
+            {
+              "label": "1번 역회전, 2번 정회전",
+              "value": "10"
+            },
+            {
+              "label": "모든 모터 정지",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kingcoding"
+      }
+    },
+    {
+      "type": "kingcoding_set_led",
+      "category": "hardware_kingcoding",
+      "label": {
+        "ko": "kingcoding_set_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "적색 LED 켜기",
+              "value": "1"
+            },
+            {
+              "label": "청색 LED 켜기",
+              "value": "2"
+            },
+            {
+              "label": "녹색 LED 켜기",
+              "value": "3"
+            },
+            {
+              "label": "주황색 LED 켜기",
+              "value": "4"
+            },
+            {
+              "label": "보라색 LED 켜기",
+              "value": "5"
+            },
+            {
+              "label": "하늘색 LED 켜기",
+              "value": "6"
+            },
+            {
+              "label": "백색 LED 켜기",
+              "value": "7"
+            },
+            {
+              "label": "LED 끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kingcoding"
+      }
+    },
+    {
+      "type": "kingcoding_set_buzzer",
+      "category": "hardware_kingcoding",
+      "label": {
+        "ko": "kingcoding_set_buzzer"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "낮은음",
+              "value": "1"
+            },
+            {
+              "label": "중간음",
+              "value": "2"
+            },
+            {
+              "label": "높은음",
+              "value": "3"
+            },
+            {
+              "label": "버저 끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kingcoding"
+      }
+    },
+    {
+      "type": "kingcoding_get_number_sensor_1_value",
+      "category": "hardware_kingcoding",
+      "label": {
+        "ko": "kingcoding_get_number_sensor_1_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kingcoding"
+      }
+    },
+    {
+      "type": "kingcoding_get_number_sensor_2_value",
+      "category": "hardware_kingcoding",
+      "label": {
+        "ko": "kingcoding_get_number_sensor_2_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kingcoding"
+      }
+    },
+    {
+      "type": "kingcoding_get_digital_1_value",
+      "category": "hardware_kingcoding",
+      "label": {
+        "ko": "kingcoding_get_digital_1_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kingcoding"
+      }
+    },
+    {
+      "type": "kingcoding_get_digital_2_value",
+      "category": "hardware_kingcoding",
+      "label": {
+        "ko": "kingcoding_get_digital_2_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kingcoding"
+      }
+    }
+  ]
+}

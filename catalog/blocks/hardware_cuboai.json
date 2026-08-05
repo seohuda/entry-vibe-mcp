@@ -1,0 +1,2315 @@
+{
+  "category": "hardware_cuboai",
+  "blocks": [
+    {
+      "type": "cuboai_get_iot_title",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_iot_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_set_digital_value",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_set_digital_value"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_digital_out_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_highlow_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_digital_value",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_digital_value"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_digital_in_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_analog_value",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_digital_in_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_set_motor1_speed",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_set_motor1_speed"
+      },
+      "params": [
+        {
+          "key": "l1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_motor_speed_list",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "r1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_motor_speed_list",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_set_motor2_speed",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_set_motor2_speed"
+      },
+      "params": [
+        {
+          "key": "l2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_motor_speed_list",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "r2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_motor_speed_list",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_set_motor_speed",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_set_motor_speed"
+      },
+      "params": [
+        {
+          "key": "l1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 100
+        },
+        {
+          "key": "l2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 100
+        },
+        {
+          "key": "r1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 100
+        },
+        {
+          "key": "r2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 100
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_set_servo_motor",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_set_servo_motor"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_servo_out_list",
+            "params": [
+              3
+            ]
+          }
+        },
+        {
+          "key": "angle",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "speed",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_stop_motor",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_stop_motor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_set_keyboard_value",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_set_keyboard_value"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_keyboard_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_remote_value",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_remote_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_save_title",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_save_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_save_start",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_save_start"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_save_list",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_save_end",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_save_end"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_cond_title",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_cond_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_if_start",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_if_start"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_else_start",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_else_start"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_else_end",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_else_end"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_if_end",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_if_end"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_loop_title",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_loop_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_loop_start",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_loop_start"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_loop_end",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_loop_end"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_loop_cnt_start",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_loop_cnt_start"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 0
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_loop_cnt_end",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_loop_cnt_end"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_loop_delay_sec",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_loop_delay_sec"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 0
+        },
+        {
+          "key": "type",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_delay_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_loop_break_continue",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_loop_break_continue"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_loop_break_list",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_jgmt_title",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_jgmt_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_jgmt_logic",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_jgmt_logic"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": null
+        },
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_logic_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Block",
+          "accept": "boolean",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_jgmt_sign",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_jgmt_sign"
+      },
+      "params": [
+        {
+          "key": "left",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "jgmt",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_jgmt_list",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "right",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_value_title",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_value_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_write_variable",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_write_variable"
+      },
+      "params": [
+        {
+          "key": "variable",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_variable_list",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_set_variable",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_set_variable"
+      },
+      "params": [
+        {
+          "key": "variable",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_variable_list",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "calc",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_calc_list",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_read_variable",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_read_variable"
+      },
+      "params": [
+        {
+          "key": "variable",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_variable_list",
+            "params": [
+              0
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_flow_remote_value",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_flow_remote_value"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_block_remocon_list",
+            "params": [
+              34
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_get_command_title",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_get_command_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_digit_output",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_digit_output"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_digital_out_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_highlow_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_digit_input",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_digit_input"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_digital_in_list",
+            "params": [
+              1
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_analog_input",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_analog_input"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_digital_in_list",
+            "params": [
+              1
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_dc_motor_1",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_dc_motor_1"
+      },
+      "params": [
+        {
+          "key": "l1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_motor_speed_list",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "r1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_motor_speed_list",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_dc_motor_1_",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_dc_motor_1_"
+      },
+      "params": [
+        {
+          "key": "l1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "r1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_dc_motor_2",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_dc_motor_2"
+      },
+      "params": [
+        {
+          "key": "l2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_motor_speed_list",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "r2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_motor_speed_list",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_dc_motor_2_",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_dc_motor_2_"
+      },
+      "params": [
+        {
+          "key": "l2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "r2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_dc_motor_speed",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_dc_motor_speed"
+      },
+      "params": [
+        {
+          "key": "l1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "l2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "r1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "r2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_servo_motor",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_servo_motor"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "cuboai_servo_out_list",
+            "params": [
+              3
+            ]
+          }
+        },
+        {
+          "key": "angle",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "speed",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_dc_motor_off",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_dc_motor_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_iotkit_read_remote",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_iotkit_read_remote"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_digital_out_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_digital_out_list"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "1"
+            },
+            {
+              "label": "OUT2",
+              "value": "2"
+            },
+            {
+              "label": "OUT3",
+              "value": "3"
+            },
+            {
+              "label": "OUT4",
+              "value": "4"
+            },
+            {
+              "label": "OUT5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_digital_in_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_digital_in_list"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "1"
+            },
+            {
+              "label": "IN2",
+              "value": "2"
+            },
+            {
+              "label": "IN3",
+              "value": "3"
+            },
+            {
+              "label": "IN4",
+              "value": "4"
+            },
+            {
+              "label": "IN5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_highlow_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_highlow_list"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_servo_out_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_servo_out_list"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT3",
+              "value": "3"
+            },
+            {
+              "label": "OUT4",
+              "value": "4"
+            },
+            {
+              "label": "OUT5",
+              "value": "5"
+            },
+            {
+              "label": "OUT6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_keyboard_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_keyboard_list"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "DropdownExtra",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "space",
+              "value": "32"
+            },
+            {
+              "label": "enter",
+              "value": "13"
+            },
+            {
+              "label": "↑",
+              "value": "9"
+            },
+            {
+              "label": "↓",
+              "value": "10"
+            },
+            {
+              "label": "←",
+              "value": "11"
+            },
+            {
+              "label": "→",
+              "value": "12"
+            },
+            {
+              "label": "a",
+              "value": "97"
+            },
+            {
+              "label": "b",
+              "value": "98"
+            },
+            {
+              "label": "c",
+              "value": "99"
+            },
+            {
+              "label": "d",
+              "value": "100"
+            },
+            {
+              "label": "e",
+              "value": "101"
+            },
+            {
+              "label": "f",
+              "value": "102"
+            },
+            {
+              "label": "g",
+              "value": "103"
+            },
+            {
+              "label": "h",
+              "value": "104"
+            },
+            {
+              "label": "i",
+              "value": "105"
+            },
+            {
+              "label": "j",
+              "value": "106"
+            },
+            {
+              "label": "k",
+              "value": "107"
+            },
+            {
+              "label": "l",
+              "value": "108"
+            },
+            {
+              "label": "m",
+              "value": "109"
+            },
+            {
+              "label": "n",
+              "value": "110"
+            },
+            {
+              "label": "o",
+              "value": "111"
+            },
+            {
+              "label": "p",
+              "value": "112"
+            },
+            {
+              "label": "q",
+              "value": "113"
+            },
+            {
+              "label": "r",
+              "value": "114"
+            },
+            {
+              "label": "s",
+              "value": "115"
+            },
+            {
+              "label": "t",
+              "value": "116"
+            },
+            {
+              "label": "u",
+              "value": "117"
+            },
+            {
+              "label": "v",
+              "value": "118"
+            },
+            {
+              "label": "w",
+              "value": "119"
+            },
+            {
+              "label": "x",
+              "value": "120"
+            },
+            {
+              "label": "y",
+              "value": "121"
+            },
+            {
+              "label": "z",
+              "value": "122"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_motor_speed_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_motor_speed_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "100",
+              "value": "100"
+            },
+            {
+              "label": "90",
+              "value": "90"
+            },
+            {
+              "label": "80",
+              "value": "80"
+            },
+            {
+              "label": "70",
+              "value": "70"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "40",
+              "value": "40"
+            },
+            {
+              "label": "30",
+              "value": "30"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "-10",
+              "value": "-10"
+            },
+            {
+              "label": "-20",
+              "value": "-20"
+            },
+            {
+              "label": "-30",
+              "value": "-30"
+            },
+            {
+              "label": "-40",
+              "value": "-40"
+            },
+            {
+              "label": "-50",
+              "value": "-50"
+            },
+            {
+              "label": "-60",
+              "value": "-60"
+            },
+            {
+              "label": "-70",
+              "value": "-70"
+            },
+            {
+              "label": "-80",
+              "value": "-80"
+            },
+            {
+              "label": "-90",
+              "value": "-90"
+            },
+            {
+              "label": "-100",
+              "value": "-100"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_save_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_save_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "저장소1",
+              "value": "0"
+            },
+            {
+              "label": "저장소2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_variable_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_variable_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "변수1",
+              "value": "0"
+            },
+            {
+              "label": "변수2",
+              "value": "1"
+            },
+            {
+              "label": "변수3",
+              "value": "2"
+            },
+            {
+              "label": "변수4",
+              "value": "3"
+            },
+            {
+              "label": "변수5",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_calc_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_calc_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "더하기",
+              "value": "0"
+            },
+            {
+              "label": "빼기",
+              "value": "1"
+            },
+            {
+              "label": "곱하기",
+              "value": "2"
+            },
+            {
+              "label": "나누기",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_remocon_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_remocon_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownExtra",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "↑",
+              "value": "34"
+            },
+            {
+              "label": "↓",
+              "value": "42"
+            },
+            {
+              "label": "←",
+              "value": "58"
+            },
+            {
+              "label": "→",
+              "value": "50"
+            },
+            {
+              "label": "↑+F1",
+              "value": "5"
+            },
+            {
+              "label": "↑+F2",
+              "value": "41"
+            },
+            {
+              "label": "↑+F3",
+              "value": "21"
+            },
+            {
+              "label": "↑+F4",
+              "value": "57"
+            },
+            {
+              "label": "↓+F1",
+              "value": "13"
+            },
+            {
+              "label": "↓+F2",
+              "value": "61"
+            },
+            {
+              "label": "↓+F3",
+              "value": "29"
+            },
+            {
+              "label": "↓+F4",
+              "value": "45"
+            },
+            {
+              "label": "KEY OFF",
+              "value": "0"
+            },
+            {
+              "label": "R",
+              "value": "33"
+            },
+            {
+              "label": "F1",
+              "value": "38"
+            },
+            {
+              "label": "F2",
+              "value": "54"
+            },
+            {
+              "label": "F3",
+              "value": "46"
+            },
+            {
+              "label": "F4",
+              "value": "62"
+            },
+            {
+              "label": "↑+R",
+              "value": "49"
+            },
+            {
+              "label": "↓+R",
+              "value": "37"
+            },
+            {
+              "label": "←+R",
+              "value": "25"
+            },
+            {
+              "label": "→+R",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_logic_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_logic_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "그리고",
+              "value": "1"
+            },
+            {
+              "label": "또는",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_jgmt_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_jgmt_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "=",
+              "value": "0"
+            },
+            {
+              "label": "≠",
+              "value": "1"
+            },
+            {
+              "label": "<",
+              "value": "2"
+            },
+            {
+              "label": "≤",
+              "value": "3"
+            },
+            {
+              "label": ">",
+              "value": "4"
+            },
+            {
+              "label": "≥",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_delay_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_delay_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "초",
+              "value": "1"
+            },
+            {
+              "label": "밀리초",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    },
+    {
+      "type": "cuboai_block_loop_break_list",
+      "category": "hardware_cuboai",
+      "label": {
+        "ko": "cuboai_block_loop_break_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "반복 중단",
+              "value": "0"
+            },
+            {
+              "label": "다음 반복",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cuboai"
+      }
+    }
+  ]
+}

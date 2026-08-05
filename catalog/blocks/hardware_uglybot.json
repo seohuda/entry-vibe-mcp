@@ -1,0 +1,527 @@
+{
+  "category": "hardware_uglybot",
+  "blocks": [
+    {
+      "type": "uglybot_led",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_led"
+      },
+      "params": [
+        {
+          "key": "LED_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_right",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_left",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "LED_ACTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.uglybot_on",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_off",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_buzzer",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_buzzer"
+      },
+      "params": [
+        {
+          "key": "BUZZER_NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_do",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.uglybot_re",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.uglybot_mi",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.uglybot_fa",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.uglybot_sol",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.uglybot_ra",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.uglybot_si",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "BUZZER_DELAY",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0.5",
+              "value": "5"
+            },
+            {
+              "label": "0.8",
+              "value": "8"
+            },
+            {
+              "label": "1",
+              "value": "10"
+            },
+            {
+              "label": "2",
+              "value": "20"
+            },
+            {
+              "label": "3",
+              "value": "30"
+            },
+            {
+              "label": "4",
+              "value": "40"
+            },
+            {
+              "label": "5",
+              "value": "50"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_motor",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_motor"
+      },
+      "params": [
+        {
+          "key": "MOTOR_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_right",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_left",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "MOTOR_SPEED",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_move",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_move"
+      },
+      "params": [
+        {
+          "key": "MOVE_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_front",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_back",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "MOVE_DISTANCE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_rotation",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_rotation"
+      },
+      "params": [
+        {
+          "key": "ROT_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_cc",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_rcc",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "ROT_DEGREE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_servo",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_servo"
+      },
+      "params": [
+        {
+          "key": "SERVO_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SERVO_DEGREE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_irpin",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_irpin"
+      },
+      "params": [
+        {
+          "key": "IRPIN_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_left",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_mid",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.uglybot_right",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "IRPIN_ACT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.uglybot_on",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_off",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_button",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_button"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_ir",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_ir"
+      },
+      "params": [
+        {
+          "key": "IR_POS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_left",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_mid",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.uglybot_right",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_ultrasonic",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_ultrasonic"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_joystick",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_joystick"
+      },
+      "params": [
+        {
+          "key": "JOYSTICK_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_leftright",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_topbottom",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_tilt",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_tilt"
+      },
+      "params": [
+        {
+          "key": "GYRO_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.uglybot_leftright",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.uglybot_topbottom",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_sound",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_sound"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    },
+    {
+      "type": "uglybot_illum",
+      "category": "hardware_uglybot",
+      "label": {
+        "ko": "uglybot_illum"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "UglyBot"
+      }
+    }
+  ]
+}

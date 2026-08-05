@@ -1,0 +1,421 @@
+{
+  "category": "hardware_jcboard",
+  "blocks": [
+    {
+      "type": "jcboard_sonarport",
+      "category": "hardware_jcboard",
+      "label": {
+        "ko": "jcboard_sonarport"
+      },
+      "params": [
+        {
+          "key": "SONARPORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JCBoard"
+      }
+    },
+    {
+      "type": "jcboard_led",
+      "category": "hardware_jcboard",
+      "label": {
+        "ko": "jcboard_led"
+      },
+      "params": [
+        {
+          "key": "LED_PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "LED_ACTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.jcboard_on",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.jcboard_off",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JCBoard"
+      }
+    },
+    {
+      "type": "jcboard_buzzer",
+      "category": "hardware_jcboard",
+      "label": {
+        "ko": "jcboard_buzzer"
+      },
+      "params": [
+        {
+          "key": "BUZZER_NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.jcboard_do",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.jcboard_re",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.jcboard_mi",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.jcboard_fa",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.jcboard_sol",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.jcboard_ra",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.jcboard_si",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "BUZZER_DUR",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0.5",
+              "value": "5"
+            },
+            {
+              "label": "0.8",
+              "value": "8"
+            },
+            {
+              "label": "1",
+              "value": "10"
+            },
+            {
+              "label": "2",
+              "value": "20"
+            },
+            {
+              "label": "3",
+              "value": "30"
+            },
+            {
+              "label": "4",
+              "value": "40"
+            },
+            {
+              "label": "5",
+              "value": "50"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JCBoard"
+      }
+    },
+    {
+      "type": "jcboard_dcmotor",
+      "category": "hardware_jcboard",
+      "label": {
+        "ko": "jcboard_dcmotor"
+      },
+      "params": [
+        {
+          "key": "MOTOR_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "MOTOR_SPEED",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JCBoard"
+      }
+    },
+    {
+      "type": "jcboard_servomotor",
+      "category": "hardware_jcboard",
+      "label": {
+        "ko": "jcboard_servomotor"
+      },
+      "params": [
+        {
+          "key": "SERVO_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "SERVO_DEGREE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JCBoard"
+      }
+    },
+    {
+      "type": "jcboard_pin",
+      "category": "hardware_jcboard",
+      "label": {
+        "ko": "jcboard_pin"
+      },
+      "params": [
+        {
+          "key": "PIN_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "PIN_STATE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "HIGH",
+              "value": "0"
+            },
+            {
+              "label": "LOW",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JCBoard"
+      }
+    },
+    {
+      "type": "jcboard_button",
+      "category": "hardware_jcboard",
+      "label": {
+        "ko": "jcboard_button"
+      },
+      "params": [
+        {
+          "key": "BUTTON_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JCBoard"
+      }
+    },
+    {
+      "type": "jcboard_analog",
+      "category": "hardware_jcboard",
+      "label": {
+        "ko": "jcboard_analog"
+      },
+      "params": [
+        {
+          "key": "ANALOG_WHAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JCBoard"
+      }
+    }
+  ]
+}

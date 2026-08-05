@@ -1,0 +1,524 @@
+{
+  "category": "hardware_handino",
+  "blocks": [
+    {
+      "type": "arduino_ext_set_servo_hand_scissors",
+      "category": "hardware_handino",
+      "label": {
+        "ko": "arduino_ext_set_servo_hand_scissors"
+      },
+      "params": [
+        {
+          "key": "HAND_TYPE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "바위",
+              "value": "0"
+            },
+            {
+              "label": "보",
+              "value": "1"
+            },
+            {
+              "label": "가위",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "handino"
+      }
+    },
+    {
+      "type": "arduino_ext_set_servo_hand_count",
+      "category": "hardware_handino",
+      "label": {
+        "ko": "arduino_ext_set_servo_hand_count"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "handino"
+      }
+    },
+    {
+      "type": "arduino_ext_set_servo_hand_gesture",
+      "category": "hardware_handino",
+      "label": {
+        "ko": "arduino_ext_set_servo_hand_gesture"
+      },
+      "params": [
+        {
+          "key": "HAND_TYPE",
+          "type": "Dropdown",
+          "defaultValue": "HAND_TYPE.GESTURE_THUMBSUP",
+          "options": [
+            {
+              "label": "따봉",
+              "value": "HAND_TYPE.GESTURE_THUMBSUP"
+            },
+            {
+              "label": "피스",
+              "value": "HAND_TYPE.GESTURE_PEACE"
+            },
+            {
+              "label": "약속",
+              "value": "HAND_TYPE.GESTURE_PROMISE"
+            },
+            {
+              "label": "브이",
+              "value": "HAND_TYPE.GESTURE_V"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "handino"
+      }
+    },
+    {
+      "type": "arduino_ext_set_servo_hand_finger_updown",
+      "category": "hardware_handino",
+      "label": {
+        "ko": "arduino_ext_set_servo_hand_finger_updown"
+      },
+      "params": [
+        {
+          "key": "FINGER_TYPE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "FINGER_UPDOWN",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "매우 천천히 접기",
+              "value": "0"
+            },
+            {
+              "label": "매우 천천히 펴기",
+              "value": "1"
+            },
+            {
+              "label": "천천히 접기",
+              "value": "2"
+            },
+            {
+              "label": "천천히 펴기",
+              "value": "3"
+            },
+            {
+              "label": "보통 접기",
+              "value": "4"
+            },
+            {
+              "label": "보통 펴기",
+              "value": "5"
+            },
+            {
+              "label": "빠르게 접기",
+              "value": "6"
+            },
+            {
+              "label": "빠르게 펴기",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "handino"
+      }
+    },
+    {
+      "type": "arduino_ext_set_servo_hand_play_scissors",
+      "category": "hardware_handino",
+      "label": {
+        "ko": "arduino_ext_set_servo_hand_play_scissors"
+      },
+      "params": [
+        {
+          "key": "HAND_TYPE",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "바위",
+              "value": "0"
+            },
+            {
+              "label": "보",
+              "value": "1"
+            },
+            {
+              "label": "가위",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "handino"
+      }
+    },
+    {
+      "type": "arduino_ext_set_servo_hand_finger_updown_same_time",
+      "category": "hardware_handino",
+      "label": {
+        "ko": "arduino_ext_set_servo_hand_finger_updown_same_time"
+      },
+      "params": [
+        {
+          "key": "FINGER_NUMBER1",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "-",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "FINGER_NUMBER2",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "-",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "FINGER_NUMBER3",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "3",
+              "value": "1"
+            },
+            {
+              "label": "-",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "FINGER_NUMBER4",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "4",
+              "value": "1"
+            },
+            {
+              "label": "-",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "FINGER_NUMBER5",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "5",
+              "value": "1"
+            },
+            {
+              "label": "-",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "TIME_TYPE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "동시에",
+              "value": "0"
+            },
+            {
+              "label": "하나씩",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "FINGER_UPDOWN",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "접기",
+              "value": "0"
+            },
+            {
+              "label": "펴기",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "7",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "handino"
+      }
+    },
+    {
+      "type": "arduino_ext_set_servo_hand_language",
+      "category": "hardware_handino",
+      "label": {
+        "ko": "arduino_ext_set_servo_hand_language"
+      },
+      "params": [
+        {
+          "key": "HAND_TYPE",
+          "type": "Dropdown",
+          "defaultValue": "HAND_TYPE.LANGUAGE_ㄱ",
+          "options": [
+            {
+              "label": "ㄱ",
+              "value": "HAND_TYPE.LANGUAGE_ㄱ"
+            },
+            {
+              "label": "ㄴ",
+              "value": "HAND_TYPE.LANGUAGE_ㄴ"
+            },
+            {
+              "label": "ㄷ",
+              "value": "HAND_TYPE.LANGUAGE_ㄷ"
+            },
+            {
+              "label": "ㄹ",
+              "value": "HAND_TYPE.LANGUAGE_ㄹ"
+            },
+            {
+              "label": "ㅁ",
+              "value": "HAND_TYPE.LANGUAGE_ㅁ"
+            },
+            {
+              "label": "ㅂ",
+              "value": "HAND_TYPE.LANGUAGE_ㅂ"
+            },
+            {
+              "label": "ㅅ",
+              "value": "HAND_TYPE.LANGUAGE_ㅅ"
+            },
+            {
+              "label": "ㅇ",
+              "value": "HAND_TYPE.LANGUAGE_ㅇ"
+            },
+            {
+              "label": "ㅈ",
+              "value": "HAND_TYPE.LANGUAGE_ㅈ"
+            },
+            {
+              "label": "ㅊ",
+              "value": "HAND_TYPE.LANGUAGE_ㅊ"
+            },
+            {
+              "label": "ㅋ",
+              "value": "HAND_TYPE.LANGUAGE_ㅋ"
+            },
+            {
+              "label": "ㅌ",
+              "value": "HAND_TYPE.LANGUAGE_ㅌ"
+            },
+            {
+              "label": "ㅍ",
+              "value": "HAND_TYPE.LANGUAGE_ㅍ"
+            },
+            {
+              "label": "ㅎ",
+              "value": "HAND_TYPE.LANGUAGE_ㅎ"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "handino"
+      }
+    },
+    {
+      "type": "arduino_ext_set_servo_hand_arithmetic",
+      "category": "hardware_handino",
+      "label": {
+        "ko": "arduino_ext_set_servo_hand_arithmetic"
+      },
+      "params": [
+        {
+          "key": "OPRND1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 0
+        },
+        {
+          "key": "OPTOR",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "+",
+              "value": "0"
+            },
+            {
+              "label": "-",
+              "value": "1"
+            },
+            {
+              "label": "x",
+              "value": "2"
+            },
+            {
+              "label": "/",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "OPRND2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 0
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "handino"
+      }
+    }
+  ]
+}

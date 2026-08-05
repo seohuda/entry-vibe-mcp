@@ -1,0 +1,558 @@
+{
+  "category": "hardware_pingpong",
+  "blocks": [
+    {
+      "type": "pingpong_g1_when_button_pressed",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_when_button_pressed"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_when_tilted",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_when_tilted"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "TILT_DIR",
+          "type": "Dropdown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_is_button_pressed",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_is_button_pressed"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_is_tilted",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_is_tilted"
+      },
+      "params": [
+        {
+          "key": "TILT_DIR",
+          "type": "Dropdown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_get_tilt_value",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_get_tilt_value"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_get_sensor_value",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_get_sensor_value"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.pingpong_sensor_proximity",
+              "value": "PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.pingpong_sensor_ain",
+              "value": "AIN"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_is_top_shape",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_is_top_shape"
+      },
+      "params": [
+        {
+          "key": "TILT_DIR",
+          "type": "Dropdown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_motor_rotate",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_motor_rotate"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.pingpong_rotate_cw",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.pingpong_rotate_ccw",
+              "value": "LEFT"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_start_motor_rotate",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_start_motor_rotate"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_stop_motor_rotate",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_stop_motor_rotate"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_rotate_servo_mortor",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_rotate_servo_mortor"
+      },
+      "params": [
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "angle",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_set_dot_pixel",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_set_dot_pixel"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "onoff",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.pingpong_dot_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.pingpong_dot_off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_set_dot_string",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_set_dot_string"
+      },
+      "params": [
+        {
+          "key": "STR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_set_dot_clear",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_set_dot_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_playNoteForBeats",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_playNoteForBeats"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown"
+        },
+        {
+          "key": "BEATS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_restForBeats",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_restForBeats"
+      },
+      "params": [
+        {
+          "key": "BEATS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_setTempo",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_setTempo"
+      },
+      "params": [
+        {
+          "key": "TEMPO",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "pingpong_g1_getTempo",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "pingpong_g1_getTempo"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "set_steering_direction",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "set_steering_direction"
+      },
+      "params": [
+        {
+          "key": "DEGREE",
+          "type": "Dropdown"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    },
+    {
+      "type": "move_by_distance",
+      "category": "hardware_pingpong",
+      "label": {
+        "ko": "move_by_distance"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown"
+        },
+        {
+          "key": "CM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong"
+      }
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "category": "hardware_codingmachine",
+  "blocks": [
+    {
+      "type": "codingmachine_analog_in",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_analog_in"
+      },
+      "params": [
+        {
+          "key": "ANALOG_SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A4",
+              "value": "1"
+            },
+            {
+              "label": "A5",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_joystick",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_joystick"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_digital_in",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_digital_in"
+      },
+      "params": [
+        {
+          "key": "DIGITAL_PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D3",
+              "value": "0"
+            },
+            {
+              "label": "D4",
+              "value": "1"
+            },
+            {
+              "label": "D5",
+              "value": "2"
+            },
+            {
+              "label": "D6",
+              "value": "3"
+            },
+            {
+              "label": "D7",
+              "value": "4"
+            },
+            {
+              "label": "D11",
+              "value": "5"
+            },
+            {
+              "label": "D12",
+              "value": "6"
+            },
+            {
+              "label": "D13",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_button",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_button"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_gyro",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_gyro"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_ultrasonic",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_ultrasonic"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_connect",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_connect"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_ready",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_ready"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_servo",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_servo"
+      },
+      "params": [
+        {
+          "key": "DIGITAL_PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D3",
+              "value": "3"
+            },
+            {
+              "label": "D4",
+              "value": "4"
+            },
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D7",
+              "value": "7"
+            },
+            {
+              "label": "D11",
+              "value": "11"
+            },
+            {
+              "label": "D12",
+              "value": "12"
+            },
+            {
+              "label": "D13",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "key": "ACTION",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_digital_pwm",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "DIGITAL_PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D3",
+              "value": "1"
+            },
+            {
+              "label": "D5",
+              "value": "2"
+            },
+            {
+              "label": "D6",
+              "value": "3"
+            },
+            {
+              "label": "D11",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "ACTION_VALUE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_digital_out",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_digital_out"
+      },
+      "params": [
+        {
+          "key": "DIGITAL_PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D3",
+              "value": "0"
+            },
+            {
+              "label": "D4",
+              "value": "1"
+            },
+            {
+              "label": "D5",
+              "value": "2"
+            },
+            {
+              "label": "D6",
+              "value": "3"
+            },
+            {
+              "label": "D7",
+              "value": "4"
+            },
+            {
+              "label": "D11",
+              "value": "5"
+            },
+            {
+              "label": "D12",
+              "value": "6"
+            },
+            {
+              "label": "D13",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "3"
+            },
+            {
+              "label": "끄기",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_led",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_led"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_tune",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_tune"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_motor",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_motor"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_throttle",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_throttle"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_altitude",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_altitude"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_rollpitch",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_rollpitch"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_yaw",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_yaw"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    },
+    {
+      "type": "codingmachine_emergency",
+      "category": "hardware_codingmachine",
+      "label": {
+        "ko": "codingmachine_emergency"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "Codingmachine"
+      }
+    }
+  ]
+}

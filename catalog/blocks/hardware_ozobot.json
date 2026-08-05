@@ -1,0 +1,1156 @@
+{
+  "category": "hardware_ozobot",
+  "blocks": [
+    {
+      "type": "Ozobot_Sensor_floor_color",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sensor_floor_color"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "빨간색",
+              "value": "1"
+            },
+            {
+              "label": "초록색",
+              "value": "2"
+            },
+            {
+              "label": "노란색",
+              "value": "3"
+            },
+            {
+              "label": "파란색",
+              "value": "4"
+            },
+            {
+              "label": "자주색",
+              "value": "5"
+            },
+            {
+              "label": "청록색",
+              "value": "6"
+            },
+            {
+              "label": "흰색",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sensor_line_color",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sensor_line_color"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "0"
+            },
+            {
+              "label": "빨간색",
+              "value": "1"
+            },
+            {
+              "label": "초록색",
+              "value": "2"
+            },
+            {
+              "label": "파란색",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sensor_obstacle",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sensor_obstacle"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "앞쪽 장애물",
+              "value": "0"
+            },
+            {
+              "label": "앞쪽 오른편 장애물",
+              "value": "1"
+            },
+            {
+              "label": "앞쪽 왼편 장애물",
+              "value": "2"
+            },
+            {
+              "label": "뒤쪽 장애물",
+              "value": "3"
+            },
+            {
+              "label": "뒤쪽 오른편 장애물",
+              "value": "4"
+            },
+            {
+              "label": "뒤쪽 왼편 장애물",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Move_wheel",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Move_wheel"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_LEFT",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "앞",
+              "value": "0"
+            },
+            {
+              "label": "뒤",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED_LEFT",
+          "type": "Dropdown",
+          "defaultValue": 45,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "25"
+            },
+            {
+              "label": "보통으로",
+              "value": "45"
+            },
+            {
+              "label": "빠르게",
+              "value": "65"
+            },
+            {
+              "label": "매우빠르게",
+              "value": "85"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION_RIGHT",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "앞",
+              "value": "0"
+            },
+            {
+              "label": "뒤",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED_RIGHT",
+          "type": "Dropdown",
+          "defaultValue": 45,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "25"
+            },
+            {
+              "label": "보통으로",
+              "value": "45"
+            },
+            {
+              "label": "빠르게",
+              "value": "65"
+            },
+            {
+              "label": "매우빠르게",
+              "value": "85"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Move1",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Move1"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "앞",
+              "value": "0"
+            },
+            {
+              "label": "뒤",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 5
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": 45,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "25"
+            },
+            {
+              "label": "보통으로",
+              "value": "45"
+            },
+            {
+              "label": "빠르게",
+              "value": "65"
+            },
+            {
+              "label": "매우빠르게",
+              "value": "85"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Move2",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Move2"
+      },
+      "params": [
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 20
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 30
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Rotate1",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Rotate1"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "시계 방향",
+              "value": "1"
+            },
+            {
+              "label": "반시계 방향",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": 30
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Rotate2",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Rotate2"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "시계 방향",
+              "value": "1"
+            },
+            {
+              "label": "반시계 방향",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "한 바퀴",
+              "value": "0"
+            },
+            {
+              "label": "반 바퀴",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Move_stop",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Move_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Line_trace",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Line_trace"
+      },
+      "params": [
+        {
+          "key": "ON_OFF",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "시작",
+              "value": "1"
+            },
+            {
+              "label": "멈춤",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_LED_head",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_LED_head"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_LED_head_floor",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_LED_head_floor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_LED_head_random",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_LED_head_random"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_LED_head_off",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_LED_head_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_LED_front",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_LED_front"
+      },
+      "params": [
+        {
+          "key": "COLOR1",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "COLOR2",
+          "type": "Color"
+        },
+        {
+          "key": "COLOR3",
+          "type": "Color"
+        },
+        {
+          "key": "COLOR4",
+          "type": "Color"
+        },
+        {
+          "key": "COLOR5",
+          "type": "Color"
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_LED_front_floor",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_LED_front_floor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_LED_front_random",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_LED_front_random"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_LED_front_off",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_LED_front_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sound_emotion",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sound_emotion"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "행복",
+              "value": "0"
+            },
+            {
+              "label": "슬픔",
+              "value": "1"
+            },
+            {
+              "label": "놀람",
+              "value": "2"
+            },
+            {
+              "label": "웃음",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sound_direction",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sound_direction"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "Left",
+              "value": "1"
+            },
+            {
+              "label": "Right",
+              "value": "2"
+            },
+            {
+              "label": "Forward",
+              "value": "0"
+            },
+            {
+              "label": "Back",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sound_number",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sound_number"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sound_color",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sound_color"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "Red",
+              "value": "1"
+            },
+            {
+              "label": "Green",
+              "value": "2"
+            },
+            {
+              "label": "Yellow",
+              "value": "3"
+            },
+            {
+              "label": "Blue",
+              "value": "4"
+            },
+            {
+              "label": "Cyan",
+              "value": "6"
+            },
+            {
+              "label": "White",
+              "value": "7"
+            },
+            {
+              "label": "Black",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sound_tone",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sound_tone"
+      },
+      "params": [
+        {
+          "key": "OCTAV",
+          "type": "Dropdown",
+          "defaultValue": 6,
+          "options": [
+            {
+              "label": "5 옥타브",
+              "value": "5"
+            },
+            {
+              "label": "6 옥타브",
+              "value": "6"
+            },
+            {
+              "label": "7 옥타브",
+              "value": "7"
+            },
+            {
+              "label": "8 옥타브",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "TONE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "도",
+              "value": "1"
+            },
+            {
+              "label": "도#",
+              "value": "2"
+            },
+            {
+              "label": "레",
+              "value": "3"
+            },
+            {
+              "label": "레#",
+              "value": "4"
+            },
+            {
+              "label": "미",
+              "value": "5"
+            },
+            {
+              "label": "파",
+              "value": "6"
+            },
+            {
+              "label": "파#",
+              "value": "7"
+            },
+            {
+              "label": "솔",
+              "value": "8"
+            },
+            {
+              "label": "솔#",
+              "value": "9"
+            },
+            {
+              "label": "라",
+              "value": "10"
+            },
+            {
+              "label": "라#",
+              "value": "11"
+            },
+            {
+              "label": "시",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sound_tone_time",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sound_tone_time"
+      },
+      "params": [
+        {
+          "key": "OCTAV",
+          "type": "Dropdown",
+          "defaultValue": 6,
+          "options": [
+            {
+              "label": "5 옥타브",
+              "value": "5"
+            },
+            {
+              "label": "6 옥타브",
+              "value": "6"
+            },
+            {
+              "label": "7 옥타브",
+              "value": "7"
+            },
+            {
+              "label": "8 옥타브",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "TONE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "도",
+              "value": "1"
+            },
+            {
+              "label": "도#",
+              "value": "2"
+            },
+            {
+              "label": "레",
+              "value": "3"
+            },
+            {
+              "label": "레#",
+              "value": "4"
+            },
+            {
+              "label": "미",
+              "value": "5"
+            },
+            {
+              "label": "파",
+              "value": "6"
+            },
+            {
+              "label": "파#",
+              "value": "7"
+            },
+            {
+              "label": "솔",
+              "value": "8"
+            },
+            {
+              "label": "솔#",
+              "value": "9"
+            },
+            {
+              "label": "라",
+              "value": "10"
+            },
+            {
+              "label": "라#",
+              "value": "11"
+            },
+            {
+              "label": "시",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Sound_stop",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Sound_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    },
+    {
+      "type": "Ozobot_Power_off",
+      "category": "hardware_ozobot",
+      "label": {
+        "ko": "Ozobot_Power_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Ozobot Evo"
+      }
+    }
+  ]
+}

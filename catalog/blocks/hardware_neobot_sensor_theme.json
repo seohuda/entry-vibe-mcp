@@ -1,0 +1,518 @@
+{
+  "category": "hardware_neobot_sensor_theme",
+  "blocks": [
+    {
+      "type": "neobot_st_sensor_value",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_4",
+              "value": "BAT"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    },
+    {
+      "type": "neobot_st_sensor_connect_external",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_sensor_connect_external"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_4",
+              "value": "BAT"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_sensor_infrared",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_sensor_light",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_sensor_sound",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    },
+    {
+      "type": "neobot_st_sensor_convert_scale",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_sensor_convert_scale"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_4",
+              "value": "BAT"
+            }
+          ]
+        },
+        {
+          "key": "OMIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "OMAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "MIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "MAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    },
+    {
+      "type": "neobot_st_compare_symbol",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_compare_symbol"
+      },
+      "params": [
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol1",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol2",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol3",
+              "value": "<"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol4",
+              "value": ">="
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol5",
+              "value": "<="
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    },
+    {
+      "type": "neobot_st_decision_sensor_is_over",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_decision_sensor_is_over"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_4",
+              "value": "BAT"
+            }
+          ]
+        },
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol1",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol2",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol3",
+              "value": "<"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol4",
+              "value": ">="
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_compare_symbol5",
+              "value": "<="
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    },
+    {
+      "type": "neobot_st_decision_equal_with_sensor",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_decision_equal_with_sensor"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_4",
+              "value": "BAT"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_color_white",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_color_yellow",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_color_green",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_color_blue",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    },
+    {
+      "type": "neobot_st_output_led_on",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_output_led_on"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_port_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_4",
+              "value": "FND"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    },
+    {
+      "type": "neobot_st_output_led_off",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_output_led_off"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_port_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_4",
+              "value": "FND"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    },
+    {
+      "type": "neobot_st_set_output",
+      "category": "hardware_neobot_sensor_theme",
+      "label": {
+        "ko": "neobot_st_set_output"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_st_port_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_st_port_4",
+              "value": "FND"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_sensor_theme"
+      }
+    }
+  ]
+}

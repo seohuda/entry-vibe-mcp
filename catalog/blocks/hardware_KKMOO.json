@@ -1,0 +1,744 @@
+{
+  "category": "hardware_KKMOO",
+  "blocks": [
+    {
+      "type": "kkmoo_rotate_motor",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_rotate_motor"
+      },
+      "params": [
+        {
+          "key": "MOTNUM",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "17",
+              "value": "17"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_motion_play_basic",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_motion_play_basic"
+      },
+      "params": [
+        {
+          "key": "MOTIONNUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_motion_play_custom",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_motion_play_custom"
+      },
+      "params": [
+        {
+          "key": "MOTIONNUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_rotate_motor_time",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_rotate_motor_time"
+      },
+      "params": [
+        {
+          "key": "MOTNUM",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "17",
+              "value": "17"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_set_motor_degree",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_set_motor_degree"
+      },
+      "params": [
+        {
+          "key": "MOTNUM",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "17",
+              "value": "17"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_run_set_value_time",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_run_set_value_time"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_set_frame",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_set_frame"
+      },
+      "params": [
+        {
+          "key": "FRAME",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "17",
+              "value": "17"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_set_frame_time",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_set_frame_time"
+      },
+      "params": [
+        {
+          "key": "FRAME",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "17",
+              "value": "17"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            }
+          ]
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_play_temp_motion",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_play_temp_motion"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    },
+    {
+      "type": "kkmoo_save_to_robot",
+      "category": "hardware_KKMOO",
+      "label": {
+        "ko": "kkmoo_save_to_robot"
+      },
+      "params": [
+        {
+          "key": "SLOT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "NAME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "이름"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next",
+      "extension": {
+        "kind": "hardware",
+        "module": "kkmoo"
+      }
+    }
+  ]
+}

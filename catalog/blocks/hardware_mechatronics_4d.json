@@ -1,0 +1,926 @@
+{
+  "category": "hardware_mechatronics_4d",
+  "blocks": [
+    {
+      "type": "Mechatronics_4D_analog_list",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_get_analog_value",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Mechatronics_4D_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_get_analog_value_map",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Mechatronics_4D_get_analog_value",
+            "params": [
+              {
+                "type": "Mechatronics_4D_analog_list",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_get_ultrasonic_value",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_get_ultrasonic_value"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "4"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_get_digital",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              2
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_toggle_led",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_toggle_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              3
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_digital_pwm",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_pwm_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_tone_list",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_tone_value",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_set_tone",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_set_tone"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              3
+            ]
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Mechatronics_4D_tone_value",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_board_version_list",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_board_version_list"
+      },
+      "params": [
+        {
+          "key": "VERSION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "V3",
+              "value": "3"
+            },
+            {
+              "label": "V4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_motor_list",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_motor_list"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.General.left",
+              "value": "left"
+            },
+            {
+              "label": "Lang.General.right",
+              "value": "right"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_motor_side_list",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_motor_side_list"
+      },
+      "params": [
+        {
+          "key": "SIDE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞",
+              "value": "front"
+            },
+            {
+              "label": "뒤",
+              "value": "rear"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_rotation_list",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_rotation_list"
+      },
+      "params": [
+        {
+          "key": "ROTATION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "정방향",
+              "value": "clock"
+            },
+            {
+              "label": "역방향",
+              "value": "counter_clock"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_on_motor",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_on_motor"
+      },
+      "params": [
+        {
+          "key": "VERSION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_board_version_list",
+            "params": []
+          }
+        },
+        {
+          "key": "MOTOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_motor_list",
+            "params": []
+          }
+        },
+        {
+          "key": "SIDE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_motor_side_list",
+            "params": []
+          }
+        },
+        {
+          "key": "ROTATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_rotation_list",
+            "params": []
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_controll_motor_speed1",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_controll_motor_speed1"
+      },
+      "params": [
+        {
+          "key": "VERSION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_board_version_list",
+            "params": []
+          }
+        },
+        {
+          "key": "MOTOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_motor_list",
+            "params": []
+          }
+        },
+        {
+          "key": "ROTATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_rotation_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_motor_speed_list",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_motor_speed_list"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "아주 느린",
+              "value": "60"
+            },
+            {
+              "label": "느린",
+              "value": "100"
+            },
+            {
+              "label": "보통",
+              "value": "140"
+            },
+            {
+              "label": "빠른",
+              "value": "180"
+            },
+            {
+              "label": "아주 빠른",
+              "value": "255"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_controll_motor_speed2",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_controll_motor_speed2"
+      },
+      "params": [
+        {
+          "key": "VERSION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_board_version_list",
+            "params": []
+          }
+        },
+        {
+          "key": "MOTOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_motor_list",
+            "params": []
+          }
+        },
+        {
+          "key": "ROTATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_rotation_list",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_motor_speed_list",
+            "params": []
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_off_motor",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_off_motor"
+      },
+      "params": [
+        {
+          "key": "VERSION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_board_version_list",
+            "params": []
+          }
+        },
+        {
+          "key": "MOTOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_motor_list",
+            "params": []
+          }
+        },
+        {
+          "key": "SIDE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_motor_side_list",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    },
+    {
+      "type": "Mechatronics_4D_set_servo",
+      "category": "hardware_mechatronics_4d",
+      "label": {
+        "ko": "Mechatronics_4D_set_servo"
+      },
+      "params": [
+        {
+          "key": "VERSION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_board_version_list",
+            "params": []
+          }
+        },
+        {
+          "key": "MOTOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Mechatronics_4D_motor_list",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mechatronics_4D"
+      }
+    }
+  ]
+}

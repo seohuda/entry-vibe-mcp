@@ -1,0 +1,662 @@
+{
+  "category": "hardware_bingles",
+  "blocks": [
+    {
+      "type": "bingles_analogValue",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_analogValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.LightSensorValue",
+              "value": "light"
+            },
+            {
+              "label": "Lang.Blocks.MicSensorValue",
+              "value": "mic"
+            },
+            {
+              "label": "Lang.Blocks.IR0Value",
+              "value": "ir0"
+            },
+            {
+              "label": "Lang.Blocks.IR1Value",
+              "value": "ir1"
+            },
+            {
+              "label": "Lang.Blocks.IR2Value",
+              "value": "ir2"
+            },
+            {
+              "label": "Lang.Blocks.IR3Value",
+              "value": "ir3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_remotecontrol",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_remotecontrol"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "default_value",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Remocon",
+              "value": "remocon"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_digitalOutput",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_digitalOutput"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LED",
+              "value": "HEAD_LED"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "높음",
+              "value": "HIGH"
+            },
+            {
+              "label": "낮음",
+              "value": "LOW"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_servo",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_servo"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Head",
+              "value": "head"
+            },
+            {
+              "label": "Lang.Blocks.RightArm",
+              "value": "right"
+            },
+            {
+              "label": "Lang.Blocks.LeftArm",
+              "value": "left"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_lcd",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_lcd"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_buzzer",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_buzzer"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_rgb",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_rgb"
+      },
+      "params": [
+        {
+          "key": "ledR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ledG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ledB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_rgb_picker",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_rgb_picker"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_twoWheel",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_twoWheel"
+      },
+      "params": [
+        {
+          "key": "rightWheel",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "leftWheel",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_motorgo",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_motorgo"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Forward",
+              "value": "Forward"
+            },
+            {
+              "label": "Lang.Blocks.Back",
+              "value": "Backward"
+            },
+            {
+              "label": "Lang.Blocks.Left",
+              "value": "Left Turn"
+            },
+            {
+              "label": "Lang.Blocks.Right",
+              "value": "Right Turn"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    },
+    {
+      "type": "bingles_oled",
+      "category": "hardware_bingles",
+      "label": {
+        "ko": "bingles_oled"
+      },
+      "params": [
+        {
+          "key": "oledImage",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "17",
+              "value": "17"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "21",
+              "value": "21"
+            },
+            {
+              "label": "22",
+              "value": "22"
+            },
+            {
+              "label": "23",
+              "value": "23"
+            },
+            {
+              "label": "24",
+              "value": "24"
+            },
+            {
+              "label": "25",
+              "value": "25"
+            },
+            {
+              "label": "26",
+              "value": "26"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            },
+            {
+              "label": "28",
+              "value": "28"
+            },
+            {
+              "label": "29",
+              "value": "29"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "BINGLES"
+      }
+    }
+  ]
+}

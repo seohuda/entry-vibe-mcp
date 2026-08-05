@@ -1,0 +1,1030 @@
+{
+  "category": "hardware_mindpiggy",
+  "blocks": [
+    {
+      "type": "mindpiggy_analog_list",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_port_number",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_digital_pwm_list",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_digital_pwm_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "~3",
+              "value": "3"
+            },
+            {
+              "label": "~5",
+              "value": "5"
+            },
+            {
+              "label": "~6",
+              "value": "6"
+            },
+            {
+              "label": "~9",
+              "value": "9"
+            },
+            {
+              "label": "~10",
+              "value": "10"
+            },
+            {
+              "label": "~11",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_analog_value",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mindpiggy_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_analog_value_map",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mindpiggy_get_analog_value",
+            "params": [
+              {
+                "type": "mindpiggy_analog_list",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_bool_digital",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_bool_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mindpiggy_get_port_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_digital",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mindpiggy_get_port_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_digital_toggle",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_toggle_led",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_toggle_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mindpiggy_get_port_number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_digital_pwm",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mindpiggy_digital_pwm_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_rgb",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_rgb"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": []
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": []
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_neopixel_on_value",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_neopixel_on_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_get_port_number",
+            "params": [
+              11
+            ]
+          }
+        },
+        {
+          "key": "RGB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_rgb",
+            "params": [
+              255,
+              110,
+              0
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_neopixel_pixel_on_value",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_neopixel_pixel_on_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_get_port_number",
+            "params": [
+              11
+            ]
+          }
+        },
+        {
+          "key": "PIXEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RGB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_rgb",
+            "params": [
+              255,
+              110,
+              0
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_neopixel_off_value",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_neopixel_off_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "String",
+          "defaultValue": {
+            "type": "mindpiggy_get_port_number",
+            "params": [
+              11
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_vibration",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_vibration"
+      },
+      "params": [
+        {
+          "key": "EVENT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "3",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_soundsensor",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_soundsensor"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_get_photo",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_get_photo"
+      },
+      "params": [
+        {
+          "key": "PINNUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "5",
+              "value": "0"
+            },
+            {
+              "label": "6",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_octave_list",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_tone_list",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_set_tone",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_set_tone"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_analog_list",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_dcmotor_direction",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_dcmotor_direction"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.mindpiggy_dcmotor_direction_reverse",
+              "value": "reverse"
+            },
+            {
+              "label": "Lang.template.mindpiggy_dcmotor_direction_forward",
+              "value": "forward"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_set_dcmotor",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_set_dcmotor"
+      },
+      "params": [
+        {
+          "key": "PORT0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mindpiggy_get_port_number",
+            "params": [
+              12
+            ]
+          }
+        },
+        {
+          "key": "VALUE0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mindpiggy_dcmotor_direction",
+            "params": []
+          }
+        },
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mindpiggy_digital_pwm_list",
+            "params": [
+              10
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    },
+    {
+      "type": "mindpiggy_module_digital_remote",
+      "category": "hardware_mindpiggy",
+      "label": {
+        "ko": "mindpiggy_module_digital_remote"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Mindpiggy"
+      }
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "category": "hardware_roborobo_schoolkit",
+  "blocks": [
+    {
+      "type": "schoolkit_on_block",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "On"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    },
+    {
+      "type": "schoolkit_off_block",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "Off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    },
+    {
+      "type": "schoolkit_get_out_port_number",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "schoolkit_get_out_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "2"
+            },
+            {
+              "label": "OUT2",
+              "value": "3"
+            },
+            {
+              "label": "OUT3",
+              "value": "4"
+            },
+            {
+              "label": "OUT4",
+              "value": "5"
+            },
+            {
+              "label": "OUT5",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    },
+    {
+      "type": "schoolkit_get_servo_port_number",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "schoolkit_get_servo_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "2"
+            },
+            {
+              "label": "OUT2",
+              "value": "3"
+            },
+            {
+              "label": "OUT3",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    },
+    {
+      "type": "schoolkit_get_in_port_number",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "schoolkit_get_in_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "7"
+            },
+            {
+              "label": "IN2",
+              "value": "8"
+            },
+            {
+              "label": "IN3",
+              "value": "9"
+            },
+            {
+              "label": "IN4",
+              "value": "10"
+            },
+            {
+              "label": "IN5",
+              "value": "11"
+            },
+            {
+              "label": "IN6",
+              "value": "12"
+            },
+            {
+              "label": "IN7",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    },
+    {
+      "type": "schoolkit_set_output",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "디지털 번 핀"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "schoolkit_get_out_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    },
+    {
+      "type": "schoolkit_get_input_value",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "디지털 번 센서값"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "schoolkit_get_in_port_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    },
+    {
+      "type": "schoolkit_motor",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "속도 (으)로"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "모터1",
+              "value": "motor1"
+            },
+            {
+              "label": "모터2",
+              "value": "motor2"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "45"
+            },
+            {
+              "label": "1",
+              "value": "59"
+            },
+            {
+              "label": "2",
+              "value": "73"
+            },
+            {
+              "label": "3",
+              "value": "87"
+            },
+            {
+              "label": "4",
+              "value": "101"
+            },
+            {
+              "label": "5",
+              "value": "115"
+            },
+            {
+              "label": "6",
+              "value": "129"
+            },
+            {
+              "label": "7",
+              "value": "143"
+            },
+            {
+              "label": "8",
+              "value": "157"
+            },
+            {
+              "label": "9",
+              "value": "171"
+            },
+            {
+              "label": "10",
+              "value": "185"
+            },
+            {
+              "label": "11",
+              "value": "199"
+            },
+            {
+              "label": "12",
+              "value": "213"
+            },
+            {
+              "label": "13",
+              "value": "227"
+            },
+            {
+              "label": "14",
+              "value": "241"
+            },
+            {
+              "label": "15",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "정회전",
+              "value": "cw"
+            },
+            {
+              "label": "역회전",
+              "value": "ccw"
+            },
+            {
+              "label": "정지",
+              "value": "stop"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    },
+    {
+      "type": "schoolkit_set_servo_value",
+      "category": "hardware_roborobo_schoolkit",
+      "label": {
+        "ko": "서보모터 번 핀 ˚"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "schoolkit_get_servo_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_schoolkit"
+      }
+    }
+  ]
+}

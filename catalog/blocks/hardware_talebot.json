@@ -1,0 +1,945 @@
+{
+  "category": "hardware_talebot",
+  "blocks": [
+    {
+      "type": "Talebot_Move",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Move"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "앞",
+              "value": "0"
+            },
+            {
+              "label": "뒤",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Rotate",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Rotate"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "시계 방향",
+              "value": "0"
+            },
+            {
+              "label": "반시계 방향",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": 90
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Rotate_round",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Rotate_round"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "시계 방향",
+              "value": "0"
+            },
+            {
+              "label": "반시계 방향",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "한 바퀴",
+              "value": "0"
+            },
+            {
+              "label": "반 바퀴",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Rotate_wheel",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Rotate_wheel"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_L",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "앞",
+              "value": "0"
+            },
+            {
+              "label": "뒤",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED_L",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "0"
+            },
+            {
+              "label": "보통으로",
+              "value": "1"
+            },
+            {
+              "label": "빠르게",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION_R",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "앞",
+              "value": "0"
+            },
+            {
+              "label": "뒤",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED_R",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "0"
+            },
+            {
+              "label": "보통으로",
+              "value": "1"
+            },
+            {
+              "label": "빠르게",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Speed",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Speed"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "0"
+            },
+            {
+              "label": "보통으로",
+              "value": "1"
+            },
+            {
+              "label": "빠르게",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Stop",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_LED_all",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_LED_all"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_LED_select",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_LED_select"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1번",
+              "value": "1"
+            },
+            {
+              "label": "2번",
+              "value": "2"
+            },
+            {
+              "label": "3번",
+              "value": "3"
+            },
+            {
+              "label": "4번",
+              "value": "4"
+            },
+            {
+              "label": "5번",
+              "value": "5"
+            },
+            {
+              "label": "6번",
+              "value": "6"
+            },
+            {
+              "label": "7번",
+              "value": "7"
+            },
+            {
+              "label": "8번",
+              "value": "8"
+            },
+            {
+              "label": "9번",
+              "value": "9"
+            },
+            {
+              "label": "10번",
+              "value": "10"
+            },
+            {
+              "label": "11번",
+              "value": "11"
+            },
+            {
+              "label": "12번",
+              "value": "12"
+            },
+            {
+              "label": "무작위",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_LED_eyes",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_LED_eyes"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_LED_eyes_random",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_LED_eyes_random"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Play_instruments",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Play_instruments"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "피아노",
+              "value": "0"
+            },
+            {
+              "label": "오르간",
+              "value": "2"
+            },
+            {
+              "label": "기타",
+              "value": "3"
+            },
+            {
+              "label": "베이스",
+              "value": "5"
+            },
+            {
+              "label": "첼로",
+              "value": "7"
+            },
+            {
+              "label": "트롬본",
+              "value": "8"
+            },
+            {
+              "label": "클라리넷",
+              "value": "9"
+            },
+            {
+              "label": "색소폰",
+              "value": "10"
+            },
+            {
+              "label": "플루트",
+              "value": "11"
+            },
+            {
+              "label": "바순",
+              "value": "13"
+            },
+            {
+              "label": "비브라폰",
+              "value": "15"
+            },
+            {
+              "label": "오르골",
+              "value": "16"
+            },
+            {
+              "label": "마림바",
+              "value": "18"
+            },
+            {
+              "label": "합창단",
+              "value": "14"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Play_tone",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Play_tone"
+      },
+      "params": [
+        {
+          "key": "OCTAV",
+          "type": "Dropdown",
+          "defaultValue": 6,
+          "options": [
+            {
+              "label": "5 옥타브",
+              "value": "5"
+            },
+            {
+              "label": "6 옥타브",
+              "value": "6"
+            },
+            {
+              "label": "7 옥타브",
+              "value": "7"
+            },
+            {
+              "label": "8 옥타브",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "TONE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "도",
+              "value": "1"
+            },
+            {
+              "label": "도#",
+              "value": "2"
+            },
+            {
+              "label": "레",
+              "value": "3"
+            },
+            {
+              "label": "레#",
+              "value": "4"
+            },
+            {
+              "label": "미",
+              "value": "5"
+            },
+            {
+              "label": "파",
+              "value": "6"
+            },
+            {
+              "label": "파#",
+              "value": "7"
+            },
+            {
+              "label": "솔",
+              "value": "8"
+            },
+            {
+              "label": "솔#",
+              "value": "9"
+            },
+            {
+              "label": "라",
+              "value": "10"
+            },
+            {
+              "label": "라#",
+              "value": "11"
+            },
+            {
+              "label": "시",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "LENGTH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Dance",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Dance"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "까불까불",
+              "value": "1"
+            },
+            {
+              "label": "빙글빙글",
+              "value": "2"
+            },
+            {
+              "label": "살랑살랑",
+              "value": "3"
+            },
+            {
+              "label": "뱅그르르",
+              "value": "4"
+            },
+            {
+              "label": "실룩실룩",
+              "value": "5"
+            },
+            {
+              "label": "쿵짝쿵짝",
+              "value": "6"
+            },
+            {
+              "label": "무작위",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Sound_record",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Sound_record"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "무작위",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Sound_volume",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Sound_volume"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "작게",
+              "value": "0"
+            },
+            {
+              "label": "보통으로",
+              "value": "1"
+            },
+            {
+              "label": "크게",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Sound_play",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Sound_play"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "자동차",
+              "value": "0"
+            },
+            {
+              "label": "경찰차",
+              "value": "1"
+            },
+            {
+              "label": "소방차",
+              "value": "2"
+            },
+            {
+              "label": "박수",
+              "value": "3"
+            },
+            {
+              "label": "뾰로롱",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Sound_play_animal",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Sound_play_animal"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 16,
+          "options": [
+            {
+              "label": "돼지",
+              "value": "16"
+            },
+            {
+              "label": "양",
+              "value": "17"
+            },
+            {
+              "label": "소",
+              "value": "18"
+            },
+            {
+              "label": "말",
+              "value": "19"
+            },
+            {
+              "label": "오리",
+              "value": "20"
+            },
+            {
+              "label": "암탉",
+              "value": "21"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    },
+    {
+      "type": "Talebot_Sound_play_praise",
+      "category": "hardware_talebot",
+      "label": {
+        "ko": "Talebot_Sound_play_praise"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 32,
+          "options": [
+            {
+              "label": "좋아!",
+              "value": "32"
+            },
+            {
+              "label": "맞아!",
+              "value": "33"
+            },
+            {
+              "label": "훌륭해!",
+              "value": "34"
+            },
+            {
+              "label": "우아!",
+              "value": "35"
+            },
+            {
+              "label": "만세!",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Talebot Pro"
+      }
+    }
+  ]
+}

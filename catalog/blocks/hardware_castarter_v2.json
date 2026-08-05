@@ -1,0 +1,1494 @@
+{
+  "category": "hardware_castarter_v2",
+  "blocks": [
+    {
+      "type": "castarterv2_get_Analog_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_Analog_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_analog_list",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_analog_value",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_analog_value_map",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_analog_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_digital_list",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_digital_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "A0",
+              "value": "14"
+            },
+            {
+              "label": "A1",
+              "value": "15"
+            },
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_digital_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_digital_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_digital_dis",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_digital_dis"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "3"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_digital",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "3"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_ultrasonic_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_ultrasonic_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_ultrasonic_init",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_ultrasonic_init"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_ultrasonic_value",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_ultrasonic_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_dht_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_dht_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_dht_temp_value",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_dht_temp_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "12"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_get_dht_humi_value",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_get_dht_humi_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "12"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarter_v2_highlow_list",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarter_v2_highlow_list"
+      },
+      "params": [
+        {
+          "key": "VELUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.led_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.led_off",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_toggle_pin",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_toggle_pin"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "13"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "castarter_v2_highlow_list",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_pwm_list",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_pwm_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_digital_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_digital_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_digital_pwm",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_pwm_list",
+            "params": [
+              "11"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarter_v2_tone_list",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarter_v2_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarter_v2_tone_value",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarter_v2_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "castarter_v2_tone_value",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarter_v2_octave_list",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarter_v2_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_tone_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_tone_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_tone",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_tone"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "castarter_v2_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarter_v2_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_servo_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_servo_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_servo",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "13"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_analog_rgbled_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_analog_rgbled_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_analog_rgbled",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_analog_rgbled"
+      },
+      "params": [
+        {
+          "key": "R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_neopixel_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_neopixel_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_neopixel_init",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_neopixel_init"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_neopixel_dis",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_neopixel_dis"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarterv2_digital_list",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarter_v2_i2clcd_row",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarter_v2_i2clcd_row"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarter_v2_i2clcd_col",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarter_v2_i2clcd_col"
+      },
+      "params": [
+        {
+          "key": "COL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_i2clcd_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_i2clcd_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_i2clcd_init",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_i2clcd_init"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_i2clcd_print",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_i2clcd_print"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarter_v2_i2clcd_row",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarter_v2_i2clcd_col",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "text",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_i2clcd_emotion",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_i2clcd_emotion"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarter_v2_i2clcd_row",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "castarter_v2_i2clcd_col",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TEXT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.emoticonHeart",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.emoticonSmile",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.emoticonSad",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.emoticonTempsimbol",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.emoticonTempsine",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.emoticonHumisimbol",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_set_i2clcd_clear",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_set_i2clcd_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    },
+    {
+      "type": "castarterv2_blank_title",
+      "category": "hardware_castarter_v2",
+      "label": {
+        "ko": "castarterv2_blank_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "castarter_v2"
+      }
+    }
+  ]
+}

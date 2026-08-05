@@ -1,0 +1,216 @@
+{
+  "category": "ai_utilize_audio",
+  "blocks": [
+    {
+      "type": "audio_title",
+      "category": "ai_utilize_audio",
+      "label": {
+        "ko": "audio_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "audio"
+      }
+    },
+    {
+      "type": "check_microphone",
+      "category": "ai_utilize_audio",
+      "label": {
+        "ko": "마이크가 연결되었는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "audio"
+      }
+    },
+    {
+      "type": "get_microphone_volume",
+      "category": "ai_utilize_audio",
+      "label": {
+        "ko": "마이크 소리 크기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "audio"
+      }
+    },
+    {
+      "type": "speech_to_text_title",
+      "category": "ai_utilize_audio",
+      "label": {
+        "ko": "speech_to_text_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "audio"
+      }
+    },
+    {
+      "type": "speech_to_text_convert",
+      "category": "ai_utilize_audio",
+      "label": {
+        "ko": "음성 인식하기"
+      },
+      "params": [
+        {
+          "key": "LANG",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "한국어",
+              "value": "Kor"
+            },
+            {
+              "label": "영어",
+              "value": "Eng"
+            },
+            {
+              "label": "일본어",
+              "value": "Jpn"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "audio"
+      }
+    },
+    {
+      "type": "timed_speech_to_text_convert",
+      "category": "ai_utilize_audio",
+      "label": {
+        "ko": "초 동안 음성 인식하기"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "LANG",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "한국어",
+              "value": "Kor"
+            },
+            {
+              "label": "영어",
+              "value": "Eng"
+            },
+            {
+              "label": "일본어",
+              "value": "Jpn"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "audio"
+      }
+    },
+    {
+      "type": "set_visible_speech_to_text",
+      "category": "ai_utilize_audio",
+      "label": {
+        "ko": "인식한 음성"
+      },
+      "params": [
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "보이기",
+              "value": "SHOW"
+            },
+            {
+              "label": "숨기기",
+              "value": "HIDE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "audio"
+      }
+    },
+    {
+      "type": "speech_to_text_get_value",
+      "category": "ai_utilize_audio",
+      "label": {
+        "ko": "음성을 문자로 바꾼 값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "audio"
+      }
+    }
+  ]
+}

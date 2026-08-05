@@ -1,0 +1,505 @@
+{
+  "category": "hardware_lite_sensorboard_lite",
+  "blocks": [
+    {
+      "type": "sensorboardlite_get_named_sensor_value",
+      "category": "hardware_lite_sensorboard_lite",
+      "label": {
+        "ko": "sensorboardlite_get_named_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "소리",
+              "value": "0"
+            },
+            {
+              "label": "빛 감지",
+              "value": "1"
+            },
+            {
+              "label": "슬라이더",
+              "value": "2"
+            },
+            {
+              "label": "온도",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "sensorboard_lite"
+      }
+    },
+    {
+      "type": "sensorboardlite_is_button_pressed",
+      "category": "hardware_lite_sensorboard_lite",
+      "label": {
+        "ko": "sensorboardlite_is_button_pressed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간",
+              "value": "8"
+            },
+            {
+              "label": "파란",
+              "value": "9"
+            },
+            {
+              "label": "노랑",
+              "value": "10"
+            },
+            {
+              "label": "초록",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "sensorboard_lite"
+      }
+    },
+    {
+      "type": "sensorboardlite_led",
+      "category": "hardware_lite_sensorboard_lite",
+      "label": {
+        "ko": "sensorboardlite_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간",
+              "value": "2"
+            },
+            {
+              "label": "초록",
+              "value": "3"
+            },
+            {
+              "label": "파란",
+              "value": "4"
+            },
+            {
+              "label": "노랑",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "255"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "sensorboard_lite"
+      }
+    },
+    {
+      "type": "sensorboardlite_get_number_sensor_value",
+      "category": "hardware_lite_sensorboard_lite",
+      "label": {
+        "ko": "sensorboardlite_get_number_sensor_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "sensorboard_lite"
+      }
+    },
+    {
+      "type": "sensorboardlite_get_digital_value",
+      "category": "hardware_lite_sensorboard_lite",
+      "label": {
+        "ko": "sensorboardlite_get_digital_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "sensorboard_lite"
+      }
+    },
+    {
+      "type": "sensorboardlite_toggle_digital",
+      "category": "hardware_lite_sensorboard_lite",
+      "label": {
+        "ko": "sensorboardlite_toggle_digital"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "255"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "sensorboard_lite"
+      }
+    },
+    {
+      "type": "sensorboardlite_toggle_pwm",
+      "category": "hardware_lite_sensorboard_lite",
+      "label": {
+        "ko": "sensorboardlite_toggle_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "sensorboard_lite"
+      }
+    },
+    {
+      "type": "sensorboardlite_convert_scale",
+      "category": "hardware_lite_sensorboard_lite",
+      "label": {
+        "ko": "sensorboardlite_convert_scale"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_number_sensor_value",
+            "params": [
+              {
+                "type": "arduino_get_sensor_number",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "sensorboard_lite"
+      }
+    }
+  ]
+}

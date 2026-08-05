@@ -1,0 +1,2059 @@
+{
+  "category": "hardware_zerone",
+  "blocks": [
+    {
+      "type": "zerone_value",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_value"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_left_proximity",
+              "value": "LEFT_PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_right_proximity",
+              "value": "RIGHT_PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_front_proximity",
+              "value": "FRONT_PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_rear_proximity",
+              "value": "REAR_PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_gesture",
+              "value": "GESTURE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_color_number",
+              "value": "COLOR_NUMBER"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_color_pattern",
+              "value": "COLOR_PATTERN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_color_r",
+              "value": "COLOR_R"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_color_g",
+              "value": "COLOR_G"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_color_b",
+              "value": "COLOR_B"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_floor",
+              "value": "FLOOR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_button",
+              "value": "BUTTON"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_signal_strength",
+              "value": "SIGNAL_STRENGTH"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_is_gesture",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_is_gesture"
+      },
+      "params": [
+        {
+          "key": "GESTURE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_gesture_forward",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_gesture_backward",
+              "value": "BACKWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_gesture_leftward",
+              "value": "LEFTWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_gesture_rightward",
+              "value": "RIGHTWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_gesture_near",
+              "value": "NEAR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_gesture_far",
+              "value": "FAR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_gesture_long_touch",
+              "value": "LONG_TOUCH"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_touching_color",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_touching_color"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "검은색",
+              "value": "BLACK"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_is_color_pattern",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_is_color_pattern"
+      },
+      "params": [
+        {
+          "key": "COLOR1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "BLACK"
+            },
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            }
+          ]
+        },
+        {
+          "key": "COLOR2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "BLACK"
+            },
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_button_state",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_button_state"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "클릭했는가",
+              "value": "CLICKED"
+            },
+            {
+              "label": "더블클릭했는가",
+              "value": "DOUBLE_CLICKED"
+            },
+            {
+              "label": "길게~눌렀는가",
+              "value": "LONG_PRESSED"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_boolean",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_boolean"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_battery_state_normal",
+              "value": "BATTERY_NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_state_low",
+              "value": "BATTERY_LOW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_state_empty",
+              "value": "BATTERY_EMPTY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_move_forward_unit",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_move_forward_unit"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "cm",
+              "value": "CM"
+            },
+            {
+              "label": "초",
+              "value": "SEC"
+            },
+            {
+              "label": "펄스",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_move_backward_unit",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_move_backward_unit"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "cm",
+              "value": "CM"
+            },
+            {
+              "label": "초",
+              "value": "SEC"
+            },
+            {
+              "label": "펄스",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_turn_unit_in_place",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_turn_unit_in_place"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "DEG"
+            },
+            {
+              "label": "초",
+              "value": "SEC"
+            },
+            {
+              "label": "펄스",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_change_both_wheels_by",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_change_both_wheels_by"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_set_both_wheels_to",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_set_both_wheels_to"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_change_wheel_by",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_change_wheel_by"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_set_wheel_to",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_set_wheel_to"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_follow_line",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_follow_line"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_follow_line_until",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_follow_line_until"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "아무 색",
+              "value": "ANY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_follow_line_until_intersection",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_follow_line_until_intersection"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_cross_intersection",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_cross_intersection"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_turn_at_intersection",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_turn_at_intersection"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "뒤쪽",
+              "value": "BACK"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_jump_line",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_jump_line"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_set_following_speed_to",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_set_following_speed_to"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_stop",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_set_led_to",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_set_led_to"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_head",
+              "value": "LEFT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_head",
+              "value": "RIGHT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_tail",
+              "value": "LEFT_TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_tail",
+              "value": "RIGHT_TAIL"
+            },
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "머리",
+              "value": "HEAD"
+            },
+            {
+              "label": "꼬리",
+              "value": "TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_pick_led",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_pick_led"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_head",
+              "value": "LEFT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_head",
+              "value": "RIGHT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_tail",
+              "value": "LEFT_TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_tail",
+              "value": "RIGHT_TAIL"
+            },
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "머리",
+              "value": "HEAD"
+            },
+            {
+              "label": "꼬리",
+              "value": "TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_change_led_by_rgb",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_change_led_by_rgb"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_head",
+              "value": "LEFT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_head",
+              "value": "RIGHT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_tail",
+              "value": "LEFT_TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_tail",
+              "value": "RIGHT_TAIL"
+            },
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "머리",
+              "value": "HEAD"
+            },
+            {
+              "label": "꼬리",
+              "value": "TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_set_led_to_rgb",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_set_led_to_rgb"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_head",
+              "value": "LEFT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_head",
+              "value": "RIGHT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_tail",
+              "value": "LEFT_TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_tail",
+              "value": "RIGHT_TAIL"
+            },
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "머리",
+              "value": "HEAD"
+            },
+            {
+              "label": "꼬리",
+              "value": "TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_clear_led",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_clear_led"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_head",
+              "value": "LEFT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_head",
+              "value": "RIGHT_HEAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_left_tail",
+              "value": "LEFT_TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_right_tail",
+              "value": "RIGHT_TAIL"
+            },
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "머리",
+              "value": "HEAD"
+            },
+            {
+              "label": "꼬리",
+              "value": "TAIL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_play_sound_times",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_play_sound_times"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "삐",
+              "value": "BEEP"
+            },
+            {
+              "label": "무작위 삐",
+              "value": "RANDOM_BEEP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_noise",
+              "value": "NOISE"
+            },
+            {
+              "label": "사이렌",
+              "value": "SIREN"
+            },
+            {
+              "label": "엔진",
+              "value": "ENGINE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_chop",
+              "value": "CHOP"
+            },
+            {
+              "label": "로봇",
+              "value": "ROBOT"
+            },
+            {
+              "label": "디비디비딥",
+              "value": "DIBIDIBIDIP"
+            },
+            {
+              "label": "잘 했어요",
+              "value": "GOOD_JOB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_happy",
+              "value": "HAPPY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_angry",
+              "value": "ANGRY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_sad",
+              "value": "SAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_sleep",
+              "value": "SLEEP"
+            },
+            {
+              "label": "행진",
+              "value": "MARCH"
+            },
+            {
+              "label": "생일",
+              "value": "BIRTHDAY"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_play_sound_times_until_done",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_play_sound_times_until_done"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "삐",
+              "value": "BEEP"
+            },
+            {
+              "label": "무작위 삐",
+              "value": "RANDOM_BEEP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_noise",
+              "value": "NOISE"
+            },
+            {
+              "label": "사이렌",
+              "value": "SIREN"
+            },
+            {
+              "label": "엔진",
+              "value": "ENGINE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_chop",
+              "value": "CHOP"
+            },
+            {
+              "label": "로봇",
+              "value": "ROBOT"
+            },
+            {
+              "label": "디비디비딥",
+              "value": "DIBIDIBIDIP"
+            },
+            {
+              "label": "잘 했어요",
+              "value": "GOOD_JOB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_happy",
+              "value": "HAPPY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_angry",
+              "value": "ANGRY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_sad",
+              "value": "SAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_sleep",
+              "value": "SLEEP"
+            },
+            {
+              "label": "행진",
+              "value": "MARCH"
+            },
+            {
+              "label": "생일",
+              "value": "BIRTHDAY"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_change_buzzer_by",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_change_buzzer_by"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_set_buzzer_to",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_set_buzzer_to"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_clear_sound",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_clear_sound"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_play_note",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_play_note"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_note_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_c_sharp",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d_sharp",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f_sharp",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g_sharp",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a_sharp",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_play_note_for",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_play_note_for"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_note_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_c_sharp",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d_sharp",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f_sharp",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g_sharp",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a_sharp",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_rest_for",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_rest_for"
+      },
+      "params": [
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.25"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_change_tempo_by",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_change_tempo_by"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    },
+    {
+      "type": "zerone_set_tempo_to",
+      "category": "hardware_zerone",
+      "label": {
+        "ko": "zerone_set_tempo_to"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zerone"
+      }
+    }
+  ]
+}

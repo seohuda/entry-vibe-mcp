@@ -1,0 +1,726 @@
+{
+  "category": "hardware_runcoding_display",
+  "blocks": [
+    {
+      "type": "runcoding_led_analog_list",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_emotion_list",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_emotion_list"
+      },
+      "params": [
+        {
+          "key": "EMOTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "웃는얼굴",
+              "value": "smile"
+            },
+            {
+              "label": "슬픈표정",
+              "value": "sad"
+            },
+            {
+              "label": "화난얼굴",
+              "value": "angry"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_get_analog_value",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "runcoding_led_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_get_analog_value_map",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "runcoding_led_get_analog_value",
+            "params": [
+              {
+                "type": "runcoding_led_analog_list",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_get_digital",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              2
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_get_digital_toggle",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_get_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_get_pulse",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_get_pulse"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              2
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_get_timer",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_get_timer"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_toggle_led",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_toggle_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              3
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_digital_pwm",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_pwm_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_display",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_display"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "PLAY"
+            ]
+          }
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "SIZE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1 (작게)",
+              "value": "1"
+            },
+            {
+              "label": "2 (중간)",
+              "value": "2"
+            },
+            {
+              "label": "3 (크게)",
+              "value": "3"
+            },
+            {
+              "label": "4 (매우크게)",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_display_clear",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_display_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_display_smile",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_display_smile"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_display_sad",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_display_sad"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_display_emotion",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_display_emotion"
+      },
+      "params": [
+        {
+          "key": "EMOTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "runcoding_led_emotion_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_animation_star",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_animation_star"
+      },
+      "params": [
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_animation_flower",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_animation_flower"
+      },
+      "params": [
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_animation_snow",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_animation_snow"
+      },
+      "params": [
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    },
+    {
+      "type": "runcoding_led_animation_stop",
+      "category": "hardware_runcoding_display",
+      "label": {
+        "ko": "runcoding_led_animation_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Runcoding_display"
+      }
+    }
+  ]
+}

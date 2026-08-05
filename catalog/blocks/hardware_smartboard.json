@@ -1,0 +1,537 @@
+{
+  "category": "hardware_smartboard",
+  "blocks": [
+    {
+      "type": "smartBoard_get_named_sensor_value",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "SEN1",
+              "value": "2"
+            },
+            {
+              "label": "SEN2",
+              "value": "3"
+            },
+            {
+              "label": "SEN3",
+              "value": "4"
+            },
+            {
+              "label": "SEN4",
+              "value": "5"
+            },
+            {
+              "label": "SEN5",
+              "value": "0"
+            },
+            {
+              "label": "SEN6",
+              "value": "1"
+            },
+            {
+              "label": "SEN7",
+              "value": "6"
+            },
+            {
+              "label": "SEN8",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_convert_scale",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "값의 범위를 ~ 에서 ~ (으)로 바꾼값"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "smartBoard_get_named_sensor_value",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_is_button_pressed",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "버튼을 눌렀는가?"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Red",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.Yellow",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.Green",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.Blue",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_set_dc_motor_direction",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "DC 모터를 방향으로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "MT1",
+              "value": "4"
+            },
+            {
+              "label": "MT2",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Clockwise",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.Counterclockwise",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_set_dc_motor_speed",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "DC모터를"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "MT1",
+              "value": "5"
+            },
+            {
+              "label": "MT2",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Stopmotor",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.Slowermotor",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.Slowmotor",
+              "value": "115"
+            },
+            {
+              "label": "Lang.Blocks.Normalmotor",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.Fastmotor",
+              "value": "205"
+            },
+            {
+              "label": "Lang.Blocks.Fastermotor",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_set_dc_motor_pwm",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "DC모터를 속도로 돌리기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "MT1",
+              "value": "5"
+            },
+            {
+              "label": "MT2",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_set_servo_speed",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "번 서보모터의 속도를"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "SM3",
+              "value": "9"
+            },
+            {
+              "label": "SM2",
+              "value": "10"
+            },
+            {
+              "label": "SM1",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Slowservo",
+              "value": "187"
+            },
+            {
+              "label": "Lang.Blocks.Normalservo",
+              "value": "193"
+            },
+            {
+              "label": "Lang.Blocks.Fastservo",
+              "value": "243"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_set_servo_angle",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "번 서보모터를 도 로 움직이기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "SM3",
+              "value": "9"
+            },
+            {
+              "label": "SM2",
+              "value": "10"
+            },
+            {
+              "label": "SM1",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_text",
+            "params": [
+              "180"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_set_number_eight_pin",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "포트를"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "GS1",
+              "value": "3"
+            },
+            {
+              "label": "GS2",
+              "value": "2"
+            },
+            {
+              "label": "RELAY",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.On",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.Off",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    },
+    {
+      "type": "smartBoard_set_gs1_pwm",
+      "category": "hardware_smartboard",
+      "label": {
+        "ko": "GS1 포트의 PWM을 로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartBoard"
+      }
+    }
+  ]
+}

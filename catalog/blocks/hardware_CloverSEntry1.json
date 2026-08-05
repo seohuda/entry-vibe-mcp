@@ -1,0 +1,878 @@
+{
+  "category": "hardware_CloverSEntry1",
+  "blocks": [
+    {
+      "type": "CloverSEntry1_set_digital",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_set_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "pinMaps.Digital_Port0",
+          "options": [
+            {
+              "label": "녹색",
+              "value": "pinMaps.Digital_Port0"
+            },
+            {
+              "label": "파랑색",
+              "value": "pinMaps.Digital_Port1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "켠다",
+              "value": "0"
+            },
+            {
+              "label": "끈다",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_set_digital1",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_set_digital1"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "pinMaps.Digital_Port2",
+          "options": [
+            {
+              "label": "디지털3",
+              "value": "pinMaps.Digital_Port2"
+            },
+            {
+              "label": "디지털5",
+              "value": "pinMaps.Digital_Port3"
+            },
+            {
+              "label": "디지털6",
+              "value": "pinMaps.Digital_Port4"
+            },
+            {
+              "label": "디지털9",
+              "value": "pinMaps.Digital_Port5"
+            },
+            {
+              "label": "디지털10",
+              "value": "pinMaps.Digital_Port6"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "HIGH",
+              "value": "1"
+            },
+            {
+              "label": "LOW",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_tone_list",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_tone_value",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "CloverSEntry1_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_octave_list",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_set_tone",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_set_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "CloverSEntry1_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "CloverSEntry1_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_set_servo",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "pinMaps.Digital_Port2",
+          "options": [
+            {
+              "label": "1",
+              "value": "pinMaps.Digital_Port2"
+            },
+            {
+              "label": "2",
+              "value": "pinMaps.Digital_Port3"
+            },
+            {
+              "label": "3",
+              "value": "pinMaps.Digital_Port4"
+            },
+            {
+              "label": "4",
+              "value": "pinMaps.Digital_Port5"
+            },
+            {
+              "label": "5",
+              "value": "pinMaps.Digital_Port6"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 90
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_set_motor",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_set_motor"
+      },
+      "params": [
+        {
+          "key": "MOTOR_ANGLE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "0"
+            },
+            {
+              "label": "오른쪽",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "MOTOR_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "앞",
+              "value": "0"
+            },
+            {
+              "label": "뒤",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "MOTOR_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "200"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_set_fnd",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_set_fnd"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 0
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_set_rgb",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_set_rgb"
+      },
+      "params": [
+        {
+          "key": "COLOR_R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 100
+        },
+        {
+          "key": "COLOR_G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 100
+        },
+        {
+          "key": "COLOR_B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 100
+        },
+        {
+          "key": "COLOR_W",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_get_digital",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "pinMaps.SW1",
+          "options": [
+            {
+              "label": "1",
+              "value": "pinMaps.SW1"
+            },
+            {
+              "label": "2",
+              "value": "pinMaps.SW2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_get_digital_servo",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_get_digital_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 3,
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_get_analog_value",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_get_analog_value_map",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_get_ultrasonic_value",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_get_ultrasonic_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_get_cds_value",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_get_cds_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_get_temp_value",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_get_temp_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_clover_set_led",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_clover_set_led"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "켠다",
+              "value": "0"
+            },
+            {
+              "label": "끈다",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    },
+    {
+      "type": "CloverSEntry1_clover_get_sw",
+      "category": "hardware_CloverSEntry1",
+      "label": {
+        "ko": "CloverSEntry1_clover_get_sw"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CloverSEntry1"
+      }
+    }
+  ]
+}

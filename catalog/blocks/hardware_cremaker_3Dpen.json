@@ -1,0 +1,346 @@
+{
+  "category": "hardware_cremaker_3Dpen",
+  "blocks": [
+    {
+      "type": "cremaker3Dpen_analog_list",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_analog_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_temp_sensor",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            },
+            {
+              "label": "A6",
+              "value": "6"
+            },
+            {
+              "label": "A7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_get_analog_value",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_get_analog_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_calculate_temperature",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_calculate_temperature"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_get_button_state",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_get_button_state"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_btn_A",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_btn_B",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_btn_C",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_btn_D",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_set_motor_enable",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_set_motor_enable"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_motor_enable_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_motor_enable_off",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_set_motor_direction",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_set_motor_direction"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_motor_ccw_dir",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_motor_cw_dir",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_set_motor_speed",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_set_motor_speed"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_set_heater",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_set_heater"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_motor_heater_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_motor_heater_off",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_set_led_toggle",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_set_led_toggle"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_led_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_led_off",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    },
+    {
+      "type": "cremaker3Dpen_show_text_to_screen",
+      "category": "hardware_cremaker_3Dpen",
+      "label": {
+        "ko": "cremaker3Dpen_show_text_to_screen"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_screen_text_ok",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_screen_text_heating",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.cremaker3Dpen_screen_text_cooling",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cremaker_3Dpen"
+      }
+    }
+  ]
+}

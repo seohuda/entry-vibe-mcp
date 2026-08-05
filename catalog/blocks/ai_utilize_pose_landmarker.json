@@ -1,0 +1,231 @@
+{
+  "category": "ai_utilize_pose_landmarker",
+  "blocks": [
+    {
+      "type": "pose_landmarker_title",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "pose_landmarker_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    },
+    {
+      "type": "when_pose_landmarker",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "사람을 인식했을 때"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    },
+    {
+      "type": "pose_landmarker",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "사람 인식"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    },
+    {
+      "type": "draw_detected_pose",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "인식한 사람"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    },
+    {
+      "type": "check_detected_pose",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "사람을 인식했는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    },
+    {
+      "type": "count_detected_pose",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "인식한 사람의 수"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    },
+    {
+      "type": "locate_to_pose",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "번째의 사람의 (으)로 이동하기"
+      },
+      "params": [
+        {
+          "key": "POSE",
+          "type": "Unknown"
+        },
+        {
+          "key": "POSE_POINT",
+          "type": "Unknown"
+        },
+        {
+          "key": "2",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    },
+    {
+      "type": "locate_time_to_pose",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "초 동안 번째의 사람의 (으)로 이동하기"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "POSE",
+          "type": "Unknown"
+        },
+        {
+          "key": "POSE_POINT",
+          "type": "Unknown"
+        },
+        {
+          "key": "3",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    },
+    {
+      "type": "axis_detected_pose",
+      "category": "ai_utilize_pose_landmarker",
+      "label": {
+        "ko": "번째 사람의 의 좌표"
+      },
+      "params": [
+        {
+          "key": "POSE",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "POSE_POINT",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "AXIS",
+          "type": "Unknown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "poseLandmarker"
+      }
+    }
+  ]
+}

@@ -1,0 +1,661 @@
+{
+  "category": "expansion_weather",
+  "blocks": [
+    {
+      "type": "weather_title",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "weather_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "check_city_weather",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의 날씨가 인가?"
+      },
+      "params": [
+        {
+          "key": "DATE",
+          "type": "Unknown"
+        },
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "SUBLOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "WEATHER",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "check_city_finedust",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의 미세먼지 등급이 인가?"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "SUBLOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "FINEDUST",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_city_weather_data",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의"
+      },
+      "params": [
+        {
+          "key": "DATE",
+          "type": "Unknown"
+        },
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "SUBLOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "TYPE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_current_city_weather_data",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "SUBLOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "TYPE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_today_city_temperature",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "오늘 의 시 기온"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "SUBLOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "TIME",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "check_weather",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의 날씨가 인가?"
+      },
+      "params": [
+        {
+          "key": "DATE",
+          "type": "Unknown"
+        },
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "WEATHER",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "check_finedust",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의 미세먼지 등급이 인가?"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "FINEDUST",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_weather_data",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의"
+      },
+      "params": [
+        {
+          "key": "DATE",
+          "type": "Unknown"
+        },
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "TYPE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_current_weather_data",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "TYPE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_today_temperature",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "오늘 의 시 기온"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Unknown"
+        },
+        {
+          "key": "TIME",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_cur_weather",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의 날씨"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_cur_wind",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의 풍향"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_cur_weather_data",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        },
+        {
+          "key": "TYPE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "check_cur_weather",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의 날씨가 인가?"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        },
+        {
+          "key": "WEATHER",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "check_cur_finddust",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "현재 의 미세먼지 등급이 인가?"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        },
+        {
+          "key": "FINEDUST",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_day_weather",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의 날씨"
+      },
+      "params": [
+        {
+          "key": "DATE",
+          "type": "Unknown"
+        },
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_day_weather_data",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의"
+      },
+      "params": [
+        {
+          "key": "DATE",
+          "type": "Unknown"
+        },
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        },
+        {
+          "key": "TYPE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "check_day_weather",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의 날씨가 인가?"
+      },
+      "params": [
+        {
+          "key": "DATE",
+          "type": "Unknown"
+        },
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        },
+        {
+          "key": "WEATHER",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_time_weather",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의 시 날씨"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "get_time_weather_data",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의 시"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Unknown"
+        },
+        {
+          "key": "TYPE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    },
+    {
+      "type": "check_time_weather",
+      "category": "expansion_weather",
+      "label": {
+        "ko": "의 시 날씨가 인가?"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "get_korea_area_code",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Unknown"
+        },
+        {
+          "key": "WEATHER",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "weather"
+      }
+    }
+  ]
+}

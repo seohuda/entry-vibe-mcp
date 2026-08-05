@@ -1,0 +1,1141 @@
+{
+  "category": "hardware_ITPLE_board",
+  "blocks": [
+    {
+      "type": "ITPLE_push_button",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_push_button"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "A0",
+          "options": [
+            {
+              "label": "위쪽",
+              "value": "A0"
+            },
+            {
+              "label": "아래쪽",
+              "value": "A1"
+            },
+            {
+              "label": "왼쪽",
+              "value": "7"
+            },
+            {
+              "label": "오른쪽",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_get_button_value",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_get_button_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "위쪽",
+              "value": "A0"
+            },
+            {
+              "label": "아래쪽",
+              "value": "A1"
+            },
+            {
+              "label": "왼쪽",
+              "value": "7"
+            },
+            {
+              "label": "오른쪽",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_get_sensor_value",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_get_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "조도",
+              "value": "A2"
+            },
+            {
+              "label": "소리",
+              "value": "A3"
+            },
+            {
+              "label": "왼쪽 라인",
+              "value": "A6"
+            },
+            {
+              "label": "오른쪽 라인",
+              "value": "A7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_is_key_pressed",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_is_key_pressed"
+      },
+      "params": [
+        {
+          "key": "KEY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "위쪽",
+              "value": "A0"
+            },
+            {
+              "label": "아래쪽",
+              "value": "A1"
+            },
+            {
+              "label": "왼쪽",
+              "value": "7"
+            },
+            {
+              "label": "오른쪽",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_value_sensor",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_value_sensor"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "조도",
+              "value": "2"
+            },
+            {
+              "label": "소리",
+              "value": "3"
+            },
+            {
+              "label": "왼쪽 라인",
+              "value": "6"
+            },
+            {
+              "label": "오른쪽 라인",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "500"
+            ]
+          }
+        },
+        {
+          "key": "COMPARISON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "크다",
+              "value": ">"
+            },
+            {
+              "label": "크거나같다",
+              "value": ">="
+            },
+            {
+              "label": "같다",
+              "value": "=="
+            },
+            {
+              "label": "작거나같다",
+              "value": "<="
+            },
+            {
+              "label": "작다",
+              "value": "<"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_get_ultrasonic_value",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_get_ultrasonic_value"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "13"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "12"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_color_picker_value",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_color_picker_value"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_rgb_to_color_value",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_rgb_to_color_value"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_turn_led",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_turn_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨강",
+              "value": "10"
+            },
+            {
+              "label": "파랑",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_tone_list",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_tone_value",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "ITPLE_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_octave_list",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_tone",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "ITPLE_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "ITPLE_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_motor_direction",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_motor_direction"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "2",
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "앞쪽",
+              "value": "0"
+            },
+            {
+              "label": "뒤쪽",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_motor_speed",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_motor_speed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "5",
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "5"
+            },
+            {
+              "label": "오른쪽",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_servo",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "9"
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "180"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_neopixel_init",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_neopixel_init"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_neopixel",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_neopixel"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "text",
+          "defaultValue": {
+            "type": "ITPLE_color_picker_value",
+            "params": [
+              "#FF0000"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_neopixel_all",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_neopixel_all"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "text",
+          "defaultValue": {
+            "type": "ITPLE_color_picker_value",
+            "params": [
+              "#00FF00"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_neopixel_range",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_neopixel_range"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "END",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "text",
+          "defaultValue": {
+            "type": "ITPLE_color_picker_value",
+            "params": [
+              "#0000FF"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_neopixel_rotate",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_neopixel_rotate"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "-1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "STEPS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_neopixel_brightness",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_neopixel_brightness"
+      },
+      "params": [
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_set_neopixel_blink",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_set_neopixel_blink"
+      },
+      "params": [
+        {
+          "key": "SIDE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "0"
+            },
+            {
+              "label": "오른쪽",
+              "value": "1"
+            },
+            {
+              "label": "전체",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "text",
+          "defaultValue": {
+            "type": "ITPLE_color_picker_value",
+            "params": [
+              "#FFFFFF"
+            ]
+          }
+        },
+        {
+          "key": "INTERVAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    },
+    {
+      "type": "ITPLE_stop_neopixel_blink",
+      "category": "hardware_ITPLE_board",
+      "label": {
+        "ko": "ITPLE_stop_neopixel_blink"
+      },
+      "params": [
+        {
+          "key": "SIDE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "0"
+            },
+            {
+              "label": "오른쪽",
+              "value": "1"
+            },
+            {
+              "label": "전체",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ITPLE"
+      }
+    }
+  ]
+}

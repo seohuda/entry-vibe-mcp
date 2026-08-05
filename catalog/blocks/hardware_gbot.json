@@ -1,0 +1,719 @@
+{
+  "category": "hardware_gbot",
+  "blocks": [
+    {
+      "type": "g_bot_analog_list",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_analog_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            },
+            {
+              "label": "A6",
+              "value": "6"
+            },
+            {
+              "label": "A7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_ext_analog_list",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_ext_analog_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_get_analog_value",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_get_analog_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_get_analog_value_map",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_get_analog_value_map"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_get_ultrasonic_value",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_get_ultrasonic_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_get_digital",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_get_digital"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_toggle_led",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_toggle_led"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_digital_pwm",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_digital_pwm"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_set_tone",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_set_tone"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_set_servo",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_set_servo"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_set_led_init",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_set_led_init"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "11"
+            ]
+          }
+        },
+        {
+          "key": "PORT3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "12"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_get_brightness",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_get_brightness"
+      },
+      "params": [
+        {
+          "key": "BRIGHT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_get_led_row",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_get_led_row"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_get_led_col",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_get_led_col"
+      },
+      "params": [
+        {
+          "key": "COL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_set_brightness",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_set_brightness"
+      },
+      "params": [
+        {
+          "key": "LEVEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "g_bot_get_brightness",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_get_row_col",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_get_row_col"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "row"
+            },
+            {
+              "label": "열",
+              "value": "column"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_led_onoff",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_led_onoff"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "g_bot_get_led_row",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "g_bot_get_led_col",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_led_output",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_led_output"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "g_bot_get_led_row",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "행",
+              "value": "row"
+            },
+            {
+              "label": "열",
+              "value": "column"
+            }
+          ]
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "11111111"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    },
+    {
+      "type": "g_bot_led_off_all",
+      "category": "hardware_gbot",
+      "label": {
+        "ko": "g_bot_led_off_all"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "18"
+            ]
+          }
+        },
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "GBot"
+      }
+    }
+  ]
+}

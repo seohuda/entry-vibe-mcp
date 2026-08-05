@@ -1,0 +1,435 @@
+{
+  "category": "hardware_abilix_Krypton0",
+  "blocks": [
+    {
+      "type": "Krypton0_turnon_motor",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_turnon_motor"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞",
+              "value": "Forward"
+            },
+            {
+              "label": "뒤",
+              "value": "Backward"
+            }
+          ]
+        },
+        {
+          "key": "VALUE_SPD",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    },
+    {
+      "type": "Krypton0_move_to_direction_during_secs",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_move_to_direction_during_secs"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞",
+              "value": "Forward"
+            },
+            {
+              "label": "뒤",
+              "value": "Backward"
+            }
+          ]
+        },
+        {
+          "key": "VALUE_SEC",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    },
+    {
+      "type": "Krypton0_turnoff_motor",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_turnoff_motor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    },
+    {
+      "type": "Krypton0_change_direction_during_secs",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_change_direction_during_secs"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    },
+    {
+      "type": "Krypton0_change_speed",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_change_speed"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    },
+    {
+      "type": "Krypton0_play_sound",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_play_sound"
+      },
+      "params": [
+        {
+          "key": "SOUND_VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "hello",
+              "value": "hello"
+            },
+            {
+              "label": "bye",
+              "value": "bye"
+            },
+            {
+              "label": "welcome",
+              "value": "welcome"
+            },
+            {
+              "label": "cheer",
+              "value": "cheer"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    },
+    {
+      "type": "Krypton0_get_sensor_data",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_get_sensor_data"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "적외선",
+              "value": "GRAY_INFRARED"
+            },
+            {
+              "label": "빛",
+              "value": "LIGHT"
+            },
+            {
+              "label": "소리센서",
+              "value": "MICROPHONE"
+            },
+            {
+              "label": "LED",
+              "value": "LED"
+            },
+            {
+              "label": "버튼",
+              "value": "BUTTON"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    },
+    {
+      "type": "Krypton0_button_pressed",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_button_pressed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    },
+    {
+      "type": "Krypton0_turnon_led",
+      "category": "hardware_abilix_Krypton0",
+      "label": {
+        "ko": "Krypton0_turnon_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "LED_VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켠다",
+              "value": "ON"
+            },
+            {
+              "label": "끈다",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ABILIX Krypton 0 for School"
+      }
+    }
+  ]
+}

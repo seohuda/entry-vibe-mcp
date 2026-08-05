@@ -1,0 +1,430 @@
+{
+  "category": "hardware_lite_wizwing_controller_lite",
+  "blocks": [
+    {
+      "type": "Wizwing_Drone_Controller_connect",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_connect"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_takeoff",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_takeoff"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_land",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_land"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_throttle",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_throttle"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_elevator",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_elevator"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_aileron",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_aileron"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_rudder",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_rudder"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_funled",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_funled"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_flip",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_flip"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Wizwing_Drone_Controller_flip_f",
+              "value": "f"
+            },
+            {
+              "label": "Lang.Blocks.Wizwing_Drone_Controller_flip_b",
+              "value": "b"
+            },
+            {
+              "label": "Lang.Blocks.Wizwing_Drone_Controller_flip_l",
+              "value": "l"
+            },
+            {
+              "label": "Lang.Blocks.Wizwing_Drone_Controller_flip_r",
+              "value": "r"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_speed",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_speed"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_emergency",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_emergency"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_opt",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_opt"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_gyroreset",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_gyroreset"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_headless",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_headless"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_diagonal",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_diagonal"
+      },
+      "params": [
+        {
+          "key": "STICK1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "STICK2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_circularflight",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_circularflight"
+      },
+      "params": [
+        {
+          "key": "STICK1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "STICK2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    },
+    {
+      "type": "Wizwing_Drone_Controller_photoflight",
+      "category": "hardware_lite_wizwing_controller_lite",
+      "label": {
+        "ko": "Wizwing_Drone_Controller_photoflight"
+      },
+      "params": [
+        {
+          "key": "STICK1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "STICK2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "wizwing_controller_lite"
+      }
+    }
+  ]
+}

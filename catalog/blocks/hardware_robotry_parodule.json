@@ -1,0 +1,1139 @@
+{
+  "category": "hardware_robotry_parodule",
+  "blocks": [
+    {
+      "type": "Parodule_Custom_Port_List",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Port_List"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.parodule_triangle",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.parodule_circle",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.parodule_square",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.parodule_cross",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Module_List",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Module_List"
+      },
+      "params": [
+        {
+          "key": "MODULE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.parodule_none",
+              "value": "Entry.Robotry_Parodule.moduleType.NONE"
+            },
+            {
+              "label": "Lang.Blocks.parodule_pixel",
+              "value": "Entry.Robotry_Parodule.moduleType.PIXEL"
+            },
+            {
+              "label": "Lang.Blocks.parodule_motor",
+              "value": "Entry.Robotry_Parodule.moduleType.MOTOR"
+            },
+            {
+              "label": "Lang.Blocks.parodule_buzzer",
+              "value": "Entry.Robotry_Parodule.moduleType.BUZZER"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_Pixel_List",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Pixel_List"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.parodule_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.parodule_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.parodule_vermilion",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.parodule_orange",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.parodule_tangerine",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.parodule_yellow",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.parodule_green_yellow",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.parodule_green",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.parodule_blue_green",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.parodule_blue",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.parodule_prussian_blue",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.parodule_indigo",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.parodule_blue_violet",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.parodule_purple",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.parodule_reddish_purple",
+              "value": "14"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Func_Pixel_List",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Func_Pixel_List"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.parodule_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.parodule_cycle",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.parodule_aura",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_Motor_List",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Motor_List"
+      },
+      "params": [
+        {
+          "key": "POWER",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "100%",
+              "value": "100"
+            },
+            {
+              "label": "75%",
+              "value": "75"
+            },
+            {
+              "label": "50%",
+              "value": "50"
+            },
+            {
+              "label": "25%",
+              "value": "25"
+            },
+            {
+              "label": "0%",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Motor_Sign",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Motor_Sign"
+      },
+      "params": [
+        {
+          "key": "SIGN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.parodule_forward",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.parodule_backward",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.parodule_left",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.parodule_right",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_Motor_Sign",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Motor_Sign"
+      },
+      "params": [
+        {
+          "key": "SIGN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.parodule_forward",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.parodule_backward",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_Octaves_List",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Octaves_List"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_Tone_List",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Tone_List"
+      },
+      "params": [
+        {
+          "key": "TONE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.parodule_silent",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.parodule_do",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.parodule_do_sharp",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.parodule_re",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.parodule_re_sharp",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.parodule_mi",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.parodule_fa",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.parodule_fa_sharp",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.parodule_sol",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.parodule_sol_sharp",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.parodule_la",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.parodule_la_sharp",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.parodule_si",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Func_Tone_List",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Func_Tone_List"
+      },
+      "params": [
+        {
+          "key": "TONE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.parodule_silent",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.parodule_horn",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.parodule_weeoo",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Input_title",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Input_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Sensor_Data",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Sensor_Data"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              0
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Sensor_Kind",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Sensor_Kind"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              0
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_title",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Set",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Set"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Parodule_Module_List",
+            "params": [
+              "Entry.Robotry_Parodule.moduleType.PIXEL"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Parodule_Module_List",
+            "params": [
+              "Entry.Robotry_Parodule.moduleType.MOTOR"
+            ]
+          }
+        },
+        {
+          "key": "PORT3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Parodule_Module_List",
+            "params": [
+              "Entry.Robotry_Parodule.moduleType.MOTOR"
+            ]
+          }
+        },
+        {
+          "key": "PORT4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Parodule_Module_List",
+            "params": [
+              "Entry.Robotry_Parodule.moduleType.BUZZER"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_PIXEL",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_PIXEL"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Pixel_List",
+            "params": [
+              2
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Motor",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Motor"
+      },
+      "params": [
+        {
+          "key": "POWER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Motor_List",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "SIGNED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Motor_Sign",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Buzzer",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Buzzer"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Octaves_List",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "TONE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Tone_List",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_title",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_Pixel",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Pixel"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Pixel_List",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_Motor",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Motor"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "POWER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Motor_List",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "SIGNED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Motor_Sign",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Custom_Buzzer",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Custom_Buzzer"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Octaves_List",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "TONE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Tone_List",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Module_Off",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Module_Off"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Module_Standby",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Module_Standby"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Func_title",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Func_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Func_Pixel",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Func_Pixel"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Func_Pixel_List",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Func_Buzzer",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Func_Buzzer"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Custom_Port_List",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TONE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Parodule_Func_Tone_List",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    },
+    {
+      "type": "Parodule_Update",
+      "category": "hardware_robotry_parodule",
+      "label": {
+        "ko": "Parodule_Update"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Parodule"
+      }
+    }
+  ]
+}

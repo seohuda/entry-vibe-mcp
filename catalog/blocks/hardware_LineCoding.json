@@ -1,0 +1,2284 @@
+{
+  "category": "hardware_LineCoding",
+  "blocks": [
+    {
+      "type": "LineCodingDigitalPortOnOffList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingDigitalPortOnOffList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.OnBlock",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.OffBlock",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingBacklightOnoffList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingBacklightOnoffList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.BacklightOn",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.BacklightOff",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingEasylineList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingEasylineList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.lineForward",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.Left",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.Right",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingEasyMotorList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingEasyMotorList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.lineForward",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.Left",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.Right",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.LineBack",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingStartList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingStartList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Tracer",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.RemotBit",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.RemotPs2",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingEasySetList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingEasySetList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ForwardSpeed",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.TurnSpeed",
+              "value": "56"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingCrossroadList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingCrossroadList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "T1",
+              "value": "21"
+            },
+            {
+              "label": "L1",
+              "value": "1"
+            },
+            {
+              "label": "R1",
+              "value": "4"
+            },
+            {
+              "label": "LR1",
+              "value": "7"
+            },
+            {
+              "label": "SL1",
+              "value": "11"
+            },
+            {
+              "label": "SR1",
+              "value": "14"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingRemotKeyList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingRemotKeyList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "NONE",
+              "value": "0"
+            },
+            {
+              "label": "L_UP",
+              "value": "1"
+            },
+            {
+              "label": "L_LEFT",
+              "value": "2"
+            },
+            {
+              "label": "L_RIGHT",
+              "value": "3"
+            },
+            {
+              "label": "L_DN",
+              "value": "4"
+            },
+            {
+              "label": "L1",
+              "value": "5"
+            },
+            {
+              "label": "L2",
+              "value": "6"
+            },
+            {
+              "label": "R_UP",
+              "value": "7"
+            },
+            {
+              "label": "R_LEFT",
+              "value": "8"
+            },
+            {
+              "label": "R_RIGHT",
+              "value": "9"
+            },
+            {
+              "label": "R_DN",
+              "value": "10"
+            },
+            {
+              "label": "R1",
+              "value": "11"
+            },
+            {
+              "label": "R2",
+              "value": "12"
+            },
+            {
+              "label": "START",
+              "value": "13"
+            },
+            {
+              "label": "SELECT",
+              "value": "14"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingOctaveList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingOctaveList"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "3",
+              "value": "0"
+            },
+            {
+              "label": "4",
+              "value": "1"
+            },
+            {
+              "label": "5",
+              "value": "2"
+            },
+            {
+              "label": "6",
+              "value": "3"
+            },
+            {
+              "label": "7",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingToneList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingToneList"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingTurnList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingTurnList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "lt1",
+              "value": "1"
+            },
+            {
+              "label": "rt8",
+              "value": "8"
+            },
+            {
+              "label": "lt2",
+              "value": "2"
+            },
+            {
+              "label": "rt7",
+              "value": "7"
+            },
+            {
+              "label": "lt3",
+              "value": "3"
+            },
+            {
+              "label": "rt6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingMotorList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingMotorList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "B Motor",
+              "value": "1"
+            },
+            {
+              "label": "BW Motor",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingLineSensortList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingLineSensortList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "S1",
+              "value": "1"
+            },
+            {
+              "label": "S2",
+              "value": "2"
+            },
+            {
+              "label": "S3",
+              "value": "4"
+            },
+            {
+              "label": "S4",
+              "value": "8"
+            },
+            {
+              "label": "S5",
+              "value": "16"
+            },
+            {
+              "label": "S6",
+              "value": "32"
+            },
+            {
+              "label": "S7",
+              "value": "64"
+            },
+            {
+              "label": "S8",
+              "value": "128"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingSensorNumtList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingSensorNumtList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "S1",
+              "value": "0"
+            },
+            {
+              "label": "S2",
+              "value": "1"
+            },
+            {
+              "label": "S3",
+              "value": "2"
+            },
+            {
+              "label": "S4",
+              "value": "3"
+            },
+            {
+              "label": "S5",
+              "value": "4"
+            },
+            {
+              "label": "S6",
+              "value": "5"
+            },
+            {
+              "label": "S7",
+              "value": "6"
+            },
+            {
+              "label": "S8",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingDigitalPortList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingDigitalPortList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "1"
+            },
+            {
+              "label": "IN2",
+              "value": "2"
+            },
+            {
+              "label": "IN3",
+              "value": "3"
+            },
+            {
+              "label": "IN4",
+              "value": "4"
+            },
+            {
+              "label": "IN5",
+              "value": "5"
+            },
+            {
+              "label": "IN6",
+              "value": "6"
+            },
+            {
+              "label": "IN7",
+              "value": "7"
+            },
+            {
+              "label": "IN8",
+              "value": "8"
+            },
+            {
+              "label": "FW1",
+              "value": "9"
+            },
+            {
+              "label": "FW2",
+              "value": "10"
+            },
+            {
+              "label": "FW3",
+              "value": "11"
+            },
+            {
+              "label": "FW4",
+              "value": "12"
+            },
+            {
+              "label": "FW5",
+              "value": "13"
+            },
+            {
+              "label": "FW6",
+              "value": "14"
+            },
+            {
+              "label": "FW7",
+              "value": "15"
+            },
+            {
+              "label": "FW8",
+              "value": "16"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingServoPortList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingServoPortList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "1"
+            },
+            {
+              "label": "OUT2",
+              "value": "2"
+            },
+            {
+              "label": "OUT3",
+              "value": "3"
+            },
+            {
+              "label": "OUT4",
+              "value": "4"
+            },
+            {
+              "label": "OUT5",
+              "value": "5"
+            },
+            {
+              "label": "OUT6",
+              "value": "6"
+            },
+            {
+              "label": "OUT7",
+              "value": "7"
+            },
+            {
+              "label": "OUT8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingAllOnOffList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingAllOnOffList"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.AllOffBlock",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.AllOnBlock",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingAnalogPortList",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingAnalogPortList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "1"
+            },
+            {
+              "label": "IN2",
+              "value": "2"
+            },
+            {
+              "label": "IN3",
+              "value": "3"
+            },
+            {
+              "label": "IN4",
+              "value": "4"
+            },
+            {
+              "label": "IN5",
+              "value": "5"
+            },
+            {
+              "label": "IN6",
+              "value": "6"
+            },
+            {
+              "label": "IN7",
+              "value": "7"
+            },
+            {
+              "label": "IN8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingStart",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingStart"
+      },
+      "params": [
+        {
+          "key": "STAY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingStartList",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingStop",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingStop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingLineEasy",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingLineEasy"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingEasylineList",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingEasySet",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingEasySet"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingEasySetList",
+            "params": []
+          }
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingEasyTimeSet",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingEasyTimeSet"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingEasyMotor",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingEasyMotor"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingEasyMotorList",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingRestart",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingRestart"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingDelay",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingDelay"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingLine",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingLine"
+      },
+      "params": [
+        {
+          "key": "CROSS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingCrossroadList",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingTurn",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingTurn"
+      },
+      "params": [
+        {
+          "key": "CROSS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingTurnList",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingMotor",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingMotor"
+      },
+      "params": [
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingBmotor",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingBmotor"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingMotorList",
+            "params": []
+          }
+        },
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "SENSOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingLineSensortList",
+            "params": []
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingWheel",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingWheel"
+      },
+      "params": [
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingServo",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingServo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingServoPortList",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingDigitalOnOff",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingDigitalOnOff"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingServoPortList",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingDigitalPortOnOffList",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingMelody",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingMelody"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingOctaveList",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingToneList",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.25"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingGetDgitalValue",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingGetDgitalValue"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingDigitalPortList",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingGetAnalogValue",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingGetAnalogValue"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingAnalogPortList",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingSetLcdString",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingSetLcdString"
+      },
+      "params": [
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hi, LineCoding"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingSetLcdClear",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingSetLcdClear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingGetAnalogMapping",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingGetAnalogMapping"
+      },
+      "params": [
+        {
+          "key": "IDATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingRemotRx",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingRemotRx"
+      },
+      "params": [
+        {
+          "key": "KEY1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingRemotKeyList",
+            "params": []
+          }
+        },
+        {
+          "key": "KEY2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingRemotKeyList",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingLineDelay",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingLineDelay"
+      },
+      "params": [
+        {
+          "key": "LINETIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingABSH",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingABSH"
+      },
+      "params": [
+        {
+          "key": "ABSH1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "ABSH2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "18"
+            ]
+          }
+        },
+        {
+          "key": "ABSH3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "12"
+            ]
+          }
+        },
+        {
+          "key": "ABSH4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "ABSH5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "ABSH6",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingBuzzerOnOff",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingBuzzerOnOff"
+      },
+      "params": [
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "ONTIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "OFFTIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingLED",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingLED"
+      },
+      "params": [
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "ONTIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "OFFTIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingServoPortList",
+            "params": []
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingBlackForwardF",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingBlackForwardF"
+      },
+      "params": [
+        {
+          "key": "SP",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "BSP",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "-4"
+            ]
+          }
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "LSEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingSensorNumtList",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RSEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "LineCodingSensorNumtList",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingFFmotor",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingFFmotor"
+      },
+      "params": [
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingBBmotor",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingBBmotor"
+      },
+      "params": [
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    },
+    {
+      "type": "LineCodingMotorStop",
+      "category": "hardware_LineCoding",
+      "label": {
+        "ko": "LineCodingMotorStop"
+      },
+      "params": [
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "LineCoding"
+      }
+    }
+  ]
+}

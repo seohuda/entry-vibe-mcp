@@ -1,0 +1,1002 @@
+{
+  "category": "hardware_altino",
+  "blocks": [
+    {
+      "type": "altino_analogValue",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "알티노 센서값"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "밝기",
+              "value": "cds"
+            },
+            {
+              "label": "1번 거리",
+              "value": "ir1"
+            },
+            {
+              "label": "2번 거리",
+              "value": "ir2"
+            },
+            {
+              "label": "3번 거리",
+              "value": "ir3"
+            },
+            {
+              "label": "4번 거리",
+              "value": "ir4"
+            },
+            {
+              "label": "5번 거리",
+              "value": "ir5"
+            },
+            {
+              "label": "6번 거리",
+              "value": "ir6"
+            },
+            {
+              "label": "가속도 X축",
+              "value": "accx"
+            },
+            {
+              "label": "가속도 Y축",
+              "value": "accy"
+            },
+            {
+              "label": "가속도 Z축",
+              "value": "accz"
+            },
+            {
+              "label": "나침판 X축",
+              "value": "magx"
+            },
+            {
+              "label": "나침판 Y축",
+              "value": "magy"
+            },
+            {
+              "label": "나침판 Z축",
+              "value": "magz"
+            },
+            {
+              "label": "자이로 X축",
+              "value": "gyrox"
+            },
+            {
+              "label": "자이로 Y축",
+              "value": "gyroy"
+            },
+            {
+              "label": "자이로 Z축",
+              "value": "gyroz"
+            },
+            {
+              "label": "온도",
+              "value": "tem"
+            },
+            {
+              "label": "왼쪽 토크",
+              "value": "tor2"
+            },
+            {
+              "label": "오른쪽 토크",
+              "value": "tor1"
+            },
+            {
+              "label": "조향 토크",
+              "value": "sttor"
+            },
+            {
+              "label": "배터리 잔량 체크",
+              "value": "bat"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_stopAll",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "altino_stopAll"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ALTINO_stopAll",
+              "value": "All"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_stopDrive",
+              "value": "Drive"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_stopSteering",
+              "value": "Steering"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_stopSound",
+              "value": "Sound"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_stopLight",
+              "value": "Light"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_stopDisplay",
+              "value": "Display"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_steering",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "방향을 로 정하기"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가운데",
+              "value": "Center"
+            },
+            {
+              "label": "왼쪽5",
+              "value": "Left5"
+            },
+            {
+              "label": "왼쪽10",
+              "value": "Left10"
+            },
+            {
+              "label": "왼쪽15",
+              "value": "Left15"
+            },
+            {
+              "label": "왼쪽20",
+              "value": "Left20"
+            },
+            {
+              "label": "오른쪽5",
+              "value": "Right5"
+            },
+            {
+              "label": "오른쪽10",
+              "value": "Right10"
+            },
+            {
+              "label": "오른쪽15",
+              "value": "Right15"
+            },
+            {
+              "label": "오른쪽20",
+              "value": "Right20"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_steering_hex",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "altino_steering_hex"
+      },
+      "params": [
+        {
+          "key": "steerVal",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_sound_hex",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "altino_sound_hex"
+      },
+      "params": [
+        {
+          "key": "soundVal",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_rear_wheel",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "뒷바퀴 오른쪽 왼쪽 로 정하기"
+      },
+      "params": [
+        {
+          "key": "leftWheel",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "rightWheel",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_sound",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "옥타브 음을 연주하기"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "끄기",
+              "value": "NOT"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#",
+              "value": "C#"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#",
+              "value": "D#"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#",
+              "value": "F#"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#",
+              "value": "G#"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#",
+              "value": "A#"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_light",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "등을"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "전방",
+              "value": "2"
+            },
+            {
+              "label": "왼쪽방향",
+              "value": "5"
+            },
+            {
+              "label": "오른쪽방향",
+              "value": "6"
+            },
+            {
+              "label": "브레이크",
+              "value": "4"
+            },
+            {
+              "label": "후방",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "255"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_dot_display_matrix_on",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "altino_dot_display_matrix_on"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_dot_display_matrix_off",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "altino_dot_display_matrix_off"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_light_hex",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "altino_light_hex"
+      },
+      "params": [
+        {
+          "key": "MSB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "LSB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_dot_display",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "전광판에 글자 표시하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_dot_display_line",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "1열 2열 3열 4열 5열 6열 7열 8열 출력하기"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ALTINO_dot_line_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_dot_line_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_dot_line_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_dot_line_4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_dot_line_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_dot_line_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_dot_line_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.ALTINO_dot_line_8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "SW1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW3",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW4",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW5",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW6",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW7",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW8",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "9",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_dot_display_hex",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "altino_dot_display_hex"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE6",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE7",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE8",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "8",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    },
+    {
+      "type": "altino_ir_reset",
+      "category": "hardware_altino",
+      "label": {
+        "ko": "altino_ir_reset"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino"
+      }
+    }
+  ]
+}

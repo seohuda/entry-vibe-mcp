@@ -1,0 +1,924 @@
+{
+  "category": "hardware_palmkit",
+  "blocks": [
+    {
+      "type": "palmkit_inputsensor",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_inputsensor"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_pot",
+              "value": "POT"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_button",
+              "value": "TACT_SWITCH"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_cds",
+              "value": "CDS"
+            }
+          ]
+        },
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_ispressed",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_ispressed"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_buzzer_off",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_buzzer_off"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_buzzer_note",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_buzzer_note"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_c",
+              "value": "48"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_cs",
+              "value": "49"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_d",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_ds",
+              "value": "51"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_e",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_f",
+              "value": "53"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_fs",
+              "value": "54"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_g",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_gs",
+              "value": "56"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_a",
+              "value": "57"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_as",
+              "value": "58"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_b",
+              "value": "59"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_buzzer_note_delay",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_buzzer_note_delay"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_c",
+              "value": "48"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_cs",
+              "value": "49"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_d",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_ds",
+              "value": "51"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_e",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_f",
+              "value": "53"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_fs",
+              "value": "54"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_g",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_gs",
+              "value": "56"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_a",
+              "value": "57"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_as",
+              "value": "58"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_buzzer_note_b",
+              "value": "59"
+            }
+          ]
+        },
+        {
+          "key": "SEC",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_led_toggle",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_led_toggle"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_led_on",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_led_off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_led_color",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_led_color"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Color"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_led_color_number",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_led_color_number"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_led",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_led"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_led_on",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_led_off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "G",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_led_on",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_led_off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_led_on",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_led_off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_led_pwm",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_led_pwm"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_motor_stop",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_motor_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_rc_motor",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_rc_motor"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "15"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_dc_motor",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_dc_motor"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_motor_cw",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_motor_ccw",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    },
+    {
+      "type": "palmkit_dc_motor_for_secs",
+      "category": "hardware_palmkit",
+      "label": {
+        "ko": "palmkit_dc_motor_for_secs"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_idx0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx2",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_idx3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.PALMKIT_motor_cw",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.PALMKIT_motor_ccw",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "SECS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "palmkit"
+      }
+    }
+  ]
+}

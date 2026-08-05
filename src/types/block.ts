@@ -8,6 +8,20 @@ export interface BlockParamSchema {
   options?: Array<{ label: string; value: string }>;
 }
 
+/** Extra Entry modules that must be listed on the project for the block to load. */
+export type BlockExtensionKind =
+  | 'aiUtilize'
+  | 'aiLearning'
+  | 'expansion'
+  | 'hardware'
+  | 'hardwareLite';
+
+export interface BlockExtension {
+  kind: BlockExtensionKind;
+  /** Module key Entry stores (e.g. `tts`, `arduino`, `weather`). */
+  module: string;
+}
+
 export interface BlockSchema {
   type: string;
   category: string;
@@ -17,6 +31,8 @@ export interface BlockSchema {
   statementKeys: string[];
   isHat: boolean;
   skeleton?: string;
+  /** Present for AI / expansion / hardware blocks (not core categories). */
+  extension?: BlockExtension;
 }
 
 export interface BlockCatalog {

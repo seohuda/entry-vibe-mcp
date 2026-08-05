@@ -1,0 +1,600 @@
+{
+  "category": "hardware_suno",
+  "blocks": [
+    {
+      "type": "suno_sensor_title",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_sensor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_output_title",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_output_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_ext_analog_list",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_ext_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "초음파   📏(cm)",
+              "value": "A7"
+            },
+            {
+              "label": "조이스틱 X축",
+              "value": "A2"
+            },
+            {
+              "label": "조이스틱 Y축",
+              "value": "A6"
+            },
+            {
+              "label": "마이크      ",
+              "value": "A0"
+            },
+            {
+              "label": "빛 (A1)      🔶",
+              "value": "A1"
+            },
+            {
+              "label": "빛 (A4)      🔷",
+              "value": "A4"
+            },
+            {
+              "label": "라인/온도 (A3)💚",
+              "value": "A3"
+            },
+            {
+              "label": "라인/온도 (A5)💛",
+              "value": "A5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_ext_get_analog_value",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_ext_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "suno_ext_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_ext_get_analog_value_map",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_ext_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "suno_ext_get_analog_value",
+            "params": [
+              {
+                "type": "suno_ext_analog_list",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_get_trig_number",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_get_trig_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_get_echo_number",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_get_echo_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_get_output_number",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_get_output_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "DC 모터 ( ⚙ )",
+              "value": "7"
+            },
+            {
+              "label": "빨간 LED (📏❌)",
+              "value": "2"
+            },
+            {
+              "label": "초록 LED (⚙2❌)",
+              "value": "3"
+            },
+            {
+              "label": "파란 LED (📏❌)",
+              "value": "4"
+            },
+            {
+              "label": "노란 LED",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_ext_get_digital",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_ext_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간 / 조이스틱",
+              "value": "8"
+            },
+            {
+              "label": "초록 (⚙❌)",
+              "value": "11"
+            },
+            {
+              "label": "파란 (⚙❌)",
+              "value": "9"
+            },
+            {
+              "label": "노란 (⚙❌)",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_get_digital_toggle",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_get_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_toggle_led",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_toggle_led"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "suno_get_output_number",
+            "params": []
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_ext_toggle_output",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_ext_toggle_output"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_get_pwm_port_number",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_get_pwm_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "⚙1(🔴)",
+              "value": "11"
+            },
+            {
+              "label": "⚙1(🔵)",
+              "value": "10"
+            },
+            {
+              "label": "⚙2(🔴)",
+              "value": "3"
+            },
+            {
+              "label": "⚙2(🔵)",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_ext_digital_pwm",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_ext_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "suno_get_pwm_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_get_servo_number",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_get_servo_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    },
+    {
+      "type": "suno_ext_set_servo",
+      "category": "hardware_suno",
+      "label": {
+        "ko": "suno_ext_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "suno_get_servo_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "SensorUno"
+      }
+    }
+  ]
+}

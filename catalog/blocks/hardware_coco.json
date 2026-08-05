@@ -1,0 +1,2880 @@
+{
+  "category": "hardware_coco",
+  "blocks": [
+    {
+      "type": "coco_list_analog_basic",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_analog_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_digital_basic",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_digital_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_digital_octave",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_digital_octave"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_digital_pwm",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_digital_toggle",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.coco_toggle_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.template.coco_toggle_off",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_digital_toggle_en",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_digital_toggle_en"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "HIGH",
+              "value": "on"
+            },
+            {
+              "label": "LOW",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_digital_tone",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_digital_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_neopixel_init",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_neopixel_init"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_neopixel_bright",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_neopixel_bright"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_neopixel",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_neopixel"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_neopixel_all",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_neopixel_all"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_neopixel_clear",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_neopixel_clear"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_lcd_list_init",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_lcd_list_init"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0x27",
+              "value": "0"
+            },
+            {
+              "label": "0x3F",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_dotmatrix_init",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_dotmatrix_init"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "12"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "11"
+            ]
+          }
+        },
+        {
+          "key": "PORT3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_dotmatrix_bright",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_dotmatrix_bright"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_dotmatrix_clear",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_dotmatrix_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_dotmatrix",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_dotmatrix"
+      },
+      "params": [
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "003c420024242400"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_dotmatrix_emoji_list",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_dotmatrix_emoji_list"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "🖤",
+              "value": "1"
+            },
+            {
+              "label": "🤍",
+              "value": "2"
+            },
+            {
+              "label": "👆",
+              "value": "3"
+            },
+            {
+              "label": "👇",
+              "value": "4"
+            },
+            {
+              "label": "👈",
+              "value": "5"
+            },
+            {
+              "label": "👉",
+              "value": "6"
+            },
+            {
+              "label": "😊",
+              "value": "7"
+            },
+            {
+              "label": "😥",
+              "value": "8"
+            },
+            {
+              "label": "😡",
+              "value": "9"
+            },
+            {
+              "label": "😆",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_dotmatrix_emoji",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_dotmatrix_emoji"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_dotmatrix_emoji_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_digital_lcd",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_digital_lcd"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.coco_lcd_first_line",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.coco_lcd_seconds_line",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_lcd_row",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_lcd_row"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_lcd_col",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_lcd_col"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_analog_value",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_light_value",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_light_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_moisture_value",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_moisture_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": [
+              "1"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_dcmotor",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_dcmotor"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_toggle",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_analog_dcmotor",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_analog_dcmotor"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_pwm",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_sound_value",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_sound_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_infrared_value",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_infrared_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_pullup",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_pullup"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_button",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_button"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_analog_mapping",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_analog_mapping"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_mapping1",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_mapping1"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_mapping2",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_mapping2"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1024"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_digital_ultrasonic",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_digital_ultrasonic"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": [
+              "13"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": [
+              "12"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_dust",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_dust"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_digital",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_digital_toggle",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_digital_pir",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_digital_pir"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_toggle",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_toggle_en",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_led_toggle",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_led_toggle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_toggle",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_pwm",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_pwm",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_rgbled",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_rgbled"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_pwm",
+            "params": [
+              "9"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_pwm",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "PORT3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_pwm",
+            "params": [
+              "11"
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_servo",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_servo2",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_servo2"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "180"
+            ]
+          }
+        },
+        {
+          "key": "STIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_buzzer_toggle",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_buzzer_toggle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_toggle",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_buzzer_volume",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_buzzer_volume"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_pwm",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_digital_buzzer",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_digital_buzzer"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_basic",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_tone",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_digital_octave",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_lcd_init",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_lcd_init"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_lcd_list_init",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "16"
+            ]
+          }
+        },
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_module_digital_lcd",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_module_digital_lcd"
+      },
+      "params": [
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_get_lcd_col",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_get_lcd_row",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello, coco"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_lcd_clear",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_lcd_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_dht",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_dht"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "DHT_SELECT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "온도(°C)",
+              "value": "0"
+            },
+            {
+              "label": "습도(%)",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_mp3_init",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_mp3_init"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "11"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_mp3_play",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_mp3_play"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_mp3_play2",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_mp3_play2"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_set_mp3_vol",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_set_mp3_vol"
+      },
+      "params": [
+        {
+          "key": "VOL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "15"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_load_init",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_load_init"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_load_scale",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_load_scale"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "-20000"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_load_value",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_load_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_joy",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_joy"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "첫번째",
+              "value": "1"
+            },
+            {
+              "label": "두번째",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_joy_init",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_joy_init"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_list_joy",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_list_analog_basic",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "PORT3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_joy_x",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_joy_x"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_list_joy",
+            "params": [
+              "1"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_joy_y",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_joy_y"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_list_joy",
+            "params": [
+              "1"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_joy_z",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_joy_z"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "coco_list_joy",
+            "params": [
+              "1"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_list_joy_direction",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_list_joy_direction"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가운데",
+              "value": "0"
+            },
+            {
+              "label": "위",
+              "value": "1"
+            },
+            {
+              "label": "아래",
+              "value": "4"
+            },
+            {
+              "label": "왼쪽",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽",
+              "value": "3"
+            },
+            {
+              "label": "왼쪽위",
+              "value": "5"
+            },
+            {
+              "label": "왼쪽아래",
+              "value": "6"
+            },
+            {
+              "label": "오른쪽위",
+              "value": "7"
+            },
+            {
+              "label": "오른쪽아래",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_get_joy_move",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_get_joy_move"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_joy",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DIR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coco_list_joy_direction",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    },
+    {
+      "type": "coco_module_digital_oled",
+      "category": "hardware_coco",
+      "label": {
+        "ko": "coco_module_digital_oled"
+      },
+      "params": [
+        {
+          "key": "VALUE0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "My Entry!!"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coco"
+      }
+    }
+  ]
+}

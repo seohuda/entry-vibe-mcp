@@ -1,0 +1,2127 @@
+{
+  "category": "hardware_roborobo_robokit_rs",
+  "blocks": [
+    {
+      "type": "robokit_rs_menu_digital_pin",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_menu_digital_pin"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_menu_analog_pin",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_menu_analog_pin"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "14"
+            },
+            {
+              "label": "A1",
+              "value": "15"
+            },
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_menu_pin",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_menu_pin"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "14"
+            },
+            {
+              "label": "A1",
+              "value": "15"
+            },
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_menu_digital_value",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_menu_digital_value"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_menu_motor_number",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_menu_motor_number"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_menu_dotmatrix_row",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_menu_dotmatrix_row"
+      },
+      "params": [
+        {
+          "key": "Y",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_digital",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_digital"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_value",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_motor",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_motor"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_motor_number",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "15"
+            ]
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_motor_state_cw",
+              "value": "cw"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_motor_state_ccw",
+              "value": "ccw"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_motor_state_stop",
+              "value": "stop"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_motors",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_motors"
+      },
+      "params": [
+        {
+          "key": "MOTORS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1, 2",
+              "value": "12"
+            },
+            {
+              "label": "3, 4",
+              "value": "34"
+            }
+          ]
+        },
+        {
+          "key": "SPEED1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "15"
+            ]
+          }
+        },
+        {
+          "key": "SPEED2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "15"
+            ]
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_motors_state_forward",
+              "value": "forward"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_motors_state_backward",
+              "value": "backward"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_motors_state_turn_left",
+              "value": "turn-left"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_motors_state_turn_right",
+              "value": "turn-right"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_motors_state_stop",
+              "value": "stop"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_mecanumwheels",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_mecanumwheels"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "15"
+            ]
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_180",
+              "value": "180"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_270",
+              "value": "270"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_135",
+              "value": "135"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_315",
+              "value": "315"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_225",
+              "value": "225"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_cw",
+              "value": "cw"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_ccw",
+              "value": "ccw"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_mecanumwheels_state_stop",
+              "value": "stop"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_servo_angle",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_servo_angle"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_rgbled_color",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_rgbled_color"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_change_rgbled_brightness_by",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_change_rgbled_brightness_by"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_rgbled_brightness_to",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_rgbled_brightness_to"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_dot_state_of_dotmatrix",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_dot_state_of_dotmatrix"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_value",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_dotmatrix_row",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_dotmatrix_row"
+      },
+      "params": [
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_dotmatrix_row",
+            "params": []
+          }
+        },
+        {
+          "key": "X0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X6",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X7",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X8",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X9",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X10",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X11",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X12",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X13",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X14",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X15",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_set_dotmatrix",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_set_dotmatrix"
+      },
+      "params": [
+        {
+          "key": "MATRIX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_all",
+              "value": "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_eighth_note",
+              "value": "000000000000000000000011000000000000010100000000000010100000000001110100000000011110000000000001100000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_sixteenth_note",
+              "value": "000000001111000000000011001000000000010001000000000010011000000001110111000000011110111000000001100000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_square",
+              "value": "000111111111000000111111111000000110000011000000110000011000000110000011000000111111111000000111111111000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_triangle",
+              "value": "000000010000000000000111000000000001101100000000011000110000000110000011000001100000001100001111111111100"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_circle",
+              "value": "000001111100000000011000110000000110000011000000100000001000000110000011000000011000110000000001111100000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_heart",
+              "value": "000011000110000000111101111000001111111111100001111111111100000111111111000000001111100000000000010000000"
+            },
+            {
+              "label": "X",
+              "value": "000110000011000000011000110000000001111100000000000111000000000001111100000000011000110000000110000011000"
+            },
+            {
+              "label": "A",
+              "value": "000000111000000000001000100000000001000100000000001111100000000001000100000000001000100000000001000100000"
+            },
+            {
+              "label": "B",
+              "value": "000001111000000000001000100000000001000100000000001111100000000001000100000000001000100000000001111000000"
+            },
+            {
+              "label": "C",
+              "value": "000000111000000000001000100000000001000000000000001000000000000001000000000000001000100000000000111000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_ga",
+              "value": "000000000000000000011101000000000000101000000000000101100000000001001000000000000001000000000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_na",
+              "value": "000000000000000000010001000000000010001000000000010001100000000011101000000000000001000000000000000000000"
+            },
+            {
+              "label": "!",
+              "value": "000000010000000000000010000000000000010000000000000010000000000000010000000000000000000000000000010000000"
+            },
+            {
+              "label": "?",
+              "value": "000000111000000000001000100000000000000100000000000001000000000000010000000000000000000000000000010000000"
+            },
+            {
+              "label": "0",
+              "value": "000001111100000000001000100000000001000100000000001000100000000001000100000000001000100000000001111100000"
+            },
+            {
+              "label": "1",
+              "value": "000000010000000000000110000000000001010000000000000010000000000000010000000000000010000000000001111100000"
+            },
+            {
+              "label": "2",
+              "value": "000001111100000000000000100000000000000100000000001111100000000001000000000000001000000000000001111100000"
+            },
+            {
+              "label": "3",
+              "value": "000001111100000000000000100000000000000100000000001111100000000000000100000000000000100000000001111100000"
+            },
+            {
+              "label": "4",
+              "value": "000001000100000000001000100000000001000100000000001000100000000001111110000000000000100000000000000100000"
+            },
+            {
+              "label": "5",
+              "value": "000001111100000000001000000000000001000000000000001111100000000000000100000000000000100000000001111100000"
+            },
+            {
+              "label": "6",
+              "value": "000001111100000000001000000000000001000000000000001111100000000001000100000000001000100000000001111100000"
+            },
+            {
+              "label": "7",
+              "value": "000001111100000000001000100000000001000100000000000000100000000000000100000000000000100000000000000100000"
+            },
+            {
+              "label": "8",
+              "value": "000001111100000000001000100000000001000100000000001111100000000001000100000000001000100000000001111100000"
+            },
+            {
+              "label": "9",
+              "value": "000001111100000000001000100000000001000100000000001111100000000000000100000000000000100000000001111100000"
+            },
+            {
+              "label": "10",
+              "value": "000010001111100000110001000100001010001000100000010001000100000010001000100000010001000100001111101111100"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_speech_bubble",
+              "value": "111111111111111100000000000001100111111111001100000000000001111110011111111000010100000000000011000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_looking_at_top_right",
+              "value": "011111000111110111100101111001111100101111001111111101111111111111101111111111111101111111011111000111110"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_looking_at_bottom_right",
+              "value": "011111000111110111111101111111111111101111111111111101111111111100101111001111100101111001011111000111110"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_looking_at_top_left",
+              "value": "011111000111110100111101001111100111101001111111111101111111111111101111111111111101111111011111000111110"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_looking_at_bottom_left",
+              "value": "011111000111110111111101111111111111101111111111111101111111100111101001111100111101001111011111000111110"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_square_basic",
+              "value": "111111111111111100000000000001100100000001001100000000000001100111111111001100000000000001111111111111111"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_square_basic_2",
+              "value": "111111111111111100000000000001101111000111101100110000011001100110010011001100000000000001111111111111111"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_square_square_eyes",
+              "value": "111111111111111100000000000001101111000111101101001000100101101111010111101100000000000001111111111111111"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_square_surprised_mouth",
+              "value": "111111111111111100000000000001100100111001001100000101000001100000101000001100000111000001111111111111111"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_big_round_eyes",
+              "value": "001111000111100011111101111110011111101111110011111101111110011111101111110011111101111110001111000111100"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_small_round_eyes",
+              "value": "000000000000000001111000111100011111101111110011111101111110011111101111110001111000111100000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_wink_right_eye",
+              "value": "000000000000000001111000000000011111100000000011111100111100011111101111110001111000111100000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_wink_left_eye",
+              "value": "000000000000000000000000111100000000001111110001111001111110011111101111110001111000111100000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_eyebrow_eye_right",
+              "value": "111111000111111000000000000000111111000111111011101000111010011111000111110011110000011110000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_eyebrow_eye_left",
+              "value": "111111000111111000000000000000111111000111111010111000101110011111000111110011110000011110000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_expressionless",
+              "value": "000000000000000011111000111110000000000000000000111000111000000111000111000000111000111000000111000111000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_cutie",
+              "value": "000000000000000001110000011100001110000011100001010010010100001110010011100000000101000000000011000110000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_cute",
+              "value": "001000000000100000100000001000000010000010000000100000001000001000010000100000000000000000000111111111000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_small_eyes_smile",
+              "value": "000000000000000000100000001000000100000001000000000000000000001111111111100001111111111100000111111111000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_half_moon_shape_eyes",
+              "value": "000000000000000001111000111100011111101111110010000101000010000000000000000000000000000000000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_half_moon_shape_eyes_smiling",
+              "value": "001111000111100011111101111110010000101000010000000000000000001100000001100000110000011000000011111110000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_half_moon_shape_eyes_closed",
+              "value": "000000000000000000000000000000000000000000000010000101000010011111101111110001111000111100000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_sad_expression",
+              "value": "000000000000000000010000010000000100000001000001000000000100010110000011010000110000011000000110000011000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_sullen",
+              "value": "000000000000000001100000001100011110000011110011110000011110001100111001100000001111100000000011000110000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_crying_eyes",
+              "value": "000000000000000000000000000000011111000111110001010000010100001010000010100001010000010100000000000000000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_melancholy_look",
+              "value": "011111000111110001100000001100001100000001100000001111100000000011000110000000110000011000000100000001000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_angry_eyes",
+              "value": "100000000000001010000000000010001000000000100000100000001000011010000010110011001000100110011000000000110"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_o_shape_mouth",
+              "value": "000000000000000001100000001100011010000011010011110000011110001100010001100000000010000000000001111100000"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_dotmatrix_example_yo_shape_mouth",
+              "value": "000000000000000010001000100010010001000100010001110000011100000000000000000000000101000000000000111000000"
+            },
+            {
+              "label": "↑",
+              "value": "000000010000000000000111000000000001010100000000000010000000000000010000000000000010000000000000010000000"
+            },
+            {
+              "label": "↗",
+              "value": "000000011110000000000000110000000000001010000000000010010000000000100000000000001000000000000010000000000"
+            },
+            {
+              "label": "→",
+              "value": "000000000000000000000001000000000000000100000000011111110000000000000100000000000001000000000000000000000"
+            },
+            {
+              "label": "↘",
+              "value": "000010000000000000001000000000000000100000000000000010010000000000001010000000000000110000000000011110000"
+            },
+            {
+              "label": "↓",
+              "value": "000000010000000000000010000000000000010000000000000010000000000001010100000000000111000000000000010000000"
+            },
+            {
+              "label": "↙",
+              "value": "000000000010000000000000100000000000001000000000010010000000000010100000000000011000000000000011110000000"
+            },
+            {
+              "label": "←",
+              "value": "000000000000000000000100000000000001000000000000011111110000000001000000000000000100000000000000000000000"
+            },
+            {
+              "label": "↖",
+              "value": "000011110000000000011000000000000010100000000000010010000000000000001000000000000000100000000000000010000"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_clear_dotmatrix",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_clear_dotmatrix"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_play_piezobuzzer",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_play_piezobuzzer"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_c",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_c_sharp",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_d_sharp",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_e",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_f",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_f_sharp",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_g",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_g_sharp",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_a",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_a_sharp",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_b",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_play_piezobuzzer_until_done",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_play_piezobuzzer_until_done"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_c",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_c_sharp",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_d_sharp",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_e",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_f",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_f_sharp",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_g",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_g_sharp",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_a",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_a_sharp",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_piezobuzzer_tone_b",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_get_digital_value",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_get_digital_value"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_get_analog_value",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_analog_pin",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_get_sensor_value",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_get_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_temperutre",
+              "value": "temperature"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_joystick_x",
+              "value": "joystickx"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_joystick_y",
+              "value": "joysticky"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_light",
+              "value": "light"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_dial",
+              "value": "dial"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_a_keypad",
+              "value": "akeypad"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_rotaryposition",
+              "value": "rotaryposition"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_magnetic",
+              "value": "magnetic"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_ultrasonic",
+              "value": "ultrasonic"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_is_digital_detected",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_is_digital_detected"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_digital_pin",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_compare_analog_value",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_compare_analog_value"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_analog_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": ">",
+              "value": "greater-than"
+            },
+            {
+              "label": "=",
+              "value": "equal"
+            },
+            {
+              "label": "<",
+              "value": "less-than"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "512"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_compare_sensor_value",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_compare_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_temperutre",
+              "value": "temperature"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_joystick_x",
+              "value": "joystickx"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_joystick_y",
+              "value": "joysticky"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_light",
+              "value": "light"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_dial",
+              "value": "dial"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_a_keypad",
+              "value": "akeypad"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_rotaryposition",
+              "value": "rotaryposition"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_magnetic",
+              "value": "magnetic"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_ultrasonic",
+              "value": "ultrasonic"
+            }
+          ]
+        },
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": ">",
+              "value": "greater-than"
+            },
+            {
+              "label": "=",
+              "value": "equal"
+            },
+            {
+              "label": "<",
+              "value": "less-than"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_get_gyro_sensor_value",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_get_gyro_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_angle_x",
+              "value": "anglex"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_angle_y",
+              "value": "angley"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_angle_z",
+              "value": "anglez"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_x",
+              "value": "gyrox"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_y",
+              "value": "gyroy"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_z",
+              "value": "gyroz"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_shake",
+              "value": "shake"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_is_shaken_gyro_sensor",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_is_shaken_gyro_sensor"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_reset_gyro_sensor",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_reset_gyro_sensor"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_direction_up",
+              "value": "up"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_direction_forward",
+              "value": "forward"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_direction_right",
+              "value": "right"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_direction_backward",
+              "value": "backward"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_gyroscope_direction_left",
+              "value": "left"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_get_rotary_position_sensor_value",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_get_rotary_position_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_analog_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_rotaryposition_rotation",
+              "value": "rotation"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_rotaryposition_position",
+              "value": "position"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_rotaryposition_angle",
+              "value": "angle"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    },
+    {
+      "type": "robokit_rs_reset_rotary_position_sensor",
+      "category": "hardware_roborobo_robokit_rs",
+      "label": {
+        "ko": "robokit_rs_reset_rotary_position_sensor"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "robokit_rs_menu_analog_pin",
+            "params": []
+          }
+        },
+        {
+          "key": "PROPERTY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_rotaryposition_rotation",
+              "value": "rotation"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_rotaryposition_position",
+              "value": "position"
+            },
+            {
+              "label": "Lang.Blocks.robokit_rs_sensor_rotaryposition_angle",
+              "value": "angle"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_robokit_rs"
+      }
+    }
+  ]
+}

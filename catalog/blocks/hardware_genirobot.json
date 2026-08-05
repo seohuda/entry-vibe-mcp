@@ -1,0 +1,1487 @@
+{
+  "category": "hardware_genirobot",
+  "blocks": [
+    {
+      "type": "getButtonPressed",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "getButtonPressed"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "setRobotSpeedItem",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "setRobotSpeedItem"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.steppersSpeed.slow",
+              "value": "en.genibot.steppersSpeed.slow"
+            },
+            {
+              "label": "ko.genibot.steppersSpeed.normal",
+              "value": "en.genibot.steppersSpeed.normal"
+            },
+            {
+              "label": "ko.genibot.steppersSpeed.fast",
+              "value": "en.genibot.steppersSpeed.fast"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "moveDistance",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "moveDistance"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.move.forward",
+              "value": "en.genibot.move.forward"
+            },
+            {
+              "label": "ko.genibot.move.backward",
+              "value": "en.genibot.move.backward"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "turnAngle",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "turnAngle"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.rotate.left",
+              "value": "en.genibot.rotate.left"
+            },
+            {
+              "label": "ko.genibot.rotate.right",
+              "value": "en.genibot.rotate.right"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "180",
+              "value": "180"
+            },
+            {
+              "label": "120",
+              "value": "120"
+            },
+            {
+              "label": "90",
+              "value": "90"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "45",
+              "value": "45"
+            },
+            {
+              "label": "30",
+              "value": "30"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "startMoving",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "startMoving"
+      },
+      "params": [
+        {
+          "key": "VELOCITY1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "-5",
+              "value": "-5"
+            },
+            {
+              "label": "-4",
+              "value": "-4"
+            },
+            {
+              "label": "-3",
+              "value": "-3"
+            },
+            {
+              "label": "-2",
+              "value": "-2"
+            },
+            {
+              "label": "-1",
+              "value": "-1"
+            },
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "-5",
+              "value": "-5"
+            },
+            {
+              "label": "-4",
+              "value": "-4"
+            },
+            {
+              "label": "-3",
+              "value": "-3"
+            },
+            {
+              "label": "-2",
+              "value": "-2"
+            },
+            {
+              "label": "-1",
+              "value": "-1"
+            },
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "stopMoving",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "stopMoving"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "motionGoDistance",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "motionGoDistance"
+      },
+      "params": [
+        {
+          "key": "VELOCITY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "-5",
+              "value": "-5"
+            },
+            {
+              "label": "-4",
+              "value": "-4"
+            },
+            {
+              "label": "-3",
+              "value": "-3"
+            },
+            {
+              "label": "-2",
+              "value": "-2"
+            },
+            {
+              "label": "-1",
+              "value": "-1"
+            },
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0~30"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "motionRotateAngle",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "motionRotateAngle"
+      },
+      "params": [
+        {
+          "key": "VELOCITY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "-5",
+              "value": "-5"
+            },
+            {
+              "label": "-4",
+              "value": "-4"
+            },
+            {
+              "label": "-3",
+              "value": "-3"
+            },
+            {
+              "label": "-2",
+              "value": "-2"
+            },
+            {
+              "label": "-1",
+              "value": "-1"
+            },
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0~360"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "startLineFollower",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "startLineFollower"
+      },
+      "params": [
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.lineFollower.start",
+              "value": "en.genibot.lineFollower.start"
+            },
+            {
+              "label": "ko.genibot.lineFollower.stop",
+              "value": "en.genibot.lineFollower.stop"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "setLedColor",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "setLedColor"
+      },
+      "params": [
+        {
+          "key": "SIDE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.ledColor.left",
+              "value": "en.genibot.ledColor.left"
+            },
+            {
+              "label": "ko.genibot.ledColor.right",
+              "value": "en.genibot.ledColor.right"
+            },
+            {
+              "label": "ko.genibot.ledColor.front",
+              "value": "en.genibot.ledColor.front"
+            },
+            {
+              "label": "ko.genibot.ledColor.back",
+              "value": "en.genibot.ledColor.back"
+            },
+            {
+              "label": "ko.genibot.ledColor.all",
+              "value": "en.genibot.ledColor.all"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "setLedColorName",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "setLedColorName"
+      },
+      "params": [
+        {
+          "key": "SIDE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.ledColor.left",
+              "value": "en.genibot.ledColor.left"
+            },
+            {
+              "label": "ko.genibot.ledColor.right",
+              "value": "en.genibot.ledColor.right"
+            },
+            {
+              "label": "ko.genibot.ledColor.front",
+              "value": "en.genibot.ledColor.front"
+            },
+            {
+              "label": "ko.genibot.ledColor.back",
+              "value": "en.genibot.ledColor.back"
+            },
+            {
+              "label": "ko.genibot.ledColor.all",
+              "value": "en.genibot.ledColor.all"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.ledColorName.white",
+              "value": "en.genibot.ledColorName.white"
+            },
+            {
+              "label": "ko.genibot.ledColorName.red",
+              "value": "en.genibot.ledColorName.red"
+            },
+            {
+              "label": "ko.genibot.ledColorName.green",
+              "value": "en.genibot.ledColorName.green"
+            },
+            {
+              "label": "ko.genibot.ledColorName.blue",
+              "value": "en.genibot.ledColorName.blue"
+            },
+            {
+              "label": "ko.genibot.ledColorName.cyan",
+              "value": "en.genibot.ledColorName.cyan"
+            },
+            {
+              "label": "ko.genibot.ledColorName.magenta",
+              "value": "en.genibot.ledColorName.magenta"
+            },
+            {
+              "label": "ko.genibot.ledColorName.yellow",
+              "value": "en.genibot.ledColorName.yellow"
+            },
+            {
+              "label": "ko.genibot.ledColorName.violet",
+              "value": "en.genibot.ledColorName.violet"
+            },
+            {
+              "label": "ko.genibot.ledColorName.orange",
+              "value": "en.genibot.ledColorName.orange"
+            },
+            {
+              "label": "ko.genibot.ledColorName.springgreen",
+              "value": "en.genibot.ledColorName.springgreen"
+            },
+            {
+              "label": "ko.genibot.ledColorName.lightpink",
+              "value": "en.genibot.ledColorName.lightpink"
+            }
+          ]
+        },
+        {
+          "key": "COLOR_BRIGHTNESS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "17",
+              "value": "17"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "21",
+              "value": "21"
+            },
+            {
+              "label": "22",
+              "value": "22"
+            },
+            {
+              "label": "23",
+              "value": "23"
+            },
+            {
+              "label": "24",
+              "value": "24"
+            },
+            {
+              "label": "25",
+              "value": "25"
+            },
+            {
+              "label": "26",
+              "value": "26"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            },
+            {
+              "label": "28",
+              "value": "28"
+            },
+            {
+              "label": "29",
+              "value": "29"
+            },
+            {
+              "label": "30",
+              "value": "30"
+            },
+            {
+              "label": "31",
+              "value": "31"
+            },
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "34",
+              "value": "34"
+            },
+            {
+              "label": "35",
+              "value": "35"
+            },
+            {
+              "label": "36",
+              "value": "36"
+            },
+            {
+              "label": "37",
+              "value": "37"
+            },
+            {
+              "label": "38",
+              "value": "38"
+            },
+            {
+              "label": "39",
+              "value": "39"
+            },
+            {
+              "label": "40",
+              "value": "40"
+            },
+            {
+              "label": "41",
+              "value": "41"
+            },
+            {
+              "label": "42",
+              "value": "42"
+            },
+            {
+              "label": "43",
+              "value": "43"
+            },
+            {
+              "label": "44",
+              "value": "44"
+            },
+            {
+              "label": "45",
+              "value": "45"
+            },
+            {
+              "label": "46",
+              "value": "46"
+            },
+            {
+              "label": "47",
+              "value": "47"
+            },
+            {
+              "label": "48",
+              "value": "48"
+            },
+            {
+              "label": "49",
+              "value": "49"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "51",
+              "value": "51"
+            },
+            {
+              "label": "52",
+              "value": "52"
+            },
+            {
+              "label": "53",
+              "value": "53"
+            },
+            {
+              "label": "54",
+              "value": "54"
+            },
+            {
+              "label": "55",
+              "value": "55"
+            },
+            {
+              "label": "56",
+              "value": "56"
+            },
+            {
+              "label": "57",
+              "value": "57"
+            },
+            {
+              "label": "58",
+              "value": "58"
+            },
+            {
+              "label": "59",
+              "value": "59"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "61",
+              "value": "61"
+            },
+            {
+              "label": "62",
+              "value": "62"
+            },
+            {
+              "label": "63",
+              "value": "63"
+            },
+            {
+              "label": "64",
+              "value": "64"
+            },
+            {
+              "label": "65",
+              "value": "65"
+            },
+            {
+              "label": "66",
+              "value": "66"
+            },
+            {
+              "label": "67",
+              "value": "67"
+            },
+            {
+              "label": "68",
+              "value": "68"
+            },
+            {
+              "label": "69",
+              "value": "69"
+            },
+            {
+              "label": "70",
+              "value": "70"
+            },
+            {
+              "label": "71",
+              "value": "71"
+            },
+            {
+              "label": "72",
+              "value": "72"
+            },
+            {
+              "label": "73",
+              "value": "73"
+            },
+            {
+              "label": "74",
+              "value": "74"
+            },
+            {
+              "label": "75",
+              "value": "75"
+            },
+            {
+              "label": "76",
+              "value": "76"
+            },
+            {
+              "label": "77",
+              "value": "77"
+            },
+            {
+              "label": "78",
+              "value": "78"
+            },
+            {
+              "label": "79",
+              "value": "79"
+            },
+            {
+              "label": "80",
+              "value": "80"
+            },
+            {
+              "label": "81",
+              "value": "81"
+            },
+            {
+              "label": "82",
+              "value": "82"
+            },
+            {
+              "label": "83",
+              "value": "83"
+            },
+            {
+              "label": "84",
+              "value": "84"
+            },
+            {
+              "label": "85",
+              "value": "85"
+            },
+            {
+              "label": "86",
+              "value": "86"
+            },
+            {
+              "label": "87",
+              "value": "87"
+            },
+            {
+              "label": "88",
+              "value": "88"
+            },
+            {
+              "label": "89",
+              "value": "89"
+            },
+            {
+              "label": "90",
+              "value": "90"
+            },
+            {
+              "label": "91",
+              "value": "91"
+            },
+            {
+              "label": "92",
+              "value": "92"
+            },
+            {
+              "label": "93",
+              "value": "93"
+            },
+            {
+              "label": "94",
+              "value": "94"
+            },
+            {
+              "label": "95",
+              "value": "95"
+            },
+            {
+              "label": "96",
+              "value": "96"
+            },
+            {
+              "label": "97",
+              "value": "97"
+            },
+            {
+              "label": "98",
+              "value": "98"
+            },
+            {
+              "label": "99",
+              "value": "99"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "setSpeakerVolume",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "setSpeakerVolume"
+      },
+      "params": [
+        {
+          "key": "VOLUME",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "setTempo",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "setTempo"
+      },
+      "params": [
+        {
+          "key": "TEMPO",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "setInstrument",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "setInstrument"
+      },
+      "params": [
+        {
+          "key": "INSTRUMENT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.instrument.piano",
+              "value": "en.genibot.instrument.piano"
+            },
+            {
+              "label": "ko.genibot.instrument.flute",
+              "value": "en.genibot.instrument.flute"
+            },
+            {
+              "label": "ko.genibot.instrument.string",
+              "value": "en.genibot.instrument.string"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "playNote",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "playNote"
+      },
+      "params": [
+        {
+          "key": "BEATS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.instrument.beat.whole",
+              "value": "en.genibot.instrument.beat.whole"
+            },
+            {
+              "label": "ko.genibot.instrument.beat.half",
+              "value": "en.genibot.instrument.beat.half"
+            },
+            {
+              "label": "ko.genibot.instrument.beat.dottedHalf",
+              "value": "en.genibot.instrument.beat.dottedHalf"
+            },
+            {
+              "label": "ko.genibot.instrument.beat.quarter",
+              "value": "en.genibot.instrument.beat.quarter"
+            },
+            {
+              "label": "ko.genibot.instrument.beat.dottedQuarter",
+              "value": "en.genibot.instrument.beat.dottedQuarter"
+            },
+            {
+              "label": "ko.genibot.instrument.beat.eight",
+              "value": "en.genibot.instrument.beat.eight"
+            },
+            {
+              "label": "ko.genibot.instrument.beat.dottedEight",
+              "value": "en.genibot.instrument.beat.dottedEight"
+            },
+            {
+              "label": "ko.genibot.instrument.beat.sixteenth",
+              "value": "en.genibot.instrument.beat.sixteenth"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ko.genibot.instrument.note.lowTi",
+              "value": "en.genibot.instrument.note.code.lowTi"
+            },
+            {
+              "label": "ko.genibot.instrument.note.do",
+              "value": "en.genibot.instrument.note.code.do"
+            },
+            {
+              "label": "ko.genibot.instrument.note.doSharp",
+              "value": "en.genibot.instrument.note.code.doSharp"
+            },
+            {
+              "label": "ko.genibot.instrument.note.re",
+              "value": "en.genibot.instrument.note.code.re"
+            },
+            {
+              "label": "ko.genibot.instrument.note.reSharp",
+              "value": "en.genibot.instrument.note.code.reSharp"
+            },
+            {
+              "label": "ko.genibot.instrument.note.mi",
+              "value": "en.genibot.instrument.note.code.mi"
+            },
+            {
+              "label": "ko.genibot.instrument.note.fa",
+              "value": "en.genibot.instrument.note.code.fa"
+            },
+            {
+              "label": "ko.genibot.instrument.note.faSharp",
+              "value": "en.genibot.instrument.note.code.faSharp"
+            },
+            {
+              "label": "ko.genibot.instrument.note.sol",
+              "value": "en.genibot.instrument.note.code.sol"
+            },
+            {
+              "label": "ko.genibot.instrument.note.solSharp",
+              "value": "en.genibot.instrument.note.code.solSharp"
+            },
+            {
+              "label": "ko.genibot.instrument.note.la",
+              "value": "en.genibot.instrument.note.code.la"
+            },
+            {
+              "label": "ko.genibot.instrument.note.laSharp",
+              "value": "en.genibot.instrument.note.code.laSharp"
+            },
+            {
+              "label": "ko.genibot.instrument.note.ti",
+              "value": "en.genibot.instrument.note.code.ti"
+            },
+            {
+              "label": "ko.genibot.instrument.note.highDo",
+              "value": "en.genibot.instrument.note.code.highDo"
+            },
+            {
+              "label": "ko.genibot.instrument.note.highDoSharp",
+              "value": "en.genibot.instrument.note.code.highDoSharp"
+            },
+            {
+              "label": "ko.genibot.instrument.note.highRe",
+              "value": "en.genibot.instrument.note.code.highRe"
+            },
+            {
+              "label": "ko.genibot.instrument.note.highReSharp",
+              "value": "en.genibot.instrument.note.code.highReSharp"
+            },
+            {
+              "label": "ko.genibot.instrument.note.highMi",
+              "value": "en.genibot.instrument.note.code.highMi"
+            },
+            {
+              "label": "ko.genibot.instrument.note.highFa",
+              "value": "en.genibot.instrument.note.code.highFa"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "getAcceleration",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "getAcceleration"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            },
+            {
+              "label": "z",
+              "value": "z"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "getTilt",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "getTilt"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    },
+    {
+      "type": "getOidCode",
+      "category": "hardware_genirobot",
+      "label": {
+        "ko": "getOidCode"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "genibot"
+      }
+    }
+  ]
+}

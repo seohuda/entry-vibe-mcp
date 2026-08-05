@@ -1,0 +1,324 @@
+{
+  "category": "hardware_robotis",
+  "blocks": [
+    {
+      "type": "robotis_carCont_sensor_value",
+      "category": "hardware_robotis",
+      "label": {
+        "ko": "값"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 접촉 센서",
+              "value": "CM_SPRING_LEFT"
+            },
+            {
+              "label": "오른쪽 접촉 센서",
+              "value": "CM_SPRING_RIGHT"
+            },
+            {
+              "label": "선택 버튼 상태",
+              "value": "CM_SWITCH"
+            },
+            {
+              "label": "최종 소리 감지 횟수",
+              "value": "CM_SOUND_DETECTED"
+            },
+            {
+              "label": "실시간 소리 감지 횟수",
+              "value": "CM_SOUND_DETECTING"
+            },
+            {
+              "label": "왼쪽 적외선 센서",
+              "value": "CM_IR_LEFT"
+            },
+            {
+              "label": "오른쪽 적외선 센서",
+              "value": "CM_IR_RIGHT"
+            },
+            {
+              "label": "왼쪽 적외선 센서 캘리브레이션 값",
+              "value": "CM_CALIBRATION_LEFT"
+            },
+            {
+              "label": "오른쪽 적외선 센서 캘리브레이션 값",
+              "value": "CM_CALIBRATION_RIGHT"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotis_carCont"
+      }
+    },
+    {
+      "type": "robotis_carCont_cm_led",
+      "category": "hardware_robotis",
+      "label": {
+        "ko": "4번 LED , 1번 LED"
+      },
+      "params": [
+        {
+          "key": "VALUE_LEFT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "VALUE_RIGHT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotis_carCont"
+      }
+    },
+    {
+      "type": "robotis_carCont_cm_sound_detected_clear",
+      "category": "hardware_robotis",
+      "label": {
+        "ko": "최종소리감지횟수 초기화"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotis_carCont"
+      }
+    },
+    {
+      "type": "robotis_carCont_aux_motor_speed",
+      "category": "hardware_robotis",
+      "label": {
+        "ko": "감속모터 속도를 , 출력값을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.General.left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.General.right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION_ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계방향",
+              "value": "CW"
+            },
+            {
+              "label": "반시계방향",
+              "value": "CCW"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "500"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotis_carCont"
+      }
+    },
+    {
+      "type": "robotis_carCont_aux_motor_speed2",
+      "category": "hardware_robotis",
+      "label": {
+        "ko": "robotis_carCont_aux_motor_speed2"
+      },
+      "params": [
+        {
+          "key": "LEFT_ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계방향",
+              "value": "CW"
+            },
+            {
+              "label": "반시계방향",
+              "value": "CCW"
+            }
+          ]
+        },
+        {
+          "key": "LEFT_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "500"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT_ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계방향",
+              "value": "CW"
+            },
+            {
+              "label": "반시계방향",
+              "value": "CCW"
+            }
+          ]
+        },
+        {
+          "key": "RIGHT_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "500"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotis_carCont"
+      }
+    },
+    {
+      "type": "robotis_carCont_cm_calibration",
+      "category": "hardware_robotis",
+      "label": {
+        "ko": "적외선 센서 캘리브레이션 값을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.General.left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.General.right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robotis_carCont"
+      }
+    }
+  ]
+}

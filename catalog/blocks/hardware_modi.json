@@ -1,0 +1,795 @@
+{
+  "category": "hardware_modi",
+  "blocks": [
+    {
+      "type": "modi_microphone_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_microphone_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_environment_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_environment_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "property",
+          "type": "Dropdown",
+          "defaultValue": 6,
+          "options": [
+            {
+              "label": "온도",
+              "value": "6"
+            },
+            {
+              "label": "습도",
+              "value": "7"
+            },
+            {
+              "label": "조도",
+              "value": "2"
+            },
+            {
+              "label": "빨강",
+              "value": "3"
+            },
+            {
+              "label": "파랑",
+              "value": "5"
+            },
+            {
+              "label": "초록",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_dial_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_dial_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_gyroscope_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_gyroscope_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "property",
+          "type": "Dropdown",
+          "defaultValue": 2,
+          "options": [
+            {
+              "label": "Roll",
+              "value": "2"
+            },
+            {
+              "label": "Pitch",
+              "value": "3"
+            },
+            {
+              "label": "Yaw",
+              "value": "4"
+            },
+            {
+              "label": "X축 가속",
+              "value": "8"
+            },
+            {
+              "label": "Y축 가속",
+              "value": "9"
+            },
+            {
+              "label": "Z축 가속",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_button_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_button_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "property",
+          "type": "Dropdown",
+          "defaultValue": 2,
+          "options": [
+            {
+              "label": "Click",
+              "value": "2"
+            },
+            {
+              "label": "Double Click",
+              "value": "3"
+            },
+            {
+              "label": "Toggle",
+              "value": "5"
+            },
+            {
+              "label": "Press",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_button_true",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_button_true"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_button_false",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_button_false"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_infrared_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_infrared_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_ultrasonic_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_ultrasonic_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_set_motor_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_set_motor_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "property",
+          "type": "Dropdown",
+          "defaultValue": "MOTOR_ANGLE",
+          "options": [
+            {
+              "label": "각도",
+              "value": "MOTOR_ANGLE"
+            },
+            {
+              "label": "속도",
+              "value": "MOTOR_SPEED"
+            },
+            {
+              "label": "회전",
+              "value": "MOTOR_TORQUE"
+            }
+          ]
+        },
+        {
+          "key": "upper",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "bottom",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_change_motor_upper_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_change_motor_upper_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "property",
+          "type": "Dropdown",
+          "defaultValue": "MOTOR_ANGLE",
+          "options": [
+            {
+              "label": "각도",
+              "value": "MOTOR_ANGLE"
+            },
+            {
+              "label": "속도",
+              "value": "MOTOR_SPEED"
+            },
+            {
+              "label": "회전",
+              "value": "MOTOR_TORQUE"
+            }
+          ]
+        },
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_change_motor_bottom_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_change_motor_bottom_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "property",
+          "type": "Dropdown",
+          "defaultValue": "MOTOR_ANGLE",
+          "options": [
+            {
+              "label": "각도",
+              "value": "MOTOR_ANGLE"
+            },
+            {
+              "label": "속도",
+              "value": "MOTOR_SPEED"
+            },
+            {
+              "label": "회전",
+              "value": "MOTOR_TORQUE"
+            }
+          ]
+        },
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_clear_led",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_clear_led"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_set_led_rgb",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_set_led_rgb"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "rValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "gValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "bValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_set_led_color",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_set_led_color"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "color",
+          "type": "Color"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_set_basic_speaker",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_set_basic_speaker"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "frequence",
+          "type": "Dropdown",
+          "defaultValue": "F_DO_6",
+          "options": [
+            {
+              "label": "파5",
+              "value": "F_PA_5"
+            },
+            {
+              "label": "솔5",
+              "value": "F_SOL_5"
+            },
+            {
+              "label": "라5",
+              "value": "F_RA_5"
+            },
+            {
+              "label": "시5",
+              "value": "F_SO_5"
+            },
+            {
+              "label": "파#5",
+              "value": "F_PA_S_5"
+            },
+            {
+              "label": "솔#5",
+              "value": "F_SOL_S_5"
+            },
+            {
+              "label": "라#5",
+              "value": "F_RA_S_5"
+            },
+            {
+              "label": "도6",
+              "value": "F_DO_6"
+            },
+            {
+              "label": "레6",
+              "value": "F_RE_6"
+            },
+            {
+              "label": "미6",
+              "value": "F_MI_6"
+            },
+            {
+              "label": "파6",
+              "value": "F_PA_6"
+            },
+            {
+              "label": "솔6",
+              "value": "F_SOL_6"
+            },
+            {
+              "label": "라6",
+              "value": "F_RA_6"
+            },
+            {
+              "label": "시6",
+              "value": "F_SO_6"
+            },
+            {
+              "label": "도#6",
+              "value": "F_DO_S_6"
+            },
+            {
+              "label": "레#6",
+              "value": "F_RE_S_6"
+            },
+            {
+              "label": "파#6",
+              "value": "F_PA_S_6"
+            },
+            {
+              "label": "솔#6",
+              "value": "F_SOL_S_6"
+            },
+            {
+              "label": "라#6",
+              "value": "F_RA_S_6"
+            },
+            {
+              "label": "도7",
+              "value": "F_DO_7"
+            },
+            {
+              "label": "레7",
+              "value": "F_RE_7"
+            },
+            {
+              "label": "미7",
+              "value": "F_MI_7"
+            },
+            {
+              "label": "도#7",
+              "value": "F_DO_S_7"
+            },
+            {
+              "label": "레#7",
+              "value": "F_RE_S_7"
+            }
+          ]
+        },
+        {
+          "key": "volume",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_set_custom_speaker",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_set_custom_speaker"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "frequence",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "volume",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    },
+    {
+      "type": "modi_print_display_by_value",
+      "category": "hardware_modi",
+      "label": {
+        "ko": "modi_print_display_by_value"
+      },
+      "params": [
+        {
+          "key": "name",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "text",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "text"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "modi"
+      }
+    }
+  ]
+}

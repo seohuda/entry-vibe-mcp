@@ -1,0 +1,985 @@
+{
+  "category": "hardware_iCOBOT",
+  "blocks": [
+    {
+      "type": "icobot_sensor_input_title",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_sensor_input_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_get_cds_value",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_get_cds_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_get_sound_value",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_get_sound_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_get_analog_temp_value",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_get_analog_temp_value"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_Temperature",
+              "value": "Real_T"
+            },
+            {
+              "label": "Lang.Blocks.icobot_Humidity",
+              "value": "Real_H"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_get_discomfort_index_value",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_get_discomfort_index_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_get_distsensor_value",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_get_distsensor_value"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_ir_front",
+              "value": "Front_IR"
+            },
+            {
+              "label": "Lang.Blocks.icobot_ir_left",
+              "value": "Left_IR"
+            },
+            {
+              "label": "Lang.Blocks.icobot_ir_right",
+              "value": "Right_IR"
+            },
+            {
+              "label": "Lang.Blocks.icobot_ir_bottom_left",
+              "value": "BLeft_IR"
+            },
+            {
+              "label": "Lang.Blocks.icobot_ir_bottom_mid",
+              "value": "BMid_IR"
+            },
+            {
+              "label": "Lang.Blocks.icobot_ir_bottom_right",
+              "value": "BRight_IR"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_buzzer_title",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_buzzer_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_buzzer_onoff",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_buzzer_onoff"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_buzzer_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_set_digital_buzzer",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_set_digital_buzzer"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_buzzer_silent",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_do",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_do_sharp",
+              "value": "CS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_re",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_re_sharp",
+              "value": "DS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_mi",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_fa",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_fa_sharp",
+              "value": "FS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_sol",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_sol_sharp",
+              "value": "GS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_la",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_la_sharp",
+              "value": "AS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_si",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_set_digital_buzzer_notime",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_set_digital_buzzer_notime"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_buzzer_silent",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_do",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_do_sharp",
+              "value": "CS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_re",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_re_sharp",
+              "value": "DS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_mi",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_fa",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_fa_sharp",
+              "value": "FS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_sol",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_sol_sharp",
+              "value": "GS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_la",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_la_sharp",
+              "value": "AS"
+            },
+            {
+              "label": "Lang.Blocks.icobot_buzzer_si",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_led_title",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_led_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_rgb_list",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_rgb_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_led_total",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.icobot_led_left_up",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.icobot_led_right_up",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.icobot_led_left_down",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.icobot_led_right_down",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_rgbled_onoff",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_rgbled_onoff"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "icobot_rgb_list",
+            "params": []
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_color_white",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.icobot_color_red",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.icobot_color_orange",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.icobot_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.icobot_color_green",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.icobot_color_blue",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.icobot_color_sky_blue",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.icobot_color_purple",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_rgbled_off",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_rgbled_off"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "icobot_rgb_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_set_rgbled_value",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_set_rgbled_value"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "icobot_rgb_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_motor_title",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_motor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_set_motor_direction",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_set_motor_direction"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_motor_both_wheels",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_left_wheels",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_right_wheels",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_motor_front_move",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_back_move",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_set_motor_speed",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_set_motor_speed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_motor_both_wheels",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_left_wheels",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_right_wheels",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_motor_stop",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_motor_stop"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_motor_both_wheels",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_left_wheels",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_right_wheels",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_set_motor_angle",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_set_motor_angle"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_motor_left_turn",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_right_turn",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_set_motor_straight",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_set_motor_straight"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.icobot_motor_front_move",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.icobot_motor_back_move",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    },
+    {
+      "type": "icobot_digital_wait_motor_movement",
+      "category": "hardware_iCOBOT",
+      "label": {
+        "ko": "icobot_digital_wait_motor_movement"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "iCOBOT"
+      }
+    }
+  ]
+}

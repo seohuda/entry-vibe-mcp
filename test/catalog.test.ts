@@ -71,9 +71,22 @@ describe.skipIf(!existsSync(ENTRYJS))('catalog extraction (start/moving/flow)', 
   });
 });
 
-describe.skipIf(!existsSync(ENTRYJS))('catalog extraction (all v1 categories)', () => {
+describe.skipIf(!existsSync(ENTRYJS))('catalog extraction (all core categories)', () => {
   it('extracts blocks from all 12 core categories', () => {
-    const catalog = extractCatalog();
+    const catalog = extractCatalog([
+      'start',
+      'moving',
+      'looks',
+      'flow',
+      'judgement',
+      'calc',
+      'variable',
+      'func',
+      'sound',
+      'text',
+      'brush',
+      'analysis',
+    ]);
     expect(catalog.blocks.length).toBeGreaterThan(100);
     const cats = new Set(catalog.blocks.map((b) => b.category));
     for (const c of [
@@ -95,6 +108,23 @@ describe.skipIf(!existsSync(ENTRYJS))('catalog extraction (all v1 categories)', 
   });
 });
 
+describe.skipIf(!existsSync(ENTRYJS))('catalog extraction (AI / hardware)', () => {
+  it('extracts AI utilize TTS blocks with extension metadata', () => {
+    const catalog = extractCatalog(['ai_utilize_tts']);
+    expect(catalog.blocks.length).toBeGreaterThan(0);
+    const sample = catalog.blocks[0];
+    expect(sample.extension).toEqual({ kind: 'aiUtilize', module: 'tts' });
+    expect(sample.category).toBe('ai_utilize_tts');
+  });
+
+  it('extracts Arduino hardware blocks with extension metadata', () => {
+    const catalog = extractCatalog(['hardware_arduino']);
+    expect(catalog.blocks.length).toBeGreaterThan(0);
+    expect(catalog.blocks[0].extension?.kind).toBe('hardware');
+    expect(catalog.blocks[0].extension?.module).toBe('arduino');
+  });
+});
+
 describe('shipped catalog labels', () => {
   const blocks = (
     JSON.parse(readFileSync(join(ROOT, 'catalog', 'blocks.json'), 'utf8')) as {
@@ -102,11 +132,21 @@ describe('shipped catalog labels', () => {
     }
   ).blocks;
 
-  it('resolves a Korean label for the vast majority of blocks', () => {
+  it('resolves a Korean label for the vast majority of core blocks', () => {
     // label.ko === type means no label was found; these are mostly Entry's
     // block-menu buttons and lecture-only internals.
-    const unlabeled = blocks.filter((b) => b.label.ko === b.type);
+    const core = blocks.filter((b) => !b.extension);
+    const unlabeled = core.filter((b) => b.label.ko === b.type);
     expect(unlabeled.length).toBeLessThanOrEqual(22);
+  });
+
+  it('includes AI utilize and hardware categories when shipped catalog is full', () => {
+    const cats = new Set(blocks.map((b) => b.category));
+    // Full extract ships these; older v1 catalogs may not — skip soft-check via length.
+    if (blocks.length > 500) {
+      expect(cats.has('ai_utilize_tts')).toBe(true);
+      expect([...cats].some((c) => c.startsWith('hardware_'))).toBe(true);
+    }
   });
 
   it('labels blocks whose template is only placeholders', () => {

@@ -1,0 +1,573 @@
+{
+  "category": "hardware_xbot",
+  "blocks": [
+    {
+      "type": "xbot_digitalInput",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "xbot_digitalInput"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2 디지털 입력",
+              "value": "D2"
+            },
+            {
+              "label": "D3 디지털 입력",
+              "value": "D3"
+            },
+            {
+              "label": "D11 디지털 입력",
+              "value": "D11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_analogValue",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "xbot_analogValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "광 센서 값",
+              "value": "light"
+            },
+            {
+              "label": "마이크 센서 값",
+              "value": "mic"
+            },
+            {
+              "label": "아날로그 0번 핀 값",
+              "value": "adc0"
+            },
+            {
+              "label": "아날로그 1번 핀 값",
+              "value": "adc1"
+            },
+            {
+              "label": "아날로그 2번 핀 값",
+              "value": "adc2"
+            },
+            {
+              "label": "아날로그 3번 핀 값",
+              "value": "adc3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_digitalOutput",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "디지털 핀, 출력 값"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LED",
+              "value": "D13"
+            },
+            {
+              "label": "D4",
+              "value": "D4"
+            },
+            {
+              "label": "D7",
+              "value": "D7"
+            },
+            {
+              "label": "D12 ",
+              "value": "D12"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "높음",
+              "value": "HIGH"
+            },
+            {
+              "label": "낮음",
+              "value": "LOW"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_analogOutput",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "아날로그"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D5",
+              "value": "analogD5"
+            },
+            {
+              "label": "D6",
+              "value": "analogD6"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_servo",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "서보 모터 , 각도"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "머리(D8)",
+              "value": "head"
+            },
+            {
+              "label": "오른 팔(D9)",
+              "value": "right"
+            },
+            {
+              "label": "왼 팔(D10)",
+              "value": "left"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_oneWheel",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "바퀴(DC) 모터 , 속도"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "오른쪽",
+              "value": "rightWheel"
+            },
+            {
+              "label": "왼쪽",
+              "value": "leftWheel"
+            },
+            {
+              "label": "양쪽",
+              "value": "bothWheel"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_twoWheel",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "바퀴(DC) 모터 오른쪽(2) 속도: 왼쪽(1) 속도:"
+      },
+      "params": [
+        {
+          "key": "rightWheel",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "leftWheel",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_rgb",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "RGB LED 켜기 R 값 G 값 B 값"
+      },
+      "params": [
+        {
+          "key": "ledR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "ledG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "ledB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_rgb_picker",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "RGB LED 색 로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_buzzer",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "음을 초 연주하기"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    },
+    {
+      "type": "xbot_lcd",
+      "category": "hardware_xbot",
+      "label": {
+        "ko": "LCD 번째 줄 , 출력 값"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "xbot_epor_edge"
+      }
+    }
+  ]
+}

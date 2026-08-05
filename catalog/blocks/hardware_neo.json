@@ -1,0 +1,4866 @@
+{
+  "category": "hardware_neo",
+  "blocks": [
+    {
+      "type": "neo_robot_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_robot_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_robot_move",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_robot_move"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_robot_direction_f",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_robot_direction_b",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_robot_direction_l",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_robot_direction_r",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_robot_direction_tl",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_robot_direction_tr",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_95",
+              "value": "95"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_85",
+              "value": "85"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_75",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_65",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_55",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_15",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_robot_stop",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_robot_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_auto_driving_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_auto_driving_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_auto_driving_start",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_auto_driving_start"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_95",
+              "value": "95"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_85",
+              "value": "85"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_75",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_65",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_55",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_15",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_auto_driving_sensor_start",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_auto_driving_sensor_start"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_input_1_2",
+              "value": "16"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_11_12",
+              "value": "17"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_13_14",
+              "value": "18"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_21_22",
+              "value": "19"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_23_24",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_31_32",
+              "value": "21"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_33_34",
+              "value": "22"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_95",
+              "value": "95"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_85",
+              "value": "85"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_75",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_65",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_55",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_15",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_auto_driving_stop",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_auto_driving_stop"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_auto_parking_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_auto_parking_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_auto_parking_start",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_auto_parking_start"
+      },
+      "params": [
+        {
+          "key": "WHICH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_auto_parking_which_l",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_auto_parking_which_r",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_auto_parking_direction_b",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_auto_parking_direction_s",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_line_tracer_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_line_tracer_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_line_tracer_start",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_line_tracer_start"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_95",
+              "value": "95"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_85",
+              "value": "85"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_75",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_65",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_55",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_15",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_line_cross_move",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_line_cross_move"
+      },
+      "params": [
+        {
+          "key": "COUNT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_8",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_9",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.neo_line_cross_move_10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_line_cross_turn",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_line_cross_turn"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_turn_direction_l",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_turn_direction_r",
+              "value": "31"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_line_cross_reached",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_line_cross_reached"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_motor_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_motor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_motor_move",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_motor_move"
+      },
+      "params": [
+        {
+          "key": "DC",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_out_l",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_out_r",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_out_lr",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_95",
+              "value": "95"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_85",
+              "value": "85"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_75",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_65",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_55",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_15",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n5",
+              "value": "-5"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n10",
+              "value": "-10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n15",
+              "value": "-15"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n20",
+              "value": "-20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n25",
+              "value": "-25"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n30",
+              "value": "-30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n35",
+              "value": "-35"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n40",
+              "value": "-40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n45",
+              "value": "-45"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n50",
+              "value": "-50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n55",
+              "value": "-55"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n60",
+              "value": "-60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n65",
+              "value": "-65"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n70",
+              "value": "-70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n75",
+              "value": "-75"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n80",
+              "value": "-80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n85",
+              "value": "-85"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n90",
+              "value": "-90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n95",
+              "value": "-95"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n100",
+              "value": "-100"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_motor_move_both",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_motor_move_both"
+      },
+      "params": [
+        {
+          "key": "SPEED_L",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_both_motor_speed",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED_R",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_both_motor_speed",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_motor_stop",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_motor_stop"
+      },
+      "params": [
+        {
+          "key": "DC",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_out_l",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_out_r",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_out_lr",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_servo_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_servo_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_servo_reset",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_servo_reset"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_servo_angle",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_servo_angle"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_servo_angle_360",
+              "value": "360"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_350",
+              "value": "350"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_340",
+              "value": "340"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_330",
+              "value": "330"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_320",
+              "value": "320"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_310",
+              "value": "310"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_300",
+              "value": "300"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_290",
+              "value": "290"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_280",
+              "value": "280"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_270",
+              "value": "270"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_260",
+              "value": "260"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_250",
+              "value": "250"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_240",
+              "value": "240"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_230",
+              "value": "230"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_220",
+              "value": "220"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_210",
+              "value": "210"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_200",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_190",
+              "value": "190"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_180",
+              "value": "180"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_170",
+              "value": "170"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_160",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_150",
+              "value": "150"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_140",
+              "value": "140"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_130",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_120",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_110",
+              "value": "110"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n10",
+              "value": "-10"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n20",
+              "value": "-20"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n30",
+              "value": "-30"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n40",
+              "value": "-40"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n50",
+              "value": "-50"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n60",
+              "value": "-60"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n70",
+              "value": "-70"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n80",
+              "value": "-80"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n90",
+              "value": "-90"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n100",
+              "value": "-100"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n110",
+              "value": "-110"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n120",
+              "value": "-120"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n130",
+              "value": "-130"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n140",
+              "value": "-140"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n150",
+              "value": "-150"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n160",
+              "value": "-160"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n170",
+              "value": "-170"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n180",
+              "value": "-180"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n190",
+              "value": "-190"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n200",
+              "value": "-200"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n210",
+              "value": "-210"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n220",
+              "value": "-220"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n230",
+              "value": "-230"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n240",
+              "value": "-240"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n250",
+              "value": "-250"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n260",
+              "value": "-260"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n270",
+              "value": "-270"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n280",
+              "value": "-280"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n290",
+              "value": "-290"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n300",
+              "value": "-300"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n310",
+              "value": "-310"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n320",
+              "value": "-320"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n330",
+              "value": "-330"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n340",
+              "value": "-340"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n350",
+              "value": "-350"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n360",
+              "value": "-360"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_servo_angle_var",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_servo_angle_var"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_servo_angle",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_servo_angle_wait",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_servo_angle_wait"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_servo_angle_360",
+              "value": "360"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_350",
+              "value": "350"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_340",
+              "value": "340"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_330",
+              "value": "330"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_320",
+              "value": "320"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_310",
+              "value": "310"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_300",
+              "value": "300"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_290",
+              "value": "290"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_280",
+              "value": "280"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_270",
+              "value": "270"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_260",
+              "value": "260"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_250",
+              "value": "250"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_240",
+              "value": "240"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_230",
+              "value": "230"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_220",
+              "value": "220"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_210",
+              "value": "210"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_200",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_190",
+              "value": "190"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_180",
+              "value": "180"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_170",
+              "value": "170"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_160",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_150",
+              "value": "150"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_140",
+              "value": "140"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_130",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_120",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_110",
+              "value": "110"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n10",
+              "value": "-10"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n20",
+              "value": "-20"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n30",
+              "value": "-30"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n40",
+              "value": "-40"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n50",
+              "value": "-50"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n60",
+              "value": "-60"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n70",
+              "value": "-70"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n80",
+              "value": "-80"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n90",
+              "value": "-90"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n100",
+              "value": "-100"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n110",
+              "value": "-110"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n120",
+              "value": "-120"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n130",
+              "value": "-130"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n140",
+              "value": "-140"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n150",
+              "value": "-150"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n160",
+              "value": "-160"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n170",
+              "value": "-170"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n180",
+              "value": "-180"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n190",
+              "value": "-190"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n200",
+              "value": "-200"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n210",
+              "value": "-210"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n220",
+              "value": "-220"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n230",
+              "value": "-230"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n240",
+              "value": "-240"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n250",
+              "value": "-250"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n260",
+              "value": "-260"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n270",
+              "value": "-270"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n280",
+              "value": "-280"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n290",
+              "value": "-290"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n300",
+              "value": "-300"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n310",
+              "value": "-310"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n320",
+              "value": "-320"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n330",
+              "value": "-330"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n340",
+              "value": "-340"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n350",
+              "value": "-350"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n360",
+              "value": "-360"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_servo_rotate",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_servo_rotate"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_servo_direction_f",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_direction_b",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_servo_stop",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_servo_stop"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_led_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_led_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_led_on",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_led_on"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_led_brightness_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_brightness_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_led_blink",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_led_blink"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_led_blink_speed_1",
+              "value": "500"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_blink_speed_2",
+              "value": "400"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_blink_speed_3",
+              "value": "300"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_blink_speed_4",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.neo_led_blink_speed_5",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_led_off",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_led_off"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_color_led_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_color_led_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_color_led_on",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_color_led_on"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": "#0000FF"
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_color_led_off",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_color_led_off"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_color_led_on_with_sensor",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_color_led_on_with_sensor"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_set_output_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_set_output_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_set_output",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_set_output"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_12",
+              "value": "OUT12"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_123",
+              "value": "OUT123"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_set_output_value_255",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_250",
+              "value": "250"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_245",
+              "value": "245"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_240",
+              "value": "240"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_235",
+              "value": "235"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_230",
+              "value": "230"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_225",
+              "value": "225"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_220",
+              "value": "220"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_215",
+              "value": "215"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_210",
+              "value": "210"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_205",
+              "value": "205"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_200",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_195",
+              "value": "195"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_190",
+              "value": "190"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_185",
+              "value": "185"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_180",
+              "value": "180"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_175",
+              "value": "175"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_170",
+              "value": "170"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_165",
+              "value": "165"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_160",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_155",
+              "value": "155"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_150",
+              "value": "150"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_145",
+              "value": "145"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_140",
+              "value": "140"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_135",
+              "value": "135"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_130",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_125",
+              "value": "125"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_120",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_115",
+              "value": "115"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_110",
+              "value": "110"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_105",
+              "value": "105"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_95",
+              "value": "95"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_85",
+              "value": "85"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_75",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_65",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_55",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_15",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_set_output_value_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_arg_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_in",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_in"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_in_2",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_in_2"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_digital_in",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_digital_in"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_sensor_in_digital_1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_sensor_in_digital_2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_sensor_in_digital_3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_sensor_in_digital_4",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_convert",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_convert"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_sensor_in",
+            "params": []
+          }
+        },
+        {
+          "key": "FROM_MIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "FROM_MAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "TO_MIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TO_MAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_compare",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_compare"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_sensor_in",
+            "params": []
+          }
+        },
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_compare_gt",
+              "value": ">="
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_g",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_e",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_l",
+              "value": "<"
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_lt",
+              "value": "<="
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_between",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_between"
+      },
+      "params": [
+        {
+          "key": "L_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        },
+        {
+          "key": "L_SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_compare_gt",
+              "value": ">="
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_g",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_e",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_l",
+              "value": "<"
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_lt",
+              "value": "<="
+            }
+          ]
+        },
+        {
+          "key": "INPUT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_sensor_in",
+            "params": []
+          }
+        },
+        {
+          "key": "R_SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_compare_gt",
+              "value": ">="
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_g",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_e",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_l",
+              "value": "<"
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_lt",
+              "value": "<="
+            }
+          ]
+        },
+        {
+          "key": "R_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 30
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_digital_compare",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_digital_compare"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_sensor_in_digital_1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_sensor_in_digital_2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_sensor_in_digital_3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_sensor_in_digital_4",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_compare_gt",
+              "value": ">="
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_g",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_e",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_l",
+              "value": "<"
+            },
+            {
+              "label": "Lang.Blocks.neo_compare_lt",
+              "value": "<="
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_color_compare",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_color_compare"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neo_sensor_in_2",
+            "params": []
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_color_black",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_white",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_red",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_green",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_blue",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_color_sequence_compare",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_color_sequence_compare"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "COLOR1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_color_red",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_green",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_blue",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "COLOR2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_color_red",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_green",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_blue",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "COLOR3",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_color_black",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_red",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_green",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_color_blue",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_sensor_button_pressed",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_sensor_button_pressed"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_button_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_button_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_button_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_button_4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "PRESSED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_button_on",
+              "value": "ON"
+            },
+            {
+              "label": "Lang.Blocks.neo_button_off",
+              "value": "OFF"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_buzzer_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_buzzer_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_buzzer_start",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_buzzer_start"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_buzzer_octave_1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_octave_2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_octave_3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_octave_4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_octave_5",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_octave_6",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_buzzer_do",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_do_sharp",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_re",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_re_sharp",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_mi",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_fa",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_fa_sharp",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_sol",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_sol_sharp",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_la",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_la_sharp",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_ti",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_buzzer_whole_note",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_half_note",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_quarter_note",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_buzzer_8th_note",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_buzzer_with_sensor",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_buzzer_with_sensor"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_input_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neo_input_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_buzzer_stop",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_buzzer_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_lcd_title",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_lcd_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_lcd_image",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_lcd_image"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            }
+          ]
+        },
+        {
+          "key": "IMAGE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_lcd_image_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_8",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_9",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_11",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_12",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.neo_lcd_image_13",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_lcd_text",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_lcd_text"
+      },
+      "params": [
+        {
+          "key": "OUTPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_output_1",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_2",
+              "value": "OUT2"
+            },
+            {
+              "label": "Lang.Blocks.neo_output_3",
+              "value": "OUT3"
+            }
+          ]
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "안녕"
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_arg_duration",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_arg_duration"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_duration_c",
+              "value": "c"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_8",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neo_duration_9",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_arg_both_motor_speed",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_arg_both_motor_speed"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_motor_speed_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_95",
+              "value": "95"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_85",
+              "value": "85"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_75",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_65",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_55",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_15",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n5",
+              "value": "-5"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n10",
+              "value": "-10"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n15",
+              "value": "-15"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n20",
+              "value": "-20"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n25",
+              "value": "-25"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n30",
+              "value": "-30"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n35",
+              "value": "-35"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n40",
+              "value": "-40"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n45",
+              "value": "-45"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n50",
+              "value": "-50"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n55",
+              "value": "-55"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n60",
+              "value": "-60"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n65",
+              "value": "-65"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n70",
+              "value": "-70"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n75",
+              "value": "-75"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n80",
+              "value": "-80"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n85",
+              "value": "-85"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n90",
+              "value": "-90"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n95",
+              "value": "-95"
+            },
+            {
+              "label": "Lang.Blocks.neo_motor_speed_n100",
+              "value": "-100"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    },
+    {
+      "type": "neo_arg_servo_angle",
+      "category": "hardware_neo",
+      "label": {
+        "ko": "neo_arg_servo_angle"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neo_servo_angle_360",
+              "value": "360"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_350",
+              "value": "350"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_340",
+              "value": "340"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_330",
+              "value": "330"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_320",
+              "value": "320"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_310",
+              "value": "310"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_300",
+              "value": "300"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_290",
+              "value": "290"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_280",
+              "value": "280"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_270",
+              "value": "270"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_260",
+              "value": "260"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_250",
+              "value": "250"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_240",
+              "value": "240"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_230",
+              "value": "230"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_220",
+              "value": "220"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_210",
+              "value": "210"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_200",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_190",
+              "value": "190"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_180",
+              "value": "180"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_170",
+              "value": "170"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_160",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_150",
+              "value": "150"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_140",
+              "value": "140"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_130",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_120",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_110",
+              "value": "110"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n10",
+              "value": "-10"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n20",
+              "value": "-20"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n30",
+              "value": "-30"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n40",
+              "value": "-40"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n50",
+              "value": "-50"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n60",
+              "value": "-60"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n70",
+              "value": "-70"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n80",
+              "value": "-80"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n90",
+              "value": "-90"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n100",
+              "value": "-100"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n110",
+              "value": "-110"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n120",
+              "value": "-120"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n130",
+              "value": "-130"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n140",
+              "value": "-140"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n150",
+              "value": "-150"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n160",
+              "value": "-160"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n170",
+              "value": "-170"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n180",
+              "value": "-180"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n190",
+              "value": "-190"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n200",
+              "value": "-200"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n210",
+              "value": "-210"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n220",
+              "value": "-220"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n230",
+              "value": "-230"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n240",
+              "value": "-240"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n250",
+              "value": "-250"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n260",
+              "value": "-260"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n270",
+              "value": "-270"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n280",
+              "value": "-280"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n290",
+              "value": "-290"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n300",
+              "value": "-300"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n310",
+              "value": "-310"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n320",
+              "value": "-320"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n330",
+              "value": "-330"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n340",
+              "value": "-340"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n350",
+              "value": "-350"
+            },
+            {
+              "label": "Lang.Blocks.neo_servo_angle_n360",
+              "value": "-360"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neo"
+      }
+    }
+  ]
+}

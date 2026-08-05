@@ -1,0 +1,587 @@
+{
+  "category": "hardware_memaker",
+  "blocks": [
+    {
+      "type": "memaker_analog_list",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "memaker_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            },
+            {
+              "label": "A6",
+              "value": "6"
+            },
+            {
+              "label": "A7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_get_analog_value",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "아날로그 번 센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "memaker_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_get_analog_value_map",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "의 범위를 ~ 에서 ~ 로 바꾼값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "memaker_get_analog_value",
+            "params": [
+              {
+                "type": "memaker_analog_list",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_get_ultrasonic_value",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "초음파센서 Trig Echo 센서값"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "8"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_get_digital",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "디지털 번 센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_toggle_led",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "디지털 번 핀"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_digital_pwm",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "디지털 번 핀을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_pwm_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_set_servo",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "디지털 번 핀의 서보모터를 의 각도로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_list_digital_lcd_line",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "memaker_list_digital_lcd_line"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LINE1",
+              "value": "0"
+            },
+            {
+              "label": "LINE2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_list_digital_lcd_column",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "memaker_list_digital_lcd_column"
+      },
+      "params": [
+        {
+          "key": "COLUMN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "COL1",
+              "value": "0"
+            },
+            {
+              "label": "COL2",
+              "value": "1"
+            },
+            {
+              "label": "COL3",
+              "value": "2"
+            },
+            {
+              "label": "COL4",
+              "value": "3"
+            },
+            {
+              "label": "COL5",
+              "value": "4"
+            },
+            {
+              "label": "COL6",
+              "value": "5"
+            },
+            {
+              "label": "COL7",
+              "value": "6"
+            },
+            {
+              "label": "COL8",
+              "value": "7"
+            },
+            {
+              "label": "COL9",
+              "value": "8"
+            },
+            {
+              "label": "COL10",
+              "value": "9"
+            },
+            {
+              "label": "COL11",
+              "value": "10"
+            },
+            {
+              "label": "COL12",
+              "value": "11"
+            },
+            {
+              "label": "COL13",
+              "value": "12"
+            },
+            {
+              "label": "COL14",
+              "value": "13"
+            },
+            {
+              "label": "COL15",
+              "value": "14"
+            },
+            {
+              "label": "COL16",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_set_lcd",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "1602 문자 LCD 행 , 열에 출력하기"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "memaker_list_digital_lcd_line",
+            "params": []
+          }
+        },
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "memaker_list_digital_lcd_column",
+            "params": []
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Type text !!"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_list_lcd_command",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "memaker_list_lcd_command"
+      },
+      "params": [
+        {
+          "key": "COMMAND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LCD_BLUE",
+              "value": "0"
+            },
+            {
+              "label": "LCD_GREEN",
+              "value": "1"
+            },
+            {
+              "label": "LCD_CLEAR",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    },
+    {
+      "type": "memaker_lcd_command",
+      "category": "hardware_memaker",
+      "label": {
+        "ko": "1602 문자 LCD 명령실행하기"
+      },
+      "params": [
+        {
+          "key": "COMMAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "memaker_list_lcd_command",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "memaker"
+      }
+    }
+  ]
+}

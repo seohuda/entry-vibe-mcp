@@ -1,0 +1,130 @@
+{
+  "category": "ai_learning_svm",
+  "blocks": [
+    {
+      "type": "learning_title_svm",
+      "category": "ai_learning_svm",
+      "label": {
+        "ko": "learning_title_svm"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningSvm"
+      }
+    },
+    {
+      "type": "set_svm_option",
+      "category": "ai_learning_svm",
+      "label": {
+        "ko": "학습 조건 을 으로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.train_param_C",
+              "value": "C"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningSvm"
+      }
+    },
+    {
+      "type": "set_kernel_linear",
+      "category": "ai_learning_svm",
+      "label": {
+        "ko": "커널을 선형으로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningSvm"
+      }
+    },
+    {
+      "type": "set_kernel_option",
+      "category": "ai_learning_svm",
+      "label": {
+        "ko": "커널을 (으)로 바꾸고 를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "KERNEL",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.train_param_kernel_polynomial",
+              "value": "KERNEL_STRING_TYPE.POLYNOMIAL"
+            },
+            {
+              "label": "Lang.AiLearning.train_param_kernel_rbf",
+              "value": "KERNEL_STRING_TYPE.RBF"
+            }
+          ]
+        },
+        {
+          "key": "OPTION",
+          "type": "Unknown"
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningSvm"
+      }
+    }
+  ]
+}

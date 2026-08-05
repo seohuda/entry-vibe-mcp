@@ -1,0 +1,89 @@
+{
+  "category": "hardware_freelinker2",
+  "blocks": [
+    {
+      "type": "A_channel",
+      "category": "hardware_freelinker2",
+      "label": {
+        "ko": "A_channel"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "A_channel"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "freelinker2"
+      }
+    },
+    {
+      "type": "B_channel",
+      "category": "hardware_freelinker2",
+      "label": {
+        "ko": "B_channel"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "B_channel"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "freelinker2"
+      }
+    },
+    {
+      "type": "C_channel",
+      "category": "hardware_freelinker2",
+      "label": {
+        "ko": "C_channel"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "C_channel"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "freelinker2"
+      }
+    },
+    {
+      "type": "D_channel",
+      "category": "hardware_freelinker2",
+      "label": {
+        "ko": "D_channel"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "D_channel"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "freelinker2"
+      }
+    }
+  ]
+}

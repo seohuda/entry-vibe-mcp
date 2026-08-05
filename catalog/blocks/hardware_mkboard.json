@@ -1,0 +1,2485 @@
+{
+  "category": "hardware_mkboard",
+  "blocks": [
+    {
+      "type": "mkboard_analog_list",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            },
+            {
+              "label": "A6",
+              "value": "6"
+            },
+            {
+              "label": "A7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_get_analog_value",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "아날로그 번 센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_get_analog_value_map",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "의 범위를 ~ 에서 ~ 로 바꾼값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_get_analog_value",
+            "params": [
+              {
+                "type": "mkboard_analog_list",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_get_ultrasonic_1_use",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_get_ultrasonic_1_use"
+      },
+      "params": [
+        {
+          "key": "TRIG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "ECHO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_get_ultrasonic_1_value",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_get_ultrasonic_1_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_get_ultrasonic_2_use",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_get_ultrasonic_2_use"
+      },
+      "params": [
+        {
+          "key": "TRIG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "ECHO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_get_ultrasonic_2_value",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_get_ultrasonic_2_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_get_digital",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "디지털 번 센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_toggle_led",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "디지털 번 핀"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_digital_pwm",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "디지털 번 핀을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_pwm_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_tone_list",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_tone_value",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_octave_list",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_set_tone",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "디지털 번 핀의 버저를 음으로 초 연주하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "11"
+            ]
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_set_servo",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "디지털 번 핀의 서보모터를 의 각도로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_list_digital_lcd_line",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_list_digital_lcd_line"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LINE1",
+              "value": "0"
+            },
+            {
+              "label": "LINE2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_list_digital_lcd_column",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_list_digital_lcd_column"
+      },
+      "params": [
+        {
+          "key": "COLUMN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "COL1",
+              "value": "0"
+            },
+            {
+              "label": "COL2",
+              "value": "1"
+            },
+            {
+              "label": "COL3",
+              "value": "2"
+            },
+            {
+              "label": "COL4",
+              "value": "3"
+            },
+            {
+              "label": "COL5",
+              "value": "4"
+            },
+            {
+              "label": "COL6",
+              "value": "5"
+            },
+            {
+              "label": "COL7",
+              "value": "6"
+            },
+            {
+              "label": "COL8",
+              "value": "7"
+            },
+            {
+              "label": "COL9",
+              "value": "8"
+            },
+            {
+              "label": "COL10",
+              "value": "9"
+            },
+            {
+              "label": "COL11",
+              "value": "10"
+            },
+            {
+              "label": "COL12",
+              "value": "11"
+            },
+            {
+              "label": "COL13",
+              "value": "12"
+            },
+            {
+              "label": "COL14",
+              "value": "13"
+            },
+            {
+              "label": "COL15",
+              "value": "14"
+            },
+            {
+              "label": "COL16",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_list_lcd_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_list_lcd_init"
+      },
+      "params": [
+        {
+          "key": "LCD_INIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0x20",
+              "value": "0x20"
+            },
+            {
+              "label": "0x27",
+              "value": "0x27"
+            },
+            {
+              "label": "0x3f",
+              "value": "0x3f"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_list_lcd_command",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_list_lcd_command"
+      },
+      "params": [
+        {
+          "key": "LCD_COMMAND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LCD_CLEAR",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lcd_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lcd_init"
+      },
+      "params": [
+        {
+          "key": "LCD_INIT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_list_lcd_init",
+            "params": [
+              "0x27"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lcd_command",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "1602 문자 LCD 명령실행하기"
+      },
+      "params": [
+        {
+          "key": "LCD_COMMAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_list_lcd_command",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lcd_print",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lcd_print"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_list_digital_lcd_line",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_list_digital_lcd_column",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Type text !!"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_list_segment_bright",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_list_segment_bright"
+      },
+      "params": [
+        {
+          "key": "BRIGHT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_list_segment_comma",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_list_segment_comma"
+      },
+      "params": [
+        {
+          "key": "SEGMENT_COMMA",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_segment_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_segment_init"
+      },
+      "params": [
+        {
+          "key": "PORT_CLK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "PORT_DIO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_segment_bright",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_segment_bright"
+      },
+      "params": [
+        {
+          "key": "BRIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_list_segment_bright",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_segment_clear",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_segment_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_segment_value",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_segment_value"
+      },
+      "params": [
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "888"
+            ]
+          }
+        },
+        {
+          "key": "SEGMENT_COMMA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_list_segment_comma",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ON_OFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "off"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_list_oled_comma",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_list_oled_comma"
+      },
+      "params": [
+        {
+          "key": "OLED_COMMA",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_oled_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_oled_init"
+      },
+      "params": [
+        {
+          "key": "OLED_INIT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0x3C"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_oled_clear",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_oled_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_oled_print",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_oled_print"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Type text !!"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_oled_print_number",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_oled_print_number"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "999"
+            ]
+          }
+        },
+        {
+          "key": "OLED_COMMA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_list_oled_comma",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_matrix_count_list",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_matrix_count_list"
+      },
+      "params": [
+        {
+          "key": "MATRIX_NUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_list_matrix_bright",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_list_matrix_bright"
+      },
+      "params": [
+        {
+          "key": "BRIGHT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_matrix_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_matrix_init"
+      },
+      "params": [
+        {
+          "key": "MATRIX_NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "PORT_DATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "PORT_CLK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "11"
+            ]
+          }
+        },
+        {
+          "key": "PORT_CS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "9"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_matrix_bright",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_matrix_bright"
+      },
+      "params": [
+        {
+          "key": "BRIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_list_matrix_bright",
+            "params": [
+              "7"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_matrix_clear",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_matrix_clear"
+      },
+      "params": [
+        {
+          "key": "MATRIX_NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_matrix_set",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_matrix_set"
+      },
+      "params": [
+        {
+          "key": "MATRIX_NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "MATRIX_ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "MATRIX_COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "MATRIX_ON_OFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_matrix_set_row",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_matrix_set_row"
+      },
+      "params": [
+        {
+          "key": "MATRIX_NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "MATRIX_ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "01010101"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_matrix_set_col",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_matrix_set_col"
+      },
+      "params": [
+        {
+          "key": "MATRIX_NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "MATRIX_COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "01010101"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_matrix_char",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_matrix_char"
+      },
+      "params": [
+        {
+          "key": "MATRIX_NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_matrix_count_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_neopixel_list",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_neopixel_list"
+      },
+      "params": [
+        {
+          "key": "RGB",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "RGB",
+              "value": "0"
+            },
+            {
+              "label": "RGBW",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_neopixel_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_neopixel_init"
+      },
+      "params": [
+        {
+          "key": "RGB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_neopixel_list",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "PORT_NO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "LED_COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_neopixel_set_rgb",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_neopixel_set_rgb"
+      },
+      "params": [
+        {
+          "key": "LED_NO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "R_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "G_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "B_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_neopixel_set_rgbw",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_neopixel_set_rgbw"
+      },
+      "params": [
+        {
+          "key": "LED_NO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "R_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "G_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "B_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "W_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_neopixel_on",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_neopixel_on"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_pm5003_pm_list",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_pm5003_pm_list"
+      },
+      "params": [
+        {
+          "key": "PM_KIND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "PM1.0",
+              "value": "0"
+            },
+            {
+              "label": "PM2.5",
+              "value": "1"
+            },
+            {
+              "label": "PM10",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_pms5003_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_pms5003_init"
+      },
+      "params": [
+        {
+          "key": "PORT_RX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "9"
+            ]
+          }
+        },
+        {
+          "key": "PORT_TX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_pms5003_measure",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_pms5003_measure"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_pms5003_read",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_pms5003_read"
+      },
+      "params": [
+        {
+          "key": "PM_KIND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_pm5003_pm_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lsm303_axis_list",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lsm303_axis_list"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X",
+              "value": "0"
+            },
+            {
+              "label": "Y",
+              "value": "1"
+            },
+            {
+              "label": "Z",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lsm303_accel_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lsm303_accel_init"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lsm303_accel_measure",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lsm303_accel_measure"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lsm303_accel_read",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lsm303_accel_read"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "mkboard_lsm303_axis_list",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lsm303_compass_init",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lsm303_compass_init"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lsm303_compass_measure",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lsm303_compass_measure"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    },
+    {
+      "type": "mkboard_lsm303_compass_read",
+      "category": "hardware_mkboard",
+      "label": {
+        "ko": "mkboard_lsm303_compass_read"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mkboard"
+      }
+    }
+  ]
+}

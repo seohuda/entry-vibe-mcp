@@ -1,0 +1,441 @@
+{
+  "category": "hardware_telliot_lite",
+  "blocks": [
+    {
+      "type": "telliot_car_move",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_move"
+      },
+      "params": [
+        {
+          "key": "PREDEFINED_MOTION_ID",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞",
+              "value": "forward"
+            },
+            {
+              "label": "뒤",
+              "value": "backward"
+            }
+          ]
+        },
+        {
+          "key": "PREDEFINED_MOTION_VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_turn",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_turn"
+      },
+      "params": [
+        {
+          "key": "PREDEFINED_MOTION_ID",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "left"
+            },
+            {
+              "label": "오른쪽",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "key": "PREDEFINED_MOTION_VALUE",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_stop",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_line_move",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_line_move"
+      },
+      "params": [
+        {
+          "key": "LINE_TRACE_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "forward"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_sensor_is_detected",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_sensor_is_detected"
+      },
+      "params": [
+        {
+          "key": "OBJECT_DETECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "감지",
+              "value": "detected"
+            },
+            {
+              "label": "미감지",
+              "value": "not detected"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_sensor_RFID_detect",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_sensor_RFID_detect"
+      },
+      "params": [
+        {
+          "key": "TAG_DETECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "동그라미",
+              "value": "circle"
+            },
+            {
+              "label": "네모",
+              "value": "rectangle"
+            },
+            {
+              "label": "세모",
+              "value": "triangle"
+            },
+            {
+              "label": "별",
+              "value": "star"
+            },
+            {
+              "label": "다이아몬드",
+              "value": "diamond"
+            },
+            {
+              "label": "하트",
+              "value": "heart"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_chatbot",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_chatbot"
+      },
+      "params": [
+        {
+          "key": "AI_CHATBOT_ASK",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "<질문>"
+            ]
+          }
+        },
+        {
+          "key": "AI_CHATBOT_RESP",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "<답변>"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_voice_command",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_voice_command"
+      },
+      "params": [
+        {
+          "key": "CAR_CHATBOT_CMD",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "<command>"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_voice_trigger",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_voice_trigger"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_STT",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_STT"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_TTS",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_TTS"
+      },
+      "params": [
+        {
+          "key": "TEXT_TO_SPEECH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "<Text>"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    },
+    {
+      "type": "telliot_car_add_prompt",
+      "category": "hardware_telliot_lite",
+      "label": {
+        "ko": "telliot_car_add_prompt"
+      },
+      "params": [
+        {
+          "key": "AI_PROMPT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "<Prompt>"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "telliot_lite"
+      }
+    }
+  ]
+}

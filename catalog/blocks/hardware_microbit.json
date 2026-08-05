@@ -1,0 +1,739 @@
+{
+  "category": "hardware_microbit",
+  "blocks": [
+    {
+      "type": "microbit_led_toggle",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_led_toggle"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            },
+            {
+              "label": "반전",
+              "value": "toggle"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_get_led",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_get_led"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_show_string",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_show_string"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello!"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_show_image",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_show_image"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "하트",
+              "value": "0"
+            },
+            {
+              "label": "행복함",
+              "value": "4"
+            },
+            {
+              "label": "삼각형",
+              "value": "32"
+            },
+            {
+              "label": "사각형",
+              "value": "37"
+            },
+            {
+              "label": "다이아몬드",
+              "value": "35"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_get_analog",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_get_analog"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "P0",
+              "value": "7"
+            },
+            {
+              "label": "P1",
+              "value": "8"
+            },
+            {
+              "label": "P2",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_get_analog_map",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_get_analog_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P0",
+              "value": "7"
+            },
+            {
+              "label": "P1",
+              "value": "8"
+            },
+            {
+              "label": "P2",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_get_digital",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_get_digital"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "P0",
+              "value": "7"
+            },
+            {
+              "label": "P1",
+              "value": "8"
+            },
+            {
+              "label": "P2",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_get_button",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_get_button"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "A",
+              "value": "1"
+            },
+            {
+              "label": "B",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_get_sensor",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_get_sensor"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "빛",
+              "value": "lightLevel"
+            },
+            {
+              "label": "온도",
+              "value": "temperature"
+            },
+            {
+              "label": "자기",
+              "value": "compassHeading"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_get_accelerometer",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_get_accelerometer"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "x축",
+              "value": "0"
+            },
+            {
+              "label": "y축",
+              "value": "1"
+            },
+            {
+              "label": "z축",
+              "value": "2"
+            },
+            {
+              "label": "크기",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_play_note",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_play_note"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Low C",
+              "value": "131"
+            },
+            {
+              "label": "Low C#",
+              "value": "139"
+            },
+            {
+              "label": "Low D",
+              "value": "147"
+            },
+            {
+              "label": "Low Eb",
+              "value": "156"
+            },
+            {
+              "label": "Low E",
+              "value": "165"
+            },
+            {
+              "label": "Low F",
+              "value": "175"
+            },
+            {
+              "label": "Low F#",
+              "value": "185"
+            },
+            {
+              "label": "Low G",
+              "value": "196"
+            },
+            {
+              "label": "Low G#",
+              "value": "208"
+            },
+            {
+              "label": "Low A",
+              "value": "220"
+            },
+            {
+              "label": "Low Bb",
+              "value": "233"
+            },
+            {
+              "label": "Low B",
+              "value": "247"
+            },
+            {
+              "label": "Middle C",
+              "value": "262"
+            },
+            {
+              "label": "Middle C#",
+              "value": "277"
+            },
+            {
+              "label": "Middle D",
+              "value": "294"
+            },
+            {
+              "label": "Middle Eb",
+              "value": "311"
+            },
+            {
+              "label": "Middle E",
+              "value": "330"
+            },
+            {
+              "label": "Middle F",
+              "value": "349"
+            },
+            {
+              "label": "Middle F#",
+              "value": "370"
+            },
+            {
+              "label": "Middle G",
+              "value": "392"
+            },
+            {
+              "label": "Middle G#",
+              "value": "415"
+            },
+            {
+              "label": "Middle A",
+              "value": "440"
+            },
+            {
+              "label": "Middle Bb",
+              "value": "466"
+            },
+            {
+              "label": "Middle B",
+              "value": "494"
+            },
+            {
+              "label": "High C",
+              "value": "523"
+            },
+            {
+              "label": "High C#",
+              "value": "555"
+            },
+            {
+              "label": "High D",
+              "value": "587"
+            },
+            {
+              "label": "High Eb",
+              "value": "622"
+            },
+            {
+              "label": "High E",
+              "value": "659"
+            },
+            {
+              "label": "High F",
+              "value": "698"
+            },
+            {
+              "label": "High F#",
+              "value": "740"
+            },
+            {
+              "label": "High G",
+              "value": "784"
+            },
+            {
+              "label": "High G#",
+              "value": "831"
+            },
+            {
+              "label": "High A",
+              "value": "880"
+            },
+            {
+              "label": "High Bb",
+              "value": "932"
+            },
+            {
+              "label": "High B",
+              "value": "988"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "1/2",
+              "value": "2"
+            },
+            {
+              "label": "1/4",
+              "value": "4"
+            },
+            {
+              "label": "1/8",
+              "value": "8"
+            },
+            {
+              "label": "1/16",
+              "value": "16"
+            },
+            {
+              "label": "2",
+              "value": "32"
+            },
+            {
+              "label": "4",
+              "value": "64"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_change_bpm",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_change_bpm"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              20
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_set_bpm",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_set_bpm"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              120
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    },
+    {
+      "type": "microbit_radio_receive_event",
+      "category": "hardware_microbit",
+      "label": {
+        "ko": "microbit_radio_receive_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "microbit"
+      }
+    }
+  ]
+}

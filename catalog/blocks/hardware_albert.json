@@ -1,0 +1,1299 @@
+{
+  "category": "hardware_albert",
+  "blocks": [
+    {
+      "type": "albert_value",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "albert_value"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_left_proximity",
+              "value": "leftProximity"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_right_proximity",
+              "value": "rightProximity"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_x",
+              "value": "accelerationX"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_y",
+              "value": "accelerationY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_z",
+              "value": "accelerationZ"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_front_oid",
+              "value": "frontOid"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_rear_oid",
+              "value": "backOid"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_position_x",
+              "value": "positionX"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_position_y",
+              "value": "positionY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_orientation",
+              "value": "orientation"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_light",
+              "value": "light"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_temperature",
+              "value": "temperature"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_signal_strength",
+              "value": "signalStrength"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_hand_found",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "손 찾음?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_is_oid_value",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "OID 값이 인가?"
+      },
+      "params": [
+        {
+          "key": "OID",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_front",
+              "value": "FRONT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_rear",
+              "value": "BACK"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_boolean",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "albert_boolean"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_forward",
+              "value": "TILT_FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_backward",
+              "value": "TILT_BACKWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_left",
+              "value": "TILT_LEFT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_right",
+              "value": "TILT_RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_flip",
+              "value": "TILT_FLIP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_not",
+              "value": "TILT_NOT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_normal",
+              "value": "BATTERY_NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_low",
+              "value": "BATTERY_LOW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_empty",
+              "value": "BATTERY_EMPTY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_move_forward_for_secs",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "앞으로 초 이동하기"
+      },
+      "params": [
+        {
+          "key": "SECS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_move_backward_for_secs",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "뒤로 초 이동하기"
+      },
+      "params": [
+        {
+          "key": "SECS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_turn_for_secs",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "으로 초 돌기"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "SECS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_change_both_wheels_by",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "왼쪽 바퀴 오른쪽 바퀴 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_set_both_wheels_to",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "왼쪽 바퀴 오른쪽 바퀴 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_change_wheel_by",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "바퀴 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_set_wheel_to",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "바퀴 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_stop",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "정지하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_set_pad_size_to",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "말판 크기를 폭 높이 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "WIDTH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "108"
+            ]
+          }
+        },
+        {
+          "key": "HEIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "76"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_move_to_x_y_on_board",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "밑판 x: y: 위치로 이동하기"
+      },
+      "params": [
+        {
+          "key": "TOWARD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_forward2",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_backward2",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_set_orientation_on_board",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "말판 도 방향으로 바라보기"
+      },
+      "params": [
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_set_eye_to",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "눈을 으로 정하기"
+      },
+      "params": [
+        {
+          "key": "EYE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "4"
+            },
+            {
+              "label": "노란색",
+              "value": "6"
+            },
+            {
+              "label": "초록색",
+              "value": "2"
+            },
+            {
+              "label": "하늘색",
+              "value": "3"
+            },
+            {
+              "label": "파란색",
+              "value": "1"
+            },
+            {
+              "label": "자주색",
+              "value": "5"
+            },
+            {
+              "label": "하얀색",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_clear_eye",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "눈 끄기"
+      },
+      "params": [
+        {
+          "key": "EYE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_body_led",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "몸통 LED"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_turn_on",
+              "value": "ON"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_turn_off",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_front_led",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "앞쪽 LED"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_turn_on",
+              "value": "ON"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_turn_off",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_beep",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "삐 소리내기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_change_buzzer_by",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "버저 음을 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_set_buzzer_to",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "버저 음을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_clear_buzzer",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "버저 끄기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_play_note",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "albert_play_note"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_note_c",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_c_sharp",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d_sharp",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_e",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f_sharp",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g_sharp",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a_sharp",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_b",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_play_note_for",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "음을 박자 연주하기"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_note_c",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_c_sharp",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d_sharp",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_e",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f_sharp",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g_sharp",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a_sharp",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_b",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_rest_for",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "박자 쉬기"
+      },
+      "params": [
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.25"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_change_tempo_by",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "연주 속도를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    },
+    {
+      "type": "albert_set_tempo_to",
+      "category": "hardware_albert",
+      "label": {
+        "ko": "연주 속도를 BPM으로 정하기"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "albert"
+      }
+    }
+  ]
+}

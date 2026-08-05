@@ -1,0 +1,1297 @@
+{
+  "category": "hardware_diaboard",
+  "blocks": [
+    {
+      "type": "diaboard_button_pressed",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_button_pressed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_color_sensor_is",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_color_sensor_is"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_sensor_condition",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_sensor_condition"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "INEQ_SIGN",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_color_sensor_seven_hue",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_color_sensor_seven_hue"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_color_sensor_one_hue",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_color_sensor_one_hue"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_sensor_value",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_sensor_value"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_convert_scale",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_convert_scale"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_rainbow",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_rainbow"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_rainbow_time",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_rainbow_time"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_effect",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_effect"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_effect_time",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_effect_time"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_six",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_six"
+      },
+      "params": [
+        {
+          "key": "COLOR1",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "COLOR2",
+          "type": "Color"
+        },
+        {
+          "key": "COLOR3",
+          "type": "Color"
+        },
+        {
+          "key": "COLOR4",
+          "type": "Color"
+        },
+        {
+          "key": "COLOR5",
+          "type": "Color"
+        },
+        {
+          "key": "COLOR6",
+          "type": "Color"
+        },
+        {
+          "key": "6",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_one",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_one"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_one_time",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_one_time"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_hue",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_hue"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "HUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_color",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_color"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_rgb",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_rgb"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_led_turn_off_all",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_led_turn_off_all"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_servomotor_angle",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_servomotor_angle"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_servomotor_angle_time",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_servomotor_angle_time"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "180"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_dc_direction_speed",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_dc_direction_speed"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_dc_direction_speed_time",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_dc_direction_speed_time"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_dc_speed",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_dc_speed"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_dc_speed_time",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_dc_speed_time"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_turn_off_all_motors",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_turn_off_all_motors"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_melody_type",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_melody_type"
+      },
+      "params": [
+        {
+          "key": "MELODY",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_effect_type",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_effect_type"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_eight_melody_bpm",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_eight_melody_bpm"
+      },
+      "params": [
+        {
+          "key": "TONICSOLFA_1",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA_2",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA_3",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA_4",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA_5",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA_6",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA_7",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA_8",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "120"
+            ]
+          }
+        },
+        {
+          "key": "9",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_octave",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_octave"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_octave_rhythm",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_octave_rhythm"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TONICSOLFA",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "RHYTHM",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_hz",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_hz"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_hz_change",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_hz_change"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_speed_bpm",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_speed_bpm"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "120"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_speed_bpm_change",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_speed_bpm_change"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_sleep_rhythm",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_sleep_rhythm"
+      },
+      "params": [
+        {
+          "key": "RHYTHM",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    },
+    {
+      "type": "diaboard_buzzer_stop",
+      "category": "hardware_diaboard",
+      "label": {
+        "ko": "diaboard_buzzer_stop"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "diaboard"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1299 @@
+{
+  "category": "hardware_jinirobot_aibot",
+  "blocks": [
+    {
+      "type": "aibot_analog_read",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_analog_read"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.remote1",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.remote2",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.remote3",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.remote4",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_digital_read",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_digital_read"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.remote1",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.remote2",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.remote3",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.remote4",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_port",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_port"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.remote1",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.remote2",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.remote3",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.remote4",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.digitalInput",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.digitalOutput",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.analogInput",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_port_out",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_port_out"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.remote1",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.remote2",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.remote3",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.remote4",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "VAL",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_buzzer_play",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_buzzer_play"
+      },
+      "params": [
+        {
+          "key": "MELODY",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_speed",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_speed"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_angle_single_numtype",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_angle_single_numtype"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 90
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_angle_single",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_angle_single"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 90
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_servo_angle_1234",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_servo_angle_1234"
+      },
+      "params": [
+        {
+          "key": "SERVO1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_servo_angle_123456",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_servo_angle_123456"
+      },
+      "params": [
+        {
+          "key": "SERVO1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "6",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_angle_123456",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_angle_123456"
+      },
+      "params": [
+        {
+          "key": "SERVO1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "6",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_angle_1234",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_angle_1234"
+      },
+      "params": [
+        {
+          "key": "SERVO1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_angle_123",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_angle_123"
+      },
+      "params": [
+        {
+          "key": "SERVO1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_angle_56",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_angle_56"
+      },
+      "params": [
+        {
+          "key": "SERVO5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_servo_speed",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_servo_speed"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_servo_angle_single_numtype",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_servo_angle_single_numtype"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 90
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_servo_angle_single",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_servo_angle_single"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 90
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_servo_angle_123",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_servo_angle_123"
+      },
+      "params": [
+        {
+          "key": "SERVO1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_servo_angle_56",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_servo_angle_56"
+      },
+      "params": [
+        {
+          "key": "SERVO5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "SERVO6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "90"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_go_home",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_go_home"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_servo_go_home",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_servo_go_home"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_home_pos_angle",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_home_pos_angle"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 90
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_servo_home_pos_current",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_servo_home_pos_current"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_set_offset_zero",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_set_offset_zero"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_aidesk_read_string",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_aidesk_read_string"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "1"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_aidesk_read_number",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_aidesk_read_number"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "1"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_aidesk_control_basic",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_aidesk_control_basic"
+      },
+      "params": [
+        {
+          "key": "FUNC",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "1"
+        },
+        {
+          "key": "VAR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "0"
+        },
+        {
+          "key": "VAR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "0"
+        },
+        {
+          "key": "VAR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "0"
+        },
+        {
+          "key": "VAR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "0"
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_aidesk_func_stop",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_aidesk_func_stop"
+      },
+      "params": [
+        {
+          "key": "FUNC",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": "1"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    },
+    {
+      "type": "aibot_set_remote_device",
+      "category": "hardware_jinirobot_aibot",
+      "label": {
+        "ko": "aibot_set_remote_device"
+      },
+      "params": [
+        {
+          "key": "FUNC",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aibot"
+      }
+    }
+  ]
+}

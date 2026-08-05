@@ -1,0 +1,5156 @@
+{
+  "category": "hardware_robotisRBPracticalAssembly",
+  "blocks": [
+    {
+      "type": "robotis_Practice_drive_simple",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_drive_simple"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 5
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveF",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveB",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveL_in_place",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveR_in_place",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_drive_stop",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_drive_stop"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_drive_advanced",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_drive_advanced"
+      },
+      "params": [
+        {
+          "key": "LEFT_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "LEFT_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveF",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveB",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "RIGHT_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveF",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveB",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_drive_seperate",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_drive_seperate"
+      },
+      "params": [
+        {
+          "key": "WHEEL_SIDE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "WHEEL_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "WHEEL_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_direction_forward",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_direction_backward",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_drive_angle",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_drive_angle"
+      },
+      "params": [
+        {
+          "key": "WHEEL_SIDE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "WHEEL_ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "15"
+            ]
+          }
+        },
+        {
+          "key": "WHEEL_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_direction_forward",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_direction_backward",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_go_distance",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_go_distance"
+      },
+      "params": [
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveF",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveB",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_turn_angle",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_turn_angle"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveL_in_place",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveR_in_place",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_follow_line",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_follow_line"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_slow",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_normal",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_fast",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_stop_at_cross",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_stop_at_cross"
+      },
+      "params": [
+        {
+          "key": "CROSS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_line_cross_type_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robotis_line_cross_type_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.robotis_line_cross_type_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robotis_line_cross_type_8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_turn_at_line",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_turn_at_line"
+      },
+      "params": [
+        {
+          "key": "TURN_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveL_in_place",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveR_in_place",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveU_in_place",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_securitybot_init",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_securitybot_init"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_securitybot_hi",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_securitybot_hi"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_securitybot_alert",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_securitybot_alert"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_petbot_happy",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_petbot_happy"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_petbot_sad",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_petbot_sad"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_farmbot_init",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_farmbot_init"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_farmbot_seek",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_farmbot_seek"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_farmbot_plant_type",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_farmbot_plant_type"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_plant_ripe",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_plant_unripe",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_farmbot_harvest_or_not_and_go",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_farmbot_harvest_or_not_and_go"
+      },
+      "params": [
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_harvest",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_not_harvest",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_cm_ir_value",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_cm_ir_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_front_right",
+              "value": "360"
+            },
+            {
+              "label": "Lang.Blocks.robotis_front_left",
+              "value": "362"
+            },
+            {
+              "label": "Lang.Blocks.robotis_bottom_right",
+              "value": "364"
+            },
+            {
+              "label": "Lang.Blocks.robotis_bottom_left",
+              "value": "366"
+            },
+            {
+              "label": "Lang.Blocks.robotis_side_right",
+              "value": "368"
+            },
+            {
+              "label": "Lang.Blocks.robotis_side_left",
+              "value": "370"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_cm_ir_compare",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_cm_ir_compare"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_front_right",
+              "value": "360"
+            },
+            {
+              "label": "Lang.Blocks.robotis_front_left",
+              "value": "362"
+            },
+            {
+              "label": "Lang.Blocks.robotis_bottom_right",
+              "value": "364"
+            },
+            {
+              "label": "Lang.Blocks.robotis_bottom_left",
+              "value": "366"
+            },
+            {
+              "label": "Lang.Blocks.robotis_side_right",
+              "value": "368"
+            },
+            {
+              "label": "Lang.Blocks.robotis_side_left",
+              "value": "370"
+            }
+          ]
+        },
+        {
+          "key": "COMPARE_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "COMPARE_OP",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_if_greater",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_if_smaller",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_detectFrontObj",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_detectFrontObj"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_front_ir_sensor",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_distance_sensor",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_front",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_cm_btn_value",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_cm_btn_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "47"
+            },
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "44"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_cm_joystick_value",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_cm_joystick_value"
+      },
+      "params": [
+        {
+          "key": "COMPARE_VAL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_center",
+              "value": "0"
+            },
+            {
+              "label": "←",
+              "value": "1"
+            },
+            {
+              "label": "→",
+              "value": "2"
+            },
+            {
+              "label": "↑",
+              "value": "3"
+            },
+            {
+              "label": "↓",
+              "value": "4"
+            },
+            {
+              "label": "↖",
+              "value": "5"
+            },
+            {
+              "label": "↗",
+              "value": "6"
+            },
+            {
+              "label": "↙",
+              "value": "7"
+            },
+            {
+              "label": "↘",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_mic",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_mic"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_detectSound_compare",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_detectSound_compare"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_center",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "255"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_imu",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_imu"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x",
+              "value": "78"
+            },
+            {
+              "label": "y",
+              "value": "80"
+            },
+            {
+              "label": "z",
+              "value": "82"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_acceleration",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_gyro",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_roll_pitch",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_roll_pitch"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_roll",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.robotis_pitch",
+              "value": "88"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_distance_value",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_distance_value"
+      },
+      "params": [
+        {
+          "key": "ADDR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_sensing_distance",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.robotis_sensing_button",
+              "value": "24"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_distance_compare",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_distance_compare"
+      },
+      "params": [
+        {
+          "key": "ADDR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_sensing_distance",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.robotis_sensing_button",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "key": "COMPARE_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "COMPARE_OP",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_if_greater",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_if_smaller",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_if_equal",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_environment_value",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_environment_value"
+      },
+      "params": [
+        {
+          "key": "ADDR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_sensing_temperature",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_sensing_humidity",
+              "value": "29"
+            },
+            {
+              "label": "Lang.Blocks.robotis_sensing_brightness",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.robotis_sensing_motion",
+              "value": "27"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_environment_compare",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_environment_compare"
+      },
+      "params": [
+        {
+          "key": "ADDR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_sensing_temperature",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_sensing_humidity",
+              "value": "29"
+            },
+            {
+              "label": "Lang.Blocks.robotis_sensing_brightness",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.robotis_sensing_motion",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "COMPARE_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "COMPARE_OP",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_if_greater",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_if_smaller",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_if_equal",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_dxl_value",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_dxl_value"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Dropdown",
+          "defaultValue": 52,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left_wheel",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right_wheel",
+              "value": "51"
+            },
+            {
+              "label": "ID 1",
+              "value": "1"
+            },
+            {
+              "label": "ID 2",
+              "value": "2"
+            },
+            {
+              "label": "ID 3",
+              "value": "3"
+            },
+            {
+              "label": "ID 4",
+              "value": "4"
+            },
+            {
+              "label": "ID 5",
+              "value": "5"
+            },
+            {
+              "label": "ID 6",
+              "value": "6"
+            },
+            {
+              "label": "ID 7",
+              "value": "7"
+            },
+            {
+              "label": "ID 8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_dxl_value_angle",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_dxl_value_velocity",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_line_cross_compare",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_line_cross_compare"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_line_cross_type_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robotis_line_cross_type_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.robotis_line_cross_type_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robotis_line_cross_type_8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_screen",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_screen"
+      },
+      "params": [
+        {
+          "key": "ROBOT_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_kkokdu",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_rla",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_rgee",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "BACKGROUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_car_anim01",
+              "value": "2817"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim02",
+              "value": "2818"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim03",
+              "value": "2819"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim04",
+              "value": "2820"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim05",
+              "value": "2821"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim06",
+              "value": "2822"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim08",
+              "value": "2824"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim09",
+              "value": "2825"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim10",
+              "value": "2826"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim11",
+              "value": "2827"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim12",
+              "value": "2828"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim14",
+              "value": "2830"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim15",
+              "value": "2831"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim16",
+              "value": "2832"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim17",
+              "value": "2833"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim18",
+              "value": "2834"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim19",
+              "value": "2835"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_anim_screen",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_anim_screen"
+      },
+      "params": [
+        {
+          "key": "ROBOT_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_kkokdu",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_rla",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_rgee",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "BACKGROUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_car_anim01",
+              "value": "30978"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim02",
+              "value": "30981"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim04",
+              "value": "30983"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim05",
+              "value": "30984"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim06",
+              "value": "30985"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim07",
+              "value": "30986"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim08",
+              "value": "30987"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim09",
+              "value": "30988"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim10",
+              "value": "30989"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim11",
+              "value": "30990"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim12",
+              "value": "30991"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim14",
+              "value": "30993"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim15",
+              "value": "30994"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim16",
+              "value": "30995"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim17",
+              "value": "30996"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim18",
+              "value": "30997"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim19",
+              "value": "30998"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_icon_screen_food_plant",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_icon_screen_food_plant"
+      },
+      "params": [
+        {
+          "key": "ICON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_1",
+              "value": "10496"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_2",
+              "value": "10497"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_3",
+              "value": "10498"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_4",
+              "value": "10499"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_5",
+              "value": "10500"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_6",
+              "value": "10501"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_7",
+              "value": "10502"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_8",
+              "value": "10503"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_9",
+              "value": "10504"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_10",
+              "value": "10505"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_11",
+              "value": "10506"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_12",
+              "value": "10507"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_13",
+              "value": "10508"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_14",
+              "value": "10509"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_15",
+              "value": "10510"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_16",
+              "value": "10511"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_17",
+              "value": "10512"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_18",
+              "value": "10513"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_19",
+              "value": "10514"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_20",
+              "value": "10515"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_21",
+              "value": "10516"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_22",
+              "value": "10517"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_23",
+              "value": "10518"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_food_plant_24",
+              "value": "10519"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SIZE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_icon_screen_animal_human",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_icon_screen_animal_human"
+      },
+      "params": [
+        {
+          "key": "ICON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_1",
+              "value": "10752"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_2",
+              "value": "10753"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_3",
+              "value": "10754"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_4",
+              "value": "10755"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_5",
+              "value": "10756"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_6",
+              "value": "10757"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_7",
+              "value": "10758"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_8",
+              "value": "10759"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_9",
+              "value": "10760"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_10",
+              "value": "11787"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_11",
+              "value": "11788"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_12",
+              "value": "11789"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_13",
+              "value": "11790"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_14",
+              "value": "11805"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_15",
+              "value": "11806"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_16",
+              "value": "11807"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_17",
+              "value": "11808"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_18",
+              "value": "10761"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_19",
+              "value": "10762"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_20",
+              "value": "10763"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_21",
+              "value": "10764"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_22",
+              "value": "10765"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_23",
+              "value": "10766"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_24",
+              "value": "10767"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_25",
+              "value": "10768"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_26",
+              "value": "10769"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_27",
+              "value": "10770"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_28",
+              "value": "10771"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_29",
+              "value": "10772"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_30",
+              "value": "10773"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_31",
+              "value": "10774"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_32",
+              "value": "10775"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_33",
+              "value": "10776"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_animal_human_34",
+              "value": "10777"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SIZE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_icon_screen_object_tool",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_icon_screen_object_tool"
+      },
+      "params": [
+        {
+          "key": "ICON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_1",
+              "value": "11008"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_2",
+              "value": "11009"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_3",
+              "value": "11010"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_4",
+              "value": "11011"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_5",
+              "value": "11012"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_6",
+              "value": "11013"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_7",
+              "value": "11014"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_8",
+              "value": "11015"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_9",
+              "value": "11016"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_10",
+              "value": "11017"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_11",
+              "value": "11018"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_12",
+              "value": "11019"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_13",
+              "value": "11020"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_14",
+              "value": "11021"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_15",
+              "value": "11022"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_16",
+              "value": "11023"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_17",
+              "value": "11024"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_18",
+              "value": "11025"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_19",
+              "value": "11026"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_20",
+              "value": "11027"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_21",
+              "value": "11028"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_22",
+              "value": "11029"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_23",
+              "value": "11030"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_24",
+              "value": "11031"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_25",
+              "value": "11032"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_26",
+              "value": "11033"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_27",
+              "value": "11034"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_28",
+              "value": "11035"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_29",
+              "value": "11036"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_30",
+              "value": "11037"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_31",
+              "value": "11038"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_32",
+              "value": "11039"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_33",
+              "value": "11040"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_34",
+              "value": "11801"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_35",
+              "value": "11802"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_object_tool_36",
+              "value": "11809"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SIZE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_icon_screen_vehicle_number",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_icon_screen_vehicle_number"
+      },
+      "params": [
+        {
+          "key": "ICON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_1",
+              "value": "11264"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_2",
+              "value": "11265"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_3",
+              "value": "11266"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_4",
+              "value": "11267"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_5",
+              "value": "11268"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_6",
+              "value": "11269"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_7",
+              "value": "11270"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_8",
+              "value": "11271"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_9",
+              "value": "11272"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_10",
+              "value": "11273"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_11",
+              "value": "11274"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_12",
+              "value": "11275"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_13",
+              "value": "11276"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_14",
+              "value": "11776"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_15",
+              "value": "11777"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_16",
+              "value": "11778"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_17",
+              "value": "11779"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_18",
+              "value": "11780"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_19",
+              "value": "11781"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_20",
+              "value": "11782"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_21",
+              "value": "11783"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_22",
+              "value": "11277"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_23",
+              "value": "11278"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_24",
+              "value": "11279"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_25",
+              "value": "11280"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_26",
+              "value": "11281"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_27",
+              "value": "11282"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_28",
+              "value": "11283"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_29",
+              "value": "11284"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_30",
+              "value": "11285"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_31",
+              "value": "11286"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_32",
+              "value": "11287"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_33",
+              "value": "11288"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_34",
+              "value": "11289"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_35",
+              "value": "11290"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_36",
+              "value": "11291"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_37",
+              "value": "11292"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_vehicle_number_38",
+              "value": "11293"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SIZE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_icon_screen_game_character",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_icon_screen_game_character"
+      },
+      "params": [
+        {
+          "key": "ICON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_1",
+              "value": "11520"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_2",
+              "value": "11521"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_3",
+              "value": "11522"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_4",
+              "value": "11523"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_5",
+              "value": "11524"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_6",
+              "value": "11525"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_7",
+              "value": "11526"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_8",
+              "value": "11527"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_9",
+              "value": "11528"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_10",
+              "value": "11529"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_11",
+              "value": "11784"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_12",
+              "value": "11785"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_13",
+              "value": "11786"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_14",
+              "value": "11530"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_15",
+              "value": "11531"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_16",
+              "value": "11532"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_17",
+              "value": "11533"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_18",
+              "value": "11534"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_19",
+              "value": "11535"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_20",
+              "value": "11803"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_21",
+              "value": "11804"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_22",
+              "value": "11536"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_23",
+              "value": "11791"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_24",
+              "value": "11537"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_25",
+              "value": "11538"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_27",
+              "value": "11540"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_26",
+              "value": "11539"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_28",
+              "value": "11541"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_29",
+              "value": "11542"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_30",
+              "value": "11792"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_31",
+              "value": "11793"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_32",
+              "value": "11794"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_33",
+              "value": "11795"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_34",
+              "value": "11796"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_35",
+              "value": "11543"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_36",
+              "value": "11544"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_37",
+              "value": "11810"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_38",
+              "value": "11545"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_39",
+              "value": "11546"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_40",
+              "value": "11547"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_41",
+              "value": "11797"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_42",
+              "value": "11798"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_43",
+              "value": "11799"
+            },
+            {
+              "label": "Lang.Blocks.robotis_icon_game_character_44",
+              "value": "11800"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SIZE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_text_screen",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_text_screen"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": " "
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "FONT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_screen_text_font_small",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_screen_text_font_big",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "224"
+            },
+            {
+              "label": "Lang.Blocks.robotis_orange",
+              "value": "244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_yellow",
+              "value": "252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_green",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_darkblue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_purple",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.robotis_brown",
+              "value": "173"
+            },
+            {
+              "label": "Lang.Blocks.robotis_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_white",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_pixel",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_pixel"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "224"
+            },
+            {
+              "label": "Lang.Blocks.robotis_orange",
+              "value": "244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_yellow",
+              "value": "252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_green",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_darkblue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_purple",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.robotis_brown",
+              "value": "173"
+            },
+            {
+              "label": "Lang.Blocks.robotis_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_white",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_text_screen_redraw",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_text_screen_redraw"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": " "
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "224"
+            },
+            {
+              "label": "Lang.Blocks.robotis_orange",
+              "value": "244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_yellow",
+              "value": "252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_green",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_darkblue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_purple",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.robotis_brown",
+              "value": "173"
+            },
+            {
+              "label": "Lang.Blocks.robotis_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_white",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_LCDBright",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_LCDBright"
+      },
+      "params": [
+        {
+          "key": "BRIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_LCDColor",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_LCDColor"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "224"
+            },
+            {
+              "label": "Lang.Blocks.robotis_orange",
+              "value": "244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_yellow",
+              "value": "252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_green",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_darkblue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_purple",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.robotis_brown",
+              "value": "173"
+            },
+            {
+              "label": "Lang.Blocks.robotis_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_white",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_LCD_Flash",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_LCD_Flash"
+      },
+      "params": [
+        {
+          "key": "COLOR_ON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "224"
+            },
+            {
+              "label": "Lang.Blocks.robotis_orange",
+              "value": "244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_yellow",
+              "value": "252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_green",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_darkblue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_purple",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.robotis_brown",
+              "value": "173"
+            },
+            {
+              "label": "Lang.Blocks.robotis_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_white",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "COLOR_OFF",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "224"
+            },
+            {
+              "label": "Lang.Blocks.robotis_orange",
+              "value": "244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_yellow",
+              "value": "252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_green",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_darkblue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_purple",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.robotis_brown",
+              "value": "173"
+            },
+            {
+              "label": "Lang.Blocks.robotis_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_white",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "PERIOD",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0.3",
+              "value": "3"
+            },
+            {
+              "label": "0.4",
+              "value": "4"
+            },
+            {
+              "label": "0.5",
+              "value": "5"
+            },
+            {
+              "label": "0.6",
+              "value": "6"
+            },
+            {
+              "label": "0.7",
+              "value": "7"
+            },
+            {
+              "label": "0.8",
+              "value": "8"
+            },
+            {
+              "label": "0.9",
+              "value": "9"
+            },
+            {
+              "label": "1",
+              "value": "10"
+            },
+            {
+              "label": "1.1",
+              "value": "11"
+            },
+            {
+              "label": "1.2",
+              "value": "12"
+            },
+            {
+              "label": "1.3",
+              "value": "13"
+            },
+            {
+              "label": "1.4",
+              "value": "14"
+            },
+            {
+              "label": "1.5",
+              "value": "15"
+            },
+            {
+              "label": "1.6",
+              "value": "16"
+            },
+            {
+              "label": "1.7",
+              "value": "17"
+            },
+            {
+              "label": "1.8",
+              "value": "18"
+            },
+            {
+              "label": "1.9",
+              "value": "19"
+            },
+            {
+              "label": "2",
+              "value": "20"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_cm_led",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_cm_led"
+      },
+      "params": [
+        {
+          "key": "RB_LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_both",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_cm_led_pattern",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_cm_led_pattern"
+      },
+      "params": [
+        {
+          "key": "PATTERN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_pattern1",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.robotis_pattern2",
+              "value": "21"
+            },
+            {
+              "label": "Lang.Blocks.robotis_pattern3",
+              "value": "31"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_speed_fast",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_speed_midium",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_speed_slow",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_dxl_set_mode",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_dxl_set_mode"
+      },
+      "params": [
+        {
+          "key": "DXL_ID",
+          "type": "Dropdown",
+          "defaultValue": "52",
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left_wheel",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right_wheel",
+              "value": "51"
+            },
+            {
+              "label": "ID 1",
+              "value": "1"
+            },
+            {
+              "label": "ID 2",
+              "value": "2"
+            },
+            {
+              "label": "ID 3",
+              "value": "3"
+            },
+            {
+              "label": "ID 4",
+              "value": "4"
+            },
+            {
+              "label": "ID 5",
+              "value": "5"
+            },
+            {
+              "label": "ID 6",
+              "value": "6"
+            },
+            {
+              "label": "ID 7",
+              "value": "7"
+            },
+            {
+              "label": "ID 8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "DXL_MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_dxl_mode_joint",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_dxl_mode_wheel",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_dxl_mode_multi_turn",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_dxl_each_control",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_dxl_each_control"
+      },
+      "params": [
+        {
+          "key": "DXLNUM",
+          "type": "Dropdown",
+          "defaultValue": "52",
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left_wheel",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right_wheel",
+              "value": "51"
+            },
+            {
+              "label": "ID 1",
+              "value": "1"
+            },
+            {
+              "label": "ID 2",
+              "value": "2"
+            },
+            {
+              "label": "ID 3",
+              "value": "3"
+            },
+            {
+              "label": "ID 4",
+              "value": "4"
+            },
+            {
+              "label": "ID 5",
+              "value": "5"
+            },
+            {
+              "label": "ID 6",
+              "value": "6"
+            },
+            {
+              "label": "ID 7",
+              "value": "7"
+            },
+            {
+              "label": "ID 8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_dxl_set_position",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_dxl_set_position"
+      },
+      "params": [
+        {
+          "key": "DXL_ID",
+          "type": "Dropdown",
+          "defaultValue": "52",
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left_wheel",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right_wheel",
+              "value": "51"
+            },
+            {
+              "label": "ID 1",
+              "value": "1"
+            },
+            {
+              "label": "ID 2",
+              "value": "2"
+            },
+            {
+              "label": "ID 3",
+              "value": "3"
+            },
+            {
+              "label": "ID 4",
+              "value": "4"
+            },
+            {
+              "label": "ID 5",
+              "value": "5"
+            },
+            {
+              "label": "ID 6",
+              "value": "6"
+            },
+            {
+              "label": "ID 7",
+              "value": "7"
+            },
+            {
+              "label": "ID 8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "DXL_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "50"
+        },
+        {
+          "key": "DXL_ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_dxl_set_rotate",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_dxl_set_rotate"
+      },
+      "params": [
+        {
+          "key": "DXL_ID",
+          "type": "Dropdown",
+          "defaultValue": "52",
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left_wheel",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right_wheel",
+              "value": "51"
+            },
+            {
+              "label": "ID 1",
+              "value": "1"
+            },
+            {
+              "label": "ID 2",
+              "value": "2"
+            },
+            {
+              "label": "ID 3",
+              "value": "3"
+            },
+            {
+              "label": "ID 4",
+              "value": "4"
+            },
+            {
+              "label": "ID 5",
+              "value": "5"
+            },
+            {
+              "label": "ID 6",
+              "value": "6"
+            },
+            {
+              "label": "ID 7",
+              "value": "7"
+            },
+            {
+              "label": "ID 8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "DXL_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "50"
+        },
+        {
+          "key": "DXL_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_dxl_rotate_cw",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_dxl_rotate_ccw",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DXL_MOVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_dxl_move_rotate",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_dxl_move_stop",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_dxl_set_multiturn_round",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_dxl_set_multiturn_round"
+      },
+      "params": [
+        {
+          "key": "DXL_ID",
+          "type": "Dropdown",
+          "defaultValue": "52",
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left_wheel",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right_wheel",
+              "value": "51"
+            },
+            {
+              "label": "ID 1",
+              "value": "1"
+            },
+            {
+              "label": "ID 2",
+              "value": "2"
+            },
+            {
+              "label": "ID 3",
+              "value": "3"
+            },
+            {
+              "label": "ID 4",
+              "value": "4"
+            },
+            {
+              "label": "ID 5",
+              "value": "5"
+            },
+            {
+              "label": "ID 6",
+              "value": "6"
+            },
+            {
+              "label": "ID 7",
+              "value": "7"
+            },
+            {
+              "label": "ID 8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "DXL_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "50"
+        },
+        {
+          "key": "DXL_ROUND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "DXL_DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_dxl_rotate_cw",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_dxl_rotate_ccw",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_scale_simple",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_scale_simple"
+      },
+      "params": [
+        {
+          "key": "CM_BUZZER_OCTAV",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "CM_BUZZER_INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "",
+              "value": "8"
+            },
+            {
+              "label": "",
+              "value": "9"
+            },
+            {
+              "label": "",
+              "value": "10"
+            },
+            {
+              "label": "",
+              "value": "11"
+            },
+            {
+              "label": "",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "CM_BUZZER_NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_beat_sound_8th_note",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_sound_dotted_8th_note",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_sound_quarter_note",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_sound_dotted_quarter_note",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_sound_half_note",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_sound_dotted_half_note",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_sound_whole_note",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_sound_dotted_note",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_scale_advanced",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_scale_advanced"
+      },
+      "params": [
+        {
+          "key": "CM_BUZZER_OCTAV",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "CM_BUZZER_INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "",
+              "value": "8"
+            },
+            {
+              "label": "",
+              "value": "9"
+            },
+            {
+              "label": "",
+              "value": "10"
+            },
+            {
+              "label": "",
+              "value": "11"
+            },
+            {
+              "label": "",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "CM_BUZZER_BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_rest_simple",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_rest_simple"
+      },
+      "params": [
+        {
+          "key": "CM_BUZZER_NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_beat_rest_8th_note",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_rest_quarter_note",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_rest_half_note",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robotis_beat_rest_whole_note",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_rest_advanced",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_rest_advanced"
+      },
+      "params": [
+        {
+          "key": "CM_BUZZER_BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_beat_per_minute",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_beat_per_minute"
+      },
+      "params": [
+        {
+          "key": "CM_BUZZER_BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 75
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_Hello",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_Hello"
+      },
+      "params": [
+        {
+          "key": "HELLO",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_korean1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean5",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean6",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean7",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean8",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean9",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean10",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean11",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean12",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean13",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean14",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean15",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean16",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean17",
+              "value": "16"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean18",
+              "value": "17"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean19",
+              "value": "18"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean20",
+              "value": "19"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean21",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean22",
+              "value": "21"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean23",
+              "value": "22"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean24",
+              "value": "23"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean25",
+              "value": "24"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean26",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean27",
+              "value": "26"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean28",
+              "value": "27"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean29",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean30",
+              "value": "29"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean31",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean32",
+              "value": "31"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean33",
+              "value": "32"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean34",
+              "value": "33"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean35",
+              "value": "34"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean36",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean37",
+              "value": "36"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean38",
+              "value": "37"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean39",
+              "value": "38"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean40",
+              "value": "39"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean41",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean42",
+              "value": "41"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean43",
+              "value": "42"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean44",
+              "value": "43"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean45",
+              "value": "44"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean46",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean47",
+              "value": "46"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean48",
+              "value": "47"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean49",
+              "value": "48"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean50",
+              "value": "49"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean51",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean52",
+              "value": "51"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean53",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean54",
+              "value": "53"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean55",
+              "value": "54"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean56",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean57",
+              "value": "56"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean58",
+              "value": "57"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean59",
+              "value": "58"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean60",
+              "value": "59"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_effectSound",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_effectSound"
+      },
+      "params": [
+        {
+          "key": "HELLO",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_dog",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_frog",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_cat",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_chicken",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robotis_tiger",
+              "value": "19"
+            },
+            {
+              "label": "Lang.Blocks.robotis_mouse",
+              "value": "17"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ambul",
+              "value": "773"
+            },
+            {
+              "label": "Lang.Blocks.robotis_Horn",
+              "value": "781"
+            },
+            {
+              "label": "Lang.Blocks.robotis_siren",
+              "value": "774"
+            },
+            {
+              "label": "Lang.Blocks.robotis_whistle",
+              "value": "274"
+            },
+            {
+              "label": "Lang.Blocks.robotis_gun",
+              "value": "775"
+            },
+            {
+              "label": "Lang.Blocks.robotis_clap",
+              "value": "260"
+            },
+            {
+              "label": "Lang.Blocks.robotis_melody1",
+              "value": "786"
+            },
+            {
+              "label": "Lang.Blocks.robotis_melody2",
+              "value": "787"
+            },
+            {
+              "label": "Lang.Blocks.robotis_melody3",
+              "value": "788"
+            },
+            {
+              "label": "Lang.Blocks.robotis_melody4",
+              "value": "789"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_record",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_record"
+      },
+      "params": [
+        {
+          "key": "ROOM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_playRecord",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_playRecord"
+      },
+      "params": [
+        {
+          "key": "ROOM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_block_value_closest_to_center",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_block_value_closest_to_center"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_face",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_expression",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_object",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_color",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_tag",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_qr",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "DATA_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_block_center_x",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_block_center_y",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_block_width",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_block_height",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_leared_id",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_arrow_value_closest_to_center",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_arrow_value_closest_to_center"
+      },
+      "params": [
+        {
+          "key": "DATA_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_arrow_origin_x",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_arrow_origin_y",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_arrow_target_x",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_arrow_target_y",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_leared_id",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_number_of_learned_id",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_number_of_learned_id"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_block_value_of_id",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_block_value_of_id"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_face",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_expression",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_object",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_color",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_tag",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_qr",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_block_center_x",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_block_center_y",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_block_width",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_block_height",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_arrow_value_of_id",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_arrow_value_of_id"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_arrow_origin_x",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_arrow_origin_y",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_arrow_target_x",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_center_arrow_target_y",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_connection_status",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_connection_status"
+      },
+      "params": [
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_connected",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_disconnected",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_if_detected",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_if_detected"
+      },
+      "params": [
+        {
+          "key": "DETECT_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_face",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_expression",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_object",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_color",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_tag",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_qr",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_target_arrow",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_set_mode",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_set_mode"
+      },
+      "params": [
+        {
+          "key": "AI_CAMERA_MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_mode_face_recognition",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_mode_expression_recognition",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_mode_line_tracking",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_mode_color_recognition",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_mode_tag_recognition",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ai_camera_mode_object_classification",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_print_custom_text",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_print_custom_text"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "Hello!"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    },
+    {
+      "type": "robotis_Practice_ai_camera_clear_custom_text",
+      "category": "hardware_robotisRBPracticalAssembly",
+      "label": {
+        "ko": "robotis_Practice_ai_camera_clear_custom_text"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_P_Assembly"
+      }
+    }
+  ]
+}

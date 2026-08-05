@@ -1,0 +1,1812 @@
+{
+  "category": "hardware_robolink_codrone_diy",
+  "blocks": [
+    {
+      "type": "robolink_codrone_diy_drone_information",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_information"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.value_state_mode_flight",
+              "value": "state_modeFlight"
+            },
+            {
+              "label": "Lang.Blocks.value_state_mode_control_flight",
+              "value": "state_modeControlFlight"
+            },
+            {
+              "label": "Lang.Blocks.value_state_mode_movement",
+              "value": "state_modeMovement"
+            },
+            {
+              "label": "Lang.Blocks.value_state_headless",
+              "value": "state_headless"
+            },
+            {
+              "label": "Lang.Blocks.value_state_control_speed",
+              "value": "state_controlSpeed"
+            },
+            {
+              "label": "Lang.Blocks.value_trim_pitch",
+              "value": "trim_pitch"
+            },
+            {
+              "label": "Lang.Blocks.value_trim_roll",
+              "value": "trim_roll"
+            },
+            {
+              "label": "Lang.Blocks.value_state_sensor_orientation",
+              "value": "state_sensorOrientation"
+            },
+            {
+              "label": "Lang.Blocks.value_state_battery",
+              "value": "state_battery"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_sensor",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_sensor"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.value_motion_angle_roll",
+              "value": "motion_angleRoll"
+            },
+            {
+              "label": "Lang.Blocks.value_motion_angle_pitch",
+              "value": "motion_anglePitch"
+            },
+            {
+              "label": "Lang.Blocks.value_motion_angle_yaw",
+              "value": "motion_angleYaw"
+            },
+            {
+              "label": "Lang.Blocks.value_altitude_range_height",
+              "value": "altitude_rangeHeight"
+            },
+            {
+              "label": "Lang.Blocks.value_position_x",
+              "value": "informationAssembledForEntry_positionX"
+            },
+            {
+              "label": "Lang.Blocks.value_position_y",
+              "value": "informationAssembledForEntry_positionY"
+            },
+            {
+              "label": "Lang.Blocks.value_position_z",
+              "value": "informationAssembledForEntry_positionZ"
+            },
+            {
+              "label": "Lang.Blocks.value_altitude_temperature",
+              "value": "altitude_temperature"
+            },
+            {
+              "label": "Lang.Blocks.value_altitude_pressure",
+              "value": "altitude_pressure"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_value_button",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_value_button"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_value_button_event",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_value_button_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_value_joystick_left",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_value_joystick_left"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_joystick_x",
+              "value": "joystick_left_x"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_y",
+              "value": "joystick_left_y"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction",
+              "value": "joystick_left_direction"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_event",
+              "value": "joystick_left_event"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_value_joystick_right",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_value_joystick_right"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_joystick_x",
+              "value": "joystick_right_x"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_y",
+              "value": "joystick_right_y"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction",
+              "value": "joystick_right_direction"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_event",
+              "value": "joystick_right_event"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_if_button_press",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_if_button_press"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_button_front_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_front_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_top_left",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_top_right",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_center_up",
+              "value": "16"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_center_left",
+              "value": "32"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_center_right",
+              "value": "128"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_center_down",
+              "value": "256"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_if_joystick_direction",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_if_joystick_direction"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_left",
+              "value": "joystick_left_direction"
+            },
+            {
+              "label": "Lang.Blocks.common_right",
+              "value": "joystick_right_direction"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_left_up",
+              "value": "17"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_up",
+              "value": "18"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_right_up",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_left",
+              "value": "33"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_center",
+              "value": "34"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_right",
+              "value": "36"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_left_down",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_down",
+              "value": "66"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_right_down",
+              "value": "68"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_light_manual_single_off",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_light_manual_single_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_light_manual_single_input",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_light_manual_single_input"
+      },
+      "params": [
+        {
+          "key": "FLAGS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x3F"
+            ]
+          }
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_light_color_input",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_light_color_input"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_mode_hold",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker_double",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_dimming",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunrise",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunset",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow2",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "INTERVAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "250"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_light_color_select",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_light_color_select"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_color_red",
+              "value": "red"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_green",
+              "value": "green"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_blue",
+              "value": "blue"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_yellow",
+              "value": "yellow"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_magenta",
+              "value": "magenta"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cyan",
+              "value": "cyan"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_white",
+              "value": "white"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_sunset",
+              "value": "sunset"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cotton_candy",
+              "value": "cottonCandy"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_muscat",
+              "value": "muscat"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_strawberry_milk",
+              "value": "strawberryMilk"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_emerald",
+              "value": "emerald"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_lavender",
+              "value": "lavender"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_mode_hold",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker_double",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_dimming",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunrise",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunset",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow2",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "INTERVAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "250"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_buzzer_off",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_buzzer_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_buzzer_scale",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_buzzer_scale"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "SCALE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_buzzer_mute",
+              "value": "-1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_c",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_cs",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_ds",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_e",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_f",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_fs",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_g",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_gs",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_a",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_as",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_b",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "WAIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_buzzer_play",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_reserve",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_controller_buzzer_hz",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_controller_buzzer_hz"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "WAIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_buzzer_play",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_reserve",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_motor_stop",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_motor_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_motor_single",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_motor_single"
+      },
+      "params": [
+        {
+          "key": "MOTORINDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "MOTORSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "120"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_drone_takeoff",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_drone_takeoff"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_drone_landing",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_drone_landing"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_drone_stop",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_drone_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_headless",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_headless"
+      },
+      "params": [
+        {
+          "key": "HEADLESS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_headless_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.drone_headless_off",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_drone_reset_heading",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_drone_reset_heading"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_trim_direction",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_trim_direction"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_trim_pitch_increase",
+              "value": "pitch_inc"
+            },
+            {
+              "label": "Lang.Blocks.drone_trim_pitch_decrease",
+              "value": "pitch_dec"
+            },
+            {
+              "label": "Lang.Blocks.drone_trim_roll_increase",
+              "value": "roll_inc"
+            },
+            {
+              "label": "Lang.Blocks.drone_trim_roll_decrease",
+              "value": "roll_dec"
+            },
+            {
+              "label": "Lang.Blocks.drone_trim_reset",
+              "value": "reset"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_trim",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_trim"
+      },
+      "params": [
+        {
+          "key": "ROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_speed",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_speed"
+      },
+      "params": [
+        {
+          "key": "LEVEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_level_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.drone_level_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.drone_level_3",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_sensor_reset",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_sensor_reset"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_quad_one",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_quad_one"
+      },
+      "params": [
+        {
+          "key": "CONTROLTARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll",
+              "value": "control_quad8_roll"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch",
+              "value": "control_quad8_pitch"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw",
+              "value": "control_quad8_yaw"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle",
+              "value": "control_quad8_throttle"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_quad_one_delay",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_quad_one_delay"
+      },
+      "params": [
+        {
+          "key": "CONTROLTARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll",
+              "value": "control_quad8_roll"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch",
+              "value": "control_quad8_pitch"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw",
+              "value": "control_quad8_yaw"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle",
+              "value": "control_quad8_throttle"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_quad",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_quad"
+      },
+      "params": [
+        {
+          "key": "ROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_quad_delay",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_quad_delay"
+      },
+      "params": [
+        {
+          "key": "ROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_position_one",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_position_one"
+      },
+      "params": [
+        {
+          "key": "CONTROLDIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_forward",
+              "value": "pitch_forward"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_backward",
+              "value": "pitch_backward"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_left",
+              "value": "roll_left"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_right",
+              "value": "roll_right"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_up",
+              "value": "throttle_up"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_down",
+              "value": "throttle_down"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "WAIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_next",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.common_wait",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_position_turn",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_position_turn"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_YAW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw_cw",
+              "value": "-1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw_ccw",
+              "value": "+1"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE_YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "SPEED_YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "45"
+            ]
+          }
+        },
+        {
+          "key": "WAIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_next",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.common_wait",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    },
+    {
+      "type": "robolink_codrone_diy_drone_control_position_location",
+      "category": "hardware_robolink_codrone_diy",
+      "label": {
+        "ko": "robolink_codrone_diy_drone_control_position_location"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_PITCH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_forward",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_backward",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION_ROLL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_left",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_right",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_ROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION_THROTTLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_up",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_down",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "WAIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_next",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.common_wait",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "8",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "robolink_codrone_diy"
+      }
+    }
+  ]
+}

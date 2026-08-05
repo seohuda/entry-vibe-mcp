@@ -1,0 +1,1088 @@
+{
+  "category": "hardware_magkinder",
+  "blocks": [
+    {
+      "type": "magkinder_list_bottomSensor_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_bottomSensor_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_leftSide",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.magkinder_list_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.magkinder_list_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.magkinder_list_rightSide",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_cardSensor_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_cardSensor_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_front",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.magkinder_list_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.magkinder_list_right",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_frontSensor_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_frontSensor_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_left",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.magkinder_list_right",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_toggle_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_toggle_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.magkinder_list_on",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_motionMove_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_motionMove_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_forward",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.magkinder_list_backwards",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_motionTurn_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_motionTurn_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_left",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.magkinder_list_right",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_wheelSpeed_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_wheelSpeed_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_left",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.magkinder_list_right",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.magkinder_list_both",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_color_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_color_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.magkinder_list_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.magkinder_list_blue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.magkinder_list_green",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.magkinder_list_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.magkinder_list_purple",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.magkinder_list_white",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_soundVolume_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_soundVolume_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_speak_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_speak_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "16",
+              "value": "16"
+            },
+            {
+              "label": "17",
+              "value": "17"
+            },
+            {
+              "label": "18",
+              "value": "18"
+            },
+            {
+              "label": "19",
+              "value": "19"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "21",
+              "value": "21"
+            },
+            {
+              "label": "22",
+              "value": "22"
+            },
+            {
+              "label": "23",
+              "value": "23"
+            },
+            {
+              "label": "24",
+              "value": "24"
+            },
+            {
+              "label": "25",
+              "value": "25"
+            },
+            {
+              "label": "26",
+              "value": "26"
+            },
+            {
+              "label": "27",
+              "value": "27"
+            },
+            {
+              "label": "28",
+              "value": "28"
+            },
+            {
+              "label": "29",
+              "value": "29"
+            },
+            {
+              "label": "30",
+              "value": "30"
+            },
+            {
+              "label": "31",
+              "value": "31"
+            },
+            {
+              "label": "32",
+              "value": "32"
+            },
+            {
+              "label": "33",
+              "value": "33"
+            },
+            {
+              "label": "34",
+              "value": "34"
+            },
+            {
+              "label": "35",
+              "value": "35"
+            },
+            {
+              "label": "36",
+              "value": "36"
+            },
+            {
+              "label": "37",
+              "value": "37"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_scale_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_scale_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_4_octave_C",
+              "value": "22"
+            },
+            {
+              "label": "Lang.template.magkinder_list_4_octave_D",
+              "value": "23"
+            },
+            {
+              "label": "Lang.template.magkinder_list_4_octave_E",
+              "value": "24"
+            },
+            {
+              "label": "Lang.template.magkinder_list_4_octave_F",
+              "value": "25"
+            },
+            {
+              "label": "Lang.template.magkinder_list_4_octave_G",
+              "value": "26"
+            },
+            {
+              "label": "Lang.template.magkinder_list_4_octave_A",
+              "value": "27"
+            },
+            {
+              "label": "Lang.template.magkinder_list_4_octave_B",
+              "value": "28"
+            },
+            {
+              "label": "Lang.template.magkinder_list_5_octave_C",
+              "value": "29"
+            },
+            {
+              "label": "Lang.template.magkinder_list_5_octave_D",
+              "value": "30"
+            },
+            {
+              "label": "Lang.template.magkinder_list_5_octave_E",
+              "value": "31"
+            },
+            {
+              "label": "Lang.template.magkinder_list_5_octave_F",
+              "value": "32"
+            },
+            {
+              "label": "Lang.template.magkinder_list_5_octave_G",
+              "value": "33"
+            },
+            {
+              "label": "Lang.template.magkinder_list_5_octave_A",
+              "value": "34"
+            },
+            {
+              "label": "Lang.template.magkinder_list_5_octave_B",
+              "value": "35"
+            },
+            {
+              "label": "Lang.template.magkinder_list_6_octave_C",
+              "value": "36"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_list_modeSetting_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_list_modeSetting_block"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.magkinder_list_codingMode",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.magkinder_list_lineMode",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.magkinder_list_gestureFollowMode",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.magkinder_list_handFollowMode",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.magkinder_list_AvoidMode",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.magkinder_list_gestureCodingMode",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.magkinder_list_cardCodingMode",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_received_bottomSensor_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_received_bottomSensor_block"
+      },
+      "params": [
+        {
+          "key": "BOTTOM_SENSOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_bottomSensor_block",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_received_cardSensor_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_received_cardSensor_block"
+      },
+      "params": [
+        {
+          "key": "CARD_SENSOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_cardSensor_block",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_received_frontSensor_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_received_frontSensor_block"
+      },
+      "params": [
+        {
+          "key": "CARD_SENSOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_frontSensor_block",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_autoSensor_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_autoSensor_block"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_toggle_block",
+            "params": []
+          }
+        },
+        {
+          "key": "TOGGLE",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_moveStop_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_moveStop_block"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_move_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_move_block"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_motionMove_block",
+            "params": []
+          }
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_turn_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_turn_block"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_motionTurn_block",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_wheelSpeed_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_wheelSpeed_block"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_wheelSpeed_block",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "999"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_eyeLED_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_eyeLED_block"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_color_block",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_volumm_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_volumm_block"
+      },
+      "params": [
+        {
+          "key": "VOLUME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_soundVolume_block",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_speak_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_speak_block"
+      },
+      "params": [
+        {
+          "key": "SPEAK",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_speak_block",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_scale_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_scale_block"
+      },
+      "params": [
+        {
+          "key": "SCALE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_scale_block",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    },
+    {
+      "type": "magkinder_transmit_modeSetting_block",
+      "category": "hardware_magkinder",
+      "label": {
+        "ko": "magkinder_transmit_modeSetting_block"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "magkinder_list_modeSetting_block",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "magkinder"
+      }
+    }
+  ]
+}

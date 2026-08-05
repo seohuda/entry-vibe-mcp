@@ -1,0 +1,2325 @@
+{
+  "category": "hardware_coconut",
+  "blocks": [
+    {
+      "type": "coconut_move_motor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "움직이기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "3"
+            },
+            {
+              "label": "뒤로",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_turn_motor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "으로 돌기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_stop_motor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "모터 정지"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_move_for_secs",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "초동안 움직이기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "3"
+            },
+            {
+              "label": "뒤로",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_turn_for_secs",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "으로 초동안 돌기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_turn_to_led",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "으로 회전하는 동안 LED 켜기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "2"
+            },
+            {
+              "label": "노란색",
+              "value": "5"
+            },
+            {
+              "label": "초록색",
+              "value": "3"
+            },
+            {
+              "label": "하늘색",
+              "value": "6"
+            },
+            {
+              "label": "파란색",
+              "value": "4"
+            },
+            {
+              "label": "보라색",
+              "value": "7"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_move_outmotor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "외부모터 (으로) 움직이기 속도"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "3"
+            },
+            {
+              "label": "뒤로",
+              "value": "4"
+            },
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_set_led_to",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "LED를 으로 켜기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            },
+            {
+              "label": "모든",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "2"
+            },
+            {
+              "label": "노란색",
+              "value": "5"
+            },
+            {
+              "label": "초록색",
+              "value": "3"
+            },
+            {
+              "label": "하늘색",
+              "value": "6"
+            },
+            {
+              "label": "파란색",
+              "value": "4"
+            },
+            {
+              "label": "보라색",
+              "value": "7"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_clear_led",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "LED 끄기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            },
+            {
+              "label": "모든",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_set_led_clear",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "LED 끄기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            },
+            {
+              "label": "모든",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "2"
+            },
+            {
+              "label": "노란색",
+              "value": "5"
+            },
+            {
+              "label": "초록색",
+              "value": "3"
+            },
+            {
+              "label": "하늘색",
+              "value": "6"
+            },
+            {
+              "label": "파란색",
+              "value": "4"
+            },
+            {
+              "label": "보라색",
+              "value": "7"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_set_led_time",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "LED 으로 초동안 켜기"
+      },
+      "params": [
+        {
+          "key": "DIST",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "Left"
+            },
+            {
+              "label": "오른쪽",
+              "value": "Right"
+            },
+            {
+              "label": "모든",
+              "value": "Both"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "2"
+            },
+            {
+              "label": "노란색",
+              "value": "5"
+            },
+            {
+              "label": "초록색",
+              "value": "3"
+            },
+            {
+              "label": "하늘색",
+              "value": "6"
+            },
+            {
+              "label": "파란색",
+              "value": "4"
+            },
+            {
+              "label": "보라색",
+              "value": "7"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.6"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_beep",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "버저 켜기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_buzzer_time",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "버저음을 초 동안 소리내기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.6"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_buzzer_set_hz",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "버즈음 Hz를 초 동안 소리내기"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.6"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_clear_buzzer",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "버저 끄기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_play_buzzer",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "음을 박자로 연주하기"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "NOTE_C"
+            },
+            {
+              "label": "레",
+              "value": "NOTE_D"
+            },
+            {
+              "label": "미",
+              "value": "NOTE_E"
+            },
+            {
+              "label": "파",
+              "value": "NOTE_F"
+            },
+            {
+              "label": "솔",
+              "value": "NOTE_G"
+            },
+            {
+              "label": "라",
+              "value": "NOTE_A"
+            },
+            {
+              "label": "시",
+              "value": "NOTE_B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "SEMI",
+          "type": "Dropdown",
+          "defaultValue": "-",
+          "options": [
+            {
+              "label": "-",
+              "value": "-"
+            },
+            {
+              "label": "#",
+              "value": "#"
+            },
+            {
+              "label": "b",
+              "value": "b"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2분음표",
+              "value": "500"
+            },
+            {
+              "label": "4분음표",
+              "value": "250"
+            },
+            {
+              "label": "8분음표",
+              "value": "125"
+            },
+            {
+              "label": "16분음표",
+              "value": "63"
+            },
+            {
+              "label": "32분음표",
+              "value": "32"
+            },
+            {
+              "label": "온음표",
+              "value": "1000"
+            },
+            {
+              "label": "점2분음표",
+              "value": "750"
+            },
+            {
+              "label": "점4분음표",
+              "value": "375"
+            },
+            {
+              "label": "점8분음표",
+              "value": "188"
+            },
+            {
+              "label": "점16분음표",
+              "value": "95"
+            },
+            {
+              "label": "점32분음표",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_rest_buzzer",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "동안 쉬기"
+      },
+      "params": [
+        {
+          "key": "BEAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2분쉼표",
+              "value": "500"
+            },
+            {
+              "label": "4분쉼표",
+              "value": "250"
+            },
+            {
+              "label": "8분쉼표",
+              "value": "175"
+            },
+            {
+              "label": "16분쉼표",
+              "value": "63"
+            },
+            {
+              "label": "32분쉼표",
+              "value": "32"
+            },
+            {
+              "label": "온쉼표",
+              "value": "1000"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_play_buzzer_led",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "음을 박자로 연주하는 동안 LED 켜기"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "NOTE_C"
+            },
+            {
+              "label": "레",
+              "value": "NOTE_D"
+            },
+            {
+              "label": "미",
+              "value": "NOTE_E"
+            },
+            {
+              "label": "파",
+              "value": "NOTE_F"
+            },
+            {
+              "label": "솔",
+              "value": "NOTE_G"
+            },
+            {
+              "label": "라",
+              "value": "NOTE_A"
+            },
+            {
+              "label": "시",
+              "value": "NOTE_B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "SEMI",
+          "type": "Dropdown",
+          "defaultValue": "-",
+          "options": [
+            {
+              "label": "-",
+              "value": "-"
+            },
+            {
+              "label": "#",
+              "value": "#"
+            },
+            {
+              "label": "b",
+              "value": "b"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2분음표",
+              "value": "500"
+            },
+            {
+              "label": "4분음표",
+              "value": "250"
+            },
+            {
+              "label": "8분음표",
+              "value": "125"
+            },
+            {
+              "label": "16분음표",
+              "value": "63"
+            },
+            {
+              "label": "32분음표",
+              "value": "32"
+            },
+            {
+              "label": "온음표",
+              "value": "1000"
+            },
+            {
+              "label": "점2분음표",
+              "value": "750"
+            },
+            {
+              "label": "점4분음표",
+              "value": "375"
+            },
+            {
+              "label": "점8분음표",
+              "value": "188"
+            },
+            {
+              "label": "점16분음표",
+              "value": "95"
+            },
+            {
+              "label": "점32분음표",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            },
+            {
+              "label": "모든",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "2"
+            },
+            {
+              "label": "노란색",
+              "value": "5"
+            },
+            {
+              "label": "초록색",
+              "value": "3"
+            },
+            {
+              "label": "하늘색",
+              "value": "6"
+            },
+            {
+              "label": "파란색",
+              "value": "4"
+            },
+            {
+              "label": "보라색",
+              "value": "7"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "6",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_play_midi",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "연주하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "반짝반짝 작은별",
+              "value": "1"
+            },
+            {
+              "label": "곰세마리",
+              "value": "2"
+            },
+            {
+              "label": "모차르트 자장가",
+              "value": "3"
+            },
+            {
+              "label": "도레미송",
+              "value": "4"
+            },
+            {
+              "label": "나비야",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_floor_sensor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "바닥센서"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 바닥센서",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽 바닥 센서",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_floor_sensing",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "바닥센서"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 바닥센서",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽 바닥 센서",
+              "value": "2"
+            },
+            {
+              "label": "모든",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "DET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "감지",
+              "value": "1"
+            },
+            {
+              "label": "미감지",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_following_line",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "선 따라가기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_front_sensor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "전방센서"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 전방 센서",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽 전방 센서",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_front_sensing",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "전방센서"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 전방 센서",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽 전방 센서",
+              "value": "2"
+            },
+            {
+              "label": "모든",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "DET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "감지",
+              "value": "1"
+            },
+            {
+              "label": "미감지",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_obstruct_sensing",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "장애물 감지"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_avoid_mode",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "어보이드 모드"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_dotmatrix_set",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "도트매트릭스 ( 줄, 칸 )"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜짐",
+              "value": "1"
+            },
+            {
+              "label": "꺼짐",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "모든",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "COL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "모든",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_dotmatrix_on",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "도트매트릭스 모두 켜기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_dotmatrix_off",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "도트매트릭스 모두 끄기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_dotmatrix_num",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "도트매트릭스 숫자 표시"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_dotmatrix_small_eng",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "도트매트릭스 소문자 표시"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "a",
+              "value": "0"
+            },
+            {
+              "label": "b",
+              "value": "1"
+            },
+            {
+              "label": "c",
+              "value": "2"
+            },
+            {
+              "label": "d",
+              "value": "3"
+            },
+            {
+              "label": "e",
+              "value": "4"
+            },
+            {
+              "label": "f",
+              "value": "5"
+            },
+            {
+              "label": "g",
+              "value": "6"
+            },
+            {
+              "label": "h",
+              "value": "7"
+            },
+            {
+              "label": "i",
+              "value": "8"
+            },
+            {
+              "label": "j",
+              "value": "9"
+            },
+            {
+              "label": "k",
+              "value": "10"
+            },
+            {
+              "label": "l",
+              "value": "11"
+            },
+            {
+              "label": "m",
+              "value": "12"
+            },
+            {
+              "label": "n",
+              "value": "13"
+            },
+            {
+              "label": "o",
+              "value": "14"
+            },
+            {
+              "label": "p",
+              "value": "15"
+            },
+            {
+              "label": "q",
+              "value": "16"
+            },
+            {
+              "label": "r",
+              "value": "17"
+            },
+            {
+              "label": "s",
+              "value": "18"
+            },
+            {
+              "label": "t",
+              "value": "19"
+            },
+            {
+              "label": "u",
+              "value": "20"
+            },
+            {
+              "label": "v",
+              "value": "21"
+            },
+            {
+              "label": "w",
+              "value": "22"
+            },
+            {
+              "label": "x",
+              "value": "23"
+            },
+            {
+              "label": "y",
+              "value": "24"
+            },
+            {
+              "label": "z",
+              "value": "25"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_dotmatrix_big_eng",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "도트매트릭스 대문자 표시"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A",
+              "value": "0"
+            },
+            {
+              "label": "B",
+              "value": "1"
+            },
+            {
+              "label": "C",
+              "value": "2"
+            },
+            {
+              "label": "D",
+              "value": "3"
+            },
+            {
+              "label": "E",
+              "value": "4"
+            },
+            {
+              "label": "F",
+              "value": "5"
+            },
+            {
+              "label": "G",
+              "value": "6"
+            },
+            {
+              "label": "H",
+              "value": "7"
+            },
+            {
+              "label": "I",
+              "value": "8"
+            },
+            {
+              "label": "J",
+              "value": "9"
+            },
+            {
+              "label": "K",
+              "value": "10"
+            },
+            {
+              "label": "L",
+              "value": "11"
+            },
+            {
+              "label": "M",
+              "value": "12"
+            },
+            {
+              "label": "N",
+              "value": "13"
+            },
+            {
+              "label": "O",
+              "value": "14"
+            },
+            {
+              "label": "P",
+              "value": "15"
+            },
+            {
+              "label": "Q",
+              "value": "16"
+            },
+            {
+              "label": "R",
+              "value": "17"
+            },
+            {
+              "label": "S",
+              "value": "18"
+            },
+            {
+              "label": "T",
+              "value": "19"
+            },
+            {
+              "label": "U",
+              "value": "20"
+            },
+            {
+              "label": "V",
+              "value": "21"
+            },
+            {
+              "label": "W",
+              "value": "22"
+            },
+            {
+              "label": "X",
+              "value": "23"
+            },
+            {
+              "label": "Y",
+              "value": "24"
+            },
+            {
+              "label": "Z",
+              "value": "25"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_dotmatrix_kor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "도트매트릭스 한글 표시"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가",
+              "value": "0"
+            },
+            {
+              "label": "나",
+              "value": "1"
+            },
+            {
+              "label": "다",
+              "value": "2"
+            },
+            {
+              "label": "라",
+              "value": "3"
+            },
+            {
+              "label": "마",
+              "value": "4"
+            },
+            {
+              "label": "바",
+              "value": "5"
+            },
+            {
+              "label": "사",
+              "value": "6"
+            },
+            {
+              "label": "아",
+              "value": "7"
+            },
+            {
+              "label": "자",
+              "value": "8"
+            },
+            {
+              "label": "차",
+              "value": "9"
+            },
+            {
+              "label": "카",
+              "value": "10"
+            },
+            {
+              "label": "타",
+              "value": "11"
+            },
+            {
+              "label": "파",
+              "value": "12"
+            },
+            {
+              "label": "하",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_light_sensor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "밝기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_tmp_senser",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "coconut_tmp_senser"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_ac_sensor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "가속도"
+      },
+      "params": [
+        {
+          "key": "XYZ",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X축",
+              "value": "1"
+            },
+            {
+              "label": "Y축",
+              "value": "2"
+            },
+            {
+              "label": "Z축",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_outled_sensor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "외부 LED 설정 초동안 켜기"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D4",
+              "value": "4"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            },
+            {
+              "label": "D11",
+              "value": "11"
+            },
+            {
+              "label": "D12",
+              "value": "12"
+            },
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            }
+          ]
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_outspk_sensor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "외부 스피커 설정 Hz로 초 동안 소리내기"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D10",
+              "value": "10"
+            },
+            {
+              "label": "D11",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_outspk_sensor_off",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "외부 스피커 끄기"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D10",
+              "value": "10"
+            },
+            {
+              "label": "D11",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_outinfrared_sensor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "외부 적외선센서"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_outcds_sensor",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "외부 빛센서(Cds)"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    },
+    {
+      "type": "coconut_servomotor_angle",
+      "category": "hardware_coconut",
+      "label": {
+        "ko": "서보모터 연결 각도"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D4",
+              "value": "4"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            },
+            {
+              "label": "D11",
+              "value": "11"
+            },
+            {
+              "label": "D12",
+              "value": "12"
+            },
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "String",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coconut"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2248 @@
+{
+  "category": "hardware_avatarbot",
+  "blocks": [
+    {
+      "type": "avatarbot_text",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_text"
+      },
+      "params": [
+        {
+          "key": "NAME",
+          "type": "TextInput",
+          "defaultValue": "10"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_buzzer_tone_number",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_buzzer_tone_number"
+      },
+      "params": [
+        {
+          "key": "TONE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "B0",
+              "value": "0"
+            },
+            {
+              "label": "C1",
+              "value": "1"
+            },
+            {
+              "label": "CS1",
+              "value": "2"
+            },
+            {
+              "label": "D1",
+              "value": "3"
+            },
+            {
+              "label": "DS1",
+              "value": "4"
+            },
+            {
+              "label": "E1",
+              "value": "5"
+            },
+            {
+              "label": "F1",
+              "value": "6"
+            },
+            {
+              "label": "FS1",
+              "value": "7"
+            },
+            {
+              "label": "G1",
+              "value": "8"
+            },
+            {
+              "label": "GS1",
+              "value": "9"
+            },
+            {
+              "label": "A1",
+              "value": "10"
+            },
+            {
+              "label": "AS1",
+              "value": "11"
+            },
+            {
+              "label": "B1",
+              "value": "12"
+            },
+            {
+              "label": "C2",
+              "value": "13"
+            },
+            {
+              "label": "CS2",
+              "value": "14"
+            },
+            {
+              "label": "D2",
+              "value": "15"
+            },
+            {
+              "label": "DS2",
+              "value": "16"
+            },
+            {
+              "label": "E2",
+              "value": "17"
+            },
+            {
+              "label": "F2",
+              "value": "18"
+            },
+            {
+              "label": "FS2",
+              "value": "19"
+            },
+            {
+              "label": "G2",
+              "value": "20"
+            },
+            {
+              "label": "GS2",
+              "value": "21"
+            },
+            {
+              "label": "A2",
+              "value": "22"
+            },
+            {
+              "label": "AS2",
+              "value": "23"
+            },
+            {
+              "label": "B2",
+              "value": "24"
+            },
+            {
+              "label": "C3",
+              "value": "25"
+            },
+            {
+              "label": "CS3",
+              "value": "26"
+            },
+            {
+              "label": "D3",
+              "value": "27"
+            },
+            {
+              "label": "DS3",
+              "value": "28"
+            },
+            {
+              "label": "E3",
+              "value": "29"
+            },
+            {
+              "label": "F3",
+              "value": "30"
+            },
+            {
+              "label": "FS3",
+              "value": "31"
+            },
+            {
+              "label": "G3",
+              "value": "32"
+            },
+            {
+              "label": "GS3",
+              "value": "33"
+            },
+            {
+              "label": "A3",
+              "value": "34"
+            },
+            {
+              "label": "AS3",
+              "value": "35"
+            },
+            {
+              "label": "B3",
+              "value": "36"
+            },
+            {
+              "label": "C4",
+              "value": "37"
+            },
+            {
+              "label": "CS4",
+              "value": "38"
+            },
+            {
+              "label": "D4",
+              "value": "39"
+            },
+            {
+              "label": "DS4",
+              "value": "40"
+            },
+            {
+              "label": "E4",
+              "value": "41"
+            },
+            {
+              "label": "F4",
+              "value": "42"
+            },
+            {
+              "label": "FS4",
+              "value": "43"
+            },
+            {
+              "label": "G4",
+              "value": "44"
+            },
+            {
+              "label": "GS4",
+              "value": "45"
+            },
+            {
+              "label": "A4",
+              "value": "46"
+            },
+            {
+              "label": "AS4",
+              "value": "47"
+            },
+            {
+              "label": "B4",
+              "value": "48"
+            },
+            {
+              "label": "C5",
+              "value": "49"
+            },
+            {
+              "label": "CS5",
+              "value": "50"
+            },
+            {
+              "label": "D5",
+              "value": "51"
+            },
+            {
+              "label": "DS5",
+              "value": "52"
+            },
+            {
+              "label": "E5",
+              "value": "53"
+            },
+            {
+              "label": "F5",
+              "value": "54"
+            },
+            {
+              "label": "FS5",
+              "value": "55"
+            },
+            {
+              "label": "G5",
+              "value": "56"
+            },
+            {
+              "label": "GS5",
+              "value": "57"
+            },
+            {
+              "label": "A5",
+              "value": "58"
+            },
+            {
+              "label": "AS5",
+              "value": "59"
+            },
+            {
+              "label": "B5",
+              "value": "60"
+            },
+            {
+              "label": "C6",
+              "value": "61"
+            },
+            {
+              "label": "CS6",
+              "value": "62"
+            },
+            {
+              "label": "D6",
+              "value": "63"
+            },
+            {
+              "label": "DS6",
+              "value": "64"
+            },
+            {
+              "label": "E6",
+              "value": "65"
+            },
+            {
+              "label": "F6",
+              "value": "66"
+            },
+            {
+              "label": "FS6",
+              "value": "67"
+            },
+            {
+              "label": "G6",
+              "value": "68"
+            },
+            {
+              "label": "GS6",
+              "value": "69"
+            },
+            {
+              "label": "A6",
+              "value": "70"
+            },
+            {
+              "label": "AS6",
+              "value": "71"
+            },
+            {
+              "label": "B6",
+              "value": "72"
+            },
+            {
+              "label": "C7",
+              "value": "73"
+            },
+            {
+              "label": "CS7",
+              "value": "74"
+            },
+            {
+              "label": "D7",
+              "value": "75"
+            },
+            {
+              "label": "DS7",
+              "value": "76"
+            },
+            {
+              "label": "E7",
+              "value": "77"
+            },
+            {
+              "label": "F7",
+              "value": "78"
+            },
+            {
+              "label": "FS7",
+              "value": "79"
+            },
+            {
+              "label": "G7",
+              "value": "80"
+            },
+            {
+              "label": "GS7",
+              "value": "81"
+            },
+            {
+              "label": "A7",
+              "value": "82"
+            },
+            {
+              "label": "AS7",
+              "value": "83"
+            },
+            {
+              "label": "B7",
+              "value": "84"
+            },
+            {
+              "label": "C8",
+              "value": "85"
+            },
+            {
+              "label": "CS8",
+              "value": "86"
+            },
+            {
+              "label": "D8",
+              "value": "87"
+            },
+            {
+              "label": "DS8",
+              "value": "88"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_buzzer_time_number",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_buzzer_time_number"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "정지",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_servo_speed_number",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_servo_speed_number"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1단계",
+              "value": "1"
+            },
+            {
+              "label": "2단계",
+              "value": "2"
+            },
+            {
+              "label": "3단계",
+              "value": "3"
+            },
+            {
+              "label": "4단계",
+              "value": "4"
+            },
+            {
+              "label": "5단계",
+              "value": "5"
+            },
+            {
+              "label": "6단계",
+              "value": "6"
+            },
+            {
+              "label": "7단계",
+              "value": "7"
+            },
+            {
+              "label": "8단계",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_port_number",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_port_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_led_strip_type",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_led_strip_type"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LPD6803",
+              "value": "0"
+            },
+            {
+              "label": "LPD8806",
+              "value": "1"
+            },
+            {
+              "label": "WS2801",
+              "value": "2"
+            },
+            {
+              "label": "WS2803",
+              "value": "3"
+            },
+            {
+              "label": "SM16716",
+              "value": "4"
+            },
+            {
+              "label": "P9813",
+              "value": "5"
+            },
+            {
+              "label": "APA102",
+              "value": "6"
+            },
+            {
+              "label": "SK9822",
+              "value": "7"
+            },
+            {
+              "label": "SK9822HD",
+              "value": "8"
+            },
+            {
+              "label": "DOTSTAR",
+              "value": "9"
+            },
+            {
+              "label": "DOTSTARHD",
+              "value": "10"
+            },
+            {
+              "label": "APA102HD",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_gpio_dc_number",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_gpio_dc_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_serve_number",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_serve_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_oled_number",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_oled_number"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "none",
+              "value": "0"
+            },
+            {
+              "label": "lines",
+              "value": "1"
+            },
+            {
+              "label": "rectangles",
+              "value": "2"
+            },
+            {
+              "label": "fill rectangles",
+              "value": "3"
+            },
+            {
+              "label": "circles",
+              "value": "4"
+            },
+            {
+              "label": "fill circles",
+              "value": "5"
+            },
+            {
+              "label": "round",
+              "value": "6"
+            },
+            {
+              "label": "fill round",
+              "value": "7"
+            },
+            {
+              "label": "triangles",
+              "value": "8"
+            },
+            {
+              "label": "fill triangles",
+              "value": "9"
+            },
+            {
+              "label": "text",
+              "value": "10"
+            },
+            {
+              "label": "stylized text",
+              "value": "11"
+            },
+            {
+              "label": "scroll text",
+              "value": "12"
+            },
+            {
+              "label": "bitmap",
+              "value": "13"
+            },
+            {
+              "label": "snow bitmap",
+              "value": "14"
+            },
+            {
+              "label": "logo text",
+              "value": "15"
+            },
+            {
+              "label": "image",
+              "value": "16"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_timer_number",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_timer_number"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "정지",
+              "value": "0"
+            },
+            {
+              "label": "1 초",
+              "value": "1"
+            },
+            {
+              "label": "2 초",
+              "value": "2"
+            },
+            {
+              "label": "3 초",
+              "value": "3"
+            },
+            {
+              "label": "4 초",
+              "value": "4"
+            },
+            {
+              "label": "5 초",
+              "value": "5"
+            },
+            {
+              "label": "6 초",
+              "value": "6"
+            },
+            {
+              "label": "7 초",
+              "value": "7"
+            },
+            {
+              "label": "8 초",
+              "value": "8"
+            },
+            {
+              "label": "9 초",
+              "value": "9"
+            },
+            {
+              "label": "10초",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_number_sensor_value",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_number_sensor_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_port_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_convert_scale",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_convert_scale"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_number_sensor_value",
+            "params": [
+              {
+                "type": "avatarbot_get_port_number",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "4095"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_digital_value",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_digital_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_port_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_toggle_led",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_toggle_led"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_toggle_pwm",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_toggle_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "RUN",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_servo",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_servo"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_serve_number",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_servo_speed_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "400"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2100"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "RUN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_func_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.avatarbot_func_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_servo_sample",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_servo_sample"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_serve_number",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_servo_speed_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_servo_type_sg90",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.avatarbot_servo_type_mg996r",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "RUN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_func_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.avatarbot_func_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_dc",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_dc"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_gpio_dc_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_DC_CW",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.avatarbot_DC_CCW",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_timer_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_robot_arm_on",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_robot_arm_on"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_func_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.avatarbot_func_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_robot_arm_speed",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_robot_arm_speed"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_servo_speed_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_servo_speed_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_servo_speed_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_servo_speed_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_servo_speed_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_servo_speed_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_robot_arm",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_robot_arm"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "180"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "180"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_dc_car",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_dc_car"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_DC_CAR_F",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.avatarbot_DC_CAR_B",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_DC_CAR_F",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.avatarbot_DC_CAR_B",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "VALUE6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_timer_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_line_car_ir_init",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_line_car_ir_init"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "30"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_line_car_motor_init",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_line_car_motor_init"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_DC_LINECAR_DETECTION_BOTH",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.avatarbot_DC_LINECAR_DETECTION_LEFT",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.avatarbot_DC_LINECAR_DETECTION_RIGHT",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.avatarbot_DC_LINECAR_DETECTION_NONE",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_line_car",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_line_car"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_func_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.avatarbot_func_on",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_buzzer_sample",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_buzzer_sample"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_buzzer_time_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_buzzer",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_buzzer"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_buzzer_tone_number",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_buzzer_time_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_led_strip_sample",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_led_strip_sample"
+      },
+      "params": [
+        {
+          "key": "RUN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_func_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.avatarbot_func_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_led_strip_set",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_led_strip_set"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_text",
+            "params": [
+              "64"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_text",
+            "params": [
+              "64"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_led_strip_indexOn",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_led_strip_indexOn"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "RUN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_func_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.avatarbot_func_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_mpu6050",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_mpu6050"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Acceleration",
+              "value": "0"
+            },
+            {
+              "label": "Rotation",
+              "value": "1"
+            },
+            {
+              "label": "Temperature",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_get_mpu6050_detail",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_get_mpu6050_detail"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Acceleration",
+              "value": "0"
+            },
+            {
+              "label": "Rotation",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE2",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "x",
+              "value": "0"
+            },
+            {
+              "label": "y",
+              "value": "1"
+            },
+            {
+              "label": "z",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_ultra_sonic",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_ultra_sonic"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_port_number",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_ultra_sonic_detail",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_ultra_sonic_detail"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "cm",
+              "value": "0"
+            },
+            {
+              "label": "inch",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_ir_receiver",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_ir_receiver"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "기본",
+              "value": "0"
+            },
+            {
+              "label": "상세",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    },
+    {
+      "type": "avatarbot_oled_sample",
+      "category": "hardware_avatarbot",
+      "label": {
+        "ko": "avatarbot_oled_sample"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "avatarbot_get_oled_number",
+            "params": []
+          }
+        },
+        {
+          "key": "RUN",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.avatarbot_func_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.avatarbot_func_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "avatarbot"
+      }
+    }
+  ]
+}

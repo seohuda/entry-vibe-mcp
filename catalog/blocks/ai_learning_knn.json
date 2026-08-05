@@ -1,0 +1,1105 @@
+{
+  "category": "ai_learning_knn",
+  "blocks": [
+    {
+      "type": "learning_title_number",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "learning_title_number"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "set_number_learning_option_k",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "이웃을 개로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 10
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_1",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_2",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_3",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_4",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_5",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "8",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_6",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "8",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "10",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_param_1",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 에 대한"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.neighbor_count",
+              "value": "count"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_param_2",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 에 대한"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.neighbor_count",
+              "value": "count"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_param_3",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 에 대한"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.neighbor_count",
+              "value": "count"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_param_4",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 에 대한"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.neighbor_count",
+              "value": "count"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_param_5",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 에 대한"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "8",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.neighbor_count",
+              "value": "count"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "get_number_learning_predict_param_6",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 에 대한"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "8",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "10",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        },
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.neighbor_count",
+              "value": "count"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "is_number_learning_group_1",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과가 인가?"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic",
+          "defaultValue": 0
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "is_number_learning_group_2",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과가 인가?"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic",
+          "defaultValue": 0
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "is_number_learning_group_3",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과가 인가?"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic",
+          "defaultValue": 0
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "is_number_learning_group_4",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과가 인가?"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic",
+          "defaultValue": 0
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "is_number_learning_group_5",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과가 인가?"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic",
+          "defaultValue": 0
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "8",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    },
+    {
+      "type": "is_number_learning_group_6",
+      "category": "ai_learning_knn",
+      "label": {
+        "ko": "의 분류 결과가 인가?"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "TextDynamic",
+          "defaultValue": 0
+        },
+        {
+          "key": "ATTR1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "6",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "8",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "10",
+          "type": "TextDynamic"
+        },
+        {
+          "key": "ATTR6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "CLASS",
+          "type": "DropdownDynamic"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningKnn"
+      }
+    }
+  ]
+}

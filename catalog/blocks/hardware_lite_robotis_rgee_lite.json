@@ -1,0 +1,2248 @@
+{
+  "category": "hardware_lite_robotis_rgee_lite",
+  "blocks": [
+    {
+      "type": "robotis_rgee_lite_cm_ir_value",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_cm_ir_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "360"
+            },
+            {
+              "label": "2",
+              "value": "362"
+            },
+            {
+              "label": "3",
+              "value": "364"
+            },
+            {
+              "label": "4",
+              "value": "366"
+            },
+            {
+              "label": "5",
+              "value": "368"
+            },
+            {
+              "label": "6",
+              "value": "370"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_cm_ir_compare",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_cm_ir_compare"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "360"
+            },
+            {
+              "label": "2",
+              "value": "362"
+            },
+            {
+              "label": "3",
+              "value": "364"
+            },
+            {
+              "label": "4",
+              "value": "366"
+            },
+            {
+              "label": "5",
+              "value": "368"
+            },
+            {
+              "label": "6",
+              "value": "370"
+            }
+          ]
+        },
+        {
+          "key": "COMPARE_OP",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": ">",
+              "value": "0"
+            },
+            {
+              "label": "<",
+              "value": "1"
+            },
+            {
+              "label": "=",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "COMPARE_VAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 200
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_detectFrontObj",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_detectFrontObj"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_cm_btn_value",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_cm_btn_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_run",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.robotis_cancel",
+              "value": "42"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_push",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_notPush",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_cm_joystick_value",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_cm_joystick_value"
+      },
+      "params": [
+        {
+          "key": "COMPARE_VAL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_center",
+              "value": "0"
+            },
+            {
+              "label": "←",
+              "value": "1"
+            },
+            {
+              "label": "→",
+              "value": "2"
+            },
+            {
+              "label": "↑",
+              "value": "3"
+            },
+            {
+              "label": "↓",
+              "value": "4"
+            },
+            {
+              "label": "↖",
+              "value": "5"
+            },
+            {
+              "label": "↗",
+              "value": "6"
+            },
+            {
+              "label": "↙",
+              "value": "7"
+            },
+            {
+              "label": "↘",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_mic",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_mic"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_detectSound_compare",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_detectSound_compare"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.robotis_center",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_imu",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_imu"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x",
+              "value": "78"
+            },
+            {
+              "label": "y",
+              "value": "80"
+            },
+            {
+              "label": "z",
+              "value": "82"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_acceleration",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_gyro",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_roll_pitch",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_roll_pitch"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_roll",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.robotis_pitch",
+              "value": "88"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_buzzer_index",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_buzzer_index"
+      },
+      "params": [
+        {
+          "key": "CM_BUZZER_INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "",
+              "value": "8"
+            },
+            {
+              "label": "",
+              "value": "9"
+            },
+            {
+              "label": "",
+              "value": "10"
+            },
+            {
+              "label": "",
+              "value": "11"
+            },
+            {
+              "label": "",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "CM_BUZZER_OCTAV",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "CM_BUZZER_DELAY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        },
+        {
+          "key": "CM_BUZZER_PLAY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_play",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_rest",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_rgee_screen",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_rgee_screen"
+      },
+      "params": [
+        {
+          "key": "BACKGROUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_face01",
+              "value": "2817"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face02",
+              "value": "2818"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face03",
+              "value": "2819"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face04",
+              "value": "2820"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face05",
+              "value": "2821"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face06",
+              "value": "2822"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face07",
+              "value": "2823"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face08",
+              "value": "2824"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face09",
+              "value": "2825"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face10",
+              "value": "2826"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face11",
+              "value": "2827"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face12",
+              "value": "2828"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face13",
+              "value": "2829"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face14",
+              "value": "2830"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face15",
+              "value": "2831"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face16",
+              "value": "2832"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face17",
+              "value": "2833"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face18",
+              "value": "2834"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face19",
+              "value": "2835"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face20",
+              "value": "2836"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face21",
+              "value": "2837"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face22",
+              "value": "2838"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face23",
+              "value": "2839"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_rgee_anim_screen",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_rgee_anim_screen"
+      },
+      "params": [
+        {
+          "key": "BACKGROUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_face01",
+              "value": "30748"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face02",
+              "value": "30749"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face03",
+              "value": "30750"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face04",
+              "value": "30756"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face05",
+              "value": "30754"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face06",
+              "value": "30741"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face07",
+              "value": "30747"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face08",
+              "value": "30738"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face09",
+              "value": "30740"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face10",
+              "value": "30739"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face11",
+              "value": "30733"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face12",
+              "value": "30734"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face13",
+              "value": "30732"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face14",
+              "value": "30757"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face15",
+              "value": "30736"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face16",
+              "value": "30731"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face17",
+              "value": "30742"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face18",
+              "value": "30743"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face19",
+              "value": "30744"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face20",
+              "value": "30751"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face21",
+              "value": "30752"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face22",
+              "value": "30755"
+            },
+            {
+              "label": "Lang.Blocks.robotis_face23",
+              "value": "30758"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_icon",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_icon"
+      },
+      "params": [
+        {
+          "key": "ICON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_screen1",
+              "value": "11545"
+            },
+            {
+              "label": "Lang.Blocks.robotis_screen2",
+              "value": "11546"
+            },
+            {
+              "label": "Lang.Blocks.robotis_screen3",
+              "value": "11547"
+            },
+            {
+              "label": "0",
+              "value": "11283"
+            },
+            {
+              "label": "1",
+              "value": "11284"
+            },
+            {
+              "label": "2",
+              "value": "11285"
+            },
+            {
+              "label": "3",
+              "value": "11286"
+            },
+            {
+              "label": "4",
+              "value": "11287"
+            },
+            {
+              "label": "5",
+              "value": "11288"
+            },
+            {
+              "label": "6",
+              "value": "11289"
+            },
+            {
+              "label": "7",
+              "value": "11290"
+            },
+            {
+              "label": "8",
+              "value": "11291"
+            },
+            {
+              "label": "9",
+              "value": "11292"
+            },
+            {
+              "label": "10",
+              "value": "11293"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SIZE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 50
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_LCDBright",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_LCDBright"
+      },
+      "params": [
+        {
+          "key": "BRIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_LCDColor",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_LCDColor"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "224"
+            },
+            {
+              "label": "Lang.Blocks.robotis_orange",
+              "value": "244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_yellow",
+              "value": "252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_green",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_darkblue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_purple",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.robotis_brown",
+              "value": "173"
+            },
+            {
+              "label": "Lang.Blocks.robotis_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_white",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_led_brightness",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_led_brightness"
+      },
+      "params": [
+        {
+          "key": "RB_LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_both",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "BRIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_led_pattern",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_led_pattern"
+      },
+      "params": [
+        {
+          "key": "RB_LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_flashing1",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.robotis_flashing2",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.robotis_flashing3",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.robotis_flashing4",
+              "value": "21"
+            },
+            {
+              "label": "Lang.Blocks.robotis_flashing5",
+              "value": "22"
+            },
+            {
+              "label": "Lang.Blocks.robotis_flashing6",
+              "value": "23"
+            },
+            {
+              "label": "Lang.Blocks.robotis_flashing7",
+              "value": "31"
+            },
+            {
+              "label": "Lang.Blocks.robotis_flashing8",
+              "value": "32"
+            },
+            {
+              "label": "Lang.Blocks.robotis_flashing9",
+              "value": "33"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_Hello",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_Hello"
+      },
+      "params": [
+        {
+          "key": "HELLO",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_korean1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean5",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean6",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean7",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean8",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean9",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean10",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean11",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean12",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean13",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean14",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean15",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean16",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean17",
+              "value": "16"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean18",
+              "value": "17"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean19",
+              "value": "18"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean20",
+              "value": "19"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean21",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean22",
+              "value": "21"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean23",
+              "value": "22"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean24",
+              "value": "23"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean25",
+              "value": "24"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean26",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean27",
+              "value": "26"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean28",
+              "value": "27"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean29",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean30",
+              "value": "29"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean31",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean32",
+              "value": "31"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean33",
+              "value": "32"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean34",
+              "value": "33"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean35",
+              "value": "34"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean36",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean37",
+              "value": "36"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean38",
+              "value": "37"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean39",
+              "value": "38"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean40",
+              "value": "39"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean41",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean42",
+              "value": "41"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean43",
+              "value": "42"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean44",
+              "value": "43"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean45",
+              "value": "44"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean46",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean47",
+              "value": "46"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean48",
+              "value": "47"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean49",
+              "value": "48"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean50",
+              "value": "49"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean51",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean52",
+              "value": "51"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean53",
+              "value": "52"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean54",
+              "value": "53"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean55",
+              "value": "54"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean56",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean57",
+              "value": "56"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean58",
+              "value": "57"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean59",
+              "value": "58"
+            },
+            {
+              "label": "Lang.Blocks.robotis_korean60",
+              "value": "59"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_effectSound",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_effectSound"
+      },
+      "params": [
+        {
+          "key": "HELLO",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_dog",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_frog",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_cat",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_chicken",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.robotis_tiger",
+              "value": "19"
+            },
+            {
+              "label": "Lang.Blocks.robotis_mouse",
+              "value": "17"
+            },
+            {
+              "label": "Lang.Blocks.robotis_ambul",
+              "value": "773"
+            },
+            {
+              "label": "Lang.Blocks.robotis_Horn",
+              "value": "781"
+            },
+            {
+              "label": "Lang.Blocks.robotis_siren",
+              "value": "774"
+            },
+            {
+              "label": "Lang.Blocks.robotis_whistle",
+              "value": "274"
+            },
+            {
+              "label": "Lang.Blocks.robotis_gun",
+              "value": "775"
+            },
+            {
+              "label": "Lang.Blocks.robotis_clap",
+              "value": "260"
+            },
+            {
+              "label": "Lang.Blocks.robotis_melody1",
+              "value": "786"
+            },
+            {
+              "label": "Lang.Blocks.robotis_melody2",
+              "value": "787"
+            },
+            {
+              "label": "Lang.Blocks.robotis_melody3",
+              "value": "788"
+            },
+            {
+              "label": "Lang.Blocks.robotis_melody4",
+              "value": "789"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_record",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_record"
+      },
+      "params": [
+        {
+          "key": "ROOM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_playRecord",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_playRecord"
+      },
+      "params": [
+        {
+          "key": "ROOM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_rla_screen",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_rla_screen"
+      },
+      "params": [
+        {
+          "key": "BACKGROUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_car_anim01",
+              "value": "3329"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim02",
+              "value": "3330"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim03",
+              "value": "3331"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim04",
+              "value": "3332"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim05",
+              "value": "3333"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim06",
+              "value": "3334"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim07",
+              "value": "3335"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim08",
+              "value": "3336"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim09",
+              "value": "3337"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim10",
+              "value": "3338"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim11",
+              "value": "3339"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim12",
+              "value": "3340"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim13",
+              "value": "3341"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim14",
+              "value": "3342"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim15",
+              "value": "3343"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim16",
+              "value": "3344"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim17",
+              "value": "3345"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim18",
+              "value": "3346"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim19",
+              "value": "3347"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_rla_anim_screen",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_rla_anim_screen"
+      },
+      "params": [
+        {
+          "key": "BACKGROUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_car_anim01",
+              "value": "30978"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim02",
+              "value": "30981"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim03",
+              "value": "30982"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim04",
+              "value": "30983"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim05",
+              "value": "30984"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim06",
+              "value": "30985"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim07",
+              "value": "30986"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim08",
+              "value": "30987"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim09",
+              "value": "30988"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim10",
+              "value": "30989"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim11",
+              "value": "30990"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim12",
+              "value": "30991"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim13",
+              "value": "30992"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim14",
+              "value": "30993"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim15",
+              "value": "30994"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim16",
+              "value": "30995"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim17",
+              "value": "30996"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim18",
+              "value": "30997"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim19",
+              "value": "30998"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_kkokdu_screen",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_kkokdu_screen"
+      },
+      "params": [
+        {
+          "key": "BACKGROUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_car_anim01",
+              "value": "3585"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim02",
+              "value": "3586"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim03",
+              "value": "3587"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim04",
+              "value": "3588"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim05",
+              "value": "3589"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim06",
+              "value": "3590"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim07",
+              "value": "3591"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim08",
+              "value": "3592"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim09",
+              "value": "3593"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim10",
+              "value": "3594"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim11",
+              "value": "3595"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim12",
+              "value": "3596"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim13",
+              "value": "3597"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim14",
+              "value": "3598"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim15",
+              "value": "3599"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim16",
+              "value": "3600"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim17",
+              "value": "3601"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim18",
+              "value": "3602"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim19",
+              "value": "3603"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_kkokdu_anim_screen",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_kkokdu_anim_screen"
+      },
+      "params": [
+        {
+          "key": "BACKGROUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_car_anim01",
+              "value": "31234"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim02",
+              "value": "31237"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim03",
+              "value": "31238"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim04",
+              "value": "31239"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim05",
+              "value": "31240"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim06",
+              "value": "31241"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim07",
+              "value": "31242"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim08",
+              "value": "31243"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim09",
+              "value": "31244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim10",
+              "value": "31245"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim11",
+              "value": "31246"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim12",
+              "value": "31247"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim13",
+              "value": "31248"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim14",
+              "value": "31249"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim15",
+              "value": "31250"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim16",
+              "value": "31251"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim17",
+              "value": "31252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim18",
+              "value": "31253"
+            },
+            {
+              "label": "Lang.Blocks.robotis_car_anim19",
+              "value": "31254"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_text_screen",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_text_screen"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": " "
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "FONT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_screen_text_font_small",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_screen_text_font_big",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_red",
+              "value": "224"
+            },
+            {
+              "label": "Lang.Blocks.robotis_orange",
+              "value": "244"
+            },
+            {
+              "label": "Lang.Blocks.robotis_yellow",
+              "value": "252"
+            },
+            {
+              "label": "Lang.Blocks.robotis_green",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_darkblue",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_purple",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.robotis_brown",
+              "value": "173"
+            },
+            {
+              "label": "Lang.Blocks.robotis_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.robotis_white",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_drive_simple",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_drive_simple"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveF",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveB",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveL",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveR",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_drive_stop",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_drive_stop"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_motion",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_motion"
+      },
+      "params": [
+        {
+          "key": "MotionNumber",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveRG1",
+              "value": "50007"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveRG2",
+              "value": "50008"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveRG3",
+              "value": "50071"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveRG4",
+              "value": "50072"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_follow_line",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_follow_line"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1단계",
+              "value": "1"
+            },
+            {
+              "label": "2단계",
+              "value": "2"
+            },
+            {
+              "label": "3단계",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    },
+    {
+      "type": "robotis_rgee_lite_stop_follow_line",
+      "category": "hardware_lite_robotis_rgee_lite",
+      "label": {
+        "ko": "robotis_rgee_lite_stop_follow_line"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robotis_rgee_lite"
+      }
+    }
+  ]
+}

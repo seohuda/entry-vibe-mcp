@@ -16,6 +16,69 @@ import {
   VARIABLE_PARAM_KEY,
 } from './validate.ts';
 
+/** Collect Entry extension module lists from every block referenced in the IR. */
+export function collectExtensionModules(
+  ir: EntryIR,
+  index: Map<string, BlockSchema>,
+): {
+  aiUtilizeBlocks: string[];
+  expansionBlocks: string[];
+  hardwareLiteBlocks: string[];
+  externalModules: string[];
+} {
+  const aiUtilize = new Set<string>();
+  const expansion = new Set<string>();
+  const hardwareLite = new Set<string>();
+  const external = new Set<string>();
+
+  const visit = (block: IRBlock) => {
+    const schema = index.get(block.type);
+    const ext = schema?.extension;
+    if (ext) {
+      switch (ext.kind) {
+        case 'aiUtilize':
+          aiUtilize.add(ext.module);
+          break;
+        case 'expansion':
+          expansion.add(ext.module);
+          break;
+        case 'hardwareLite':
+          hardwareLite.add(ext.module);
+          break;
+        case 'hardware':
+          external.add(ext.module);
+          break;
+        // aiLearning needs project.learning model data — catalog-only for now
+        default:
+          break;
+      }
+    }
+    if (block.params) {
+      for (const value of Object.values(block.params)) {
+        if (isIRBlock(value)) visit(value);
+      }
+    }
+    if (block.statements) {
+      for (const thread of Object.values(block.statements)) {
+        for (const child of thread) visit(child);
+      }
+    }
+  };
+
+  for (const obj of ir.objects) {
+    for (const thread of obj.scripts) {
+      for (const block of thread) visit(block);
+    }
+  }
+
+  return {
+    aiUtilizeBlocks: [...aiUtilize].sort(),
+    expansionBlocks: [...expansion].sort(),
+    hardwareLiteBlocks: [...hardwareLite].sort(),
+    externalModules: [...external].sort(),
+  };
+}
+
 export class CompileError extends Error {
   constructor(public readonly errors: string[]) {
     super(errors.join('\n'));
@@ -324,6 +387,12 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     base.script = scripts;
     return base;
   });
+
+  const extensions = collectExtensionModules(ir, index);
+  project.aiUtilizeBlocks = extensions.aiUtilizeBlocks;
+  project.expansionBlocks = extensions.expansionBlocks;
+  project.hardwareLiteBlocks = extensions.hardwareLiteBlocks;
+  project.externalModules = extensions.externalModules;
 
   return project;
 }

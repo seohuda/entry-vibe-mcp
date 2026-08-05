@@ -1,0 +1,90 @@
+{
+  "category": "ai_utilize_translate",
+  "blocks": [
+    {
+      "type": "translate_title",
+      "category": "ai_utilize_translate",
+      "label": {
+        "ko": "translate_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "translate"
+      }
+    },
+    {
+      "type": "get_translated_string",
+      "category": "ai_utilize_translate",
+      "label": {
+        "ko": "을(를) (으)로 번역한 값"
+      },
+      "params": [
+        {
+          "key": "SOURCE",
+          "type": "Unknown"
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "TARGET",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "translate"
+      }
+    },
+    {
+      "type": "check_language",
+      "category": "ai_utilize_translate",
+      "label": {
+        "ko": "의 언어"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "translate"
+      }
+    }
+  ]
+}

@@ -1,0 +1,759 @@
+{
+  "category": "hardware_kamibotPi",
+  "blocks": [
+    {
+      "type": "kamibot_move_forward_line",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_move_forward_line"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_turn_left_line",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_turn_left_line"
+      },
+      "params": [
+        {
+          "key": "MOVE_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_dir_left",
+              "value": "left"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_right",
+              "value": "right"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_backward",
+              "value": "backward"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_set_speed",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_set_speed"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_lspeed_rspeed",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_lspeed_rspeed"
+      },
+      "params": [
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              30
+            ]
+          }
+        },
+        {
+          "key": "L_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_dir_forward",
+              "value": "forward"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_backward",
+              "value": "backward"
+            }
+          ]
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              30
+            ]
+          }
+        },
+        {
+          "key": "R_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_dir_forward",
+              "value": "forward"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_backward",
+              "value": "backward"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_move_unit",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_move_unit"
+      },
+      "params": [
+        {
+          "key": "MOVE_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_dir_forward",
+              "value": "forward"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_backward",
+              "value": "backward"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              30
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              5
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_spin_unit",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_spin_unit"
+      },
+      "params": [
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "SPIN_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_dir_left",
+              "value": "left"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_topmotor_turn",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_topmotor_turn"
+      },
+      "params": [
+        {
+          "key": "MOVE_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_dir_left",
+              "value": "left"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_topmotor_move_abs",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_topmotor_move_abs"
+      },
+      "params": [
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_topmotor_move_relative",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_topmotor_move_relative"
+      },
+      "params": [
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_topmotor_stop",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_topmotor_stop"
+      },
+      "params": [
+        {
+          "key": "MOVE_DIR",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_color_rgb",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_color_rgb"
+      },
+      "params": [
+        {
+          "key": "R_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "G_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              250
+            ]
+          }
+        },
+        {
+          "key": "B_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_draw_shape",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_draw_shape"
+      },
+      "params": [
+        {
+          "key": "LENGTH",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              5
+            ]
+          }
+        },
+        {
+          "key": "SHAPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_color_tri",
+              "value": "tri"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_color_rec",
+              "value": "rect"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_color_penta",
+              "value": "penta"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_color_hexa",
+              "value": "hexa"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_color_star",
+              "value": "star"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_color_circle",
+              "value": "circle"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_melody_beep",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_melody_beep"
+      },
+      "params": [
+        {
+          "key": "FREQUENCY",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              45
+            ]
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_distance_sensor",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_distance_sensor"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_dir_left",
+              "value": "left"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_line_sensor",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_line_sensor"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_dir_left",
+              "value": "left"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_center",
+              "value": "center"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_dir_right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_color_sensor",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_color_sensor"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.kamibot_color_r",
+              "value": "color_r"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_color_g",
+              "value": "color_g"
+            },
+            {
+              "label": "Lang.Blocks.kamibot_color_b",
+              "value": "color_b"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_all_stop",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_all_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    },
+    {
+      "type": "kamibot_initialize",
+      "category": "hardware_kamibotPi",
+      "label": {
+        "ko": "kamibot_initialize"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kamibotPi"
+      }
+    }
+  ]
+}

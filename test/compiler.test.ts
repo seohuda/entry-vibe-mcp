@@ -86,6 +86,32 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     const statements = thread[1].statements as unknown[][];
     expect(statements).toHaveLength(1);
     expect((statements[0][0] as { type: string }).type).toBe('move_direction');
+    expect(project.aiUtilizeBlocks).toEqual([]);
+    expect(project.expansionBlocks).toEqual([]);
+  });
+
+  it('fills aiUtilizeBlocks when TTS blocks are used', () => {
+    const catalog = JSON.parse(readFileSync(CATALOG, 'utf8')) as {
+      blocks: Array<{ type: string; extension?: { kind: string; module: string } }>;
+    };
+    const tts = catalog.blocks.find((b) => b.type === 'read_text');
+    if (!tts?.extension) return; // older catalog without AI blocks
+
+    const project = compileProject({
+      objects: [
+        {
+          name: 'TTS',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'read_text', params: { TEXT: '안녕' } },
+            ],
+          ],
+        },
+      ],
+    });
+    expect(project.aiUtilizeBlocks).toEqual(['tts']);
   });
 
   it('compiles named params into positional arrays', () => {

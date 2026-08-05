@@ -1,0 +1,371 @@
+{
+  "category": "ai_learning",
+  "blocks": [
+    {
+      "type": "learning_title_image",
+      "category": "ai_learning",
+      "label": {
+        "ko": "learning_title_image"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "learning_title_speech",
+      "category": "ai_learning",
+      "label": {
+        "ko": "learning_title_speech"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "learning_title_text",
+      "category": "ai_learning",
+      "label": {
+        "ko": "learning_title_text"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "insert_data_for_test",
+      "category": "ai_learning",
+      "label": {
+        "ko": "학습한 모델로 분류하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "video_capture_for_image_test",
+      "category": "ai_learning",
+      "label": {
+        "ko": "비디오 화면을 학습한 모델로 분류"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": "start",
+          "options": [
+            {
+              "label": "시작하기",
+              "value": "start"
+            },
+            {
+              "label": "중지하기",
+              "value": "stop"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "insert_text_block_for_test",
+      "category": "ai_learning",
+      "label": {
+        "ko": "을(를) 학습한 모델로 분류하기"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "엔트리"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "test_result",
+      "category": "ai_learning",
+      "label": {
+        "ko": "분류 결과"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "accuracy_of_result",
+      "category": "ai_learning",
+      "label": {
+        "ko": "에 대한 신뢰도"
+      },
+      "params": [
+        {
+          "key": "GROUP",
+          "type": "DropdownDynamic",
+          "defaultValue": 0
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "is_group",
+      "category": "ai_learning",
+      "label": {
+        "ko": "분류 결과가 인가?"
+      },
+      "params": [
+        {
+          "key": "GROUP",
+          "type": "DropdownDynamic",
+          "defaultValue": 0
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "retrain_model",
+      "category": "ai_learning",
+      "label": {
+        "ko": "모델 다시 학습하기"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "model_is_trained",
+      "category": "ai_learning",
+      "label": {
+        "ko": "모델이 학습되었는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "set_train_visible",
+      "category": "ai_learning",
+      "label": {
+        "ko": "모델"
+      },
+      "params": [
+        {
+          "key": "VISIBLE",
+          "type": "Dropdown",
+          "defaultValue": "show",
+          "options": [
+            {
+              "label": "Lang.AiLearning.show",
+              "value": "show"
+            },
+            {
+              "label": "Lang.AiLearning.hide",
+              "value": "hide"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "set_train_chart",
+      "category": "ai_learning",
+      "label": {
+        "ko": "모델 차트 창"
+      },
+      "params": [
+        {
+          "key": "VISIBLE",
+          "type": "Dropdown",
+          "defaultValue": "open",
+          "options": [
+            {
+              "label": "Lang.AiLearning.open",
+              "value": "open"
+            },
+            {
+              "label": "Lang.AiLearning.close",
+              "value": "close"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    },
+    {
+      "type": "get_result_info",
+      "category": "ai_learning",
+      "label": {
+        "ko": "모델의"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.accuracy",
+              "value": "accuracy"
+            },
+            {
+              "label": "Lang.AiLearning.f1",
+              "value": "f1"
+            },
+            {
+              "label": "Lang.AiLearning.precision",
+              "value": "precision"
+            },
+            {
+              "label": "Lang.AiLearning.recall",
+              "value": "recall"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "ai_learning"
+      }
+    }
+  ]
+}

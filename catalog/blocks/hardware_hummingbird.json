@@ -1,0 +1,528 @@
+{
+  "category": "hardware_hummingbird",
+  "blocks": [
+    {
+      "type": "hummingbird_sensorValue",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_sensorValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "adc1"
+            },
+            {
+              "label": "2",
+              "value": "adc2"
+            },
+            {
+              "label": "3",
+              "value": "adc3"
+            },
+            {
+              "label": "4",
+              "value": "adc4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_temperatureValue",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_temperatureValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "adc1"
+            },
+            {
+              "label": "2",
+              "value": "adc2"
+            },
+            {
+              "label": "3",
+              "value": "adc3"
+            },
+            {
+              "label": "4",
+              "value": "adc4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_lightValue",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_lightValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "adc1"
+            },
+            {
+              "label": "2",
+              "value": "adc2"
+            },
+            {
+              "label": "3",
+              "value": "adc3"
+            },
+            {
+              "label": "4",
+              "value": "adc4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_distanceValue",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_distanceValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "adc1"
+            },
+            {
+              "label": "2",
+              "value": "adc2"
+            },
+            {
+              "label": "3",
+              "value": "adc3"
+            },
+            {
+              "label": "4",
+              "value": "adc4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_soundValue",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_soundValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "adc1"
+            },
+            {
+              "label": "2",
+              "value": "adc2"
+            },
+            {
+              "label": "3",
+              "value": "adc3"
+            },
+            {
+              "label": "4",
+              "value": "adc4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_rotaryValue",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_rotaryValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "adc1"
+            },
+            {
+              "label": "2",
+              "value": "adc2"
+            },
+            {
+              "label": "3",
+              "value": "adc3"
+            },
+            {
+              "label": "4",
+              "value": "adc4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_vibeMotor",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_vibeMotor"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "vibeMotor1"
+            },
+            {
+              "label": "2",
+              "value": "vibeMotor2"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_servo",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_servo"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "servo1"
+            },
+            {
+              "label": "2",
+              "value": "servo2"
+            },
+            {
+              "label": "3",
+              "value": "servo3"
+            },
+            {
+              "label": "4",
+              "value": "servo4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_dcMotor",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_dcMotor"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "dcMotor1"
+            },
+            {
+              "label": "2",
+              "value": "dcMotor2"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_led",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_led"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "led1"
+            },
+            {
+              "label": "2",
+              "value": "led2"
+            },
+            {
+              "label": "3",
+              "value": "led3"
+            },
+            {
+              "label": "4",
+              "value": "led4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    },
+    {
+      "type": "hummingbird_triLED",
+      "category": "hardware_hummingbird",
+      "label": {
+        "ko": "hummingbird_triLED"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "triLED1"
+            },
+            {
+              "label": "2",
+              "value": "triLED2"
+            }
+          ]
+        },
+        {
+          "key": "cRED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "cGREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "cBLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hummingbird"
+      }
+    }
+  ]
+}

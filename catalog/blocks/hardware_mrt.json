@@ -1,0 +1,413 @@
+{
+  "category": "hardware_mrt",
+  "blocks": [
+    {
+      "type": "mrt_analogValue",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_analogValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "adc0"
+            },
+            {
+              "label": "IN2",
+              "value": "adc1"
+            },
+            {
+              "label": "IN3",
+              "value": "adc2"
+            },
+            {
+              "label": "IN4",
+              "value": "adc3"
+            },
+            {
+              "label": "IN5",
+              "value": "adc4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_ultra",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_ultra"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "default_value",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ultra",
+              "value": "ultra"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_color",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_color"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "default_value",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "color",
+              "value": "color"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_remotecontrol",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_remotecontrol"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "default_value",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "remocon",
+              "value": "remocon"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_keyvalue",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_keyvalue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "default_value",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "key",
+              "value": "key"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_gyro",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_gyro"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X",
+              "value": "gyroX"
+            },
+            {
+              "label": "Y",
+              "value": "gyroY"
+            },
+            {
+              "label": "Z",
+              "value": "gyroZ"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_digitalOutput",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_digitalOutput"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT4",
+              "value": "OUT4"
+            },
+            {
+              "label": "OUT5",
+              "value": "OUT5"
+            },
+            {
+              "label": "LED",
+              "value": "LED"
+            },
+            {
+              "label": "BUZZER ",
+              "value": "BUZZER"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "높음",
+              "value": "HIGH"
+            },
+            {
+              "label": "낮음",
+              "value": "LOW"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_servo",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_servo"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_oneWheel",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_oneWheel"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "RIGHT_WHEEL1",
+              "value": "RIGHT_WHEEL1"
+            },
+            {
+              "label": "LEFT_WHEEL1",
+              "value": "LEFT_WHEEL1"
+            },
+            {
+              "label": "RIGHT_WHEEL2",
+              "value": "RIGHT_WHEEL2"
+            },
+            {
+              "label": "LEFT_WHEEL2",
+              "value": "LEFT_WHEEL2"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    },
+    {
+      "type": "mrt_lcd",
+      "category": "hardware_mrt",
+      "label": {
+        "ko": "mrt_lcd"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "MRT-X"
+      }
+    }
+  ]
+}

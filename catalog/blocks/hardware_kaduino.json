@@ -1,0 +1,1482 @@
+{
+  "category": "hardware_kaduino",
+  "blocks": [
+    {
+      "type": "kaduino_digital_port_onoff_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_digital_port_onoff_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.On_block",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.Off_block",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_list_digital_octave",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_list_digital_octave"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_list_digital_tone",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_list_digital_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_digital_port_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_digital_port_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2",
+              "value": "2"
+            },
+            {
+              "label": "D8",
+              "value": "8"
+            },
+            {
+              "label": "D9",
+              "value": "9"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            },
+            {
+              "label": "D11",
+              "value": "11"
+            },
+            {
+              "label": "D12",
+              "value": "12"
+            },
+            {
+              "label": "D13",
+              "value": "13"
+            },
+            {
+              "label": "A0",
+              "value": "14"
+            },
+            {
+              "label": "A1",
+              "value": "15"
+            },
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_pwn_port_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_pwn_port_list"
+      },
+      "params": [
+        {
+          "key": "PWMPORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_lcd_add_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_lcd_add_list"
+      },
+      "params": [
+        {
+          "key": "LCDADD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "27",
+              "value": "39"
+            },
+            {
+              "label": "3f",
+              "value": "63"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_i2c_sen_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_i2c_sen_list"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Color Sensor",
+              "value": "1"
+            },
+            {
+              "label": "Gyro Sensor",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_all_onoff_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_all_onoff_list"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.AllOff_block",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.AllOn_block",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_analog_port_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_analog_port_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_ultrasonic_port_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_ultrasonic_port_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_analog_rgb_color_list",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_analog_rgb_color_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.RGB_red",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.RGB_blue",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.RGB_green",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.RGB_white",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.RGB_skyblue",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.RGB_yellow",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.RGB_purple",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.RGB_off",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_buzzer_onoff",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_buzzer_onoff"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_digital_buzzer",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_digital_buzzer"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_list_digital_octave",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_list_digital_tone",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_motor_speed",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_motor_speed"
+      },
+      "params": [
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_motor_stop",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_motor_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_servo",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_digital_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_rgbled_onoff",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_rgbled_onoff"
+      },
+      "params": [
+        {
+          "key": "LEDNUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_analog_rgb_color_list",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_rgbled_seting",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_rgbled_seting"
+      },
+      "params": [
+        {
+          "key": "RGBPIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_digital_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_rgbled_value",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_rgbled_value"
+      },
+      "params": [
+        {
+          "key": "RGBNUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "VALUE0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_rgbled_all_onoff",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_rgbled_all_onoff"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_all_onoff_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_digital_onoff",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_digital_onoff"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_digital_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_digital_port_onoff_list",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_get_digital_value",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_get_digital_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_digital_port_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_get_analog_value",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_analog_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "TYPE",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_pwm",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_pwn_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_ultrasonic",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_ultrasonic"
+      },
+      "params": [
+        {
+          "key": "TRIG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_ultrasonic_port_list",
+            "params": [
+              "11"
+            ]
+          }
+        },
+        {
+          "key": "ECHO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_ultrasonic_port_list",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_get_usonic_value",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_get_usonic_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_temp",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_temp"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_digital_port_list",
+            "params": [
+              "14"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_get_temp_value",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_get_temp_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_i2c",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_i2c"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_i2c_sen_list",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_get_color_value",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_get_color_value"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "R",
+              "value": "1"
+            },
+            {
+              "label": "G",
+              "value": "2"
+            },
+            {
+              "label": "B",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_get_gyro_value",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_get_gyro_value"
+      },
+      "params": [
+        {
+          "key": "GYRO",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "angle X",
+              "value": "1"
+            },
+            {
+              "label": "angle Y",
+              "value": "2"
+            },
+            {
+              "label": "angle Z",
+              "value": "3"
+            },
+            {
+              "label": "acc X",
+              "value": "4"
+            },
+            {
+              "label": "acc Y",
+              "value": "5"
+            },
+            {
+              "label": "acc Z",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_lcd_string",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_lcd_string"
+      },
+      "params": [
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello, Kaduino"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_lcd_init",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_lcd_init"
+      },
+      "params": [
+        {
+          "key": "LCD_ADD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaduino_lcd_add_list",
+            "params": [
+              "39"
+            ]
+          }
+        },
+        {
+          "key": "Y_LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "16"
+            ]
+          }
+        },
+        {
+          "key": "X_LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_set_lcd_clear",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_set_lcd_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    },
+    {
+      "type": "kaduino_get_analog_mapping",
+      "category": "hardware_kaduino",
+      "label": {
+        "ko": "kaduino_get_analog_mapping"
+      },
+      "params": [
+        {
+          "key": "IDATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "kaduino"
+      }
+    }
+  ]
+}

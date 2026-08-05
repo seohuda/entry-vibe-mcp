@@ -1,0 +1,2033 @@
+{
+  "category": "hardware_exmars_cube",
+  "blocks": [
+    {
+      "type": "DropDownBlock_FaceName_W",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_FaceName_W"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.ColorWhite",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.ColorYellow",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.ColorGreen",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.ColorBlue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.ColorRed",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.ColorPurple",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_FaceName_Y",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_FaceName_Y"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.ColorWhite",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.ColorYellow",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.ColorGreen",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.ColorBlue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.ColorRed",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.ColorPurple",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_FaceName_G",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_FaceName_G"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.ColorWhite",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.ColorYellow",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.ColorGreen",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.ColorBlue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.ColorRed",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.ColorPurple",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_FaceName_B",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_FaceName_B"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.ColorWhite",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.ColorYellow",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.ColorGreen",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.ColorBlue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.ColorRed",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.ColorPurple",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_CellName",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_CellName"
+      },
+      "params": [
+        {
+          "key": "CELL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_Brake",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_Brake"
+      },
+      "params": [
+        {
+          "key": "BRAKE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.BrakeOff",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.BrakeOn",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_ModeMainNumber",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_ModeMainNumber"
+      },
+      "params": [
+        {
+          "key": "MAIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_ModeSubNumber",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_ModeSubNumber"
+      },
+      "params": [
+        {
+          "key": "SUB",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_ColorName",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_ColorName"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.ColorRed",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.ColorGreen",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.ColorBlue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.ColorYellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.ColorPurple",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.ColorWhite",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.ColorSkip",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.ColorOff",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_ColorNameMini",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_ColorNameMini"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.ColorGreen",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.ColorPurple",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.ColorBlue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.ColorRed",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_Direction",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_Direction"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.DirectionBrake",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.DirectionCW",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.DirectionCCW",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.DirectionPassive",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_DirectionMini",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_DirectionMini"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.DirectionCW",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.DirectionCCW",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_Torque",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_Torque"
+      },
+      "params": [
+        {
+          "key": "TORQUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_Angle",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_Angle"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "30",
+              "value": "1"
+            },
+            {
+              "label": "60",
+              "value": "2"
+            },
+            {
+              "label": "90",
+              "value": "3"
+            },
+            {
+              "label": "120",
+              "value": "4"
+            },
+            {
+              "label": "150",
+              "value": "5"
+            },
+            {
+              "label": "180",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_MovingFace",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_MovingFace"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "F",
+              "value": "0"
+            },
+            {
+              "label": "F'",
+              "value": "1"
+            },
+            {
+              "label": "R",
+              "value": "2"
+            },
+            {
+              "label": "R'",
+              "value": "3"
+            },
+            {
+              "label": "L",
+              "value": "4"
+            },
+            {
+              "label": "L'",
+              "value": "5"
+            },
+            {
+              "label": "U",
+              "value": "6"
+            },
+            {
+              "label": "U'",
+              "value": "7"
+            },
+            {
+              "label": "D",
+              "value": "8"
+            },
+            {
+              "label": "D'",
+              "value": "9"
+            },
+            {
+              "label": "B",
+              "value": "10"
+            },
+            {
+              "label": "B'",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_PlayMode",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_PlayMode"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.Scale6",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.Scale12",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_UserMode",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_UserMode"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.User2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.User3",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_Note",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_Note"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.NoteC",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.NoteCS",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.NoteD",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.NoteDS",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.NoteE",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.NoteF",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.NoteFS",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.NoteG",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.NoteGS",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.NoteA",
+              "value": "9"
+            },
+            {
+              "label": "Lang.template.NoteAS",
+              "value": "10"
+            },
+            {
+              "label": "Lang.template.NoteB",
+              "value": "11"
+            },
+            {
+              "label": "Lang.template.NoteRest",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_RecordIndex",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_RecordIndex"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.RecordIndex0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.RecordIndex1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.RecordIndex2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.RecordIndex3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.RecordIndex4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.RecordIndex5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.RecordIndex6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.RecordIndex7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_RecordTime",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_RecordTime"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.RecordTime1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.RecordTime2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.RecordTime3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.RecordTime4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.RecordTime5",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.RecordTimeBest",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_RecordDice",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_RecordDice"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.RecordDiceNumber",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "DropDownBlock_Mode",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "DropDownBlock_Mode"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.ModeMain",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.ModeSub",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "GetBlock_CellLedColor",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "GetBlock_CellLedColor"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_W",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_CellName",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "GetBlock_FaceLedColor",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "GetBlock_FaceLedColor"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_W",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "GetBlock_FaceDir",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "GetBlock_FaceDir"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_W",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "GetBlock_Record",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "GetBlock_Record"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_RecordIndex",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_RecordTime",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "GetBlock_RecordDice",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "GetBlock_RecordDice"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_RecordDice",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "GetBlock_ModeState",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "GetBlock_ModeState"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_MenuInit",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_MenuInit"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_NonBrake",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_NonBrake"
+      },
+      "params": [
+        {
+          "key": "BRAKE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_Brake",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_ModeSetting",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_ModeSetting"
+      },
+      "params": [
+        {
+          "key": "MAIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ModeMainNumber",
+            "params": []
+          }
+        },
+        {
+          "key": "SUB",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ModeSubNumber",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_CenterColorChange",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_CenterColorChange"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_W",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_CellColorChange",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_CellColorChange"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_W",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL7",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "CELL8",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorName",
+            "params": []
+          }
+        },
+        {
+          "key": "9",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_PosDirTorChange",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_PosDirTorChange"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_W",
+            "params": []
+          }
+        },
+        {
+          "key": "POSITION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "12"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_Direction",
+            "params": []
+          }
+        },
+        {
+          "key": "TORQUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_Torque",
+            "params": []
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_FaceRotationOnlyColor",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_FaceRotationOnlyColor"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_Y",
+            "params": []
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_DirectionMini",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_Angle",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_FaceRotation",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_FaceRotation"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_Y",
+            "params": []
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_DirectionMini",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_Angle",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_FacesRotation",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_FacesRotation"
+      },
+      "params": [
+        {
+          "key": "FACE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_G",
+            "params": []
+          }
+        },
+        {
+          "key": "DIRECTION1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_DirectionMini",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_Angle",
+            "params": []
+          }
+        },
+        {
+          "key": "FACE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_FaceName_B",
+            "params": []
+          }
+        },
+        {
+          "key": "DIRECTION2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_DirectionMini",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_Angle",
+            "params": []
+          }
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_SolveCube",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_SolveCube"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_ColorNameMini",
+            "params": []
+          }
+        },
+        {
+          "key": "MOVINGFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_MovingFace",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.8"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_ResetAllFace",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_ResetAllFace"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_PlayMode",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_PlayMode"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_PlayMode",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_UserMode",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_UserMode"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_UserMode",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_PlayNote",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_PlayNote"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_Note",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_GetRecord",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_GetRecord"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "DropDownBlock_RecordIndex",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_GetRecordDice",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_GetRecordDice"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    },
+    {
+      "type": "SetBlock_AutoSolve",
+      "category": "hardware_exmars_cube",
+      "label": {
+        "ko": "SetBlock_AutoSolve"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "exMars_Cube"
+      }
+    }
+  ]
+}

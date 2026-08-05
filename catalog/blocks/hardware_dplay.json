@@ -1,0 +1,811 @@
+{
+  "category": "hardware_dplay",
+  "blocks": [
+    {
+      "type": "dplay_get_number_sensor_value",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "아날로그 번 센서값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_get_dust_sensor_value",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_get_dust_sensor_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_get_CO2_sensor_value",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_get_CO2_sensor_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_get_gas_sensor_value",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_get_gas_sensor_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_convert_scale",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "값의 범위를 ~ 에서 ~ (으)로 바꾼값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_get_value",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_get_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_sensor_number",
+            "params": []
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "적외선",
+              "value": "INFR"
+            },
+            {
+              "label": "가변저항",
+              "value": "ADJU"
+            },
+            {
+              "label": "빛센서",
+              "value": "LIGHT"
+            },
+            {
+              "label": "온도센서",
+              "value": "TEMP"
+            },
+            {
+              "label": "조이스틱 X",
+              "value": "JOYSX"
+            },
+            {
+              "label": "조이스틱 Y",
+              "value": "JOYSY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_get_digital_value",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "디지털 번 센서값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_get_switch_status",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_get_switch_status"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "눌림",
+              "value": "ON"
+            },
+            {
+              "label": "열림",
+              "value": "OFF"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_get_tilt",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_get_tilt"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "LIGHT"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_toggle_led",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "디지털 번 핀"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_toggle_pwm",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "디지털 번 핀을 (으)로 정하기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_select_led",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_select_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "ON"
+            },
+            {
+              "label": "끄기",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_DCmotor",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_DCmotor"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            },
+            {
+              "label": "양쪽",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "정방향",
+              "value": "FRONT"
+            },
+            {
+              "label": "역방향",
+              "value": "REAR"
+            },
+            {
+              "label": "정지",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_DCmotor_speed",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_DCmotor_speed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            },
+            {
+              "label": "양쪽",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_buzzer",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_buzzer"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "도",
+              "value": "1"
+            },
+            {
+              "label": "도#",
+              "value": "2"
+            },
+            {
+              "label": "레",
+              "value": "3"
+            },
+            {
+              "label": "미b",
+              "value": "4"
+            },
+            {
+              "label": "미",
+              "value": "5"
+            },
+            {
+              "label": "파",
+              "value": "6"
+            },
+            {
+              "label": "파#",
+              "value": "7"
+            },
+            {
+              "label": "솔",
+              "value": "8"
+            },
+            {
+              "label": "솔#",
+              "value": "9"
+            },
+            {
+              "label": "라",
+              "value": "10"
+            },
+            {
+              "label": "시b",
+              "value": "11"
+            },
+            {
+              "label": "시",
+              "value": "12"
+            },
+            {
+              "label": "무음",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_servo",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_servo"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "180"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_Robot_run",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_Robot_run"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "전진",
+              "value": "1"
+            },
+            {
+              "label": "후진",
+              "value": "2"
+            },
+            {
+              "label": "우회전",
+              "value": "3"
+            },
+            {
+              "label": "좌회전",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_Robot_run_sec",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_Robot_run_sec"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "전진",
+              "value": "1"
+            },
+            {
+              "label": "후진",
+              "value": "2"
+            },
+            {
+              "label": "우회전",
+              "value": "3"
+            },
+            {
+              "label": "좌회전",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_robot_speed_sel",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_robot_speed_sel"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            },
+            {
+              "label": "양쪽",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_robot_speed_set",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_robot_speed_set"
+      },
+      "params": [
+        {
+          "key": "R_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "L_VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    },
+    {
+      "type": "dplay_robot_stop",
+      "category": "hardware_dplay",
+      "label": {
+        "ko": "dplay_robot_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dplay"
+      }
+    }
+  ]
+}

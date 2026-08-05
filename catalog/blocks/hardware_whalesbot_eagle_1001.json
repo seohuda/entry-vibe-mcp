@@ -1,0 +1,2295 @@
+{
+  "category": "hardware_whalesbot_eagle_1001",
+  "blocks": [
+    {
+      "type": "whalesbot_eagle_1001_openning_3d_simulator",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_openning_3d_simulator"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_restart",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_restart"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_clean",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_clean"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_get_status",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_get_status"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_entering_pitch_mode",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_entering_pitch_mode"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_exit_pitch_mode",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_exit_pitch_mode"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_automatic_take_off_height",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_automatic_take_off_height"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_automatic_take_off_altitude_speed_offset",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_automatic_take_off_altitude_speed_offset"
+      },
+      "params": [
+        {
+          "key": "altitude",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "speed",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "x",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_automatic_landing",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_automatic_landing"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_automatic_descent_speed_offset",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_automatic_descent_speed_offset"
+      },
+      "params": [
+        {
+          "key": "speed",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "x",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_set_the_flight_speed",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_set_the_flight_speed"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_get_setting_speed",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_get_setting_speed"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_rise",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_rise"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_down",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_down"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_fly_forward",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_fly_forward"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_fly_backward",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_fly_backward"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_fly_left",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_fly_left"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_fly_right",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_fly_right"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_turn_left",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_turn_left"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_turn_right",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_turn_right"
+      },
+      "params": [
+        {
+          "key": "value",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_fly_in_the_specified_direction",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_fly_in_the_specified_direction"
+      },
+      "params": [
+        {
+          "key": "speed",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "direction",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_flight_designated",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_flight_designated"
+      },
+      "params": [
+        {
+          "key": "x",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "z",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "speed",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "30"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_set_the_four_channel_lever_quantity_of_remote_control",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_set_the_four_channel_lever_quantity_of_remote_control"
+      },
+      "params": [
+        {
+          "key": "pitch",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "roll",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "throttle",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "yaw",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_stop_moving_and_hover",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_stop_moving_and_hover"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_hover_at_specified_altitude",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_hover_at_specified_altitude"
+      },
+      "params": [
+        {
+          "key": "altitude",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_emergency_stop",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_emergency_stop"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_set_the_steering_gear",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_set_the_steering_gear"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        },
+        {
+          "key": "speed",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "40"
+            ]
+          }
+        },
+        {
+          "key": "angle",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_execute_script",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_execute_script"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_debug_value",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_debug_value"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              ""
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_display_symbol",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_display_symbol"
+      },
+      "params": [
+        {
+          "key": "SYMBOLS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "?",
+              "value": "LED_symbol_question_mark"
+            },
+            {
+              "label": "!",
+              "value": "LED_symbol_exclamation"
+            },
+            {
+              "label": "$",
+              "value": "LED_symbol_dollar"
+            },
+            {
+              "label": "¥",
+              "value": "LED_symbol_RMB"
+            },
+            {
+              "label": "=",
+              "value": "LED_symbol_equal"
+            },
+            {
+              "label": "+",
+              "value": "LED_symbol_plus"
+            },
+            {
+              "label": "-",
+              "value": "LED_symbol_minus"
+            },
+            {
+              "label": "x",
+              "value": "LED_symbol_multiplied"
+            },
+            {
+              "label": "÷",
+              "value": "LED_symbol_divided"
+            },
+            {
+              "label": "0",
+              "value": "LED_symbol_0"
+            },
+            {
+              "label": "1",
+              "value": "LED_symbol_1"
+            },
+            {
+              "label": "2",
+              "value": "LED_symbol_2"
+            },
+            {
+              "label": "3",
+              "value": "LED_symbol_3"
+            },
+            {
+              "label": "4",
+              "value": "LED_symbol_4"
+            },
+            {
+              "label": "5",
+              "value": "LED_symbol_5"
+            },
+            {
+              "label": "6",
+              "value": "LED_symbol_6"
+            },
+            {
+              "label": "7",
+              "value": "LED_symbol_7"
+            },
+            {
+              "label": "8",
+              "value": "LED_symbol_8"
+            },
+            {
+              "label": "9",
+              "value": "LED_symbol_9"
+            },
+            {
+              "label": "A",
+              "value": "LED_symbol_A"
+            },
+            {
+              "label": "B",
+              "value": "LED_symbol_B"
+            },
+            {
+              "label": "C",
+              "value": "LED_symbol_C"
+            },
+            {
+              "label": "D",
+              "value": "LED_symbol_D"
+            },
+            {
+              "label": "E",
+              "value": "LED_symbol_E"
+            },
+            {
+              "label": "F",
+              "value": "LED_symbol_F"
+            },
+            {
+              "label": "G",
+              "value": "LED_symbol_G"
+            },
+            {
+              "label": "H",
+              "value": "LED_symbol_H"
+            },
+            {
+              "label": "I",
+              "value": "LED_symbol_I"
+            },
+            {
+              "label": "J",
+              "value": "LED_symbol_J"
+            },
+            {
+              "label": "K",
+              "value": "LED_symbol_K"
+            },
+            {
+              "label": "L",
+              "value": "LED_symbol_L"
+            },
+            {
+              "label": "M",
+              "value": "LED_symbol_M"
+            },
+            {
+              "label": "N",
+              "value": "LED_symbol_N"
+            },
+            {
+              "label": "O",
+              "value": "LED_symbol_O"
+            },
+            {
+              "label": "P",
+              "value": "LED_symbol_P"
+            },
+            {
+              "label": "Q",
+              "value": "LED_symbol_Q"
+            },
+            {
+              "label": "R",
+              "value": "LED_symbol_R"
+            },
+            {
+              "label": "S",
+              "value": "LED_symbol_S"
+            },
+            {
+              "label": "T",
+              "value": "LED_symbol_T"
+            },
+            {
+              "label": "U",
+              "value": "LED_symbol_U"
+            },
+            {
+              "label": "V",
+              "value": "LED_symbol_V"
+            },
+            {
+              "label": "W",
+              "value": "LED_symbol_W"
+            },
+            {
+              "label": "X",
+              "value": "LED_symbol_X"
+            },
+            {
+              "label": "Y",
+              "value": "LED_symbol_Y"
+            },
+            {
+              "label": "Z",
+              "value": "LED_symbol_Z"
+            },
+            {
+              "label": "❤︎",
+              "value": "LED_symbol_big_heart"
+            },
+            {
+              "label": "♥︎",
+              "value": "LED_symbol_little_heart"
+            },
+            {
+              "label": "↑",
+              "value": "LED_symbol_forward"
+            },
+            {
+              "label": "↓",
+              "value": "LED_symbol_backward"
+            },
+            {
+              "label": "←",
+              "value": "LED_symbol_turnleft"
+            },
+            {
+              "label": "→",
+              "value": "LED_symbol_turnright"
+            },
+            {
+              "label": "GO",
+              "value": "LED_symbol_GO"
+            },
+            {
+              "label": "⊘",
+              "value": "LED_symbol_stop"
+            }
+          ]
+        },
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_off_LED",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_off_LED"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_display_digital_tube",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_display_digital_tube"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              ""
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_display_digital_tube_score",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_display_digital_tube_score"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        },
+        {
+          "key": "NUMBER1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              ""
+            ]
+          }
+        },
+        {
+          "key": "NUMBER2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              ""
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_off_digital_tube",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_off_digital_tube"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_set_RGB",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_set_RGB"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_fly_RGB",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_fly_RGB"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "⚪",
+              "value": "color_white"
+            },
+            {
+              "label": "🟡",
+              "value": "color_yellow"
+            },
+            {
+              "label": "🟣",
+              "value": "color_purple"
+            },
+            {
+              "label": "🟦",
+              "value": "color_cyan"
+            },
+            {
+              "label": "🔴",
+              "value": "color_red"
+            },
+            {
+              "label": "🟢",
+              "value": "color_green"
+            },
+            {
+              "label": "🔵",
+              "value": "color_blue"
+            },
+            {
+              "label": "⚫",
+              "value": "color_black"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_set_DO",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_set_DO"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        },
+        {
+          "key": "ELECTROMAGNET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.light_speaker.electro_magnet.absorption",
+              "value": "true"
+            },
+            {
+              "label": "Lang.Blocks.light_speaker.electro_magnet.break_off",
+              "value": "false"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ls_execute_script",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ls_execute_script"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_without_next",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_fly_state_POS_Z",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_fly_state_POS_Z"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_fly_state_LASER",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_fly_state_LASER"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_battery_voltage",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_battery_voltage"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_fly_state_STATE_TEMP",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_fly_state_STATE_TEMP"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_attitude_angle",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_attitude_angle"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.sensor.attitude_angle.pitch",
+              "value": "STATE_PITCH"
+            },
+            {
+              "label": "Lang.Blocks.sensor.attitude_angle.roll",
+              "value": "STATE_ROLL"
+            },
+            {
+              "label": "Lang.Blocks.sensor.attitude_angle.yaw",
+              "value": "STATE_YAW"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_flight_angular_velocity",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_flight_angular_velocity"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X",
+              "value": "GYPO_X"
+            },
+            {
+              "label": "Y",
+              "value": "GYPO_Y"
+            },
+            {
+              "label": "Z",
+              "value": "GYPO_Z"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_flight_acceleration",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_flight_acceleration"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X",
+              "value": "ACC_X"
+            },
+            {
+              "label": "Y",
+              "value": "ACC_Y"
+            },
+            {
+              "label": "Z",
+              "value": "ACC_Z"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_optical_flow",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_optical_flow"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X",
+              "value": "OPX"
+            },
+            {
+              "label": "Y",
+              "value": "OPY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_infrared_distance",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_infrared_distance"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_obstacle_infrared_detected_string",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_obstacle_infrared_detected_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_obstacle_infrared_detected_bool",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_obstacle_infrared_detected_bool"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_human_infrared_value_string",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_human_infrared_value_string"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_human_infrared_value_bool",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_human_infrared_value_bool"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_AI",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_AI"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_ultrasonic_distance",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_ultrasonic_distance"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_ambient_light",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_ambient_light"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_temperature",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_temperature"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_humidity",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_humidity"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_flame",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_flame"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_gesture",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_gesture"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_tof",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_tof"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "P1",
+              "value": "P1"
+            },
+            {
+              "label": "P2",
+              "value": "P2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_fly_setpoint_LASER_ENABLE",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_fly_setpoint_LASER_ENABLE"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.sensor.laser_height_determination.on",
+              "value": "true"
+            },
+            {
+              "label": "Lang.Blocks.sensor.laser_height_determination.off",
+              "value": "false"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_get_bt_remote_control",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_get_bt_remote_control"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.sensor.remote_control_button.key",
+              "value": "BTKEY"
+            },
+            {
+              "label": "Lang.Blocks.sensor.remote_control_button.left_rocker_x",
+              "value": "BTSTICK2"
+            },
+            {
+              "label": "Lang.Blocks.sensor.remote_control_button.left_rocker_y",
+              "value": "BTSTICK1"
+            },
+            {
+              "label": "Lang.Blocks.sensor.remote_control_button.right_rocker_x",
+              "value": "BTSTICK4"
+            },
+            {
+              "label": "Lang.Blocks.sensor.remote_control_button.right_rocker_y",
+              "value": "BTSTICK3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_seconds",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_seconds"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    },
+    {
+      "type": "whalesbot_eagle_1001_ss_resettime",
+      "category": "hardware_whalesbot_eagle_1001",
+      "label": {
+        "ko": "whalesbot_eagle_1001_ss_resettime"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "whalesbot_eagle_1001"
+      }
+    }
+  ]
+}

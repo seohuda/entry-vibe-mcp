@@ -1,0 +1,193 @@
+{
+  "category": "ai_utilize_media_pipe",
+  "blocks": [
+    {
+      "type": "media_pipe_title",
+      "category": "ai_utilize_media_pipe",
+      "label": {
+        "ko": "media_pipe_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "mediaPipe"
+      }
+    },
+    {
+      "type": "media_pipe_video_screen",
+      "category": "ai_utilize_media_pipe",
+      "label": {
+        "ko": "비디오 화면"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "mediaPipe"
+      }
+    },
+    {
+      "type": "media_pipe_switch_camera",
+      "category": "ai_utilize_media_pipe",
+      "label": {
+        "ko": "카메라로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "mediaPipe"
+      }
+    },
+    {
+      "type": "check_connected_camera",
+      "category": "ai_utilize_media_pipe",
+      "label": {
+        "ko": "카메라가 연결되었는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "mediaPipe"
+      }
+    },
+    {
+      "type": "media_pipe_flip_camera",
+      "category": "ai_utilize_media_pipe",
+      "label": {
+        "ko": "비디오 화면 뒤집기"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "mediaPipe"
+      }
+    },
+    {
+      "type": "media_pipe_set_opacity_camera",
+      "category": "ai_utilize_media_pipe",
+      "label": {
+        "ko": "비디오 투명도 효과를 으로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "mediaPipe"
+      }
+    },
+    {
+      "type": "media_pipe_motion_value",
+      "category": "ai_utilize_media_pipe",
+      "label": {
+        "ko": "에서 감지한 값"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "자신",
+              "value": "self"
+            },
+            {
+              "label": "실행 화면",
+              "value": "screen"
+            }
+          ]
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "움직임",
+              "value": "total"
+            },
+            {
+              "label": "좌우방향",
+              "value": "x"
+            },
+            {
+              "label": "상하방향",
+              "value": "y"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "mediaPipe"
+      }
+    }
+  ]
+}

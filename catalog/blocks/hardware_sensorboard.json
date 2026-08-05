@@ -1,0 +1,220 @@
+{
+  "category": "hardware_sensorboard",
+  "blocks": [
+    {
+      "type": "sensorBoard_get_named_sensor_value",
+      "category": "hardware_sensorboard",
+      "label": {
+        "ko": "센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "소리",
+              "value": "0"
+            },
+            {
+              "label": "빛 감지",
+              "value": "1"
+            },
+            {
+              "label": "슬라이더",
+              "value": "2"
+            },
+            {
+              "label": "온도",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sensorBoard"
+      }
+    },
+    {
+      "type": "sensorBoard_is_button_pressed",
+      "category": "hardware_sensorboard",
+      "label": {
+        "ko": "버튼을 눌렀는가?"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간",
+              "value": "8"
+            },
+            {
+              "label": "파란",
+              "value": "9"
+            },
+            {
+              "label": "노랑",
+              "value": "10"
+            },
+            {
+              "label": "초록",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sensorBoard"
+      }
+    },
+    {
+      "type": "sensorBoard_led",
+      "category": "hardware_sensorboard",
+      "label": {
+        "ko": "LED"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간",
+              "value": "2"
+            },
+            {
+              "label": "초록",
+              "value": "3"
+            },
+            {
+              "label": "파란",
+              "value": "4"
+            },
+            {
+              "label": "노랑",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "255"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "sensorBoard"
+      }
+    },
+    {
+      "type": "sensorBoard_get_number_sensor_value",
+      "category": "hardware_sensorboard",
+      "label": {
+        "ko": "아날로그 번 센서값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "sensorBoard"
+      }
+    },
+    {
+      "type": "sensorBoard_get_digital_value",
+      "category": "hardware_sensorboard",
+      "label": {
+        "ko": "디지털 번 센서값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "sensorBoard"
+      }
+    },
+    {
+      "type": "sensorBoard_toggle_led",
+      "category": "hardware_sensorboard",
+      "label": {
+        "ko": "디지털 번 핀"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "sensorBoard"
+      }
+    },
+    {
+      "type": "sensorBoard_toggle_pwm",
+      "category": "hardware_sensorboard",
+      "label": {
+        "ko": "디지털 번 핀을 (으)로 정하기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "sensorBoard"
+      }
+    },
+    {
+      "type": "sensorBoard_convert_scale",
+      "category": "hardware_sensorboard",
+      "label": {
+        "ko": "값의 범위를 ~ 에서 ~ (으)로 바꾼값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "sensorBoard"
+      }
+    }
+  ]
+}

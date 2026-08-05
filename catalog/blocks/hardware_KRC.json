@@ -1,0 +1,757 @@
+{
+  "category": "hardware_KRC",
+  "blocks": [
+    {
+      "type": "KrcDigitalPortOnOffList",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcDigitalPortOnOffList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.OnBlock",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.OffBlock",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcBacklightOnoffList",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcBacklightOnoffList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.BacklightOn",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.BacklightOff",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcDigitalPortList",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcDigitalPortList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D1",
+              "value": "9"
+            },
+            {
+              "label": "D2",
+              "value": "10"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            },
+            {
+              "label": "A6",
+              "value": "6"
+            },
+            {
+              "label": "A7",
+              "value": "7"
+            },
+            {
+              "label": "A8",
+              "value": "8"
+            },
+            {
+              "label": "S1",
+              "value": "11"
+            },
+            {
+              "label": "S2",
+              "value": "12"
+            },
+            {
+              "label": "S3",
+              "value": "13"
+            },
+            {
+              "label": "S4",
+              "value": "14"
+            },
+            {
+              "label": "S5",
+              "value": "15"
+            },
+            {
+              "label": "S6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcServoPortList",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcServoPortList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "S1",
+              "value": "1"
+            },
+            {
+              "label": "S2",
+              "value": "2"
+            },
+            {
+              "label": "S3",
+              "value": "3"
+            },
+            {
+              "label": "S4",
+              "value": "4"
+            },
+            {
+              "label": "S5",
+              "value": "5"
+            },
+            {
+              "label": "S6",
+              "value": "6"
+            },
+            {
+              "label": "S7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcAllOnOffList",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcAllOnOffList"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.AllOffBlock",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.AllOnBlock",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcAnalogPortList",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcAnalogPortList"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A1",
+              "value": "0"
+            },
+            {
+              "label": "A2",
+              "value": "1"
+            },
+            {
+              "label": "A3",
+              "value": "2"
+            },
+            {
+              "label": "A4",
+              "value": "3"
+            },
+            {
+              "label": "A5",
+              "value": "4"
+            },
+            {
+              "label": "A6",
+              "value": "5"
+            },
+            {
+              "label": "A7",
+              "value": "6"
+            },
+            {
+              "label": "A8",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcBuzzerOnOff",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcBuzzerOnOff"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcSetMotorSpeed",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcSetMotorSpeed"
+      },
+      "params": [
+        {
+          "key": "LSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcMotorStop",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcMotorStop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcSetServo",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcSetServo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "KrcServoPortList",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcDigitalOnOff",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcDigitalOnOff"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "KrcDigitalPortList",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "KrcDigitalPortOnOffList",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcGetDgitalValue",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcGetDgitalValue"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "KrcDigitalPortList",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcGetAnalogValue",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcGetAnalogValue"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "KrcAnalogPortList",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcGetUsonicValue",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcGetUsonicValue"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "KrcAnalogPortList",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcSetLcdString",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcSetLcdString"
+      },
+      "params": [
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcSetLcdBacklight",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcSetLcdBacklight"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "KrcBacklightOnoffList",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcSetLcdClear",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcSetLcdClear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    },
+    {
+      "type": "KrcGetAnalogMapping",
+      "category": "hardware_KRC",
+      "label": {
+        "ko": "KrcGetAnalogMapping"
+      },
+      "params": [
+        {
+          "key": "IDATA",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "KRC"
+      }
+    }
+  ]
+}

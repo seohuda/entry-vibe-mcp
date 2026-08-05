@@ -1,0 +1,694 @@
+{
+  "category": "hardware_choco",
+  "blocks": [
+    {
+      "type": "choco_move_forward",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_move_forward"
+      },
+      "params": [
+        {
+          "key": "MOVE_CNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "MOVE_UNIT",
+          "type": "Dropdown",
+          "defaultValue": "step",
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_move_step",
+              "value": "step"
+            },
+            {
+              "label": "Lang.Blocks.choco_move_cm",
+              "value": "cm"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_move_backward",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_move_backward"
+      },
+      "params": [
+        {
+          "key": "MOVE_CNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "MOVE_UNIT",
+          "type": "Dropdown",
+          "defaultValue": "step",
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_move_step",
+              "value": "step"
+            },
+            {
+              "label": "Lang.Blocks.choco_move_cm",
+              "value": "cm"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_turn_left",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_turn_left"
+      },
+      "params": [
+        {
+          "key": "TURN_CNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 90
+        },
+        {
+          "key": "TURN_UNIT",
+          "type": "Dropdown",
+          "defaultValue": "degree",
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_trun_drgree",
+              "value": "degree"
+            },
+            {
+              "label": "Lang.Blocks.choco_trun_round",
+              "value": "turns"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_turn_right",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_turn_right"
+      },
+      "params": [
+        {
+          "key": "TURN_CNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 90
+        },
+        {
+          "key": "TURN_UNIT",
+          "type": "Dropdown",
+          "defaultValue": "degree",
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_trun_drgree",
+              "value": "degree"
+            },
+            {
+              "label": "Lang.Blocks.choco_trun_round",
+              "value": "turns"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_move_right_left",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_move_right_left"
+      },
+      "params": [
+        {
+          "key": "MOVE_RIGHT_CNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "MOVE_LEFT_CNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "MOVE_UNIT",
+          "type": "Dropdown",
+          "defaultValue": "step",
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_move_step",
+              "value": "step"
+            },
+            {
+              "label": "Lang.Blocks.choco_move_cm",
+              "value": "cm"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_onoff_led_rear",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_onoff_led_rear"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "On",
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_toggle_on",
+              "value": "On"
+            },
+            {
+              "label": "Lang.Blocks.choco_toggle_off",
+              "value": "Off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_set_led_color",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_set_led_color"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": "right",
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_direction_right",
+              "value": "right"
+            },
+            {
+              "label": "Lang.Blocks.choco_direction_left",
+              "value": "left"
+            },
+            {
+              "label": "Lang.Blocks.choco_direction_dual",
+              "value": "dual"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_color_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.choco_color_blue",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.choco_color_red",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.choco_color_green",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.choco_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.choco_color_pink",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.choco_color_bluegreen",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.choco_color_white",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_play_sound",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_play_sound"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "Lang.Blocks.choco_sound_car",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_robot",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_dog",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_cat",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_chicken",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_tiger",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_lion",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_fart",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_helicopter",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_train",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_frog",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_jjajan",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_sheep",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_elephant",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_camel",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_dolphin",
+              "value": "16"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_ttiyong",
+              "value": "17"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_hello_parrot",
+              "value": "18"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_hello_manga",
+              "value": "19"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_hello_man",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_ppong",
+              "value": "21"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_buzzer",
+              "value": "22"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_ttalilalan",
+              "value": "23"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_ttattattatta",
+              "value": "24"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_laughter",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_magic",
+              "value": "26"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_woodpecker",
+              "value": "27"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_bird",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_burp",
+              "value": "29"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_hiccup",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_doridori",
+              "value": "31"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_firetruck",
+              "value": "32"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_police_car",
+              "value": "33"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_applause",
+              "value": "34"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_kiss",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_missile",
+              "value": "36"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_angry_duck",
+              "value": "37"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_fly",
+              "value": "38"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_ufo",
+              "value": "39"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_fanfare",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_sigh",
+              "value": "41"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_alright",
+              "value": "42"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_genius",
+              "value": "43"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_no",
+              "value": "44"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_wow",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.choco_sound_yahoo",
+              "value": "46"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_is_front_sensor",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_is_front_sensor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_is_bottom_sensor",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_is_bottom_sensor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_is_light_sensor",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_is_light_sensor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_get_front_sensor",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_get_front_sensor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_get_bottom_sensor",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_get_bottom_sensor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    },
+    {
+      "type": "choco_get_light_sensor",
+      "category": "hardware_choco",
+      "label": {
+        "ko": "choco_get_light_sensor"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "choco"
+      }
+    }
+  ]
+}

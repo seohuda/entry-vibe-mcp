@@ -15,6 +15,7 @@ export function summarizeBlock(block: BlockSchema) {
     isHat: block.isHat,
     statementSlots: block.statementSlots,
     statementKeys: block.statementKeys,
+    extension: block.extension,
     params: block.params
       .filter((p) => p.type !== 'Indicator' && p.type !== 'LineBreak')
       .map((p) => ({
@@ -46,7 +47,8 @@ export function searchBlocks(
     .filter(inCategory)
     .map((b) => {
       const label = b.label.ko.toLowerCase();
-      const hay = `${b.type} ${label} ${b.category}`.toLowerCase();
+      const ext = b.extension ? `${b.extension.kind} ${b.extension.module}` : '';
+      const hay = `${b.type} ${label} ${b.category} ${ext}`.toLowerCase();
       let score = 0;
       if (b.type === q) score += 100;
       if (b.type.includes(q)) score += 50;

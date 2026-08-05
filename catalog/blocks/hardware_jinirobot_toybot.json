@@ -1,0 +1,1192 @@
+{
+  "category": "hardware_jinirobot_toybot",
+  "blocks": [
+    {
+      "type": "dropdown_button",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_button"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.list_button_a",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.list_button_b",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_color",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_color"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.list_color_white",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.list_color_red",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.list_color_orange",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.list_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.list_color_green",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.list_color_blue",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.list_color_navy",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.list_color_violet",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.list_color_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_accidental",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_accidental"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.list_accidental_natural",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.list_accidental_sharp",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.list_accidental_flat",
+              "value": "-1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_beat",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_beat"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.list_beat_oneeight",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.list_beat_onefour",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.list_beat_onetwo",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.list_beat_one",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.list_beat_onehalf",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.list_beat_two",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.list_beat_three",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.list_beat_four",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_octave",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_octave"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.list_octave_low",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.list_octave_middle",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.list_octave_high",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_pitch",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_pitch"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.list_pitch_c",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.list_pitch_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.list_pitch_e",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.list_pitch_f",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.list_pitch_g",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.list_pitch_a",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.list_pitch_b",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.list_pitch_r",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_effect",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_effect"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_melody",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_melody"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_servo",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_servo"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_servo_all",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_servo_all"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.list_all",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_speed",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_speed"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_dc",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_dc"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.list_all",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "dropdown_rotation",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "dropdown_rotation"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.list_rotation_forward",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.list_rotation_reverse",
+              "value": "-1"
+            },
+            {
+              "label": "Lang.template.list_rotation_stop",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "get_ultrasonic_distance",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "get_ultrasonic_distance"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "get_button_state",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "get_button_state"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_button",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "get_analog_input",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "get_analog_input"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "get_servo_angle",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "get_servo_angle"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_servo",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_led_color_name",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_led_color_name"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_color",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_led_rgb",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_led_rgb"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_play_score",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_play_score"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_octave",
+            "params": []
+          }
+        },
+        {
+          "key": "PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_pitch",
+            "params": []
+          }
+        },
+        {
+          "key": "ACCIDENTAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_accidental",
+            "params": []
+          }
+        },
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_beat",
+            "params": []
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_play_sound_effect",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_play_sound_effect"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_effect",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_play_melody",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_play_melody"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_melody",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_servo_each",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_servo_each"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_servo",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_speed",
+            "params": []
+          }
+        },
+        {
+          "key": "POSITION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_servo_all",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_servo_all"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_speed",
+            "params": []
+          }
+        },
+        {
+          "key": "POSITION0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "POSITION1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "POSITION2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "POSITION3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "POSITION4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_servo_home",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_servo_home"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_speed",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_analog_output",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_analog_output"
+      },
+      "params": [
+        {
+          "key": "PWM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              70
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_dc_run",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_dc_run"
+      },
+      "params": [
+        {
+          "key": "DC",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_dc",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_speed",
+            "params": []
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_rotation",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_servo_offset",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_servo_offset"
+      },
+      "params": [
+        {
+          "key": "SERVO",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "dropdown_servo_all",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    },
+    {
+      "type": "set_servo_reset",
+      "category": "hardware_jinirobot_toybot",
+      "label": {
+        "ko": "set_servo_reset"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "toybot"
+      }
+    }
+  ]
+}

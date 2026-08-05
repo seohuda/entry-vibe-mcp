@@ -1,0 +1,1557 @@
+{
+  "category": "hardware_robico",
+  "blocks": [
+    {
+      "type": "Robico_SensorColF",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SensorColF"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 3,
+          "options": [
+            {
+              "label": "검은색",
+              "value": "3"
+            },
+            {
+              "label": "빨간색",
+              "value": "4"
+            },
+            {
+              "label": "초록색",
+              "value": "5"
+            },
+            {
+              "label": "파란색",
+              "value": "6"
+            },
+            {
+              "label": "노란색",
+              "value": "7"
+            },
+            {
+              "label": "흰색",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SensorIR",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SensorIR"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "앞쪽",
+              "value": "1"
+            },
+            {
+              "label": "뒤쪽",
+              "value": "2"
+            },
+            {
+              "label": "앞뒤",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Sensor6",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Sensor6"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "들림",
+              "value": "1"
+            },
+            {
+              "label": "내림",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SensorDrop",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SensorDrop"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "들림",
+              "value": "1"
+            },
+            {
+              "label": "내림",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_DetectLine",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_DetectLine"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "라인 감지",
+              "value": "1"
+            },
+            {
+              "label": "갈림길 감지",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Move1",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Move1"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "앞",
+              "value": "1"
+            },
+            {
+              "label": "뒤",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": 6,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "4"
+            },
+            {
+              "label": "보통으로",
+              "value": "6"
+            },
+            {
+              "label": "빠르게",
+              "value": "9"
+            },
+            {
+              "label": "부스터",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Move2",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Move2"
+      },
+      "params": [
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 5
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 5
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Wheel",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Wheel"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_L",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "앞",
+              "value": "1"
+            },
+            {
+              "label": "뒤",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED_L",
+          "type": "Dropdown",
+          "defaultValue": 6,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "4"
+            },
+            {
+              "label": "보통으로",
+              "value": "6"
+            },
+            {
+              "label": "빠르게",
+              "value": "9"
+            },
+            {
+              "label": "부스터",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION_R",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "앞",
+              "value": "1"
+            },
+            {
+              "label": "뒤",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED_R",
+          "type": "Dropdown",
+          "defaultValue": 6,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "4"
+            },
+            {
+              "label": "보통으로",
+              "value": "6"
+            },
+            {
+              "label": "빠르게",
+              "value": "9"
+            },
+            {
+              "label": "부스터",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Rotate1",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Rotate1"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "시계 방향",
+              "value": "1"
+            },
+            {
+              "label": "반 시계 방향",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": 90
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Rotate2",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Rotate2"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "시계 방향",
+              "value": "1"
+            },
+            {
+              "label": "반 시계 방향",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": 360,
+          "options": [
+            {
+              "label": "반 바퀴",
+              "value": "180"
+            },
+            {
+              "label": "한 바퀴",
+              "value": "360"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Stop",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Linetrace",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Linetrace"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "시작",
+              "value": "0"
+            },
+            {
+              "label": "멈춤",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Ladder",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Ladder"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "시작",
+              "value": "1"
+            },
+            {
+              "label": "멈춤",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Maze",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Maze"
+      },
+      "params": [
+        {
+          "key": "RULE",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "랜덤",
+              "value": "0"
+            },
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": 2,
+          "options": [
+            {
+              "label": "시작",
+              "value": "2"
+            },
+            {
+              "label": "멈춤",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_WaitCL",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_WaitCL"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_HR",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_HR"
+      },
+      "params": [
+        {
+          "key": "HR",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "좌회전",
+              "value": "1"
+            },
+            {
+              "label": "우회전",
+              "value": "2"
+            },
+            {
+              "label": "직진",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_TracingSpeed",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_TracingSpeed"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "느리게",
+              "value": "0"
+            },
+            {
+              "label": "보통으로",
+              "value": "1"
+            },
+            {
+              "label": "빠르게",
+              "value": "2"
+            },
+            {
+              "label": "부스터",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_LightColorP",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_LightColorP"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 5,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "5"
+            },
+            {
+              "label": "오른쪽",
+              "value": "10"
+            },
+            {
+              "label": "양쪽",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_LightColorL",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_LightColorL"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 15,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "5"
+            },
+            {
+              "label": "오른쪽",
+              "value": "10"
+            },
+            {
+              "label": "양쪽",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "빨강",
+              "value": "0"
+            },
+            {
+              "label": "주황",
+              "value": "1"
+            },
+            {
+              "label": "노랑",
+              "value": "2"
+            },
+            {
+              "label": "초록",
+              "value": "3"
+            },
+            {
+              "label": "파랑",
+              "value": "4"
+            },
+            {
+              "label": "분홍",
+              "value": "5"
+            },
+            {
+              "label": "보라",
+              "value": "6"
+            },
+            {
+              "label": "하양",
+              "value": "7"
+            },
+            {
+              "label": "무작위",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_LightColorF",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_LightColorF"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_LightOff",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_LightOff"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 15,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "5"
+            },
+            {
+              "label": "오른쪽",
+              "value": "10"
+            },
+            {
+              "label": "양쪽",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_LightFun",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_LightFun"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "신호등",
+              "value": "1"
+            },
+            {
+              "label": "무지개",
+              "value": "3"
+            },
+            {
+              "label": "경찰차",
+              "value": "4"
+            },
+            {
+              "label": "크리스마스",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundNum",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundNum"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 311,
+          "options": [
+            {
+              "label": "1",
+              "value": "311"
+            },
+            {
+              "label": "2",
+              "value": "312"
+            },
+            {
+              "label": "3",
+              "value": "313"
+            },
+            {
+              "label": "4",
+              "value": "314"
+            },
+            {
+              "label": "5",
+              "value": "315"
+            },
+            {
+              "label": "6",
+              "value": "316"
+            },
+            {
+              "label": "7",
+              "value": "317"
+            },
+            {
+              "label": "8",
+              "value": "318"
+            },
+            {
+              "label": "9",
+              "value": "319"
+            },
+            {
+              "label": "10",
+              "value": "320"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundCol",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundCol"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 301,
+          "options": [
+            {
+              "label": "빨강",
+              "value": "301"
+            },
+            {
+              "label": "주황",
+              "value": "302"
+            },
+            {
+              "label": "노랑",
+              "value": "303"
+            },
+            {
+              "label": "초록",
+              "value": "304"
+            },
+            {
+              "label": "파랑",
+              "value": "305"
+            },
+            {
+              "label": "분홍",
+              "value": "308"
+            },
+            {
+              "label": "보라",
+              "value": "307"
+            },
+            {
+              "label": "하양",
+              "value": "310"
+            },
+            {
+              "label": "검정",
+              "value": "309"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundMov",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundMov"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 23,
+          "options": [
+            {
+              "label": "사이렌",
+              "value": "23"
+            },
+            {
+              "label": "경적",
+              "value": "24"
+            },
+            {
+              "label": "엔진음",
+              "value": "25"
+            },
+            {
+              "label": "헬리콥터",
+              "value": "26"
+            },
+            {
+              "label": "뱃고동",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundAni",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundAni"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 28,
+          "options": [
+            {
+              "label": "개",
+              "value": "28"
+            },
+            {
+              "label": "호랑이",
+              "value": "29"
+            },
+            {
+              "label": "소",
+              "value": "30"
+            },
+            {
+              "label": "닭",
+              "value": "31"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundEmo",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundEmo"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 321,
+          "options": [
+            {
+              "label": "행복",
+              "value": "321"
+            },
+            {
+              "label": "슬픔",
+              "value": "322"
+            },
+            {
+              "label": "신남",
+              "value": "323"
+            },
+            {
+              "label": "지루함",
+              "value": "324"
+            },
+            {
+              "label": "화남",
+              "value": "325"
+            },
+            {
+              "label": "사랑",
+              "value": "326"
+            },
+            {
+              "label": "놀람",
+              "value": "336"
+            },
+            {
+              "label": "안심",
+              "value": "335"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundGre",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundGre"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 112,
+          "options": [
+            {
+              "label": "안녕?",
+              "value": "112"
+            },
+            {
+              "label": "반가워!",
+              "value": "332"
+            },
+            {
+              "label": "고마워!",
+              "value": "350"
+            },
+            {
+              "label": "도와줘!",
+              "value": "340"
+            },
+            {
+              "label": "걱정 마!",
+              "value": "342"
+            },
+            {
+              "label": "조심해!",
+              "value": "347"
+            },
+            {
+              "label": "맛있어!",
+              "value": "348"
+            },
+            {
+              "label": "응",
+              "value": "337"
+            },
+            {
+              "label": "아니",
+              "value": "338"
+            },
+            {
+              "label": "좋아",
+              "value": "204"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundMis",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundMis"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 330,
+          "options": [
+            {
+              "label": "시작!",
+              "value": "330"
+            },
+            {
+              "label": "출발!",
+              "value": "201"
+            },
+            {
+              "label": "도착!",
+              "value": "331"
+            },
+            {
+              "label": "짜잔",
+              "value": "334"
+            },
+            {
+              "label": "한번 해 볼까?",
+              "value": "341"
+            },
+            {
+              "label": "앗, 큰일이야!",
+              "value": "346"
+            },
+            {
+              "label": "야호!",
+              "value": "203"
+            },
+            {
+              "label": "박수",
+              "value": "22"
+            },
+            {
+              "label": "미션 성공!",
+              "value": "345"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundTon",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundTon"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 523,
+          "options": [
+            {
+              "label": "도",
+              "value": "523"
+            },
+            {
+              "label": "레",
+              "value": "587"
+            },
+            {
+              "label": "미",
+              "value": "659"
+            },
+            {
+              "label": "파",
+              "value": "699"
+            },
+            {
+              "label": "솔",
+              "value": "784"
+            },
+            {
+              "label": "라",
+              "value": "880"
+            },
+            {
+              "label": "시",
+              "value": "988"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": 2,
+          "options": [
+            {
+              "label": "낮은",
+              "value": "2"
+            },
+            {
+              "label": "높은",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "INTERVAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 0.5
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundColF",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundColF"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundRec",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundRec"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": 1
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_SoundStop",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_SoundStop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    },
+    {
+      "type": "Robico_Fun",
+      "category": "hardware_robico",
+      "label": {
+        "ko": "Robico_Fun"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": 5,
+          "options": [
+            {
+              "label": "댄스",
+              "value": "5"
+            },
+            {
+              "label": "소용돌이",
+              "value": "6"
+            },
+            {
+              "label": "뒤로가기",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robico"
+      }
+    }
+  ]
+}

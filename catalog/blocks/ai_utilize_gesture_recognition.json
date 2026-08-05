@@ -1,0 +1,342 @@
+{
+  "category": "ai_utilize_gesture_recognition",
+  "blocks": [
+    {
+      "type": "hand_detection_title",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "hand_detection_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "when_hand_detection",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "손을 인식했을 때"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "hand_detection",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "손 인식"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "draw_detected_hand",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "인식한 손"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "check_detected_hand",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "손을 인식했는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "count_detected_hand",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "인식한 손의 수"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "locate_to_hand",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "번째 손의 (으)로 이동하기"
+      },
+      "params": [
+        {
+          "key": "HAND",
+          "type": "Unknown"
+        },
+        {
+          "key": "HAND_POINT",
+          "type": "Unknown"
+        },
+        {
+          "key": "HAND_DETAIL_POINT",
+          "type": "Unknown"
+        },
+        {
+          "key": "3",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "locate_time_to_hand",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "초 동안 번째 손의 (으)로 이동하기"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "HAND",
+          "type": "Unknown"
+        },
+        {
+          "key": "HAND_POINT",
+          "type": "Unknown"
+        },
+        {
+          "key": "HAND_DETAIL_POINT",
+          "type": "Unknown"
+        },
+        {
+          "key": "4",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "axis_detected_hand",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "번째 손의 의 좌표"
+      },
+      "params": [
+        {
+          "key": "HAND",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "HAND_POINT",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "HAND_DETAIL_POINT",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "AXIS",
+          "type": "Unknown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "is_which_hand",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "번째 손이 인가?"
+      },
+      "params": [
+        {
+          "key": "HAND_NUM",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "HAND",
+          "type": "Unknown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "get_which_hand",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "번째 손"
+      },
+      "params": [
+        {
+          "key": "HAND_NUM",
+          "type": "Unknown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "is_which_gesture",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "번째 손의 모양이 인가?"
+      },
+      "params": [
+        {
+          "key": "HAND_NUM",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "GESTURE",
+          "type": "Unknown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    },
+    {
+      "type": "get_which_gesture",
+      "category": "ai_utilize_gesture_recognition",
+      "label": {
+        "ko": "번째 손의 모양"
+      },
+      "params": [
+        {
+          "key": "HAND_NUM",
+          "type": "Unknown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "gestureRecognition"
+      }
+    }
+  ]
+}

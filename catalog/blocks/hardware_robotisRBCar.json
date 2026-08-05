@@ -1,0 +1,291 @@
+{
+  "category": "hardware_robotisRBCar",
+  "blocks": [
+    {
+      "type": "robotis_openCM70_RLa_go",
+      "category": "hardware_robotisRBCar",
+      "label": {
+        "ko": "robotis_openCM70_RLa_go"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveF",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveB",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveL",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveR",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_car"
+      }
+    },
+    {
+      "type": "robotis_openCM70_RLa_stop",
+      "category": "hardware_robotisRBCar",
+      "label": {
+        "ko": "robotis_openCM70_RLa_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_car"
+      }
+    },
+    {
+      "type": "robotis_RB_rotate",
+      "category": "hardware_robotisRBCar",
+      "label": {
+        "ko": "robotis_RB_rotate"
+      },
+      "params": [
+        {
+          "key": "DXLNUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "36"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "35"
+            }
+          ]
+        },
+        {
+          "key": "VEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_clockwise",
+              "value": "-10"
+            },
+            {
+              "label": "Lang.Blocks.robotis_counterclockwise",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_car"
+      }
+    },
+    {
+      "type": "robotis_RB_rotate_stop",
+      "category": "hardware_robotisRBCar",
+      "label": {
+        "ko": "robotis_RB_rotate_stop"
+      },
+      "params": [
+        {
+          "key": "DXLNUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_left",
+              "value": "36"
+            },
+            {
+              "label": "Lang.Blocks.robotis_right",
+              "value": "35"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_car"
+      }
+    },
+    {
+      "type": "robotis_RB_go_distance",
+      "category": "hardware_robotisRBCar",
+      "label": {
+        "ko": "robotis_RB_go_distance"
+      },
+      "params": [
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_moveF",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_moveB",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_car"
+      }
+    },
+    {
+      "type": "robotis_RB_turn",
+      "category": "hardware_robotisRBCar",
+      "label": {
+        "ko": "robotis_RB_turn"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_car"
+      }
+    },
+    {
+      "type": "robotis_RB_pen",
+      "category": "hardware_robotisRBCar",
+      "label": {
+        "ko": "robotis_RB_pen"
+      },
+      "params": [
+        {
+          "key": "MOTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_up",
+              "value": "50007"
+            },
+            {
+              "label": "Lang.Blocks.robotis_down",
+              "value": "50008"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_car"
+      }
+    }
+  ]
+}

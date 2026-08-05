@@ -398,7 +398,7 @@ examples/         바로 컴파일해 볼 수 있는 IR 예제
 test/             테스트 및 fixture IR
 ```
 
-블록 카탈로그는 entryjs의 `block_*.js`를 파싱해서 생성합니다. AI·하드웨어 블록은 v1에서 제외했고, 블록 메뉴 버튼이나 함수 파라미터 슬롯처럼 스크립트에 배치할 수 없는 항목도 제외했습니다 (12개 카테고리, 194개 블록).
+블록 카탈로그는 entryjs의 `block_*.js`(코어)와 AI·확장·`hardware/`·`hardwareLite/` 모듈을 파싱해서 생성합니다. 블록 메뉴 버튼이나 함수 파라미터 슬롯처럼 스크립트에 배치할 수 없는 항목은 제외합니다. 컴파일 시 AI 활용·확장·하드웨어 Lite 블록을 쓰면 프로젝트의 `aiUtilizeBlocks` / `expansionBlocks` / `hardwareLiteBlocks`가 자동으로 채워지고, 클래식 하드웨어는 `externalModules`에 모듈명이 들어갑니다. AI 학습 블록은 카탈로그에 포함되지만 학습 모델(`learning`)은 아직 생성하지 않습니다.
 
 카탈로그를 다시 만들려면 entryjs 소스가 필요합니다.
 

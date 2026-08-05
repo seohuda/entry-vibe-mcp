@@ -1,0 +1,1924 @@
+{
+  "category": "hardware_turtle",
+  "blocks": [
+    {
+      "type": "turtle_touching_color",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "에 닿았는가?"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_color_red",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_orange",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_green",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_sky_blue",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_blue",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_purple",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_black",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_white",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_is_color_pattern",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "색깔 패턴이 인가?"
+      },
+      "params": [
+        {
+          "key": "COLOR1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_yellow",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_green",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_sky_blue",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_blue",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_purple",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "COLOR2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_yellow",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_green",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_sky_blue",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_blue",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_purple",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_button_state",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "버튼을 ?"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_clicked",
+              "value": "clicked"
+            },
+            {
+              "label": "Lang.Blocks.turtle_double_clicked",
+              "value": "doubleClicked"
+            },
+            {
+              "label": "Lang.Blocks.turtle_long_pressed",
+              "value": "longPressed"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_boolean",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "turtle_boolean"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_tilt_forward",
+              "value": "TILT_FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.turtle_tilt_backward",
+              "value": "TILT_BACKWARD"
+            },
+            {
+              "label": "Lang.Blocks.turtle_tilt_left",
+              "value": "TILT_LEFT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_tilt_right",
+              "value": "TILT_RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_tilt_flip",
+              "value": "TILT_FLIP"
+            },
+            {
+              "label": "Lang.Blocks.turtle_tilt_not",
+              "value": "TILT_NOT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_battery_normal",
+              "value": "BATTERY_NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.turtle_battery_low",
+              "value": "BATTERY_LOW"
+            },
+            {
+              "label": "Lang.Blocks.turtle_battery_empty",
+              "value": "BATTERY_EMPTY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_value",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "turtle_value"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_color_number",
+              "value": "colorNumber"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_pattern",
+              "value": "colorPattern"
+            },
+            {
+              "label": "Lang.Blocks.turtle_floor",
+              "value": "floor"
+            },
+            {
+              "label": "Lang.Blocks.turtle_button",
+              "value": "button"
+            },
+            {
+              "label": "Lang.Blocks.turtle_acceleration_x",
+              "value": "accelerationX"
+            },
+            {
+              "label": "Lang.Blocks.turtle_acceleration_y",
+              "value": "accelerationY"
+            },
+            {
+              "label": "Lang.Blocks.turtle_acceleration_z",
+              "value": "accelerationZ"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_move_forward_unit",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "앞으로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_unit_cm",
+              "value": "CM"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_move_backward_unit",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "뒤로 이동하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_unit_cm",
+              "value": "CM"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_turn_unit_in_place",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "으로 제자리 돌기"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_unit_deg",
+              "value": "DEG"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_turn_unit_with_radius_in_direction",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "으로 반지름 cm를 방향으로 돌기"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_unit_deg",
+              "value": "DEG"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "RADIUS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "TOWARD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_head",
+              "value": "HEAD"
+            },
+            {
+              "label": "Lang.Blocks.turtle_tail",
+              "value": "TAIL"
+            }
+          ]
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_pivot_around_wheel_unit_in_direction",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "바퀴 중심으로 방향으로 돌기"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_unit_deg",
+              "value": "DEG"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.turtle_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "TOWARD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_head",
+              "value": "HEAD"
+            },
+            {
+              "label": "Lang.Blocks.turtle_tail",
+              "value": "TAIL"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_change_wheels_by_left_right",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "왼쪽 바퀴 오른쪽 바퀴 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_set_wheels_to_left_right",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "왼쪽 바퀴 오른쪽 바퀴 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_change_wheel_by",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "바퀴 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_set_wheel_to",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "바퀴 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.turtle_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_follow_line",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "선을 따라가기"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_color_black",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_red",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_green",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_blue",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_any",
+              "value": "17"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_follow_line_until",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "검은색 선을 따라 까지 이동하기"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_color_red",
+              "value": "61"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_yellow",
+              "value": "62"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_green",
+              "value": "63"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_sky_blue",
+              "value": "64"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_blue",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_purple",
+              "value": "66"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_any",
+              "value": "67"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_follow_line_until_black",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "선을 따라 검은색까지 이동하기"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_color_red",
+              "value": "71"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_green",
+              "value": "73"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_blue",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_any",
+              "value": "77"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_cross_intersection",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "검은색 교차로 건너가기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_turn_at_intersection",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "검은색 교차로에서 으로 돌기"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_left",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.turtle_right",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.turtle_back",
+              "value": "50"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_set_following_speed_to",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "선 따라가기 속도를 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": "5",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_stop",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "정지하기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_set_head_led_to",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "머리 LED를 으로 정하기"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_color_red",
+              "value": "RED"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_orange",
+              "value": "ORANGE"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_yellow",
+              "value": "YELLOW"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_green",
+              "value": "GREEN"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_sky_blue",
+              "value": "CYAN"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_blue",
+              "value": "BLUE"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_violet",
+              "value": "VIOLET"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_purple",
+              "value": "MAGENTA"
+            },
+            {
+              "label": "Lang.Blocks.turtle_color_white",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_pick_head_led",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "turtle_pick_head_led"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_change_head_led_by_rgb",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "머리 LED를 R: G: B: 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_set_head_led_to_rgb",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "머리 LED를 R: G: B: (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_clear_head_led",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "머리 LED 끄기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_play_sound_times",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "소리 번 재생하기"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_sound_beep",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_random_beep",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_siren",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_engine",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_robot",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_march",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_birthday",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_dibidibidip",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_good_job",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_play_sound_times_until_done",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "소리 번 재생하고 기다리기"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_sound_beep",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_random_beep",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_siren",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_engine",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_robot",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_march",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_birthday",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_dibidibidip",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.turtle_sound_good_job",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_change_buzzer_by",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "버저 음을 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_set_buzzer_to",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "버저 음을 (으)로 정하기"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_clear_sound",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "소리 끄기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_play_note",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "음을 연주하기"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_note_c",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_c_sharp",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_d",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_d_sharp",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_e",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_f",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_f_sharp",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_g",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_g_sharp",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_a",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_a_sharp",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_b",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_play_note_for_beats",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "음을 박자 연주하기"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.turtle_note_c",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_c_sharp",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_d",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_d_sharp",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_e",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_f",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_f_sharp",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_g",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_g_sharp",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_a",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_a_sharp",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.turtle_note_b",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_rest_for_beats",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "박자 쉬기"
+      },
+      "params": [
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.25"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_change_tempo_by",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "연주 속도를 만큼 바꾸기"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    },
+    {
+      "type": "turtle_set_tempo_to",
+      "category": "hardware_turtle",
+      "label": {
+        "ko": "연주 속도를 BPM으로 정하기"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "turtle"
+      }
+    }
+  ]
+}

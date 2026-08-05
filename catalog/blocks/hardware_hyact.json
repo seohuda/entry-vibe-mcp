@@ -1,0 +1,811 @@
+{
+  "category": "hardware_hyact",
+  "blocks": [
+    {
+      "type": "hyact_xylobot_list_aixs_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_list_aixs_block"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.hyact_xylobot_list_aixs_1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_aixs_2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_aixs_3",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_list_aixs_ex_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_list_aixs_ex_block"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.hyact_xylobot_list_aixs_1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_aixs_2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_aixs_3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_aixs_all",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_list_note_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_list_note_block"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.hyact_xylobot_list_octave_4_do",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_octave_4_re",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_octave_4_mi",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_octave_4_fa",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_octave_4_sol",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_octave_4_la",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_octave_4_si",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_octave_5_do",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_list_movement_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_list_movement_block"
+      },
+      "params": [
+        {
+          "key": "MOVEMENT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.hyact_xylobot_list_movement_on",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_movement_twinkle",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_movement_standby",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_list_toggle_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_list_toggle_block"
+      },
+      "params": [
+        {
+          "key": "MOVEMENT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.hyact_xylobot_list_toggle_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_toggle_on",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_list_color_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_list_color_block"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_orange",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_yellow",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_green",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_blue",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_navy",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_purple",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_color_white",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_list_position_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_list_position_block"
+      },
+      "params": [
+        {
+          "key": "POSITION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.hyact_xylobot_list_position_ready",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.hyact_xylobot_list_position_target",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_get_now_aixs_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_get_now_aixs_block"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_aixs_block",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_get_note_aixs_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_get_note_aixs_block"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_note_block",
+            "params": []
+          }
+        },
+        {
+          "key": "AXIS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_aixs_block",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_led_movement_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_led_movement_block"
+      },
+      "params": [
+        {
+          "key": "MOVEMENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_movement_block",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_led_color_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_led_color_block"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_color_block",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_led_rgb_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_led_rgb_block"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_torque_toggle_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_torque_toggle_block"
+      },
+      "params": [
+        {
+          "key": "AIXS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_aixs_ex_block",
+            "params": []
+          }
+        },
+        {
+          "key": "TOGGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_toggle_block",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_position_single_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_position_single_block"
+      },
+      "params": [
+        {
+          "key": "AIXS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_aixs_block",
+            "params": []
+          }
+        },
+        {
+          "key": "POSITION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_position_many_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_position_many_block"
+      },
+      "params": [
+        {
+          "key": "POSITION1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "POSITION2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "POSITION3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_speed_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_speed_block"
+      },
+      "params": [
+        {
+          "key": "AIXS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_aixs_ex_block",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_torque_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_torque_block"
+      },
+      "params": [
+        {
+          "key": "AIXS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_aixs_ex_block",
+            "params": []
+          }
+        },
+        {
+          "key": "TORQUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_play_note_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_play_note_block"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_note_block",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_move_note_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_move_note_block"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_note_block",
+            "params": []
+          }
+        },
+        {
+          "key": "LOCATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "hyact_xylobot_list_position_block",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    },
+    {
+      "type": "hyact_xylobot_set_move_default_block",
+      "category": "hardware_hyact",
+      "label": {
+        "ko": "hyact_xylobot_set_move_default_block"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hyact_xylobot"
+      }
+    }
+  ]
+}

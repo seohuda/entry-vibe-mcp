@@ -1,0 +1,670 @@
+{
+  "category": "hardware_aiservo",
+  "blocks": [
+    {
+      "type": "aiservo_get_sensor_value",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_get_sensor_value"
+      },
+      "params": [
+        {
+          "key": "SIGNAL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.aiservo_pot1",
+              "value": "POT1"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_pot2",
+              "value": "POT2"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_pot3",
+              "value": "POT3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_get_cds_value",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_get_cds_value"
+      },
+      "params": [
+        {
+          "key": "SIGNAL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.aiservo_cds1",
+              "value": "CDS1"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_cds2",
+              "value": "CDS2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_servo",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.aiservo_joint_1",
+              "value": "SERVO1"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_joint_2",
+              "value": "SERVO2"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_joint_3",
+              "value": "SERVO3"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_joint_4",
+              "value": "SERVO3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_servo_lr",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_servo_lr"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.aiservo_left",
+              "value": "180"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_middle",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_right",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_servo_ud",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_servo_ud"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.aiservo_up",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_middle",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_down",
+              "value": "180"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_gripper",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_gripper"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.aiservo_open",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_middle",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_close",
+              "value": "180"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_basket",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_basket"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.aiservo_release",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_middle",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_pour",
+              "value": "180"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_save_pose",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_save_pose"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_load_pose",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_load_pose"
+      },
+      "params": [
+        {
+          "key": "ID",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_led_color",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_led_color"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1번",
+              "value": "0"
+            },
+            {
+              "label": "2번",
+              "value": "1"
+            },
+            {
+              "label": "모두",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": "#ff0000"
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_led_rgb",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_led_rgb"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1번",
+              "value": "0"
+            },
+            {
+              "label": "2번",
+              "value": "1"
+            },
+            {
+              "label": "모두",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_led_off",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_led_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_blue_led_onoff",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_blue_led_onoff"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.aiservo_on",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.aiservo_off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_blue_led_pwm",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_blue_led_pwm"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    },
+    {
+      "type": "aiservo_set_buzzer",
+      "category": "hardware_aiservo",
+      "label": {
+        "ko": "aiservo_set_buzzer"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "33"
+            },
+            {
+              "label": "레",
+              "value": "37"
+            },
+            {
+              "label": "미",
+              "value": "41"
+            },
+            {
+              "label": "파",
+              "value": "44"
+            },
+            {
+              "label": "솔",
+              "value": "49"
+            },
+            {
+              "label": "라",
+              "value": "55"
+            },
+            {
+              "label": "시",
+              "value": "62"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "aiservo"
+      }
+    }
+  ]
+}

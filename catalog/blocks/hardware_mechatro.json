@@ -1,0 +1,1239 @@
+{
+  "category": "hardware_mechatro",
+  "blocks": [
+    {
+      "type": "mechatro_event_rising_falling",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "mechatro_event_rising_falling"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "2",
+          "options": [
+            {
+              "label": "D2",
+              "value": "2"
+            },
+            {
+              "label": "D4",
+              "value": "4"
+            },
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D7",
+              "value": "7"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "EDGE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "참",
+              "value": "1"
+            },
+            {
+              "label": "거짓",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_get_digital",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "디지털 값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2",
+              "value": "2"
+            },
+            {
+              "label": "D4",
+              "value": "4"
+            },
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D7",
+              "value": "7"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            },
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_get_analog_judgement",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "mechatro_get_analog_judgement"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            },
+            {
+              "label": "A6",
+              "value": "20"
+            },
+            {
+              "label": "A7",
+              "value": "21"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "LESS",
+          "options": [
+            {
+              "label": "=",
+              "value": "EQUAL"
+            },
+            {
+              "label": "!=",
+              "value": "NOT_EQUAL"
+            },
+            {
+              "label": ">",
+              "value": "GREATER"
+            },
+            {
+              "label": "<",
+              "value": "LESS"
+            },
+            {
+              "label": "≥",
+              "value": "GREATER_OR_EQUAL"
+            },
+            {
+              "label": "≤",
+              "value": "LESS_OR_EQUAL"
+            }
+          ]
+        },
+        {
+          "key": "RIGHTHAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "512"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_get_sensor_value",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            },
+            {
+              "label": "A6",
+              "value": "20"
+            },
+            {
+              "label": "A7",
+              "value": "21"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_get_temperature",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "mechatro_get_temperature"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            },
+            {
+              "label": "A6",
+              "value": "20"
+            },
+            {
+              "label": "A7",
+              "value": "21"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_get_sensor_value_map",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "mechatro_set_get_sensor_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "mechatro_get_sensor_value",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_get_ultrasonic_value",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "초음파센서 Trig Echo 의 거리값 [cm]"
+      },
+      "params": [
+        {
+          "key": "TIRG",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2",
+              "value": "2"
+            },
+            {
+              "label": "D4",
+              "value": "4"
+            },
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D7",
+              "value": "7"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "ECHO",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2",
+              "value": "2"
+            },
+            {
+              "label": "D4",
+              "value": "4"
+            },
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D7",
+              "value": "7"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_digital",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "번"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2",
+              "value": "2"
+            },
+            {
+              "label": "D4",
+              "value": "4"
+            },
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D7",
+              "value": "7"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            },
+            {
+              "label": "A2",
+              "value": "16"
+            },
+            {
+              "label": "A3",
+              "value": "17"
+            },
+            {
+              "label": "A4",
+              "value": "18"
+            },
+            {
+              "label": "A5",
+              "value": "19"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_pwm",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "PWM을 %로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0~100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_tone_time",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "버저 음으로 초 연주"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D7",
+              "value": "7"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "1"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "2"
+            },
+            {
+              "label": "레",
+              "value": "3"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "4"
+            },
+            {
+              "label": "미",
+              "value": "5"
+            },
+            {
+              "label": "파",
+              "value": "6"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "7"
+            },
+            {
+              "label": "솔",
+              "value": "8"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "9"
+            },
+            {
+              "label": "라",
+              "value": "10"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "11"
+            },
+            {
+              "label": "시",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_tone",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "버저 음으로 연주"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D7",
+              "value": "7"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "1"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "2"
+            },
+            {
+              "label": "레",
+              "value": "3"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "4"
+            },
+            {
+              "label": "미",
+              "value": "5"
+            },
+            {
+              "label": "파",
+              "value": "6"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "7"
+            },
+            {
+              "label": "솔",
+              "value": "8"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "9"
+            },
+            {
+              "label": "라",
+              "value": "10"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "11"
+            },
+            {
+              "label": "시",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_dc_motor",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "모터 속도 로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "MA",
+              "value": "3"
+            },
+            {
+              "label": "MB",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "-100 ~ 100 사이값"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_get_dc_motor_current",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "모터 사용전류값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "MA",
+              "value": "14"
+            },
+            {
+              "label": "MB",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_servo_position",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "서보모터 위치 :도로 옮기기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2",
+              "value": "2"
+            },
+            {
+              "label": "D5",
+              "value": "5"
+            },
+            {
+              "label": "D6",
+              "value": "6"
+            },
+            {
+              "label": "D10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0~180"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1~255"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_servo_positions",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "mechatro_set_servo_positions"
+      },
+      "params": [
+        {
+          "key": "P0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0~180"
+            ]
+          }
+        },
+        {
+          "key": "P1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0~180"
+            ]
+          }
+        },
+        {
+          "key": "P2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0~180"
+            ]
+          }
+        },
+        {
+          "key": "P3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0~180"
+            ]
+          }
+        },
+        {
+          "key": "RUNTIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.5~12.0"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_servo_speed",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "서보모터 속도 : 1초당 도로 정하기"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "D2",
+              "value": "22"
+            },
+            {
+              "label": "D5",
+              "value": "24"
+            },
+            {
+              "label": "D6",
+              "value": "25"
+            },
+            {
+              "label": "D10",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1~255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    },
+    {
+      "type": "mechatro_set_blue_pw",
+      "category": "hardware_mechatro",
+      "label": {
+        "ko": "블루투스 비밀번호 : 로 정하기"
+      },
+      "params": [
+        {
+          "key": "PW1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "PW2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "PW3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "PW4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": {
+            "type": "Indicator",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "mechatro"
+      }
+    }
+  ]
+}

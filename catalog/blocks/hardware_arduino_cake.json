@@ -1,0 +1,349 @@
+{
+  "category": "hardware_arduino_cake",
+  "blocks": [
+    {
+      "type": "arduino_cake_analog_list",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "pinA1",
+              "value": "2"
+            },
+            {
+              "label": "pinA2",
+              "value": "3"
+            },
+            {
+              "label": "pinA3",
+              "value": "6"
+            },
+            {
+              "label": "pinA4",
+              "value": "7"
+            },
+            {
+              "label": "pinB1",
+              "value": "0"
+            },
+            {
+              "label": "pinB2",
+              "value": "1"
+            },
+            {
+              "label": "pinSD",
+              "value": "4"
+            },
+            {
+              "label": "pinSC",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_digital_list",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_digital_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "pinBD",
+              "value": "10"
+            },
+            {
+              "label": "pinA1",
+              "value": "16"
+            },
+            {
+              "label": "pinA2",
+              "value": "17"
+            },
+            {
+              "label": "pinB1",
+              "value": "14"
+            },
+            {
+              "label": "pinB2",
+              "value": "15"
+            },
+            {
+              "label": "pinB3",
+              "value": "2"
+            },
+            {
+              "label": "pinB4",
+              "value": "9"
+            },
+            {
+              "label": "pinC1",
+              "value": "3"
+            },
+            {
+              "label": "pinC2",
+              "value": "12"
+            },
+            {
+              "label": "pinC3",
+              "value": "11"
+            },
+            {
+              "label": "pinC4",
+              "value": "13"
+            },
+            {
+              "label": "pinC5",
+              "value": "5"
+            },
+            {
+              "label": "pinC6",
+              "value": "4"
+            },
+            {
+              "label": "pinC7",
+              "value": "6"
+            },
+            {
+              "label": "pinC8",
+              "value": "7"
+            },
+            {
+              "label": "pinSD",
+              "value": "18"
+            },
+            {
+              "label": "pinSC",
+              "value": "19"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_pwm_list",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_pwm_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "pinBD",
+              "value": "10"
+            },
+            {
+              "label": "pinB4",
+              "value": "9"
+            },
+            {
+              "label": "pinC1",
+              "value": "3"
+            },
+            {
+              "label": "pinC3",
+              "value": "11"
+            },
+            {
+              "label": "pinC5",
+              "value": "5"
+            },
+            {
+              "label": "pinC6",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_buz_list",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_buz_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "pinBD",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_get_analog_value",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_get_analog_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_get_analog_value_map",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_get_analog_value_map"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_get_ultrasonic_value",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_get_ultrasonic_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_get_digital",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_get_digital"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_toggle_led",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_toggle_led"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_digital_pwm",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_digital_pwm"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_set_tone",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_set_tone"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    },
+    {
+      "type": "arduino_cake_set_servo",
+      "category": "hardware_arduino_cake",
+      "label": {
+        "ko": "arduino_cake_set_servo"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoCake"
+      }
+    }
+  ]
+}

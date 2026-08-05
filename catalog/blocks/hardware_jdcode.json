@@ -1,0 +1,510 @@
+{
+  "category": "hardware_jdcode",
+  "blocks": [
+    {
+      "type": "jdcode_takeoff",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_takeoff"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_landing",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_landing"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_altitude",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_altitude"
+      },
+      "params": [
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_throttle",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_throttle"
+      },
+      "params": [
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_velocity",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_velocity"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.jdcode_dir_front",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.jdcode_dir_back",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.jdcode_dir_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.jdcode_dir_left",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_distance",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_distance"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.jdcode_dir_front",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.jdcode_dir_back",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.jdcode_dir_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.jdcode_dir_left",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_degree",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_degree"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계방향",
+              "value": "0"
+            },
+            {
+              "label": "반시계방향",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_emergency",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_emergency"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_connect",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_connect"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_ready",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_ready"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_battery",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_battery"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_dronealt",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_dronealt"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_gyrox",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_gyrox"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_gyroy",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_gyroy"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_posx",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_posx"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_posy",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_posy"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_led",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_led"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_tune",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_tune"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_motor",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_motor"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽위",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽아래",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽위",
+              "value": "0"
+            },
+            {
+              "label": "오른쪽아래",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "POWER",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_joystick",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_joystick"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    },
+    {
+      "type": "jdcode_button",
+      "category": "hardware_jdcode",
+      "label": {
+        "ko": "jdcode_button"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "JDCode"
+      }
+    }
+  ]
+}

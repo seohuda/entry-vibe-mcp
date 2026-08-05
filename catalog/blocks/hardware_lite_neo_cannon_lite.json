@@ -1,0 +1,980 @@
+{
+  "category": "hardware_lite_neo_cannon_lite",
+  "blocks": [
+    {
+      "type": "neocannonlite_get_vibe_value",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_get_vibe_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_tone_list",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_tone_value",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neocannonlite_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_octave_list",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_set_tone",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_set_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neocannonlite_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neocannonlite_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_motor_state",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_motor_state"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽으로",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽으로",
+              "value": "3"
+            },
+            {
+              "label": "뒤로",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_motor_state_secs",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_motor_state_secs"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽으로",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽으로",
+              "value": "3"
+            },
+            {
+              "label": "뒤로",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_motor_stop",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_motor_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_shoot_reload",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_shoot_reload"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_shoot_reload_secs",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_shoot_reload_secs"
+      },
+      "params": [
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_shoot_catch",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_shoot_catch"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_shoot_shooting",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_shoot_shooting"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_shoot_stop",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_shoot_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_angle_state",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_angle_state"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "STOP",
+              "value": "0"
+            },
+            {
+              "label": "UP",
+              "value": "1"
+            },
+            {
+              "label": "DOWN",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_angle_state_secs",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_angle_state_secs"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "UP",
+              "value": "1"
+            },
+            {
+              "label": "DOWN",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_rgb_led_select_state",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_rgb_led_select_state"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "BLUE",
+              "value": "0"
+            },
+            {
+              "label": "RED",
+              "value": "1"
+            },
+            {
+              "label": "GREEN",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OFF",
+              "value": "0"
+            },
+            {
+              "label": "ON",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_rgb_led_select_pwm",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_rgb_led_select_pwm"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "BLUE",
+              "value": "0"
+            },
+            {
+              "label": "RED",
+              "value": "1"
+            },
+            {
+              "label": "GREEN",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "POWER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_rgb_led_color_picker",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_rgb_led_color_picker"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": "#0000FF"
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_rgb_led_pwm",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_rgb_led_pwm"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_rgb_led_off",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_rgb_led_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_neopixel_color_picker",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_neopixel_color_picker"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_neopixel",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_neopixel"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_neopixel_color_picker_all_on",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_neopixel_color_picker_all_on"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_neopixel_all_on",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_neopixel_all_on"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    },
+    {
+      "type": "neocannonlite_neopixel_all_off",
+      "category": "hardware_lite_neo_cannon_lite",
+      "label": {
+        "ko": "neocannonlite_neopixel_all_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "진동센서"
+      }
+    }
+  ]
+}

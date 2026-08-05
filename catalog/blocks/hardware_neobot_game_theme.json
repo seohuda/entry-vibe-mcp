@@ -1,0 +1,814 @@
+{
+  "category": "hardware_neobot_game_theme",
+  "blocks": [
+    {
+      "type": "neobot_gyro_value",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_gyro_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_axis_x",
+              "value": "GyroX"
+            },
+            {
+              "label": "Lang.Blocks.neobot_axis_y",
+              "value": "GyroY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_joystick_value",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_joystick_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_axis_x",
+              "value": "JoystickX"
+            },
+            {
+              "label": "Lang.Blocks.neobot_axis_y",
+              "value": "JoystickY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_crash_value",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_crash_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_random_value",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_random_value"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_axis_x",
+              "value": "X"
+            },
+            {
+              "label": "Lang.Blocks.neobot_axis_y",
+              "value": "Y"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_judge_joystick_move",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_judge_joystick_move"
+      },
+      "params": [
+        {
+          "key": "MOVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_joystick_move_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_move_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_move_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_move_4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_judge_joystick_direction",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_judge_joystick_direction"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_joystick_dir_right",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_dir_left",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_dir_up",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_dir_down",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_judge_button",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_judge_button"
+      },
+      "params": [
+        {
+          "key": "BTN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_button_a",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_button_b",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_button_c",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "get_gyro_degree",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "get_gyro_degree"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_degree_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_15",
+              "value": "15"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_45",
+              "value": "45"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_55",
+              "value": "55"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_65",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_75",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_85",
+              "value": "85"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_95",
+              "value": "95"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_105",
+              "value": "105"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_110",
+              "value": "110"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_115",
+              "value": "115"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_120",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_125",
+              "value": "125"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_130",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_135",
+              "value": "135"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_140",
+              "value": "140"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_145",
+              "value": "145"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_150",
+              "value": "150"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_155",
+              "value": "155"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_160",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_165",
+              "value": "165"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_170",
+              "value": "170"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_175",
+              "value": "175"
+            },
+            {
+              "label": "Lang.Blocks.neobot_degree_180",
+              "value": "180"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "get_number_type1",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "get_number_type1"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "30",
+              "value": "30"
+            },
+            {
+              "label": "40",
+              "value": "40"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "70",
+              "value": "70"
+            },
+            {
+              "label": "80",
+              "value": "80"
+            },
+            {
+              "label": "90",
+              "value": "90"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "get_number_type2",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "get_number_type2"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "30",
+              "value": "30"
+            },
+            {
+              "label": "40",
+              "value": "40"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "70",
+              "value": "70"
+            },
+            {
+              "label": "80",
+              "value": "80"
+            },
+            {
+              "label": "90",
+              "value": "90"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_judge_gyro_direction_angle",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_judge_gyro_direction_angle"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_gyro_dir_left",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_gyro_dir_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_gyro_dir_front",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_gyro_dir_rear",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_judge_coord",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_judge_coord"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_joystick_x",
+              "value": "X"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_y",
+              "value": "Y"
+            }
+          ]
+        },
+        {
+          "key": "COMPARE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_compare_left_bigger",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neobot_compare_equal",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neobot_compare_right_bigger",
+              "value": "<"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_judge_crash",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_judge_crash"
+      },
+      "params": [
+        {
+          "key": "COMPARE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_compare_left_bigger",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neobot_compare_equal",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neobot_compare_right_bigger",
+              "value": "<"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_number_type2",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "get_move_method",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "get_move_method"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_realtime",
+              "value": "Realtime"
+            },
+            {
+              "label": "Lang.Blocks.neobot_from_distance",
+              "value": "Distance"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_locate",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_locate"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_joystick",
+              "value": "Joystick"
+            },
+            {
+              "label": "Lang.Blocks.neobot_gyro",
+              "value": "Gyro"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_x",
+              "value": "JX"
+            },
+            {
+              "label": "Lang.Blocks.neobot_joystick_y",
+              "value": "JY"
+            },
+            {
+              "label": "Lang.Blocks.neobot_gyro_x",
+              "value": "GX"
+            },
+            {
+              "label": "Lang.Blocks.neobot_gyro_y",
+              "value": "GY"
+            }
+          ]
+        },
+        {
+          "key": "METHOD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_move_method",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    },
+    {
+      "type": "neobot_look",
+      "category": "hardware_neobot_game_theme",
+      "label": {
+        "ko": "neobot_look"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_joystick_coord",
+              "value": "Joystick"
+            },
+            {
+              "label": "Lang.Blocks.neobot_gyro_coord",
+              "value": "Gyro"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_game_theme"
+      }
+    }
+  ]
+}

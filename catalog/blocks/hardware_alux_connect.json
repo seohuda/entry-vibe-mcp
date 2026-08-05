@@ -1,0 +1,2561 @@
+{
+  "category": "hardware_alux_connect",
+  "blocks": [
+    {
+      "type": "connect_dropdown_remote",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_remote"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "R_1",
+              "value": "1"
+            },
+            {
+              "label": "R_2",
+              "value": "2"
+            },
+            {
+              "label": "R_3",
+              "value": "3"
+            },
+            {
+              "label": "R_4",
+              "value": "4"
+            },
+            {
+              "label": "R_5",
+              "value": "5"
+            },
+            {
+              "label": "R_6",
+              "value": "6"
+            },
+            {
+              "label": "R_7",
+              "value": "7"
+            },
+            {
+              "label": "R_8",
+              "value": "8"
+            },
+            {
+              "label": "R_L1",
+              "value": "9"
+            },
+            {
+              "label": "R_L2",
+              "value": "10"
+            },
+            {
+              "label": "R_R1",
+              "value": "11"
+            },
+            {
+              "label": "R_R2",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_digital",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_digital"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "FEA1",
+              "value": "5"
+            },
+            {
+              "label": "FEA2",
+              "value": "6"
+            },
+            {
+              "label": "FEA3",
+              "value": "7"
+            },
+            {
+              "label": "FEA4",
+              "value": "8"
+            },
+            {
+              "label": "REA1",
+              "value": "9"
+            },
+            {
+              "label": "REA2",
+              "value": "10"
+            },
+            {
+              "label": "REA3",
+              "value": "11"
+            },
+            {
+              "label": "REA4",
+              "value": "12"
+            },
+            {
+              "label": "BEA1",
+              "value": "13"
+            },
+            {
+              "label": "BEA2",
+              "value": "14"
+            },
+            {
+              "label": "BEA3",
+              "value": "15"
+            },
+            {
+              "label": "BEA4",
+              "value": "16"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_analog",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_analog"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "AA1",
+              "value": "1"
+            },
+            {
+              "label": "AA2",
+              "value": "2"
+            },
+            {
+              "label": "AA3",
+              "value": "3"
+            },
+            {
+              "label": "AA4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_sensor_1",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_sensor_1"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_switch",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_infrared",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.item_magnetic",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.item_rotation",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.item_color",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.item_acceleration",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.item_ultrasonic",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.item_heart_rate",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.item_illuminance",
+              "value": "9"
+            },
+            {
+              "label": "Lang.template.item_sound",
+              "value": "10"
+            },
+            {
+              "label": "Lang.template.item_tilt",
+              "value": "11"
+            },
+            {
+              "label": "Lang.template.item_pressure",
+              "value": "12"
+            },
+            {
+              "label": "Lang.template.item_multi_touch",
+              "value": "13"
+            },
+            {
+              "label": "Lang.template.item_compass",
+              "value": "14"
+            },
+            {
+              "label": "Lang.template.item_3acceleration",
+              "value": "15"
+            },
+            {
+              "label": "Lang.template.item_multi_switch",
+              "value": "16"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_sensor_2",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_sensor_2"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_infinite_rotation",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_compass",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_color_1",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_color_1"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_color_green",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.item_color_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.item_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.item_color_black",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.item_color_white",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_color_2",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_color_2"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_color_green",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.item_color_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.item_color_cyan",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.item_color_magenta",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.item_color_yellow",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.item_color_white",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_sensor_transfer",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_sensor_transfer"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_value",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_angle",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.item_absolute_angle",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.item_number_of_rotations",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_key",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_key_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_key_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.item_key_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.item_key_4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.item_key_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.item_key_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.item_key_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.item_key_8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_dc_1_all",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_dc_1_all"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "DC1"
+            },
+            {
+              "label": "2",
+              "value": "DC2"
+            },
+            {
+              "label": "3",
+              "value": "DC3"
+            },
+            {
+              "label": "4",
+              "value": "DC4"
+            },
+            {
+              "label": "1,2",
+              "value": "DC5"
+            },
+            {
+              "label": "3,4",
+              "value": "DC6"
+            },
+            {
+              "label": "Lang.template.item_all",
+              "value": "DC7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_servo_1_4",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_servo_1_4"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "Servo1"
+            },
+            {
+              "label": "2",
+              "value": "Servo2"
+            },
+            {
+              "label": "3",
+              "value": "Servo3"
+            },
+            {
+              "label": "4",
+              "value": "Servo4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_velocity",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_velocity"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "-5",
+              "value": "-5"
+            },
+            {
+              "label": "-10",
+              "value": "-10"
+            },
+            {
+              "label": "-15",
+              "value": "-15"
+            },
+            {
+              "label": "-20",
+              "value": "-20"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_servo_position",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_servo_position"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "40",
+              "value": "40"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "80",
+              "value": "80"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_port_1_4",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_port_1_4"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "B1"
+            },
+            {
+              "label": "2",
+              "value": "B2"
+            },
+            {
+              "label": "3",
+              "value": "B3"
+            },
+            {
+              "label": "4",
+              "value": "B4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_on_off",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_on_off"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_note",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_note"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_note_whole",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_note_half",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.item_note_quarter",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.item_note_eighth",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.item_note_sixteenth",
+              "value": "16"
+            },
+            {
+              "label": "Lang.template.item_note_thirty_second",
+              "value": "32"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_time_1",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_time_1"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0.1",
+              "value": "0.1"
+            },
+            {
+              "label": "0.3",
+              "value": "0.3"
+            },
+            {
+              "label": "0.5",
+              "value": "0.5"
+            },
+            {
+              "label": "0.7",
+              "value": "0.7"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_time_2",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_time_2"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0.1",
+              "value": "0.1"
+            },
+            {
+              "label": "0.3",
+              "value": "0.3"
+            },
+            {
+              "label": "0.5",
+              "value": "0.5"
+            },
+            {
+              "label": "0.7",
+              "value": "0.7"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_time_3",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_time_3"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0.05",
+              "value": "0.05"
+            },
+            {
+              "label": "0.1",
+              "value": "0.1"
+            },
+            {
+              "label": "0.2",
+              "value": "0.2"
+            },
+            {
+              "label": "0.5",
+              "value": "0.5"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_pitch",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_pitch"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "DropdownExtra",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "36"
+            },
+            {
+              "label": "",
+              "value": "37"
+            },
+            {
+              "label": "",
+              "value": "38"
+            },
+            {
+              "label": "",
+              "value": "39"
+            },
+            {
+              "label": "",
+              "value": "40"
+            },
+            {
+              "label": "",
+              "value": "41"
+            },
+            {
+              "label": "",
+              "value": "42"
+            },
+            {
+              "label": "",
+              "value": "43"
+            },
+            {
+              "label": "",
+              "value": "44"
+            },
+            {
+              "label": "",
+              "value": "45"
+            },
+            {
+              "label": "",
+              "value": "46"
+            },
+            {
+              "label": "",
+              "value": "47"
+            },
+            {
+              "label": "",
+              "value": "48"
+            },
+            {
+              "label": "",
+              "value": "49"
+            },
+            {
+              "label": "",
+              "value": "50"
+            },
+            {
+              "label": "",
+              "value": "51"
+            },
+            {
+              "label": "",
+              "value": "52"
+            },
+            {
+              "label": "",
+              "value": "53"
+            },
+            {
+              "label": "",
+              "value": "54"
+            },
+            {
+              "label": "",
+              "value": "55"
+            },
+            {
+              "label": "",
+              "value": "56"
+            },
+            {
+              "label": "",
+              "value": "57"
+            },
+            {
+              "label": "",
+              "value": "58"
+            },
+            {
+              "label": "",
+              "value": "59"
+            },
+            {
+              "label": "",
+              "value": "60"
+            },
+            {
+              "label": "",
+              "value": "61"
+            },
+            {
+              "label": "",
+              "value": "62"
+            },
+            {
+              "label": "",
+              "value": "63"
+            },
+            {
+              "label": "",
+              "value": "64"
+            },
+            {
+              "label": "",
+              "value": "65"
+            },
+            {
+              "label": "",
+              "value": "66"
+            },
+            {
+              "label": "",
+              "value": "67"
+            },
+            {
+              "label": "",
+              "value": "68"
+            },
+            {
+              "label": "",
+              "value": "69"
+            },
+            {
+              "label": "",
+              "value": "70"
+            },
+            {
+              "label": "",
+              "value": "71"
+            },
+            {
+              "label": "",
+              "value": "72"
+            },
+            {
+              "label": "",
+              "value": "73"
+            },
+            {
+              "label": "",
+              "value": "74"
+            },
+            {
+              "label": "",
+              "value": "75"
+            },
+            {
+              "label": "",
+              "value": "76"
+            },
+            {
+              "label": "",
+              "value": "77"
+            },
+            {
+              "label": "",
+              "value": "78"
+            },
+            {
+              "label": "",
+              "value": "79"
+            },
+            {
+              "label": "",
+              "value": "80"
+            },
+            {
+              "label": "",
+              "value": "81"
+            },
+            {
+              "label": "",
+              "value": "82"
+            },
+            {
+              "label": "",
+              "value": "83"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dropdown_melody",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dropdown_melody"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.item_melody_start",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.item_melody_end",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.item_melody_level_up",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.item_melody_level_down",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_remote_event",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_remote_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_remote",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_digital_event",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_digital_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_digital",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_senser_setting",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_senser_setting"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_sensor_1",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_remote_input",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_remote_input"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_remote",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_digital_input",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_digital_input"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_digital",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_analog_input",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_analog_input"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_3axis_acceler_x",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_3axis_acceler_x"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_3axis_acceler_y",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_3axis_acceler_y"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_3axis_acceler_z",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_3axis_acceler_z"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_value_mapping",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_value_mapping"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              255
+            ]
+          }
+        },
+        {
+          "key": "PARAM3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "PARAM4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_color_input_b",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_color_input_b"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "connect_dropdown_color_1",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_color_input_r",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_color_input_r"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_infinite_setting",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_infinite_setting"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_sensor_2",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_infinite_mm_diameter",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_infinite_mm_diameter"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_sensor_2",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              53.5
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_infinite_transform_input",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_infinite_transform_input"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_sensor_2",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_sensor_transfer",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_multi_sensor",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_multi_sensor"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_multi_switch",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_multi_switch"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_analog",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_eeprom_buffset",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_eeprom_buffset"
+      },
+      "params": [
+        {
+          "key": "ADDRESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_eeprom_address_value",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_eeprom_address_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_dc_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_dc_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_dc_1_all",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_velocity",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_servo_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_servo_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_servo_1_4",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_servo_position",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_s_dc_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_s_dc_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_servo_1_4",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_velocity",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_port_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_port_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_port_1_4",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_on_off",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_melody_note_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_melody_note_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_pitch",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_note",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_melody_sec_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_melody_sec_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_pitch",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_time_1",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_melody_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_melody_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_pitch",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_value_sec_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_value_sec_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              35391
+            ]
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_time_1",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_value_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_value_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              35391
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_melody_track_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_melody_track_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_melody",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_time_2",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_melody_off",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_melody_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_rgbled_on_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_rgbled_on_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_servo_1_4",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_color_2",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_rgbled_off_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_rgbled_off_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_servo_1_4",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_rgbled_flashing_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_rgbled_flashing_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_servo_1_4",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_color_2",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_time_3",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_rgbled_dimming_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_rgbled_dimming_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_servo_1_4",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connect_dropdown_color_2",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_fnd_output",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_fnd_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_fnd_off",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_fnd_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    },
+    {
+      "type": "connect_eeprom_write",
+      "category": "hardware_alux_connect",
+      "label": {
+        "ko": "connect_eeprom_write"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ProboConnect"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1444 @@
+{
+  "category": "hardware_thinkboard",
+  "blocks": [
+    {
+      "type": "thinkboard_digital_port_onoff_list",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_port_onoff_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_buzzer_onoff",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_buzzer_onoff"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_port_onoff_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_list_digital_octave",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_list_digital_octave"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_list_digital_tone",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_list_digital_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_set_digital_buzzer",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_set_digital_buzzer"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_list_digital_octave",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_list_digital_tone",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_port_list",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_port_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN/OUT1",
+              "value": "0"
+            },
+            {
+              "label": "IN/OUT2",
+              "value": "1"
+            },
+            {
+              "label": "IN/OUT3",
+              "value": "2"
+            },
+            {
+              "label": "IN/OUT4",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_2_port_list",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_2_port_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN/OUT2",
+              "value": "1"
+            },
+            {
+              "label": "IN/OUT4",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_motor_direction_list",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_motor_direction_list"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계",
+              "value": "0"
+            },
+            {
+              "label": "반시계",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_digital_value",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_digital_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_port_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_button_pressed",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_button_pressed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_port_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_analog_port_list",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_analog_port_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "INPUT1",
+              "value": "0"
+            },
+            {
+              "label": "INPUT2",
+              "value": "1"
+            },
+            {
+              "label": "INPUT3",
+              "value": "2"
+            },
+            {
+              "label": "INPUT4",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_analog_port_name",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_analog_port_name"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "소리",
+              "value": "0"
+            },
+            {
+              "label": "빛",
+              "value": "1"
+            },
+            {
+              "label": "가변저항",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_analog_value",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_analog_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "TYPE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_analog_port_name",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_analog_mapping",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_analog_mapping"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_analog_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "TYPE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_analog_port_name",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_distsensor_value",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_distsensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_analog_port_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_analog_ir_mapping",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_analog_ir_mapping"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_analog_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_usonic_value",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_usonic_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_port_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_analog_usonic_mapping",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_analog_usonic_mapping"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "400"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_analog_temp_name",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_analog_temp_name"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "습도",
+              "value": "0"
+            },
+            {
+              "label": "온도(화씨)",
+              "value": "1"
+            },
+            {
+              "label": "온도(섭씨)",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_analog_temp_value",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_analog_temp_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "TYPE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_analog_temp_name",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_Laser_onoff",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_Laser_onoff"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_port_onoff_list",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_analog_rgb_color_list",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_analog_rgb_color_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "흰",
+              "value": "1"
+            },
+            {
+              "label": "빨간",
+              "value": "2"
+            },
+            {
+              "label": "연두",
+              "value": "3"
+            },
+            {
+              "label": "파란",
+              "value": "4"
+            },
+            {
+              "label": "노란",
+              "value": "5"
+            },
+            {
+              "label": "하늘",
+              "value": "6"
+            },
+            {
+              "label": "보라",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_rgbled_onoff",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_rgbled_onoff"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_analog_rgb_color_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_rgbled_off",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_rgbled_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_set_rgbled_value",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_set_rgbled_value"
+      },
+      "params": [
+        {
+          "key": "VALUE0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_rgbled_percent",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_rgbled_percent"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_digital_servo_value",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_digital_servo_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_set_servo_angle",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_set_servo_angle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_set_servo_direction",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_set_servo_direction"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DIR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_motor_direction_list",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_set_servo_stop",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_set_servo_stop"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_get_digital_servo_360_value",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_get_digital_servo_360_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_set_servo_360_angle",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_set_servo_360_angle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_set_servo_360_stop",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_set_servo_360_stop"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_set_motor_direction",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_set_motor_direction"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DIR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_motor_direction_list",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_set_motor_speed",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_set_motor_speed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    },
+    {
+      "type": "thinkboard_digital_motor_stop",
+      "category": "hardware_thinkboard",
+      "label": {
+        "ko": "thinkboard_digital_motor_stop"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "thinkboard_digital_2_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "ThinkBoard"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2312 @@
+{
+  "category": "hardware_hexaboard",
+  "blocks": [
+    {
+      "type": "makeitnow_input_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_input_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_input_subtitle",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_input_subtitle"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_digitalRead_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_digitalRead_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "32",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_analogRead_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_analogRead_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "32",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_weather_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_weather_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_weather",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_weather"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "온도",
+              "value": "1"
+            },
+            {
+              "label": "습도",
+              "value": "0"
+            },
+            {
+              "label": "기압",
+              "value": "2"
+            },
+            {
+              "label": "고도",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_line_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_line_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_line",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_line"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_dust_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_dust_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_dust",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_dust"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "32",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "PM",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "PM1.0",
+              "value": "0"
+            },
+            {
+              "label": "PM2.5",
+              "value": "1"
+            },
+            {
+              "label": "PM10",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_weight_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_weight_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_weight",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_weight"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "SCK",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_button_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_button_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_buttonRead_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_buttonRead_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "35",
+          "options": [
+            {
+              "label": "A",
+              "value": "35"
+            },
+            {
+              "label": "B",
+              "value": "34"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_watertemperature_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_watertemperature_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_watertemperature",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_watertemperature"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "0"
+            },
+            {
+              "label": "PIN2",
+              "value": "1"
+            },
+            {
+              "label": "PIN3",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_waterquality_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_waterquality_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_waterquality",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_waterquality"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "0"
+            },
+            {
+              "label": "PIN2",
+              "value": "1"
+            },
+            {
+              "label": "PIN3",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sound_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sound_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_sound",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_sound"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "32",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_pressure_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_pressure_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_pressure",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_pressure"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "압력",
+              "value": "0"
+            },
+            {
+              "label": "온도",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_dht11_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_dht11_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_dht11",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_dht11"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "32",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "D1",
+          "options": [
+            {
+              "label": "온도",
+              "value": "D1"
+            },
+            {
+              "label": "습도",
+              "value": "D0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_co2_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_co2_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_co2",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_co2"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "이산화탄소",
+              "value": "0"
+            },
+            {
+              "label": "온도",
+              "value": "1"
+            },
+            {
+              "label": "습도",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_gyro_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_gyro_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_gyro_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_gyro_hexa"
+      },
+      "params": [
+        {
+          "key": "GYRO",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "좌우",
+              "value": "0"
+            },
+            {
+              "label": "상하",
+              "value": "1"
+            },
+            {
+              "label": "앞뒤",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_gyro_direction_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_gyro_direction_hexa"
+      },
+      "params": [
+        {
+          "key": "GYRO",
+          "type": "Dropdown",
+          "defaultValue": "HEXABOARD.gyro_command.LEFT",
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "HEXABOARD.gyro_command.LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "HEXABOARD.gyro_command.RIGHT"
+            },
+            {
+              "label": "앞쪽",
+              "value": "HEXABOARD.gyro_command.FRONT"
+            },
+            {
+              "label": "뒤쪽",
+              "value": "HEXABOARD.gyro_command.BACK"
+            },
+            {
+              "label": "앞면",
+              "value": "HEXABOARD.gyro_command.UP"
+            },
+            {
+              "label": "뒷면",
+              "value": "HEXABOARD.gyro_command.DOWN"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_gyro_intensity_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_gyro_intensity_hexa"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_ultrasonic_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_ultrasonic_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_ultrasonic",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_ultrasonic"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "32",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_color_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_color_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_getColor_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_getColor_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "3",
+          "options": [
+            {
+              "label": "빨강",
+              "value": "0"
+            },
+            {
+              "label": "초록",
+              "value": "1"
+            },
+            {
+              "label": "파랑",
+              "value": "2"
+            },
+            {
+              "label": "밝기(lux)",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_get_RGBColor_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_get_RGBColor_hexa"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "빨강",
+              "value": "0"
+            },
+            {
+              "label": "초록",
+              "value": "1"
+            },
+            {
+              "label": "파랑",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_touch_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_touch_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_sensor_touch",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_sensor_touch"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "32",
+          "options": [
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_output_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_output_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_output_subtitle",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_output_subtitle"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_digitalwrite_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_digitalwrite_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "보드LED",
+              "value": "2"
+            },
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "낮은",
+              "value": "0"
+            },
+            {
+              "label": "높은",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_pwm_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_pwm_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "보드LED",
+              "value": "2"
+            },
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_buzzer_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_buzzer_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_buzzer_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_buzzer_hexa"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "SCALE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "도",
+              "value": "32.7032"
+            },
+            {
+              "label": "도#",
+              "value": "34.6478"
+            },
+            {
+              "label": "레",
+              "value": "36.7081"
+            },
+            {
+              "label": "레#",
+              "value": "38.8909"
+            },
+            {
+              "label": "미",
+              "value": "41.2034"
+            },
+            {
+              "label": "파",
+              "value": "43.6535"
+            },
+            {
+              "label": "파#",
+              "value": "46.2493"
+            },
+            {
+              "label": "솔",
+              "value": "48.9994"
+            },
+            {
+              "label": "솔#",
+              "value": "51.9130"
+            },
+            {
+              "label": "라",
+              "value": "55.0000"
+            },
+            {
+              "label": "라#",
+              "value": "58.2705"
+            },
+            {
+              "label": "시",
+              "value": "61.7354"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_buzzer_off_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_buzzer_off_hexa"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_motor_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_motor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_motor_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_motor_hexa"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": "A",
+          "options": [
+            {
+              "label": "Motor_A",
+              "value": "A"
+            },
+            {
+              "label": "Motor_B",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_servomotor_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_servomotor_hexa"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": "A",
+          "options": [
+            {
+              "label": "Servo_A",
+              "value": "A"
+            },
+            {
+              "label": "Servo_B",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_vehicle_led_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_vehicle_led_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_vehicle_led",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_vehicle_led"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "19",
+          "options": [
+            {
+              "label": "왼쪽 LED",
+              "value": "19"
+            },
+            {
+              "label": "오른쪽 LED",
+              "value": "18"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "낮은",
+              "value": "0"
+            },
+            {
+              "label": "높은",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_neo_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_neo_title"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_neo_messageslide_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_neo_messageslide_hexa"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "HEXABOARD"
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "hexaboard_show_custom_image",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "hexaboard_show_custom_image"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Led2",
+          "defaultValue": "HEXABOARD.defaultLed"
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_neoled_onecolorset_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_neoled_onecolorset_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "23",
+          "options": [
+            {
+              "label": "HEXABOARD",
+              "value": "23"
+            },
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "25"
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "6",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_neoled_allColorSet_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_neoled_allColorSet_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "23",
+          "options": [
+            {
+              "label": "HEXABOARD",
+              "value": "23"
+            },
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "LEDNUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "25"
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_neoled_oneColorSelect_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_neoled_oneColorSelect_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "23",
+          "options": [
+            {
+              "label": "HEXABOARD",
+              "value": "23"
+            },
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "25"
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "20"
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_neoled_AllColorSelect_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_neoled_AllColorSelect_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "23",
+          "options": [
+            {
+              "label": "HEXABOARD",
+              "value": "23"
+            },
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "25"
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "20"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_neoled_AllOff_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_neoled_AllOff_hexa"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": "23",
+          "options": [
+            {
+              "label": "HEXABOARD",
+              "value": "23"
+            },
+            {
+              "label": "PIN1",
+              "value": "32"
+            },
+            {
+              "label": "PIN2",
+              "value": "33"
+            },
+            {
+              "label": "PIN3",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "25"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_oled_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_oled_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_display_oled_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_display_oled_hexa"
+      },
+      "params": [
+        {
+          "key": "POSITION_X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "POSITION_Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "HEXABOARD"
+        },
+        {
+          "key": "FONTSIZE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_oled_print_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_oled_print_hexa"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_oled_clear_hexa",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_oled_clear_hexa"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_percentage_conversion_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_percentage_conversion_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_percentage_conversion",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_percentage_conversion"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 0
+        },
+        {
+          "key": "MIN",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": 0
+        },
+        {
+          "key": "MAX",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": 4095
+        },
+        {
+          "key": "NEW_MIN",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": 0
+        },
+        {
+          "key": "NEW_MAX",
+          "type": "Block",
+          "accept": "number",
+          "defaultValue": 100
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    },
+    {
+      "type": "makeitnow_wireless_title",
+      "category": "hardware_hexaboard",
+      "label": {
+        "ko": "makeitnow_wireless_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "hexaboard"
+      }
+    }
+  ]
+}

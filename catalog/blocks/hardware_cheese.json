@@ -1,0 +1,6194 @@
+{
+  "category": "hardware_cheese",
+  "blocks": [
+    {
+      "type": "cheese_value",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_value"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_x",
+              "value": "ACCELERATION_X"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_y",
+              "value": "ACCELERATION_Y"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_z",
+              "value": "ACCELERATION_Z"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_signal_strength_dbm",
+              "value": "SIGNAL_STRENGTH"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_boolean",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_boolean"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_logo_sky_direction",
+              "value": "TILT_NOT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_logo_earth_direction",
+              "value": "TILT_FLIP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_power_switch_sky_direction",
+              "value": "TILT_LEFT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_power_switch_earth_direction",
+              "value": "TILT_RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_port_s_sky_direction",
+              "value": "TILT_FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_port_s_earth_direction",
+              "value": "TILT_BACKWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tap",
+              "value": "TAP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_free_fall",
+              "value": "FREE_FALL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_normal",
+              "value": "BATTERY_NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_low",
+              "value": "BATTERY_LOW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_empty",
+              "value": "BATTERY_EMPTY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_play_sound_times",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_play_sound_times"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "삐",
+              "value": "BEEP"
+            },
+            {
+              "label": "무작위 삐",
+              "value": "RANDOM_BEEP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_noise",
+              "value": "NOISE"
+            },
+            {
+              "label": "사이렌",
+              "value": "SIREN"
+            },
+            {
+              "label": "엔진",
+              "value": "ENGINE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_chop",
+              "value": "CHOP"
+            },
+            {
+              "label": "로봇",
+              "value": "ROBOT"
+            },
+            {
+              "label": "디비디비딥",
+              "value": "DIBIDIBIDIP"
+            },
+            {
+              "label": "잘 했어요",
+              "value": "GOOD_JOB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_happy",
+              "value": "HAPPY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_angry",
+              "value": "ANGRY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_sad",
+              "value": "SAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_sleep",
+              "value": "SLEEP"
+            },
+            {
+              "label": "행진",
+              "value": "MARCH"
+            },
+            {
+              "label": "생일",
+              "value": "BIRTHDAY"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_play_sound_times_until_done",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_play_sound_times_until_done"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "삐",
+              "value": "BEEP"
+            },
+            {
+              "label": "무작위 삐",
+              "value": "RANDOM_BEEP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_noise",
+              "value": "NOISE"
+            },
+            {
+              "label": "사이렌",
+              "value": "SIREN"
+            },
+            {
+              "label": "엔진",
+              "value": "ENGINE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_chop",
+              "value": "CHOP"
+            },
+            {
+              "label": "로봇",
+              "value": "ROBOT"
+            },
+            {
+              "label": "디비디비딥",
+              "value": "DIBIDIBIDIP"
+            },
+            {
+              "label": "잘 했어요",
+              "value": "GOOD_JOB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_happy",
+              "value": "HAPPY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_angry",
+              "value": "ANGRY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_sad",
+              "value": "SAD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sound_sleep",
+              "value": "SLEEP"
+            },
+            {
+              "label": "행진",
+              "value": "MARCH"
+            },
+            {
+              "label": "생일",
+              "value": "BIRTHDAY"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_change_buzzer_by",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_change_buzzer_by"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_buzzer_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_buzzer_to"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_clear_sound",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_clear_sound"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_play_note",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_play_note"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_note_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_c_sharp",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d_sharp",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f_sharp",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g_sharp",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a_sharp",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_play_note_for",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_play_note_for"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_note_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_c_sharp",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d_sharp",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f_sharp",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g_sharp",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a_sharp",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_rest_for",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_rest_for"
+      },
+      "params": [
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.25"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_change_tempo_by",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_change_tempo_by"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_tempo_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_tempo_to"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_sound_port_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_sound_port_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_speaker_internal",
+              "value": "INTERNAL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_speaker_port_mab",
+              "value": "MAB"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_input_mode_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_input_mode_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_makey",
+              "value": "MAKEY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_button",
+              "value": "BUTTON"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_digital_pull_up",
+              "value": "DIGITAL_PULL_UP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_digital_pull_down",
+              "value": "DIGITAL_PULL_DOWN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_analog",
+              "value": "ANALOG"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_voltage",
+              "value": "VOLTAGE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_input_range_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_input_range_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        },
+        {
+          "key": "LOW1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "HIGH1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "LOW2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "HIGH2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "DECIMAL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_range_integer",
+              "value": "INTEGER"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_range_real",
+              "value": "REAL"
+            }
+          ]
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_three_input_ranges_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_three_input_ranges_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        },
+        {
+          "key": "LOW1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "MIDDLE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "127"
+            ]
+          }
+        },
+        {
+          "key": "HIGH1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "LOW2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "-100"
+            ]
+          }
+        },
+        {
+          "key": "MIDDLE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "HIGH2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "DECIMAL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_range_integer",
+              "value": "INTEGER"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_range_real",
+              "value": "REAL"
+            }
+          ]
+        },
+        {
+          "key": "8",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_analog_input",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_analog_input"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_digital_input",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_digital_input"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_button_state",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_button_state"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        },
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "클릭했는가",
+              "value": "CLICKED"
+            },
+            {
+              "label": "길게~눌렀는가",
+              "value": "LONG_PRESSED"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_pulse_mode_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_pulse_mode_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_pulse",
+              "value": "PULSE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_pulse_pull_up",
+              "value": "PULSE_PULL_UP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_pulse_pull_down",
+              "value": "PULSE_PULL_DOWN"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_pulse_input",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_pulse_input"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_digital_output_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_digital_output_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_port_high_current_mab",
+              "value": "MAB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_port_high_current_mcd",
+              "value": "MCD"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_change_pwm_output_by",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_change_pwm_output_by"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_pwm_output_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_pwm_output_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_change_servo_motor_angle_by",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_change_servo_motor_angle_by"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            },
+            {
+              "label": "Ma(-)b(+)c",
+              "value": "MABC"
+            },
+            {
+              "label": "Ma(-)b",
+              "value": "MAB"
+            },
+            {
+              "label": "Mc(-)d",
+              "value": "MCD"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_servo_motor_angle_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_servo_motor_angle_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            },
+            {
+              "label": "Ma(-)b(+)c",
+              "value": "MABC"
+            },
+            {
+              "label": "Ma(-)b",
+              "value": "MAB"
+            },
+            {
+              "label": "Mc(-)d",
+              "value": "MCD"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_turn_off_servo_motor",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_turn_off_servo_motor"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Sa",
+              "value": "SA"
+            },
+            {
+              "label": "Sb",
+              "value": "SB"
+            },
+            {
+              "label": "Sc",
+              "value": "SC"
+            },
+            {
+              "label": "La",
+              "value": "LA"
+            },
+            {
+              "label": "Lb",
+              "value": "LB"
+            },
+            {
+              "label": "Lc",
+              "value": "LC"
+            },
+            {
+              "label": "Ma(-)b(+)c",
+              "value": "MABC"
+            },
+            {
+              "label": "Ma(-)b",
+              "value": "MAB"
+            },
+            {
+              "label": "Mc(-)d",
+              "value": "MCD"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_change_dc_motor_velocity_by",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_change_dc_motor_velocity_by"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Mab",
+              "value": "MAB"
+            },
+            {
+              "label": "Mcd",
+              "value": "MCD"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_dc_motor_velocity_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_dc_motor_velocity_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Mab",
+              "value": "MAB"
+            },
+            {
+              "label": "Mcd",
+              "value": "MCD"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_stop_dc_motor",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_stop_dc_motor"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Mab",
+              "value": "MAB"
+            },
+            {
+              "label": "Mcd",
+              "value": "MCD"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_rotate_step_motor",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_rotate_step_motor"
+      },
+      "params": [
+        {
+          "key": "STEP",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_change_step_motor_velocity_by",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_change_step_motor_velocity_by"
+      },
+      "params": [
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_step_motor_velocity_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_step_motor_velocity_to"
+      },
+      "params": [
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_stop_off_step_motor",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_stop_off_step_motor"
+      },
+      "params": [
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_io_action_stop",
+              "value": "STOP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_action_turn_off",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_step_motor_mode_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_step_motor_mode_to"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_normal",
+              "value": "NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_io_mode_power",
+              "value": "POWER"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_step_count",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_step_count"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_led_to_color",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_led_to_color"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "L",
+              "value": "L"
+            },
+            {
+              "label": "S",
+              "value": "S"
+            }
+          ]
+        },
+        {
+          "key": "INTENSITY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_led_intensity_dark",
+              "value": "DARK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_intensity_normal",
+              "value": "NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_intensity_bright",
+              "value": "BRIGHT"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_pick_led_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_pick_led_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "L",
+              "value": "L"
+            },
+            {
+              "label": "S",
+              "value": "S"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_change_led_by_rgb",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_change_led_by_rgb"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "L",
+              "value": "L"
+            },
+            {
+              "label": "S",
+              "value": "S"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_setLed_to_rgb",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_setLed_to_rgb"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "L",
+              "value": "L"
+            },
+            {
+              "label": "S",
+              "value": "S"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_clear_led",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_clear_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "L",
+              "value": "L"
+            },
+            {
+              "label": "S",
+              "value": "S"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_led_type_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_led_type_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "L",
+              "value": "L"
+            },
+            {
+              "label": "S",
+              "value": "S"
+            }
+          ]
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_default",
+              "value": "DEFAULT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_crgb",
+              "value": "-RGB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_crbg",
+              "value": "-RBG"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_cgrb",
+              "value": "-GRB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_cgbr",
+              "value": "-GBR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_cbrg",
+              "value": "-BRG"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_cbgr",
+              "value": "-BGR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_argb",
+              "value": "+RGB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_arbg",
+              "value": "+RBG"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_agrb",
+              "value": "+GRB"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_agbr",
+              "value": "+GBR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_abrg",
+              "value": "+BRG"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_led_type_abgr",
+              "value": "+BGR"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_number_and_type_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_number_and_type_to"
+      },
+      "params": [
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "GRB",
+              "value": "GRB"
+            },
+            {
+              "label": "GRBW",
+              "value": "GRBW"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_all_leds_to_pattern",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_all_leds_to_pattern"
+      },
+      "params": [
+        {
+          "key": "PATTERN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_3_colors",
+              "value": "FILL_3_COLORS"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_6_colors",
+              "value": "FILL_6_COLORS"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_12_colors",
+              "value": "FILL_12_COLORS"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_red_green",
+              "value": "GRADIENT_RED_GREEN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_red_blue",
+              "value": "GRADIENT_RED_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_red_white",
+              "value": "GRADIENT_RED_WHITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_green_red",
+              "value": "GRADIENT_GREEN_RED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_green_blue",
+              "value": "GRADIENT_GREEN_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_green_white",
+              "value": "GRADIENT_GREEN_WHITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_blue_red",
+              "value": "GRADIENT_BLUE_RED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_blue_green",
+              "value": "GRADIENT_BLUE_GREEN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_blue_white",
+              "value": "GRADIENT_BLUE_WHITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_white_red",
+              "value": "GRADIENT_WHITE_RED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_white_green",
+              "value": "GRADIENT_WHITE_GREEN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_white_blue",
+              "value": "GRADIENT_WHITE_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_red_black",
+              "value": "GRADIENT_RED_BLACK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_green_black",
+              "value": "GRADIENT_GREEN_BLACK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_blue_black",
+              "value": "GRADIENT_BLUE_BLACK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_white_black",
+              "value": "GRADIENT_WHITE_BLACK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_black_red",
+              "value": "GRADIENT_BLACK_RED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_black_green",
+              "value": "GRADIENT_BLACK_GREEN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_black_blue",
+              "value": "GRADIENT_BLACK_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_black_white",
+              "value": "GRADIENT_BLACK_WHITE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_all_leds_to_color",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_all_leds_to_color"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_pick_all_leds_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_pick_all_leds_to"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_change_all_leds_by_rgb",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_change_all_leds_by_rgb"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_all_leds_to_rgb",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_all_leds_to_rgb"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_clear_all_leds",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_clear_all_leds"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_led_to_color",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_led_to_color"
+      },
+      "params": [
+        {
+          "key": "PIXEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_pick_led_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_pick_led_to"
+      },
+      "params": [
+        {
+          "key": "PIXEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_change_led_by_rgb",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_change_led_by_rgb"
+      },
+      "params": [
+        {
+          "key": "PIXEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_led_to_rgb",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_led_to_rgb"
+      },
+      "params": [
+        {
+          "key": "PIXEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_clear_led",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_clear_led"
+      },
+      "params": [
+        {
+          "key": "PIXEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_led_range_to_pattern",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_led_range_to_pattern"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "PATTERN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_3_colors",
+              "value": "FILL_3_COLORS"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_6_colors",
+              "value": "FILL_6_COLORS"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_12_colors",
+              "value": "FILL_12_COLORS"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_red_green",
+              "value": "GRADIENT_RED_GREEN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_red_blue",
+              "value": "GRADIENT_RED_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_red_white",
+              "value": "GRADIENT_RED_WHITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_green_red",
+              "value": "GRADIENT_GREEN_RED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_green_blue",
+              "value": "GRADIENT_GREEN_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_green_white",
+              "value": "GRADIENT_GREEN_WHITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_blue_red",
+              "value": "GRADIENT_BLUE_RED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_blue_green",
+              "value": "GRADIENT_BLUE_GREEN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_blue_white",
+              "value": "GRADIENT_BLUE_WHITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_white_red",
+              "value": "GRADIENT_WHITE_RED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_white_green",
+              "value": "GRADIENT_WHITE_GREEN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_white_blue",
+              "value": "GRADIENT_WHITE_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_red_black",
+              "value": "GRADIENT_RED_BLACK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_green_black",
+              "value": "GRADIENT_GREEN_BLACK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_blue_black",
+              "value": "GRADIENT_BLUE_BLACK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_white_black",
+              "value": "GRADIENT_WHITE_BLACK"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_black_red",
+              "value": "GRADIENT_BLACK_RED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_black_green",
+              "value": "GRADIENT_BLACK_GREEN"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_black_blue",
+              "value": "GRADIENT_BLACK_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_neopixel_black_white",
+              "value": "GRADIENT_BLACK_WHITE"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_led_range_to_color",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_led_range_to_color"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "INCREMENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_pick_led_range_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_pick_led_range_to"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "INCREMENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_change_led_range_by_rgb",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_change_led_range_by_rgb"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "INCREMENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_led_range_to_rgb",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_led_range_to_rgb"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "INCREMENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_clear_led_range",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_clear_led_range"
+      },
+      "params": [
+        {
+          "key": "START",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "END",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "INCREMENT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_shift",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_shift"
+      },
+      "params": [
+        {
+          "key": "BIT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_rotate",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_rotate"
+      },
+      "params": [
+        {
+          "key": "BIT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_change_brightness_by",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_change_brightness_by"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_neopixel_set_brightness_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_neopixel_set_brightness_to"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_write_serial",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_write_serial"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_serial_string",
+              "value": "STRING"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_string_line",
+              "value": "STRING_LINE"
+            }
+          ]
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "abc123"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_read_serial_until",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_read_serial_until"
+      },
+      "params": [
+        {
+          "key": "DELIMITER",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_serial_all",
+              "value": "ALL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_until_comma",
+              "value": "COMMA"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_until_colon",
+              "value": "COLON"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_until_dollar",
+              "value": "DOLLAR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_until_sharp",
+              "value": "SHARP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_until_new_line",
+              "value": "NEW_LINE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_serial_port_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_serial_port_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_serial_port_wa_rb",
+              "value": "WRITE_READ"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_port_ra_wb",
+              "value": "READ_WRITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_port_wa",
+              "value": "WRITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_serial_port_ra",
+              "value": "READ"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_set_serial_rate_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_set_serial_rate_to"
+      },
+      "params": [
+        {
+          "key": "BAUD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "9600",
+              "value": "9600"
+            },
+            {
+              "label": "14400",
+              "value": "14400"
+            },
+            {
+              "label": "19200",
+              "value": "19200"
+            },
+            {
+              "label": "28800",
+              "value": "28800"
+            },
+            {
+              "label": "38400",
+              "value": "38400"
+            },
+            {
+              "label": "57600",
+              "value": "57600"
+            },
+            {
+              "label": "76800",
+              "value": "76800"
+            },
+            {
+              "label": "115200",
+              "value": "115200"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_serial_input",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_serial_input"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_pid_start",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_pid_start"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_pid_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_11_1",
+              "value": "11-1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_11_2",
+              "value": "11-2"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_11_3",
+              "value": "11-3"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_12",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_13",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_14",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_16",
+              "value": "16"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_pid_set_range_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_pid_set_range_to"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_pid_x1",
+              "value": "X1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_y1",
+              "value": "Y1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_x2",
+              "value": "X2"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_y2",
+              "value": "Y2"
+            }
+          ]
+        },
+        {
+          "key": "LOW1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "HIGH1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "LOW2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "HIGH2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "DECIMAL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_range_integer",
+              "value": "INTEGER"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_range_real",
+              "value": "REAL"
+            }
+          ]
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_pid_set_three_ranges_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_pid_set_three_ranges_to"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_pid_x1",
+              "value": "X1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_y1",
+              "value": "Y1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_x2",
+              "value": "X2"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_y2",
+              "value": "Y2"
+            }
+          ]
+        },
+        {
+          "key": "LOW1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "MIDDLE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "127"
+            ]
+          }
+        },
+        {
+          "key": "HIGH1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "LOW2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "-100"
+            ]
+          }
+        },
+        {
+          "key": "MIDDLE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "HIGH2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "DECIMAL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_range_integer",
+              "value": "INTEGER"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_range_real",
+              "value": "REAL"
+            }
+          ]
+        },
+        {
+          "key": "8",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_pid_reset_encoder",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_pid_reset_encoder"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_pid_input",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_pid_input"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_pid_distance",
+              "value": "DISTANCE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_temperature",
+              "value": "TEMPERATURE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_humidity",
+              "value": "HUMIDITY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_x1",
+              "value": "X1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_y1",
+              "value": "Y1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_x2",
+              "value": "X2"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_y2",
+              "value": "Y2"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_button1",
+              "value": "BUTTON1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_button2",
+              "value": "BUTTON2"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_pid_encoder",
+              "value": "ENCODER"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_pid_button_state",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_pid_button_state"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "클릭했는가",
+              "value": "CLICKED"
+            },
+            {
+              "label": "길게~눌렀는가",
+              "value": "LONG_PRESSED"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_start",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_start"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_button",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_button"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_button_state",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_button_state"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "클릭했는가",
+              "value": "CLICKED"
+            },
+            {
+              "label": "길게~눌렀는가",
+              "value": "LONG_PRESSED"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_background_turn_on_xy",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_background_turn_on_xy"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_background_turn_off_xy",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_background_turn_off_xy"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_background_draw_shape_at_xy",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_background_draw_shape_at_xy"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "SHAPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_shape_square",
+              "value": "SQUARE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_triangle",
+              "value": "TRIANGLE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_diamond",
+              "value": "DIAMOND"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_circle",
+              "value": "CIRCLE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_x",
+              "value": "X"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_like",
+              "value": "LIKE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_dislike",
+              "value": "DISLIKE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_angry",
+              "value": "ANGRY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_open_mouth",
+              "value": "OPEN_MOUTH"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_close_mouth",
+              "value": "CLOSE_MOUTH"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_walk1",
+              "value": "WALK1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_walk2",
+              "value": "WALK2"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_heart",
+              "value": "HEART"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_star",
+              "value": "STAR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_airplane",
+              "value": "AIRPLANE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_puppy",
+              "value": "PUPPY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_butterfly",
+              "value": "BUTTERFLY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_quarter_note",
+              "value": "QUARTER_NOTE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_eighth_note",
+              "value": "EIGHTH_NOTE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_left_arrow",
+              "value": "LEFT_ARROW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_right_arrow",
+              "value": "RIGHT_ARROW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_up_arrow",
+              "value": "UP_ARROW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_down_arrow",
+              "value": "DOWN_ARRAY"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_background_draw_string_at_xy",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_background_draw_string_at_xy"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "abc123"
+            ]
+          }
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_background_draw_pattern_at_xy",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_background_draw_pattern_at_xy"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "PATTERN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10010"
+            ]
+          }
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_clear",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_clear"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_hat_background",
+              "value": "BACKGROUND"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_scroll_by_xy",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_scroll_by_xy"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_hat_background",
+              "value": "BACKGROUND"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_set_to_shape",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_set_to_shape"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "SHAPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_shape_square",
+              "value": "SQUARE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_triangle",
+              "value": "TRIANGLE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_diamond",
+              "value": "DIAMOND"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_circle",
+              "value": "CIRCLE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_x",
+              "value": "X"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_like",
+              "value": "LIKE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_dislike",
+              "value": "DISLIKE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_angry",
+              "value": "ANGRY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_open_mouth",
+              "value": "OPEN_MOUTH"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_close_mouth",
+              "value": "CLOSE_MOUTH"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_walk1",
+              "value": "WALK1"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_walk2",
+              "value": "WALK2"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_heart",
+              "value": "HEART"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_star",
+              "value": "STAR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_airplane",
+              "value": "AIRPLANE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_puppy",
+              "value": "PUPPY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_butterfly",
+              "value": "BUTTERFLY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_quarter_note",
+              "value": "QUARTER_NOTE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_eighth_note",
+              "value": "EIGHTH_NOTE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_left_arrow",
+              "value": "LEFT_ARROW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_right_arrow",
+              "value": "RIGHT_ARROW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_up_arrow",
+              "value": "UP_ARROW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_shape_down_arrow",
+              "value": "DOWN_ARRAY"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_set_to_string",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_set_to_string"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "abc123"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_set_to_pattern",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_set_to_pattern"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "PATTERN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10010"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_clear_show_hide",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_clear_show_hide"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_hat_clear",
+              "value": "CLEAR"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_show",
+              "value": "SHOW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_hide",
+              "value": "HIDE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_change_positions_by_xy",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_change_positions_by_xy"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_set_positions_to_xy",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_set_positions_to_xy"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_change_position_by_value",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_change_position_by_value"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "POSITION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x",
+              "value": "X"
+            },
+            {
+              "label": "y",
+              "value": "Y"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_set_position_to_value",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_set_position_to_value"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "POSITION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x",
+              "value": "X"
+            },
+            {
+              "label": "y",
+              "value": "Y"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_rotate",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_rotate"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_hat_clockwise",
+              "value": "CLOCKWISE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_counterclockwise",
+              "value": "COUNTERCLOCKWISE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_flip_in_direction",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_flip_in_direction"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_hat_left_right",
+              "value": "LEFT_RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_up_down",
+              "value": "UP_DOWN"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_stamp_to_background",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_stamp_to_background"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_position",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_position"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "POSITION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "x",
+              "value": "X"
+            },
+            {
+              "label": "y",
+              "value": "Y"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_touching_sprite",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_touching_sprite"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "TARGET",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_sprite_touching",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_sprite_touching"
+      },
+      "params": [
+        {
+          "key": "SPRITE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_hat_background",
+              "value": "BACKGROUND"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_other_sprite",
+              "value": "OTHER_SPRITE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_left_wall",
+              "value": "LEFT_WALL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_right_wall",
+              "value": "RIGHT_WALL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_top_wall",
+              "value": "TOP_WALL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_bottom_wall",
+              "value": "BOTTOM_WALL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_hat_any_wall",
+              "value": "ANY_WALL"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_change_brightness_by",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_change_brightness_by"
+      },
+      "params": [
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    },
+    {
+      "type": "cheese_hat010_set_brightness_to",
+      "category": "hardware_cheese",
+      "label": {
+        "ko": "cheese_hat010_set_brightness_to"
+      },
+      "params": [
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cheese"
+      }
+    }
+  ]
+}

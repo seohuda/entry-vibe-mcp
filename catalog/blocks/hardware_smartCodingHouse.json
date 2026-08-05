@@ -1,0 +1,435 @@
+{
+  "category": "hardware_smartCodingHouse",
+  "blocks": [
+    {
+      "type": "set_ultrasonic_input",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "set_ultrasonic_input"
+      },
+      "params": [
+        {
+          "key": "EXPECTED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가까움",
+              "value": "near"
+            },
+            {
+              "label": "멀음",
+              "value": "far"
+            }
+          ]
+        },
+        {
+          "key": "THRESHOLD",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "20"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "set_temp_hum_input",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "set_temp_hum_input"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "온도",
+              "value": "temperature"
+            },
+            {
+              "label": "습도",
+              "value": "humidity"
+            }
+          ]
+        },
+        {
+          "key": "EXPECTED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "덥다",
+              "value": "hot"
+            },
+            {
+              "label": "춥다",
+              "value": "cold"
+            },
+            {
+              "label": "습하다",
+              "value": "wet"
+            },
+            {
+              "label": "건조하다",
+              "value": "dry"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "set_light_input",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "set_light_input"
+      },
+      "params": [
+        {
+          "key": "EXPECTED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "어둡다",
+              "value": "dark"
+            },
+            {
+              "label": "밝다",
+              "value": "bright"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "set_ir_input",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "set_ir_input"
+      },
+      "params": [
+        {
+          "key": "EXPECTED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "움직임 있음",
+              "value": "move"
+            },
+            {
+              "label": "움직임 없음",
+              "value": "nomove"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "set_rain_input",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "set_rain_input"
+      },
+      "params": [
+        {
+          "key": "EXPECTED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빗물 있음",
+              "value": "rain"
+            },
+            {
+              "label": "빗물 없음",
+              "value": "norain"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "run_smart_mode",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "run_smart_mode"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "아침 루틴",
+              "value": "morning"
+            },
+            {
+              "label": "저녁 루틴",
+              "value": "evening"
+            },
+            {
+              "label": "비상 상황 모드",
+              "value": "emergency"
+            },
+            {
+              "label": "시험 공부 모드",
+              "value": "study"
+            },
+            {
+              "label": "생일 파티 모드",
+              "value": "party"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "auto_door",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "auto_door"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "open_door",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "open_door"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "close_door",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "close_door"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "run_ceiling_fan",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "run_ceiling_fan"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "ON",
+              "value": "on"
+            },
+            {
+              "label": "OFF",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "led_set_color",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "led_set_color"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1층 실외",
+              "value": "OUTDOOR1"
+            },
+            {
+              "label": "실내",
+              "value": "INDOOR"
+            },
+            {
+              "label": "2층 테라스",
+              "value": "TERRACE2"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    },
+    {
+      "type": "led_off",
+      "category": "hardware_smartCodingHouse",
+      "label": {
+        "ko": "led_off"
+      },
+      "params": [
+        {
+          "key": "LOCATION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "실내",
+              "value": "INDOOR"
+            },
+            {
+              "label": "1층 실외",
+              "value": "OUTDOOR1"
+            },
+            {
+              "label": "2층 테라스",
+              "value": "TERRACE2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "smartCodingHouse"
+      }
+    }
+  ]
+}

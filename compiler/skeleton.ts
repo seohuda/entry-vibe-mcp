@@ -13,6 +13,10 @@ export interface EntryProject {
   objects: Array<Record<string, unknown>>;
   expansionBlocks: string[];
   aiUtilizeBlocks: string[];
+  hardwareLiteBlocks?: string[];
+  /** Classic hardware module names Entry loads via entryModuleLoader. */
+  externalModules?: string[];
+  externalModulesLite?: string[];
   speed: number;
   messages?: Array<{ id: string; name: string }>;
   functions?: unknown[];
@@ -140,6 +144,9 @@ export function createStartProjectSkeleton(): EntryProject {
     ],
     expansionBlocks: [],
     aiUtilizeBlocks: [],
+    hardwareLiteBlocks: [],
+    externalModules: [],
+    externalModulesLite: [],
     speed: 60,
     messages: [],
     functions: [],

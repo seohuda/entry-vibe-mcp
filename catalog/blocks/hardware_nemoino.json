@@ -1,0 +1,288 @@
+{
+  "category": "hardware_nemoino",
+  "blocks": [
+    {
+      "type": "nemoino_get_named_sensor_value",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "nemoino_get_named_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "소리",
+              "value": "0"
+            },
+            {
+              "label": "빛",
+              "value": "1"
+            },
+            {
+              "label": "슬라이더",
+              "value": "2"
+            },
+            {
+              "label": "저항-A",
+              "value": "3"
+            },
+            {
+              "label": "저항-B",
+              "value": "4"
+            },
+            {
+              "label": "저항-C",
+              "value": "5"
+            },
+            {
+              "label": "저항-D",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_get_sound_status",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "nemoino_get_sound_status"
+      },
+      "params": [
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "소리큼",
+              "value": "GREAT"
+            },
+            {
+              "label": "소리작음",
+              "value": "SMALL"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_is_button_pressed",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "nemoino_is_button_pressed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "버튼누름",
+              "value": "4"
+            },
+            {
+              "label": "A연결됨",
+              "value": "17"
+            },
+            {
+              "label": "B연결됨",
+              "value": "18"
+            },
+            {
+              "label": "C연결됨",
+              "value": "19"
+            },
+            {
+              "label": "D연결됨",
+              "value": "20"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_get_accelerometer_direction",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "nemoino_get_accelerometer_direction"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 기울임",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽 기울임",
+              "value": "RIGHT"
+            },
+            {
+              "label": "위쪽 기울임",
+              "value": "FRONT"
+            },
+            {
+              "label": "아래쪽 기울임",
+              "value": "REAR"
+            },
+            {
+              "label": "뒤집힘",
+              "value": "REVERSE"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_get_accelerometer_value",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "nemoino_get_accelerometer_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X",
+              "value": "3"
+            },
+            {
+              "label": "Y",
+              "value": "4"
+            },
+            {
+              "label": "Z",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_get_number_sensor_value",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "아날로그 번 센서값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_get_digital_value",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "디지털 번 센서값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_toggle_led",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "디지털 번 핀"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_toggle_pwm",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "디지털 번 핀을 (으)로 정하기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    },
+    {
+      "type": "nemoino_convert_scale",
+      "category": "hardware_nemoino",
+      "label": {
+        "ko": "값의 범위를 ~ 에서 ~ (으)로 바꾼값"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "nemoino"
+      }
+    }
+  ]
+}

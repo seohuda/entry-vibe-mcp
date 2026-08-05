@@ -1,0 +1,1076 @@
+{
+  "category": "hardware_aidrone",
+  "blocks": [
+    {
+      "type": "aidrone_takeoff",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_takeoff"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_landing",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_landing"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_altitude",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_altitude"
+      },
+      "params": [
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_throttle",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_throttle"
+      },
+      "params": [
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_velocity",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_velocity"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.aidrone_dir_front",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.aidrone_dir_back",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.aidrone_dir_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.aidrone_dir_left",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_distance",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_distance"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.aidrone_dir_front",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.aidrone_dir_back",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.aidrone_dir_right",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.aidrone_dir_left",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_degree",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_degree"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계방향",
+              "value": "0"
+            },
+            {
+              "label": "반시계방향",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_emergency",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_emergency"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_connect",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_connect"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_ready",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_ready"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_battery",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_battery"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_dronealt",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_dronealt"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_gyrox",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_gyrox"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_gyroy",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_gyroy"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_posx",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_posx"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_posy",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_posy"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_led",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_tune",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_tune"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_motor",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_motor"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "모터 앞-왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "모터 뒤-왼쪽",
+              "value": "2"
+            },
+            {
+              "label": "모터 앞-오른쪽",
+              "value": "0"
+            },
+            {
+              "label": "모터 뒤-오른쪽",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "POWER",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_joystick",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_joystick"
+      },
+      "params": [
+        {
+          "key": "CHANNEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 좌우",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽 상하",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽 좌우",
+              "value": "3"
+            },
+            {
+              "label": "오른쪽 상하",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_button",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_button"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_detect_marker",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_detect_marker"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_marker_data",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_marker_data"
+      },
+      "params": [
+        {
+          "key": "DATA_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "마커ID",
+              "value": "id"
+            },
+            {
+              "label": "X좌표",
+              "value": "x"
+            },
+            {
+              "label": "Y좌표",
+              "value": "y"
+            },
+            {
+              "label": "거리(cm)",
+              "value": "dist"
+            },
+            {
+              "label": "크기(pixel)",
+              "value": "width"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_color_track_start",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_color_track_start"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "청록색(cyan)",
+              "value": "cyan"
+            },
+            {
+              "label": "자홍색(magenta)",
+              "value": "magenta"
+            },
+            {
+              "label": "노란색(yellow)",
+              "value": "yellow"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_color_track_stop",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_color_track_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_color_data",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_color_data"
+      },
+      "params": [
+        {
+          "key": "DATA_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "감지여부",
+              "value": "detected"
+            },
+            {
+              "label": "X좌표",
+              "value": "x"
+            },
+            {
+              "label": "Y좌표",
+              "value": "y"
+            },
+            {
+              "label": "가로크기",
+              "value": "width"
+            },
+            {
+              "label": "세로크기",
+              "value": "height"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_face_detect",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_face_detect"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_face_data",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_face_data"
+      },
+      "params": [
+        {
+          "key": "DATA_TYPE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "감지여부",
+              "value": "detected"
+            },
+            {
+              "label": "X좌표",
+              "value": "x"
+            },
+            {
+              "label": "Y좌표",
+              "value": "y"
+            },
+            {
+              "label": "가로크기",
+              "value": "width"
+            },
+            {
+              "label": "세로크기",
+              "value": "height"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_landmark",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_landmark"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "X좌표",
+              "value": "x"
+            },
+            {
+              "label": "Y좌표",
+              "value": "y"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_marker_detected",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_marker_detected"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_color_detected",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_color_detected"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_color_x",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_color_x"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_color_y",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_color_y"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_color_size",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_color_size"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_face_detected",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_face_detected"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_face_x",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_face_x"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_face_y",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_face_y"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    },
+    {
+      "type": "aidrone_get_face_size",
+      "category": "hardware_aidrone",
+      "label": {
+        "ko": "aidrone_get_face_size"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "AIDrone"
+      }
+    }
+  ]
+}

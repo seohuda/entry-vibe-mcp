@@ -1,0 +1,2399 @@
+{
+  "category": "hardware_hamster_s",
+  "blocks": [
+    {
+      "type": "hamster_s_hand_found",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_hand_found"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_boolean",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_boolean"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_tilt_forward",
+              "value": "TILT_FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_tilt_backward",
+              "value": "TILT_BACKWARD"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_tilt_left",
+              "value": "TILT_LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_tilt_right",
+              "value": "TILT_RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_tilt_flip",
+              "value": "TILT_FLIP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_tilt_not",
+              "value": "TILT_NOT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_tap",
+              "value": "TAP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_free_fall",
+              "value": "FREE_FALL"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_battery_normal",
+              "value": "BATTERY_NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_battery_low",
+              "value": "BATTERY_LOW"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_battery_empty",
+              "value": "BATTERY_EMPTY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_value",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_value"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_left_proximity",
+              "value": "LEFT_PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_right_proximity",
+              "value": "RIGHT_PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_left_floor",
+              "value": "LEFT_FLOOR"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_right_floor",
+              "value": "RIGHT_FLOOR"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_acceleration_x",
+              "value": "ACCELERATION_X"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_acceleration_y",
+              "value": "ACCELERATION_Y"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_acceleration_z",
+              "value": "ACCELERATION_Z"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_light",
+              "value": "LIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_temperature",
+              "value": "TEMPERATURE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_signal_strength",
+              "value": "SIGNAL_STRENGTH"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_input_a",
+              "value": "INPUT_A"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sensor_input_b",
+              "value": "INPUT_B"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_serial_input",
+              "value": "SERIAL_INPUT"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_move_forward_once",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_move_forward_once"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_turn_once",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_turn_once"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_move_forward_unit",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_move_forward_unit"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_unit_cm",
+              "value": "CM"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_move_backward_unit",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_move_backward_unit"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_unit_cm",
+              "value": "CM"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_turn_unit_in_place",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_turn_unit_in_place"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_unit_deg",
+              "value": "DEG"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_pivot_around_unit_in_direction",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_pivot_around_unit_in_direction"
+      },
+      "params": [
+        {
+          "key": "PART",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left_pen",
+              "value": "LEFT_PEN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right_pen",
+              "value": "RIGHT_PEN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_left_wheel",
+              "value": "LEFT_WHEEL"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right_wheel",
+              "value": "RIGHT_WHEEL"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_unit_deg",
+              "value": "DEG"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "TOWARD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_forward",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_backward",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_turn_unit_with_radius_in_direction",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_turn_unit_with_radius_in_direction"
+      },
+      "params": [
+        {
+          "key": "PART",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left_pen",
+              "value": "LEFT_PEN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right_pen",
+              "value": "RIGHT_PEN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_robot",
+              "value": "ROBOT"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_unit_deg",
+              "value": "DEG"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_sec",
+              "value": "SEC"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_unit_pulse",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "RADIUS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "TOWARD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_forward",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_backward",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_change_both_wheels_by",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_change_both_wheels_by"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_both_wheels_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_both_wheels_to"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_change_wheel_by",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_change_wheel_by"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_wheel_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_wheel_to"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "30"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_follow_line_using",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_follow_line_using"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_color_black",
+              "value": "BLACK"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_white",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_follow_line_until",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_follow_line_until"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_color_black",
+              "value": "BLACK"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_white",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_front",
+              "value": "FRONT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_rear",
+              "value": "REAR"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_following_speed_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_following_speed_to"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": "5",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_following_gain_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_following_gain_to"
+      },
+      "params": [
+        {
+          "key": "GAIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_gain_default",
+              "value": "DEFAULT"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_stop",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_led_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_led_to"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_color_red",
+              "value": "RED"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_orange",
+              "value": "ORANGE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_yellow",
+              "value": "YELLOW"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_green",
+              "value": "GREEN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_sky_blue",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_blue",
+              "value": "BLUE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_violet",
+              "value": "VIOLET"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_purple",
+              "value": "PURPLE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_color_white",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_pick_led",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_pick_led"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_change_led_by_rgb",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_change_led_by_rgb"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_led_to_rgb",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_led_to_rgb"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_clear_led",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_clear_led"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_right",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_both",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_play_sound_times",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_play_sound_times"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_sound_beep",
+              "value": "BEEP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_random_beep",
+              "value": "RANDOM_BEEP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_noise",
+              "value": "NOISE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_siren",
+              "value": "SIREN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_engine",
+              "value": "ENGINE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_chop",
+              "value": "CHOP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_robot",
+              "value": "ROBOT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_dibidibidip",
+              "value": "DIBIDIBIDIP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_good_job",
+              "value": "GOOD_JOB"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_happy",
+              "value": "HAPPY"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_angry",
+              "value": "ANGRY"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_sad",
+              "value": "SAD"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_sleep",
+              "value": "SLEEP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_march",
+              "value": "MARCH"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_birthday",
+              "value": "BIRTHDAY"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_play_sound_times_until_done",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_play_sound_times_until_done"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_sound_beep",
+              "value": "BEEP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_random_beep",
+              "value": "RANDOM_BEEP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_noise",
+              "value": "NOISE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_siren",
+              "value": "SIREN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_engine",
+              "value": "ENGINE"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_chop",
+              "value": "CHOP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_robot",
+              "value": "ROBOT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_dibidibidip",
+              "value": "DIBIDIBIDIP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_good_job",
+              "value": "GOOD_JOB"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_happy",
+              "value": "HAPPY"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_angry",
+              "value": "ANGRY"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_sad",
+              "value": "SAD"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_sleep",
+              "value": "SLEEP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_march",
+              "value": "MARCH"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_sound_birthday",
+              "value": "BIRTHDAY"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_change_buzzer_by",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_change_buzzer_by"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_buzzer_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_buzzer_to"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_clear_sound",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_clear_sound"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_play_note",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_play_note"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_note_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_c_sharp",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_d_sharp",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_f_sharp",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_g_sharp",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_a_sharp",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_play_note_for",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_play_note_for"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_note_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_c_sharp",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_d_sharp",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_f_sharp",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_g_sharp",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_a_sharp",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_note_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_rest_for",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_rest_for"
+      },
+      "params": [
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.25"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_change_tempo_by",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_change_tempo_by"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_tempo_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_tempo_to"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_port_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_port_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_port_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_port_b",
+              "value": "B"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_port_ab",
+              "value": "AB"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_analog_input",
+              "value": "ANALOG_INPUT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_digital_input",
+              "value": "DIGITAL_INPUT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_digital_input_pull_up",
+              "value": "DIGITAL_INPUT_PULL_UP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_digital_input_pull_down",
+              "value": "DIGITAL_INPUT_PULL_DOWN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_voltage_input",
+              "value": "VOLTAGE_INPUT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_servo_output",
+              "value": "SERVO_OUTPUT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_pwm_output",
+              "value": "PWM_OUTPUT"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_digital_output",
+              "value": "DIGITAL_OUTPUT"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_change_output_by",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_change_output_by"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_port_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_port_b",
+              "value": "B"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_port_ab",
+              "value": "AB"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_output_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_output_to"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_port_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_port_b",
+              "value": "B"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_port_ab",
+              "value": "AB"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_gripper",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_gripper"
+      },
+      "params": [
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_open_gripper",
+              "value": "OPEN"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_close_gripper",
+              "value": "CLOSE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_release_gripper",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_release_gripper"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_write_serial",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_write_serial"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_serial_string",
+              "value": "STRING"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_serial_string_line",
+              "value": "STRING_LINE"
+            }
+          ]
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "abc123"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_read_serial_until",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_read_serial_until"
+      },
+      "params": [
+        {
+          "key": "DELIMITER",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.hamster_s_serial_all",
+              "value": "ALL"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_serial_until_comma",
+              "value": "COMMA"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_serial_until_colon",
+              "value": "COLON"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_serial_until_dollar",
+              "value": "DOLLAR"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_serial_until_sharp",
+              "value": "SHARP"
+            },
+            {
+              "label": "Lang.Blocks.hamster_s_serial_until_new_line",
+              "value": "NEW_LINE"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    },
+    {
+      "type": "hamster_s_set_serial_rate_to",
+      "category": "hardware_hamster_s",
+      "label": {
+        "ko": "hamster_s_set_serial_rate_to"
+      },
+      "params": [
+        {
+          "key": "BAUD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "9600",
+              "value": "9600"
+            },
+            {
+              "label": "14400",
+              "value": "14400"
+            },
+            {
+              "label": "19200",
+              "value": "19200"
+            },
+            {
+              "label": "28800",
+              "value": "28800"
+            },
+            {
+              "label": "38400",
+              "value": "38400"
+            },
+            {
+              "label": "57600",
+              "value": "57600"
+            },
+            {
+              "label": "76800",
+              "value": "76800"
+            },
+            {
+              "label": "115200",
+              "value": "115200"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "hamsterS"
+      }
+    }
+  ]
+}

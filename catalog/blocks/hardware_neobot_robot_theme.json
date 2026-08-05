@@ -1,0 +1,1687 @@
+{
+  "category": "hardware_neobot_robot_theme",
+  "blocks": [
+    {
+      "type": "neobot_rb_port_value",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_port_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_4",
+              "value": "IN4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_top",
+              "value": "TOP"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_bottom",
+              "value": "BOTTOM"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_ir_sensor_value",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_ir_sensor_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_light_sensor_value",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_light_sensor_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_sound_sensor_value",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_sound_sensor_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_top_sensor_value",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_top_sensor_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_bottom_sensor_value",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_bottom_sensor_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_speed",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_speed"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "MAX",
+              "value": "+100"
+            },
+            {
+              "label": "+100",
+              "value": "+99"
+            },
+            {
+              "label": "+90",
+              "value": "+90"
+            },
+            {
+              "label": "+80",
+              "value": "+80"
+            },
+            {
+              "label": "+70",
+              "value": "+70"
+            },
+            {
+              "label": "+60",
+              "value": "+60"
+            },
+            {
+              "label": "+50",
+              "value": "+50"
+            },
+            {
+              "label": "+40",
+              "value": "+40"
+            },
+            {
+              "label": "+30",
+              "value": "+30"
+            },
+            {
+              "label": "+20",
+              "value": "+20"
+            },
+            {
+              "label": "+10",
+              "value": "+10"
+            },
+            {
+              "label": "-10",
+              "value": "-10"
+            },
+            {
+              "label": "-20",
+              "value": "-20"
+            },
+            {
+              "label": "-30",
+              "value": "-30"
+            },
+            {
+              "label": "-40",
+              "value": "-40"
+            },
+            {
+              "label": "-50",
+              "value": "-50"
+            },
+            {
+              "label": "-60",
+              "value": "-60"
+            },
+            {
+              "label": "-70",
+              "value": "-70"
+            },
+            {
+              "label": "-80",
+              "value": "-80"
+            },
+            {
+              "label": "-90",
+              "value": "-90"
+            },
+            {
+              "label": "-100",
+              "value": "-100"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_speed2",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_speed2"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "100",
+              "value": "99"
+            },
+            {
+              "label": "90",
+              "value": "90"
+            },
+            {
+              "label": "80",
+              "value": "80"
+            },
+            {
+              "label": "70",
+              "value": "70"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "40",
+              "value": "40"
+            },
+            {
+              "label": "30",
+              "value": "30"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_time",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_time"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_time2",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_time2"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_motor_type1",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_motor_type1"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_both",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_left",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_right",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_speed",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_time",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_motor_type2",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_motor_type2"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_dir_front",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_dir_rear",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_dir_left",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_dir_right",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_dir_stand_left",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_dir_stand_right",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_speed2",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_motor_type3",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_motor_type3"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_both",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_left",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_right",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_port_value",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_motor_type_select",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_motor_type_select"
+      },
+      "params": [
+        {
+          "key": "MOVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_move_forward",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_move_backward",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_move_left",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_move_right",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_motor_type_stop",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_motor_type_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_motor_stop",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_motor_stop"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_both",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_left",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_motor_right",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_led",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_led"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "10%",
+              "value": "10"
+            },
+            {
+              "label": "20%",
+              "value": "20"
+            },
+            {
+              "label": "30%",
+              "value": "30"
+            },
+            {
+              "label": "40%",
+              "value": "40"
+            },
+            {
+              "label": "50%",
+              "value": "50"
+            },
+            {
+              "label": "60%",
+              "value": "60"
+            },
+            {
+              "label": "70%",
+              "value": "70"
+            },
+            {
+              "label": "80%",
+              "value": "80"
+            },
+            {
+              "label": "90%",
+              "value": "90"
+            },
+            {
+              "label": "100%",
+              "value": "100"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_surface",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_surface"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_top_face",
+              "value": "OUT1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_bottom_face",
+              "value": "OUT2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_led_on_type1",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_led_on_type1"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_led",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_led_on_type2",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_led_on_type2"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_led",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_time2",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_led_off",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_led_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_led_on_type3",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_led_on_type3"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_led",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_led_on_type4",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_led_on_type4"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_led",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_time2",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_led_off_type1",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_led_off_type1"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_output_type1",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_output_type1"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 100
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_ir_decision",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_ir_decision"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_light_decision",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_light_decision"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_sound_decision",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_sound_decision"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_top_decision",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_top_decision"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_bottom_decision",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_bottom_decision"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_port_decision",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_port_decision"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "IN1",
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_4",
+              "value": "IN4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_top",
+              "value": "TOP"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_port_bottom",
+              "value": "BOTTOM"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "10"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_remote_decision",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_remote_decision"
+      },
+      "params": [
+        {
+          "key": "KEY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_a",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_b",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_c",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_d",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_1",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_2",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_3",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_4",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_up",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_down",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_left",
+              "value": "14"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_remote_btn_right",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_servo_init",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_servo_init"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_servo_turn_type1",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_servo_turn_type1"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_servo_dir_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_servo_dir_2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 180
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_servo_turn_type2",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_servo_turn_type2"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 180
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_servo_turn_type4",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_servo_turn_type4"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "LEVEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "100%",
+              "value": "0"
+            },
+            {
+              "label": "90%",
+              "value": "1"
+            },
+            {
+              "label": "80%",
+              "value": "2"
+            },
+            {
+              "label": "70%",
+              "value": "3"
+            },
+            {
+              "label": "60%",
+              "value": "4"
+            },
+            {
+              "label": "50%",
+              "value": "5"
+            },
+            {
+              "label": "40%",
+              "value": "6"
+            },
+            {
+              "label": "30%",
+              "value": "7"
+            },
+            {
+              "label": "20%",
+              "value": "8"
+            },
+            {
+              "label": "10%",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_servo_turn_type5",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_servo_turn_type5"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_rb_servo_dir_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_rb_servo_dir_2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "LEVEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "100%",
+              "value": "0"
+            },
+            {
+              "label": "90%",
+              "value": "1"
+            },
+            {
+              "label": "80%",
+              "value": "2"
+            },
+            {
+              "label": "70%",
+              "value": "3"
+            },
+            {
+              "label": "60%",
+              "value": "4"
+            },
+            {
+              "label": "50%",
+              "value": "5"
+            },
+            {
+              "label": "40%",
+              "value": "6"
+            },
+            {
+              "label": "30%",
+              "value": "7"
+            },
+            {
+              "label": "20%",
+              "value": "8"
+            },
+            {
+              "label": "10%",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_servo_mode_manual",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_servo_mode_manual"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    },
+    {
+      "type": "neobot_rb_servo_stop",
+      "category": "hardware_neobot_robot_theme",
+      "label": {
+        "ko": "neobot_rb_servo_stop"
+      },
+      "params": [
+        {
+          "key": "SURFACE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neobot_rb_surface",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_robot_theme"
+      }
+    }
+  ]
+}

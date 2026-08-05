@@ -1,0 +1,2715 @@
+{
+  "category": "hardware_lite_alux_connect_lite",
+  "blocks": [
+    {
+      "type": "connectlite_dropdown_remote_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_remote_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "R_1",
+              "value": "1"
+            },
+            {
+              "label": "R_2",
+              "value": "2"
+            },
+            {
+              "label": "R_3",
+              "value": "3"
+            },
+            {
+              "label": "R_4",
+              "value": "4"
+            },
+            {
+              "label": "R_5",
+              "value": "5"
+            },
+            {
+              "label": "R_6",
+              "value": "6"
+            },
+            {
+              "label": "R_7",
+              "value": "7"
+            },
+            {
+              "label": "R_8",
+              "value": "8"
+            },
+            {
+              "label": "R_L1",
+              "value": "9"
+            },
+            {
+              "label": "R_L2",
+              "value": "10"
+            },
+            {
+              "label": "R_R1",
+              "value": "11"
+            },
+            {
+              "label": "R_R2",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_digital_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_digital_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "FEA1",
+              "value": "5"
+            },
+            {
+              "label": "FEA2",
+              "value": "6"
+            },
+            {
+              "label": "FEA3",
+              "value": "7"
+            },
+            {
+              "label": "FEA4",
+              "value": "8"
+            },
+            {
+              "label": "REA1",
+              "value": "9"
+            },
+            {
+              "label": "REA2",
+              "value": "10"
+            },
+            {
+              "label": "REA3",
+              "value": "11"
+            },
+            {
+              "label": "REA4",
+              "value": "12"
+            },
+            {
+              "label": "BEA1",
+              "value": "13"
+            },
+            {
+              "label": "BEA2",
+              "value": "14"
+            },
+            {
+              "label": "BEA3",
+              "value": "15"
+            },
+            {
+              "label": "BEA4",
+              "value": "16"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_analog_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_analog_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "AA1",
+              "value": "1"
+            },
+            {
+              "label": "AA2",
+              "value": "2"
+            },
+            {
+              "label": "AA3",
+              "value": "3"
+            },
+            {
+              "label": "AA4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_setting_sensor_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_setting_sensor_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_switch",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_infrared",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.connectlite_item_magnetic",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.connectlite_item_rotation",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.connectlite_item_acceleration",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.connectlite_item_ultrasonic",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.connectlite_item_heart_rate",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.connectlite_item_illuminance",
+              "value": "9"
+            },
+            {
+              "label": "Lang.template.connectlite_item_sound",
+              "value": "10"
+            },
+            {
+              "label": "Lang.template.connectlite_item_tilt",
+              "value": "11"
+            },
+            {
+              "label": "Lang.template.connectlite_item_pressure",
+              "value": "12"
+            },
+            {
+              "label": "Lang.template.connectlite_item_multi_touch",
+              "value": "13"
+            },
+            {
+              "label": "Lang.template.connectlite_item_compass",
+              "value": "14"
+            },
+            {
+              "label": "Lang.template.connectlite_item_tri_acceleration",
+              "value": "15"
+            },
+            {
+              "label": "Lang.template.connectlite_item_multi_switch",
+              "value": "16"
+            },
+            {
+              "label": "Lang.template.connectlite_item_extension_input",
+              "value": "17"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_inNcom_sensor_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_inNcom_sensor_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_infinite_rotation",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_compass",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_sensor_color_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_sensor_color_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_green",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_yellow",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_black",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_white",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_rgb_color_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_rgb_color_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_green",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_blue",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_cyan",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_magenta",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_yellow",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.connectlite_item_color_white",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_sensor_angle_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_sensor_angle_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_value",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_angle",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.connectlite_item_absolute_angle",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.connectlite_item_number_of_rotations",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_multikey_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_multikey_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_key_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_key_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.connectlite_item_key_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.connectlite_item_key_4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.connectlite_item_key_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.connectlite_item_key_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.connectlite_item_key_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.connectlite_item_key_8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_extension_digital_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_extension_digital_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "EA1",
+              "value": "1"
+            },
+            {
+              "label": "EA2",
+              "value": "2"
+            },
+            {
+              "label": "EA3",
+              "value": "3"
+            },
+            {
+              "label": "EA4",
+              "value": "4"
+            },
+            {
+              "label": "EA5",
+              "value": "5"
+            },
+            {
+              "label": "EA6",
+              "value": "6"
+            },
+            {
+              "label": "EA7",
+              "value": "7"
+            },
+            {
+              "label": "EA8",
+              "value": "8"
+            },
+            {
+              "label": "ET1",
+              "value": "9"
+            },
+            {
+              "label": "ET2",
+              "value": "10"
+            },
+            {
+              "label": "ET3",
+              "value": "11"
+            },
+            {
+              "label": "ET4",
+              "value": "12"
+            },
+            {
+              "label": "ET5",
+              "value": "13"
+            },
+            {
+              "label": "ET6",
+              "value": "14"
+            },
+            {
+              "label": "ET7",
+              "value": "15"
+            },
+            {
+              "label": "ET8",
+              "value": "16"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_extension_analog_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_extension_analog_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "EAA1",
+              "value": "1"
+            },
+            {
+              "label": "EAA2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_dc_1_all_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_dc_1_all_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "1,2",
+              "value": "5"
+            },
+            {
+              "label": "3,4",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.connectlite_item_all",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_velocity_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_velocity_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "-5",
+              "value": "-5"
+            },
+            {
+              "label": "-10",
+              "value": "-10"
+            },
+            {
+              "label": "-15",
+              "value": "-15"
+            },
+            {
+              "label": "-20",
+              "value": "-20"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_servo_position_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_servo_position_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "20",
+              "value": "20"
+            },
+            {
+              "label": "40",
+              "value": "40"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "80",
+              "value": "80"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_port_1_4_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_port_1_4_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_on_off_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_on_off_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_note_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_note_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_note_whole",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_note_half",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.connectlite_item_note_quarter",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.connectlite_item_note_eighth",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.connectlite_item_note_sixteenth",
+              "value": "16"
+            },
+            {
+              "label": "Lang.template.connectlite_item_note_thirty_second",
+              "value": "32"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_time_1_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_time_1_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0.1",
+              "value": "0.1"
+            },
+            {
+              "label": "0.3",
+              "value": "0.3"
+            },
+            {
+              "label": "0.5",
+              "value": "0.5"
+            },
+            {
+              "label": "0.7",
+              "value": "0.7"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_time_2_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_time_2_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0.1",
+              "value": "0.1"
+            },
+            {
+              "label": "0.3",
+              "value": "0.3"
+            },
+            {
+              "label": "0.5",
+              "value": "0.5"
+            },
+            {
+              "label": "0.7",
+              "value": "0.7"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_time_3",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_time_3"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0.05",
+              "value": "0.05"
+            },
+            {
+              "label": "0.1",
+              "value": "0.1"
+            },
+            {
+              "label": "0.2",
+              "value": "0.2"
+            },
+            {
+              "label": "0.5",
+              "value": "0.5"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_pitch_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_pitch_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "DropdownExtra",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "36"
+            },
+            {
+              "label": "",
+              "value": "37"
+            },
+            {
+              "label": "",
+              "value": "38"
+            },
+            {
+              "label": "",
+              "value": "39"
+            },
+            {
+              "label": "",
+              "value": "40"
+            },
+            {
+              "label": "",
+              "value": "41"
+            },
+            {
+              "label": "",
+              "value": "42"
+            },
+            {
+              "label": "",
+              "value": "43"
+            },
+            {
+              "label": "",
+              "value": "44"
+            },
+            {
+              "label": "",
+              "value": "45"
+            },
+            {
+              "label": "",
+              "value": "46"
+            },
+            {
+              "label": "",
+              "value": "47"
+            },
+            {
+              "label": "",
+              "value": "48"
+            },
+            {
+              "label": "",
+              "value": "49"
+            },
+            {
+              "label": "",
+              "value": "50"
+            },
+            {
+              "label": "",
+              "value": "51"
+            },
+            {
+              "label": "",
+              "value": "52"
+            },
+            {
+              "label": "",
+              "value": "53"
+            },
+            {
+              "label": "",
+              "value": "54"
+            },
+            {
+              "label": "",
+              "value": "55"
+            },
+            {
+              "label": "",
+              "value": "56"
+            },
+            {
+              "label": "",
+              "value": "57"
+            },
+            {
+              "label": "",
+              "value": "58"
+            },
+            {
+              "label": "",
+              "value": "59"
+            },
+            {
+              "label": "",
+              "value": "60"
+            },
+            {
+              "label": "",
+              "value": "61"
+            },
+            {
+              "label": "",
+              "value": "62"
+            },
+            {
+              "label": "",
+              "value": "63"
+            },
+            {
+              "label": "",
+              "value": "64"
+            },
+            {
+              "label": "",
+              "value": "65"
+            },
+            {
+              "label": "",
+              "value": "66"
+            },
+            {
+              "label": "",
+              "value": "67"
+            },
+            {
+              "label": "",
+              "value": "68"
+            },
+            {
+              "label": "",
+              "value": "69"
+            },
+            {
+              "label": "",
+              "value": "70"
+            },
+            {
+              "label": "",
+              "value": "71"
+            },
+            {
+              "label": "",
+              "value": "72"
+            },
+            {
+              "label": "",
+              "value": "73"
+            },
+            {
+              "label": "",
+              "value": "74"
+            },
+            {
+              "label": "",
+              "value": "75"
+            },
+            {
+              "label": "",
+              "value": "76"
+            },
+            {
+              "label": "",
+              "value": "77"
+            },
+            {
+              "label": "",
+              "value": "78"
+            },
+            {
+              "label": "",
+              "value": "79"
+            },
+            {
+              "label": "",
+              "value": "80"
+            },
+            {
+              "label": "",
+              "value": "81"
+            },
+            {
+              "label": "",
+              "value": "82"
+            },
+            {
+              "label": "",
+              "value": "83"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_dropdown_melody_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_dropdown_melody_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.connectlite_item_melody_start",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.connectlite_item_melody_end",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.connectlite_item_melody_level_up",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.connectlite_item_melody_level_down",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_when_press_remote_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_when_press_remote_key"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_remote_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_when_input_digital_value",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_when_input_digital_value"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_digital_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_sensor_setting",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_sensor_setting"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_setting_sensor_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_is_remote_key",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_is_remote_key"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_remote_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_is_digital_value",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_is_digital_value"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_digital_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_analog_value",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_tri_axis_acceler_x",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_tri_axis_acceler_x"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_tri_axis_acceler_y",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_tri_axis_acceler_y"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_tri_axis_acceler_z",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_tri_axis_acceler_z"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_value_mapping",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_value_mapping"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              255
+            ]
+          }
+        },
+        {
+          "key": "PARAM3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "PARAM4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_is_color_value",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_is_color_value"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "connectlite_dropdown_sensor_color_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_color_value",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_color_value"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_infinite_setting",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_infinite_setting"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_inNcom_sensor_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_infinite_mm_diameter",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_infinite_mm_diameter"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_inNcom_sensor_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              53.5
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_infinite_transform_input",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_infinite_transform_input"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_inNcom_sensor_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_sensor_angle_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_is_multi_sensor",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_is_multi_sensor"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_multikey_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_is_multi_switch",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_is_multi_switch"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_multikey_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_is_extension_digital_input",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_is_extension_digital_input"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_extension_digital_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_extension_analog_input",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_extension_analog_input"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_analog_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_extension_analog_key",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_eeprom_call",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_eeprom_call"
+      },
+      "params": [
+        {
+          "key": "ADDRESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_get_eeprom_address_value",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_get_eeprom_address_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_dc_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_dc_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_dc_1_all_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_velocity_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_servo_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_servo_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_port_1_4_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_servo_position_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_s_dc_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_s_dc_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_port_1_4_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_velocity_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_port_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_port_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_port_1_4_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_on_off_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_play_melody_note_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_play_melody_note_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_pitch_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_note_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_play_melody_sec_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_play_melody_sec_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_pitch_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_time_1_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_play_melody_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_play_melody_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_pitch_key",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_play_value_sec_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_play_value_sec_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              35391
+            ]
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_time_1_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_play_value_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_play_value_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              35391
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_play_melody_track_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_play_melody_track_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_melody_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_time_2_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_play_melody_off",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_play_melody_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_rgbled_on_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_rgbled_on_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_port_1_4_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_rgb_color_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_rgbled_off_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_rgbled_off_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_port_1_4_key",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_rgbled_flashing_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_rgbled_flashing_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_port_1_4_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_rgb_color_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_time_3",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_rgbled_dimming_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_rgbled_dimming_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_port_1_4_key",
+            "params": []
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "connectlite_dropdown_rgb_color_key",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_fnd_output",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_fnd_output"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_fnd_off",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_fnd_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    },
+    {
+      "type": "connectlite_set_eeprom_write",
+      "category": "hardware_lite_alux_connect_lite",
+      "label": {
+        "ko": "connectlite_set_eeprom_write"
+      },
+      "params": [
+        {
+          "key": "PARAM0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "PARAM1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_connect_lite"
+      }
+    }
+  ]
+}

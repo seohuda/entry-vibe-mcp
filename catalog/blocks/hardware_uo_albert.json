@@ -1,0 +1,1604 @@
+{
+  "category": "hardware_uo_albert",
+  "blocks": [
+    {
+      "type": "uoalbert_value",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_value"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_left_proximity",
+              "value": "LEFT_PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_right_proximity",
+              "value": "RIGHT_PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_x",
+              "value": "ACCELERATION_X"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_y",
+              "value": "ACCELERATION_Y"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_acceleration_z",
+              "value": "ACCELERATION_Z"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_touch",
+              "value": "TOUCH"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_oid",
+              "value": "OID"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_position_x",
+              "value": "POSITION_X"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_position_y",
+              "value": "POSITION_Y"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_light",
+              "value": "LIGHT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_temperature",
+              "value": "TEMPERATURE"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_sensor_signal_strength",
+              "value": "SIGNAL_STRENGTH"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_hand_found",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_hand_found"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_touch_state",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_touch_state"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_button_clicked",
+              "value": "CLICKED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_button_long_pressed",
+              "value": "LONG_PRESSED"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_button_long_long_pressed",
+              "value": "LONG_LONG_PRESSED"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_is_oid",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_is_oid"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_boolean",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_boolean"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_forward",
+              "value": "TILT_FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_backward",
+              "value": "TILT_BACKWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_left",
+              "value": "TILT_LEFT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_right",
+              "value": "TILT_RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_flip",
+              "value": "TILT_FLIP"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_tilt_not",
+              "value": "TILT_NOT"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_normal",
+              "value": "BATTERY_NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_low",
+              "value": "BATTERY_LOW"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_battery_empty",
+              "value": "BATTERY_EMPTY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_move_forward_unit",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_move_forward_unit"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "cm",
+              "value": "CM"
+            },
+            {
+              "label": "초",
+              "value": "SEC"
+            },
+            {
+              "label": "펄스",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_move_backward_unit",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_move_backward_unit"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "cm",
+              "value": "CM"
+            },
+            {
+              "label": "초",
+              "value": "SEC"
+            },
+            {
+              "label": "펄스",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_turn_unit_in_place",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_turn_unit_in_place"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "DEG"
+            },
+            {
+              "label": "초",
+              "value": "SEC"
+            },
+            {
+              "label": "펄스",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_pivot_around_unit_in_direction",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_pivot_around_unit_in_direction"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "UNIT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "DEG"
+            },
+            {
+              "label": "초",
+              "value": "SEC"
+            },
+            {
+              "label": "펄스",
+              "value": "PULSE"
+            }
+          ]
+        },
+        {
+          "key": "TOWARD",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_forward",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_backward",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_change_both_wheels_by",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_change_both_wheels_by"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_set_both_wheels_to",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_set_both_wheels_to"
+      },
+      "params": [
+        {
+          "key": "LEFT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "RIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_change_wheel_by",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_change_wheel_by"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_set_wheel_to",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_set_wheel_to"
+      },
+      "params": [
+        {
+          "key": "WHEEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_stop",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_set_board_size",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_set_board_size"
+      },
+      "params": [
+        {
+          "key": "WIDTH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "108"
+            ]
+          }
+        },
+        {
+          "key": "HEIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "76"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_set_eye_to",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_set_eye_to"
+      },
+      "params": [
+        {
+          "key": "EYE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "RED"
+            },
+            {
+              "label": "주황색",
+              "value": "ORANGE"
+            },
+            {
+              "label": "노란색",
+              "value": "YELLOW"
+            },
+            {
+              "label": "초록색",
+              "value": "GREEN"
+            },
+            {
+              "label": "하늘색",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "파란색",
+              "value": "BLUE"
+            },
+            {
+              "label": "보라색",
+              "value": "VIOLET"
+            },
+            {
+              "label": "자주색",
+              "value": "PURPLE"
+            },
+            {
+              "label": "하얀색",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_pick_eye",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_pick_eye"
+      },
+      "params": [
+        {
+          "key": "EYE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_change_eye_by_rgb",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_change_eye_by_rgb"
+      },
+      "params": [
+        {
+          "key": "EYE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_set_eye_to_rgb",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_set_eye_to_rgb"
+      },
+      "params": [
+        {
+          "key": "EYE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_clear_eye",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_clear_eye"
+      },
+      "params": [
+        {
+          "key": "EYE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT"
+            },
+            {
+              "label": "양쪽",
+              "value": "BOTH"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_play_sound_times",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_play_sound_times"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "삐",
+              "value": "BEEP"
+            },
+            {
+              "label": "사이렌",
+              "value": "SIREN"
+            },
+            {
+              "label": "엔진",
+              "value": "ENGINE"
+            },
+            {
+              "label": "로봇",
+              "value": "ROBOT"
+            },
+            {
+              "label": "디비디비딥",
+              "value": "DIBIDIBIDIP"
+            },
+            {
+              "label": "행진",
+              "value": "MARCH"
+            },
+            {
+              "label": "생일",
+              "value": "BIRTHDAY"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_play_sound_times_until_done",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_play_sound_times_until_done"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "삐",
+              "value": "BEEP"
+            },
+            {
+              "label": "사이렌",
+              "value": "SIREN"
+            },
+            {
+              "label": "엔진",
+              "value": "ENGINE"
+            },
+            {
+              "label": "로봇",
+              "value": "ROBOT"
+            },
+            {
+              "label": "디비디비딥",
+              "value": "DIBIDIBIDIP"
+            },
+            {
+              "label": "행진",
+              "value": "MARCH"
+            },
+            {
+              "label": "생일",
+              "value": "BIRTHDAY"
+            }
+          ]
+        },
+        {
+          "key": "COUNT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_change_buzzer_by",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_change_buzzer_by"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_set_buzzer_to",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_set_buzzer_to"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_clear_sound",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_clear_sound"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_play_note",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_play_note"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_note_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_c_sharp",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d_sharp",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f_sharp",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g_sharp",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a_sharp",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_play_note_for",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_play_note_for"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.ROBOID_note_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_c_sharp",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_d_sharp",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_f_sharp",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_g_sharp",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_a_sharp",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.ROBOID_note_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_rest_for",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_rest_for"
+      },
+      "params": [
+        {
+          "key": "BEAT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.25"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_change_tempo_by",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_change_tempo_by"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "20"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    },
+    {
+      "type": "uoalbert_set_tempo_to",
+      "category": "hardware_uo_albert",
+      "label": {
+        "ko": "uoalbert_set_tempo_to"
+      },
+      "params": [
+        {
+          "key": "BPM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "uo_albert"
+      }
+    }
+  ]
+}

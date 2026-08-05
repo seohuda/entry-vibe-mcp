@@ -1,0 +1,936 @@
+{
+  "category": "hardware_robodog",
+  "blocks": [
+    {
+      "type": "robodog_gesture",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_gesture"
+      },
+      "params": [
+        {
+          "key": "MOTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_gesture0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_gesture1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.robodog_gesture2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.robodog_gesture3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.robodog_gesture4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_legact",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_legact"
+      },
+      "params": [
+        {
+          "key": "WHAT_LEG",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_legact0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_legact1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.robodog_legact2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.robodog_legact3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.robodog_legact4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "LEG_ALT",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_move",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_move"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_move0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_move1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VELOCITY",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_leg",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_leg"
+      },
+      "params": [
+        {
+          "key": "WHAT_LEG",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_leg0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_leg1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.robodog_leg2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.robodog_leg3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.robodog_leg4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.robodog_leg5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.robodog_leg6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.robodog_leg7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.robodog_leg8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "LEG_ALT",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "LEG_FB",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_motor",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_motor"
+      },
+      "params": [
+        {
+          "key": "WHAT_LEG",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_leg0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_leg1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.robodog_leg2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.robodog_leg3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.robodog_leg4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.robodog_leg5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.robodog_leg6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.robodog_leg7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.robodog_leg8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "MOTOR_DEG0",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "MOTOR_DEG1",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_rotation",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_rotation"
+      },
+      "params": [
+        {
+          "key": "ROT_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_rotation0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_rotation1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "DEG_VEL",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_servospeed",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_servospeed"
+      },
+      "params": [
+        {
+          "key": "WHAT_LEG",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_leg0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_leg1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.robodog_leg2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.robodog_leg3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.robodog_leg4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.robodog_leg5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.robodog_leg6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.robodog_leg7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.robodog_leg8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "MOTOR1",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "MOTOR2",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_headledexp",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_headledexp"
+      },
+      "params": [
+        {
+          "key": "LED_EXP",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_headledexp0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp8",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp9",
+              "value": "9"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp11",
+              "value": "11"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp12",
+              "value": "12"
+            },
+            {
+              "label": "Lang.template.robodog_headledexp13",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_headledprint",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_headledprint"
+      },
+      "params": [
+        {
+          "key": "WHAT_LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_headledprint0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_headledprint1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "WHAT_CHAR",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_bodyled",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_bodyled"
+      },
+      "params": [
+        {
+          "key": "WHAT_LED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1~4",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_mp3play",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_mp3play"
+      },
+      "params": [
+        {
+          "key": "WHAT_MP3",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_mp3play01",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play02",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play03",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play04",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play05",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play11",
+              "value": "11"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play12",
+              "value": "12"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play13",
+              "value": "13"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play14",
+              "value": "14"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play21",
+              "value": "21"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play22",
+              "value": "22"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play23",
+              "value": "23"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play24",
+              "value": "24"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play25",
+              "value": "25"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play26",
+              "value": "26"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play31",
+              "value": "31"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play32",
+              "value": "32"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play33",
+              "value": "33"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play34",
+              "value": "34"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play35",
+              "value": "35"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play36",
+              "value": "36"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play37",
+              "value": "37"
+            },
+            {
+              "label": "Lang.template.robodog_mp3play38",
+              "value": "38"
+            }
+          ]
+        },
+        {
+          "key": "VOLUME",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.robodog_mp3playvol0",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.robodog_mp3playvol1",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.robodog_mp3playvol2",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_expservo",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_expservo"
+      },
+      "params": [
+        {
+          "key": "SERVO_DEG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_button",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_button"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_battery",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_battery"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_getalt",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_getalt"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_gettilt",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_gettilt"
+      },
+      "params": [
+        {
+          "key": "TILT_DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.robodog_tilt0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.robodog_tilt1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_getrot",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_getrot"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_isrbalive",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_isrbalive"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_getrbdata",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_getrbdata"
+      },
+      "params": [
+        {
+          "key": "WHAT_RB",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    },
+    {
+      "type": "robodog_getrbstr",
+      "category": "hardware_robodog",
+      "label": {
+        "ko": "robodog_getrbstr"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RoboDog"
+      }
+    }
+  ]
+}

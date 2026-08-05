@@ -1,0 +1,79 @@
+{
+  "category": "hardware_rokoboard",
+  "blocks": [
+    {
+      "type": "rokoboard_get_sensor_value_by_name",
+      "category": "hardware_rokoboard",
+      "label": {
+        "ko": "의 센서값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "빛",
+              "value": "1"
+            },
+            {
+              "label": "소리",
+              "value": "0"
+            },
+            {
+              "label": "슬라이더",
+              "value": "2"
+            },
+            {
+              "label": "저항-A",
+              "value": "3"
+            },
+            {
+              "label": "저항-B",
+              "value": "4"
+            },
+            {
+              "label": "저항-C",
+              "value": "5"
+            },
+            {
+              "label": "저항-D",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "rokoboard"
+      }
+    },
+    {
+      "type": "rokoboard_is_button_pressed",
+      "category": "hardware_rokoboard",
+      "label": {
+        "ko": "rokoboard_is_button_pressed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Text",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "rokoboard"
+      }
+    }
+  ]
+}

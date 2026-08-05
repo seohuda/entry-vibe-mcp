@@ -1,0 +1,104 @@
+{
+  "category": "ai_learning_decisiontree",
+  "blocks": [
+    {
+      "type": "learning_title_decisiontree",
+      "category": "ai_learning_decisiontree",
+      "label": {
+        "ko": "learning_title_decisiontree"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningDecisiontree"
+      }
+    },
+    {
+      "type": "set_decisiontree_option",
+      "category": "ai_learning_decisiontree",
+      "label": {
+        "ko": "학습 조건 을 으로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.train_param_minNumSamples",
+              "value": "minNumSamples"
+            },
+            {
+              "label": "Lang.AiLearning.train_param_maxDepth",
+              "value": "maxDepth"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningDecisiontree"
+      }
+    },
+    {
+      "type": "set_decisiontree_tree",
+      "category": "ai_learning_decisiontree",
+      "label": {
+        "ko": "학습한 트리"
+      },
+      "params": [
+        {
+          "key": "VISIBLE",
+          "type": "Dropdown",
+          "defaultValue": "open",
+          "options": [
+            {
+              "label": "Lang.AiLearning.open",
+              "value": "open"
+            },
+            {
+              "label": "Lang.AiLearning.close",
+              "value": "close"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "aiLearningDecisiontree"
+      }
+    }
+  ]
+}

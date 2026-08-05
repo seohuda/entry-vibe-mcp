@@ -1,0 +1,1335 @@
+{
+  "category": "hardware_coding_box",
+  "blocks": [
+    {
+      "type": "coding_box_analog_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "coding_box_analog_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_arduino_get_analog_value",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_arduino_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coding_box_analog_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_arduino_get_analog_value_map",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_arduino_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_arduino_get_analog_value",
+            "params": [
+              {
+                "type": "coding_box_analog_list",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_arudino_read_ultrasonic_value",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_arudino_read_ultrasonic_value"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "4"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_arduino_read_digital",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_arduino_read_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              2
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_arduino_toggle_led",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_arduino_toggle_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              3
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_arduino_digital_pwm",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_arduino_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_pwm_port_number",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "coding_box_tone_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "coding_box_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "coding_box_tone_value",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "coding_box_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coding_box_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "coding_box_octave_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "coding_box_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_arduino_write_tone",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_arduino_write_tone"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              3
+            ]
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coding_box_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coding_box_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_arduino_write_servo",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_arduino_write_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "3"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_read_ultrasonic",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_read_ultrasonic"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_read_switch",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_read_switch"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_switch_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_read_potentiometer",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_read_potentiometer"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_read_mic",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_read_mic"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_read_line",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_read_line"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_write_led",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_write_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_led_number_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_led_value_list",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_write_lcd",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_write_lcd"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_lcd_row_list",
+            "params": []
+          }
+        },
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_lcd_column_list",
+            "params": []
+          }
+        },
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello, CodingBox"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_clear_lcd",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_clear_lcd"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_write_rgb_led",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_write_rgb_led"
+      },
+      "params": [
+        {
+          "key": "R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_rgb_led_value_list",
+            "params": []
+          }
+        },
+        {
+          "key": "G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_rgb_led_value_list",
+            "params": []
+          }
+        },
+        {
+          "key": "B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_rgb_led_value_list",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_led_number_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_led_number_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LED1",
+              "value": "10"
+            },
+            {
+              "label": "LED2",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_rgb_led_value_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_rgb_led_value_list"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.CBX_LED_ON",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.CBX_LED_OFF",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_led_value_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_led_value_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.CBX_LED_ON",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.CBX_LED_OFF",
+              "value": "0"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            },
+            {
+              "label": "150",
+              "value": "150"
+            },
+            {
+              "label": "200",
+              "value": "200"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_dcm_speed_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_dcm_speed_list"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.CBX_DCM_SPEED_MAX",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.CBX_DCM_SPEED_STOP",
+              "value": "0"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            },
+            {
+              "label": "150",
+              "value": "150"
+            },
+            {
+              "label": "200",
+              "value": "200"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_servo_angle_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_servo_angle_list"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "30",
+              "value": "30"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "90",
+              "value": "90"
+            },
+            {
+              "label": "120",
+              "value": "120"
+            },
+            {
+              "label": "150",
+              "value": "150"
+            },
+            {
+              "label": "180",
+              "value": "180"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_lcd_column_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_lcd_column_list"
+      },
+      "params": [
+        {
+          "key": "COLUMN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            },
+            {
+              "label": "13",
+              "value": "12"
+            },
+            {
+              "label": "14",
+              "value": "13"
+            },
+            {
+              "label": "15",
+              "value": "14"
+            },
+            {
+              "label": "16",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_lcd_row_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_lcd_row_list"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_switch_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_switch_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "switch1",
+              "value": "Entry.CodingBox.pins.SWITCH_1"
+            },
+            {
+              "label": "switch2",
+              "value": "Entry.CodingBox.pins.SWITCH_2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_dcm_direction_list",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_dcm_direction_list"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.CBX_DCM_FORWARD",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.CBX_DCM_BACKWARD",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_write_servo",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_write_servo"
+      },
+      "params": [
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_servo_angle_list",
+            "params": [
+              180
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_write_tone",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_write_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coding_box_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "coding_box_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    },
+    {
+      "type": "cbx_write_dcm",
+      "category": "hardware_coding_box",
+      "label": {
+        "ko": "cbx_write_dcm"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_dcm_direction_list",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cbx_dcm_speed_list",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "CodingBox"
+      }
+    }
+  ]
+}

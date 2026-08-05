@@ -1,0 +1,548 @@
+{
+  "category": "hardware_coalaboard",
+  "blocks": [
+    {
+      "type": "coalaboard_when_button_pressed",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_when_button_pressed"
+      },
+      "params": [
+        {
+          "key": "DUMMY",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_when_sensor_get_value",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_when_sensor_get_value"
+      },
+      "params": [
+        {
+          "key": "DUMMY",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "INEQ_SIGN",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_sensor_value",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_convert_scale",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_convert_scale"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_is_touch_pressed",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_is_touch_pressed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "PRESSED",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_is_sensor_value_compare",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_is_sensor_value_compare"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "INEQ_SIGN",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_turn_off_color_led",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_turn_off_color_led"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_turn_on_color_led_by_rgb",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_turn_on_color_led_by_rgb"
+      },
+      "params": [
+        {
+          "key": "rValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "gValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "bValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_turn_on_color_led_by_picker",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_turn_on_color_led_by_picker"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_turn_on_color_led_by_value",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_turn_on_color_led_by_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_buzzer",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_buzzer"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_turn_off_all_motors",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_turn_off_all_motors"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_dc_speed",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_dc_speed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_dc_direction_speed",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_dc_direction_speed"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.COALABOARD_dc_direction_cw",
+              "value": "CW"
+            },
+            {
+              "label": "Lang.Blocks.COALABOARD_dc_direction_ccw",
+              "value": "CCW"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    },
+    {
+      "type": "coalaboard_servomotor_angle",
+      "category": "hardware_coalaboard",
+      "label": {
+        "ko": "coalaboard_servomotor_angle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "coalaboard"
+      }
+    }
+  ]
+}

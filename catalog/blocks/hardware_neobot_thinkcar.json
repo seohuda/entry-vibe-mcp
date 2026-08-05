@@ -1,0 +1,2088 @@
+{
+  "category": "hardware_neobot_thinkcar",
+  "blocks": [
+    {
+      "type": "neobot_think_car_auto_driving_title",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_auto_driving_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_line_tracer_start",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_line_tracer_start"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "10%",
+              "value": "10"
+            },
+            {
+              "label": "20%",
+              "value": "20"
+            },
+            {
+              "label": "30%",
+              "value": "30"
+            },
+            {
+              "label": "40%",
+              "value": "40"
+            },
+            {
+              "label": "50%",
+              "value": "50"
+            },
+            {
+              "label": "60%",
+              "value": "60"
+            },
+            {
+              "label": "70%",
+              "value": "70"
+            },
+            {
+              "label": "80%",
+              "value": "80"
+            },
+            {
+              "label": "90%",
+              "value": "90"
+            },
+            {
+              "label": "100%",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_reverse_parking_start",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_reverse_parking_start"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_red",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_yellow",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_green",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_blue",
+              "value": "200"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_line_change",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_line_change"
+      },
+      "params": [
+        {
+          "key": "FROM_COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_red",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_yellow",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_green",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_blue",
+              "value": "200"
+            }
+          ]
+        },
+        {
+          "key": "TO_COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_red",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_yellow",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_green",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_sign_blue",
+              "value": "200"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_driving_stop",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_driving_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_sensor_title",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_sensor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_sensor_value",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_remot",
+              "value": "IR"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_bat",
+              "value": "BAT"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_sensor_convert_scale",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_sensor_convert_scale"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "OMIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "OMAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "MIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "MAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_decision_sensor_is_over",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_decision_sensor_is_over"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_3",
+              "value": "IN3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_12",
+              "value": "IN12"
+            }
+          ]
+        },
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol1",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol2",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol3",
+              "value": "<"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol4",
+              "value": ">="
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol5",
+              "value": "<="
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_decision_equal_with_sensor",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_decision_equal_with_sensor"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_white",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_red",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_yellow",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_green",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_color_blue",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_decision_sensor_angle",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_decision_sensor_angle"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol1",
+              "value": "="
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol2",
+              "value": ">"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol3",
+              "value": "<"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol4",
+              "value": ">="
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_compare_symbol5",
+              "value": "<="
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_0",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_10",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_20",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_30",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_40",
+              "value": "40"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_50",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_60",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_70",
+              "value": "70"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_80",
+              "value": "80"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_90",
+              "value": "90"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_100",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_110",
+              "value": "110"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_120",
+              "value": "120"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_130",
+              "value": "130"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_140",
+              "value": "140"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_150",
+              "value": "150"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_160",
+              "value": "160"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_170",
+              "value": "170"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_angle_180",
+              "value": "180"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_remote_button",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_remote_button"
+      },
+      "params": [
+        {
+          "key": "KEY",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_remote_btn_1",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_remote_btn_2",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_remote_btn_3",
+              "value": "12"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_remote_btn_4",
+              "value": "13"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_remote_btn_up",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_remote_btn_down",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_remote_btn_left",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_remote_btn_right",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_led_title",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_led_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_led_on",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_led_on"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "100%",
+              "value": "255"
+            },
+            {
+              "label": "90%",
+              "value": "230"
+            },
+            {
+              "label": "80%",
+              "value": "204"
+            },
+            {
+              "label": "70%",
+              "value": "179"
+            },
+            {
+              "label": "60%",
+              "value": "153"
+            },
+            {
+              "label": "50%",
+              "value": "128"
+            },
+            {
+              "label": "40%",
+              "value": "102"
+            },
+            {
+              "label": "30%",
+              "value": "77"
+            },
+            {
+              "label": "20%",
+              "value": "51"
+            },
+            {
+              "label": "10%",
+              "value": "26"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neobot_think_car_arg_led_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_output_led_off",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_output_led_off"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_led_brightness_with_sensor",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_led_brightness_with_sensor"
+      },
+      "params": [
+        {
+          "key": "IN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "OUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_color_led_on",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_color_led_on"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_output_title",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_output_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_set_output",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_set_output"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_motor_title",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_motor_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_robot",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_robot"
+      },
+      "params": [
+        {
+          "key": "MOVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_move_forward",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_move_backward",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_move_left",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_move_right",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_move_stop",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_motor_start",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_motor_start"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_both",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_left",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_right",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_direction_forward",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_direction_backward",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_direction_left",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_direction_right",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neobot_think_car_arg_motor_speed",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neobot_think_car_arg_motor_duration",
+            "params": []
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_motor_stop",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_motor_stop"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_both",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_left",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_motor_right",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_buzzer_title",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_buzzer_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_play_note_for",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_play_note_for"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_silent",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_do",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_do_shop",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_re",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_re_shop",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_mi",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_fa",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_fa_shop",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_so",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_so_shop",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_la",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_la_shop",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_ti",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "2",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_half_note",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_quarter_note",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_eighth_note",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_sound_sixteenth_note",
+              "value": "16"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_melody_play_with_sensor",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_melody_play_with_sensor"
+      },
+      "params": [
+        {
+          "key": "INPUT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_1",
+              "value": "IN1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_2",
+              "value": "IN2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_port_3",
+              "value": "IN3"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_melody_stop",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_melody_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_servo_title",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_servo_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_servo_init",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_servo_init"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_servo_rotate",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_servo_rotate"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_servo_dir_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_servo_dir_2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            },
+            {
+              "label": "0%",
+              "value": "0"
+            },
+            {
+              "label": "10%",
+              "value": "10"
+            },
+            {
+              "label": "20%",
+              "value": "20"
+            },
+            {
+              "label": "30%",
+              "value": "30"
+            },
+            {
+              "label": "40%",
+              "value": "40"
+            },
+            {
+              "label": "50%",
+              "value": "50"
+            },
+            {
+              "label": "60%",
+              "value": "60"
+            },
+            {
+              "label": "70%",
+              "value": "70"
+            },
+            {
+              "label": "80%",
+              "value": "80"
+            },
+            {
+              "label": "90%",
+              "value": "90"
+            },
+            {
+              "label": "100%",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_servo_stop",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_servo_stop"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_servo_change_degree",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_servo_change_degree"
+      },
+      "params": [
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "get_servo_degree",
+            "params": []
+          }
+        },
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "OUT1",
+              "value": "OUT1"
+            },
+            {
+              "label": "OUT2",
+              "value": "OUT2"
+            },
+            {
+              "label": "OUT3",
+              "value": "OUT3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_out_all",
+              "value": "ALL"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_servo_dir_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_servo_dir_2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            },
+            {
+              "label": "0%",
+              "value": "0"
+            },
+            {
+              "label": "10%",
+              "value": "10"
+            },
+            {
+              "label": "20%",
+              "value": "20"
+            },
+            {
+              "label": "30%",
+              "value": "30"
+            },
+            {
+              "label": "40%",
+              "value": "40"
+            },
+            {
+              "label": "50%",
+              "value": "50"
+            },
+            {
+              "label": "60%",
+              "value": "60"
+            },
+            {
+              "label": "70%",
+              "value": "70"
+            },
+            {
+              "label": "80%",
+              "value": "80"
+            },
+            {
+              "label": "90%",
+              "value": "90"
+            },
+            {
+              "label": "100%",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_arg_led_duration",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_arg_led_duration"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_cont",
+              "value": "계속"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_1s",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_2s",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_3s",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_4s",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_5s",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_6s",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_7s",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_8s",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_9s",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_arg_motor_speed",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_arg_motor_speed"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "IN1",
+              "value": "IN1"
+            },
+            {
+              "label": "IN2",
+              "value": "IN2"
+            },
+            {
+              "label": "IN3",
+              "value": "IN3"
+            },
+            {
+              "label": "100%",
+              "value": "100"
+            },
+            {
+              "label": "90%",
+              "value": "90"
+            },
+            {
+              "label": "80%",
+              "value": "80"
+            },
+            {
+              "label": "70%",
+              "value": "70"
+            },
+            {
+              "label": "60%",
+              "value": "60"
+            },
+            {
+              "label": "50%",
+              "value": "50"
+            },
+            {
+              "label": "40%",
+              "value": "40"
+            },
+            {
+              "label": "30%",
+              "value": "30"
+            },
+            {
+              "label": "20%",
+              "value": "20"
+            },
+            {
+              "label": "10%",
+              "value": "10"
+            },
+            {
+              "label": "0%",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    },
+    {
+      "type": "neobot_think_car_arg_motor_duration",
+      "category": "hardware_neobot_thinkcar",
+      "label": {
+        "ko": "neobot_think_car_arg_motor_duration"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_cont",
+              "value": "계속"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_1s",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_2s",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_3s",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_4s",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_5s",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_6s",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_7s",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_8s",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.neobot_think_car_duration_9s",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "neobot_think_car"
+      }
+    }
+  ]
+}

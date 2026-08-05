@@ -1,0 +1,397 @@
+{
+  "category": "ai_utilize_video",
+  "blocks": [
+    {
+      "type": "video_title",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "video_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_change_cam",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "카메라로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_check_webcam",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "비디오가 연결되었는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_draw_webcam",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "비디오 화면"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_set_camera_opacity_option",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "비디오 투명도 효과를 으로 정하기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_flip_camera",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "비디오 화면 뒤집기"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_toggle_model",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "인식"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Unknown"
+        },
+        {
+          "key": "MODE",
+          "type": "Unknown"
+        },
+        {
+          "key": "2",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_toggle_ind",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "인식된"
+      },
+      "params": [
+        {
+          "key": "CRITERIA",
+          "type": "Unknown"
+        },
+        {
+          "key": "OPTION",
+          "type": "Unknown"
+        },
+        {
+          "key": "2",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_number_detect",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "인식된 의 수"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_object_detected",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "사물 중 (이)가 인식되었는가?"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_is_model_loaded",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "인식이 되었는가?"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_detected_face_info",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "번째 얼굴의"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Unknown"
+        },
+        {
+          "key": "INFO",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_motion_value",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "에서 감지한 값"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "자신",
+              "value": "self"
+            },
+            {
+              "label": "실행 화면",
+              "value": "screen"
+            }
+          ]
+        },
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "움직임",
+              "value": "total"
+            },
+            {
+              "label": "좌우방향",
+              "value": "x"
+            },
+            {
+              "label": "상하방향",
+              "value": "y"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_face_part_coord",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "번째 얼굴의 의 좌표"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Unknown"
+        },
+        {
+          "key": "PART",
+          "type": "Unknown"
+        },
+        {
+          "key": "COORD",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    },
+    {
+      "type": "video_body_part_coord",
+      "category": "ai_utilize_video",
+      "label": {
+        "ko": "번째 사람의 의 좌표"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Unknown"
+        },
+        {
+          "key": "PART",
+          "type": "Unknown"
+        },
+        {
+          "key": "COORD",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "video"
+      }
+    }
+  ]
+}

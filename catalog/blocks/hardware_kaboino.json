@@ -1,0 +1,1324 @@
+{
+  "category": "hardware_kaboino",
+  "blocks": [
+    {
+      "type": "kaboino_obstacle_sensor_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_obstacle_sensor_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_front_center_ir_sensor",
+              "value": "frontCenterIR"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_front_left_ir_sensor",
+              "value": "frontLeftIR"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_front_right_ir_sensor",
+              "value": "frontRightIR"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_obstacle_sensor_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_obstacle_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_obstacle_sensor_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_light_sensor_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_light_sensor_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_line_trace_sensor_value_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_line_trace_sensor_value_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_bottom_center_ir_sensor",
+              "value": "lineCenterIR"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_bottom_left_ir_sensor",
+              "value": "lineLeftIR"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_bottom_right_ir_sensor",
+              "value": "lineRightIR"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_line_trace_sensor_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_line_trace_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_get_line_trace_sensor_value_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_analog_value_map",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "kaboino_get_analog_value",
+            "params": [
+              {
+                "type": "kaboino_analog_list",
+                "params": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_light_port_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_light_port_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_front_LED",
+              "value": "centerLED"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_left_LED",
+              "value": "leftLED"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_right_LED",
+              "value": "rightLED"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_on_off_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_on_off_list"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_off",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_light",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_light"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_light_port_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_on_off_list",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_tone_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_tone_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_octave_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_tone",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "kaboino_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_wheel_straight_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_wheel_straight_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_forward_wheel",
+              "value": "forward"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_backward_wheel",
+              "value": "reverse"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_wheel_turn_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_wheel_turn_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_turn_left",
+              "value": "leftTurn"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_turn_right",
+              "value": "rightTurn"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_body_speed_straight",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_body_speed_straight"
+      },
+      "params": [
+        {
+          "key": "CAR_BODY_STRAIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_set_wheel_straight_list",
+            "params": []
+          }
+        },
+        {
+          "key": "CAR_BODY_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "CAR_BODY_TURN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_set_wheel_turn_list",
+            "params": []
+          }
+        },
+        {
+          "key": "CAR_BODY_TURN_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_wheel_spin_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_wheel_spin_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_spin_left",
+              "value": "leftSpin"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_spin_right",
+              "value": "rightSpin"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_wheel_spin",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_wheel_spin"
+      },
+      "params": [
+        {
+          "key": "SPIN_DIR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_set_wheel_spin_list",
+            "params": []
+          }
+        },
+        {
+          "key": "SPIN_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_wheel_speed",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_wheel_speed"
+      },
+      "params": [
+        {
+          "key": "WHEEL_LEFT_STRAIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_set_wheel_straight_list",
+            "params": []
+          }
+        },
+        {
+          "key": "WHEEL_LEFT_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "WHEEL_RIGHT_STRAIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_set_wheel_straight_list",
+            "params": []
+          }
+        },
+        {
+          "key": "WHEEL_RIGHT_SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "10"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_display",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_display"
+      },
+      "params": [
+        {
+          "key": "HEIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Welcome to Kaboino!"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_display_clear",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_display_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_color_sensor_value_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_color_sensor_value_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_color_white",
+              "value": "white"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_color_red",
+              "value": "red"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_color_green",
+              "value": "green"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_color_blue",
+              "value": "blue"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_color_black",
+              "value": "black"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_color_sensor_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_color_sensor_value"
+      },
+      "params": [
+        {
+          "key": "COLOR_NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "kaboino_get_color_sensor_value_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_color_sensor_led",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_color_sensor_led"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_search_light",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_search_light"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_ball_holder",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_ball_holder"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_up",
+              "value": "up"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_down",
+              "value": "down"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_environmnet_sensor_value_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_environmnet_sensor_value_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_environment_temp_sensor",
+              "value": "tempSensor"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_environment_humidity_sensor",
+              "value": "humSensor"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_environmnet_sensor_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_environmnet_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_get_environmnet_sensor_value_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_dust_sensor_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_dust_sensor_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_ultrasonic_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_ultrasonic_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_ultrasonic_angle_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_ultrasonic_angle_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_ultrasonic_angle_center",
+              "value": "ultraCenterAng"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_ultrasonic_angle_left",
+              "value": "ultraLeftAng"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_ultrasonic_angle_right",
+              "value": "ultraRightAng"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_ultrasonic_angle",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_ultrasonic_angle"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_set_ultrasonic_angle_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_get_sound_sensor_value",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_get_sound_sensor_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_robot_arm_list",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_robot_arm_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.KABOINO_robot_arm_gripper",
+              "value": "armGripper"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_robot_arm_pusher",
+              "value": "armPusher"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_robot_arm_raiser",
+              "value": "armRaiser"
+            },
+            {
+              "label": "Lang.Blocks.KABOINO_robot_arm_rotator",
+              "value": "armRotator"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    },
+    {
+      "type": "kaboino_set_robot_arm",
+      "category": "hardware_kaboino",
+      "label": {
+        "ko": "kaboino_set_robot_arm"
+      },
+      "params": [
+        {
+          "key": "ACTOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "kaboino_set_robot_arm_list",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Kaboino"
+      }
+    }
+  ]
+}

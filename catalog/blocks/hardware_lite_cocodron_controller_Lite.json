@@ -1,0 +1,616 @@
+{
+  "category": "hardware_lite_cocodron_controller_Lite",
+  "blocks": [
+    {
+      "type": "Cocodron_Dron_Controller_connect",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_connect"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_hovering",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_hovering"
+      },
+      "params": [
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_mode",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_mode"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_mode_drone",
+              "value": "drone"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_mode_rccar",
+              "value": "rccar"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_opt",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_opt"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_gyroreset",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_gyroreset"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_takeoff",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_takeoff"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_takeoffV2",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_takeoffV2"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_land",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_land"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_emergency",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_emergency"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_headless",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_headless"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_up",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_up"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_down",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_down"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_cw",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_cw"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_ccw",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_ccw"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_move_drone_forward",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_move_drone_forward"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_move_drone_back",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_move_drone_back"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_move_drone_left",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_move_drone_left"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_move_drone_right",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_move_drone_right"
+      },
+      "params": [
+        {
+          "key": "STICK",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_funled",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_funled"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_flip",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_flip"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_flip_f",
+              "value": "f"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_flip_b",
+              "value": "b"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_flip_l",
+              "value": "l"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_flip_r",
+              "value": "r"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_speed",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_speed"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    },
+    {
+      "type": "Cocodron_Dron_Controller_simultaneousOperations",
+      "category": "hardware_lite_cocodron_controller_Lite",
+      "label": {
+        "ko": "Cocodron_Dron_Controller_simultaneousOperations"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": [
+            null,
+            null,
+            null
+          ],
+          "options": [
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_simultaneousOperations_cw",
+              "value": "cw"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_simultaneousOperations_ccw",
+              "value": "ccw"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_simultaneousOperations_up",
+              "value": "up"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_simultaneousOperations_down",
+              "value": "down"
+            }
+          ]
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "TURN_DIRECTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_simultaneousOperations_forward",
+              "value": "forward"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_simultaneousOperations_back",
+              "value": "back"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_simultaneousOperations_left",
+              "value": "left"
+            },
+            {
+              "label": "Lang.Blocks.Cocodron_Dron_Controller_simultaneousOperations_right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "key": "TURN_VALUE",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "TURN_TIME",
+          "type": "Block",
+          "accept": "string"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "cocodron_controller_Lite"
+      }
+    }
+  ]
+}

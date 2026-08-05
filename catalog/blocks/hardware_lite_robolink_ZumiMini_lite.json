@@ -1,0 +1,1065 @@
+{
+  "category": "hardware_lite_robolink_ZumiMini_lite",
+  "blocks": [
+    {
+      "type": "zumiMiniLite_motor_control",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_motor_control"
+      },
+      "params": [
+        {
+          "key": "SEL",
+          "type": "Dropdown",
+          "defaultValue": "LEFT",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_m1",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_m2",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "CW",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cw",
+              "value": "CW"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_ccw",
+              "value": "CCW"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_stop",
+              "value": "STOP"
+            }
+          ]
+        },
+        {
+          "key": "SPD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 5
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_move_straight",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_move_straight"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "FORWARD",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_forward",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_backward",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_rapid",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_mid",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_slow",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "DIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_move_straight_infinite",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_move_straight_infinite"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "FORWARD",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_forward",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_backward",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_rapid",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_mid",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_slow",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_move_turn",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_move_turn"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "RIGHT",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.RAPID",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.MID",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.SLOW",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "DEG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 90
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_motion_stop",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_motion_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_going_forward_until_sensing",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_going_forward_until_sensing"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_following_line_until_sensing",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_following_line_until_sensing"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_following_line_dist",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_following_line_dist"
+      },
+      "params": [
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_rapid",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_mid",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_slow",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "DIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 30
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_following_line_infinite",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_following_line_infinite"
+      },
+      "params": [
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_rapid",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_mid",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_slow",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_LED_control",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_LED_control"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": "WHITE",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_red",
+              "value": "RED"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_green",
+              "value": "GREEN"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_blue",
+              "value": "BLUE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_yellow",
+              "value": "YELLOW"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_sky_blue",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_pink",
+              "value": "PINK"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_white",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": "NORMAL",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_led_normal",
+              "value": "NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_led_blink",
+              "value": "BLINK"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_led_dimming",
+              "value": "DIMMING"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_led_sunrise",
+              "value": "SUNRISE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_led_sunset",
+              "value": "SUNSET"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_led_flicker",
+              "value": "FLICKER"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_led_rainbow",
+              "value": "RAINBOW"
+            }
+          ]
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": "ON",
+          "options": [
+            {
+              "label": "Lang.Blocks.ON",
+              "value": "ON"
+            },
+            {
+              "label": "Lang.Blocks.OFF",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_button_boolean_input",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_button_boolean_input"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": "RED_BTN",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_red_btn",
+              "value": "RED_BTN"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_blue_btn",
+              "value": "BLUE_BTN"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_green_btn",
+              "value": "GREEN_BTN"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_yellow_btn",
+              "value": "YELLOW_BTN"
+            }
+          ]
+        },
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": "PRESS",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_pressed",
+              "value": "PRESS"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_released",
+              "value": "RELEASE"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_screen_toggle",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_screen_toggle"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": "CAMERA",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_camera",
+              "value": "CAMERA"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emotion",
+              "value": "EMOTION"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_emotion",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_emotion"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": "SMILE",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_smile",
+              "value": "SMILE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_love",
+              "value": "LOVE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_surprise",
+              "value": "SURP"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_nice",
+              "value": "NICE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_chaos",
+              "value": "CHAOS"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_crash",
+              "value": "CRASH"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_cantbelieve",
+              "value": "CANTBELIEVE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_sleep",
+              "value": "SLEEP"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_cry",
+              "value": "CRY"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_wink",
+              "value": "WINK"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_blink",
+              "value": "BLINK"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_emo_sleeping",
+              "value": "SLEEPING"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_face_boolean_detector",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_face_boolean_detector"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Dropdown",
+          "defaultValue": "HUMAN",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_human",
+              "value": "HUMAN"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cat",
+              "value": "CAT"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_color_boolean_detector",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_color_boolean_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "RED",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_ai_red",
+              "value": "RED"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_ai_orange",
+              "value": "ORANGE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_ai_yellow",
+              "value": "YELLOW"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_ai_green",
+              "value": "GREEN"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_ai_cyan",
+              "value": "CYAN"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_ai_blue",
+              "value": "BLUE"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_ai_purple",
+              "value": "PURPLE"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_april_boolean_detector",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_april_boolean_detector"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 15
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_front_sensor",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_front_sensor"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "FL",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_fl",
+              "value": "FL"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_fr",
+              "value": "FR"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_bottom_sensor",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_bottom_sensor"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "BL",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_bl",
+              "value": "BL"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_bm",
+              "value": "BM"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_br",
+              "value": "BR"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_button_input",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_button_input"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_power_info",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_power_info"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_face_detector",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_face_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "DETECT",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_detect",
+              "value": "DETECT"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cx",
+              "value": "CX"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cy",
+              "value": "CY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_cat_face_detector",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_cat_face_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "DETECT",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_detect",
+              "value": "DETECT"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cx",
+              "value": "CX"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cy",
+              "value": "CY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_color_detector",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_color_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "COLOR",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_color",
+              "value": "COLOR"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cx",
+              "value": "CX"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cy",
+              "value": "CY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    },
+    {
+      "type": "zumiMiniLite_april_detector",
+      "category": "hardware_lite_robolink_ZumiMini_lite",
+      "label": {
+        "ko": "zumiMiniLite_april_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "ID",
+          "options": [
+            {
+              "label": "Lang.Blocks.zumiMiniLite_id",
+              "value": "ID"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cx",
+              "value": "CX"
+            },
+            {
+              "label": "Lang.Blocks.zumiMiniLite_cy",
+              "value": "CY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "robolink_ZumiMini_lite"
+      }
+    }
+  ]
+}

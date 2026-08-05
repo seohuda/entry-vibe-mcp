@@ -1,0 +1,886 @@
+{
+  "category": "hardware_roborobo_cube",
+  "blocks": [
+    {
+      "type": "cube_menu_digital_value",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_menu_digital_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_menu_digital_value_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.cube_menu_digital_value_off",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_menu_dotmatrix_row",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_menu_dotmatrix_row"
+      },
+      "params": [
+        {
+          "key": "Y",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_menu_proximity_level",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_menu_proximity_level"
+      },
+      "params": [
+        {
+          "key": "LEVEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_set_dot_state_of_dotmatrix",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_set_dot_state_of_dotmatrix"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cube_menu_digital_value",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_set_dotmatrix_row",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_set_dotmatrix_row"
+      },
+      "params": [
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cube_menu_dotmatrix_row",
+            "params": []
+          }
+        },
+        {
+          "key": "X0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "X6",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "8",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_clear_dotmatrix",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_clear_dotmatrix"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_play_piezobuzzer",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_play_piezobuzzer"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_c",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_c_sharp",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_d_sharp",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_e",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_f",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_f_sharp",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_g",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_g_sharp",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_a",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_a_sharp",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_b",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_play_piezobuzzer_until_done",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_play_piezobuzzer_until_done"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_c",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_c_sharp",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_d_sharp",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_e",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_f",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_f_sharp",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_g",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_g_sharp",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_a",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_a_sharp",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.cube_piezobuzzer_tone_b",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.5"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_set_sensor_mode",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_set_sensor_mode"
+      },
+      "params": [
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_sensor_gesture",
+              "value": "gesture"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_proximity",
+              "value": "proximity"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_unused",
+              "value": "unused"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_get_sensor_value",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_get_sensor_value"
+      },
+      "params": [
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_sensor_gesture",
+              "value": "gesture"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_proximity",
+              "value": "proximity"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_is_direction_detected_on_gesture_sensor",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_is_direction_detected_on_gesture_sensor"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_sensor_gesture_direction_up",
+              "value": "up"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_gesture_direction_right",
+              "value": "right"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_gesture_direction_down",
+              "value": "down"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_gesture_direction_left",
+              "value": "left"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_check_detected",
+              "value": "detected"
+            },
+            {
+              "label": "Lang.Blocks.cube_check_not_detected",
+              "value": "not-detected"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_is_proximity_sensor_detected",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_is_proximity_sensor_detected"
+      },
+      "params": [
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_check_detected",
+              "value": "detected"
+            },
+            {
+              "label": "Lang.Blocks.cube_check_not_detected",
+              "value": "not-detected"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_compare_proximity_sensor_level",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_compare_proximity_sensor_level"
+      },
+      "params": [
+        {
+          "key": "SYMBOL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "＞",
+              "value": "greater-than"
+            },
+            {
+              "label": "＝",
+              "value": "equal"
+            },
+            {
+              "label": "＜",
+              "value": "less-than"
+            }
+          ]
+        },
+        {
+          "key": "LEVEL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "cube_menu_proximity_level",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_is_tilted_in_direction",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_is_tilted_in_direction"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_sensor_tilted_direction_forward",
+              "value": "forward"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_tilted_direction_right",
+              "value": "right"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_tilted_direction_backward",
+              "value": "backward"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_tilted_direction_left",
+              "value": "left"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_is_shaken",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_is_shaken"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    },
+    {
+      "type": "cube_is_color_button_pressed",
+      "category": "hardware_roborobo_cube",
+      "label": {
+        "ko": "cube_is_color_button_pressed"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_sensor_color_red",
+              "value": "#FF0000"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_color_yellow",
+              "value": "#FFEE00"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_color_green",
+              "value": "#00AA00"
+            },
+            {
+              "label": "Lang.Blocks.cube_sensor_color_blue",
+              "value": "#0055FF"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cube_check_pressed",
+              "value": "detected"
+            },
+            {
+              "label": "Lang.Blocks.cube_check_not_pressed",
+              "value": "not-detected"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "roborobo_cube"
+      }
+    }
+  ]
+}

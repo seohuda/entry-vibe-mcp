@@ -1,0 +1,150 @@
+{
+  "category": "ai_utilize_object_detector",
+  "blocks": [
+    {
+      "type": "object_detector_title",
+      "category": "ai_utilize_object_detector",
+      "label": {
+        "ko": "object_detector_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "objectDetector"
+      }
+    },
+    {
+      "type": "when_object_detector",
+      "category": "ai_utilize_object_detector",
+      "label": {
+        "ko": "사물을 인식했을 때"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "objectDetector"
+      }
+    },
+    {
+      "type": "object_detector",
+      "category": "ai_utilize_object_detector",
+      "label": {
+        "ko": "사물 인식"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "objectDetector"
+      }
+    },
+    {
+      "type": "draw_detected_object",
+      "category": "ai_utilize_object_detector",
+      "label": {
+        "ko": "인식한 사물"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Unknown"
+        },
+        {
+          "key": "1",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "objectDetector"
+      }
+    },
+    {
+      "type": "check_detected_object",
+      "category": "ai_utilize_object_detector",
+      "label": {
+        "ko": "사물을 인식했는가?"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "objectDetector"
+      }
+    },
+    {
+      "type": "count_detected_object",
+      "category": "ai_utilize_object_detector",
+      "label": {
+        "ko": "인식한 사물의 수"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "objectDetector"
+      }
+    },
+    {
+      "type": "is_detected_among_objects",
+      "category": "ai_utilize_object_detector",
+      "label": {
+        "ko": "사물 중 을(를) 인식했는가?"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "aiUtilize",
+        "module": "objectDetector"
+      }
+    }
+  ]
+}

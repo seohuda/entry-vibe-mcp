@@ -1,0 +1,548 @@
+{
+  "category": "hardware_bitbrick",
+  "blocks": [
+    {
+      "type": "bitbrick_when_button_pressed",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "버튼 눌러졌을 때"
+      },
+      "params": [
+        {
+          "key": "DUMMY",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_when_sensor_get_value",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "값 일 때"
+      },
+      "params": [
+        {
+          "key": "DUMMY",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "INEQ_SIGN",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_sensor_value",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "값"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_convert_scale",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "변환 값 ~ 에서 ~"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_is_touch_pressed",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "버튼 이(가) 인가?"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "PRESSED",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_is_sensor_value_compare",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "값 인가?"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "INEQ_SIGN",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_turn_off_color_led",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "엘이디 끄기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_turn_on_color_led_by_rgb",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "엘이디를 빨강 초록 파랑 (으)로 켜기"
+      },
+      "params": [
+        {
+          "key": "rValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "gValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "bValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_turn_on_color_led_by_picker",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "엘이디를 (으)로 켜기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_turn_on_color_led_by_value",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "엘이디를 (으)로 켜기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_buzzer",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "버저음 내기"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "60"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_turn_off_all_motors",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "모든 모터 멈추기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_dc_speed",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "디씨모터 속도"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_dc_direction_speed",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "디씨모터 방향 속력"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계",
+              "value": "CW"
+            },
+            {
+              "label": "반시계",
+              "value": "CCW"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    },
+    {
+      "type": "bitbrick_servomotor_angle",
+      "category": "hardware_bitbrick",
+      "label": {
+        "ko": "서보모터 각도"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "DropdownDynamic",
+          "defaultValue": null
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "bitbrick"
+      }
+    }
+  ]
+}

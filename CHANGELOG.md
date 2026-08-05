@@ -5,6 +5,13 @@
 
 ## [Unreleased]
 
+### Added
+
+- 카탈로그에 AI 활용·AI 학습·확장·하드웨어·하드웨어 Lite 블록 포함
+- 컴파일 시 `aiUtilizeBlocks` / `expansionBlocks` / `hardwareLiteBlocks` /
+  `externalModules` 자동 채움 (사용된 확장 블록 기준)
+- `getBlocks` 할당형(`Entry.X.getBlocks = function…`) 추출 지원
+
 ## [0.1.0] - 2026-08-05
 
 ### Added

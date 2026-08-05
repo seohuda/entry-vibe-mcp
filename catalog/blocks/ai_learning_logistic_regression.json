@@ -1,0 +1,106 @@
+{
+  "category": "ai_learning_logistic_regression",
+  "blocks": [
+    {
+      "type": "learning_title_logistic_regression",
+      "category": "ai_learning_logistic_regression",
+      "label": {
+        "ko": "learning_title_logistic_regression"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "get_logistic_regression_probability"
+      }
+    },
+    {
+      "type": "set_logistic_regression_option",
+      "category": "ai_learning_logistic_regression",
+      "label": {
+        "ko": "학습 조건 을(를) (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "OPTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.train_param_learningRate",
+              "value": "learningRate"
+            },
+            {
+              "label": "Lang.AiLearning.train_param_epochs",
+              "value": "epochs"
+            },
+            {
+              "label": "Lang.AiLearning.train_param_validationRate",
+              "value": "validationRate"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "get_logistic_regression_probability"
+      }
+    },
+    {
+      "type": "set_logistic_regression_optimizer",
+      "category": "ai_learning_logistic_regression",
+      "label": {
+        "ko": "최적화 알고리즘을 (으)로 바꾸기"
+      },
+      "params": [
+        {
+          "key": "OPTIMIZER",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.AiLearning.train_param_optimizer_adam",
+              "value": "adam"
+            },
+            {
+              "label": "Lang.AiLearning.train_param_optimizer_sgd",
+              "value": "sgd"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "aiLearning",
+        "module": "get_logistic_regression_probability"
+      }
+    }
+  ]
+}

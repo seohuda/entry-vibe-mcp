@@ -1,0 +1,394 @@
+{
+  "category": "hardware_robotisRBHumanoid",
+  "blocks": [
+    {
+      "type": "robotis_RB_cm_motion",
+      "category": "hardware_robotisRBHumanoid",
+      "label": {
+        "ko": "robotis_RB_cm_motion"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_stMotion1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.robotis_stMotion2",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.robotis_stMotion3",
+              "value": "46"
+            },
+            {
+              "label": "Lang.Blocks.robotis_stMotion4",
+              "value": "47"
+            },
+            {
+              "label": "Lang.Blocks.robotis_stMotion5",
+              "value": "37"
+            },
+            {
+              "label": "Lang.Blocks.robotis_stMotion6",
+              "value": "38"
+            },
+            {
+              "label": "Lang.Blocks.robotis_stMotion7",
+              "value": "39"
+            },
+            {
+              "label": "Lang.Blocks.robotis_stMotion8",
+              "value": "41"
+            },
+            {
+              "label": "Lang.Blocks.robotis_stMotion9",
+              "value": "40"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_H"
+      }
+    },
+    {
+      "type": "robotis_RB_cm_motion2",
+      "category": "hardware_robotisRBHumanoid",
+      "label": {
+        "ko": "robotis_RB_cm_motion2"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.robotis_spMotion1",
+              "value": "26"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion2",
+              "value": "27"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion3",
+              "value": "28"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion4",
+              "value": "29"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion5",
+              "value": "30"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion6",
+              "value": "31"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion7",
+              "value": "32"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion8",
+              "value": "33"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion9",
+              "value": "48"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion10",
+              "value": "35"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion11",
+              "value": "36"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion12",
+              "value": "42"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion13",
+              "value": "43"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion14",
+              "value": "44"
+            },
+            {
+              "label": "Lang.Blocks.robotis_spMotion15",
+              "value": "45"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_H"
+      }
+    },
+    {
+      "type": "robotis_RB_cm_motion_custom",
+      "category": "hardware_robotisRBHumanoid",
+      "label": {
+        "ko": "robotis_RB_cm_motion_custom"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_H"
+      }
+    },
+    {
+      "type": "robotis_dxl_control",
+      "category": "hardware_robotisRBHumanoid",
+      "label": {
+        "ko": "robotis_dxl_control"
+      },
+      "params": [
+        {
+          "key": "ANGLE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE6",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE7",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ANGLE8",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "9",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_H"
+      }
+    },
+    {
+      "type": "robotis_dxl_each_control",
+      "category": "hardware_robotisRBHumanoid",
+      "label": {
+        "ko": "robotis_dxl_each_control"
+      },
+      "params": [
+        {
+          "key": "DXLNUM",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "ANGLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotis_rb_H"
+      }
+    }
+  ]
+}

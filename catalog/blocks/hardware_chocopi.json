@@ -1,0 +1,1891 @@
+{
+  "category": "hardware_chocopi",
+  "blocks": [
+    {
+      "type": "chocopi_sensor",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "센서"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "sensor",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Hw.temp",
+              "value": "temp"
+            },
+            {
+              "label": "Lang.Hw.humidity",
+              "value": "humi"
+            },
+            {
+              "label": "Lang.Hw.light",
+              "value": "light"
+            },
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_touch_event",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "터치 번을"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        },
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "id",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "status",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "만질 때",
+              "value": "1"
+            },
+            {
+              "label": "뗄 때",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_touch_status",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "터치 번을 만짐"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "sensor",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_touch_value",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "터치 번의 값"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "sensor",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_control_event",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "컨트롤 을"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        },
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "id",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "status",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "누를 때",
+              "value": "1"
+            },
+            {
+              "label": "뗄 때",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_control_joystick",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "컨트롤 의 값"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "sensor",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "조이스틱 좌우",
+              "value": "0"
+            },
+            {
+              "label": "조이스틱 상하",
+              "value": "1"
+            },
+            {
+              "label": "볼륨",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_control_button",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "컨트롤 번을 누름"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "sensor",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_motion_photogate_time",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "포토게이트번을"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "sensor",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "action",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "연 시간",
+              "value": "0"
+            },
+            {
+              "label": "막은 시간",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_motion_value",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "모션 의 값"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "sensor",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.chocopi_motion_angle_x",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.chocopi_motion_angle_y",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.chocopi_motion_angle_z",
+              "value": "11"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_motion_photogate_status",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "포토게이트 번이 막힘"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "sensor",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_motion_photogate_event",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "포토게이트 번을"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        },
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "id",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "status",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "열었을 때",
+              "value": "0"
+            },
+            {
+              "label": "막았을 때",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_led",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "LED RGB( )"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "l",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "r",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "g",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "b",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_dc_motor",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "DC모터 % 세기 방향"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "id",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "power",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "direction",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.General.clock",
+              "value": "0"
+            },
+            {
+              "label": "Lang.General.counter_clock",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_servo_motor",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "서보모터 번 도"
+      },
+      "params": [
+        {
+          "key": "port",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "0"
+            },
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "BLE1",
+              "value": "8"
+            },
+            {
+              "label": "BLE2",
+              "value": "9"
+            },
+            {
+              "label": "BLE3",
+              "value": "10"
+            },
+            {
+              "label": "BLE4",
+              "value": "11"
+            },
+            {
+              "label": "BLE5",
+              "value": "12"
+            },
+            {
+              "label": "BLE6",
+              "value": "13"
+            },
+            {
+              "label": "BLE7",
+              "value": "14"
+            },
+            {
+              "label": "BLE8",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "key": "id",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "angle",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    },
+    {
+      "type": "chocopi_map_range",
+      "category": "hardware_chocopi",
+      "label": {
+        "ko": "chocopi_map_range"
+      },
+      "params": [
+        {
+          "key": "x",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "x1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "x2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              4096
+            ]
+          }
+        },
+        {
+          "key": "y1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "y2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              255
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "chocopi"
+      }
+    }
+  ]
+}

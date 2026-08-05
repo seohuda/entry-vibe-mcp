@@ -1,0 +1,522 @@
+{
+  "category": "hardware_jdkit",
+  "blocks": [
+    {
+      "type": "jdkit_joystick",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "조이스틱 읽기"
+      },
+      "params": [
+        {
+          "key": "JOYSTICK",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽 상하",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽 좌우",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽 상하",
+              "value": "3"
+            },
+            {
+              "label": "오른쪽 좌우",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_button",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "번 버튼 값 읽어오기"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_gyro",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "보드 기울기 값 읽어오기"
+      },
+      "params": [
+        {
+          "key": "GYRO",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞뒤",
+              "value": "1"
+            },
+            {
+              "label": "좌우",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_ultrasonic",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "거리(초음파)값 읽어오기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_connect",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "드론 연결 상태 읽어오기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_ready",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "드론 비행 준비 상태 읽어오기"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_led",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "LED"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "초록색",
+              "value": "1"
+            },
+            {
+              "label": "오랜지색",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "3"
+            },
+            {
+              "label": "끄기",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_tune",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "음을 초동안 소리내기"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "1"
+            },
+            {
+              "label": "레",
+              "value": "2"
+            },
+            {
+              "label": "미",
+              "value": "3"
+            },
+            {
+              "label": "파",
+              "value": "4"
+            },
+            {
+              "label": "솔",
+              "value": "5"
+            },
+            {
+              "label": "라",
+              "value": "6"
+            },
+            {
+              "label": "시",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0.2",
+              "value": "2"
+            },
+            {
+              "label": "0.4",
+              "value": "4"
+            },
+            {
+              "label": "0.6",
+              "value": "6"
+            },
+            {
+              "label": "0.8",
+              "value": "8"
+            },
+            {
+              "label": "1",
+              "value": "10"
+            },
+            {
+              "label": "2",
+              "value": "20"
+            },
+            {
+              "label": "3",
+              "value": "30"
+            },
+            {
+              "label": "4",
+              "value": "40"
+            },
+            {
+              "label": "5",
+              "value": "50"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_motor",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "모터를 세기로 돌리기"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽위",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽아래",
+              "value": "0"
+            },
+            {
+              "label": "오른쪽위",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽아래",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "POWER",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_throttle",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "드론 프로펠러를 만큼 세기로 돌리기"
+      },
+      "params": [
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_altitude",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "드론을 높이만큼 날리기"
+      },
+      "params": [
+        {
+          "key": "ALTITUDE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_rollpitch",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "드론을 방향 세기로 움직이기"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞뒤",
+              "value": "1"
+            },
+            {
+              "label": "좌우",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "POWER",
+          "type": "Block",
+          "accept": "string"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_yaw",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "드론을 만큼 회전하기"
+      },
+      "params": [
+        {
+          "key": "YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    },
+    {
+      "type": "jdkit_emergency",
+      "category": "hardware_jdkit",
+      "label": {
+        "ko": "드론을 즉시 멈추기"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "JDKit"
+      }
+    }
+  ]
+}

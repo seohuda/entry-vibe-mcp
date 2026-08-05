@@ -1,0 +1,695 @@
+{
+  "category": "hardware_codestar",
+  "blocks": [
+    {
+      "type": "codestar_color_single",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_color_single"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 7,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "7"
+            },
+            {
+              "label": "파란색",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": "on",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_3color",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_3color"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 9,
+          "options": [
+            {
+              "label": "빨간색",
+              "value": "9"
+            },
+            {
+              "label": "초록색",
+              "value": "10"
+            },
+            {
+              "label": "파란색",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              120
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_vibration",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_vibration"
+      },
+      "params": [
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": "on",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "on"
+            },
+            {
+              "label": "끄기",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_buzzer",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_buzzer"
+      },
+      "params": [
+        {
+          "key": "TONE",
+          "type": "Dropdown",
+          "defaultValue": 4,
+          "options": [
+            {
+              "label": "G3",
+              "value": "1"
+            },
+            {
+              "label": "A3",
+              "value": "2"
+            },
+            {
+              "label": "B3",
+              "value": "3"
+            },
+            {
+              "label": "C4",
+              "value": "4"
+            },
+            {
+              "label": "D4",
+              "value": "5"
+            },
+            {
+              "label": "E4",
+              "value": "6"
+            },
+            {
+              "label": "F4",
+              "value": "7"
+            },
+            {
+              "label": "G4",
+              "value": "8"
+            },
+            {
+              "label": "A4",
+              "value": "9"
+            },
+            {
+              "label": "B4",
+              "value": "10"
+            },
+            {
+              "label": "C5",
+              "value": "11"
+            },
+            {
+              "label": "D5",
+              "value": "12"
+            },
+            {
+              "label": "E5",
+              "value": "13"
+            },
+            {
+              "label": "F5",
+              "value": "14"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_buzzer_stop",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_buzzer_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_servo",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "D3",
+          "options": [
+            {
+              "label": "D3",
+              "value": "D3"
+            },
+            {
+              "label": "D5",
+              "value": "D5"
+            },
+            {
+              "label": "D6",
+              "value": "D6"
+            },
+            {
+              "label": "D9",
+              "value": "D9"
+            },
+            {
+              "label": "D10",
+              "value": "D10"
+            },
+            {
+              "label": "D11",
+              "value": "D11"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              90
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_drive",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_drive"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "0"
+            },
+            {
+              "label": "뒤로",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_wheel",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_wheel"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "0"
+            },
+            {
+              "label": "오른쪽",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              100
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_light",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_light"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_button",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_button"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_ir",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_ir"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            },
+            {
+              "label": "A7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_sonar",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_sonar"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_variable_R",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_variable_R"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_mic",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_mic"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_temperature",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_temperature"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_gyroscope",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_gyroscope"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": "x",
+          "options": [
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            },
+            {
+              "label": "z",
+              "value": "z"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_geomagnetic",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_geomagnetic"
+      },
+      "params": [
+        {
+          "key": "AXIS",
+          "type": "Dropdown",
+          "defaultValue": "x",
+          "options": [
+            {
+              "label": "x",
+              "value": "x"
+            },
+            {
+              "label": "y",
+              "value": "y"
+            },
+            {
+              "label": "z",
+              "value": "z"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_irR",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_irR"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    },
+    {
+      "type": "codestar_tilt",
+      "category": "hardware_codestar",
+      "label": {
+        "ko": "codestar_tilt"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "codestar"
+      }
+    }
+  ]
+}

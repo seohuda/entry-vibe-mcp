@@ -1,0 +1,179 @@
+{
+  "category": "hardware_arduino_nano",
+  "blocks": [
+    {
+      "type": "arduino_nano_analog_list",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_analog_list"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            },
+            {
+              "label": "A6",
+              "value": "6"
+            },
+            {
+              "label": "A7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    },
+    {
+      "type": "arduino_nano_get_analog_value",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_get_analog_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    },
+    {
+      "type": "arduino_nano_get_analog_value_map",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_get_analog_value_map"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    },
+    {
+      "type": "arduino_nano_get_ultrasonic_value",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_get_ultrasonic_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    },
+    {
+      "type": "arduino_nano_get_digital",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_get_digital"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    },
+    {
+      "type": "arduino_nano_toggle_led",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_toggle_led"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    },
+    {
+      "type": "arduino_nano_digital_pwm",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_digital_pwm"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    },
+    {
+      "type": "arduino_nano_set_tone",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_set_tone"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    },
+    {
+      "type": "arduino_nano_set_servo",
+      "category": "hardware_arduino_nano",
+      "label": {
+        "ko": "arduino_nano_set_servo"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "extension": {
+        "kind": "hardware",
+        "module": "ArduinoNano"
+      }
+    }
+  ]
+}

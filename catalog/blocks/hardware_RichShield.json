@@ -1,0 +1,1618 @@
+{
+  "category": "hardware_RichShield",
+  "blocks": [
+    {
+      "type": "RichShield_list_digital_basic",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown1",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_pullup_setting",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_pullup_setting"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.RichShield_pulldown",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.RichShield_pullup",
+              "value": "255"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_get_digital_ultrasonic",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_get_digital_ultrasonic"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "8"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "7"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_get_digital",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "RichShield_list_digital_switch",
+            "params": []
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "RichShield_list_pullup_setting",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_get_digital_toggle",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_get_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_digital_switch",
+            "params": []
+          }
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "RichShield_list_pullup_setting",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_analog_basic",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_analog_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "A0",
+              "value": "0"
+            },
+            {
+              "label": "A1",
+              "value": "1"
+            },
+            {
+              "label": "A2",
+              "value": "2"
+            },
+            {
+              "label": "A3",
+              "value": "3"
+            },
+            {
+              "label": "A4",
+              "value": "4"
+            },
+            {
+              "label": "A5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_get_Analog_value",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_get_Analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_analog_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_digital_pwm",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "~3",
+              "value": "3"
+            },
+            {
+              "label": "~5",
+              "value": "5"
+            },
+            {
+              "label": "~6",
+              "value": "6"
+            },
+            {
+              "label": "~9",
+              "value": "9"
+            },
+            {
+              "label": "~10",
+              "value": "10"
+            },
+            {
+              "label": "~11",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_digital_pwm2",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_pwm2"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "~9",
+              "value": "9"
+            },
+            {
+              "label": "~10",
+              "value": "10"
+            },
+            {
+              "label": "~11",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_digital_switch",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_switch"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_rgbled_event",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_rgbled_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_rgbled_clr",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_rgbled_clr"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_rgbled_set",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_rgbled_set"
+      },
+      "params": [
+        {
+          "key": "NO",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "VALUE0",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_rgbled_show",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_rgbled_show"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_digital_servo",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_digital_sound",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_sound"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_digital_octave",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_octave"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_digital_toggle",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.RichShield_toggle_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.RichShield_toggle_off",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_set_digital_toggle",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_set_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_digital_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_digital_toggle",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_set_digital_pwm",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_set_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_digital_pwm2",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_set_digital_servo",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_set_digital_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_digital_servo",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_set_digital_buzzer",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_set_digital_buzzer"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_digital_sound",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_digital_tone",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "RichShield_list_digital_octave",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_LCD_event",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_LCD_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_LCD_Control_init",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_LCD_Control_init"
+      },
+      "params": [
+        {
+          "key": "lcd_device",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "address",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0x20",
+              "value": "32"
+            },
+            {
+              "label": "0x27",
+              "value": "39"
+            },
+            {
+              "label": "0x3f",
+              "value": "63"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_list_digital_lcd",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_list_digital_lcd"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.RichShield_lcd_first_line",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.RichShield_lcd_seconds_line",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_LCD_Control_Display",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_LCD_Control_Display"
+      },
+      "params": [
+        {
+          "key": "line",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "Row",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "Col",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "RichShield !!"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_LCD_Control_Clear",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_LCD_Control_Clear"
+      },
+      "params": [
+        {
+          "key": "lcd_device",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_LCD_Control_Scroll",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_LCD_Control_Scroll"
+      },
+      "params": [
+        {
+          "key": "lcd_device",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "direction",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_FND_event",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_FND_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_FND_Control_init",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_FND_Control_init"
+      },
+      "params": [
+        {
+          "key": "fnd_device",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "CLK",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "DIO",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_FND_Control_diplay_brightness",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_FND_Control_diplay_brightness"
+      },
+      "params": [
+        {
+          "key": "fnd_device",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "level",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_FND_Control_display_onoff",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_FND_Control_display_onoff"
+      },
+      "params": [
+        {
+          "key": "fnd_device",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "onoff",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.RichShield_toggle_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.RichShield_toggle_on",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_FND_Control_diplay_char",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_FND_Control_diplay_char"
+      },
+      "params": [
+        {
+          "key": "fnd_device",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "display_value",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1234"
+            ]
+          }
+        },
+        {
+          "key": "onoff",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "Lang.Blocks.RichShield_toggle_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.RichShield_toggle_on",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "delay_ms",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0.1"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_DHT_event",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_DHT_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_DHT_Control_Init_Process",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_DHT_Control_Init_Process"
+      },
+      "params": [
+        {
+          "key": "dht_device",
+          "type": "Block"
+        },
+        {
+          "key": "pin",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "key": "ver",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "DHT11",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_DHT_Control_Get_Temper",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_DHT_Control_Get_Temper"
+      },
+      "params": [
+        {
+          "key": "dht_device",
+          "type": "Block"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_OLED_event",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_OLED_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_OLED_init",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_OLED_init"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_OLED_Display_String",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_OLED_Display_String"
+      },
+      "params": [
+        {
+          "key": "Row",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "Col",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "RichShield !!"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_IRREMOTE_event",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_IRREMOTE_event"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_IRREMOTE_init",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_IRREMOTE_init"
+      },
+      "params": [
+        {
+          "key": "ir_device",
+          "type": "Block"
+        },
+        {
+          "key": "pin",
+          "type": "Block"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_IRREMOTE_recv",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_IRREMOTE_recv"
+      },
+      "params": [
+        {
+          "key": "ir_device",
+          "type": "Block"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    },
+    {
+      "type": "RichShield_DHT2",
+      "category": "hardware_RichShield",
+      "label": {
+        "ko": "RichShield_DHT2"
+      },
+      "params": [
+        {
+          "key": "ir_device",
+          "type": "Block"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "RichShield"
+      }
+    }
+  ]
+}

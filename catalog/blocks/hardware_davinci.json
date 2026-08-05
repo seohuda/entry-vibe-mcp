@@ -1,0 +1,1012 @@
+{
+  "category": "hardware_davinci",
+  "blocks": [
+    {
+      "type": "davinci_led_toggle",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_led_toggle"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "Y",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "A",
+              "value": "0"
+            },
+            {
+              "label": "B",
+              "value": "1"
+            },
+            {
+              "label": "C",
+              "value": "2"
+            },
+            {
+              "label": "D",
+              "value": "3"
+            },
+            {
+              "label": "E",
+              "value": "4"
+            },
+            {
+              "label": "F",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "0"
+            },
+            {
+              "label": "끄기",
+              "value": "1"
+            },
+            {
+              "label": "반전",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_get_led",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_get_led"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "Y",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "A",
+              "value": "0"
+            },
+            {
+              "label": "B",
+              "value": "1"
+            },
+            {
+              "label": "C",
+              "value": "2"
+            },
+            {
+              "label": "D",
+              "value": "3"
+            },
+            {
+              "label": "E",
+              "value": "4"
+            },
+            {
+              "label": "F",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_show_string",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_show_string"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello!"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_show_image",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_show_image"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "하트",
+              "value": "0"
+            },
+            {
+              "label": "작은하트",
+              "value": "1"
+            },
+            {
+              "label": "정답",
+              "value": "2"
+            },
+            {
+              "label": "오답",
+              "value": "3"
+            },
+            {
+              "label": "웃는얼굴",
+              "value": "5"
+            },
+            {
+              "label": "화난얼굴",
+              "value": "6"
+            },
+            {
+              "label": "슬픈얼굴",
+              "value": "7"
+            },
+            {
+              "label": "소얼굴",
+              "value": "8"
+            },
+            {
+              "label": "무표정한얼굴",
+              "value": "9"
+            },
+            {
+              "label": "사슴",
+              "value": "12"
+            },
+            {
+              "label": "물음표",
+              "value": "13"
+            },
+            {
+              "label": "느낌표",
+              "value": "14"
+            },
+            {
+              "label": "기린",
+              "value": "15"
+            },
+            {
+              "label": "개",
+              "value": "16"
+            },
+            {
+              "label": "위",
+              "value": "20"
+            },
+            {
+              "label": "왼쪽",
+              "value": "21"
+            },
+            {
+              "label": "아래",
+              "value": "22"
+            },
+            {
+              "label": "오른쪽",
+              "value": "23"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_set_analog",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_set_analog"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1번",
+              "value": "0"
+            },
+            {
+              "label": "2번",
+              "value": "1"
+            },
+            {
+              "label": "3번",
+              "value": "2"
+            },
+            {
+              "label": "4번",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_set_digital",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_set_digital"
+      },
+      "params": [
+        {
+          "key": "PIN",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1번",
+              "value": "0"
+            },
+            {
+              "label": "2번",
+              "value": "1"
+            },
+            {
+              "label": "3번",
+              "value": "2"
+            },
+            {
+              "label": "4번",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "0"
+            },
+            {
+              "label": "끄기",
+              "value": "1"
+            },
+            {
+              "label": "반전",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_get_analog",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_get_analog"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1번",
+              "value": "0"
+            },
+            {
+              "label": "2번",
+              "value": "1"
+            },
+            {
+              "label": "3번",
+              "value": "2"
+            },
+            {
+              "label": "4번",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_get_digital",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_get_digital"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1번",
+              "value": "0"
+            },
+            {
+              "label": "2번",
+              "value": "1"
+            },
+            {
+              "label": "3번",
+              "value": "2"
+            },
+            {
+              "label": "4번",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_get_button",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_get_button"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "A",
+              "value": "10"
+            },
+            {
+              "label": "B",
+              "value": "11"
+            },
+            {
+              "label": "A + B",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_get_sensor",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_get_sensor"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "빛",
+              "value": "lightLevel"
+            },
+            {
+              "label": "온도",
+              "value": "temperature"
+            },
+            {
+              "label": "소리",
+              "value": "soundLevel"
+            },
+            {
+              "label": "자기",
+              "value": "compassHeading"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_get_accelerometer",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_get_accelerometer"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "x축",
+              "value": "0"
+            },
+            {
+              "label": "y축",
+              "value": "1"
+            },
+            {
+              "label": "z축",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_get_gyro",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_get_gyro"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "x축",
+              "value": "0"
+            },
+            {
+              "label": "y축",
+              "value": "1"
+            },
+            {
+              "label": "z축",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_get_magnet",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_get_magnet"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "x축",
+              "value": "0"
+            },
+            {
+              "label": "y축",
+              "value": "1"
+            },
+            {
+              "label": "z축",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_play_note",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_play_note"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "낮은 도",
+              "value": "1"
+            },
+            {
+              "label": "낮은 도#",
+              "value": "22"
+            },
+            {
+              "label": "낮은 레",
+              "value": "2"
+            },
+            {
+              "label": "낮은 레#",
+              "value": "23"
+            },
+            {
+              "label": "낮은 미",
+              "value": "3"
+            },
+            {
+              "label": "낮은 파",
+              "value": "4"
+            },
+            {
+              "label": "낮은 파#",
+              "value": "24"
+            },
+            {
+              "label": "낮은 솔",
+              "value": "5"
+            },
+            {
+              "label": "낮은 솔#",
+              "value": "25"
+            },
+            {
+              "label": "낮은 라",
+              "value": "6"
+            },
+            {
+              "label": "낮은 라#",
+              "value": "26"
+            },
+            {
+              "label": "낮은 시",
+              "value": "7"
+            },
+            {
+              "label": "가온 도",
+              "value": "8"
+            },
+            {
+              "label": "가온 도#",
+              "value": "27"
+            },
+            {
+              "label": "가온 레",
+              "value": "9"
+            },
+            {
+              "label": "가온 레#",
+              "value": "28"
+            },
+            {
+              "label": "가온 미",
+              "value": "10"
+            },
+            {
+              "label": "가온 파",
+              "value": "11"
+            },
+            {
+              "label": "가온 파#",
+              "value": "29"
+            },
+            {
+              "label": "가온 솔",
+              "value": "12"
+            },
+            {
+              "label": "가온 솔#",
+              "value": "30"
+            },
+            {
+              "label": "가온 라",
+              "value": "13"
+            },
+            {
+              "label": "가온 라#",
+              "value": "31"
+            },
+            {
+              "label": "가온 시",
+              "value": "14"
+            },
+            {
+              "label": "높은 도",
+              "value": "15"
+            },
+            {
+              "label": "높은 도#",
+              "value": "32"
+            },
+            {
+              "label": "높은 레",
+              "value": "16"
+            },
+            {
+              "label": "높은 레#",
+              "value": "33"
+            },
+            {
+              "label": "높은 미",
+              "value": "17"
+            },
+            {
+              "label": "높은 파",
+              "value": "18"
+            },
+            {
+              "label": "높은 파#",
+              "value": "34"
+            },
+            {
+              "label": "높은 솔",
+              "value": "19"
+            },
+            {
+              "label": "높은 솔#",
+              "value": "35"
+            },
+            {
+              "label": "높은 라",
+              "value": "20"
+            },
+            {
+              "label": "높은 라#",
+              "value": "36"
+            },
+            {
+              "label": "높은 시",
+              "value": "21"
+            }
+          ]
+        },
+        {
+          "key": "BEAT",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "1/2",
+              "value": "4"
+            },
+            {
+              "label": "1/4",
+              "value": "5"
+            },
+            {
+              "label": "1/8",
+              "value": "6"
+            },
+            {
+              "label": "1/16",
+              "value": "7"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "4",
+              "value": "2"
+            },
+            {
+              "label": "8",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_play_melody",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_play_melody"
+      },
+      "params": [
+        {
+          "key": "MELODY",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "띠링",
+              "value": "0"
+            },
+            {
+              "label": "와우와우와우",
+              "value": "1"
+            },
+            {
+              "label": "올라가기",
+              "value": "2"
+            },
+            {
+              "label": "내려가기",
+              "value": "3"
+            },
+            {
+              "label": "파워업",
+              "value": "4"
+            },
+            {
+              "label": "파워다운",
+              "value": "5"
+            },
+            {
+              "label": "마법봉",
+              "value": "6"
+            },
+            {
+              "label": "비상벨",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_change_bpm",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_change_bpm"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              20
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    },
+    {
+      "type": "davinci_set_bpm",
+      "category": "hardware_davinci",
+      "label": {
+        "ko": "davinci_set_bpm"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              120
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "davinci"
+      }
+    }
+  ]
+}

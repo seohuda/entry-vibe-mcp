@@ -1,0 +1,786 @@
+{
+  "category": "hardware_truerobot",
+  "blocks": [
+    {
+      "type": "truetrue_get_linesensor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "라인센서 의 값"
+      },
+      "params": [
+        {
+          "key": "position",
+          "type": "Dropdown",
+          "defaultValue": "L2",
+          "options": [
+            {
+              "label": "",
+              "value": "L2"
+            },
+            {
+              "label": "",
+              "value": "L1"
+            },
+            {
+              "label": "",
+              "value": "R1"
+            },
+            {
+              "label": "",
+              "value": "R2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_get_proxisensor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "근접센서 의 값"
+      },
+      "params": [
+        {
+          "key": "position",
+          "type": "Dropdown",
+          "defaultValue": "ProxiLeft",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_left",
+              "value": "ProxiLeft"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_right",
+              "value": "ProxiRight"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_get_accsensor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "가속도센서 의 값"
+      },
+      "params": [
+        {
+          "key": "position",
+          "type": "Dropdown",
+          "defaultValue": "AccX",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_Xaxis",
+              "value": "AccX"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_Yaxis",
+              "value": "AccY"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_Zaxis",
+              "value": "AccZ"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_Tilt",
+              "value": "AccStatus"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_get_bottomcolorsensor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "바닥컬러센서 의 값"
+      },
+      "params": [
+        {
+          "key": "position",
+          "type": "Dropdown",
+          "defaultValue": "BColorRed",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_red",
+              "value": "BColorRed"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_green",
+              "value": "BColorGreen"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_blue",
+              "value": "BColorBlue"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_ColorKey",
+              "value": "BColorKey"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_get_frontcolorsensor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "전면컬러센서 의 값"
+      },
+      "params": [
+        {
+          "key": "position",
+          "type": "Dropdown",
+          "defaultValue": "FColorLeftKey",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_left",
+              "value": "FColorLeftKey"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_right",
+              "value": "FColorRightKey"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_singlemotor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "DC모터 속도 로 설정"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "9",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_left",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_right",
+              "value": "10"
+            },
+            {
+              "label": "All",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_dualmotor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "DC모터 좌 우 속도로 초 구동"
+      },
+      "params": [
+        {
+          "key": "leftValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "rightValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "delayValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_colorled",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "컬러LED Red Green Blue 로 설정"
+      },
+      "params": [
+        {
+          "key": "redColor",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "greenColor",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "blueColor",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_led_proxi",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "조명용 LED"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 9,
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_front_near_left",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_front_near_right",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": "on",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_led_colorsensor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "조명용 LED"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 3,
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_front_color",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_bottom_color",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": "on",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_led_linesensor",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "라인센서 조명용 LED"
+      },
+      "params": [
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": "on",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_linetracer",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "라인트레이싱 모드"
+      },
+      "params": [
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": "on",
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_head_colorled",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "truetrue_set_head_colorled"
+      },
+      "params": [
+        {
+          "key": "headColor",
+          "type": "Dropdown",
+          "defaultValue": 101,
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_white",
+              "value": "101"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_red",
+              "value": "102"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_green",
+              "value": "103"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_blue",
+              "value": "104"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_cyan",
+              "value": "105"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_magenta",
+              "value": "106"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_yellow",
+              "value": "107"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_head_color_off",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_move",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "truetrue_set_move"
+      },
+      "params": [
+        {
+          "key": "moveValue",
+          "type": "Dropdown",
+          "defaultValue": 101,
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_move_forward",
+              "value": "101"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_move_backward",
+              "value": "102"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_sec_move",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "truetrue_set_sec_move"
+      },
+      "params": [
+        {
+          "key": "moveValue",
+          "type": "Dropdown",
+          "defaultValue": 101,
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_move_forward",
+              "value": "101"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_move_backward",
+              "value": "102"
+            }
+          ]
+        },
+        {
+          "key": "delayValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_rotate",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "truetrue_set_rotate"
+      },
+      "params": [
+        {
+          "key": "moveValue",
+          "type": "Dropdown",
+          "defaultValue": 101,
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_move_right",
+              "value": "101"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_move_left",
+              "value": "102"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_sec_rotate",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "truetrue_set_sec_rotate"
+      },
+      "params": [
+        {
+          "key": "moveValue",
+          "type": "Dropdown",
+          "defaultValue": 101,
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_move_right",
+              "value": "101"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_move_left",
+              "value": "102"
+            }
+          ]
+        },
+        {
+          "key": "delayValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_grid_block",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "truetrue_set_grid_block"
+      },
+      "params": [
+        {
+          "key": "gridValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    },
+    {
+      "type": "truetrue_set_grid_rotate",
+      "category": "hardware_truerobot",
+      "label": {
+        "ko": "truetrue_set_grid_rotate"
+      },
+      "params": [
+        {
+          "key": "moveValue",
+          "type": "Dropdown",
+          "defaultValue": 101,
+          "options": [
+            {
+              "label": "Lang.Blocks.truetruebot_move_right",
+              "value": "101"
+            },
+            {
+              "label": "Lang.Blocks.truetruebot_move_left",
+              "value": "102"
+            }
+          ]
+        },
+        {
+          "key": "rotateValue",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "trueRobot"
+      }
+    }
+  ]
+}

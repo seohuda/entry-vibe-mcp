@@ -1,0 +1,1100 @@
+{
+  "category": "hardware_cobl",
+  "blocks": [
+    {
+      "type": "cobl_read_ultrason",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_ultrason"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_potenmeter",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_potenmeter"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_irread1",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_irread1"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_irread2",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_irread2"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_joyx",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_joyx"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_joyy",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_joyy"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_tilt",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_tilt"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_color",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_color"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_humid",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_humid"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_temps",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_temps"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_light",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_light"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_read_btn",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_read_btn"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_led_control",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_led_control"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "OFF",
+          "options": [
+            {
+              "label": "OFF",
+              "value": "OFF"
+            },
+            {
+              "label": "빨강",
+              "value": "Red"
+            },
+            {
+              "label": "주황",
+              "value": "Orange"
+            },
+            {
+              "label": "노랑",
+              "value": "Yellow"
+            },
+            {
+              "label": "초록",
+              "value": "Green"
+            },
+            {
+              "label": "파랑",
+              "value": "Blue"
+            },
+            {
+              "label": "남색",
+              "value": "Dark Blue"
+            },
+            {
+              "label": "보라",
+              "value": "Purple"
+            },
+            {
+              "label": "흰색",
+              "value": "White"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_rgb_boardled",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_rgb_boardled"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "RED",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "GREEN",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "BLUE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_servo_angle_control",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_servo_angle_control"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "90"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_melody",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_melody"
+      },
+      "params": [
+        {
+          "key": "MELODY",
+          "type": "Dropdown",
+          "defaultValue": "Do",
+          "options": [
+            {
+              "label": "(낮은)솔",
+              "value": "L_So"
+            },
+            {
+              "label": "(낮은)솔#",
+              "value": "L_So#"
+            },
+            {
+              "label": "(낮은)라",
+              "value": "L_La"
+            },
+            {
+              "label": "(낮은)라#",
+              "value": "L_La#"
+            },
+            {
+              "label": "(낮은)시",
+              "value": "L_Ti"
+            },
+            {
+              "label": "도",
+              "value": "Do"
+            },
+            {
+              "label": "도#",
+              "value": "Do#"
+            },
+            {
+              "label": "레",
+              "value": "Re"
+            },
+            {
+              "label": "레#",
+              "value": "Re#"
+            },
+            {
+              "label": "미",
+              "value": "Mi"
+            },
+            {
+              "label": "파",
+              "value": "Fa"
+            },
+            {
+              "label": "파#",
+              "value": "Fa#"
+            },
+            {
+              "label": "솔",
+              "value": "So"
+            },
+            {
+              "label": "솔#",
+              "value": "So#"
+            },
+            {
+              "label": "라",
+              "value": "La"
+            },
+            {
+              "label": "라#",
+              "value": "La#"
+            },
+            {
+              "label": "시",
+              "value": "Ti"
+            },
+            {
+              "label": "(높은)도",
+              "value": "H_Do"
+            },
+            {
+              "label": "(높은)도#",
+              "value": "H_Do#"
+            },
+            {
+              "label": "(높은)레",
+              "value": "H_Re"
+            },
+            {
+              "label": "(높은)레#",
+              "value": "H_Re#"
+            },
+            {
+              "label": "(높은)미",
+              "value": "H_Mi"
+            },
+            {
+              "label": "(높은)파",
+              "value": "H_Fa"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_dcmotor",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_dcmotor"
+      },
+      "params": [
+        {
+          "key": "MOTOR",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1.시계방향",
+              "value": "1"
+            },
+            {
+              "label": "2.반시계방향",
+              "value": "2"
+            },
+            {
+              "label": "3.정지",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_extention_port",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_extention_port"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "LEVEL",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_external_RainBowled",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_external_RainBowled"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": "OFF",
+          "options": [
+            {
+              "label": "OFF",
+              "value": "OFF"
+            },
+            {
+              "label": "빨강",
+              "value": "Red"
+            },
+            {
+              "label": "주황",
+              "value": "Orange"
+            },
+            {
+              "label": "노랑",
+              "value": "Yellow"
+            },
+            {
+              "label": "초록",
+              "value": "Green"
+            },
+            {
+              "label": "파랑",
+              "value": "Blue"
+            },
+            {
+              "label": "남색",
+              "value": "Dark Blue"
+            },
+            {
+              "label": "보라",
+              "value": "Purple"
+            },
+            {
+              "label": "흰색",
+              "value": "White"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_external_led",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_external_led"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "1"
+        },
+        {
+          "key": "RED",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "GREEN",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "BLUE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    },
+    {
+      "type": "cobl_7_segment",
+      "category": "hardware_cobl",
+      "label": {
+        "ko": "cobl_7_segment"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": "0"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cobl"
+      }
+    }
+  ]
+}

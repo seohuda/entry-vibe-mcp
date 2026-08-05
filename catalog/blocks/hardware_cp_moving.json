@@ -1,0 +1,974 @@
+{
+  "category": "hardware_cp_moving",
+  "blocks": [
+    {
+      "type": "cp_moving_set_vibrator",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_vibrator"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_set_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_set_off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_fan",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_fan"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "20",
+              "value": "50"
+            },
+            {
+              "label": "40",
+              "value": "100"
+            },
+            {
+              "label": "60",
+              "value": "150"
+            },
+            {
+              "label": "80",
+              "value": "200"
+            },
+            {
+              "label": "100",
+              "value": "250"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_motor",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_motor"
+      },
+      "params": [
+        {
+          "key": "WHICH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_motor_left",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_motor_right",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "20",
+              "value": "10"
+            },
+            {
+              "label": "40",
+              "value": "20"
+            },
+            {
+              "label": "60",
+              "value": "30"
+            },
+            {
+              "label": "80",
+              "value": "40"
+            },
+            {
+              "label": "100",
+              "value": "50"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_motor_forward",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_motor_reverse",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_stop_motor",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_stop_motor"
+      },
+      "params": [
+        {
+          "key": "WHICH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_motor_left",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_motor_right",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_move",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_move"
+      },
+      "params": [
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "20",
+              "value": "10"
+            },
+            {
+              "label": "40",
+              "value": "20"
+            },
+            {
+              "label": "60",
+              "value": "30"
+            },
+            {
+              "label": "80",
+              "value": "40"
+            },
+            {
+              "label": "100",
+              "value": "50"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_move_forward",
+              "value": "Entry.cp_moving.move.FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_move_backward",
+              "value": "Entry.cp_moving.move.BACKWARD"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_move_left",
+              "value": "Entry.cp_moving.move.LEFT"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_move_right",
+              "value": "Entry.cp_moving.move.RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_stop_move",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_stop_move"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_servor",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_servor"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_audio_octave",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_audio_octave"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "도",
+              "value": "1"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "2"
+            },
+            {
+              "label": "레",
+              "value": "3"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "4"
+            },
+            {
+              "label": "미",
+              "value": "5"
+            },
+            {
+              "label": "파",
+              "value": "6"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "7"
+            },
+            {
+              "label": "솔",
+              "value": "8"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "9"
+            },
+            {
+              "label": "라",
+              "value": "10"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "11"
+            },
+            {
+              "label": "시",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_wn",
+              "value": "1000"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_hn",
+              "value": "500"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_qn",
+              "value": "250"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_en",
+              "value": "125"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_sn",
+              "value": "63"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_tn",
+              "value": "31"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_audio_freq",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_audio_freq"
+      },
+      "params": [
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "SECOND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_stop_audio",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_stop_audio"
+      },
+      "params": [
+        {
+          "key": "DURATION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_wn",
+              "value": "1000"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_hn",
+              "value": "500"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_qn",
+              "value": "250"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_en",
+              "value": "125"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_sn",
+              "value": "63"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_buzzer_tn",
+              "value": "31"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_ultrasonic",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_ultrasonic"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_joystick",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_joystick"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_up",
+              "value": "Entry.cp_moving.direction.UP"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_down",
+              "value": "Entry.cp_moving.direction.DOWN"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_left",
+              "value": "Entry.cp_moving.direction.LEFT"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_right",
+              "value": "Entry.cp_moving.direction.RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_left_up",
+              "value": "Entry.cp_moving.direction.LEFT_UP"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_left_down",
+              "value": "Entry.cp_moving.direction.LEFT_DOWN"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_right_up",
+              "value": "Entry.cp_moving.direction.RIGHT_UP"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_right_down",
+              "value": "Entry.cp_moving.direction.RIGHT_DOWN"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_joystick_center",
+              "value": "Entry.cp_moving.direction.CENTER"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_joystick_button",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_joystick_button"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_button",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_button"
+      },
+      "params": [
+        {
+          "key": "WHICH",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_button_blue",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_button_red",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_led",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_led"
+      },
+      "params": [
+        {
+          "key": "R",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "G",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "B",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_led_color",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_led_color"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_color_red",
+              "value": "RED"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_color_green",
+              "value": "GREEN"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_color_blue",
+              "value": "BLUE"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_color_teal",
+              "value": "TEAL"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_color_pink",
+              "value": "PINK"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_color_yellow",
+              "value": "YELLOW"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_color_white",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_stop_led",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_stop_led"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_soil",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_soil"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_analog",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_analog"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_digital",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "11"
+            },
+            {
+              "label": "2",
+              "value": "12"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_set_digital",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_set_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_set_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_set_off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_analog_value",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_analog_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    },
+    {
+      "type": "cp_moving_get_ir",
+      "category": "hardware_cp_moving",
+      "label": {
+        "ko": "cp_moving_get_ir"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.cp_moving_ir_left",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.cp_moving_ir_right",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "cp_moving"
+      }
+    }
+  ]
+}

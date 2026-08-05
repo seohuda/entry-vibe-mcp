@@ -1,0 +1,100 @@
+{
+  "category": "expansion_disasterAlert",
+  "blocks": [
+    {
+      "type": "disaster_alert_title",
+      "category": "expansion_disasterAlert",
+      "label": {
+        "ko": "disaster_alert_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "expansion",
+        "module": "disasterAlert"
+      }
+    },
+    {
+      "type": "count_disaster_alert",
+      "category": "expansion_disasterAlert",
+      "label": {
+        "ko": "count_disaster_alert"
+      },
+      "params": [
+        {
+          "key": "CATEGORY",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "disasterAlert"
+      }
+    },
+    {
+      "type": "get_disaster_alert",
+      "category": "expansion_disasterAlert",
+      "label": {
+        "ko": "get_disaster_alert"
+      },
+      "params": [
+        {
+          "key": "CATEGORY",
+          "type": "Unknown"
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "OPTION",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "disasterAlert"
+      }
+    },
+    {
+      "type": "check_disaster_alert",
+      "category": "expansion_disasterAlert",
+      "label": {
+        "ko": "check_disaster_alert"
+      },
+      "params": [
+        {
+          "key": "CATEGORY",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "disasterAlert"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3755 @@
+{
+  "category": "hardware_byrobot_drone_8",
+  "blocks": [
+    {
+      "type": "byrobot_drone_8_drone_value_attitude",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_value_attitude"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_attitude_roll",
+              "value": "motion_angleRoll"
+            },
+            {
+              "label": "Lang.Blocks.drone_attitude_pitch",
+              "value": "motion_anglePitch"
+            },
+            {
+              "label": "Lang.Blocks.drone_attitude_yaw",
+              "value": "motion_angleYaw"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_value_motion",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_value_motion"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_accel_x",
+              "value": "motion_accelX"
+            },
+            {
+              "label": "Lang.Blocks.drone_accel_y",
+              "value": "motion_accelY"
+            },
+            {
+              "label": "Lang.Blocks.drone_accel_z",
+              "value": "motion_accelZ"
+            },
+            {
+              "label": "Lang.Blocks.drone_gyro_roll",
+              "value": "motion_gyroRoll"
+            },
+            {
+              "label": "Lang.Blocks.drone_gyro_pitch",
+              "value": "motion_gyroPitch"
+            },
+            {
+              "label": "Lang.Blocks.drone_gyro_yaw",
+              "value": "motion_gyroYaw"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_value_position",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_value_position"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_positionX",
+              "value": "informationAssembledForEntry_positionX"
+            },
+            {
+              "label": "Lang.Blocks.drone_positionY",
+              "value": "informationAssembledForEntry_positionY"
+            },
+            {
+              "label": "Lang.Blocks.drone_positionZ",
+              "value": "informationAssembledForEntry_positionZ"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_value_sensor",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_value_sensor"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_range_front",
+              "value": "range_front"
+            },
+            {
+              "label": "Lang.Blocks.drone_range_height",
+              "value": "informationAssembledForEntry_rangeHeight"
+            },
+            {
+              "label": "Lang.Blocks.drone_altitude",
+              "value": "informationAssembledForEntry_altitude"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_value_card",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_value_card"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_cardcolor_front_color",
+              "value": "cardColor_frontColor"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_rear_color",
+              "value": "cardColor_rearColor"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_card",
+              "value": "cardColor_card"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_front_hue",
+              "value": "cardColor_frontHue"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_front_saturation",
+              "value": "cardColor_frontSaturation"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_front_value",
+              "value": "cardColor_frontValue"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_front_lightness",
+              "value": "cardColor_frontLightness"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_rear_hue",
+              "value": "cardColor_rearHue"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_rear_saturation",
+              "value": "cardColor_rearSaturation"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_rear_value",
+              "value": "cardColor_rearValue"
+            },
+            {
+              "label": "Lang.Blocks.drone_cardcolor_rear_lightness",
+              "value": "cardColor_rearLightness"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_value_etc",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_value_etc"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_state_mode_flight",
+              "value": "state_modeFlight"
+            },
+            {
+              "label": "Lang.Blocks.drone_state_mode_control_flight",
+              "value": "state_modeControlFlight"
+            },
+            {
+              "label": "Lang.Blocks.drone_state_mode_movement",
+              "value": "state_modeMovement"
+            },
+            {
+              "label": "Lang.Blocks.drone_state_headless",
+              "value": "state_headless"
+            },
+            {
+              "label": "Lang.Blocks.drone_state_control_speed",
+              "value": "state_controlSpeed"
+            },
+            {
+              "label": "Lang.Blocks.drone_state_sensor_orientation",
+              "value": "state_sensorOrientation"
+            },
+            {
+              "label": "Lang.Blocks.drone_state_battery",
+              "value": "state_battery"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_value_button",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_value_button"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_button",
+              "value": "button_button"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_event",
+              "value": "button_event"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_value_joystick",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_value_joystick"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_joystick_left_x",
+              "value": "joystick_left_x"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_left_y",
+              "value": "joystick_left_y"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_left_direction",
+              "value": "joystick_left_direction"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_left_event",
+              "value": "joystick_left_event"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_right_x",
+              "value": "joystick_right_x"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_right_y",
+              "value": "joystick_right_y"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_right_direction",
+              "value": "joystick_right_direction"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_right_event",
+              "value": "joystick_right_event"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_if_button_press",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_if_button_press"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_button_front_left_top",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_front_left_bottom",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_front_right_top",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_front_right_bottom",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_top_left",
+              "value": "16"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_top_right",
+              "value": "32"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_center_up",
+              "value": "64"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_center_left",
+              "value": "128"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_center_right",
+              "value": "256"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_center_down",
+              "value": "512"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_bottom_left",
+              "value": "1024"
+            },
+            {
+              "label": "Lang.Blocks.controller_button_bottom_right",
+              "value": "2048"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_if_joystick_direction",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_if_joystick_direction"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_left",
+              "value": "joystick_left_direction"
+            },
+            {
+              "label": "Lang.Blocks.common_right",
+              "value": "joystick_right_direction"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_left_up",
+              "value": "17"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_up",
+              "value": "18"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_right_up",
+              "value": "20"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_left",
+              "value": "33"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_center",
+              "value": "34"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_right",
+              "value": "36"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_left_down",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_down",
+              "value": "66"
+            },
+            {
+              "label": "Lang.Blocks.controller_joystick_direction_right_down",
+              "value": "68"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_light_manual_single_off",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_light_manual_single_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_light_color_preset",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_light_color_preset"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_color_red",
+              "value": "red"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_green",
+              "value": "green"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_blue",
+              "value": "blue"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_yellow",
+              "value": "yellow"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_magenta",
+              "value": "magenta"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cyan",
+              "value": "cyan"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_white",
+              "value": "white"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_sunset",
+              "value": "sunset"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cottoncandy",
+              "value": "cottonCandy"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_muscat",
+              "value": "muscat"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_strawberrymilk",
+              "value": "strawberryMilk"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_emerald",
+              "value": "emerald"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_lavender",
+              "value": "lavender"
+            }
+          ]
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_brightness_on",
+              "value": "220"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_b25",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_b50",
+              "value": "125"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_b75",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_b100",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_light_manual_single_input",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_light_manual_single_input"
+      },
+      "params": [
+        {
+          "key": "FLAGS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x07"
+            ]
+          }
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_light_color_input",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_light_color_input"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_mode_hold",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker_double",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_dimming",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunrise",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunset",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow2",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "INTERVAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "250"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_light_color_select",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_light_color_select"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_color_red",
+              "value": "red"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_green",
+              "value": "green"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_blue",
+              "value": "blue"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_yellow",
+              "value": "yellow"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_magenta",
+              "value": "magenta"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cyan",
+              "value": "cyan"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_white",
+              "value": "white"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_sunset",
+              "value": "sunset"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cottoncandy",
+              "value": "cottonCandy"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_muscat",
+              "value": "muscat"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_strawberrymilk",
+              "value": "strawberryMilk"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_emerald",
+              "value": "emerald"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_lavender",
+              "value": "lavender"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_mode_hold",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker_double",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_dimming",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunrise",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunset",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow2",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "INTERVAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "250"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_light_manual_single_off",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_light_manual_single_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_light_color_preset",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_light_color_preset"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_color_red",
+              "value": "red"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_green",
+              "value": "green"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_blue",
+              "value": "blue"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_yellow",
+              "value": "yellow"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_magenta",
+              "value": "magenta"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cyan",
+              "value": "cyan"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_white",
+              "value": "white"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_sunset",
+              "value": "sunset"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cottoncandy",
+              "value": "cottonCandy"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_muscat",
+              "value": "muscat"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_strawberrymilk",
+              "value": "strawberryMilk"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_emerald",
+              "value": "emerald"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_lavender",
+              "value": "lavender"
+            }
+          ]
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_brightness_on",
+              "value": "220"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_b25",
+              "value": "75"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_b50",
+              "value": "125"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_b75",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.common_light_brightness_b100",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_light_manual_single_input",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_light_manual_single_input"
+      },
+      "params": [
+        {
+          "key": "FLAGS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x3F"
+            ]
+          }
+        },
+        {
+          "key": "BRIGHTNESS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_light_color_input",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_light_color_input"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_mode_hold",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker_double",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_dimming",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunrise",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunset",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow2",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "INTERVAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "250"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_light_color_select",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_light_color_select"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_color_red",
+              "value": "red"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_green",
+              "value": "green"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_blue",
+              "value": "blue"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_yellow",
+              "value": "yellow"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_magenta",
+              "value": "magenta"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cyan",
+              "value": "cyan"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_white",
+              "value": "white"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_sunset",
+              "value": "sunset"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_cottoncandy",
+              "value": "cottonCandy"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_muscat",
+              "value": "muscat"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_strawberrymilk",
+              "value": "strawberryMilk"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_emerald",
+              "value": "emerald"
+            },
+            {
+              "label": "Lang.Blocks.common_light_color_lavender",
+              "value": "lavender"
+            }
+          ]
+        },
+        {
+          "key": "MODE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_light_mode_hold",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_flicker_double",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_dimming",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunrise",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_sunset",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.common_light_mode_rainbow2",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "INTERVAL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "250"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_display_clear_all",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_display_clear_all"
+      },
+      "params": [
+        {
+          "key": "PIXEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_pixel_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_pixel_white",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_display_clear",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_display_clear"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "64"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "32"
+            ]
+          }
+        },
+        {
+          "key": "WIDTH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "32"
+            ]
+          }
+        },
+        {
+          "key": "HEIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "16"
+            ]
+          }
+        },
+        {
+          "key": "PIXEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_pixel_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_pixel_white",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_display_draw_point",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_display_draw_point"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "64"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "32"
+            ]
+          }
+        },
+        {
+          "key": "PIXEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_pixel_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_pixel_white",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_display_draw_line",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_display_draw_line"
+      },
+      "params": [
+        {
+          "key": "X1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "32"
+            ]
+          }
+        },
+        {
+          "key": "Y1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "16"
+            ]
+          }
+        },
+        {
+          "key": "X2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "96"
+            ]
+          }
+        },
+        {
+          "key": "Y2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "48"
+            ]
+          }
+        },
+        {
+          "key": "PIXEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_pixel_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_pixel_white",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_line_solid",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_line_dotted",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_line_dashed",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_display_draw_rect",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_display_draw_rect"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "64"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "32"
+            ]
+          }
+        },
+        {
+          "key": "WIDTH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "32"
+            ]
+          }
+        },
+        {
+          "key": "HEIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "16"
+            ]
+          }
+        },
+        {
+          "key": "PIXEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_pixel_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_pixel_white",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "FLAGFILL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_flagfill_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_flagfill_on",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_line_solid",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_line_dotted",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_line_dashed",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "7",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_display_draw_circle",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_display_draw_circle"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "64"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "32"
+            ]
+          }
+        },
+        {
+          "key": "RADIUS",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "24"
+            ]
+          }
+        },
+        {
+          "key": "PIXEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_pixel_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_pixel_white",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "FLAGFILL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_flagfill_off",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_flagfill_on",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_display_draw_string",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_display_draw_string"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "39"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "16"
+            ]
+          }
+        },
+        {
+          "key": "FONT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_font_5x8",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_font_10x16",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "PIXEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_pixel_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_pixel_white",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "HELLO"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_display_draw_string_align",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_display_draw_string_align"
+      },
+      "params": [
+        {
+          "key": "XSTART",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "XEND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "128"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "42"
+            ]
+          }
+        },
+        {
+          "key": "ALIGN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_align_left",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_align_center",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_align_right",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "FONT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_font_5x8",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_font_10x16",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "PIXEL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_display_pixel_black",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_display_pixel_white",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "DRONE"
+            ]
+          }
+        },
+        {
+          "key": "7",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_buzzer_off",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_buzzer_off"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_drone",
+              "value": "0x10"
+            },
+            {
+              "label": "Lang.Blocks.common_controller",
+              "value": "0x20"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_buzzer_scale",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_buzzer_scale"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_drone",
+              "value": "0x10"
+            },
+            {
+              "label": "Lang.Blocks.common_controller",
+              "value": "0x20"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "SCALE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_buzzer_mute",
+              "value": "-1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_c",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_cs",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_ds",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_e",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_f",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_fs",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_g",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_gs",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_a",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_as",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_b",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_buzzer_scale_delay",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_buzzer_scale_delay"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_drone",
+              "value": "0x10"
+            },
+            {
+              "label": "Lang.Blocks.common_controller",
+              "value": "0x20"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "SCALE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_buzzer_mute",
+              "value": "-1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_c",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_cs",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_ds",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_e",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_f",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_fs",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_g",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_gs",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_a",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_as",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_b",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_buzzer_scale_reserve",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_buzzer_scale_reserve"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_drone",
+              "value": "0x10"
+            },
+            {
+              "label": "Lang.Blocks.common_controller",
+              "value": "0x20"
+            }
+          ]
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "SCALE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.controller_buzzer_mute",
+              "value": "-1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_c",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_cs",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_d",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_ds",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_e",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_f",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_fs",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_g",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_gs",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_a",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_as",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.controller_buzzer_b",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_buzzer_hz",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_buzzer_hz"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_drone",
+              "value": "0x10"
+            },
+            {
+              "label": "Lang.Blocks.common_controller",
+              "value": "0x20"
+            }
+          ]
+        },
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_buzzer_hz_delay",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_buzzer_hz_delay"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_drone",
+              "value": "0x10"
+            },
+            {
+              "label": "Lang.Blocks.common_controller",
+              "value": "0x20"
+            }
+          ]
+        },
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_buzzer_hz_reserve",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_buzzer_hz_reserve"
+      },
+      "params": [
+        {
+          "key": "TARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.common_drone",
+              "value": "0x10"
+            },
+            {
+              "label": "Lang.Blocks.common_controller",
+              "value": "0x20"
+            }
+          ]
+        },
+        {
+          "key": "HZ",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_vibrator_off",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_vibrator_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_vibrator_on_delay",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_vibrator_on_delay"
+      },
+      "params": [
+        {
+          "key": "TIMEON",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_vibrator_on_reserve",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_vibrator_on_reserve"
+      },
+      "params": [
+        {
+          "key": "TIMEON",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_vibrator_delay",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_vibrator_delay"
+      },
+      "params": [
+        {
+          "key": "TIMEON",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.3"
+            ]
+          }
+        },
+        {
+          "key": "TIMEOFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.3"
+            ]
+          }
+        },
+        {
+          "key": "TIMERUN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_controller_vibrator_reserve",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_controller_vibrator_reserve"
+      },
+      "params": [
+        {
+          "key": "TIMEON",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.3"
+            ]
+          }
+        },
+        {
+          "key": "TIMEOFF",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0.3"
+            ]
+          }
+        },
+        {
+          "key": "TIMERUN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_motor_stop",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_motor_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_motorsingle",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_motorsingle"
+      },
+      "params": [
+        {
+          "key": "MOTORINDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1(FR)",
+              "value": "0"
+            },
+            {
+              "label": "2(RR)",
+              "value": "1"
+            },
+            {
+              "label": "3(RL)",
+              "value": "2"
+            },
+            {
+              "label": "4(FL)",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "MOTORSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "120"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_motorsingle_input",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_motorsingle_input"
+      },
+      "params": [
+        {
+          "key": "MOTORINDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "MOTORSPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "120"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_drone_takeoff",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_drone_takeoff"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_drone_landing",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_drone_landing"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_drone_stop",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_drone_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_headless",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_headless"
+      },
+      "params": [
+        {
+          "key": "HEADLESS",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_headless_headless",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.drone_headless_normal",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_drone_reset_heading",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_drone_reset_heading"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_quad_one",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_quad_one"
+      },
+      "params": [
+        {
+          "key": "CONTROLTARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll",
+              "value": "control_quad8_roll"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch",
+              "value": "control_quad8_pitch"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw",
+              "value": "control_quad8_yaw"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle",
+              "value": "control_quad8_throttle"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_quad_one_delay",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_quad_one_delay"
+      },
+      "params": [
+        {
+          "key": "CONTROLTARGET",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll",
+              "value": "control_quad8_roll"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch",
+              "value": "control_quad8_pitch"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw",
+              "value": "control_quad8_yaw"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle",
+              "value": "control_quad8_throttle"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_quad",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_quad"
+      },
+      "params": [
+        {
+          "key": "ROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_quad_delay",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_quad_delay"
+      },
+      "params": [
+        {
+          "key": "ROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "5",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_position_one",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_position_one"
+      },
+      "params": [
+        {
+          "key": "CONTROLDIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_forward",
+              "value": "pitch_forward"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_backward",
+              "value": "pitch_backward"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_left",
+              "value": "roll_left"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_right",
+              "value": "roll_right"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_up",
+              "value": "throttle_up"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_down",
+              "value": "throttle_down"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_position_turn",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_position_turn"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_YAW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw_cw",
+              "value": "-1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw_ccw",
+              "value": "+1"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE_YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "SPEED_YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "45"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_position_location",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_position_location"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_PITCH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_forward",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_backward",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION_ROLL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_left",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_right",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_ROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION_THROTTLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_up",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_down",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "7",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    },
+    {
+      "type": "byrobot_drone_8_drone_control_position_location_turn",
+      "category": "hardware_byrobot_drone_8",
+      "label": {
+        "ko": "byrobot_drone_8_drone_control_position_location_turn"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_PITCH",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_forward",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_pitch_backward",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION_ROLL",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_left",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_roll_right",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_ROLL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION_THROTTLE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_up",
+              "value": "+1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_throttle_down",
+              "value": "-1"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE_THROTTLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "DIRECTION_YAW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw_cw",
+              "value": "-1"
+            },
+            {
+              "label": "Lang.Blocks.drone_control_quad_yaw_ccw",
+              "value": "+1"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE_YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "SPEED_YAW",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "45"
+            ]
+          }
+        },
+        {
+          "key": "10",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "byrobot_drone_8"
+      }
+    }
+  ]
+}

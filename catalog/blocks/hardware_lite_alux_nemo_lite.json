@@ -1,0 +1,1952 @@
+{
+  "category": "hardware_lite_alux_nemo_lite",
+  "blocks": [
+    {
+      "type": "nemolite_dropdown_button",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_button"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_s1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_s2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_s3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_s4",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_button_now_state",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_button_now_state"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_is_press",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_is_fall",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_is_rise",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_is_both",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_button_state_question",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_button_state_question"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_has_press",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_has_fall",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_has_rise",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_has_both",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_motion",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_motion"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_motion_1",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_motion_2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_motion_3",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_motion_4",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.nemolite_item_motion_5",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.nemolite_item_motion_6",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.nemolite_item_motion_7",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.nemolite_item_motion_8",
+              "value": "7"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_coordinate_acceleration",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_coordinate_acceleration"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_axis_x",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_axis_y",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_axis_z",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_linear_acceleration",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_led_icon",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_led_icon"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "DropdownExtra",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_smile",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_not_much",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_good",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_bad",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.nemolite_item_wink",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.nemolite_item_cry",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.nemolite_item_absurd",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.nemolite_item_peck",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.nemolite_item_arrow_1",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.nemolite_item_arrow_2",
+              "value": "9"
+            },
+            {
+              "label": "Lang.template.nemolite_item_arrow_3",
+              "value": "10"
+            },
+            {
+              "label": "Lang.template.nemolite_item_arrow_4",
+              "value": "11"
+            },
+            {
+              "label": "Lang.template.nemolite_item_arrow_5",
+              "value": "12"
+            },
+            {
+              "label": "Lang.template.nemolite_item_arrow_6",
+              "value": "13"
+            },
+            {
+              "label": "Lang.template.nemolite_item_arrow_7",
+              "value": "14"
+            },
+            {
+              "label": "Lang.template.nemolite_item_arrow_8",
+              "value": "15"
+            },
+            {
+              "label": "Lang.template.nemolite_item_spade",
+              "value": "16"
+            },
+            {
+              "label": "Lang.template.nemolite_item_club",
+              "value": "17"
+            },
+            {
+              "label": "Lang.template.nemolite_item_diamond",
+              "value": "18"
+            },
+            {
+              "label": "Lang.template.nemolite_item_heart",
+              "value": "19"
+            },
+            {
+              "label": "Lang.template.nemolite_item_circle",
+              "value": "20"
+            },
+            {
+              "label": "Lang.template.nemolite_item_x",
+              "value": "21"
+            },
+            {
+              "label": "Lang.template.nemolite_item_triangle",
+              "value": "22"
+            },
+            {
+              "label": "Lang.template.nemolite_item_square",
+              "value": "23"
+            },
+            {
+              "label": "Lang.template.nemolite_item_note_1",
+              "value": "24"
+            },
+            {
+              "label": "Lang.template.nemolite_item_note_2",
+              "value": "25"
+            },
+            {
+              "label": "Lang.template.nemolite_item_note_3",
+              "value": "26"
+            },
+            {
+              "label": "Lang.template.nemolite_item_dice_1",
+              "value": "27"
+            },
+            {
+              "label": "Lang.template.nemolite_item_dice_2",
+              "value": "28"
+            },
+            {
+              "label": "Lang.template.nemolite_item_dice_3",
+              "value": "29"
+            },
+            {
+              "label": "Lang.template.nemolite_item_dice_4",
+              "value": "30"
+            },
+            {
+              "label": "Lang.template.nemolite_item_dice_5",
+              "value": "31"
+            },
+            {
+              "label": "Lang.template.nemolite_item_dice_6",
+              "value": "32"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_switch",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_switch"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_off_text",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_on_text",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_toggle",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_melody",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_melody"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_do_re_mi_song",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_an_island_baby",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_twinkle_twinkle_little_star",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_spring_in_my_hometown",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.nemolite_item_for_elise",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.nemolite_item_celebrated_chop_waltz",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.nemolite_item_happy_birthday_to_you",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_keyboard",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_keyboard"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "DropdownExtra",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_lc",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_lcs",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_ld",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_lds",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.nemolite_item_le",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.nemolite_item_lf",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.nemolite_item_lfs",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.nemolite_item_lg",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.nemolite_item_lgs",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.nemolite_item_la",
+              "value": "9"
+            },
+            {
+              "label": "Lang.template.nemolite_item_las",
+              "value": "10"
+            },
+            {
+              "label": "Lang.template.nemolite_item_lb",
+              "value": "11"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mc",
+              "value": "12"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mcs",
+              "value": "13"
+            },
+            {
+              "label": "Lang.template.nemolite_item_md",
+              "value": "14"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mds",
+              "value": "15"
+            },
+            {
+              "label": "Lang.template.nemolite_item_me",
+              "value": "16"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mf",
+              "value": "17"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mfs",
+              "value": "18"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mg",
+              "value": "19"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mgs",
+              "value": "20"
+            },
+            {
+              "label": "Lang.template.nemolite_item_ma",
+              "value": "21"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mas",
+              "value": "22"
+            },
+            {
+              "label": "Lang.template.nemolite_item_mb",
+              "value": "23"
+            },
+            {
+              "label": "Lang.template.nemolite_item_hc",
+              "value": "24"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_extension_sensor",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_extension_sensor"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_switch",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_infrared_ray",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_magnet",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_rotary",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.nemolite_item_illuminance",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.nemolite_item_sound",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.nemolite_item_tilt",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.nemolite_item_pressure",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.nemolite_item_heart_rate",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.nemolite_item_touch",
+              "value": "9"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_sensor_mode",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_sensor_mode"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_value",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_angle",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_absolute_angle",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_turn_value",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_direction",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_direction"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_east",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_west",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_south",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_north",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_index_0_5",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_index_0_5"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_index_1_5",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_index_1_5"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_dropdown_led_columm",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_dropdown_led_columm"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.template.nemolite_item_first",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.nemolite_item_second",
+              "value": "1"
+            },
+            {
+              "label": "Lang.template.nemolite_item_third",
+              "value": "2"
+            },
+            {
+              "label": "Lang.template.nemolite_item_fourth",
+              "value": "3"
+            },
+            {
+              "label": "Lang.template.nemolite_item_fifth",
+              "value": "4"
+            },
+            {
+              "label": "Lang.template.nemolite_item_sixth",
+              "value": "5"
+            },
+            {
+              "label": "Lang.template.nemolite_item_seventh",
+              "value": "6"
+            },
+            {
+              "label": "Lang.template.nemolite_item_eighth",
+              "value": "7"
+            },
+            {
+              "label": "Lang.template.nemolite_item_ninth",
+              "value": "8"
+            },
+            {
+              "label": "Lang.template.nemolite_item_tenth",
+              "value": "9"
+            },
+            {
+              "label": "Lang.template.nemolite_itme_eleventh",
+              "value": "10"
+            },
+            {
+              "label": "Lang.template.nemolite_item_twelfth",
+              "value": "11"
+            },
+            {
+              "label": "Lang.template.nemolite_item_thirteenth",
+              "value": "12"
+            },
+            {
+              "label": "Lang.template.nemolite_itme_fourteenth",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_title_namo_input",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_title_namo_input"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_when_button_state",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_when_button_state"
+      },
+      "params": [
+        {
+          "key": "DUMMY",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_button",
+            "params": []
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_button_now_state",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_when_motion_sensing",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_when_motion_sensing"
+      },
+      "params": [
+        {
+          "key": "DUMMY",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_motion",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_is_button_state",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_is_button_state"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_button",
+            "params": []
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_button_state_question",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_is_motion_sensing",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_is_motion_sensing"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_motion",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_is_led_state_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_is_led_state_value"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_get_button_analog_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_get_button_analog_value"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_button",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_get_acceleration_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_get_acceleration_value"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_coordinate_acceleration",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_get_illuminance_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_get_illuminance_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_get_convert_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_get_convert_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "IN_MIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "IN_MAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "OUT_MIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "OUT_MAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_title_namo_output",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_title_namo_output"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_display_led_icon",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_display_led_icon"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_led_icon",
+            "params": []
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_index_0_5",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_display_led_custom_columm",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_display_led_custom_columm"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_led_columm",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "VALUE6",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "VALUE7",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_index_0_5",
+            "params": []
+          }
+        },
+        {
+          "key": "9",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_display_led_text",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_display_led_text"
+      },
+      "params": [
+        {
+          "key": "TEXT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello"
+            ]
+          }
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_index_1_5",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_delete_all_led",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_delete_all_led"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_toggle_led_pixel",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_toggle_led_pixel"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "STATE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_switch",
+            "params": []
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_play_melody",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_play_melody"
+      },
+      "params": [
+        {
+          "key": "TITLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_melody",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_play_melody_until_the_end",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_play_melody_until_the_end"
+      },
+      "params": [
+        {
+          "key": "TITLE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_melody",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_play_note",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_play_note"
+      },
+      "params": [
+        {
+          "key": "PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_keyboard",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_play_note_for_seconds",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_play_note_for_seconds"
+      },
+      "params": [
+        {
+          "key": "PITCH",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_keyboard",
+            "params": []
+          }
+        },
+        {
+          "key": "TIME",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_set_stop_all_sound",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_set_stop_all_sound"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_title_namo_extension",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_title_namo_extension"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_ext_set_extension",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_ext_set_extension"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_extension_sensor",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_ext_get_extension_anlog_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_ext_get_extension_anlog_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_ext_set_extension_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_ext_set_extension_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_ext_is_extension_state",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_ext_is_extension_state"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_button_state_question",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_ext_get_extension_custom_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_ext_get_extension_custom_value"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_sensor_mode",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_ext_set_compass_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_ext_set_compass_value"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_ext_get_compass_analog_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_ext_get_compass_analog_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "nemolite_ext_get_compass_custom_value",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "nemolite_ext_get_compass_custom_value"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_sensor_mode",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    },
+    {
+      "type": "memolite_ext_is_compass_direction",
+      "category": "hardware_lite_alux_nemo_lite",
+      "label": {
+        "ko": "memolite_ext_is_compass_direction"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "nemolite_dropdown_direction",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "alux_nemo_lite"
+      }
+    }
+  ]
+}

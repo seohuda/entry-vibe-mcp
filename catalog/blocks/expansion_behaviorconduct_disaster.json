@@ -1,0 +1,83 @@
+{
+  "category": "expansion_behaviorconduct_disaster",
+  "blocks": [
+    {
+      "type": "behaviorConductDisaster_title",
+      "category": "expansion_behaviorconduct_disaster",
+      "label": {
+        "ko": "behaviorConductDisaster_title"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_text",
+      "extension": {
+        "kind": "expansion",
+        "module": "behaviorConductDisaster"
+      }
+    },
+    {
+      "type": "count_disaster_behavior",
+      "category": "expansion_behaviorconduct_disaster",
+      "label": {
+        "ko": "해야할 행동요령 수"
+      },
+      "params": [
+        {
+          "key": "CATEGORY",
+          "type": "Unknown"
+        },
+        {
+          "key": "SUB_CATEGORY",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "behaviorConductDisaster"
+      }
+    },
+    {
+      "type": "get_disaster_behavior",
+      "category": "expansion_behaviorconduct_disaster",
+      "label": {
+        "ko": "자연재난 해야할 행동요령 번째 항목"
+      },
+      "params": [
+        {
+          "key": "CATEGORY",
+          "type": "Unknown"
+        },
+        {
+          "key": "SUB_CATEGORY",
+          "type": "Unknown"
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "expansion",
+        "module": "behaviorConductDisaster"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1010 @@
+{
+  "category": "hardware_altino_neo",
+  "blocks": [
+    {
+      "type": "altino_neo_analogValue",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_analogValue"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_CDS",
+              "value": "cds"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_TOF1",
+              "value": "tof1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_TOF2",
+              "value": "tof2"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_TOF3",
+              "value": "tof3"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_TOF4",
+              "value": "tof4"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_TOF5",
+              "value": "tof5"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_TOF6",
+              "value": "tof6"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_BAT",
+              "value": "bat"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_ACC_X",
+              "value": "accx"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_ACC_Y",
+              "value": "accy"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_ACC_Z",
+              "value": "accz"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_MAG_X",
+              "value": "magx"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_MAG_Y",
+              "value": "magy"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_MAG_Z",
+              "value": "magz"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_GYRO_X",
+              "value": "gyrox"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_GYRO_Y",
+              "value": "gyroy"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_GYRO_Z",
+              "value": "gyroz"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_AHRS_Roll",
+              "value": "roll"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_AHRS_Pitch",
+              "value": "pitch"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_AHRS_Yaw",
+              "value": "yaw"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Temp",
+              "value": "temp"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Left_Wheel_Torque",
+              "value": "leftTorque"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Right_Wheel_Torque",
+              "value": "rightTorque"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_stopAll",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_stopAll"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_stopAll",
+              "value": "All"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_stopDrive",
+              "value": "Drive"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_stopSteering",
+              "value": "Steering"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_stopSound",
+              "value": "Sound"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_stopLight",
+              "value": "Light"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_stopDisplay",
+              "value": "Display"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_steering",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_steering"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Center",
+              "value": "Center"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Left5",
+              "value": "Left5"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Left10",
+              "value": "Left10"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Left15",
+              "value": "Left15"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Left20",
+              "value": "Left20"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Right5",
+              "value": "Right5"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Right10",
+              "value": "Right10"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Right15",
+              "value": "Right15"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Steering_Angle_Right20",
+              "value": "Right20"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_steering_hex",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_steering_hex"
+      },
+      "params": [
+        {
+          "key": "steerVal",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_sound_hex",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_sound_hex"
+      },
+      "params": [
+        {
+          "key": "soundVal",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_rear_wheel",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_rear_wheel"
+      },
+      "params": [
+        {
+          "key": "leftWheel",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "rightWheel",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "300"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_sound",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_sound"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "",
+              "value": "1"
+            },
+            {
+              "label": "",
+              "value": "2"
+            },
+            {
+              "label": "",
+              "value": "3"
+            },
+            {
+              "label": "",
+              "value": "4"
+            },
+            {
+              "label": "",
+              "value": "5"
+            },
+            {
+              "label": "",
+              "value": "6"
+            },
+            {
+              "label": "",
+              "value": "7"
+            },
+            {
+              "label": "",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "NOT"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_c",
+              "value": "C"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_c2",
+              "value": "C#"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_d",
+              "value": "D"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_d2",
+              "value": "D#"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_e",
+              "value": "E"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_f",
+              "value": "F"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_f2",
+              "value": "F#"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_g",
+              "value": "G"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_g2",
+              "value": "G#"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_a",
+              "value": "A"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_a2",
+              "value": "A#"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_b",
+              "value": "B"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_light",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_light"
+      },
+      "params": [
+        {
+          "key": "SELECT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_Led_Forward_Light",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Led_Turn_Left_Light",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Led_Turn_Right_Light",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Led_Brake_Light",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_Led_Backward_Light",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "255"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_dot_display_matrix_on",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_dot_display_matrix_on"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_dot_display_matrix_off",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_dot_display_matrix_off"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_light_hex",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_light_hex"
+      },
+      "params": [
+        {
+          "key": "MSB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "LSB",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_dot_display",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_dot_display"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "A"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_dot_display_line",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_dot_display_line"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_dot_line_1",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_dot_line_2",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_dot_line_3",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_dot_line_4",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_dot_line_5",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_dot_line_6",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_dot_line_7",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_dot_line_8",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "key": "SW1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW2",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW3",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW4",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW5",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW6",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW7",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "SW8",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.altino_neo_h2",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.altino_neo_h",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "9",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_dot_display_hex",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_dot_display_hex"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE6",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE7",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "VALUE8",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0x00"
+            ]
+          }
+        },
+        {
+          "key": "8",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    },
+    {
+      "type": "altino_neo_ir_reset",
+      "category": "hardware_altino_neo",
+      "label": {
+        "ko": "altino_neo_ir_reset"
+      },
+      "params": [
+        {
+          "key": "DEVICE",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "altino_neo"
+      }
+    }
+  ]
+}

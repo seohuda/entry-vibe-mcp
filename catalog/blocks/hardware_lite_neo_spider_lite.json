@@ -1,0 +1,908 @@
+{
+  "category": "hardware_lite_neo_spider_lite",
+  "blocks": [
+    {
+      "type": "neospiderlite_get_analog_value",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가스",
+              "value": "GAS"
+            },
+            {
+              "label": "조도",
+              "value": "CDS"
+            },
+            {
+              "label": "온도",
+              "value": "TMP"
+            },
+            {
+              "label": "진동",
+              "value": "VIBE"
+            },
+            {
+              "label": "외부",
+              "value": "OUTER"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_get_analog_value_map",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "가스",
+              "value": "GAS"
+            },
+            {
+              "label": "조도",
+              "value": "CDS"
+            },
+            {
+              "label": "온도",
+              "value": "TMP"
+            },
+            {
+              "label": "진동",
+              "value": "VIBE"
+            },
+            {
+              "label": "외부",
+              "value": "OUTER"
+            }
+          ]
+        },
+        {
+          "key": "MINV",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "MAXV",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "TMIN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TMAX",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_get_ultrasonic_value",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_get_ultrasonic_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_get_motion_value",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_get_motion_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_get_infared_value",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_get_infared_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "LEFT_INFARED"
+            },
+            {
+              "label": "오른쪽",
+              "value": "RIGHT_INFARED"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_tone_list",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_tone_value",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neospiderlite_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_octave_list",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_set_tone",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_set_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "neospiderlite_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "neospiderlite_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_set_servo",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_set_servo"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 90
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_set_servo_direction",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_set_servo_direction"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞",
+              "value": "90"
+            },
+            {
+              "label": "왼쪽",
+              "value": "50"
+            },
+            {
+              "label": "오른쪽",
+              "value": "130"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_motor_state",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_motor_state"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽으로",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽으로",
+              "value": "3"
+            },
+            {
+              "label": "뒤로",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_motor_state_secs",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_motor_state_secs"
+      },
+      "params": [
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "앞으로",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽으로",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽으로",
+              "value": "3"
+            },
+            {
+              "label": "뒤로",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_motor_stop",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_motor_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_neopixel",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_neopixel"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_neopixel_color_picker",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_neopixel_color_picker"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_neopixel_color_picker_all_on",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_neopixel_color_picker_all_on"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_neopixel_all_on",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_neopixel_all_on"
+      },
+      "params": [
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_neopixel_all_off",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_neopixel_all_off"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_outer_motor",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_outer_motor"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 5,
+          "options": [
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "STATE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "LOW",
+              "value": "0"
+            },
+            {
+              "label": "HIGH",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    },
+    {
+      "type": "neospiderlite_outer_motor_pwm",
+      "category": "hardware_lite_neo_spider_lite",
+      "label": {
+        "ko": "neospiderlite_outer_motor_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 5,
+          "options": [
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardwareLite",
+        "module": "가스/외부센서"
+      }
+    }
+  ]
+}

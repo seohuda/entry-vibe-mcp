@@ -1,0 +1,1234 @@
+{
+  "category": "hardware_zumiMini",
+  "blocks": [
+    {
+      "type": "motion_stop",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "motion_stop"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "move_straight",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "move_straight"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "FORWARD",
+          "options": [
+            {
+              "label": "Lang.Blocks.FORWARD",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.BACKWARD",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.RAPID",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.MID",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.SLOW",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "DIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 10
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "following_line_infinite",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "following_line_infinite"
+      },
+      "params": [
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.RAPID",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.MID",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.SLOW",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "move_straight_infinite",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "move_straight_infinite"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "FORWARD",
+          "options": [
+            {
+              "label": "Lang.Blocks.FORWARD",
+              "value": "FORWARD"
+            },
+            {
+              "label": "Lang.Blocks.BACKWARD",
+              "value": "BACKWARD"
+            }
+          ]
+        },
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.RAPID",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.MID",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.SLOW",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "following_line_dist",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "following_line_dist"
+      },
+      "params": [
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.RAPID",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.MID",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.SLOW",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "DIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 30
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "move_turn",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "move_turn"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "RIGHT",
+          "options": [
+            {
+              "label": "Lang.Blocks.LEFT",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.RIGHT",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "SPD",
+          "type": "Dropdown",
+          "defaultValue": "MID",
+          "options": [
+            {
+              "label": "Lang.Blocks.RAPID",
+              "value": "RAPID"
+            },
+            {
+              "label": "Lang.Blocks.MID",
+              "value": "MID"
+            },
+            {
+              "label": "Lang.Blocks.SLOW",
+              "value": "SLOW"
+            }
+          ]
+        },
+        {
+          "key": "DEG",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 90
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "go_forward",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "go_forward"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "go_back",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "go_back"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "turn_left",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "왼쪽"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "turn_right",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "오른쪽"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "going_forward_until_sensing",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "going_forward_until_sensing"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "following_line_until_sensing",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "following_line_until_sensing"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "front_sensor",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "front_sensor"
+      },
+      "params": [
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "FL",
+          "options": [
+            {
+              "label": "Lang.Blocks.FL",
+              "value": "FL"
+            },
+            {
+              "label": "Lang.Blocks.FR",
+              "value": "FR"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "bottom_sensor",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "bottom_sensor"
+      },
+      "params": [
+        {
+          "key": "B_DIR",
+          "type": "Dropdown",
+          "defaultValue": "BL",
+          "options": [
+            {
+              "label": "Lang.Blocks.BL",
+              "value": "BL"
+            },
+            {
+              "label": "Lang.Blocks.BM",
+              "value": "BM"
+            },
+            {
+              "label": "Lang.Blocks.BR",
+              "value": "BR"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "power_info",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "power_info"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "button_boolean_input",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "button_boolean_input"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": "RED_BTN",
+          "options": [
+            {
+              "label": "Lang.Blocks.RED_BTN",
+              "value": "RED_BTN"
+            },
+            {
+              "label": "Lang.Blocks.BLUE_BTN",
+              "value": "BLUE_BTN"
+            },
+            {
+              "label": "Lang.Blocks.GREEN_BTN",
+              "value": "GREEN_BTN"
+            },
+            {
+              "label": "Lang.Blocks.YELLOW_BTN",
+              "value": "YELLOW_BTN"
+            }
+          ]
+        },
+        {
+          "key": "STATUS",
+          "type": "Dropdown",
+          "defaultValue": "PRESS",
+          "options": [
+            {
+              "label": "Lang.Blocks.PRESSED",
+              "value": "PRESS"
+            },
+            {
+              "label": "Lang.Blocks.RELEASED",
+              "value": "RELEASE"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "face_detector",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "face_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "DETECT",
+          "options": [
+            {
+              "label": "Lang.Blocks.DETECT",
+              "value": "DETECT"
+            },
+            {
+              "label": "Lang.Blocks.CX",
+              "value": "CX"
+            },
+            {
+              "label": "Lang.Blocks.CY",
+              "value": "CY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "cat_face_detector",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "cat_face_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "DETECT",
+          "options": [
+            {
+              "label": "Lang.Blocks.DETECT",
+              "value": "DETECT"
+            },
+            {
+              "label": "Lang.Blocks.CX",
+              "value": "CX"
+            },
+            {
+              "label": "Lang.Blocks.CY",
+              "value": "CY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "face_boolean_detector",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "face_boolean_detector"
+      },
+      "params": [
+        {
+          "key": "FACE",
+          "type": "Dropdown",
+          "defaultValue": "HUMAN",
+          "options": [
+            {
+              "label": "Lang.Blocks.HUMAN",
+              "value": "HUMAN"
+            },
+            {
+              "label": "Lang.Blocks.CAT",
+              "value": "CAT"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "color_detector",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "color_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "COLOR",
+          "options": [
+            {
+              "label": "Lang.Blocks.COLOR",
+              "value": "COLOR"
+            },
+            {
+              "label": "Lang.Blocks.CX",
+              "value": "CX"
+            },
+            {
+              "label": "Lang.Blocks.CY",
+              "value": "CY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "color_boolean_detector",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "color_boolean_detector"
+      },
+      "params": [
+        {
+          "key": "PARAM",
+          "type": "Dropdown",
+          "defaultValue": "RED",
+          "options": [
+            {
+              "label": "Lang.Blocks.AI_RED",
+              "value": "RED"
+            },
+            {
+              "label": "Lang.Blocks.AI_ORANGE",
+              "value": "ORANGE"
+            },
+            {
+              "label": "Lang.Blocks.AI_YELLOW",
+              "value": "YELLOW"
+            },
+            {
+              "label": "Lang.Blocks.AI_GREEN",
+              "value": "GREEN"
+            },
+            {
+              "label": "Lang.Blocks.AI_CYAN",
+              "value": "CYAN"
+            },
+            {
+              "label": "Lang.Blocks.AI_BLUE",
+              "value": "BLUE"
+            },
+            {
+              "label": "Lang.Blocks.AI_PURPLE",
+              "value": "PURPLE"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "april_detector",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "april_detector"
+      },
+      "params": [
+        {
+          "key": "A_INFO",
+          "type": "Dropdown",
+          "defaultValue": "ID",
+          "options": [
+            {
+              "label": "Lang.Blocks.ID",
+              "value": "ID"
+            },
+            {
+              "label": "Lang.Blocks.CX",
+              "value": "CX"
+            },
+            {
+              "label": "Lang.Blocks.CY",
+              "value": "CY"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "april_boolean_detector",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "april_boolean_detector"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 15
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "IMU_sensor",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "IMU_sensor"
+      },
+      "params": [
+        {
+          "key": "EULER",
+          "type": "Dropdown",
+          "defaultValue": "PITCH",
+          "options": [
+            {
+              "label": "Lang.Blocks.ROLL",
+              "value": "ROLL"
+            },
+            {
+              "label": "Lang.Blocks.PITCH",
+              "value": "PITCH"
+            },
+            {
+              "label": "Lang.Blocks.YAW",
+              "value": "YAW"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "screen_toggle",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "screen_toggle"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": "CAMERA",
+          "options": [
+            {
+              "label": "Lang.Blocks.CAMERA",
+              "value": "CAMERA"
+            },
+            {
+              "label": "Lang.Blocks.EMOTION",
+              "value": "EMOTION"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "emotion",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "emotion"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": "SMILE",
+          "options": [
+            {
+              "label": "Lang.Blocks.EMO_SMILE",
+              "value": "SMILE"
+            },
+            {
+              "label": "Lang.Blocks.EMO_LOVE",
+              "value": "LOVE"
+            },
+            {
+              "label": "Lang.Blocks.EMO_SURPRISE",
+              "value": "SURP"
+            },
+            {
+              "label": "Lang.Blocks.EMO_NICE",
+              "value": "NICE"
+            },
+            {
+              "label": "Lang.Blocks.EMO_CHAOS",
+              "value": "CHAOS"
+            },
+            {
+              "label": "Lang.Blocks.EMO_CRASH",
+              "value": "CRASH"
+            },
+            {
+              "label": "Lang.Blocks.EMO_CANTBELIEVE",
+              "value": "CANTBELIEVE"
+            },
+            {
+              "label": "Lang.Blocks.EMO_SLEEP",
+              "value": "SLEEP"
+            },
+            {
+              "label": "Lang.Blocks.EMO_CRY",
+              "value": "CRY"
+            },
+            {
+              "label": "Lang.Blocks.EMO_WINK",
+              "value": "WINK"
+            },
+            {
+              "label": "Lang.Blocks.EMO_BLINK",
+              "value": "BLINK"
+            },
+            {
+              "label": "Lang.Blocks.EMO_SLEEPING",
+              "value": "SLEEPING"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "play_sound",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "play_sound"
+      },
+      "params": [
+        {
+          "key": "TYPE",
+          "type": "Dropdown",
+          "defaultValue": "USER",
+          "options": [
+            {
+              "label": "Lang.Blocks.SND_USER",
+              "value": "USER"
+            },
+            {
+              "label": "Lang.Blocks.SND_CAT",
+              "value": "CAT"
+            },
+            {
+              "label": "Lang.Blocks.SND_SHUTTER",
+              "value": "SHUTTER"
+            },
+            {
+              "label": "Lang.Blocks.SND_FAIL",
+              "value": "FAIL"
+            },
+            {
+              "label": "Lang.Blocks.SND_SUCCESS",
+              "value": "SUCCESS"
+            },
+            {
+              "label": "Lang.Blocks.SND_FAIL2",
+              "value": "FAIL2"
+            },
+            {
+              "label": "Lang.Blocks.SND_HONK",
+              "value": "HONK"
+            },
+            {
+              "label": "Lang.Blocks.SND_HONK2",
+              "value": "HONK2"
+            },
+            {
+              "label": "Lang.Blocks.SND_SIREN",
+              "value": "SIREN"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "LED_control",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "LED_control"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": "WHITE",
+          "options": [
+            {
+              "label": "Lang.Blocks.RED",
+              "value": "RED"
+            },
+            {
+              "label": "Lang.Blocks.GREEN",
+              "value": "GREEN"
+            },
+            {
+              "label": "Lang.Blocks.BLUE",
+              "value": "BLUE"
+            },
+            {
+              "label": "Lang.Blocks.YELLOW",
+              "value": "YELLOW"
+            },
+            {
+              "label": "Lang.Blocks.SKY_BLUE",
+              "value": "SKY_BLUE"
+            },
+            {
+              "label": "Lang.Blocks.PINK",
+              "value": "PINK"
+            },
+            {
+              "label": "Lang.Blocks.WHITE",
+              "value": "WHITE"
+            }
+          ]
+        },
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": "NORMAL",
+          "options": [
+            {
+              "label": "Lang.Blocks.LED_NORMAL",
+              "value": "NORMAL"
+            },
+            {
+              "label": "Lang.Blocks.LED_BLINK",
+              "value": "BLINK"
+            },
+            {
+              "label": "Lang.Blocks.LED_DIMMING",
+              "value": "DIMMING"
+            },
+            {
+              "label": "Lang.Blocks.LED_SUNRISE",
+              "value": "SUNRISE"
+            },
+            {
+              "label": "Lang.Blocks.LED_SUNSET",
+              "value": "SUNSET"
+            },
+            {
+              "label": "Lang.Blocks.LED_FLICKER",
+              "value": "FLICKER"
+            },
+            {
+              "label": "Lang.Blocks.LED_RAINBOW",
+              "value": "RAINBOW"
+            }
+          ]
+        },
+        {
+          "key": "ACTION",
+          "type": "Dropdown",
+          "defaultValue": "ON",
+          "options": [
+            {
+              "label": "Lang.Blocks.ON",
+              "value": "ON"
+            },
+            {
+              "label": "Lang.Blocks.OFF",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    },
+    {
+      "type": "motor_control",
+      "category": "hardware_zumiMini",
+      "label": {
+        "ko": "motor_control"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Dropdown",
+          "defaultValue": "LEFT",
+          "options": [
+            {
+              "label": "Lang.Blocks.M1",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.M2",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": "CW",
+          "options": [
+            {
+              "label": "Lang.Blocks.CW",
+              "value": "CW"
+            },
+            {
+              "label": "Lang.Blocks.CCW",
+              "value": "CCW"
+            },
+            {
+              "label": "Lang.Blocks.STOP",
+              "value": "STOP"
+            }
+          ]
+        },
+        {
+          "key": "SPD",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 5
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "zumi_mini"
+      }
+    }
+  ]
+}

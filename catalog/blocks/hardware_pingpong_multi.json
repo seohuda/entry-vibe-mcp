@@ -1,0 +1,705 @@
+{
+  "category": "hardware_pingpong_multi",
+  "blocks": [
+    {
+      "type": "pingpong_g2_when_button_pressed",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_when_button_pressed"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "CUBEID",
+          "type": "Dropdown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_when_tilted",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_when_tilted"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        },
+        {
+          "key": "CUBEID",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "TILT_DIR",
+          "type": "Dropdown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": true,
+      "skeleton": "basic_event",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_is_button_pressed",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_is_button_pressed"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_is_tilted",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_is_tilted"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown"
+        },
+        {
+          "key": "TILT_DIR",
+          "type": "Dropdown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_get_tilt_value",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_get_tilt_value"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_get_sensor_value",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_get_sensor_value"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown"
+        },
+        {
+          "key": "SENSOR",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.pingpong_sensor_proximity",
+              "value": "PROXIMITY"
+            },
+            {
+              "label": "Lang.Blocks.pingpong_sensor_ain",
+              "value": "AIN"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_is_top_shape",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_is_top_shape"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown"
+        },
+        {
+          "key": "TILT_DIR",
+          "type": "Dropdown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_multi_motor_rotate",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_multi_motor_rotate"
+      },
+      "params": [
+        {
+          "key": "DIR_1",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.pingpong_rotate_cw",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.pingpong_rotate_ccw",
+              "value": "LEFT"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE_1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "DIR_2",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.pingpong_rotate_cw",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.pingpong_rotate_ccw",
+              "value": "LEFT"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE_2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_motor_rotate",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_motor_rotate"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.pingpong_rotate_cw",
+              "value": "RIGHT"
+            },
+            {
+              "label": "Lang.Blocks.pingpong_rotate_ccw",
+              "value": "LEFT"
+            }
+          ]
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_start_multi_motor_rotate",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_start_multi_motor_rotate"
+      },
+      "params": [
+        {
+          "key": "SPEED_1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "SPEED_2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_start_motor_rotate",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_start_motor_rotate"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown",
+          "defaultValue": null
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_stop_motor_rotate",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_stop_motor_rotate"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_rotate_servo_mortor",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_rotate_servo_mortor"
+      },
+      "params": [
+        {
+          "key": "cubeno",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "DEGREE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "angle",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_set_dot_pixel",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_set_dot_pixel"
+      },
+      "params": [
+        {
+          "key": "cubeno",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "onoff",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.pingpong_dot_on",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.pingpong_dot_off",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_set_dot_string",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_set_dot_string"
+      },
+      "params": [
+        {
+          "key": "cubeno",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": null
+        },
+        {
+          "key": "STR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": null
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_set_dot_clear",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_set_dot_clear"
+      },
+      "params": [
+        {
+          "key": "cubeno",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_playNoteForBeats",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_playNoteForBeats"
+      },
+      "params": [
+        {
+          "key": "CUBEID",
+          "type": "Dropdown"
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown"
+        },
+        {
+          "key": "BEATS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_playChordForBeats",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_playChordForBeats"
+      },
+      "params": [
+        {
+          "key": "CUBEID_1",
+          "type": "Dropdown"
+        },
+        {
+          "key": "NOTE_1",
+          "type": "Dropdown"
+        },
+        {
+          "key": "CUBEID_2",
+          "type": "Dropdown"
+        },
+        {
+          "key": "NOTE_2",
+          "type": "Dropdown"
+        },
+        {
+          "key": "BEATS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "5",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_restForBeats",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_restForBeats"
+      },
+      "params": [
+        {
+          "key": "BEATS",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_setTempo",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_setTempo"
+      },
+      "params": [
+        {
+          "key": "TEMPO",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number"
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    },
+    {
+      "type": "pingpong_g2_getTempo",
+      "category": "hardware_pingpong_multi",
+      "label": {
+        "ko": "pingpong_g2_getTempo"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "pingpong_multi"
+      }
+    }
+  ]
+}

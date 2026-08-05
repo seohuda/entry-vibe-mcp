@@ -1,0 +1,1312 @@
+{
+  "category": "hardware_jikko_lidoc",
+  "blocks": [
+    {
+      "type": "jikko_lidoc_list_analog_basic",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_list_analog_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_list_digital_basic",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_list_digital_basic"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_list_digital_octave",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_list_digital_octave"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_list_digital_pwm",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_list_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_list_digital_toggle",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_list_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.jikko_lidoc_toggle_on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.template.jikko_lidoc_toggle_off",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_list_digital_toggle_en",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_list_digital_toggle_en"
+      },
+      "params": [
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "HIGH",
+              "value": "on"
+            },
+            {
+              "label": "LOW",
+              "value": "off"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_list_digital_tone",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_list_digital_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_neopixel_init",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_neopixel_init"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "4"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_neopixel_bright",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_neopixel_bright"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_neopixel",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_neopixel"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_neopixel_all",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_neopixel_all"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Color",
+          "defaultValue": null
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_neopixel_clear",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_neopixel_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_lcd_list_init",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_lcd_list_init"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0x27",
+              "value": "0"
+            },
+            {
+              "label": "0x3F",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_list_digital_lcd",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_list_digital_lcd"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.template.jikko_lidoc_lcd_first_line",
+              "value": "0"
+            },
+            {
+              "label": "Lang.template.jikko_lidoc_lcd_seconds_line",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_get_lcd_row",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_get_lcd_row"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_get_lcd_col",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_get_lcd_col"
+      },
+      "params": [
+        {
+          "key": "ROW",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            },
+            {
+              "label": "11",
+              "value": "11"
+            },
+            {
+              "label": "12",
+              "value": "12"
+            },
+            {
+              "label": "13",
+              "value": "13"
+            },
+            {
+              "label": "14",
+              "value": "14"
+            },
+            {
+              "label": "15",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_get_analog_value",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_get_analog_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_analog_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_get_analog_mapping",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_get_analog_mapping"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_analog_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "100"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_get_digital",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_get_digital"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_get_digital_toggle",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_get_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_basic",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_digital_toggle",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_digital_toggle"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_basic",
+            "params": []
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_toggle_en",
+            "params": []
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_led_toggle",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_led_toggle"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_toggle",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_digital_pwm",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_pwm",
+            "params": [
+              "5"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_digital_buzzer_toggle",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_digital_buzzer_toggle"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_toggle",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_digital_buzzer_volume",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_digital_buzzer_volume"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_pwm",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_set_digital_buzzer",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_set_digital_buzzer"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_tone",
+            "params": []
+          }
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_list_digital_octave",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_lcd_init",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_lcd_init"
+      },
+      "params": [
+        {
+          "key": "LIST",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "jikko_lidoc_lcd_list_init",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "16"
+            ]
+          }
+        },
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "2"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_module_digital_lcd",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_module_digital_lcd"
+      },
+      "params": [
+        {
+          "key": "COL",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "jikko_lidoc_get_lcd_col",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "ROW",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "jikko_lidoc_get_lcd_row",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "Hello, jikko_lidoc"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_lcd_clear",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_lcd_clear"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_load_init",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_load_init"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_load_scale",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_load_scale"
+      },
+      "params": [
+        {
+          "key": "NUM",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "-20000"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    },
+    {
+      "type": "jikko_lidoc_load_value",
+      "category": "hardware_jikko_lidoc",
+      "label": {
+        "ko": "jikko_lidoc_load_value"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "jikko_lidoc"
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "category": "hardware_sciencecube",
+  "blocks": [
+    {
+      "type": "sciencecube_temper",
+      "category": "hardware_sciencecube",
+      "label": {
+        "ko": "sciencecube_temper"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sciencecube"
+      }
+    },
+    {
+      "type": "sciencecube_current",
+      "category": "hardware_sciencecube",
+      "label": {
+        "ko": "sciencecube_current"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sciencecube"
+      }
+    },
+    {
+      "type": "sciencecube_pressue",
+      "category": "hardware_sciencecube",
+      "label": {
+        "ko": "sciencecube_pressue"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sciencecube"
+      }
+    },
+    {
+      "type": "sciencecube_voltage",
+      "category": "hardware_sciencecube",
+      "label": {
+        "ko": "sciencecube_voltage"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sciencecube"
+      }
+    },
+    {
+      "type": "sciencecube_ph",
+      "category": "hardware_sciencecube",
+      "label": {
+        "ko": "sciencecube_ph"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sciencecube"
+      }
+    },
+    {
+      "type": "sciencecube_force",
+      "category": "hardware_sciencecube",
+      "label": {
+        "ko": "sciencecube_force"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sciencecube"
+      }
+    },
+    {
+      "type": "sciencecube_motion",
+      "category": "hardware_sciencecube",
+      "label": {
+        "ko": "sciencecube_motion"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Text"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "sciencecube"
+      }
+    }
+  ]
+}

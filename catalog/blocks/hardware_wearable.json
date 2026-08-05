@@ -1,0 +1,648 @@
+{
+  "category": "hardware_wearable",
+  "blocks": [
+    {
+      "type": "test_value",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "test_value"
+      },
+      "params": [
+        {
+          "key": "TEST",
+          "type": "Dropdown",
+          "defaultValue": "VAL1",
+          "options": [
+            {
+              "label": "VAL1",
+              "value": "VAL1"
+            },
+            {
+              "label": "VAL2",
+              "value": "VAL2"
+            },
+            {
+              "label": "VAL3",
+              "value": "VAL3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "attitude_angle_value",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "attitude_angle_value"
+      },
+      "params": [
+        {
+          "key": "EULER",
+          "type": "Dropdown",
+          "defaultValue": "yaw",
+          "options": [
+            {
+              "label": "Lang.Blocks.output_yaw",
+              "value": "yaw"
+            },
+            {
+              "label": "Lang.Blocks.output_pitch",
+              "value": "pitch"
+            },
+            {
+              "label": "Lang.Blocks.output_roll",
+              "value": "roll"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "leftJoystick_value",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "leftJoystick_value"
+      },
+      "params": [
+        {
+          "key": "LSTICK",
+          "type": "Dropdown",
+          "defaultValue": "leftX",
+          "options": [
+            {
+              "label": "Lang.Blocks.joystick_X",
+              "value": "leftX"
+            },
+            {
+              "label": "Lang.Blocks.joystick_Y",
+              "value": "leftY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "rightJoystick_value",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "rightJoystick_value"
+      },
+      "params": [
+        {
+          "key": "RSTICK",
+          "type": "Dropdown",
+          "defaultValue": "rightX",
+          "options": [
+            {
+              "label": "Lang.Blocks.joystick_X",
+              "value": "rightX"
+            },
+            {
+              "label": "Lang.Blocks.joystick_Y",
+              "value": "rightY"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "button_input",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "button_input"
+      },
+      "params": [
+        {
+          "key": "BUTTON",
+          "type": "Dropdown",
+          "defaultValue": "btnUp",
+          "options": [
+            {
+              "label": "Lang.Blocks.button_up",
+              "value": "btnUp"
+            },
+            {
+              "label": "Lang.Blocks.button_down",
+              "value": "btnDown"
+            },
+            {
+              "label": "Lang.Blocks.button_left",
+              "value": "btnLeft"
+            },
+            {
+              "label": "Lang.Blocks.button_right",
+              "value": "btnRight"
+            },
+            {
+              "label": "Lang.Blocks.button_joy_left",
+              "value": "btnJoyL"
+            },
+            {
+              "label": "Lang.Blocks.button_joy_right",
+              "value": "btnJoyR"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "mic_input",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "mic_input"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "battery_check",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "battery_check"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "mainLED_control",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "mainLED_control"
+      },
+      "params": [
+        {
+          "key": "BOARD",
+          "type": "Dropdown",
+          "defaultValue": "MAIN",
+          "options": [
+            {
+              "label": "Lang.Blocks.LED_board_main",
+              "value": "MAIN"
+            },
+            {
+              "label": "Lang.Blocks.LED_board_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.LED_board_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "RED",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "GREEN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BLUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TURN",
+          "type": "Dropdown",
+          "defaultValue": "ON",
+          "options": [
+            {
+              "label": "Lang.Blocks.turn_On",
+              "value": "ON"
+            },
+            {
+              "label": "Lang.Blocks.turn_Off",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "6",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "LED_control_bright",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "LED_control_bright"
+      },
+      "params": [
+        {
+          "key": "BOARD",
+          "type": "Dropdown",
+          "defaultValue": "MAIN",
+          "options": [
+            {
+              "label": "Lang.Blocks.LED_board_main",
+              "value": "MAIN"
+            },
+            {
+              "label": "Lang.Blocks.LED_board_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.LED_board_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "NUMBER",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "BRIGHT",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "TURN",
+          "type": "Dropdown",
+          "defaultValue": "ON",
+          "options": [
+            {
+              "label": "Lang.Blocks.turn_On",
+              "value": "ON"
+            },
+            {
+              "label": "Lang.Blocks.turn_Off",
+              "value": "OFF"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "LED_All_turn_off",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "LED_All_turn_off"
+      },
+      "params": [
+        {
+          "key": "BOARD",
+          "type": "Dropdown",
+          "defaultValue": "MAIN",
+          "options": [
+            {
+              "label": "Lang.Blocks.LED_board_main",
+              "value": "MAIN"
+            },
+            {
+              "label": "Lang.Blocks.LED_board_left",
+              "value": "LEFT"
+            },
+            {
+              "label": "Lang.Blocks.LED_board_right",
+              "value": "RIGHT"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "sound_effect",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "sound_effect"
+      },
+      "params": [
+        {
+          "key": "EFFECT",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "Lang.Blocks.sound_fire_ball",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.sound_coin",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.sound_up1",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.sound_beep1",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.sound_beep2",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.sound_1",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.sound_2",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.sound_3",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.sound_charging",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    },
+    {
+      "type": "play_pitch",
+      "category": "hardware_wearable",
+      "label": {
+        "ko": "play_pitch"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "key": "PITCH",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "Lang.Blocks.pitch_mute",
+              "value": "0"
+            },
+            {
+              "label": "Lang.Blocks.pitch_C",
+              "value": "1"
+            },
+            {
+              "label": "Lang.Blocks.pitch_CSharp",
+              "value": "2"
+            },
+            {
+              "label": "Lang.Blocks.pitch_D",
+              "value": "3"
+            },
+            {
+              "label": "Lang.Blocks.pitch_DSharp",
+              "value": "4"
+            },
+            {
+              "label": "Lang.Blocks.pitch_E",
+              "value": "5"
+            },
+            {
+              "label": "Lang.Blocks.pitch_F",
+              "value": "6"
+            },
+            {
+              "label": "Lang.Blocks.pitch_FSharp",
+              "value": "7"
+            },
+            {
+              "label": "Lang.Blocks.pitch_G",
+              "value": "8"
+            },
+            {
+              "label": "Lang.Blocks.pitch_GSharp",
+              "value": "9"
+            },
+            {
+              "label": "Lang.Blocks.pitch_A",
+              "value": "10"
+            },
+            {
+              "label": "Lang.Blocks.pitch_ASharp",
+              "value": "11"
+            },
+            {
+              "label": "Lang.Blocks.pitch_B",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": "200",
+          "options": [
+            {
+              "label": "Lang.Blocks.whole_note",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.half_note",
+              "value": "100"
+            },
+            {
+              "label": "Lang.Blocks.quarter_note",
+              "value": "50"
+            },
+            {
+              "label": "Lang.Blocks.eighth_note",
+              "value": "25"
+            },
+            {
+              "label": "Lang.Blocks.sixteenth_note",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "wearable"
+      }
+    }
+  ]
+}

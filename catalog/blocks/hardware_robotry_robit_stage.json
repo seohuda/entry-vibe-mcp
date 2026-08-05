@@ -1,0 +1,598 @@
+{
+  "category": "hardware_robotry_robit_stage",
+  "blocks": [
+    {
+      "type": "Robotry_Robit_Stage_text",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_text"
+      },
+      "params": [
+        {
+          "key": "NAME",
+          "type": "TextInput",
+          "defaultValue": "10"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_tone_list",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_tone_value",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_tone_value"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Robotry_Robit_Stage_tone_list",
+            "params": []
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_octave_list",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_octave_list"
+      },
+      "params": [
+        {
+          "key": "OCTAVE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_get_analog_value_map",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_get_analog_value_map"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "Lang.Blocks.position_the_sensorblock"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1023"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE5",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "255"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_get_sensor_value",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_get_sensor_value"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.light_s",
+              "value": "ALS"
+            },
+            {
+              "label": "Lang.Blocks.mic_s",
+              "value": "CMS"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_get_ultrasonic",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_get_ultrasonic"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT2",
+          "type": "Unknown"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_set_led",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_set_led"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.right",
+              "value": "Led_R"
+            },
+            {
+              "label": "Lang.Blocks.left",
+              "value": "Led_L"
+            }
+          ]
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.on",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.off",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_set_led_pwm",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_set_led_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.right",
+              "value": "Led_R"
+            },
+            {
+              "label": "Lang.Blocks.left",
+              "value": "Led_L"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Robotry_Robit_Stage_text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_set_tone",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_set_tone"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "OCTAVE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Robotry_Robit_Stage_octave_list",
+            "params": []
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "Robotry_Robit_Stage_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_set_bidirectional_motor",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_set_bidirectional_motor"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT2",
+          "type": "Unknown"
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.clockwise",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.counter_clockwise",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_set_bidirectional_motor_pwm",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_set_bidirectional_motor_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT2",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "OPERATOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.clockwise",
+              "value": "on"
+            },
+            {
+              "label": "Lang.Blocks.counter_clockwise",
+              "value": "off"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "Robotry_Robit_Stage_text",
+            "params": [
+              "255"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    },
+    {
+      "type": "Robotry_Robit_Stage_set_stop_the_motor",
+      "category": "hardware_robotry_robit_stage",
+      "label": {
+        "ko": "Robotry_Robit_Stage_set_stop_the_motor"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Unknown",
+          "defaultValue": null
+        },
+        {
+          "key": "PORT2",
+          "type": "Unknown"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Robotry_Robit_Stage"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1079 @@
+{
+  "category": "hardware_dash",
+  "blocks": [
+    {
+      "type": "dash_sound_say",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_sound_say"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "안녕",
+              "value": "0"
+            },
+            {
+              "label": "응?",
+              "value": "1"
+            },
+            {
+              "label": "어 어!",
+              "value": "2"
+            },
+            {
+              "label": "좋아",
+              "value": "3"
+            },
+            {
+              "label": "한숨..",
+              "value": "4"
+            },
+            {
+              "label": "출발!",
+              "value": "31"
+            },
+            {
+              "label": "짜잔!",
+              "value": "5"
+            },
+            {
+              "label": "위!",
+              "value": "6"
+            },
+            {
+              "label": "잘 가",
+              "value": "7"
+            },
+            {
+              "label": "무작위",
+              "value": "30"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_sound_animal",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_sound_animal"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": "8",
+          "options": [
+            {
+              "label": "말",
+              "value": "8"
+            },
+            {
+              "label": "고양이",
+              "value": "9"
+            },
+            {
+              "label": "개",
+              "value": "10"
+            },
+            {
+              "label": "공룡",
+              "value": "11"
+            },
+            {
+              "label": "사자",
+              "value": "12"
+            },
+            {
+              "label": "염소",
+              "value": "13"
+            },
+            {
+              "label": "악어",
+              "value": "14"
+            },
+            {
+              "label": "코끼리",
+              "value": "15"
+            },
+            {
+              "label": "무작위",
+              "value": "30"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_sound_move",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_sound_move"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": "16",
+          "options": [
+            {
+              "label": "화재 경보",
+              "value": "16"
+            },
+            {
+              "label": "트럭 경적",
+              "value": "17"
+            },
+            {
+              "label": "자동차 엔진",
+              "value": "18"
+            },
+            {
+              "label": "자동차 타이어 끼익 소리",
+              "value": "19"
+            },
+            {
+              "label": "헬리콥터",
+              "value": "20"
+            },
+            {
+              "label": "제트기",
+              "value": "21"
+            },
+            {
+              "label": "보트",
+              "value": "22"
+            },
+            {
+              "label": "기차",
+              "value": "23"
+            },
+            {
+              "label": "무작위",
+              "value": "30"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_sound_strange",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_sound_strange"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": "24",
+          "options": [
+            {
+              "label": "경고음",
+              "value": "24"
+            },
+            {
+              "label": "레이저",
+              "value": "25"
+            },
+            {
+              "label": "고르륵 소리",
+              "value": "26"
+            },
+            {
+              "label": "윙윙 소리",
+              "value": "27"
+            },
+            {
+              "label": "어 어 어",
+              "value": "28"
+            },
+            {
+              "label": "찍 소리",
+              "value": "29"
+            },
+            {
+              "label": "무작위",
+              "value": "30"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_my_sound",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_my_sound"
+      },
+      "params": [
+        {
+          "key": "SOUND",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "#1",
+              "value": "0"
+            },
+            {
+              "label": "#2",
+              "value": "1"
+            },
+            {
+              "label": "#3",
+              "value": "2"
+            },
+            {
+              "label": "#4",
+              "value": "3"
+            },
+            {
+              "label": "#5",
+              "value": "4"
+            },
+            {
+              "label": "#6",
+              "value": "5"
+            },
+            {
+              "label": "#7",
+              "value": "6"
+            },
+            {
+              "label": "#8",
+              "value": "7"
+            },
+            {
+              "label": "#9",
+              "value": "8"
+            },
+            {
+              "label": "#10",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_light_color",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_light_color"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "모든",
+              "value": "1"
+            },
+            {
+              "label": "왼쪽 귀",
+              "value": "2"
+            },
+            {
+              "label": "오른쪽 귀",
+              "value": "3"
+            },
+            {
+              "label": "전면",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "COLOR",
+          "type": "Color"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_tail_light_color",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_tail_light_color"
+      },
+      "params": [
+        {
+          "key": "LED",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "켜기",
+              "value": "1"
+            },
+            {
+              "label": "끄기",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Color"
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_eye",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_eye"
+      },
+      "params": [
+        {
+          "key": "EYE",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "끄기",
+              "value": "0"
+            },
+            {
+              "label": "웃는 얼굴",
+              "value": "1"
+            },
+            {
+              "label": "익살스러운 얼굴",
+              "value": "2"
+            },
+            {
+              "label": "화난 얼굴",
+              "value": "3"
+            },
+            {
+              "label": "놀란 얼굴",
+              "value": "4"
+            },
+            {
+              "label": "모두 켜기",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_v_head",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_v_head"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": "4",
+          "options": [
+            {
+              "label": "위쪽",
+              "value": "4"
+            },
+            {
+              "label": "가운데",
+              "value": "5"
+            },
+            {
+              "label": "아래쪽",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_h_head",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_h_head"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": 30,
+          "options": [
+            {
+              "label": "15˚",
+              "value": "15"
+            },
+            {
+              "label": "30˚",
+              "value": "30"
+            },
+            {
+              "label": "45˚",
+              "value": "45"
+            },
+            {
+              "label": "60˚",
+              "value": "60"
+            },
+            {
+              "label": "75˚",
+              "value": "75"
+            },
+            {
+              "label": "90˚",
+              "value": "90"
+            },
+            {
+              "label": "105˚",
+              "value": "105"
+            },
+            {
+              "label": "120˚",
+              "value": "120"
+            }
+          ]
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_forward_head",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_forward_head"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_voice_head",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_voice_head"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_turn_drive",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_turn_drive"
+      },
+      "params": [
+        {
+          "key": "ROTATION",
+          "type": "Dropdown",
+          "defaultValue": "3",
+          "options": [
+            {
+              "label": "시계 방향",
+              "value": "3"
+            },
+            {
+              "label": "반 시계 방향",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "angle",
+          "defaultValue": 30
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_turn_drive_360",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_turn_drive_360"
+      },
+      "params": [
+        {
+          "key": "ROTATION",
+          "type": "Dropdown",
+          "defaultValue": "3",
+          "options": [
+            {
+              "label": "시계 방향",
+              "value": "3"
+            },
+            {
+              "label": "반 시계 방향",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_drive",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_drive"
+      },
+      "params": [
+        {
+          "key": "DIRECTION",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "앞",
+              "value": "1"
+            },
+            {
+              "label": "뒤",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DISTANCE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 30
+        },
+        {
+          "key": "SPEED",
+          "type": "Dropdown",
+          "defaultValue": "3",
+          "options": [
+            {
+              "label": "매우 느리게",
+              "value": "1"
+            },
+            {
+              "label": "느리게",
+              "value": "2"
+            },
+            {
+              "label": "보통 속도로",
+              "value": "3"
+            },
+            {
+              "label": "빠르게",
+              "value": "4"
+            },
+            {
+              "label": "매우 빠르게",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_wheel_speed",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_wheel_speed"
+      },
+      "params": [
+        {
+          "key": "DIRECTION_L",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "앞",
+              "value": "1"
+            },
+            {
+              "label": "뒤",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "SPEED_L",
+          "type": "Dropdown",
+          "defaultValue": "3",
+          "options": [
+            {
+              "label": "매우 느리게",
+              "value": "1"
+            },
+            {
+              "label": "느리게",
+              "value": "2"
+            },
+            {
+              "label": "보통 속도로",
+              "value": "3"
+            },
+            {
+              "label": "빠르게",
+              "value": "4"
+            },
+            {
+              "label": "매우 빠르게",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "DIRECTION_R",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "앞",
+              "value": "1"
+            },
+            {
+              "label": "뒤",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "SPEED_R",
+          "type": "Dropdown",
+          "defaultValue": "3",
+          "options": [
+            {
+              "label": "매우 느리게",
+              "value": "1"
+            },
+            {
+              "label": "느리게",
+              "value": "2"
+            },
+            {
+              "label": "보통 속도로",
+              "value": "3"
+            },
+            {
+              "label": "빠르게",
+              "value": "4"
+            },
+            {
+              "label": "매우 빠르게",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "key": "4",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_drive_stop",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_drive_stop"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_sensor1",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_sensor1"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "5",
+          "options": [
+            {
+              "label": "가운데 버튼",
+              "value": "5"
+            },
+            {
+              "label": "1번 버튼",
+              "value": "6"
+            },
+            {
+              "label": "2번 버튼",
+              "value": "7"
+            },
+            {
+              "label": "3번 버튼",
+              "value": "8"
+            },
+            {
+              "label": "박수 소리",
+              "value": "9"
+            },
+            {
+              "label": "소리",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_sensor2",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_sensor2"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "앞쪽 장애물",
+              "value": "0"
+            },
+            {
+              "label": "뒤쪽 장애물",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽 장애물",
+              "value": "2"
+            },
+            {
+              "label": "왼쪽 장애물",
+              "value": "3"
+            },
+            {
+              "label": "들림",
+              "value": "10"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    },
+    {
+      "type": "dash_animation",
+      "category": "hardware_dash",
+      "label": {
+        "ko": "dash_animation"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 0,
+          "options": [
+            {
+              "label": "안녕",
+              "value": "0"
+            },
+            {
+              "label": "안녕하세요",
+              "value": "1"
+            },
+            {
+              "label": "걱정 마 (오른쪽)",
+              "value": "2"
+            },
+            {
+              "label": "걱정 마 (왼쪽)",
+              "value": "7"
+            },
+            {
+              "label": "잘가 #1",
+              "value": "3"
+            },
+            {
+              "label": "잘가 #2",
+              "value": "4"
+            },
+            {
+              "label": "자신감 있는",
+              "value": "5"
+            },
+            {
+              "label": "그래그래",
+              "value": "6"
+            },
+            {
+              "label": "아무도 없나요",
+              "value": "8"
+            },
+            {
+              "label": "그윽",
+              "value": "9"
+            },
+            {
+              "label": "하품",
+              "value": "10"
+            },
+            {
+              "label": "드르렁",
+              "value": "11"
+            },
+            {
+              "label": "휘파람",
+              "value": "12"
+            },
+            {
+              "label": "어지러워",
+              "value": "13"
+            },
+            {
+              "label": "출발",
+              "value": "14"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "Dash"
+      }
+    }
+  ]
+}

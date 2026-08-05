@@ -1,0 +1,1982 @@
+{
+  "category": "hardware_lecoboardAvr",
+  "blocks": [
+    {
+      "type": "lecoboardAvr_husky_al_set",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_al_set"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "얼굴 인식하기",
+              "value": "1"
+            },
+            {
+              "label": "사물 따라가기",
+              "value": "2"
+            },
+            {
+              "label": "사물 인식하기",
+              "value": "3"
+            },
+            {
+              "label": "선 따라가기",
+              "value": "4"
+            },
+            {
+              "label": "색깔 인식하기",
+              "value": "5"
+            },
+            {
+              "label": "태그 인식하기",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_husky_get_learn",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_get_learn"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_husky_get_item",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_get_item"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": 2,
+          "options": [
+            {
+              "label": "프레임",
+              "value": "2"
+            },
+            {
+              "label": "화살표",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_husky_get_ID",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_get_ID"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              1,
+              4
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "프레임",
+              "value": "4"
+            },
+            {
+              "label": "화살표",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_husky_get_closest_block",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_get_closest_block"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "ID",
+              "value": "1"
+            },
+            {
+              "label": "X 중심점",
+              "value": "2"
+            },
+            {
+              "label": "Y 중심점",
+              "value": "3"
+            },
+            {
+              "label": "좌우 크기",
+              "value": "4"
+            },
+            {
+              "label": "상하 크기",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_husky_get_closest_arrow",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_get_closest_arrow"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "ID",
+              "value": "1"
+            },
+            {
+              "label": "X 시작점",
+              "value": "2"
+            },
+            {
+              "label": "Y 시작점",
+              "value": "3"
+            },
+            {
+              "label": "X 끝점",
+              "value": "4"
+            },
+            {
+              "label": "Y 끝점",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_husky_get_id_block",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_get_id_block"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "VALUE2",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "X 중심점",
+              "value": "1"
+            },
+            {
+              "label": "Y 중심점",
+              "value": "2"
+            },
+            {
+              "label": "좌우 크기",
+              "value": "3"
+            },
+            {
+              "label": "상하 크기",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_husky_get_id_arrow",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_get_id_arrow"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        },
+        {
+          "key": "VALUE2",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "X 시작점",
+              "value": "1"
+            },
+            {
+              "label": "Y 시작점",
+              "value": "2"
+            },
+            {
+              "label": "X 끝점",
+              "value": "3"
+            },
+            {
+              "label": "Y 끝점",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_husky_get_id_learned",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_husky_get_id_learned"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": 1
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_arm_control",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_arm_control"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              95
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              185
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_arm_gripper_control",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_arm_gripper_control"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              0
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              45
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_port_highlow_list",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_port_highlow_list"
+      },
+      "params": [
+        {
+          "key": "PORTVALUE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_digital_write",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_digital_write"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "lecoboardAvr_servomotor_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_digital_pwm",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_digital_pwm"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "lecoboardAvr_servomotor_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_analog_input_list",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_analog_input_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": 3,
+          "options": [
+            {
+              "label": "1",
+              "value": "3"
+            },
+            {
+              "label": "2",
+              "value": "4"
+            },
+            {
+              "label": "3",
+              "value": "5"
+            },
+            {
+              "label": "4",
+              "value": "6"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_button_read_bool",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_button_read_bool"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "TextInput",
+          "defaultValue": "4"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_boolean_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_button_read",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_button_read"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "TextInput",
+          "defaultValue": "4"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_ultrasonic_read",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_ultrasonic_read"
+      },
+      "params": [
+        {
+          "key": "PORT1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "6"
+            ]
+          }
+        },
+        {
+          "key": "PORT2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "arduino_get_port_number",
+            "params": [
+              "5"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_analog_read",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_analog_read"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "lecoboardAvr_analog_input_list",
+            "params": [
+              "3"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_cds_read",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_cds_read"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_var_read",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_var_read"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_ir_read",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_ir_read"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_temp_read",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_temp_read"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_digital_port_list",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_digital_port_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "28"
+            },
+            {
+              "label": "2",
+              "value": "29"
+            },
+            {
+              "label": "3",
+              "value": "1"
+            },
+            {
+              "label": "4",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_digital_read",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_digital_read"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "lecoboardAvr_digital_port_list",
+            "params": [
+              28
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_convert_value",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_convert_value"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "180"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_dual_color_list",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_dual_color_list"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "녹색",
+              "value": "1"
+            },
+            {
+              "label": "빨강",
+              "value": "2"
+            },
+            {
+              "label": "오렌지",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_dual_led_color_toggle",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_dual_led_color_toggle"
+      },
+      "params": [
+        {
+          "key": "COLOR",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "lecoboardAvr_dual_color_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_dual_led_toggle",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_dual_led_toggle"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_led_rgb_toggle",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_led_rgb_toggle"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_led_strip_toggle",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_led_strip_toggle"
+      },
+      "params": [
+        {
+          "key": "VALUE1",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "VALUE2",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "VALUE3",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "VALUE4",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "arduino_get_digital_toggle",
+            "params": [
+              "on"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_tone_list",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_tone_list"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "무음",
+              "value": "0"
+            },
+            {
+              "label": "도",
+              "value": "C"
+            },
+            {
+              "label": "도#(레♭)",
+              "value": "CS"
+            },
+            {
+              "label": "레",
+              "value": "D"
+            },
+            {
+              "label": "레#(미♭)",
+              "value": "DS"
+            },
+            {
+              "label": "미",
+              "value": "E"
+            },
+            {
+              "label": "파",
+              "value": "F"
+            },
+            {
+              "label": "파#(솔♭)",
+              "value": "FS"
+            },
+            {
+              "label": "솔",
+              "value": "G"
+            },
+            {
+              "label": "솔#(라♭)",
+              "value": "GS"
+            },
+            {
+              "label": "라",
+              "value": "A"
+            },
+            {
+              "label": "라#(시♭)",
+              "value": "AS"
+            },
+            {
+              "label": "시",
+              "value": "B"
+            },
+            {
+              "label": "도",
+              "value": "C2"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_buzzer_number",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_buzzer_number"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": 1
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_set_tone",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_set_tone"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "lecoboardAvr_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_set_freq_tone",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_set_freq_tone"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "12"
+            ]
+          }
+        },
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "HZ"
+            ]
+          }
+        },
+        {
+          "key": "DURATION",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1000"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_set_tone_off",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_set_tone_off"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "lecoboardAvr_buzzer_number",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "1"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_set_tone_long",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_set_tone_long"
+      },
+      "params": [
+        {
+          "key": "NOTE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "lecoboardAvr_tone_list",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_servomotor_list",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_servomotor_list"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_set_servo",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_set_servo"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "lecoboardAvr_servomotor_list",
+            "params": [
+              1
+            ]
+          }
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "90"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_dc_motor",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_dc_motor"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "왼쪽",
+              "value": "1"
+            },
+            {
+              "label": "오른쪽",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계방향",
+              "value": "0"
+            },
+            {
+              "label": "반시계방향",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_dc_motor_for_sec",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_dc_motor_for_sec"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "DIR",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "시계방향",
+              "value": "0"
+            },
+            {
+              "label": "반시계방향",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "key": "SPEED",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "50"
+            ]
+          }
+        },
+        {
+          "key": "SEC",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "4",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_dc_motor_stop",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_dc_motor_stop"
+      },
+      "params": [
+        {
+          "key": "INDEX",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_list_digital_lcd_line",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_list_digital_lcd_line"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_list_digital_lcd_column",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_list_digital_lcd_column"
+      },
+      "params": [
+        {
+          "key": "COLUMN",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            },
+            {
+              "label": "13",
+              "value": "12"
+            },
+            {
+              "label": "14",
+              "value": "13"
+            },
+            {
+              "label": "15",
+              "value": "14"
+            },
+            {
+              "label": "16",
+              "value": "15"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_set_lcd",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_set_lcd"
+      },
+      "params": [
+        {
+          "key": "LINE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "lecoboardAvr_list_digital_lcd_line",
+            "params": []
+          }
+        },
+        {
+          "key": "COLUMN",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "lecoboardAvr_list_digital_lcd_column",
+            "params": []
+          }
+        },
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "HELLO"
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_list_lcd_command",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_list_lcd_command"
+      },
+      "params": [
+        {
+          "key": "COMMAND",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "지움",
+              "value": "2"
+            },
+            {
+              "label": "백라이트켜기",
+              "value": "3"
+            },
+            {
+              "label": "백라이트끄기",
+              "value": "4"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_lcd_command",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_lcd_command"
+      },
+      "params": [
+        {
+          "key": "COMMAND",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "lecoboardAvr_list_lcd_command",
+            "params": []
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_send_ble",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_send_ble"
+      },
+      "params": [
+        {
+          "key": "STRING",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "text",
+            "params": [
+              "HELLO"
+            ]
+          }
+        },
+        {
+          "key": "1",
+          "type": "Indicator",
+          "defaultValue": null
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    },
+    {
+      "type": "lecoboardAvr_get_bluetooth",
+      "category": "hardware_lecoboardAvr",
+      "label": {
+        "ko": "lecoboardAvr_get_bluetooth"
+      },
+      "params": [],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic_string_field",
+      "extension": {
+        "kind": "hardware",
+        "module": "lecoboardAvr"
+      }
+    }
+  ]
+}

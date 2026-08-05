@@ -1,0 +1,348 @@
+{
+  "category": "hardware_armz",
+  "blocks": [
+    {
+      "type": "armz_run_action",
+      "category": "hardware_armz",
+      "label": {
+        "ko": "armz_run_action"
+      },
+      "params": [
+        {
+          "key": "PORT",
+          "type": "Dropdown",
+          "defaultValue": null,
+          "options": [
+            {
+              "label": "Lang.Blocks.Action",
+              "value": "ACTION"
+            },
+            {
+              "label": "Lang.Blocks.Sound",
+              "value": "SOUND"
+            }
+          ]
+        },
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultType": "number",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "2",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "armz"
+      }
+    },
+    {
+      "type": "armz_block_coding_MF",
+      "category": "hardware_armz",
+      "label": {
+        "ko": "armz_block_coding_MF"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0.5",
+              "value": "51"
+            },
+            {
+              "label": "1",
+              "value": "52"
+            },
+            {
+              "label": "2",
+              "value": "53"
+            },
+            {
+              "label": "3",
+              "value": "54"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "armz"
+      }
+    },
+    {
+      "type": "armz_block_coding_MB",
+      "category": "hardware_armz",
+      "label": {
+        "ko": "armz_block_coding_MB"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "0.5",
+              "value": "55"
+            },
+            {
+              "label": "1",
+              "value": "56"
+            },
+            {
+              "label": "2",
+              "value": "57"
+            },
+            {
+              "label": "3",
+              "value": "58"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "armz"
+      }
+    },
+    {
+      "type": "armz_block_coding_T",
+      "category": "hardware_armz",
+      "label": {
+        "ko": "armz_block_coding_T"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.Right",
+              "value": "59"
+            },
+            {
+              "label": "Lang.Blocks.Left",
+              "value": "60"
+            },
+            {
+              "label": "Lang.Blocks.Back",
+              "value": "61"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "armz"
+      }
+    },
+    {
+      "type": "armz_block_coding_LO",
+      "category": "hardware_armz",
+      "label": {
+        "ko": "armz_block_coding_LO"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.Red",
+              "value": "62"
+            },
+            {
+              "label": "Lang.Blocks.Green",
+              "value": "64"
+            },
+            {
+              "label": "Lang.Blocks.Blue",
+              "value": "66"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "armz"
+      }
+    },
+    {
+      "type": "armz_block_coding_LB",
+      "category": "hardware_armz",
+      "label": {
+        "ko": "armz_block_coding_LB"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.Red",
+              "value": "63"
+            },
+            {
+              "label": "Lang.Blocks.Green",
+              "value": "65"
+            },
+            {
+              "label": "Lang.Blocks.Blue",
+              "value": "67"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "armz"
+      }
+    },
+    {
+      "type": "armz_block_coding_LR",
+      "category": "hardware_armz",
+      "label": {
+        "ko": "armz_block_coding_LR"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "armz"
+      }
+    },
+    {
+      "type": "armz_block_coding_E",
+      "category": "hardware_armz",
+      "label": {
+        "ko": "armz_block_coding_E"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Dropdown",
+          "options": [
+            {
+              "label": "Lang.Blocks.Cheer",
+              "value": "200"
+            },
+            {
+              "label": "Lang.Blocks.Glad",
+              "value": "201"
+            },
+            {
+              "label": "Lang.Blocks.Dissatisfaction",
+              "value": "202"
+            },
+            {
+              "label": "Lang.Blocks.Angry",
+              "value": "203"
+            },
+            {
+              "label": "Lang.Blocks.Laughter",
+              "value": "204"
+            },
+            {
+              "label": "Lang.Blocks.Praise",
+              "value": "205"
+            },
+            {
+              "label": "Lang.Blocks.Praise2",
+              "value": "206"
+            },
+            {
+              "label": "Lang.Blocks.Consolation",
+              "value": "207"
+            },
+            {
+              "label": "Lang.Blocks.Surprised",
+              "value": "208"
+            },
+            {
+              "label": "Lang.Blocks.Warning",
+              "value": "209"
+            },
+            {
+              "label": "Lang.Blocks.Fear",
+              "value": "210"
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "armz"
+      }
+    }
+  ]
+}

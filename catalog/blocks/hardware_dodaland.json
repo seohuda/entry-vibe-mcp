@@ -1,0 +1,939 @@
+{
+  "category": "hardware_dodaland",
+  "blocks": [
+    {
+      "type": "dodaland_start_button_pressed",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_start_button_pressed"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_play_note_with_length",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_play_note_with_length"
+      },
+      "params": [
+        {
+          "key": "PITCH_NAME",
+          "type": "Dropdown",
+          "defaultValue": "도",
+          "options": [
+            {
+              "label": "도",
+              "value": "도"
+            },
+            {
+              "label": "레",
+              "value": "레"
+            },
+            {
+              "label": "미",
+              "value": "미"
+            },
+            {
+              "label": "파",
+              "value": "파"
+            },
+            {
+              "label": "솔",
+              "value": "솔"
+            },
+            {
+              "label": "라",
+              "value": "라"
+            },
+            {
+              "label": "시",
+              "value": "시"
+            },
+            {
+              "label": "도",
+              "value": "도"
+            }
+          ]
+        },
+        {
+          "key": "NOTE_NAME",
+          "type": "Dropdown",
+          "defaultValue": "4분음표",
+          "options": [
+            {
+              "label": "온음표",
+              "value": "온음표"
+            },
+            {
+              "label": "2분음표",
+              "value": "2분음표"
+            },
+            {
+              "label": "4분음표",
+              "value": "4분음표"
+            },
+            {
+              "label": "8분음표",
+              "value": "8분음표"
+            },
+            {
+              "label": "16분음표",
+              "value": "16분음표"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_press_start_button",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_press_start_button"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_press_stop_button",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_press_stop_button"
+      },
+      "params": [
+        {
+          "key": "0",
+          "type": "Indicator"
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_onoff_channel_led",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_onoff_channel_led"
+      },
+      "params": [
+        {
+          "key": "CHANNEL_NUMBER",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            },
+            {
+              "label": "13",
+              "value": "12"
+            },
+            {
+              "label": "14",
+              "value": "13"
+            },
+            {
+              "label": "15",
+              "value": "14"
+            },
+            {
+              "label": "16",
+              "value": "15"
+            },
+            {
+              "label": "17",
+              "value": "16"
+            },
+            {
+              "label": "18",
+              "value": "17"
+            },
+            {
+              "label": "19",
+              "value": "18"
+            },
+            {
+              "label": "20",
+              "value": "19"
+            },
+            {
+              "label": "21",
+              "value": "20"
+            },
+            {
+              "label": "22",
+              "value": "21"
+            },
+            {
+              "label": "23",
+              "value": "22"
+            },
+            {
+              "label": "24",
+              "value": "23"
+            },
+            {
+              "label": "25",
+              "value": "24"
+            },
+            {
+              "label": "26",
+              "value": "25"
+            },
+            {
+              "label": "27",
+              "value": "26"
+            },
+            {
+              "label": "28",
+              "value": "27"
+            },
+            {
+              "label": "29",
+              "value": "28"
+            },
+            {
+              "label": "30",
+              "value": "29"
+            },
+            {
+              "label": "31",
+              "value": "30"
+            },
+            {
+              "label": "32",
+              "value": "31"
+            },
+            {
+              "label": "33",
+              "value": "32"
+            },
+            {
+              "label": "34",
+              "value": "33"
+            },
+            {
+              "label": "35",
+              "value": "34"
+            },
+            {
+              "label": "36",
+              "value": "35"
+            },
+            {
+              "label": "37",
+              "value": "36"
+            },
+            {
+              "label": "38",
+              "value": "37"
+            },
+            {
+              "label": "39",
+              "value": "38"
+            },
+            {
+              "label": "40",
+              "value": "39"
+            }
+          ]
+        },
+        {
+          "key": "ONOFF",
+          "type": "Dropdown",
+          "defaultValue": "1",
+          "options": [
+            {
+              "label": "끄기",
+              "value": "0"
+            },
+            {
+              "label": "켜기",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_onoff_location_led",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_onoff_location_led"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "ON_OR_OFF",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "끄기",
+              "value": "0"
+            },
+            {
+              "label": "켜기",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_select_instrument",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_select_instrument"
+      },
+      "params": [
+        {
+          "key": "INSTRUMENT_NAME",
+          "type": "Dropdown",
+          "defaultValue": "2",
+          "options": [
+            {
+              "label": "피아노",
+              "value": "2"
+            },
+            {
+              "label": "전자피아노",
+              "value": "6"
+            },
+            {
+              "label": "글로켄슈필",
+              "value": "10"
+            },
+            {
+              "label": "오르골",
+              "value": "11"
+            },
+            {
+              "label": "종",
+              "value": "15"
+            },
+            {
+              "label": "오르간",
+              "value": "20"
+            },
+            {
+              "label": "어쿠스틱 기타",
+              "value": "25"
+            },
+            {
+              "label": "전자기타",
+              "value": "31"
+            },
+            {
+              "label": "베이스",
+              "value": "34"
+            },
+            {
+              "label": "바이올린",
+              "value": "41"
+            },
+            {
+              "label": "비올라",
+              "value": "42"
+            },
+            {
+              "label": "첼로",
+              "value": "43"
+            },
+            {
+              "label": "더블 베이스",
+              "value": "44"
+            },
+            {
+              "label": "하프",
+              "value": "47"
+            },
+            {
+              "label": "목소리",
+              "value": "53"
+            },
+            {
+              "label": "트럼펫",
+              "value": "58"
+            },
+            {
+              "label": "튜바",
+              "value": "62"
+            },
+            {
+              "label": "색소폰",
+              "value": "65"
+            },
+            {
+              "label": "오보에",
+              "value": "69"
+            },
+            {
+              "label": "호른",
+              "value": "70"
+            },
+            {
+              "label": "클라리넷",
+              "value": "72"
+            },
+            {
+              "label": "플루트",
+              "value": "74"
+            },
+            {
+              "label": "팬플루트",
+              "value": "76"
+            },
+            {
+              "label": "오카리나",
+              "value": "80"
+            },
+            {
+              "label": "단소",
+              "value": "83"
+            },
+            {
+              "label": "비",
+              "value": "97"
+            },
+            {
+              "label": "보석",
+              "value": "99"
+            },
+            {
+              "label": "밴조",
+              "value": "106"
+            },
+            {
+              "label": "칼림바",
+              "value": "109"
+            },
+            {
+              "label": "핸드벨",
+              "value": "113"
+            },
+            {
+              "label": "우드블럭",
+              "value": "116"
+            },
+            {
+              "label": "오리",
+              "value": "121"
+            },
+            {
+              "label": "파도",
+              "value": "123"
+            },
+            {
+              "label": "전화벨",
+              "value": "125"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_play_channel",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_play_channel"
+      },
+      "params": [
+        {
+          "key": "CHANNEL_NUMBER",
+          "type": "Dropdown",
+          "defaultValue": "0",
+          "options": [
+            {
+              "label": "1",
+              "value": "0"
+            },
+            {
+              "label": "2",
+              "value": "1"
+            },
+            {
+              "label": "3",
+              "value": "2"
+            },
+            {
+              "label": "4",
+              "value": "3"
+            },
+            {
+              "label": "5",
+              "value": "4"
+            },
+            {
+              "label": "6",
+              "value": "5"
+            },
+            {
+              "label": "7",
+              "value": "6"
+            },
+            {
+              "label": "8",
+              "value": "7"
+            },
+            {
+              "label": "9",
+              "value": "8"
+            },
+            {
+              "label": "10",
+              "value": "9"
+            },
+            {
+              "label": "11",
+              "value": "10"
+            },
+            {
+              "label": "12",
+              "value": "11"
+            },
+            {
+              "label": "13",
+              "value": "12"
+            },
+            {
+              "label": "14",
+              "value": "13"
+            },
+            {
+              "label": "15",
+              "value": "14"
+            },
+            {
+              "label": "16",
+              "value": "15"
+            },
+            {
+              "label": "17",
+              "value": "16"
+            },
+            {
+              "label": "18",
+              "value": "17"
+            },
+            {
+              "label": "19",
+              "value": "18"
+            },
+            {
+              "label": "20",
+              "value": "19"
+            },
+            {
+              "label": "21",
+              "value": "20"
+            },
+            {
+              "label": "22",
+              "value": "21"
+            },
+            {
+              "label": "23",
+              "value": "22"
+            },
+            {
+              "label": "24",
+              "value": "23"
+            },
+            {
+              "label": "25",
+              "value": "24"
+            },
+            {
+              "label": "26",
+              "value": "25"
+            },
+            {
+              "label": "27",
+              "value": "26"
+            },
+            {
+              "label": "28",
+              "value": "27"
+            },
+            {
+              "label": "29",
+              "value": "28"
+            },
+            {
+              "label": "30",
+              "value": "29"
+            },
+            {
+              "label": "31",
+              "value": "30"
+            },
+            {
+              "label": "32",
+              "value": "31"
+            },
+            {
+              "label": "33",
+              "value": "32"
+            },
+            {
+              "label": "34",
+              "value": "33"
+            },
+            {
+              "label": "35",
+              "value": "34"
+            },
+            {
+              "label": "36",
+              "value": "35"
+            },
+            {
+              "label": "37",
+              "value": "36"
+            },
+            {
+              "label": "38",
+              "value": "37"
+            },
+            {
+              "label": "39",
+              "value": "38"
+            },
+            {
+              "label": "40",
+              "value": "39"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_play_location",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_play_location"
+      },
+      "params": [
+        {
+          "key": "X",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        },
+        {
+          "key": "Y",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "1"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_control_led",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_control_led"
+      },
+      "params": [
+        {
+          "key": "ENABLE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "끄기",
+              "value": "0"
+            },
+            {
+              "label": "켜기",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_control_volume",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_control_volume"
+      },
+      "params": [
+        {
+          "key": "ENABLE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "끄기",
+              "value": "0"
+            },
+            {
+              "label": "켜기",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_control_tempo",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_control_tempo"
+      },
+      "params": [
+        {
+          "key": "ENABLE",
+          "type": "Dropdown",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "끄기",
+              "value": "0"
+            },
+            {
+              "label": "켜기",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_set_volume",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_set_volume"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    },
+    {
+      "type": "dodaland_set_tempo",
+      "category": "hardware_dodaland",
+      "label": {
+        "ko": "dodaland_set_tempo"
+      },
+      "params": [
+        {
+          "key": "VALUE",
+          "type": "Block",
+          "accept": "string",
+          "defaultValue": {
+            "type": "number",
+            "params": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "statementSlots": 0,
+      "statementKeys": [],
+      "isHat": false,
+      "skeleton": "basic",
+      "extension": {
+        "kind": "hardware",
+        "module": "dodaland"
+      }
+    }
+  ]
+}
