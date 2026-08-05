@@ -27,16 +27,31 @@ export interface IRPicture {
   path: string;
 }
 
+/** Custom sound under the host project's `assets/` folder (mp3 only). */
+export interface IRSound {
+  /** Display name in Entry. Defaults to the file stem. */
+  name?: string;
+  /**
+   * Path relative to the host cwd. Must stay under `assets/` and end with
+   * `.mp3` — e.g. `assets/meow.mp3`.
+   */
+  path: string;
+  /** Duration in seconds. Defaults to 1 when omitted. */
+  duration?: number;
+}
+
 export interface EntryIRObject {
   name: string;
   /**
-   * Built-in Entrybot costumes when `pictures` is omitted.
-   * When `pictures` is set, those host files replace the costumes
+   * Built-in Entrybot costumes/sounds when `pictures` / `sounds` are omitted.
+   * When set, those host files replace the corresponding media
    * (sprite stays `"entrybot"` for v1 entity defaults).
    */
   sprite: 'entrybot';
   /** Optional host costumes from `assets/` (png/svg). */
   pictures?: IRPicture[];
+  /** Optional host sounds from `assets/` (mp3). */
+  sounds?: IRSound[];
   scripts: Thread[];
 }
 

@@ -1,0 +1,30 @@
+{
+  "objects": [
+    {
+      "name": "점",
+      "sprite": "entrybot",
+      "pictures": [
+        { "name": "점", "path": "assets/dot.png" }
+      ],
+      "sounds": [
+        { "name": "비프", "path": "assets/beep.mp3", "duration": 1.3 }
+      ],
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "sound_something_with_block" },
+          {
+            "type": "repeat_basic",
+            "params": { "VALUE": 3 },
+            "statements": {
+              "DO": [
+                { "type": "move_direction", "params": { "VALUE": 15 } },
+                { "type": "bounce_wall" }
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

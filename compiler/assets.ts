@@ -1,11 +1,16 @@
 /**
- * Host-project asset paths: files the LLM drops under `assets/` (png/svg)
- * that the compiler packs into .ent archives.
+ * Host-project asset paths: files the LLM drops under `assets/`
+ * (png/svg images, mp3 sounds) that the compiler packs into .ent archives.
  */
 import { existsSync, mkdirSync, readFileSync, realpathSync } from 'node:fs';
 import { basename, extname, isAbsolute, join, normalize, relative } from 'node:path';
 
-const ALLOWED_EXT = new Set(['.png', '.svg']);
+export type AssetKind = 'image' | 'sound';
+
+const ALLOWED_EXT: Record<AssetKind, Set<string>> = {
+  image: new Set(['.png', '.svg']),
+  sound: new Set(['.mp3']),
+};
 
 /** Host cwd `assets/` (or package-relative when an explicit root is passed). */
 export function assetsDir(root?: string): string {
@@ -31,11 +36,20 @@ export interface ResolvedHostAsset {
   fileName: string;
 }
 
+export interface ResolvedHostSound {
+  relativePath: string;
+  absolutePath: string;
+  fileName: string;
+}
+
 /**
- * Normalize an IR picture path to a path relative to `assets/`.
+ * Normalize an IR asset path to a path relative to `assets/`.
  * Accepts `assets/foo.png` or `foo.png`. Rejects escapes and bad extensions.
  */
-export function normalizeAssetRelPath(input: string): string {
+export function normalizeAssetRelPath(
+  input: string,
+  kind: AssetKind = 'image',
+): string {
   if (!input || typeof input !== 'string') {
     throw new Error('asset path is required');
   }
@@ -56,11 +70,13 @@ export function normalizeAssetRelPath(input: string): string {
     throw new Error(`asset path escapes assets/: ${JSON.stringify(input)}`);
   }
   const ext = extname(norm).toLowerCase();
-  if (!ALLOWED_EXT.has(ext)) {
-    throw new Error(
-      `asset path must end with .png or .svg (got ${JSON.stringify(input)}); ` +
-        'jpg/webp are not supported in v1',
-    );
+  const allowed = ALLOWED_EXT[kind];
+  if (!allowed.has(ext)) {
+    const hint =
+      kind === 'image'
+        ? 'must end with .png or .svg; jpg/webp are not supported in v1'
+        : 'must end with .mp3; wav/ogg are not supported in v1';
+    throw new Error(`asset path ${hint} (got ${JSON.stringify(input)})`);
   }
   if (!norm || norm.endsWith('/')) {
     throw new Error(`asset path must be a file: ${JSON.stringify(input)}`);
@@ -68,15 +84,15 @@ export function normalizeAssetRelPath(input: string): string {
   return norm;
 }
 
-export function resolveHostAsset(
+function resolveUnderAssets(
   input: string,
+  kind: AssetKind,
   root?: string,
-): ResolvedHostAsset {
-  const relativePath = normalizeAssetRelPath(input);
+): { relativePath: string; absolutePath: string; fileName: string } {
+  const relativePath = normalizeAssetRelPath(input, kind);
   const dir = assetsDir(root);
   const absolutePath = join(dir, ...relativePath.split('/'));
 
-  // Containment check even before the file exists (for clearer errors).
   const relToAssets = relative(dir, absolutePath);
   if (relToAssets.startsWith('..') || isAbsolute(relToAssets)) {
     throw new Error(`asset path escapes assets/: ${JSON.stringify(input)}`);
@@ -85,12 +101,10 @@ export function resolveHostAsset(
   if (!existsSync(absolutePath)) {
     throw new Error(
       `asset not found: ${JSON.stringify(input)} (resolved ${absolutePath}). ` +
-        'Write the image under the host project assets/ folder first.',
+        'Write the file under the host project assets/ folder first.',
     );
   }
 
-  // Confirm realpath stays inside assets/ (symlink escape). Fail closed if
-  // realpath cannot be resolved — do not pack a path we cannot verify.
   let realAssets: string;
   let realFile: string;
   try {
@@ -107,16 +121,27 @@ export function resolveHostAsset(
     throw new Error(`asset path escapes assets/: ${JSON.stringify(input)}`);
   }
 
-  const ext = extname(relativePath).toLowerCase() as '.png' | '.svg';
   return {
     relativePath,
     absolutePath: realFile,
-    imageType: ext === '.svg' ? 'svg' : 'png',
     fileName: basename(relativePath),
   };
 }
 
-/** Marker prefix stored on picture.fileurl before prepareExport rewrites it. */
+export function resolveHostAsset(input: string, root?: string): ResolvedHostAsset {
+  const base = resolveUnderAssets(input, 'image', root);
+  const ext = extname(base.relativePath).toLowerCase() as '.png' | '.svg';
+  return {
+    ...base,
+    imageType: ext === '.svg' ? 'svg' : 'png',
+  };
+}
+
+export function resolveHostSound(input: string, root?: string): ResolvedHostSound {
+  return resolveUnderAssets(input, 'sound', root);
+}
+
+/** Marker prefix stored on picture/sound fileurl before prepareExport rewrites it. */
 export const HOST_ASSET_PREFIX = 'host-asset:';
 
 export function hostAssetMarker(relativePathUnderAssets: string): string {
@@ -140,7 +165,6 @@ export function readImageDimension(
   try {
     const buf = readFileSync(absolutePath);
     if (imageType === 'png') {
-      // IHDR: width/height are big-endian u32 at bytes 16..24
       if (buf.length >= 24 && buf[0] === 0x89 && buf[1] === 0x50) {
         const width = buf.readUInt32BE(16);
         const height = buf.readUInt32BE(20);
@@ -178,10 +202,13 @@ export function siblingPngPath(absolutePath: string): string | undefined {
   return existsSync(pngPath) ? pngPath : undefined;
 }
 
-export function defaultPictureName(relativePath: string, explicit?: string): string {
+export function defaultMediaName(relativePath: string, explicit?: string): string {
   if (explicit?.trim()) return explicit.trim();
   return basename(relativePath, extname(relativePath));
 }
+
+/** @deprecated Use {@link defaultMediaName}. */
+export const defaultPictureName = defaultMediaName;
 
 /** Tiny 1×1 PNG used as Entry thumb when the costume is SVG-only. */
 export const PLACEHOLDER_PNG = Buffer.from(

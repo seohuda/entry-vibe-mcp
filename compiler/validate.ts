@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import type { BlockCatalog, BlockSchema } from '../src/types/block.ts';
 import type { EntryIR, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
 import { catalogPath } from '../src/paths.ts';
-import { normalizeAssetRelPath, resolveHostAsset } from './assets.ts';
+import { normalizeAssetRelPath, resolveHostAsset, resolveHostSound } from './assets.ts';
 
 const DEFAULT_CATALOG = catalogPath();
 
@@ -215,8 +215,33 @@ export function validateProject(
             return;
           }
           try {
-            normalizeAssetRelPath(pic.path);
+            normalizeAssetRelPath(pic.path, 'image');
             resolveHostAsset(pic.path);
+          } catch (err) {
+            errors.push(`${prefix}: ${err instanceof Error ? err.message : String(err)}`);
+          }
+        });
+      }
+    }
+    if (obj.sounds !== undefined) {
+      if (!Array.isArray(obj.sounds) || obj.sounds.length === 0) {
+        errors.push(
+          `objects[${oi}].sounds must be a non-empty array when provided ` +
+            '(or omit it to use the built-in bark sound)',
+        );
+      } else {
+        obj.sounds.forEach((snd, si) => {
+          const prefix = `objects[${oi}].sounds[${si}]`;
+          if (!snd || typeof snd.path !== 'string') {
+            errors.push(`${prefix}.path is required`);
+            return;
+          }
+          if (snd.duration !== undefined && (typeof snd.duration !== 'number' || !(snd.duration > 0))) {
+            errors.push(`${prefix}.duration must be a positive number when provided`);
+          }
+          try {
+            normalizeAssetRelPath(snd.path, 'sound');
+            resolveHostSound(snd.path);
           } catch (err) {
             errors.push(`${prefix}: ${err instanceof Error ? err.message : String(err)}`);
           }

@@ -2,10 +2,11 @@ import type { BlockCatalog, BlockParamSchema, BlockSchema } from '../src/types/b
 import type { EntryIR, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
 import { createStartProjectSkeleton, type EntryProject } from './skeleton.ts';
 import {
-  defaultPictureName,
+  defaultMediaName,
   hostAssetMarker,
   readImageDimension,
   resolveHostAsset,
+  resolveHostSound,
 } from './assets.ts';
 import {
   catalogIndex,
@@ -278,7 +279,7 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
           id: nextId(),
           fileurl: hostAssetMarker(resolved.relativePath),
           thumbUrl: hostAssetMarker(resolved.relativePath),
-          name: defaultPictureName(resolved.relativePath, pic.name),
+          name: defaultMediaName(resolved.relativePath, pic.name),
           imageType: resolved.imageType,
           dimension,
         };
@@ -299,9 +300,22 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
         picture.id = nextId();
       });
     }
-    sprite.sounds.forEach((sound) => {
-      sound.id = nextId();
-    });
+    if (obj.sounds && obj.sounds.length > 0) {
+      sprite.sounds = obj.sounds.map((snd) => {
+        const resolved = resolveHostSound(snd.path);
+        return {
+          id: nextId(),
+          fileurl: hostAssetMarker(resolved.relativePath),
+          name: defaultMediaName(resolved.relativePath, snd.name),
+          ext: '.mp3',
+          duration: snd.duration && snd.duration > 0 ? snd.duration : 1,
+        };
+      });
+    } else {
+      sprite.sounds.forEach((sound) => {
+        sound.id = nextId();
+      });
+    }
     base.selectedPictureId = sprite.pictures[0]?.id;
 
     const scripts = obj.scripts.map((thread, ti) =>

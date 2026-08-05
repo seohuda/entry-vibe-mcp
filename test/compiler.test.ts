@@ -548,4 +548,54 @@ describe.skipIf(!existsSync(CATALOG))('host assets/', () => {
       ),
     ).toBe(true);
   });
+
+  it('compiles and packs a custom mp3 from assets/', async () => {
+    const ir: EntryIR = {
+      objects: [
+        {
+          name: '스피커',
+          sprite: 'entrybot',
+          sounds: [{ name: '커스텀', path: 'assets/custom-bark.mp3', duration: 1.3 }],
+          scripts: [
+            [{ type: 'when_run_button_click' }, { type: 'sound_something_with_block' }],
+          ],
+        },
+      ],
+    };
+    expect(validateProject(ir).valid).toBe(true);
+    const project = compileProject(ir);
+    const sounds = (
+      project.objects[0].sprite as { sounds: Array<{ fileurl: string; name: string }> }
+    ).sounds;
+    expect(sounds).toHaveLength(1);
+    expect(sounds[0].fileurl).toMatch(/^host-asset:/);
+    expect(sounds[0].name).toBe('커스텀');
+
+    const outDir = join(ROOT, 'output', 'test');
+    mkdirSync(outDir, { recursive: true });
+    const entPath = join(outDir, 'custom-sound.ent');
+    const prepared = prepareExport(project);
+    await packPrepared(prepared, { outputPath: entPath });
+
+    const extractDir = join(outDir, 'custom-sound-extract');
+    rmSync(extractDir, { recursive: true, force: true });
+    mkdirSync(extractDir, { recursive: true });
+    await tar.x({ file: entPath, cwd: extractDir });
+
+    const loaded = JSON.parse(readFileSync(join(extractDir, 'temp', 'project.json'), 'utf8'));
+    const packed = loaded.objects[0].sprite.sounds[0];
+    expect(packed.filename).toMatch(/^[0-9a-f]{32}$/);
+    expect(
+      existsSync(
+        join(
+          extractDir,
+          'temp',
+          packed.filename.slice(0, 2),
+          packed.filename.slice(2, 4),
+          'sound',
+          `${packed.filename}.mp3`,
+        ),
+      ),
+    ).toBe(true);
+  });
 });

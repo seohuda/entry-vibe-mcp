@@ -10,6 +10,7 @@ EntryIR JSON schema (use named param keys and statementKeys from the catalog):
     "name": string,
     "sprite": "entrybot",
     "pictures": [{ "name"?: string, "path": "assets/...." }],  // optional png/svg costumes
+    "sounds": [{ "name"?: string, "path": "assets/....mp3", "duration"?: number }],  // optional
     "scripts": [ Thread, ... ]
   }],
   "variables": [{ "name": string, "initialValue": string|number }],  // optional
@@ -24,20 +25,21 @@ IRBlock = {
   "statements": { [slotName: string]: Thread }  // e.g. "DO", "STACK_IF", "STACK_ELSE"
 }
 
-Custom costumes: write image files into the host project's assets/ folder
-(png or svg only), then reference them from objects[].pictures.
+Custom media: write files into the host project's assets/ folder, then
+reference them from objects[].pictures (png/svg) and/or objects[].sounds (mp3).
 
-  // 1) save e.g. assets/cat.png in the host working directory
+  // 1) save e.g. assets/cat.png and assets/meow.mp3
   // 2) compile with:
   "objects": [{
     "name": "고양이",
     "sprite": "entrybot",
     "pictures": [{ "name": "고양이", "path": "assets/cat.png" }],
+    "sounds": [{ "name": "야옹", "path": "assets/meow.mp3", "duration": 1.2 }],
     "scripts": [ ... ]
   }]
 
-Omit pictures to keep the built-in Entrybot costumes. Paths must stay under
-assets/ (no ..). jpg/webp are not supported in v1.
+Omit pictures/sounds to keep the built-in Entrybot costumes and bark.
+Paths must stay under assets/ (no ..). jpg/webp/wav/ogg are not supported in v1.
 
 Variables: declare them in "variables", then reference them from a block's
 "VARIABLE" param by NAME — the compiler rewrites the name to the internal

@@ -24,6 +24,12 @@ if (!existsSync(irPath)) {
   process.exit(1);
 }
 
+// Examples that reference assets/… resolve against examples/assets/.
+const exampleAssets = join(root, 'examples', 'assets');
+if (existsSync(exampleAssets)) {
+  process.env.ENTRY_VIBE_ASSETS_DIR = exampleAssets;
+}
+
 const ir = JSON.parse(readFileSync(irPath, 'utf8')) as EntryIR;
 
 async function main() {

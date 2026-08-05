@@ -1,0 +1,41 @@
+{
+  "objects": [
+    {
+      "name": "플레이어",
+      "sprite": "entrybot",
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          {
+            "type": "repeat_inf",
+            "statements": {
+              "DO": [
+                { "type": "move_direction", "params": { "VALUE": 5 } },
+                { "type": "bounce_wall" }
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "방해꾼",
+      "sprite": "entrybot",
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          {
+            "type": "repeat_inf",
+            "statements": {
+              "DO": [
+                { "type": "rotate_relative", "params": { "VALUE": 15 } },
+                { "type": "move_direction", "params": { "VALUE": 8 } },
+                { "type": "bounce_wall" }
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

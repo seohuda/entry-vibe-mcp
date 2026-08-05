@@ -290,9 +290,14 @@ flowchart LR
 - param 키와 statement 키는 `get_block_schema` 응답값을 그대로 사용합니다.
 - v1은 sprite `entrybot`만 지원합니다. `pictures`를 생략하면 기본 엔트리봇 모양이 쓰입니다.
 
-### 커스텀 이미지 (`assets/`)
+### 커스텀 미디어 (`assets/`)
 
-호스트 작업 디렉터리의 `assets/` 폴더에 png·svg를 넣은 뒤, IR의 `pictures`로 참조합니다. AI가 이미지를 생성·저장할 위치도 여기입니다.
+호스트 작업 디렉터리의 `assets/` 폴더에 파일을 넣은 뒤 IR에서 참조합니다. AI가 미디어를 저장할 위치도 여기입니다.
+
+| 종류 | 확장자 | IR 필드 |
+|------|--------|---------|
+| 모양 | `.png`, `.svg` | `pictures` |
+| 소리 | `.mp3` | `sounds` |
 
 ```json
 {
@@ -302,8 +307,12 @@ flowchart LR
     "pictures": [
       { "name": "고양이", "path": "assets/cat.png" }
     ],
+    "sounds": [
+      { "name": "야옹", "path": "assets/meow.mp3", "duration": 1.2 }
+    ],
     "scripts": [[
       { "type": "when_run_button_click" },
+      { "type": "sound_something_with_block" },
       { "type": "move_direction", "params": { "VALUE": 10 } }
     ]]
   }]
@@ -311,7 +320,7 @@ flowchart LR
 ```
 
 - 경로는 `assets/` 아래만 허용합니다 (`..` 금지).
-- 확장자는 `.png`, `.svg`만 지원합니다.
+- `pictures` / `sounds`를 생략하면 기본 엔트리봇 모양·bark 소리를 씁니다.
 - SVG만 넣을 때 같은 stem의 `.png`가 있으면 썸네일로 사용합니다.
 - `compile_project` 실행 시 `assets/` 폴더가 없으면 만들어 둡니다.
 

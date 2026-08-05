@@ -43,6 +43,17 @@ export const entryIRSchema = z.object({
           .min(1)
           .optional()
           .describe('Optional costumes from the host assets/ folder; omit to use entrybot'),
+        sounds: z
+          .array(
+            z.object({
+              name: z.string().optional(),
+              path: z.string().describe('Host path under assets/, e.g. assets/meow.mp3'),
+              duration: z.number().positive().optional().describe('Duration in seconds (default 1)'),
+            }),
+          )
+          .min(1)
+          .optional()
+          .describe('Optional sounds from the host assets/ folder; omit to use bark'),
         scripts: z.array(z.array(irBlockSchema)),
       }),
     )

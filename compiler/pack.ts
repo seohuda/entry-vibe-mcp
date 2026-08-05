@@ -23,6 +23,7 @@ import {
   PLACEHOLDER_PNG,
   parseHostAssetMarker,
   resolveHostAsset,
+  resolveHostSound,
   siblingPngPath,
   type ImageType,
 } from './assets.ts';
@@ -53,13 +54,23 @@ export type PendingHostPicture = {
   source: { type: 'host'; absolutePath: string; imageType: ImageType };
 };
 
-export type PendingSoundAsset = {
+export type PendingBuiltinSound = {
   kind: 'sound';
   fileId: string;
-  stem: SoundStem;
+  source: { type: 'builtin'; stem: SoundStem };
 };
 
-export type PendingAsset = PendingBuiltinPicture | PendingHostPicture | PendingSoundAsset;
+export type PendingHostSound = {
+  kind: 'sound';
+  fileId: string;
+  source: { type: 'host'; absolutePath: string };
+};
+
+export type PendingAsset =
+  | PendingBuiltinPicture
+  | PendingHostPicture
+  | PendingBuiltinSound
+  | PendingHostSound;
 
 /** Project JSON already rewritten to hash paths, plus the bytes still to stage. */
 export interface PreparedExport {
@@ -192,6 +203,22 @@ export function prepareExport(
     }
 
     for (const sound of sprite.sounds ?? []) {
+      const fileId = nextFileId();
+      const hostRel = parseHostAssetMarker(sound.fileurl);
+
+      if (hostRel) {
+        const resolved = resolveHostSound(hostRel);
+        assets.push({
+          kind: 'sound',
+          fileId,
+          source: { type: 'host', absolutePath: resolved.absolutePath },
+        });
+        sound.filename = fileId;
+        sound.ext = sound.ext ?? '.mp3';
+        sound.fileurl = hashFileUrl(fileId, 'sound', 'mp3');
+        continue;
+      }
+
       const base = basenameFromUrl(sound.fileurl) ?? 'bark.mp3';
       const stem = soundStemFromBasename(base);
       if (!stem) {
@@ -201,8 +228,7 @@ export function prepareExport(
         );
       }
 
-      const fileId = nextFileId();
-      assets.push({ kind: 'sound', fileId, stem });
+      assets.push({ kind: 'sound', fileId, source: { type: 'builtin', stem } });
       sound.filename = fileId;
       sound.ext = sound.ext ?? '.mp3';
       sound.fileurl = hashFileUrl(fileId, 'sound', 'mp3');
@@ -221,8 +247,12 @@ export function writePendingAssets(
   for (const asset of assets) {
     const dir = join(tempDir, subDir(asset.fileId));
     if (asset.kind === 'sound') {
-      const mp3 = readFileSync(requireMedia(mediaSource, `${asset.stem}.mp3`));
-      writeBinary(join(dir, 'sound', `${asset.fileId}.mp3`), mp3);
+      if (asset.source.type === 'builtin') {
+        const mp3 = readFileSync(requireMedia(mediaSource, `${asset.source.stem}.mp3`));
+        writeBinary(join(dir, 'sound', `${asset.fileId}.mp3`), mp3);
+      } else {
+        writeBinary(join(dir, 'sound', `${asset.fileId}.mp3`), readFileSync(asset.source.absolutePath));
+      }
       continue;
     }
 
