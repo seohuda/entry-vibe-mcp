@@ -5,14 +5,16 @@ import { fileURLToPath } from 'node:url';
 import * as tar from 'tar';
 import { compileProject, CompileError } from '../compiler/compile.ts';
 import { decompileProject } from '../compiler/decompile.ts';
+import { simulateProject } from '../compiler/runtime-sim.ts';
 import { smokeTestProject } from '../compiler/smoke.ts';
+import { verifyProject } from '../compiler/verify.ts';
 import { unpackEnt } from '../compiler/unpack.ts';
 import { validateProject } from '../compiler/validate.ts';
 import { packEnt, packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
 import { ENTRYBOT_MEDIA_FILES } from '../compiler/skeleton.ts';
 import { mediaDir } from '../src/paths.ts';
 import type { EntryIR } from '../src/types/ir.ts';
-import { addObject, patchScript } from '../server/ir-edit.ts';
+import { addObject, patchScript, removeObject } from '../server/ir-edit.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FIXTURES = join(ROOT, 'test', 'fixtures');
@@ -785,5 +787,45 @@ describe.skipIf(!existsSync(CATALOG))('host assets/', () => {
       'bounce_wall',
     ]);
     expect(validateProject(ir).valid).toBe(true);
+  });
+
+  it('verify_project runs roundtrip and simulation', async () => {
+    const ir = loadIR('entrybot-basic.ir.json');
+    const result = await verifyProject(ir);
+    expect(result.ok).toBe(true);
+    expect(result.checks.some((c) => c.name === 'pack_roundtrip' && c.ok)).toBe(true);
+    expect(result.simulation?.stepsExecuted).toBeGreaterThan(0);
+  });
+
+  it('simulate_project predicts movement for bounce IR', () => {
+    const ir = loadIR('bounce-cat.ir.json');
+    const sim = simulateProject(ir);
+    expect(sim.objects[0].x).not.toBe(0);
+    expect(sim.stepsExecuted).toBeGreaterThan(0);
+  });
+
+  it('compiles AI learning IR with project.learning', () => {
+    const assets = join(FIXTURES, 'assets');
+    process.env.ENTRY_VIBE_ASSETS_DIR = assets;
+    try {
+      const ir = JSON.parse(
+        readFileSync(join(FIXTURES, 'learning-basic.ir.json'), 'utf8'),
+      ) as EntryIR;
+      expect(validateProject(ir).valid, validateProject(ir).errors.join('\n')).toBe(true);
+      const project = compileProject(ir);
+      expect(project.learning).toBeDefined();
+      expect((project.learning as { type: string }).type).toBe('image');
+    } finally {
+      delete process.env.ENTRY_VIBE_ASSETS_DIR;
+    }
+  });
+
+  it('remove_object keeps at least one object', () => {
+    const ir = JSON.parse(
+      readFileSync(join(ROOT, 'examples', 'two-objects.ir.json'), 'utf8'),
+    ) as EntryIR;
+    const next = removeObject(ir, '방해꾼');
+    expect(next.objects).toHaveLength(1);
+    expect(validateProject(next).valid).toBe(true);
   });
 });

@@ -6,9 +6,11 @@ import { compileProject, CompileError } from '../compiler/compile.ts';
 import { decompileProject } from '../compiler/decompile.ts';
 import { packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
 import { smokeTestProject } from '../compiler/smoke.ts';
+import { simulateProject } from '../compiler/runtime-sim.ts';
+import { verifyProject } from '../compiler/verify.ts';
 import { unpackEnt, resolveEntPath } from '../compiler/unpack.ts';
 import { validateProject } from '../compiler/validate.ts';
-import type { EntryIR, EntryIRObject, Thread } from '../src/types/ir.ts';
+import type { EntryIR, EntryIRLearning, EntryIRObject, EntryIRScene, Thread } from '../src/types/ir.ts';
 import { outputDir } from '../src/paths.ts';
 import { ensureAssetsDir } from '../compiler/assets.ts';
 import {
@@ -22,8 +24,13 @@ import {
 import { IR_SCHEMA_DOC } from './ir-docs.ts';
 import {
   addObjectValidated,
+  addSceneValidated,
   IREditError,
+  patchObjectValidated,
   patchScriptValidated,
+  removeObjectValidated,
+  removeSceneValidated,
+  setLearningValidated,
   type PatchScriptMode,
 } from './ir-edit.ts';
 import { buildGuide } from './recipes.ts';
@@ -73,16 +80,40 @@ const irObjectSchema = z.object({
   scripts: z.array(z.array(irBlockSchema)),
 });
 
-export const entryIRSchema = z.object({
-  scenes: z
-    .array(
-      z.object({
-        name: z.string(),
-        background: irPictureSchema.optional().describe('Locked background sprite for the scene'),
-      }),
-    )
+const irLearningSchema = z.object({
+  type: z.enum([
+    'image',
+    'speech',
+    'text',
+    'number',
+    'regression',
+    'logisticRegression',
+    'cluster',
+    'decisiontree',
+    'svm',
+  ]),
+  labels: z.array(z.string()).min(1),
+  id: z.string().optional(),
+  _id: z.string().optional(),
+  url: z.string().optional(),
+  name: z.string().optional(),
+  model: z.string().optional(),
+  version: z.number().optional(),
+  recordTime: z.number().optional(),
+  trainParam: z.record(z.union([z.string(), z.number()])).optional(),
+  modelPath: z
+    .string()
     .optional()
-    .describe('Scenes; defaults to a single "장면 1" when omitted'),
+    .describe('Optional assets/learning/*.json sidecar merged into project.learning'),
+});
+
+const irSceneSchema = z.object({
+  name: z.string(),
+  background: irPictureSchema.optional(),
+});
+
+export const entryIRSchema = z.object({
+  scenes: z.array(irSceneSchema).optional(),
   objects: z.array(irObjectSchema).min(1),
   variables: z
     .array(
@@ -115,6 +146,10 @@ export const entryIRSchema = z.object({
     )
     .optional()
     .describe('User functions; call with type function_call and params.NAME'),
+  learning: irLearningSchema
+    .optional()
+    .describe('Required when IR uses AI learning blocks (scope=ai)'),
+  speed: z.number().positive().optional().describe('Project FPS (default 60)'),
 });
 
 /**
@@ -456,5 +491,136 @@ export function registerTools(server: McpServer): void {
       },
     },
     async ({ ir }) => textResult(smokeTestProject(ir as EntryIR)),
+  );
+
+  server.registerTool(
+    'verify_project',
+    {
+      description: `Full verification: smoke + export shape + pack roundtrip + runtime simulation. Prefer this over smoke_test alone before compile.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema,
+        roundtrip: z.boolean().optional().describe('Run .ent pack/unpack roundtrip (default true)'),
+        simulate: z.boolean().optional().describe('Run core block simulator (default true)'),
+      },
+    },
+    async ({ ir, roundtrip, simulate }) =>
+      textResult(
+        await verifyProject(ir as EntryIR, {
+          roundtrip: roundtrip ?? true,
+          simulate: simulate ?? true,
+        }),
+      ),
+  );
+
+  server.registerTool(
+    'simulate_project',
+    {
+      description: `Simulate core blocks (move, rotate, variables, repeat) and return predicted entity positions/variables. Not full entryjs — use for automation sanity checks.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema,
+        maxSteps: z.number().int().min(1).max(5000).optional().describe('Max steps (default 500)'),
+      },
+    },
+    async ({ ir, maxSteps }) =>
+      textResult(simulateProject(ir as EntryIR, { maxSteps: maxSteps ?? 500 })),
+  );
+
+  server.registerTool(
+    'remove_object',
+    {
+      description: `Remove an object by name (must leave at least one object). Returns updated ir + validation.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema,
+        objectName: z.string(),
+      },
+    },
+    async ({ ir, objectName }) => {
+      try {
+        const result = removeObjectValidated(ir as EntryIR, objectName);
+        return textResult({ ok: result.validation.valid, ir: result.ir, validation: result.validation });
+      } catch (err) {
+        return errorResult(JSON.stringify({ ok: false, errors: [String(err)] }, null, 2));
+      }
+    },
+  );
+
+  server.registerTool(
+    'patch_object',
+    {
+      description: `Patch object fields (x, y, scene, text, scripts, sprite, pictures, …) without rewriting the whole IR.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema,
+        objectName: z.string(),
+        patch: irObjectSchema
+          .omit({ name: true })
+          .partial()
+          .describe('Fields to merge onto the object'),
+      },
+    },
+    async ({ ir, objectName, patch }) => {
+      try {
+        const result = patchObjectValidated(ir as EntryIR, objectName, patch as Partial<EntryIRObject>);
+        return textResult({ ok: result.validation.valid, ir: result.ir, validation: result.validation });
+      } catch (err) {
+        return errorResult(JSON.stringify({ ok: false, errors: [String(err)] }, null, 2));
+      }
+    },
+  );
+
+  server.registerTool(
+    'add_scene',
+    {
+      description: `Append a scene to ir.scenes. Returns updated ir + validation.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema,
+        scene: irSceneSchema,
+      },
+    },
+    async ({ ir, scene }) => {
+      try {
+        const result = addSceneValidated(ir as EntryIR, scene as EntryIRScene);
+        return textResult({ ok: result.validation.valid, ir: result.ir, validation: result.validation });
+      } catch (err) {
+        return errorResult(JSON.stringify({ ok: false, errors: [String(err)] }, null, 2));
+      }
+    },
+  );
+
+  server.registerTool(
+    'remove_scene',
+    {
+      description: `Remove a scene by name (fails if objects still reference it). Returns updated ir + validation.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema,
+        sceneName: z.string(),
+      },
+    },
+    async ({ ir, sceneName }) => {
+      try {
+        const result = removeSceneValidated(ir as EntryIR, sceneName);
+        return textResult({ ok: result.validation.valid, ir: result.ir, validation: result.validation });
+      } catch (err) {
+        return errorResult(JSON.stringify({ ok: false, errors: [String(err)] }, null, 2));
+      }
+    },
+  );
+
+  server.registerTool(
+    'set_learning',
+    {
+      description: `Set or clear ir.learning (required when using AI learning blocks). Pass learning=null to clear.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema,
+        learning: irLearningSchema.nullable(),
+      },
+    },
+    async ({ ir, learning }) => {
+      try {
+        const result = setLearningValidated(ir as EntryIR, learning as EntryIRLearning | null);
+        return textResult({ ok: result.validation.valid, ir: result.ir, validation: result.validation });
+      } catch (err) {
+        return errorResult(JSON.stringify({ ok: false, errors: [String(err)] }, null, 2));
+      }
+    },
   );
 }

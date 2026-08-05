@@ -8,10 +8,15 @@ MANDATORY WORKFLOW (do not skip; do not invent IR from memory):
 2) search_blocks({ query, scope: "core" }) — default scope is core (not hardware)
 3) get_block_schema({ types }) — use exact param keys / statementKeys
 4) validate_project({ ir }) — fix using errors[].hints, then re-validate
-5) smoke_test_project({ ir }) — optional but recommended before compile
+5) verify_project({ ir }) — smoke + roundtrip + simulation (recommended)
 6) compile_project({ ir, filename? }) — writes .ent + .json in host cwd
 
-Edit existing .ent: import_ent({ filename }) → patch_script / add_object → validate → compile.
+Edit existing .ent:
+import_ent → patch_script / patch_object / add_object / remove_object → verify_project → compile
+
+Incremental edits: add_scene, remove_scene, set_learning (AI learning model metadata)
+
+Simulation: simulate_project returns predicted x/y/variables after core blocks run.
 
 scope values: "core" (default) | "ai" | "hardware" | "all"
 Only use scope="hardware" when the user names a board/device.
@@ -40,7 +45,13 @@ EntryIR JSON schema:
     "type": "statement"|"string"|"boolean",
     "body": IRBlock[],
     "returnValue"?: string|number|boolean|IRBlock
-  }]
+  }],
+  "learning"?: {
+    "type": "image"|"speech"|"text"|"number"|"regression"|"logisticRegression"|"cluster"|"decisiontree"|"svm",
+    "labels": string[],
+    "modelPath"?: "assets/learning/model.json"
+  },
+  "speed"?: number
 }
 
 Thread = IRBlock[]  // sprite objects MUST start with an event hat (basic_event)
