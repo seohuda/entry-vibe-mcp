@@ -132,6 +132,25 @@ args = ["/absolute/path/to/entry-vibe-mcp/dist/server/index.js"]
 
 연결 확인은 `codex mcp list`로 합니다.
 
+### OpenCode
+
+프로젝트 루트의 `opencode.json`(또는 `opencode.jsonc`), 전역은 `~/.config/opencode/opencode.json`에 추가합니다. Claude Desktop과 달리 `command`가 문자열 배열이고 `type: "local"`이 필요합니다.
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "entry-vibe": {
+      "type": "local",
+      "command": ["node", "/absolute/path/to/entry-vibe-mcp/dist/server/index.js"],
+      "enabled": true
+    }
+  }
+}
+```
+
+연결 확인은 `opencode mcp list`로 합니다.
+
 ### Gemini CLI
 
 ```bash
@@ -174,7 +193,7 @@ IDE와 CLI(`agy`)가 같은 설정 파일을 공유하므로 한 번만 등록�
 
 Windsurf, Cline 등 다수 호스트는 Claude Desktop과 동일하게 `mcpServers` + `command`/`args` 구조를 사용합니다. 설정 파일 위치만 각 호스트 문서에서 확인하면 됩니다.
 
-다만 최상위 키가 다른 경우가 있습니다 — VS Code는 `servers`, Zed는 `context_servers`, Codex는 TOML 형식입니다. 적용 전 해당 호스트 문서에서 확인해야 합니다.
+다만 최상위 키가 다른 경우가 있습니다 — VS Code는 `servers`, Zed는 `context_servers`, Codex는 TOML, OpenCode는 `mcp` + `type`/`command` 배열 형식입니다. 적용 전 해당 호스트 문서에서 확인해야 합니다.
 
 ### 개발 중 실행
 
