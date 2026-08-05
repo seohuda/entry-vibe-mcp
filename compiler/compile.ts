@@ -2,6 +2,12 @@ import type { BlockCatalog, BlockParamSchema, BlockSchema } from '../src/types/b
 import type { EntryIR, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
 import { createStartProjectSkeleton, type EntryProject } from './skeleton.ts';
 import {
+  defaultPictureName,
+  hostAssetMarker,
+  readImageDimension,
+  resolveHostAsset,
+} from './assets.ts';
+import {
   catalogIndex,
   loadCatalog,
   validateProject,
@@ -264,9 +270,31 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
 
     // Picture/sound ids must be unique project-wide, not just per object.
     const sprite = base.sprite as SkeletonSprite;
-    sprite.pictures.forEach((picture) => {
-      picture.id = nextId();
-    });
+    if (obj.pictures && obj.pictures.length > 0) {
+      sprite.pictures = obj.pictures.map((pic) => {
+        const resolved = resolveHostAsset(pic.path);
+        const dimension = readImageDimension(resolved.absolutePath, resolved.imageType);
+        return {
+          id: nextId(),
+          fileurl: hostAssetMarker(resolved.relativePath),
+          thumbUrl: hostAssetMarker(resolved.relativePath),
+          name: defaultPictureName(resolved.relativePath, pic.name),
+          imageType: resolved.imageType,
+          dimension,
+        };
+      });
+      const first = sprite.pictures[0];
+      const dim = first.dimension as { width: number; height: number };
+      const entity = base.entity as Record<string, number>;
+      entity.width = dim.width;
+      entity.height = dim.height;
+      entity.regX = dim.width / 2;
+      entity.regY = dim.height / 2;
+    } else {
+      sprite.pictures.forEach((picture) => {
+        picture.id = nextId();
+      });
+    }
     sprite.sounds.forEach((sound) => {
       sound.id = nextId();
     });

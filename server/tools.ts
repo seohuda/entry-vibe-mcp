@@ -7,6 +7,7 @@ import { packPrepared, prepareExport, writePreparedJson } from '../compiler/pack
 import { validateProject } from '../compiler/validate.ts';
 import type { EntryIR } from '../src/types/ir.ts';
 import { outputDir } from '../src/paths.ts';
+import { ensureAssetsDir } from '../compiler/assets.ts';
 import {
   assertCatalogPresent,
   getBlockSchemas,
@@ -30,6 +31,18 @@ export const entryIRSchema = z.object({
       z.object({
         name: z.string(),
         sprite: z.literal('entrybot'),
+        pictures: z
+          .array(
+            z.object({
+              name: z.string().optional(),
+              path: z
+                .string()
+                .describe('Host path under assets/, e.g. assets/cat.png (png or svg only)'),
+            }),
+          )
+          .min(1)
+          .optional()
+          .describe('Optional costumes from the host assets/ folder; omit to use entrybot'),
         scripts: z.array(z.array(irBlockSchema)),
       }),
     )
@@ -173,6 +186,8 @@ export function registerTools(server: McpServer): void {
         const name = safeEntFilename(filename);
         const out = outputDir();
         mkdirSync(out, { recursive: true });
+        // Ensure the host project has an assets/ folder the LLM can write into.
+        ensureAssetsDir();
         const entPath = join(out, name);
         const jsonPath = join(out, name.replace(/\.ent$/i, '.json'));
 

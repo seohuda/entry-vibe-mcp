@@ -6,8 +6,8 @@
  *   temp/{ab}/{cd}/thumb/{fileId}.png
  *   temp/{ab}/{cd}/sound/{fileId}.mp3
  *
- * Pictures/sounds get a `filename` (fileId) so Entry can resolve uploads paths;
- * `fileurl`/`thumbUrl` also point at the temp/ paths so Entry Offline remapping works.
+ * Built-in entrybot media comes from the package `assets/media/`.
+ * Host costumes use `host-asset:…` markers set by the compiler from `assets/`.
  *
  * Use {@link prepareExport} once, then {@link writePreparedJson} + {@link packPrepared}
  * so the sidecar `.json` and the `.ent` share the same file ids.
@@ -19,6 +19,12 @@ import * as tar from 'tar';
 import { type EntryProject } from './skeleton.ts';
 import { projectForExport } from './compile.ts';
 import { mediaDir } from '../src/paths.ts';
+import {
+  PLACEHOLDER_PNG,
+  parseHostAssetMarker,
+  resolveHostAsset,
+  type ImageType,
+} from './assets.ts';
 
 export interface PackOptions {
   /** Destination .ent path */
@@ -34,10 +40,16 @@ export interface PackOptions {
 export type PictureStem = 'entrybot1' | 'entrybot2';
 export type SoundStem = 'bark';
 
-export type PendingPictureAsset = {
+export type PendingBuiltinPicture = {
   kind: 'picture';
   fileId: string;
-  stem: PictureStem;
+  source: { type: 'builtin'; stem: PictureStem };
+};
+
+export type PendingHostPicture = {
+  kind: 'picture';
+  fileId: string;
+  source: { type: 'host'; absolutePath: string; imageType: ImageType };
 };
 
 export type PendingSoundAsset = {
@@ -46,7 +58,7 @@ export type PendingSoundAsset = {
   stem: SoundStem;
 };
 
-export type PendingAsset = PendingPictureAsset | PendingSoundAsset;
+export type PendingAsset = PendingBuiltinPicture | PendingHostPicture | PendingSoundAsset;
 
 /** Project JSON already rewritten to hash paths, plus the bytes still to stage. */
 export interface PreparedExport {
@@ -125,9 +137,8 @@ function hashFileUrl(fileId: string, kind: 'image' | 'thumb' | 'sound', ext: str
 }
 
 /**
- * Clone + stringify scripts, then rewrite skeleton `temp/media/…` markers into
- * Entry hash-folder `filename` / `fileurl` / `thumbUrl` fields.
- * Does not write any bytes — pair with {@link writePendingAssets}.
+ * Clone + stringify scripts, then rewrite media markers into Entry hash-folder
+ * `filename` / `fileurl` / `thumbUrl` fields.
  */
 export function prepareExport(
   project: EntryProject,
@@ -142,6 +153,27 @@ export function prepareExport(
     if (!sprite) continue;
 
     for (const picture of sprite.pictures ?? []) {
+      const fileId = nextFileId();
+      const hostRel = parseHostAssetMarker(picture.fileurl) ?? parseHostAssetMarker(picture.thumbUrl);
+
+      if (hostRel) {
+        const resolved = resolveHostAsset(hostRel);
+        assets.push({
+          kind: 'picture',
+          fileId,
+          source: {
+            type: 'host',
+            absolutePath: resolved.absolutePath,
+            imageType: resolved.imageType,
+          },
+        });
+        picture.filename = fileId;
+        picture.imageType = resolved.imageType;
+        picture.fileurl = hashFileUrl(fileId, 'image', resolved.imageType);
+        picture.thumbUrl = hashFileUrl(fileId, 'thumb', 'png');
+        continue;
+      }
+
       const base = basenameFromUrl(picture.fileurl) ?? basenameFromUrl(picture.thumbUrl);
       const stem = pictureStemFromBasename(base);
       if (!stem) {
@@ -151,8 +183,7 @@ export function prepareExport(
         );
       }
 
-      const fileId = nextFileId();
-      assets.push({ kind: 'picture', fileId, stem });
+      assets.push({ kind: 'picture', fileId, source: { type: 'builtin', stem } });
       picture.filename = fileId;
       picture.imageType = picture.imageType ?? 'svg';
       picture.fileurl = hashFileUrl(fileId, 'image', 'svg');
@@ -188,15 +219,28 @@ export function writePendingAssets(
 ): void {
   for (const asset of assets) {
     const dir = join(tempDir, subDir(asset.fileId));
-    if (asset.kind === 'picture') {
-      const svg = readFileSync(requireMedia(mediaSource, `${asset.stem}.svg`));
-      const png = readFileSync(requireMedia(mediaSource, `${asset.stem}.png`));
+    if (asset.kind === 'sound') {
+      const mp3 = readFileSync(requireMedia(mediaSource, `${asset.stem}.mp3`));
+      writeBinary(join(dir, 'sound', `${asset.fileId}.mp3`), mp3);
+      continue;
+    }
+
+    if (asset.source.type === 'builtin') {
+      const svg = readFileSync(requireMedia(mediaSource, `${asset.source.stem}.svg`));
+      const png = readFileSync(requireMedia(mediaSource, `${asset.source.stem}.png`));
       writeBinary(join(dir, 'image', `${asset.fileId}.svg`), svg);
       writeBinary(join(dir, 'image', `${asset.fileId}.png`), png);
       writeBinary(join(dir, 'thumb', `${asset.fileId}.png`), png);
+      continue;
+    }
+
+    const bytes = readFileSync(asset.source.absolutePath);
+    if (asset.source.imageType === 'svg') {
+      writeBinary(join(dir, 'image', `${asset.fileId}.svg`), bytes);
+      writeBinary(join(dir, 'thumb', `${asset.fileId}.png`), PLACEHOLDER_PNG);
     } else {
-      const mp3 = readFileSync(requireMedia(mediaSource, `${asset.stem}.mp3`));
-      writeBinary(join(dir, 'sound', `${asset.fileId}.mp3`), mp3);
+      writeBinary(join(dir, 'image', `${asset.fileId}.png`), bytes);
+      writeBinary(join(dir, 'thumb', `${asset.fileId}.png`), bytes);
     }
   }
 }

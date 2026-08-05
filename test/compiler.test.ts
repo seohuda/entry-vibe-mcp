@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, beforeAll, afterAll } from 'vitest';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -429,5 +429,120 @@ describe('ent packing', () => {
     }
     // every staging dir must be cleaned up
     expect(readdirSync(outDir).filter((f) => f.startsWith('.ent-staging-'))).toEqual([]);
+  });
+});
+
+describe.skipIf(!existsSync(CATALOG))('host assets/', () => {
+  const assetRoot = join(FIXTURES, 'assets');
+  const prev = process.env.ENTRY_VIBE_ASSETS_DIR;
+
+  beforeAll(() => {
+    process.env.ENTRY_VIBE_ASSETS_DIR = assetRoot;
+  });
+
+  afterAll(() => {
+    if (prev === undefined) delete process.env.ENTRY_VIBE_ASSETS_DIR;
+    else process.env.ENTRY_VIBE_ASSETS_DIR = prev;
+  });
+
+  it('rejects missing or escaping picture paths', () => {
+    const missing = validateProject({
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          pictures: [{ path: 'assets/nope.png' }],
+          scripts: [[{ type: 'when_run_button_click' }]],
+        },
+      ],
+    });
+    expect(missing.valid).toBe(false);
+    expect(missing.errors.some((e) => e.includes('not found'))).toBe(true);
+
+    const escape = validateProject({
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          pictures: [{ path: 'assets/../secret.png' }],
+          scripts: [[{ type: 'when_run_button_click' }]],
+        },
+      ],
+    });
+    expect(escape.valid).toBe(false);
+    expect(escape.errors.some((e) => e.includes('escapes') || e.includes('.png or .svg'))).toBe(
+      true,
+    );
+  });
+
+  it('compiles and packs custom png/svg costumes from assets/', async () => {
+    const ir: EntryIR = {
+      objects: [
+        {
+          name: '점',
+          sprite: 'entrybot',
+          pictures: [
+            { name: '점', path: 'assets/dot.png' },
+            { path: 'assets/blob.svg' },
+          ],
+          scripts: [[{ type: 'when_run_button_click' }, { type: 'move_direction' }]],
+        },
+      ],
+    };
+    expect(validateProject(ir).valid).toBe(true);
+
+    const project = compileProject(ir);
+    const sprite = project.objects[0].sprite as {
+      pictures: Array<{ fileurl: string; imageType: string; name: string }>;
+    };
+    expect(sprite.pictures).toHaveLength(2);
+    expect(sprite.pictures[0].fileurl).toMatch(/^host-asset:/);
+    expect(sprite.pictures[0].imageType).toBe('png');
+    expect(sprite.pictures[1].imageType).toBe('svg');
+    expect(sprite.pictures[1].name).toBe('blob');
+
+    const outDir = join(ROOT, 'output', 'test');
+    mkdirSync(outDir, { recursive: true });
+    const entPath = join(outDir, 'custom-assets.ent');
+    let seq = 0;
+    const prepared = prepareExport(project, {
+      createFileId: () => `face${String(++seq).padStart(28, '0')}`,
+    });
+    await packPrepared(prepared, { outputPath: entPath });
+
+    const extractDir = join(outDir, 'custom-extract');
+    rmSync(extractDir, { recursive: true, force: true });
+    mkdirSync(extractDir, { recursive: true });
+    await tar.x({ file: entPath, cwd: extractDir });
+
+    const loaded = JSON.parse(readFileSync(join(extractDir, 'temp', 'project.json'), 'utf8'));
+    const pics = loaded.objects[0].sprite.pictures;
+    expect(pics[0].imageType).toBe('png');
+    expect(pics[0].fileurl).toContain('/image/');
+    expect(pics[0].fileurl.endsWith('.png')).toBe(true);
+    expect(
+      existsSync(
+        join(
+          extractDir,
+          'temp',
+          pics[0].filename.slice(0, 2),
+          pics[0].filename.slice(2, 4),
+          'image',
+          `${pics[0].filename}.png`,
+        ),
+      ),
+    ).toBe(true);
+    expect(
+      existsSync(
+        join(
+          extractDir,
+          'temp',
+          pics[1].filename.slice(0, 2),
+          pics[1].filename.slice(2, 4),
+          'image',
+          `${pics[1].filename}.svg`,
+        ),
+      ),
+    ).toBe(true);
   });
 });

@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import type { BlockCatalog, BlockSchema } from '../src/types/block.ts';
 import type { EntryIR, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
 import { catalogPath } from '../src/paths.ts';
+import { normalizeAssetRelPath, resolveHostAsset } from './assets.ts';
 
 const DEFAULT_CATALOG = catalogPath();
 
@@ -199,6 +200,28 @@ export function validateProject(
       errors.push(
         `objects[${oi}].sprite must be "entrybot" in v1 (got ${JSON.stringify(obj.sprite)})`,
       );
+    }
+    if (obj.pictures !== undefined) {
+      if (!Array.isArray(obj.pictures) || obj.pictures.length === 0) {
+        errors.push(
+          `objects[${oi}].pictures must be a non-empty array when provided ` +
+            '(or omit it to use the built-in entrybot costumes)',
+        );
+      } else {
+        obj.pictures.forEach((pic, pi) => {
+          const prefix = `objects[${oi}].pictures[${pi}]`;
+          if (!pic || typeof pic.path !== 'string') {
+            errors.push(`${prefix}.path is required`);
+            return;
+          }
+          try {
+            normalizeAssetRelPath(pic.path);
+            resolveHostAsset(pic.path);
+          } catch (err) {
+            errors.push(`${prefix}: ${err instanceof Error ? err.message : String(err)}`);
+          }
+        });
+      }
     }
     if (!Array.isArray(obj.scripts) || obj.scripts.length === 0) {
       errors.push(`objects[${oi}].scripts must be a non-empty array of threads`);

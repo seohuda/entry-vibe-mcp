@@ -269,7 +269,31 @@ flowchart LR
 
 - 스크립트 스레드는 이벤트 블록(`when_run_button_click` 등)으로 시작해야 합니다.
 - param 키와 statement 키는 `get_block_schema` 응답값을 그대로 사용합니다.
-- v1은 sprite `entrybot`만 지원합니다.
+- v1은 sprite `entrybot`만 지원합니다. `pictures`를 생략하면 기본 엔트리봇 모양이 쓰입니다.
+
+### 커스텀 이미지 (`assets/`)
+
+호스트 작업 디렉터리의 `assets/` 폴더에 png·svg를 넣은 뒤, IR의 `pictures`로 참조합니다. AI가 이미지를 생성·저장할 위치도 여기입니다.
+
+```json
+{
+  "objects": [{
+    "name": "고양이",
+    "sprite": "entrybot",
+    "pictures": [
+      { "name": "고양이", "path": "assets/cat.png" }
+    ],
+    "scripts": [[
+      { "type": "when_run_button_click" },
+      { "type": "move_direction", "params": { "VALUE": 10 } }
+    ]]
+  }]
+}
+```
+
+- 경로는 `assets/` 아래만 허용합니다 (`..` 금지).
+- 확장자는 `.png`, `.svg`만 지원합니다.
+- `compile_project` 실행 시 `assets/` 폴더가 없으면 만들어 둡니다.
 
 ### 변수
 

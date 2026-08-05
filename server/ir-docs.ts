@@ -8,7 +8,8 @@ EntryIR JSON schema (use named param keys and statementKeys from the catalog):
 {
   "objects": [{
     "name": string,
-    "sprite": "entrybot",   // v1 only supports entrybot
+    "sprite": "entrybot",
+    "pictures": [{ "name"?: string, "path": "assets/...." }],  // optional png/svg costumes
     "scripts": [ Thread, ... ]
   }],
   "variables": [{ "name": string, "initialValue": string|number }],  // optional
@@ -22,6 +23,21 @@ IRBlock = {
   "params": { [key: string]: string|number|boolean|IRBlock },  // named keys from schema
   "statements": { [slotName: string]: Thread }  // e.g. "DO", "STACK_IF", "STACK_ELSE"
 }
+
+Custom costumes: write image files into the host project's assets/ folder
+(png or svg only), then reference them from objects[].pictures.
+
+  // 1) save e.g. assets/cat.png in the host working directory
+  // 2) compile with:
+  "objects": [{
+    "name": "고양이",
+    "sprite": "entrybot",
+    "pictures": [{ "name": "고양이", "path": "assets/cat.png" }],
+    "scripts": [ ... ]
+  }]
+
+Omit pictures to keep the built-in Entrybot costumes. Paths must stay under
+assets/ (no ..). jpg/webp are not supported in v1.
 
 Variables: declare them in "variables", then reference them from a block's
 "VARIABLE" param by NAME — the compiler rewrites the name to the internal
@@ -39,7 +55,7 @@ list id. Referencing an undeclared name is a validation error.
   ...
   { "type": "add_value_to_list", "params": { "VALUE": 30, "LIST": "점수판" } }
 
-Example — cat that moves and bounces:
+Example — cat that moves and bounces (built-in entrybot look):
 {
   "objects": [{
     "name": "고양이",

@@ -16,9 +16,27 @@ export interface IRBlock {
 
 export type Thread = IRBlock[];
 
+/** Custom costume under the host project's `assets/` folder (png or svg). */
+export interface IRPicture {
+  /** Display name in Entry. Defaults to the file stem. */
+  name?: string;
+  /**
+   * Path relative to the host cwd. Must stay under `assets/` and end with
+   * `.png` or `.svg` — e.g. `assets/cat.png` or `assets/sprites/hero.svg`.
+   */
+  path: string;
+}
+
 export interface EntryIRObject {
   name: string;
+  /**
+   * Built-in Entrybot costumes when `pictures` is omitted.
+   * When `pictures` is set, those host files replace the costumes
+   * (sprite stays `"entrybot"` for v1 entity defaults).
+   */
   sprite: 'entrybot';
+  /** Optional host costumes from `assets/` (png/svg). */
+  pictures?: IRPicture[];
   scripts: Thread[];
 }
 
