@@ -1,0 +1,19 @@
+{
+  "learning": {
+    "type": "image",
+    "labels": ["고양이", "강아지"],
+    "modelPath": "assets/learning/test-model.json"
+  },
+  "objects": [
+    {
+      "name": "분류기",
+      "sprite": "entrybot",
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "test_result" }
+        ]
+      ]
+    }
+  ]
+}

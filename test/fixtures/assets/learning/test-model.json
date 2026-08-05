@@ -1,0 +1,8 @@
+{
+  "type": "image",
+  "labels": ["고양이", "강아지"],
+  "id": "testmodel001",
+  "_id": "testmodel001",
+  "url": "indexeddb://testmodel001",
+  "version": 1
+}

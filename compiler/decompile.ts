@@ -22,6 +22,7 @@ import {
   VARIABLE_PARAM_KEY,
 } from './validate.ts';
 import { parseHostAssetMarker } from './assets.ts';
+import { decompileLearning } from './learning.ts';
 import type { UnpackedMedia } from './unpack.ts';
 import { mediaPathByFileId } from './unpack.ts';
 
@@ -419,6 +420,8 @@ export function decompileProject(
 
   const ir: EntryIR = {
     scenes: scenes.length > 0 ? scenes : undefined,
+    speed: typeof project.speed === 'number' ? project.speed : undefined,
+    learning: decompileLearning((project as { learning?: unknown }).learning),
     variables: [...variableIdToName.entries()].map(([id, name]) => {
       const v = project.variables?.find((x) => x.id === id);
       return { name, initialValue: String(v?.value ?? '0') };
@@ -443,6 +446,8 @@ export function decompileProject(
   if (ir.lists?.length === 0) delete ir.lists;
   if (ir.messages?.length === 0) delete ir.messages;
   if (ir.functions?.length === 0) delete ir.functions;
+  if (!ir.learning) delete ir.learning;
+  if (ir.speed === undefined) delete ir.speed;
 
   return { ir, warnings: [...warnings, ...ctx.warnings] };
 }

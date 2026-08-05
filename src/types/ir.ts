@@ -103,6 +103,35 @@ export interface EntryIRFunction {
   returnValue?: IRParamValue;
 }
 
+export interface EntryIRLearning {
+  /** Entry learning model type (image, speech, text, number, …). */
+  type:
+    | 'image'
+    | 'speech'
+    | 'text'
+    | 'number'
+    | 'regression'
+    | 'logisticRegression'
+    | 'cluster'
+    | 'decisiontree'
+    | 'svm';
+  labels: string[];
+  id?: string;
+  _id?: string;
+  url?: string;
+  name?: string;
+  model?: string;
+  version?: number;
+  recordTime?: number;
+  trainParam?: Record<string, number | string>;
+  tableData?: unknown;
+  /**
+   * Optional host JSON under assets/learning/ merged into project.learning.
+   * Use when importing a trained model sidecar.
+   */
+  modelPath?: string;
+}
+
 export interface EntryIR {
   /** Scenes; defaults to a single "장면 1" when omitted. */
   scenes?: EntryIRScene[];
@@ -111,4 +140,8 @@ export interface EntryIR {
   lists?: EntryIRList[];
   messages?: EntryIRMessage[];
   functions?: EntryIRFunction[];
+  /** AI learning model metadata — required when using aiLearning blocks. */
+  learning?: EntryIRLearning;
+  /** Execution FPS (default 60). */
+  speed?: number;
 }

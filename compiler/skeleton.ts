@@ -21,6 +21,8 @@ export interface EntryProject {
   messages?: Array<{ id: string; name: string }>;
   functions?: unknown[];
   tables?: unknown[];
+  /** Serialized AI learning model (`Entry.aiLearning.toJSON()`). */
+  learning?: Record<string, unknown>;
 }
 
 const MEDIA_PREFIX = 'temp/media/';

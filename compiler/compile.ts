@@ -27,6 +27,7 @@ import {
   FUNCTION_CALL_TYPE,
 } from './validate.ts';
 import type { EntryIRFunction } from '../src/types/ir.ts';
+import { compileLearning } from './learning.ts';
 
 /** Collect Entry extension module lists from every block referenced in the IR. */
 export function collectExtensionModules(
@@ -60,7 +61,9 @@ export function collectExtensionModules(
         case 'hardware':
           external.add(ext.module);
           break;
-        // aiLearning needs project.learning model data — catalog-only for now
+        case 'aiLearning':
+          // project.learning is set from ir.learning — no separate module list in Entry export
+          break;
         default:
           break;
       }
@@ -551,6 +554,12 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
   const index = catalogIndex(catalog);
   const project = createStartProjectSkeleton();
   project.name = ir.objects[0]?.name ? `${ir.objects[0].name} 프로젝트` : '엔트리 프로젝트';
+  if (typeof ir.speed === 'number' && ir.speed > 0) {
+    project.speed = ir.speed;
+  }
+  if (ir.learning) {
+    project.learning = compileLearning(ir.learning);
+  }
 
   const irScenes = resolveScenes(ir);
   const defaultSceneName = irScenes[0].name;

@@ -3,6 +3,7 @@ import type { BlockCatalog, BlockSchema } from '../src/types/block.ts';
 import type { EntryIR, EntryIRObject, IRBlock, IRParamValue, Thread } from '../src/types/ir.ts';
 import { catalogPath } from '../src/paths.ts';
 import { normalizeAssetRelPath, resolveHostAsset, resolveHostSound } from './assets.ts';
+import { isValidLearningType, loadLearningModelFile } from './learning.ts';
 
 const DEFAULT_CATALOG = catalogPath();
 
@@ -237,6 +238,65 @@ function validateThread(
   });
 }
 
+function usesAiLearningBlocks(ir: EntryIR, index: Map<string, import('../src/types/block.ts').BlockSchema>): boolean {
+  let found = false;
+  const visit = (block: IRBlock) => {
+    const ext = index.get(block.type)?.extension;
+    if (ext?.kind === 'aiLearning') found = true;
+    if (block.params) {
+      for (const v of Object.values(block.params)) {
+        if (isIRBlock(v)) visit(v);
+      }
+    }
+    if (block.statements) {
+      for (const t of Object.values(block.statements)) {
+        for (const b of t) visit(b);
+      }
+    }
+  };
+  for (const obj of ir.objects) {
+    for (const thread of obj.scripts) {
+      for (const b of thread) visit(b);
+    }
+  }
+  for (const fn of ir.functions ?? []) {
+    for (const b of fn.body) visit(b);
+    if (fn.returnValue && isIRBlock(fn.returnValue)) visit(fn.returnValue);
+  }
+  return found;
+}
+
+function validateLearning(
+  ir: EntryIR,
+  index: Map<string, import('../src/types/block.ts').BlockSchema>,
+  errors: string[],
+  hints: string[],
+): void {
+  const needsLearning = usesAiLearningBlocks(ir, index);
+  if (!needsLearning) return;
+  if (!ir.learning) {
+    errors.push('ir.learning is required when using AI learning blocks');
+    hints.push(
+      'Add learning: { type: "image"|"speech"|..., labels: [...], modelPath?: "assets/learning/model.json" }.',
+    );
+    return;
+  }
+  if (!isValidLearningType(ir.learning.type)) {
+    errors.push(`learning.type is invalid: ${JSON.stringify(ir.learning.type)}`);
+  }
+  if (!Array.isArray(ir.learning.labels) || ir.learning.labels.length === 0) {
+    errors.push('learning.labels must be a non-empty array');
+  }
+  if (ir.learning.modelPath) {
+    try {
+      loadLearningModelFile(ir.learning.modelPath);
+    } catch (err) {
+      errors.push(`learning.modelPath: ${err instanceof Error ? err.message : String(err)}`);
+      hints.push('Place trained model JSON under assets/learning/ and reference it.');
+    }
+  }
+}
+
 export function validateProject(
   ir: EntryIR,
   catalog: BlockCatalog = loadCatalog(),
@@ -388,6 +448,12 @@ export function validateProject(
   ir.objects.forEach((obj, oi) => {
     validateObject(obj, oi, ctx, sceneNames);
   });
+
+  if (ir.speed !== undefined && (typeof ir.speed !== 'number' || !(ir.speed > 0))) {
+    errors.push('speed must be a positive number when provided');
+  }
+
+  validateLearning(ir, index, errors, hints);
 
   return { valid: errors.length === 0, errors, hints };
 }
