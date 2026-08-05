@@ -225,10 +225,11 @@ compile_project({ ir, filename: "작품이름.ent" })
 | `todo-list.ir.json` | 리스트 |
 | `message-ping.ir.json` | 메시지 |
 | `function-double.ir.json` | 함수 정의 + 호출 |
+| `function-list.ir.json` | 함수 + 리스트 + `show_list` (실행 결과가 무대에 보임) |
 | `two-objects.ir.json` | 오브젝트 2개 |
 | `custom-media.ir.json` | 커스텀 png/mp3 |
 
-로컬 확인: `npm run example -- bounce-cat`
+로컬 확인: `npm run example -- function-list`
 
 ---
 
@@ -246,7 +247,51 @@ compile_project({ ir, filename: "작품이름.ent" })
 
 ---
 
-## 11. 관련 파일
+## 11. OpenCode / 시스템 프롬프트 템플릿
+
+호스트가 레포 파일을 못 읽을 때, 아래 블록을 **시스템 프롬프트** 또는 OpenCode `instructions`에 그대로 붙여 넣으세요.
+
+### English (copy-paste)
+
+```text
+You build Entry (playentry.org) projects ONLY through the entry-vibe MCP server.
+
+Rules:
+1. ALWAYS call get_build_guide({ request }) first for every new build.
+2. NEVER hand-write project.json or create .ent archives yourself — only compile_project.
+3. Workflow: get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project.
+4. NEVER guess block param keys — get_block_schema for every block type you emit.
+5. Functions: declare in ir.functions[]; call with function_call + NAME — never function_create in object scripts.
+6. On validate/verify failure: read errors and hints, fix IR only, re-validate — do not retry unchanged IR.
+7. Foreign .ent files: audit_ent(filename) before import_ent.
+8. For list + function patterns, start from examples/function-list.ir.json in the repo.
+
+If the repo is available, read AGENT-GUIDE.md before your first tool call.
+```
+
+### 한국어 (복붙용)
+
+```text
+Entry(playentry.org) 작품은 entry-vibe MCP 툴만으로 만듭니다.
+
+규칙:
+1. 새 작품마다 반드시 get_build_guide({ request })를 첫 호출로 실행합니다.
+2. project.json을 직접 쓰거나 .ent zip/tar를 만들지 않습니다 — compile_project만 사용합니다.
+3. 순서: get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project.
+4. 블록 param 키를 추측하지 않습니다 — 쓸 블록마다 get_block_schema를 호출합니다.
+5. 함수는 ir.functions[]에 선언하고 function_call로 호출합니다 — 오브젝트 스크립트에 function_create 금지.
+6. validate/verify 실패 시 errors·hints를 보고 IR만 고친 뒤 재검증합니다 — 같은 IR로 compile_project 재시도 금지.
+7. 다른 도구가 만든 .ent는 import_ent 전에 audit_ent(filename)로 검사합니다.
+8. 리스트+함수 패턴은 레포의 examples/function-list.ir.json을 참고합니다.
+
+레포를 읽을 수 있으면 첫 툴 호출 전 AGENT-GUIDE.md를 읽으세요.
+```
+
+OpenCode `opencode.json` 예시는 [README.md](README.md)의 OpenCode 섹션을 참고하세요.
+
+---
+
+## 12. 관련 파일
 
 | 파일 | 용도 |
 |------|------|

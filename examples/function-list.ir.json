@@ -1,0 +1,31 @@
+{
+  "lists": [{ "name": "쇼핑목록", "initialValues": ["우유"] }],
+  "functions": [
+    {
+      "name": "간식추가",
+      "type": "statement",
+      "body": [
+        { "type": "add_value_to_list", "params": { "VALUE": "간식", "LIST": "쇼핑목록" } }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "name": "엔트리봇",
+      "sprite": "entrybot",
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "show_list", "params": { "LIST": "쇼핑목록" } },
+          {
+            "type": "repeat_basic",
+            "params": { "VALUE": 3 },
+            "statements": {
+              "DO": [{ "type": "function_call", "params": { "NAME": "간식추가" } }]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

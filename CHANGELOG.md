@@ -7,7 +7,9 @@
 
 ### Added
 
-- **`AGENT-GUIDE.md`** — MCP 호스트 LLM용 전체 계약 (금지 사항, 재시도 루프, 트러블슈팅)
+- **`AGENT-GUIDE.md`** — MCP 호스트 LLM용 전체 계약 (금지 사항, 재시도 루프, OpenCode 프롬프트 템플릿)
+- 예제 `function-list.ir.json` — 함수 + 리스트 + `show_list`
+- npm 패키지 `files`에 `AGENT-GUIDE.md`, `SKILL.md` 포함
 - MCP `get_build_guide` 응답에 `agentContract` 필드 (모델이 repo 문서를 못 읽어도 핵심 규칙 전달)
 - MCP 툴 `audit_ent` — 기존 `.ent` 구조 감사
 - `compiler/audit-export.ts` — export 감사 (name, media, func 참조)

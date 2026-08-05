@@ -11,6 +11,8 @@
     "catalog",
     "assets",
     "README.md",
+    "AGENT-GUIDE.md",
+    "SKILL.md",
     "LICENSE"
   ],
   "scripts": {

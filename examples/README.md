@@ -11,6 +11,7 @@
 | `custom-media.ir.json` | `assets/`의 커스텀 png·소리 |
 | `message-ping.ir.json` | 신호(`messages`) 보내기/받기 |
 | `function-double.ir.json` | 함수(`functions`) 정의 + `function_call` |
+| `function-list.ir.json` | 함수 + 리스트 + `show_list` (▶ 실행 시 목록 모니터에 결과 표시) |
 
 `custom-media.ir.json`은 [`examples/assets/`](assets/)의 `dot.png`·`beep.mp3`를 참조합니다.
 (`beep.mp3`는 entryjs bark 샘플 복사본, Apache-2.0.)
@@ -27,6 +28,7 @@ npm run example -- two-objects
 npm run example -- custom-media
 npm run example -- message-ping
 npm run example -- function-double
+npm run example -- function-list
 ```
 
 `output/<이름>.ent`가 생성되며, [엔트리 오프라인](https://playentry.org/download)이나

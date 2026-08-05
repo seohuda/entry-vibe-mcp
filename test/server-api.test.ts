@@ -64,6 +64,11 @@ describe('build guide recipes', () => {
     expect(recipes[0]?.id).toBe('bounce-loop');
   });
 
+  it('matches function-list recipe', () => {
+    const recipes = matchRecipes('쇼핑 목록에 함수로 추가');
+    expect(recipes.some((r) => r.id === 'function-list')).toBe(true);
+  });
+
   it('returns workflow and irSketch from get_build_guide', () => {
     const guide = buildGuide('점수 올려줘');
     expect(guide.workflow[0]).toContain('get_build_guide');

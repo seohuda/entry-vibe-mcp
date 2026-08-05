@@ -143,6 +143,21 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     expect((project.objects[0].entity as { x: number }).x).toBe(-120);
   });
 
+  it('compiles function-list (lists + functions + show_list)', () => {
+    const ir = JSON.parse(
+      readFileSync(join(ROOT, 'examples', 'function-list.ir.json'), 'utf8'),
+    ) as EntryIR;
+    const result = validateProject(ir);
+    expect(result.valid, result.errors.join('\n')).toBe(true);
+    const project = compileProject(ir);
+    expect(project.functions).toHaveLength(1);
+    const thread = (project.objects[0].script as unknown[][])[0] as Array<
+      Record<string, unknown>
+    >;
+    expect(thread[1].type).toBe('show_list');
+    expect(thread[2].type).toBe('repeat_basic');
+  });
+
   it('compiles functions and function_call into func_<id>', () => {
     const ir = JSON.parse(
       readFileSync(join(ROOT, 'examples', 'function-double.ir.json'), 'utf8'),

@@ -178,6 +178,55 @@ export const BUILD_RECIPES: BuildRecipe[] = [
     },
   },
   {
+    id: 'function-list',
+    title: '함수 + 리스트 + 리스트 보이기',
+    keywords: ['리스트', '함수', 'list', 'show_list', '쇼핑', '목록', '추가'],
+    recommendedBlocks: [
+      'when_run_button_click',
+      'show_list',
+      'repeat_basic',
+      'function_call',
+      'add_value_to_list',
+    ],
+    notes: [
+      'lists[]에 리스트를 선언하고, 함수 body에서 add_value_to_list로 항목을 넣습니다.',
+      '메인 스크립트에서 show_list로 무대에 리스트 모니터를 띄운 뒤 function_call — ▶ 실행 결과가 눈에 보입니다.',
+      '복잡한 로직은 ir.functions에 두고, 메인은 hat + show_list + 호출만 두는 패턴을 따르세요.',
+      '전체 예제 IR: examples/function-list.ir.json',
+    ],
+    irSketch: {
+      lists: [{ name: '쇼핑목록', initialValues: ['우유'] }],
+      functions: [
+        {
+          name: '간식추가',
+          type: 'statement',
+          body: [
+            { type: 'add_value_to_list', params: { VALUE: '간식', LIST: '쇼핑목록' } },
+          ],
+        },
+      ],
+      objects: [
+        {
+          name: '엔트리봇',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'show_list', params: { LIST: '쇼핑목록' } },
+              {
+                type: 'repeat_basic',
+                params: { VALUE: 3 },
+                statements: {
+                  DO: [{ type: 'function_call', params: { NAME: '간식추가' } }],
+                },
+              },
+            ],
+          ],
+        },
+      ],
+    },
+  },
+  {
     id: 'tts-read',
     title: 'AI 읽어주기 (TTS)',
     keywords: ['읽어', 'tts', '말하기', '음성'],
