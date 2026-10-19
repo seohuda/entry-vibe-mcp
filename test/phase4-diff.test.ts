@@ -413,6 +413,7 @@ describe('diffProjects', () => {
     expect(paths(diff.modified)).toEqual([
       'scenes.장면.background.name',
       'objects.봇.pictures[1].name',
+      'objects.봇.pictures.order',
       'objects.봇.sounds[0].duration',
     ]);
     expect(diff.modified[0]).toMatchObject({
@@ -426,6 +427,11 @@ describe('diffProjects', () => {
       after: 'A2',
     });
     expect(diff.modified[2]).toMatchObject({
+      path: 'objects.봇.pictures.order',
+      before: ['assets/a.png', 'assets/b.png'],
+      after: ['assets/b.png', 'assets/a.png'],
+    });
+    expect(diff.modified[3]).toMatchObject({
       kind: 'modified',
       before: 1,
       after: 2,
@@ -434,9 +440,9 @@ describe('diffProjects', () => {
     expect(diff.removed).toEqual([]);
     expect(diff.media).toEqual({ added: [], removed: [] });
     expect(diff.warnings).toEqual([]);
-    expect(diff.summary.modified).toBe(3);
+    expect(diff.summary.modified).toBe(4);
     expect(diff.summary.scenes.modified).toBe(1);
-    expect(diff.summary.objects.modified).toBe(2);
+    expect(diff.summary.objects.modified).toBe(3);
   });
 
   it('keeps media path changes out of the body diff even when metadata changes', () => {
@@ -486,6 +492,78 @@ describe('diffProjects', () => {
     expect(
       allChanges.every((change) => !change.path.startsWith('assets/')),
     ).toBe(true);
+  });
+
+  it('detects costume and sound reordering with unchanged global media inventory', () => {
+    const before = {
+      objects: [
+        {
+          name: '봇',
+          scripts: [],
+          pictures: [{ path: 'assets/a.png' }, { path: 'assets/b.png' }],
+          sounds: [{ path: 'assets/a.mp3' }, { path: 'assets/b.mp3' }],
+        },
+      ],
+    };
+    const after = {
+      objects: [
+        {
+          name: '봇',
+          scripts: [],
+          pictures: [...before.objects[0].pictures].reverse(),
+          sounds: [...before.objects[0].sounds].reverse(),
+        },
+      ],
+    };
+    const diff = diffProjects(before, after);
+
+    expect(paths(diff.modified)).toEqual([
+      'objects.봇.pictures.order',
+      'objects.봇.sounds.order',
+    ]);
+    expect(diff.media).toEqual({ added: [], removed: [] });
+    expect(diff.summary.modified).toBe(2);
+    expect(diff.summary.objects.modified).toBe(2);
+  });
+
+  it('reports an asset moved between scenes and objects even when global paths are identical', () => {
+    const before = {
+      scenes: [
+        { name: '시작', background: { path: 'assets/a.png' } },
+        { name: '종료', background: { path: 'assets/b.png' } },
+      ],
+      objects: [
+        { name: '왼쪽', scripts: [], pictures: [{ path: 'assets/a.png' }] },
+        { name: '오른쪽', scripts: [], pictures: [{ path: 'assets/b.png' }] },
+      ],
+    };
+    const after = {
+      scenes: [
+        { name: '시작', background: { path: 'assets/b.png' } },
+        { name: '종료', background: { path: 'assets/a.png' } },
+      ],
+      objects: [
+        { name: '왼쪽', scripts: [], pictures: [{ path: 'assets/b.png' }] },
+        { name: '오른쪽', scripts: [], pictures: [{ path: 'assets/a.png' }] },
+      ],
+    };
+    const diff = diffProjects(before, after);
+
+    expect(diff.media).toEqual({ added: [], removed: [] });
+    expect(paths(diff.modified)).toEqual([
+      'media.locations["assets/a.png"]',
+      'media.locations["assets/b.png"]',
+    ]);
+    expect(diff.summary.media).toEqual({ added: 0, removed: 0, modified: 2 });
+    expect(diff.summary.modified).toBe(2);
+    expect(diff.modified[0]?.before).toEqual([
+      'objects."왼쪽".pictures',
+      'scenes."시작".background',
+    ]);
+    expect(diff.modified[0]?.after).toEqual([
+      'objects."오른쪽".pictures',
+      'scenes."종료".background',
+    ]);
   });
 
   it('reports removed media metadata fields', () => {
