@@ -39,6 +39,11 @@ export interface ValidationResult {
   hints: string[];
 }
 
+export interface ValidateOptions {
+  /** Assets dir to resolve picture/sound/background paths from. Overrides the host assets/ dir. */
+  assetsRoot?: string;
+}
+
 let cachedCatalog: BlockCatalog | null = null;
 let cachedPath: string | null = null;
 
@@ -81,6 +86,7 @@ interface ValidateContext {
   objectNames: Set<string>;
   errors: string[];
   hints: string[];
+  assetsRoot?: string;
 }
 
 function validateBlock(
@@ -152,6 +158,27 @@ function validateBlock(
         continue;
       }
       const value = block.params[key];
+      if (STRING_PARAM_TYPES.has(paramSchema.type) && typeof value !== 'string') {
+        pushError(
+          ctx,
+          `${path}: param "${key}" (${paramSchema.type}) must be a string (got ${JSON.stringify(value)})`,
+          `Set "${key}" to a string — see get_block_schema(["${block.type}"]).`,
+        );
+        continue;
+      }
+      if (
+        paramSchema.type === 'Dropdown' &&
+        paramSchema.options?.length &&
+        typeof value === 'string' &&
+        !paramSchema.options.some((o) => o.value === value)
+      ) {
+        pushError(
+          ctx,
+          `${path}: param "${key}" (Dropdown) must be one of: ${paramSchema.options.map((o) => o.value).join(', ')} (got ${JSON.stringify(value)})`,
+          `Use an allowed ${key} value from get_block_schema(["${block.type}"]).`,
+        );
+        continue;
+      }
       if (typeof value === 'object') {
         if (!isIRBlock(value)) {
           pushError(
@@ -170,14 +197,6 @@ function validateBlock(
           continue;
         }
         validateBlock(value, `${path}.params.${key}`, ctx, { allowHat: false });
-        continue;
-      }
-      if (STRING_PARAM_TYPES.has(paramSchema.type) && typeof value !== 'string') {
-        pushError(
-          ctx,
-          `${path}: param "${key}" (${paramSchema.type}) must be a string (got ${JSON.stringify(value)})`,
-          `Set "${key}" to a string — see get_block_schema(["${block.type}"]).`,
-        );
         continue;
       }
       if (key === LIST_PARAM_KEY && !ctx.listNames.has(String(value))) {
@@ -350,6 +369,7 @@ function validateLearning(
 export function validateProject(
   ir: EntryIR,
   catalog: BlockCatalog = loadCatalog(),
+  options: ValidateOptions = {},
 ): ValidationResult {
   const errors: string[] = [];
   const hints: string[] = [];
@@ -384,7 +404,7 @@ export function validateProject(
       } else {
         try {
           normalizeAssetRelPath(scene.background.path, 'image');
-          resolveHostAsset(scene.background.path);
+          resolveHostAsset(scene.background.path, options.assetsRoot);
         } catch (err) {
           errors.push(
             `${prefix}: ${err instanceof Error ? err.message : String(err)}`,
@@ -468,6 +488,7 @@ export function validateProject(
     objectNames: new Set<string>(),
     errors,
     hints,
+    assetsRoot: options.assetsRoot,
   };
 
   (ir.functions ?? []).forEach((fn, fi) => {
@@ -527,7 +548,7 @@ function validatePictures(prefix: string, pictures: EntryIRObject['pictures'], c
     }
     try {
       normalizeAssetRelPath(pic.path, 'image');
-      resolveHostAsset(pic.path);
+      resolveHostAsset(pic.path, ctx.assetsRoot);
     } catch (err) {
       pushError(
         ctx,
@@ -551,7 +572,7 @@ function validateSounds(prefix: string, sounds: EntryIRObject['sounds'], ctx: Va
     }
     try {
       normalizeAssetRelPath(snd.path, 'sound');
-      resolveHostSound(snd.path);
+      resolveHostSound(snd.path, ctx.assetsRoot);
     } catch (err) {
       pushError(
         ctx,

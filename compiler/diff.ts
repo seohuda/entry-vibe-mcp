@@ -264,6 +264,74 @@ function diffFields(
   }
 }
 
+function diffMatchedMediaFields(
+  entryPath: string,
+  before: JsonObject,
+  after: JsonObject,
+  state: DiffState,
+): void {
+  for (const field of unionKeys(before, after)) {
+    if (field === 'path') continue;
+    const beforeValue = before[field];
+    const afterValue = after[field];
+    if (deepEqual(beforeValue, afterValue)) continue;
+    state.modified.push({
+      path: `${entryPath}.${field}`,
+      kind: 'modified',
+      before: beforeValue,
+      after: afterValue,
+    });
+  }
+}
+
+function diffMediaEntries(
+  pathPrefix: string,
+  field: 'pictures' | 'sounds',
+  before: JsonObject,
+  after: JsonObject,
+  state: DiffState,
+): void {
+  const beforeEntries = new Map<string, JsonObject>();
+  for (const item of asArray(before[field])) {
+    const obj = asObject(item);
+    if (!obj || typeof obj.path !== 'string') continue;
+    if (!beforeEntries.has(obj.path)) beforeEntries.set(obj.path, obj);
+  }
+
+  const afterEntries = asArray(after[field]);
+  for (let index = 0; index < afterEntries.length; index += 1) {
+    const obj = asObject(afterEntries[index]);
+    if (!obj || typeof obj.path !== 'string') continue;
+    const beforeEntry = beforeEntries.get(obj.path);
+    if (!beforeEntry) continue;
+    diffMatchedMediaFields(
+      `${pathPrefix}.${field}[${index}]`,
+      beforeEntry,
+      obj,
+      state,
+    );
+  }
+}
+
+function diffBackground(
+  pathPrefix: string,
+  before: JsonObject,
+  after: JsonObject,
+  state: DiffState,
+): void {
+  const beforeBackground = asObject(before.background);
+  const afterBackground = asObject(after.background);
+  if (!beforeBackground || !afterBackground) return;
+  if (typeof beforeBackground.path !== 'string') return;
+  if (beforeBackground.path !== afterBackground.path) return;
+  diffMatchedMediaFields(
+    `${pathPrefix}.background`,
+    beforeBackground,
+    afterBackground,
+    state,
+  );
+}
+
 function blockTypeOf(block: unknown): string {
   const obj = asObject(block);
   if (!obj) return '\u0000missing';
@@ -460,6 +528,8 @@ function compareObject(
 ): void {
   const pathPrefix = `objects.${name}`;
   diffFields(pathPrefix, OBJECT_FIELDS, before, after, state);
+  diffMediaEntries(pathPrefix, 'pictures', before, after, state);
+  diffMediaEntries(pathPrefix, 'sounds', before, after, state);
 
   const beforeThreads = asArray(before.scripts);
   const afterThreads = asArray(after.scripts);
@@ -681,6 +751,12 @@ export function diffProjects(
       diffFields(
         `scenes.${name}`,
         SCENE_FIELDS,
+        beforeEntity,
+        afterEntity,
+        diffState,
+      );
+      diffBackground(
+        `scenes.${name}`,
         beforeEntity,
         afterEntity,
         diffState,

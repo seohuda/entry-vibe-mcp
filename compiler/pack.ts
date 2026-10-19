@@ -15,6 +15,7 @@
 import { randomBytes } from 'node:crypto';
 import {
   existsSync,
+  linkSync,
   mkdirSync,
   mkdtempSync,
   readFileSync,
@@ -94,6 +95,10 @@ export function createFileId(): string {
 
 function subDir(fileId: string): string {
   return join(fileId.slice(0, 2), fileId.slice(2, 4));
+}
+
+function isErrno(err: unknown, code: string): boolean {
+  return err instanceof Error && (err as NodeJS.ErrnoException).code === code;
 }
 
 function requireMedia(mediaSource: string, file: string): string {
@@ -332,7 +337,18 @@ export async function packPrepared(
     if (!overwrite && existsSync(outputPath)) {
       throw new Error(`refusing to overwrite existing file: ${outputPath}`);
     }
-    renameSync(tempTar, outputPath);
+    if (overwrite) {
+      renameSync(tempTar, outputPath);
+    } else {
+      try {
+        linkSync(tempTar, outputPath);
+      } catch (err) {
+        if (isErrno(err, 'EEXIST')) {
+          throw new Error(`refusing to overwrite existing file: ${outputPath}`);
+        }
+        throw err;
+      }
+    }
     return outputPath;
   } finally {
     rmSync(tempTar, { force: true });
@@ -376,7 +392,18 @@ export function writePreparedJson(
     if (!overwrite && existsSync(path)) {
       throw new Error(`refusing to overwrite existing file: ${path}`);
     }
-    renameSync(tempPath, path);
+    if (overwrite) {
+      renameSync(tempPath, path);
+    } else {
+      try {
+        linkSync(tempPath, path);
+      } catch (err) {
+        if (isErrno(err, 'EEXIST')) {
+          throw new Error(`refusing to overwrite existing file: ${path}`);
+        }
+        throw err;
+      }
+    }
   } finally {
     rmSync(tempPath, { force: true });
   }
@@ -423,6 +450,18 @@ export async function writePreparedOutputs(
       [tempJson, jsonPath],
       [tempEnt, entPath],
     ] as const) {
+      if (!overwrite) {
+        try {
+          linkSync(tempPath, dest);
+        } catch (err) {
+          if (isErrno(err, 'EEXIST')) {
+            throw new Error(`refusing to overwrite existing file(s): ${dest}`);
+          }
+          throw err;
+        }
+        committed.push({ dest });
+        continue;
+      }
       let backup: string | undefined;
       if (existsSync(dest)) {
         backup = join(dirname(dest), `.${basename(dest)}.bak-${nonce}`);

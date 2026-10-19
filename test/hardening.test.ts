@@ -7,6 +7,7 @@
  */
 import { afterEach, describe, expect, it } from 'vitest';
 import {
+  copyFileSync,
   existsSync,
   mkdirSync,
   mkdtempSync,
@@ -29,6 +30,7 @@ import {
   writePreparedOutputs,
 } from '../compiler/pack.ts';
 import { unpackEnt } from '../compiler/unpack.ts';
+import { verifyProject } from '../compiler/verify.ts';
 import type { EntryIR } from '../src/types/ir.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -258,5 +260,42 @@ describe.skipIf(!existsSync(CATALOG))('phase1 atomic outputs', () => {
       /refusing to overwrite/,
     );
     expect(readFileSync(jsonPath, 'utf8')).toBe(before);
+  });
+});
+
+describe.skipIf(!existsSync(CATALOG))('phase1 verify roundtrip (custom media)', () => {
+  it('verifyProject roundtrips custom picture/sound media without touching host assets', async () => {
+    const hostDir = makeTemp('entry-vibe-host-');
+    const hostAssets = join(hostDir, 'assets');
+    mkdirSync(hostAssets, { recursive: true });
+    copyFileSync(join(FIXTURES, 'assets', 'blob.svg'), join(hostAssets, 'blob.svg'));
+    copyFileSync(join(FIXTURES, 'assets', 'custom-bark.mp3'), join(hostAssets, 'custom-bark.mp3'));
+
+    const prev = process.env.ENTRY_VIBE_ASSETS_DIR;
+    process.env.ENTRY_VIBE_ASSETS_DIR = hostAssets;
+    try {
+      const ir: EntryIR = {
+        objects: [
+          {
+            name: '개',
+            sprite: 'custom',
+            pictures: [{ name: '점', path: 'assets/blob.svg' }],
+            sounds: [{ name: '짖기', path: 'assets/custom-bark.mp3', duration: 1.3 }],
+            scripts: [[{ type: 'when_run_button_click' }, { type: 'move_direction' }]],
+          },
+        ],
+      };
+
+      const result = await verifyProject(ir);
+
+      expect(result.errors).toEqual([]);
+      expect(result.ok).toBe(true);
+      expect(result.checks.some((c) => c.name === 'pack_roundtrip' && c.ok)).toBe(true);
+      // Roundtrip extraction must use a temp assets root, never the host assets/.
+      expect(existsSync(join(hostAssets, 'imported'))).toBe(false);
+    } finally {
+      if (prev === undefined) delete process.env.ENTRY_VIBE_ASSETS_DIR;
+      else process.env.ENTRY_VIBE_ASSETS_DIR = prev;
+    }
   });
 });

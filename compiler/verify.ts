@@ -114,12 +114,13 @@ export async function verifyProject(
   if (roundtrip) {
     const dir = mkdtempSync(join(tmpdir(), 'entry-verify-'));
     const entPath = join(dir, 'verify.ent');
+    const assetsRoot = join(dir, 'assets');
     try {
       const prepared = prepareExport(project);
       await packPrepared(prepared, { outputPath: entPath });
-      const { project: unpacked, media } = await unpackEnt(entPath, { extractMedia: false });
+      const { project: unpacked, media } = await unpackEnt(entPath, { assetsRoot });
       const { ir: decoded, warnings: decompileWarnings } = decompileProject(unpacked, { media });
-      const revalidation = validateProject(decoded);
+      const revalidation = validateProject(decoded, undefined, { assetsRoot });
       roundtripResult = {
         ok: revalidation.valid,
         detail: revalidation.valid

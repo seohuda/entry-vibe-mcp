@@ -67,7 +67,7 @@ describe.skipIf(!existsSync(CATALOG))('repairProject', () => {
     expect(result.remainingErrors).toBe(result.validation.errors);
   });
 
-  it('removes duplicate variables and warns when their values differ', () => {
+  it('keeps non-identical duplicate variables instead of guessing which to drop', () => {
     const input = {
       objects: [baseObject()],
       variables: [
@@ -78,15 +78,35 @@ describe.skipIf(!existsSync(CATALOG))('repairProject', () => {
 
     const result = repairProject(input);
 
+    expect(result.ok).toBe(false);
+    expect(result.changes).toEqual([]);
+    expect(
+      result.remainingErrors.some((e) => e.includes('duplicate variable name')),
+    ).toBe(true);
+    expect(repairedIR(result).variables).toEqual([
+      { name: '점수', initialValue: 0 },
+      { name: '점수', initialValue: 1 },
+    ]);
+  });
+
+  it('removes identical duplicate variables', () => {
+    const input = {
+      objects: [baseObject()],
+      variables: [
+        { name: '점수', initialValue: 0 },
+        { name: '점수', initialValue: 0 },
+      ],
+    };
+
+    const result = repairProject(input);
+
     expect(result.ok).toBe(true);
     expect(result.changes).toHaveLength(1);
     expect(result.changes[0]).toMatchObject({
       path: 'variables[1]',
       action: 'remove',
-      before: { name: '점수', initialValue: 1 },
+      before: { name: '점수', initialValue: 0 },
     });
-    expect(result.warnings).toHaveLength(1);
-    expect(result.warnings[0]).toContain('점수');
     expect(repairedIR(result).variables).toEqual([
       { name: '점수', initialValue: 0 },
     ]);
@@ -314,7 +334,7 @@ describe.skipIf(!existsSync(CATALOG))('repairProject', () => {
       ],
       variables: [
         { name: '점수', initialValue: 0 },
-        { name: '점수', initialValue: 1 },
+        { name: '점수', initialValue: 0 },
       ],
     };
 

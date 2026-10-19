@@ -104,6 +104,11 @@ const irLearningSchema = z.object({
   version: z.number().optional(),
   recordTime: z.number().optional(),
   trainParam: z.record(z.union([z.string(), z.number()])).optional(),
+  tableData: z
+    .record(z.unknown())
+    .nullable()
+    .optional()
+    .describe('Optional Entry dataTable (columns/records) for the trained model'),
   modelPath: z
     .string()
     .optional()
@@ -685,8 +690,8 @@ export function registerTools(server: McpServer): void {
     async ({ filename }) => {
       try {
         const entPath = resolveEntPath(filename);
-        const { project } = await unpackEnt(entPath);
-        const audit = auditCompiledProject(project);
+        const { project, tarPaths } = await unpackEnt(entPath, { extractMedia: false });
+        const audit = auditCompiledProject(project, { tarPaths });
         return textResult({ ok: audit.ok, audit });
       } catch (err) {
         return errorResult(

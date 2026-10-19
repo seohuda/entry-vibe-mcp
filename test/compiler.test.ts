@@ -476,6 +476,109 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     expect(result.errors.some((e) => e.includes('must be a string'))).toBe(true);
   });
 
+  it('rejects nested blocks in Dropdown/DropdownDynamic/Keyboard params', () => {
+    const nested = { type: 'move_direction', params: { VALUE: 10 } };
+    const cases: Array<[string, EntryIR]> = [
+      [
+        'DropdownDynamic',
+        {
+          objects: [
+            {
+              name: 'x',
+              sprite: 'entrybot',
+              scripts: [
+                [
+                  { type: 'when_run_button_click' },
+                  { type: 'message_cast', params: { VALUE: nested } },
+                ],
+              ],
+            },
+          ],
+          messages: [{ name: '시작' }],
+        } as unknown as EntryIR,
+      ],
+      [
+        'Dropdown',
+        {
+          objects: [
+            {
+              name: 'x',
+              sprite: 'entrybot',
+              scripts: [
+                [
+                  { type: 'when_run_button_click' },
+                  { type: 'change_to_next_shape', params: { DRIECTION: nested } },
+                ],
+              ],
+            },
+          ],
+        } as unknown as EntryIR,
+      ],
+      [
+        'Keyboard',
+        {
+          objects: [
+            {
+              name: 'x',
+              sprite: 'entrybot',
+              scripts: [[{ type: 'when_some_key_pressed', params: { VALUE: nested } }]],
+            },
+          ],
+        } as unknown as EntryIR,
+      ],
+    ];
+    for (const [label, ir] of cases) {
+      const result = validateProject(ir);
+      expect(result.valid, label).toBe(false);
+      expect(
+        result.errors.some((e) => e.includes('must be a string')),
+        label,
+      ).toBe(true);
+    }
+  });
+
+  it('rejects Dropdown values outside the catalog options', () => {
+    const ir = {
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'change_to_next_shape', params: { DRIECTION: 'sideways' } },
+            ],
+          ],
+        },
+      ],
+    } as unknown as EntryIR;
+    const result = validateProject(ir);
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('DRIECTION') && e.includes('must be one of'))).toBe(
+      true,
+    );
+  });
+
+  it('accepts catalog-defined Dropdown and DropdownDynamic values', () => {
+    const ir = {
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'change_to_next_shape', params: { DRIECTION: 'prev' } },
+              { type: 'message_cast', params: { VALUE: '시작' } },
+            ],
+          ],
+        },
+      ],
+      messages: [{ name: '시작' }],
+    } as unknown as EntryIR;
+    expect(validateProject(ir)).toEqual({ valid: true, errors: [], hints: [] });
+  });
+
   it('accepts an empty statement slot', () => {
     const ir: EntryIR = {
       objects: [

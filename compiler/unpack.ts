@@ -242,8 +242,18 @@ export async function unpackEnt(
       const fileId = basename(file, extname(file));
       const assetRel = `imported/${fileId}.${ext}`;
       const dest = join(assetsRoot, assetRel);
-      if (extractMedia && !existsSync(dest)) {
-        writeFileSync(dest, readFileSync(file));
+      if (extractMedia) {
+        const bytes = readFileSync(file);
+        if (existsSync(dest)) {
+          if (!readFileSync(dest).equals(bytes)) {
+            throw new Error(
+              `media collision: ${dest} already exists with different content; ` +
+                'refusing to overwrite imported media',
+            );
+          }
+        } else {
+          writeFileSync(dest, bytes);
+        }
       }
 
       const entry: UnpackedMedia = {

@@ -162,8 +162,6 @@ function finish(
   };
 }
 
-type DedupeMode = 'remove-duplicates' | 'remove-equal-duplicates';
-
 const DECLARATION_LABELS: Record<string, string> = {
   scenes: 'scene',
   variables: 'variable',
@@ -186,9 +184,7 @@ function declaredNameSet(ir: UnknownRecord, key: string): Set<string> {
 function dedupeDeclarations(
   ir: UnknownRecord,
   key: string,
-  mode: DedupeMode,
   changes: RepairChange[],
-  warnings: string[],
 ): void {
   const entries = ir[key];
   if (!Array.isArray(entries)) return;
@@ -207,7 +203,7 @@ function dedupeDeclarations(
       kept.push(entry);
       return;
     }
-    if (mode === 'remove-equal-duplicates' && !deepEqual(firstByName.get(name), entry)) {
+    if (!deepEqual(firstByName.get(name), entry)) {
       kept.push(entry);
       return;
     }
@@ -217,11 +213,6 @@ function dedupeDeclarations(
       before: snapshot(entry),
       reason: `duplicate ${label} name ${JSON.stringify(name)}`,
     });
-    if (mode === 'remove-duplicates' && !deepEqual(firstByName.get(name), entry)) {
-      warnings.push(
-        `Removed duplicate ${label} ${JSON.stringify(name)} that differed from the first declaration.`,
-      );
-    }
   });
 
   ir[key] = kept;
@@ -626,12 +617,12 @@ export function repairProject(input: unknown, options: RepairOptions = {}): Repa
   repairFunctions(repairIR, changes);
 
   // D. declarations (scenes, variables, lists, messages, functions, objects)
-  dedupeDeclarations(repairIR, 'scenes', 'remove-duplicates', changes, warnings);
-  dedupeDeclarations(repairIR, 'variables', 'remove-duplicates', changes, warnings);
-  dedupeDeclarations(repairIR, 'lists', 'remove-duplicates', changes, warnings);
-  dedupeDeclarations(repairIR, 'messages', 'remove-duplicates', changes, warnings);
-  dedupeDeclarations(repairIR, 'functions', 'remove-equal-duplicates', changes, warnings);
-  dedupeDeclarations(repairIR, 'objects', 'remove-equal-duplicates', changes, warnings);
+  dedupeDeclarations(repairIR, 'scenes', changes);
+  dedupeDeclarations(repairIR, 'variables', changes);
+  dedupeDeclarations(repairIR, 'lists', changes);
+  dedupeDeclarations(repairIR, 'messages', changes);
+  dedupeDeclarations(repairIR, 'functions', changes);
+  dedupeDeclarations(repairIR, 'objects', changes);
 
   // E. objects
   const objects = repairIR.objects as unknown[];

@@ -368,6 +368,166 @@ describe('diffProjects', () => {
     ).toBe(true);
   });
 
+  it('reports media metadata changes when paths match', () => {
+    const before = {
+      scenes: [
+        {
+          name: '장면',
+          background: { path: 'assets/bg.png', name: '배경' },
+        },
+      ],
+      objects: [
+        {
+          name: '봇',
+          scripts: [],
+          pictures: [
+            { path: 'assets/a.png', name: 'A' },
+            { path: 'assets/b.png', name: 'B' },
+          ],
+          sounds: [{ path: 'assets/s.mp3', duration: 1 }],
+        },
+      ],
+    };
+    const after = {
+      scenes: [
+        {
+          name: '장면',
+          background: { path: 'assets/bg.png', name: '새 배경' },
+        },
+      ],
+      objects: [
+        {
+          name: '봇',
+          scripts: [],
+          pictures: [
+            { path: 'assets/b.png', name: 'B' },
+            { path: 'assets/a.png', name: 'A2' },
+          ],
+          sounds: [{ path: 'assets/s.mp3', duration: 2 }],
+        },
+      ],
+    };
+
+    const diff = diffProjects(before, after);
+
+    expect(paths(diff.modified)).toEqual([
+      'scenes.장면.background.name',
+      'objects.봇.pictures[1].name',
+      'objects.봇.sounds[0].duration',
+    ]);
+    expect(diff.modified[0]).toMatchObject({
+      kind: 'modified',
+      before: '배경',
+      after: '새 배경',
+    });
+    expect(diff.modified[1]).toMatchObject({
+      kind: 'modified',
+      before: 'A',
+      after: 'A2',
+    });
+    expect(diff.modified[2]).toMatchObject({
+      kind: 'modified',
+      before: 1,
+      after: 2,
+    });
+    expect(diff.added).toEqual([]);
+    expect(diff.removed).toEqual([]);
+    expect(diff.media).toEqual({ added: [], removed: [] });
+    expect(diff.warnings).toEqual([]);
+    expect(diff.summary.modified).toBe(3);
+    expect(diff.summary.scenes.modified).toBe(1);
+    expect(diff.summary.objects.modified).toBe(2);
+  });
+
+  it('keeps media path changes out of the body diff even when metadata changes', () => {
+    const before = {
+      scenes: [
+        {
+          name: '장면',
+          background: { path: 'assets/a.png', name: '배경' },
+        },
+      ],
+      objects: [
+        {
+          name: '봇',
+          scripts: [],
+          pictures: [{ path: 'assets/a.png', name: 'A' }],
+        },
+      ],
+    };
+    const after = {
+      scenes: [
+        {
+          name: '장면',
+          background: { path: 'assets/b.png', name: '새 배경' },
+        },
+      ],
+      objects: [
+        {
+          name: '봇',
+          scripts: [],
+          pictures: [{ path: 'assets/b.png', name: 'A' }],
+        },
+      ],
+    };
+
+    const diff = diffProjects(before, after);
+
+    expect(diff.media).toEqual({
+      added: ['assets/b.png'],
+      removed: ['assets/a.png'],
+    });
+    expect(diff.summary.media).toEqual({ added: 1, removed: 1, modified: 0 });
+    expect(paths(diff.added)).toEqual([]);
+    expect(paths(diff.removed)).toEqual([]);
+    expect(paths(diff.modified)).toEqual([]);
+
+    const allChanges = [...diff.added, ...diff.removed, ...diff.modified];
+    expect(
+      allChanges.every((change) => !change.path.startsWith('assets/')),
+    ).toBe(true);
+  });
+
+  it('reports removed media metadata fields', () => {
+    const before = {
+      objects: [
+        {
+          name: '봇',
+          scripts: [],
+          sounds: [{ path: 'assets/s.mp3', name: 'S', duration: 2 }],
+        },
+      ],
+    };
+    const after = {
+      objects: [
+        {
+          name: '봇',
+          scripts: [],
+          sounds: [{ path: 'assets/s.mp3' }],
+        },
+      ],
+    };
+
+    const diff = diffProjects(before, after);
+
+    expect(diff.modified).toEqual([
+      {
+        path: 'objects.봇.sounds[0].duration',
+        kind: 'modified',
+        before: 2,
+        after: undefined,
+      },
+      {
+        path: 'objects.봇.sounds[0].name',
+        kind: 'modified',
+        before: 'S',
+        after: undefined,
+      },
+    ]);
+    expect(diff.summary.objects.modified).toBe(2);
+    expect(diff.media).toEqual({ added: [], removed: [] });
+  });
+
   it('warns about likely renames while keeping remove+add changes', () => {
     const before = {
       objects: [objectWith({ name: '예전' })],
