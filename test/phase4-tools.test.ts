@@ -351,6 +351,18 @@ describe.skipIf(!existsSync(CATALOG))('Phase 4 MCP tools', () => {
       }
     }
 
+    it('rejects missing archive media before modifying host assets', async () => {
+      const hostDir = makeHostDir();
+      const fileId = 'abcdabcdabcdabcdabcdabcdabcdabcd';
+      await writeSampleEnt(hostDir, auditProjectFixture(fileId));
+
+      const { body, result } = await importEnt(hostDir, 'sample.ent');
+      expect(result.isError).toBe(true);
+      expect(body.ok).toBe(false);
+      expect((body.errors as string[]).some((e) => e.includes('missing from .ent archive'))).toBe(true);
+      expect(existsSync(join(hostDir, 'assets'))).toBe(false);
+    });
+
     it('rejects a re-import whose media bytes conflict with the extracted asset', async () => {
       const hostDir = makeHostDir();
       const fileId = 'aabbccddeeff00112233445566778899';
@@ -365,13 +377,25 @@ describe.skipIf(!existsSync(CATALOG))('Phase 4 MCP tools', () => {
       );
       const assetPath = join(hostDir, 'assets', 'imported', `${fileId}.svg`);
 
-      await writeSampleEnt(hostDir, auditProjectFixture(fileId), [{ rel, body: svgA }], 'game-a.ent');
+      const thumbRel = `temp/${a}/${b}/thumb/${fileId}.png`;
+      const thumb = Buffer.from([0x89, 0x50, 0x4e, 0x47]);
+      await writeSampleEnt(
+        hostDir,
+        auditProjectFixture(fileId),
+        [{ rel, body: svgA }, { rel: thumbRel, body: thumb }],
+        'game-a.ent',
+      );
       const first = await importEnt(hostDir, 'game-a.ent');
       expect(first.result.isError).toBeUndefined();
       expect(first.body.ok).toBe(true);
       expect(readFileSync(assetPath, 'utf8')).toBe(svgA.toString());
 
-      await writeSampleEnt(hostDir, auditProjectFixture(fileId), [{ rel, body: svgB }], 'game-b.ent');
+      await writeSampleEnt(
+        hostDir,
+        auditProjectFixture(fileId),
+        [{ rel, body: svgB }, { rel: thumbRel, body: thumb }],
+        'game-b.ent',
+      );
       const second = await importEnt(hostDir, 'game-b.ent');
       expect(second.result.isError).toBe(true);
       expect(second.body.ok).toBe(false);
@@ -389,7 +413,12 @@ describe.skipIf(!existsSync(CATALOG))('Phase 4 MCP tools', () => {
       const svg = Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"></svg>');
       const assetPath = join(hostDir, 'assets', 'imported', `${fileId}.svg`);
 
-      await writeSampleEnt(hostDir, auditProjectFixture(fileId), [{ rel, body: svg }]);
+      const thumbRel = `temp/${a}/${b}/thumb/${fileId}.png`;
+      const thumb = Buffer.from([0x89, 0x50, 0x4e, 0x47]);
+      await writeSampleEnt(hostDir, auditProjectFixture(fileId), [
+        { rel, body: svg },
+        { rel: thumbRel, body: thumb },
+      ]);
       const first = await importEnt(hostDir, 'sample.ent');
       const second = await importEnt(hostDir, 'sample.ent');
 
