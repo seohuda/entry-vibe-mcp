@@ -13,8 +13,16 @@
  * so the sidecar `.json` and the `.ent` share the same file ids.
  */
 import { randomBytes } from 'node:crypto';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import {
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  renameSync,
+  rmSync,
+  writeFileSync,
+} from 'node:fs';
+import { basename, dirname, join } from 'node:path';
 import * as tar from 'tar';
 import { type EntryProject } from './skeleton.ts';
 import { projectForExport } from './compile.ts';
@@ -37,6 +45,7 @@ export interface PackOptions {
   keepStaging?: boolean;
   /** Override file-id generator (tests). */
   createFileId?: () => string;
+  overwrite?: boolean;
 }
 
 export type PictureStem = 'entrybot1' | 'entrybot2';
@@ -292,6 +301,10 @@ export async function packPrepared(
   if (!outputPath.endsWith('.ent')) {
     throw new Error('output path must end with .ent');
   }
+  const overwrite = options.overwrite !== false;
+  if (!overwrite && existsSync(outputPath)) {
+    throw new Error(`refusing to overwrite existing file: ${outputPath}`);
+  }
 
   const mediaSource = options.mediaDir ?? mediaDir();
   const outputParent = dirname(outputPath);
@@ -299,6 +312,7 @@ export async function packPrepared(
 
   const stagingRoot = mkdtempSync(join(outputParent, '.ent-staging-'));
   const tempDir = join(stagingRoot, 'temp');
+  const tempTar = join(outputParent, `.${basename(outputPath)}.tmp-${randomBytes(8).toString('hex')}`);
 
   try {
     mkdirSync(tempDir, { recursive: true });
@@ -308,15 +322,20 @@ export async function packPrepared(
     await tar.c(
       {
         gzip: { level: 6 },
-        file: outputPath,
+        file: tempTar,
         cwd: stagingRoot,
         portable: true,
       },
       ['temp'],
     );
 
+    if (!overwrite && existsSync(outputPath)) {
+      throw new Error(`refusing to overwrite existing file: ${outputPath}`);
+    }
+    renameSync(tempTar, outputPath);
     return outputPath;
   } finally {
+    rmSync(tempTar, { force: true });
     if (!options.keepStaging) {
       rmSync(stagingRoot, { recursive: true, force: true });
     }
@@ -341,7 +360,103 @@ export function writeProjectJson(
   writePreparedJson(prepared, path);
 }
 
-export function writePreparedJson(prepared: PreparedExport, path: string): void {
+export function writePreparedJson(
+  prepared: PreparedExport,
+  path: string,
+  options: { overwrite?: boolean } = {},
+): void {
+  const overwrite = options.overwrite !== false;
+  if (!overwrite && existsSync(path)) {
+    throw new Error(`refusing to overwrite existing file: ${path}`);
+  }
   mkdirSync(dirname(path), { recursive: true });
-  writeFileSync(path, JSON.stringify(prepared.project, null, 2) + '\n');
+  const tempPath = join(dirname(path), `.${basename(path)}.tmp-${randomBytes(8).toString('hex')}`);
+  try {
+    writeFileSync(tempPath, JSON.stringify(prepared.project, null, 2) + '\n');
+    if (!overwrite && existsSync(path)) {
+      throw new Error(`refusing to overwrite existing file: ${path}`);
+    }
+    renameSync(tempPath, path);
+  } finally {
+    rmSync(tempPath, { force: true });
+  }
+}
+
+export interface PreparedOutputOptions {
+  entPath: string;
+  jsonPath: string;
+  overwrite?: boolean;
+  mediaDir?: string;
+}
+
+export async function writePreparedOutputs(
+  prepared: PreparedExport,
+  options: PreparedOutputOptions,
+): Promise<{ entPath: string; jsonPath: string }> {
+  const { entPath, jsonPath } = options;
+  const overwrite = options.overwrite !== false;
+  if (!overwrite) {
+    const conflicts = [entPath, jsonPath].filter((path) => existsSync(path));
+    if (conflicts.length > 0) {
+      throw new Error(`refusing to overwrite existing file(s): ${conflicts.join(', ')}`);
+    }
+  }
+
+  mkdirSync(dirname(entPath), { recursive: true });
+  mkdirSync(dirname(jsonPath), { recursive: true });
+
+  const nonce = randomBytes(8).toString('hex');
+  const entStem = basename(entPath).replace(/\.ent$/i, '');
+  const tempJson = join(dirname(jsonPath), `.${basename(jsonPath)}.tmp-${nonce}`);
+  const tempEnt = join(dirname(entPath), `.${entStem}.tmp-${nonce}.ent`);
+  const committed: Array<{ dest: string; backup?: string }> = [];
+
+  try {
+    writeFileSync(tempJson, JSON.stringify(prepared.project, null, 2) + '\n');
+    await packPrepared(prepared, {
+      outputPath: tempEnt,
+      mediaDir: options.mediaDir,
+      overwrite: true,
+    });
+
+    for (const [tempPath, dest] of [
+      [tempJson, jsonPath],
+      [tempEnt, entPath],
+    ] as const) {
+      let backup: string | undefined;
+      if (existsSync(dest)) {
+        backup = join(dirname(dest), `.${basename(dest)}.bak-${nonce}`);
+        renameSync(dest, backup);
+      }
+      committed.push({ dest, backup });
+      renameSync(tempPath, dest);
+    }
+
+    for (const { backup } of committed) {
+      if (backup) rmSync(backup, { force: true });
+    }
+    return { entPath, jsonPath };
+  } catch (err) {
+    const rollbackErrors: string[] = [];
+    for (const { dest, backup } of committed.reverse()) {
+      rmSync(dest, { force: true });
+      if (backup) {
+        try {
+          renameSync(backup, dest);
+        } catch (restoreErr) {
+          rollbackErrors.push(
+            restoreErr instanceof Error ? restoreErr.message : String(restoreErr),
+          );
+        }
+      }
+    }
+    if (rollbackErrors.length > 0) {
+      const message = err instanceof Error ? err.message : String(err);
+      throw new Error(`${message}; rollback also failed: ${rollbackErrors.join('; ')}`);
+    }
+    throw err;
+  } finally {
+    rmSync(tempJson, { force: true });
+    rmSync(tempEnt, { force: true });
+  }
 }

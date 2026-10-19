@@ -33,6 +33,27 @@ const SKIP_BLOCK_TYPES = new Set([
   'function_field_label',
 ]);
 
+const HASH_MEDIA_RE =
+  /^temp\/([0-9a-f]{2})\/([0-9a-f]{2})\/(image|thumb|sound)\/([0-9a-f]{32})(\.[A-Za-z0-9]+)$/;
+const FILE_ID_RE = /^[0-9a-f]{32}$/;
+
+function normalizeTarPath(path: string): string {
+  return path.replace(/\\/g, '/').replace(/^(\.\/)+/, '');
+}
+
+function parseFunctionContent(rec: unknown): unknown[][] | undefined {
+  if (typeof rec !== 'object' || rec === null) return undefined;
+  const content = (rec as { content?: unknown }).content;
+  if (typeof content !== 'string' || content === '') return undefined;
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(content);
+  } catch {
+    return undefined;
+  }
+  return Array.isArray(parsed) ? (parsed as unknown[][]) : undefined;
+}
+
 function parseObjectScripts(obj: Record<string, unknown>): unknown[][] {
   const raw = obj.script;
   if (typeof raw === 'string') {
@@ -75,7 +96,10 @@ function walkScriptBlocks(
   }
 }
 
-function countBlocks(project: EntryProject): {
+function countBlocks(
+  project: EntryProject,
+  functions: unknown[],
+): {
   total: number;
   objectScript: number;
   functionBlocks: number;
@@ -93,11 +117,12 @@ function countBlocks(project: EntryProject): {
     total += n;
   }
 
-  for (const fn of project.functions ?? []) {
-    const rec = fn as { id?: string; content?: string };
-    if (!rec.content) continue;
+  for (const fn of functions) {
+    const rec = fn as { id?: string };
+    const content = parseFunctionContent(fn);
+    if (!content) continue;
     let n = 0;
-    walkScriptBlocks(JSON.parse(rec.content), () => {
+    walkScriptBlocks(content, () => {
       n++;
     }, `fn:${rec.id ?? '?'}`);
     functionBlocks += n;
@@ -149,12 +174,45 @@ function auditBlockParams(
   }
 }
 
-function collectFunctionIds(project: EntryProject): Set<string> {
-  return new Set((project.functions ?? []).map((f) => String((f as { id: string }).id)));
+function collectFunctionIds(functions: unknown[]): Set<string> {
+  const ids = new Set<string>();
+  for (const fn of functions) {
+    const id =
+      typeof fn === 'object' && fn !== null ? (fn as { id?: unknown }).id : undefined;
+    if (typeof id === 'string' && id.length > 0) ids.add(id);
+  }
+  return ids;
 }
 
 function isBadMediaUrl(url: string): boolean {
   return url.includes('temp/media/') || url.startsWith('media/');
+}
+
+function mediaUrlProblem(
+  rawUrl: string,
+  expectedKind: 'image' | 'thumb' | 'sound',
+  expectedFileId?: string,
+): string | undefined {
+  const url = normalizeTarPath(rawUrl);
+  if (!url) return 'is empty';
+  if (url.startsWith('host-asset:')) {
+    return 'still uses a host-asset: marker (run compile_project → packEnt to materialize media)';
+  }
+  if (isBadMediaUrl(url)) return 'uses flat temp/media/ layout';
+  const match = HASH_MEDIA_RE.exec(url);
+  if (!match) return `is not a hash media path ("${url}")`;
+  const prefixA = match[1]!;
+  const prefixB = match[2]!;
+  const kind = match[3]!;
+  const fileId = match[4]!;
+  if (kind !== expectedKind) return `points at "${kind}/" instead of "${expectedKind}/"`;
+  if (fileId.slice(0, 2) !== prefixA || fileId.slice(2, 4) !== prefixB) {
+    return `has folder prefix "${prefixA}/${prefixB}" that does not match file id "${fileId}"`;
+  }
+  if (expectedFileId && fileId !== expectedFileId) {
+    return `file id "${fileId}" does not match filename "${expectedFileId}"`;
+  }
+  return undefined;
 }
 
 export function auditCompiledProject(
@@ -181,31 +239,129 @@ export function auditCompiledProject(
   }
 
   const sceneIds = new Set((project.scenes ?? []).map((s) => s.id));
+  const tarPaths = options.tarPaths
+    ? new Set(options.tarPaths.map(normalizeTarPath))
+    : undefined;
+  const mediaIds = new Set<string>();
+  const addHint = (hint: string): void => {
+    if (!hints.includes(hint)) hints.push(hint);
+  };
+  const repackHint =
+    'Repack with compile_project → packEnt (hash folder layout under temp/ab/cd/).';
+
   for (const obj of project.objects as Array<Record<string, unknown>>) {
     if (!sceneIds.has(String(obj.scene))) {
       errors.push(`object "${obj.name}" references missing scene "${obj.scene}"`);
     }
-    if (obj.objectType === 'sprite') {
-      const sprite = obj.sprite as { pictures?: Array<{ fileurl?: string }>; sounds?: Array<{ fileurl?: string }> } | undefined;
-      if (!sprite?.pictures?.length) {
-        errors.push(`sprite "${obj.name}" has no pictures`);
-      } else {
-        for (const pic of sprite.pictures) {
-          const url = String(pic.fileurl ?? '');
-          if (isBadMediaUrl(url)) {
-            errors.push(
-              `sprite "${obj.name}" uses flat temp/media/ path — Entry Offline cannot load it`,
-            );
-            hints.push('Repack with compile_project → packEnt (hash folder layout under temp/ab/cd/).');
-            break;
+    if (obj.objectType !== 'sprite') continue;
+
+    const sprite = obj.sprite as
+      | {
+          pictures?: Array<{
+            name?: string;
+            fileurl?: string;
+            thumbUrl?: string;
+            filename?: string;
+          }>;
+          sounds?: Array<{ name?: string; fileurl?: string; filename?: string }>;
+        }
+      | undefined;
+
+    if (!sprite?.pictures?.length) {
+      errors.push(`sprite "${obj.name}" has no pictures`);
+    } else {
+      for (const pic of sprite.pictures) {
+        const url = String(pic.fileurl ?? '');
+        const thumbUrl = String(pic.thumbUrl ?? '');
+        if (isBadMediaUrl(url) || isBadMediaUrl(thumbUrl)) {
+          errors.push(
+            `sprite "${obj.name}" uses flat temp/media/ path — Entry Offline cannot load it`,
+          );
+          addHint(repackHint);
+          break;
+        }
+
+        const filename = typeof pic.filename === 'string' ? pic.filename : '';
+        const label = pic.name ? `picture "${pic.name}"` : 'picture';
+        if (filename && !FILE_ID_RE.test(filename)) {
+          errors.push(
+            `sprite "${obj.name}" ${label} filename "${filename}" is not a 32-char lowercase hex id`,
+          );
+        } else if (filename) {
+          if (mediaIds.has(filename)) {
+            errors.push(`duplicate media file id "${filename}" (sprite "${obj.name}")`);
+          } else {
+            mediaIds.add(filename);
+          }
+        }
+        const expectedId = FILE_ID_RE.test(filename) ? filename : undefined;
+        if (!filename && HASH_MEDIA_RE.test(normalizeTarPath(url))) {
+          errors.push(`sprite "${obj.name}" ${label} has a hash fileurl but no filename`);
+        }
+
+        const urlProblem = mediaUrlProblem(url, 'image', expectedId);
+        if (urlProblem) {
+          errors.push(`sprite "${obj.name}" ${label} fileurl ${urlProblem}`);
+          addHint(repackHint);
+        }
+        const thumbProblem = mediaUrlProblem(thumbUrl, 'thumb', expectedId);
+        if (thumbProblem) {
+          errors.push(`sprite "${obj.name}" ${label} thumbUrl ${thumbProblem}`);
+          addHint(repackHint);
+        }
+
+        if (tarPaths) {
+          for (const [field, raw] of [
+            ['fileurl', url],
+            ['thumbUrl', thumbUrl],
+          ] as const) {
+            const member = normalizeTarPath(raw);
+            if (HASH_MEDIA_RE.test(member) && !tarPaths.has(member)) {
+              errors.push(
+                `sprite "${obj.name}" ${label} ${field} "${member}" is missing from .ent archive`,
+              );
+            }
           }
         }
       }
-      for (const sound of sprite?.sounds ?? []) {
-        const url = String(sound.fileurl ?? '');
-        if (isBadMediaUrl(url)) {
-          errors.push(`sprite "${obj.name}" sound uses invalid path "${url}"`);
-          break;
+    }
+
+    for (const sound of sprite?.sounds ?? []) {
+      const url = String(sound.fileurl ?? '');
+      if (isBadMediaUrl(url)) {
+        errors.push(`sprite "${obj.name}" sound uses invalid path "${url}"`);
+        continue;
+      }
+
+      const filename = typeof sound.filename === 'string' ? sound.filename : '';
+      const label = sound.name ? `sound "${sound.name}"` : 'sound';
+      if (filename && !FILE_ID_RE.test(filename)) {
+        errors.push(
+          `sprite "${obj.name}" ${label} filename "${filename}" is not a 32-char lowercase hex id`,
+        );
+      } else if (filename) {
+        if (mediaIds.has(filename)) {
+          errors.push(`duplicate media file id "${filename}" (sprite "${obj.name}")`);
+        } else {
+          mediaIds.add(filename);
+        }
+      }
+      const expectedId = FILE_ID_RE.test(filename) ? filename : undefined;
+      if (!filename && HASH_MEDIA_RE.test(normalizeTarPath(url))) {
+        errors.push(`sprite "${obj.name}" ${label} has a hash fileurl but no filename`);
+      }
+
+      const problem = mediaUrlProblem(url, 'sound', expectedId);
+      if (problem) {
+        errors.push(`sprite "${obj.name}" ${label} fileurl ${problem}`);
+        addHint(repackHint);
+      }
+      if (tarPaths) {
+        const member = normalizeTarPath(url);
+        if (HASH_MEDIA_RE.test(member) && !tarPaths.has(member)) {
+          errors.push(
+            `sprite "${obj.name}" ${label} fileurl "${member}" is missing from .ent archive`,
+          );
         }
       }
     }
@@ -213,10 +369,11 @@ export function auditCompiledProject(
 
   if (options.tarPaths?.some((p) => p.includes('temp/media/'))) {
     errors.push('.ent archive contains temp/media/ flat paths instead of hash folders');
-    hints.push('Run compile_project + packEnt; do not hand-zip project.json with temp/media/.');
+    addHint('Run compile_project + packEnt; do not hand-zip project.json with temp/media/.');
   }
 
-  const fnIds = collectFunctionIds(project);
+  const functions = Array.isArray(project.functions) ? project.functions : [];
+  const fnIds = collectFunctionIds(functions);
 
   for (const obj of project.objects as Array<Record<string, unknown>>) {
     walkScriptBlocks(parseObjectScripts(obj), (block, path) => {
@@ -231,23 +388,54 @@ export function auditCompiledProject(
     }, String(obj.name));
   }
 
-  for (const fn of project.functions ?? []) {
-    const rec = fn as { id?: string; content?: string };
-    if (!rec.content) continue;
-    walkScriptBlocks(JSON.parse(rec.content), (block, path) => {
+  const seenFnIds = new Set<string>();
+  for (let i = 0; i < functions.length; i++) {
+    const fn = functions[i];
+    if (typeof fn !== 'object' || fn === null) {
+      errors.push(`functions[${i}] must be an object`);
+      continue;
+    }
+    const rec = fn as { id?: unknown; content?: unknown };
+    const id = typeof rec.id === 'string' ? rec.id : '';
+    const label = id ? `function "${id}"` : `functions[${i}]`;
+    if (!id) {
+      errors.push(`functions[${i}] is missing a string id`);
+    } else if (seenFnIds.has(id)) {
+      errors.push(`duplicate function id "${id}"`);
+    } else {
+      seenFnIds.add(id);
+    }
+
+    if (typeof rec.content !== 'string' || rec.content === '') {
+      errors.push(`${label} is missing content`);
+      continue;
+    }
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(rec.content);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      errors.push(`${label} content is not valid JSON: ${msg}`);
+      continue;
+    }
+    if (!Array.isArray(parsed)) {
+      errors.push(`${label} content must be an array of threads`);
+      continue;
+    }
+    walkScriptBlocks(parsed, (block, path) => {
       auditBlockParams(block, index, path, errors);
       const type = String(block.type ?? '');
       if (type.startsWith('func_')) {
-        const id = type.slice('func_'.length);
-        if (!fnIds.has(id)) {
-          errors.push(`${path}: calls ${type} but no function with id "${id}" is defined`);
+        const fnId = type.slice('func_'.length);
+        if (!fnIds.has(fnId)) {
+          errors.push(`${path}: calls ${type} but no function with id "${fnId}" is defined`);
         }
       }
-    }, `fn:${rec.id ?? '?'}`);
+    }, `fn:${id || '?'}`);
   }
 
-  const counts = countBlocks(project);
-  const fnCount = project.functions?.length ?? 0;
+  const counts = countBlocks(project, functions);
+  const fnCount = functions.length;
 
   if (fnCount > 0 && counts.functionBlocks > counts.objectScript) {
     hints.push(

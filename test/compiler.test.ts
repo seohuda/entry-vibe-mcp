@@ -11,7 +11,8 @@ import { verifyProject } from '../compiler/verify.ts';
 import { unpackEnt } from '../compiler/unpack.ts';
 import { validateProject } from '../compiler/validate.ts';
 import { packEnt, packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
-import { ENTRYBOT_MEDIA_FILES } from '../compiler/skeleton.ts';
+import { ENTRYBOT_MEDIA_FILES, type EntryProject } from '../compiler/skeleton.ts';
+import { auditCompiledProject } from '../compiler/audit-export.ts';
 import { mediaDir } from '../src/paths.ts';
 import type { EntryIR } from '../src/types/ir.ts';
 import { addObject, patchScript, removeObject } from '../server/ir-edit.ts';
@@ -22,6 +23,23 @@ const CATALOG = join(ROOT, 'catalog', 'blocks.json');
 
 function loadIR(name: string): EntryIR {
   return JSON.parse(readFileSync(join(FIXTURES, name), 'utf8')) as EntryIR;
+}
+
+function irWithParamValue(value: unknown): EntryIR {
+  return {
+    objects: [
+      {
+        name: 'x',
+        sprite: 'entrybot',
+        scripts: [
+          [
+            { type: 'when_run_button_click' },
+            { type: 'move_direction', params: { VALUE: value } },
+          ],
+        ],
+      },
+    ],
+  } as unknown as EntryIR;
 }
 
 describe.skipIf(!existsSync(CATALOG))('compiler', () => {
@@ -364,6 +382,98 @@ describe.skipIf(!existsSync(CATALOG))('compiler', () => {
     });
     expect(result.valid).toBe(false);
     expect(result.errors.some((e) => e.includes('duplicate'))).toBe(true);
+  });
+
+  it('rejects duplicate object names', () => {
+    const result = validateProject({
+      objects: [
+        { name: 'x', sprite: 'entrybot', scripts: [[{ type: 'when_run_button_click' }]] },
+        { name: 'x', sprite: 'entrybot', scripts: [[{ type: 'when_run_button_click' }]] },
+      ],
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('duplicate object name'))).toBe(true);
+  });
+
+  it('rejects blank or padded declaration names', () => {
+    const okObject = {
+      name: 'x',
+      sprite: 'entrybot' as const,
+      scripts: [[{ type: 'when_run_button_click' }]],
+    };
+    const blankCases: Array<[string, EntryIR]> = [
+      ['scenes', { objects: [okObject], scenes: [{ name: '   ' }] }],
+      ['variables', { objects: [okObject], variables: [{ name: '   ', initialValue: 0 }] }],
+      ['lists', { objects: [okObject], lists: [{ name: '   ', initialValues: [] }] }],
+      ['messages', { objects: [okObject], messages: [{ name: '   ' }] }],
+      [
+        'functions',
+        { objects: [okObject], functions: [{ name: '   ', type: 'statement', body: [] }] },
+      ],
+      ['objects[1]', { objects: [okObject, { ...okObject, name: '   ' }] }],
+    ];
+    for (const [label, ir] of blankCases) {
+      const result = validateProject(ir);
+      expect(result.valid, label).toBe(false);
+      expect(result.errors.some((e) => e.includes('must not be blank')), label).toBe(true);
+    }
+
+    const paddedCases: Array<[string, EntryIR]> = [
+      ['scenes', { objects: [okObject], scenes: [{ name: ' 장면 ' }] }],
+      ['variables', { objects: [okObject], variables: [{ name: ' 점수 ', initialValue: 0 }] }],
+      ['lists', { objects: [okObject], lists: [{ name: ' 목록 ', initialValues: [] }] }],
+      ['messages', { objects: [okObject], messages: [{ name: ' 시작 ' }] }],
+      [
+        'functions',
+        { objects: [okObject], functions: [{ name: ' 함수 ', type: 'statement', body: [] }] },
+      ],
+      ['objects[1]', { objects: [okObject, { ...okObject, name: ' 오브젝트 ' }] }],
+    ];
+    for (const [label, ir] of paddedCases) {
+      const result = validateProject(ir);
+      expect(result.valid, label).toBe(false);
+      expect(
+        result.errors.some((e) => e.includes('must not start or end with whitespace')),
+        label,
+      ).toBe(true);
+    }
+  });
+
+  it('rejects garbage param values with a clear error', () => {
+    for (const value of [null, [1, 2], { noType: true }]) {
+      const result = validateProject(irWithParamValue(value));
+      expect(result.valid).toBe(false);
+      expect(
+        result.errors.some((e) => e.includes('string, number, boolean, or nested block')),
+      ).toBe(true);
+    }
+  });
+
+  it('rejects nested blocks whose "type" is not a string', () => {
+    const result = validateProject(irWithParamValue({ type: 7, params: {} }));
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('nested block'))).toBe(true);
+  });
+
+  it('rejects non-string values for Dropdown/DropdownDynamic/Keyboard params', () => {
+    const ir = {
+      objects: [
+        {
+          name: 'x',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'message_cast', params: { VALUE: 7 } },
+            ],
+          ],
+        },
+      ],
+      messages: [{ name: '시작' }],
+    } as unknown as EntryIR;
+    const result = validateProject(ir);
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('must be a string'))).toBe(true);
   });
 
   it('accepts an empty statement slot', () => {
@@ -835,6 +945,27 @@ describe.skipIf(!existsSync(CATALOG))('host assets/', () => {
     }
   });
 
+  it('rejects malformed learning labels and tableData', () => {
+    const assets = join(FIXTURES, 'assets');
+    process.env.ENTRY_VIBE_ASSETS_DIR = assets;
+    try {
+      const ir = JSON.parse(
+        readFileSync(join(FIXTURES, 'learning-basic.ir.json'), 'utf8'),
+      ) as EntryIR;
+      ir.learning!.labels = ['고양이', '  '];
+      const labelsResult = validateProject(ir);
+      expect(labelsResult.valid).toBe(false);
+      expect(labelsResult.errors.some((e) => e.includes('learning.labels[1]'))).toBe(true);
+
+      ir.learning!.tableData = [1, 2, 3];
+      const tableResult = validateProject(ir);
+      expect(tableResult.valid).toBe(false);
+      expect(tableResult.errors.some((e) => e.includes('learning.tableData'))).toBe(true);
+    } finally {
+      delete process.env.ENTRY_VIBE_ASSETS_DIR;
+    }
+  });
+
   it('remove_object keeps at least one object', () => {
     const ir = JSON.parse(
       readFileSync(join(ROOT, 'examples', 'two-objects.ir.json'), 'utf8'),
@@ -857,5 +988,144 @@ describe.skipIf(!existsSync(CATALOG))('host assets/', () => {
     expect(audit.ok).toBe(false);
     expect(audit.errors.some((e) => e.includes('name'))).toBe(true);
     expect(audit.errors.some((e) => e.includes('temp/media/'))).toBe(true);
+  });
+
+  it('decompiles duplicate warnings only once', () => {
+    const project: EntryProject = {
+      name: '중복 경고',
+      category: '기타',
+      scenes: [{ name: '장면 1', id: 's1' }],
+      variables: [],
+      objects: [
+        {
+          id: 'o1',
+          name: '봇',
+          objectType: 'sprite',
+          scene: 's1',
+          entity: { x: 0, y: 0, direction: 90 },
+          sprite: { pictures: [], sounds: [] },
+          script: JSON.stringify([
+            [
+              { type: 'totally_unknown_block', params: [] },
+              { type: 'totally_unknown_block', params: [] },
+            ],
+          ]),
+        },
+      ],
+      expansionBlocks: [],
+      aiUtilizeBlocks: [],
+      speed: 60,
+    };
+
+    const { warnings } = decompileProject(project);
+    const unknown = warnings.filter((w) => w.includes('totally_unknown_block'));
+    expect(unknown).toHaveLength(1);
+    expect(new Set(warnings).size).toBe(warnings.length);
+  });
+
+  it('simulates run-button and message threads only', () => {
+    const ir: EntryIR = {
+      messages: [{ name: '시작' }],
+      objects: [
+        {
+          name: '송신',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_run_button_click' },
+              { type: 'message_cast', params: { VALUE: '시작' } },
+            ],
+          ],
+        },
+        {
+          name: '수신',
+          sprite: 'entrybot',
+          scripts: [
+            [
+              { type: 'when_message_cast', params: { VALUE: '시작' } },
+              { type: 'move_direction', params: { VALUE: 10 } },
+            ],
+            [
+              { type: 'when_some_key_pressed' },
+              { type: 'move_direction', params: { VALUE: 99 } },
+            ],
+          ],
+        },
+      ],
+    };
+
+    const sim = simulateProject(ir);
+    const sender = sim.objects.find((o) => o.name === '송신')!;
+    const receiver = sim.objects.find((o) => o.name === '수신')!;
+    expect(sender.x).toBe(0);
+    expect(receiver.x).toBe(10);
+    expect(sim.stepsExecuted).toBeGreaterThanOrEqual(2);
+    expect(sim.warnings.some((w) => w.includes('when_some_key_pressed'))).toBe(true);
+  });
+
+  it('audits prepared hash media and .ent tar completeness', () => {
+    const prepared = prepareExport(compileProject(loadIR('entrybot-basic.ir.json')));
+    const clean = auditCompiledProject(prepared.project);
+    expect(clean.ok, clean.errors.join('\n')).toBe(true);
+
+    const tarPaths: string[] = [];
+    for (const obj of prepared.project.objects) {
+      const sprite = obj.sprite as
+        | {
+            pictures?: Array<{ fileurl?: string; thumbUrl?: string }>;
+            sounds?: Array<{ fileurl?: string }>;
+          }
+        | undefined;
+      for (const pic of sprite?.pictures ?? []) {
+        if (pic.fileurl) tarPaths.push(pic.fileurl);
+        if (pic.thumbUrl) tarPaths.push(pic.thumbUrl);
+      }
+      for (const sound of sprite?.sounds ?? []) {
+        if (sound.fileurl) tarPaths.push(sound.fileurl);
+      }
+    }
+    const complete = auditCompiledProject(prepared.project, { tarPaths });
+    expect(complete.ok, complete.errors.join('\n')).toBe(true);
+
+    const missing = auditCompiledProject(prepared.project, { tarPaths: [] });
+    expect(missing.ok).toBe(false);
+    expect(missing.errors.some((e) => e.includes('missing from .ent archive'))).toBe(true);
+  });
+
+  it('audits media filename and host-asset marker mismatches', () => {
+    const prepared = prepareExport(compileProject(loadIR('entrybot-basic.ir.json')));
+    const picture = (
+      prepared.project.objects[0]!.sprite as {
+        pictures: Array<{ filename?: string; fileurl?: string }>;
+      }
+    ).pictures[0]!;
+    picture.filename = 'f'.repeat(32);
+    const mismatch = auditCompiledProject(prepared.project);
+    expect(mismatch.ok).toBe(false);
+    expect(mismatch.errors.some((e) => e.includes('does not match filename'))).toBe(true);
+
+    const prepared2 = prepareExport(compileProject(loadIR('entrybot-basic.ir.json')));
+    const picture2 = (
+      prepared2.project.objects[0]!.sprite as { pictures: Array<{ fileurl?: string }> }
+    ).pictures[0]!;
+    picture2.fileurl = 'host-asset:assets/entrybot1.svg';
+    const host = auditCompiledProject(prepared2.project);
+    expect(host.ok).toBe(false);
+    expect(host.errors.some((e) => e.includes('host-asset:'))).toBe(true);
+  });
+
+  it('audits duplicate and malformed function records', () => {
+    const prepared = prepareExport(compileProject(loadIR('entrybot-basic.ir.json')));
+    prepared.project.functions = [
+      { id: 'f1', content: '[]' },
+      { id: 'f1', content: '[]' },
+      { id: 'f2', content: 'not-json' },
+    ];
+    const audit = auditCompiledProject(prepared.project);
+    expect(audit.ok).toBe(false);
+    expect(audit.errors.some((e) => e.includes('duplicate function id "f1"'))).toBe(true);
+    expect(
+      audit.errors.some((e) => e.includes('function "f2" content is not valid JSON')),
+    ).toBe(true);
   });
 });

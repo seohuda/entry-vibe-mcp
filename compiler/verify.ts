@@ -117,7 +117,7 @@ export async function verifyProject(
     try {
       const prepared = prepareExport(project);
       await packPrepared(prepared, { outputPath: entPath });
-      const { project: unpacked, media } = await unpackEnt(entPath);
+      const { project: unpacked, media } = await unpackEnt(entPath, { extractMedia: false });
       const { ir: decoded, warnings: decompileWarnings } = decompileProject(unpacked, { media });
       const revalidation = validateProject(decoded);
       roundtripResult = {
