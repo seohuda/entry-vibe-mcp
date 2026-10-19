@@ -223,32 +223,16 @@ function repairFunctions(ir: UnknownRecord, changes: RepairChange[]): void {
   if (!Array.isArray(functions)) return;
   functions.forEach((fn, index) => {
     if (!isRecord(fn)) return;
-    if (!Array.isArray(fn.body)) {
-      const hasBody = Object.hasOwn(fn, 'body');
-      const before = hasBody ? snapshot(fn.body) : undefined;
+    // Missing bodies can safely default to empty. An explicitly supplied
+    // non-array body or unknown function type may contain user intent: never
+    // silently discard that data or guess a replacement function signature.
+    if (!Object.hasOwn(fn, 'body')) {
       fn.body = [];
       changes.push({
         path: `functions[${index}].body`,
-        action: hasBody ? 'update' : 'add',
-        ...(hasBody ? { before } : {}),
+        action: 'add',
         after: [],
-        reason: 'function body must be an array of blocks',
-      });
-    }
-    if (
-      Object.hasOwn(fn, 'type') &&
-      fn.type !== 'statement' &&
-      fn.type !== 'string' &&
-      fn.type !== 'boolean'
-    ) {
-      const before = snapshot(fn.type);
-      fn.type = 'statement';
-      changes.push({
-        path: `functions[${index}].type`,
-        action: 'update',
-        before,
-        after: 'statement',
-        reason: 'function type must be statement|string|boolean',
+        reason: 'missing function body defaults to an empty array',
       });
     }
   });
