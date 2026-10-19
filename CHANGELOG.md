@@ -11,6 +11,8 @@
 - 예제 `function-list.ir.json` — 함수 + 리스트 + `show_list`
 - npm 패키지 `files`에 `AGENT-GUIDE.md`, `SKILL.md` 포함
 - MCP `get_build_guide` 응답에 `agentContract` 필드 (모델이 repo 문서를 못 읽어도 핵심 규칙 전달)
+- MCP 툴 `repair_project` — 안전한 IR 자동 수정 제안 (`dryRun` 기본 `true`, 선택적 선언 추가)
+- MCP 툴 `diff_project` — 두 IR의 구조적 차이 (`added`/`removed`/`modified`/`warnings`)
 - MCP 툴 `audit_ent` — 기존 `.ent` 구조 감사
 - `compiler/audit-export.ts` — export 감사 (name, media, func 참조)
 - MCP 툴 `get_build_guide` + 내장 레시피 (bounce/점수/리스트/신호/함수/TTS)
