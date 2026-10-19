@@ -444,10 +444,28 @@ export function registerTools(server: McpServer): void {
     async ({ filename }) => {
       try {
         const entPath = resolveEntPath(filename);
-        ensureAssetsDir();
-        const { project, media } = await unpackEnt(entPath);
-        const exportAudit = auditCompiledProject(project);
-        const { ir, warnings } = decompileProject(project, { media });
+        // Audit archive members before copying any media into the host assets directory.
+        const inspected = await unpackEnt(entPath, { extractMedia: false });
+        const exportAudit = auditCompiledProject(inspected.project, {
+          tarPaths: inspected.tarPaths,
+        });
+        if (!exportAudit.ok) {
+          return errorResult(
+            JSON.stringify(
+              {
+                ok: false,
+                errors: exportAudit.errors,
+                hints: exportAudit.hints,
+                audit: exportAudit,
+              },
+              null,
+              2,
+            ),
+          );
+        }
+        // Only a fully audited archive is allowed to populate assets/imported/.
+        const { media } = await unpackEnt(entPath);
+        const { ir, warnings } = decompileProject(inspected.project, { media });
         return textResult({
           ok: true,
           ir,
