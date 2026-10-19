@@ -205,28 +205,41 @@ describe.skipIf(!existsSync(CATALOG))('repairProject', () => {
     expect('speed' in repaired).toBe(false);
   });
 
-  it('repairs function body and invalid function type', () => {
+  it('keeps malformed function body and type for manual repair', () => {
     const input = {
       objects: [baseObject()],
       functions: [
-        { name: '한 걸음', type: 'bogus', body: 'not-an-array' },
+        { name: '한 걸음', type: 'bogus', body: 'important user-defined logic' },
       ],
     };
-
     const result = repairProject(input);
     const fn = repairedIR(result).functions?.[0];
 
+    expect(result.ok).toBe(false);
+    expect(result.changes).toEqual([]);
+    expect(fn).toEqual(input.functions[0]);
+    expect(result.remainingErrors).toEqual(
+      expect.arrayContaining([
+        expect.stringContaining('functions[0].type'),
+        expect.stringContaining('functions[0].body'),
+      ]),
+    );
+  });
+
+  it('adds an empty body only when the function body is absent', () => {
+    const input = {
+      objects: [baseObject()],
+      functions: [{ name: '새 함수', type: 'statement' }],
+    };
+    const result = repairProject(input);
+
     expect(result.ok).toBe(true);
-    expect(result.changes.map((c) => c.path)).toEqual([
-      'functions[0].body',
-      'functions[0].type',
-    ]);
-    expect(fn).toEqual({
-      name: '한 걸음',
+    expect(result.changes.map((c) => c.path)).toEqual(['functions[0].body']);
+    expect(repairedIR(result).functions?.[0]).toEqual({
+      name: '새 함수',
       type: 'statement',
       body: [],
     });
-    expect(fn && 'returnValue' in fn).toBe(false);
   });
 
   it('removes invalid sound durations', () => {
