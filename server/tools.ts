@@ -5,12 +5,14 @@ import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { compileProject, CompileError } from '../compiler/compile.ts';
 import { auditCompiledProject } from '../compiler/audit-export.ts';
 import { decompileProject } from '../compiler/decompile.ts';
-import { packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
+import { prepareExport, writePreparedOutputs } from '../compiler/pack.ts';
 import { smokeTestProject } from '../compiler/smoke.ts';
 import { simulateProject } from '../compiler/runtime-sim.ts';
 import { verifyProject } from '../compiler/verify.ts';
 import { unpackEnt, resolveEntPath } from '../compiler/unpack.ts';
 import { validateProject } from '../compiler/validate.ts';
+import { diffProjects } from '../compiler/diff.ts';
+import { repairProject } from '../compiler/repair.ts';
 import type { EntryIR, EntryIRLearning, EntryIRObject, EntryIRScene, Thread } from '../src/types/ir.ts';
 import { outputDir } from '../src/paths.ts';
 import { ensureAssetsDir } from '../compiler/assets.ts';
@@ -278,6 +280,66 @@ export function registerTools(server: McpServer): void {
   );
 
   server.registerTool(
+    'repair_project',
+    {
+      description: `Propose deterministic, non-destructive IR repairs. Defaults to dryRun=true and never guesses block types, params, media, or semantic declarations unless allowSemanticAdditions=true. Review changes/remainingErrors, apply repairedIR, then re-validate.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: z.record(z.unknown()).describe('Full EntryIR project to inspect and repair'),
+        dryRun: z
+          .boolean()
+          .optional()
+          .describe('Return the proposal without applying it (default true)'),
+        allowSemanticAdditions: z
+          .boolean()
+          .optional()
+          .describe('Add missing scenes, variables, lists, and messages (default false)'),
+      },
+    },
+    async ({ ir, dryRun, allowSemanticAdditions }) => {
+      try {
+        return textResult(
+          repairProject(ir, {
+            dryRun: dryRun ?? true,
+            policy: { allowSemanticAdditions: allowSemanticAdditions ?? false },
+          }),
+        );
+      } catch (err) {
+        return errorResult(
+          JSON.stringify(
+            {
+              ok: false,
+              errors: [err instanceof Error ? err.message : String(err)],
+              hints: ['Inspect the IR shape and retry; repair_project never mutates the input.'],
+            },
+            null,
+            2,
+          ),
+        );
+      }
+    },
+  );
+
+  server.registerTool(
+    'diff_project',
+    {
+      description: `Compare two EntryIR versions structurally. Returns added/removed/modified changes, per-section summary, media changes, warnings, and truncation info. Set maxChanges to bound each change list (default 200).\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        before: entryIRSchema.describe('Baseline EntryIR project'),
+        after: entryIRSchema.describe('Updated EntryIR project'),
+        maxChanges: z
+          .number()
+          .int()
+          .min(1)
+          .max(2000)
+          .optional()
+          .describe('Max changes per added/removed/modified list (default 200)'),
+      },
+    },
+    async ({ before, after, maxChanges }) =>
+      textResult(diffProjects(before, after, { maxChanges })),
+  );
+
+  server.registerTool(
     'compile_project',
     {
       description: `Compile EntryIR into an Entry .ent file (tar.gz) plus matching .json sidecar in the host cwd. On failure returns { ok:false, errors, hints } — fix IR and retry. Pass overwrite:true to replace existing files.\n\n${IR_SCHEMA_DOC}`,
@@ -326,8 +388,11 @@ export function registerTools(server: McpServer): void {
 
         const project = compileProject(ir as EntryIR);
         const prepared = prepareExport(project);
-        writePreparedJson(prepared, jsonPath);
-        await packPrepared(prepared, { outputPath: entPath });
+        await writePreparedOutputs(prepared, {
+          entPath,
+          jsonPath,
+          overwrite: overwrite === true,
+        });
         return textResult({
           ok: true,
           entPath,
