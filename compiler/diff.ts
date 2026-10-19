@@ -284,6 +284,14 @@ function diffMatchedMediaFields(
   }
 }
 
+/** Compare ordered media paths without conflating replacement with reordering. */
+function samePathMultiset(before: string[], after: string[]): boolean {
+  if (before.length !== after.length) return false;
+  const a = [...before].sort();
+  const b = [...after].sort();
+  return a.every((path, index) => path === b[index]);
+}
+
 function diffMediaEntries(
   pathPrefix: string,
   field: 'pictures' | 'sounds',
@@ -310,6 +318,22 @@ function diffMediaEntries(
       obj,
       state,
     );
+  }
+
+  const beforePaths = asArray(before[field]).map((item) => asObject(item)?.path);
+  const afterPaths = afterEntries.map((item) => asObject(item)?.path);
+  if (
+    beforePaths.every((path): path is string => typeof path === 'string') &&
+    afterPaths.every((path): path is string => typeof path === 'string') &&
+    !deepEqual(beforePaths, afterPaths) &&
+    samePathMultiset(beforePaths, afterPaths)
+  ) {
+    state.modified.push({
+      path: `${pathPrefix}.${field}.order`,
+      kind: 'modified',
+      before: beforePaths,
+      after: afterPaths,
+    });
   }
 }
 
@@ -635,6 +659,65 @@ function collectMedia(root: JsonObject | undefined): Set<string> {
   return paths;
 }
 
+/**
+ * Compare the logical owners of paths independently of global asset inventory.
+ * Using owner+slot, not array index, means a costume order change is reported
+ * once by diffMediaEntries, while moving a shared asset to another object or
+ * scene remains visible even when the global path set is unchanged.
+ */
+function collectMediaLocations(root: JsonObject | undefined): Map<string, string[]> {
+  const owners = new Map<string, Set<string>>();
+  if (!root) return new Map();
+
+  const add = (path: unknown, owner: string): void => {
+    if (typeof path !== 'string') return;
+    const locations = owners.get(path) ?? new Set<string>();
+    locations.add(owner);
+    owners.set(path, locations);
+  };
+
+  for (const scene of asArray(root.scenes)) {
+    const rec = asObject(scene);
+    if (!rec || typeof rec.name !== 'string') continue;
+    add(asObject(rec.background)?.path, `scenes.${JSON.stringify(rec.name)}.background`);
+  }
+
+  for (const obj of asArray(root.objects)) {
+    const rec = asObject(obj);
+    if (!rec || typeof rec.name !== 'string') continue;
+    for (const slot of ['pictures', 'sounds'] as const) {
+      for (const media of asArray(rec[slot])) {
+        add(asObject(media)?.path, `objects.${JSON.stringify(rec.name)}.${slot}`);
+      }
+    }
+  }
+
+  return new Map(
+    [...owners].map(([path, locations]) => [path, [...locations].sort()]),
+  );
+}
+
+function diffMediaLocations(
+  beforeRoot: JsonObject | undefined,
+  afterRoot: JsonObject | undefined,
+  state: DiffState,
+): void {
+  const before = collectMediaLocations(beforeRoot);
+  const after = collectMediaLocations(afterRoot);
+  for (const path of [...before.keys()].sort()) {
+    const previous = before.get(path)!;
+    const next = after.get(path);
+    // Only compare shared media; entirely new/missing assets are covered by media.added/removed.
+    if (!next || deepEqual(previous, next)) continue;
+    state.modified.push({
+      path: `media.locations[${JSON.stringify(path)}]`,
+      kind: 'modified',
+      before: previous,
+      after: next,
+    });
+  }
+}
+
 function emptySection(): DiffSectionSummary {
   return { added: 0, removed: 0, modified: 0 };
 }
@@ -664,6 +747,7 @@ function countChange(
 ): void {
   const section = sectionForPath(change.path);
   if (section) summary[section][kind] += 1;
+  if (change.path.startsWith('media.locations[')) summary.media[kind] += 1;
   if (isBlockEvent(change.path)) summary.blocks[kind] += 1;
 }
 
@@ -805,6 +889,8 @@ export function diffProjects(
 
   diffScalarSection('learning', beforeRoot, afterRoot, state);
   diffScalarSection('speed', beforeRoot, afterRoot, state);
+
+  diffMediaLocations(beforeRoot, afterRoot, state);
 
   const beforeMedia = collectMedia(beforeRoot);
   const afterMedia = collectMedia(afterRoot);
