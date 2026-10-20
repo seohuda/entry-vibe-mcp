@@ -3,6 +3,7 @@
  */
 import {
   existsSync,
+  lstatSync,
   mkdirSync,
   readFileSync,
   readdirSync,
@@ -15,6 +16,8 @@ import { tmpdir } from 'node:os';
 import * as tar from 'tar';
 import type { EntryProject } from './skeleton.ts';
 import { ensureAssetsDir } from './assets.ts';
+import { addLibraryAttribution, parseLibraryAttributions } from './library-media.ts';
+import { MAX_LIBRARY_MANIFEST_BYTES, readLibraryFile } from '../src/library/media.ts';
 
 export interface UnpackedMedia {
   /** Path relative to host assets/, e.g. imported/abc.svg */
@@ -91,6 +94,22 @@ export async function unpackEnt(
     }
 
     const project = JSON.parse(readFileSync(projectPath, 'utf8')) as EntryProject;
+    const attributionPath = join(tempDir, 'library-attribution.json');
+    if (existsSync(attributionPath)) {
+      if (!lstatSync(attributionPath).isFile()) {
+        throw new Error('invalid library attribution: expected a regular file');
+      }
+      const document: unknown = JSON.parse(
+        readLibraryFile(tempDir, 'library-attribution.json', MAX_LIBRARY_MANIFEST_BYTES).toString('utf8'),
+      );
+      if (!document || typeof document !== 'object' ||
+          !('version' in document) || document.version !== 1 || !('objects' in document)) {
+        throw new Error('invalid library attribution document');
+      }
+      for (const attribution of parseLibraryAttributions(document.objects)) {
+        addLibraryAttribution(project, attribution);
+      }
+    }
     const assetsRoot = ensureAssetsDir(cwd);
     mkdirSync(join(assetsRoot, 'imported'), { recursive: true });
 

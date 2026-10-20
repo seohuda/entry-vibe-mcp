@@ -2,6 +2,7 @@
  * Keyword → recipe matching for get_build_guide.
  * No LLM — pure heuristics so the host agent gets a concrete starting IR shape.
  */
+import { getObjectLibrary } from '../src/library/index.ts';
 
 export interface BuildRecipe {
   id: string;
@@ -28,12 +29,14 @@ export const BUILD_RECIPES: BuildRecipe[] = [
     notes: [
       'repeat_basic의 VALUE는 횟수, DO 슬롯에 move_direction + bounce_wall을 넣습니다.',
       'search_blocks는 기본 scope=core를 쓰세요.',
+      '고양이는 search_objects("고양이") → get_object_info로 확인하세요. 스케치의 local:cat은 공식 Entry 자산이 아닌 별도 제작 자산입니다.',
     ],
     irSketch: {
       objects: [
         {
           name: '고양이',
-          sprite: 'entrybot',
+          sprite: 'library',
+          library: { source: 'local', objectId: 'local:cat' },
           scripts: [
             [
               { type: 'when_run_button_click' },
@@ -254,6 +257,8 @@ export const BUILD_RECIPES: BuildRecipe[] = [
 
 const WORKFLOW_STEPS = [
   'get_build_guide(request) — 레시피·추천 블록·IR 스케치 확인 (AGENT-GUIDE.md 계약)',
+  'search_objects(query) → get_object_info(objectId) — 요청한 캐릭터·배경의 실제 메타데이터 확인',
+  'add_library_object(ir, objectId) 또는 sprite="library" 참조 — 모양·소리 보존, 실패 시 Entrybot 대체 금지',
   'search_blocks(query, scope="core") — 기본은 core. AI면 scope="ai", 하드웨어면 scope="hardware"',
   'get_block_schema(types) — 정확한 params / statementKeys 확인 (추측 금지)',
   'validate_project(ir) — errors+hints를 보고 IR 수정 후 재검증',
@@ -270,6 +275,7 @@ export const AGENT_CONTRACT = {
     'Do NOT use search_blocks scope=all unless user names hardware',
     'Do NOT put function_create in object scripts — use ir.functions + function_call',
     'Do NOT skip validate_project before compile_project',
+    '요청한 캐릭터를 검색하기 전에 Entrybot으로 결정하지 마세요. 없는 objectId나 공식 연동 성공을 만들어내지 마세요.',
   ],
   existingEnt: 'audit_ent(filename) before editing foreign .ent files',
   retry: 'On ok:false, apply errors+hints to IR only, then re-validate — do not retry unchanged IR',
@@ -291,6 +297,7 @@ export function matchRecipes(request: string): BuildRecipe[] {
 }
 
 export function buildGuide(request: string) {
+  const library = getObjectLibrary();
   const recipes = matchRecipes(request);
   const recommendedBlocks = [
     ...new Set(recipes.flatMap((r) => r.recommendedBlocks)),
@@ -300,6 +307,13 @@ export function buildGuide(request: string) {
     agentContract: AGENT_CONTRACT,
     workflow: [...WORKFLOW_STEPS],
     scopeDefault: 'core' as const,
+    objectSelection: {
+      providers: library.listProviders(),
+      candidates: library.searchObjects(request.slice(0, 512), { limit: 10 }),
+      workflow: 'search_objects → get_object_info → add_library_object (또는 library 참조 IR)',
+      noMatch: '객체 이름별로 다시 검색하세요. 없으면 명확한 실패 또는 사용자가 제공한 로컬 자산을 안내하고 Entrybot으로 조용히 대체하지 마세요.',
+      nativeEntry: '공식 Entry 온라인 라이브러리는 현재 미지원입니다. local 자산은 별도 제작한 오프라인 공급원입니다.',
+    },
     matchedRecipes: recipes.map((r) => ({
       id: r.id,
       title: r.title,
@@ -312,6 +326,7 @@ export function buildGuide(request: string) {
         ? recommendedBlocks
         : ['when_run_button_click', 'move_direction', 'repeat_basic'],
     nextSteps: [
+      '요청한 시각 요소마다 search_objects를 호출하고 get_object_info에서 실제 모양·소리·라이선스를 확인하세요.',
       recipes[0]
         ? `Start from matched recipe "${recipes[0].id}" irSketch, then get_block_schema on its blocks.`
         : 'No recipe matched — search_blocks for verbs in the request (이동, 반복, 변수, …) with scope=core.',

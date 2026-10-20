@@ -1,0 +1,37 @@
+{
+  "messages": [{ "name": "강아지 차례" }],
+  "objects": [
+    {
+      "name": "고양이",
+      "sprite": "library",
+      "library": { "source": "local", "objectId": "local:cat" },
+      "x": -140,
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          {
+            "type": "dialog_time",
+            "params": { "VALUE": "안녕, 같이 산책할래?", "SECOND": 2, "OPTION": "speak" }
+          },
+          { "type": "message_cast", "params": { "VALUE": "강아지 차례" } }
+        ]
+      ]
+    },
+    {
+      "name": "강아지",
+      "sprite": "library",
+      "library": { "source": "local", "objectId": "local:dog" },
+      "x": 140,
+      "scripts": [
+        [
+          { "type": "when_message_cast", "params": { "VALUE": "강아지 차례" } },
+          {
+            "type": "dialog_time",
+            "params": { "VALUE": "좋아! 함께 가자!", "SECOND": 2, "OPTION": "speak" }
+          },
+          { "type": "move_direction", "params": { "VALUE": 20 } }
+        ]
+      ]
+    }
+  ]
+}

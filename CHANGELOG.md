@@ -7,6 +7,13 @@
 
 ### Added
 
+- 객체 라이브러리 공급원 추상화와 한국어·영어 메타데이터 검색, `sprite:library` IR 참조
+- MCP `search_objects`, `get_object_info`, `add_library_object`, `list_object_categories`
+- 원본 제작 로컬 객체(고양이 2모양·강아지·자동차·로켓·운석·우주 배경)와 사용자 manifest 공급원
+- 라이브러리 모양·소리 보존, 콘텐츠 해시 미디어 중복 제거, 파일·객체·프로젝트 자산 한도와 경로 검증
+- `background: true`로 배경 미디어 왕복 보존, `.ent` 라이선스 고지와 `assetAttributions` 재내보내기 지원
+- 라이브러리 이동·대화·우주 장면 예제와 오프라인 검색·가져오기·아카이브·왕복 검증 테스트
+- 공식 Entry 카탈로그 조사 기록: 공개 API 계약·재배포 권한 미확인으로 `entry` 온라인 공급원은 명시적 미지원
 - **`AGENT-GUIDE.md`** — MCP 호스트 LLM용 전체 계약 (금지 사항, 재시도 루프, OpenCode 프롬프트 템플릿)
 - 예제 `function-list.ir.json` — 함수 + 리스트 + `show_list`
 - npm 패키지 `files`에 `AGENT-GUIDE.md`, `SKILL.md` 포함

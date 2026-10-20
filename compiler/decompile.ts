@@ -25,6 +25,7 @@ import { parseHostAssetMarker } from './assets.ts';
 import { decompileLearning } from './learning.ts';
 import type { UnpackedMedia } from './unpack.ts';
 import { mediaPathByFileId } from './unpack.ts';
+import { getLibraryAttributions } from './library-media.ts';
 
 export interface DecompileResult {
   ir: EntryIR;
@@ -65,6 +66,7 @@ interface DecompileCtx {
   functionIdToName: Map<string, string>;
   mediaByFileId: Map<string, string>;
   warnings: string[];
+  sceneBackgroundIds: Set<string>;
 }
 
 function decompileParamValue(
@@ -273,8 +275,9 @@ function isBackgroundObject(obj: Record<string, unknown>, scripts: unknown[][]):
   if (obj.lock !== true) return false;
   const name = String(obj.name ?? '');
   if (BACKGROUND_NAMES.has(name) || name.startsWith('배경')) return true;
-  const flat = scripts.flat();
-  return flat.length === 0 && obj.rotateMethod === 'none';
+  // Backgrounds may animate or respond to events; locking/rotation identify the
+  // layer independently of its display name and scripts.
+  return obj.rotateMethod === 'none';
 }
 
 function decompileObject(
@@ -286,7 +289,7 @@ function decompileObject(
   const objectType = String(obj.objectType ?? 'sprite');
   const scripts = parseScript(obj.script).map((t) => decompileThread(t, ctx));
 
-  if (objectType === 'sprite' && isBackgroundObject(obj, parseScript(obj.script))) {
+  if (ctx.sceneBackgroundIds.has(String(obj.id))) {
     return null;
   }
 
@@ -294,6 +297,7 @@ function decompileObject(
     name: String(obj.name ?? 'object'),
     scripts,
   };
+  if (isBackgroundObject(obj, parseScript(obj.script))) base.background = true;
 
   if (typeof entity.x === 'number') base.x = entity.x;
   if (typeof entity.y === 'number') base.y = entity.y;
@@ -348,7 +352,8 @@ function decompileObject(
         };
       })
       .filter((s): s is NonNullable<typeof s> => Boolean(s));
-    if (irSounds.length > 0) base.sounds = irSounds;
+    // Explicit empty sounds prevent custom/library imports inheriting Entrybot's bark.
+    base.sounds = irSounds;
   }
 
   return base;
@@ -360,6 +365,8 @@ function decompileSceneBackgrounds(
   ctx: DecompileCtx,
 ): Map<string, EntryIRScene['background']> {
   const backgrounds = new Map<string, EntryIRScene['background']>();
+  // A background-only project still needs an object in IR; retain its layers below.
+  if (!project.objects.some((obj) => !isBackgroundObject(obj, parseScript(obj.script)))) return backgrounds;
   for (const obj of project.objects ?? []) {
     const rec = obj as Record<string, unknown>;
     const scripts = parseScript(rec.script);
@@ -367,9 +374,21 @@ function decompileSceneBackgrounds(
     const sceneId = String(rec.scene ?? '');
     const sceneName = sceneIdToName.get(sceneId);
     if (!sceneName) continue;
-    const sprite = (rec.sprite ?? {}) as { pictures?: unknown[] };
+    if (backgrounds.has(sceneName)) continue;
+    const sprite = (rec.sprite ?? {}) as { pictures?: unknown[]; sounds?: unknown[] };
+    // Scene.background can express one static picture. Keep richer layers as objects.
+    if (sprite.pictures?.length !== 1 || sprite.sounds?.length || scripts.flat().length) continue;
     const pic = (sprite.pictures ?? [])[0] as Record<string, unknown> | undefined;
     if (!pic) continue;
+    const dimension = pic.dimension as { width?: number; height?: number } | undefined;
+    const entity = rec.entity as { scaleX?: number; scaleY?: number } | undefined;
+    const legacyScale = Math.max(960 / Number(dimension?.width), 540 / Number(dimension?.height));
+    // Legacy scene.background fits 960×540; new library/background objects fit
+    // Entry's logical 480×270. Keep the latter as explicit background objects so
+    // a roundtrip does not accidentally double their scale.
+    if (!Number.isFinite(legacyScale) || !Number.isFinite(entity?.scaleX) || !Number.isFinite(entity?.scaleY) ||
+        Math.abs(Number(entity?.scaleX) - legacyScale) > 1e-9 ||
+        Math.abs(Number(entity?.scaleY) - legacyScale) > 1e-9) continue;
     const path = pictureAssetPath(pic, ctx);
     if (!path) {
       ctx.warnings.push(`scene "${sceneName}": background media not extracted`);
@@ -379,6 +398,7 @@ function decompileSceneBackgrounds(
       name: String(pic.name ?? rec.name ?? '배경'),
       path,
     });
+    ctx.sceneBackgroundIds.add(String(rec.id));
   }
   return backgrounds;
 }
@@ -405,6 +425,7 @@ export function decompileProject(
     functionIdToName,
     mediaByFileId,
     warnings,
+    sceneBackgroundIds: new Set(),
   };
 
   const sceneIdToName = new Map<string, string>();
@@ -419,6 +440,7 @@ export function decompileProject(
   });
 
   const ir: EntryIR = {
+    ...(getLibraryAttributions(project).length ? { assetAttributions: getLibraryAttributions(project) } : {}),
     scenes: scenes.length > 0 ? scenes : undefined,
     speed: typeof project.speed === 'number' ? project.speed : undefined,
     learning: decompileLearning((project as { learning?: unknown }).learning),

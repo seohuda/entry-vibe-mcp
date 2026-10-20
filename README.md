@@ -14,7 +14,7 @@
 
 [Entry](https://playentry.org) 프로젝트를 텍스트 요청으로 작성하고 `.ent` 파일로 컴파일하는 MCP 서버입니다.
 
-MCP 호스트에 연결해서 사용합니다. 서버 자체는 상태를 저장하지 않으며, 블록 검색·IR 검증·컴파일 세 가지만 담당합니다.
+MCP 호스트에 연결해서 사용합니다. 블록·객체 검색, IR 편집·검증, 미디어를 포함한 `.ent` 컴파일을 제공합니다.
 
 예를 들어 "엔트리봇이 4번 반복하면서 10칸씩 움직이고 벽에 튕기게 해줘"라고 요청하면 `entry-project.ent`가 생성됩니다. 이 파일은 엔트리 오프라인이나 playentry.org에서 열 수 있습니다.
 
@@ -230,7 +230,7 @@ Windsurf, Cline 등 다수 호스트는 Claude Desktop과 동일하게 `mcpServe
 호스트 LLM은 **반드시** 다음 순서로 툴을 호출합니다 (Unity/Adobe MCP처럼 AI가 툴만으로 작업을 끝내는 계약입니다).
 
 ```
-get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project
+get_build_guide → search_objects → get_object_info → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project
 ```
 
 `validate_project` / `compile_project`가 `errors`와 `hints`를 반환하면 힌트대로 IR을 고친 뒤 다시 검증·컴파일합니다. 사람이 IR을 손댈 필요는 없습니다.
@@ -250,6 +250,10 @@ OpenCode 등 다른 호스트에서는 시스템 프롬프트나 `@AGENT-GUIDE.m
 | 이름 | 기능 |
 |------|------|
 | `get_build_guide` | 요청 → 레시피·추천 블록·IR 스케치 (항상 먼저) |
+| `search_objects` | 한국어·영어 객체 검색 (`query`, `category`, `limit`, `source`) |
+| `get_object_info` | 정확한 객체 ID의 모양·소리·크기·출처·라이선스 |
+| `add_library_object` | 기존 IR에 라이브러리 객체 추가, 갱신된 IR·검증 결과 반환 |
+| `list_object_categories` | 실제 객체 공급원의 카테고리·지원 상태 |
 | `list_categories` | 카테고리 목록 (`scope`: core\|ai\|hardware\|all, 기본 core) |
 | `search_blocks` | 블록 검색 (`query`, `scope` 기본 core, `category`, `limit`) |
 | `get_block_schema` | 블록 상세 스키마 (param 키, statement 키, 기본값) |
@@ -272,7 +276,9 @@ OpenCode 등 다른 호스트에서는 시스템 프롬프트나 `@AGENT-GUIDE.m
 ```mermaid
 flowchart LR
   Host[host 요청] --> Guide[get_build_guide]
-  Guide --> Search[search_blocks scope=core]
+  Guide --> Objects[search_objects]
+  Objects --> Info[get_object_info]
+  Info --> Search[search_blocks scope=core]
   Search --> Schema[get_block_schema]
   Schema --> Validate[validate_project]
   Validate --> Compile[compile_project]
@@ -291,7 +297,8 @@ flowchart LR
 {
   "objects": [{
     "name": "고양이",
-    "sprite": "entrybot",
+    "sprite": "library",
+    "library": { "source": "local", "objectId": "local:cat" },
     "scripts": [[
       { "type": "when_run_button_click" },
       {
@@ -311,8 +318,37 @@ flowchart LR
 
 - 스크립트 스레드는 이벤트 블록(`when_run_button_click` 등)으로 시작해야 합니다.
 - param 키와 statement 키는 `get_block_schema` 응답값을 그대로 사용합니다.
-- sprite는 `entrybot`만 지원합니다. `pictures`를 생략하면 기본 엔트리봇 모양이 쓰입니다.
+- `sprite`는 `entrybot`(생략 시 기본값), `custom`, `library`를 지원합니다. `library`는 검색에서 얻은 `source`와 `objectId`가 필요하며, 잘못된 ID는 오류로 처리합니다.
 - 오브젝트에 `x` / `y`를 넣으면 무대 좌표가 반영됩니다.
+
+### 객체 라이브러리
+
+**공식 Entry 온라인 객체 카탈로그는 현재 지원하지 않습니다.** 공개 프런트엔드의 내부 GraphQL 호출은 확인했지만, 안정적인 공개 API 계약과 일반 자산의 재배포 허가를 확인하지 못했습니다. 공식 객체를 다운로드했다고 표시하거나 검색 실패 시 엔트리봇으로 바꾸지 않습니다. 조사 근거는 [Entry 연동 조사](docs/entry-library-research.md)에 있습니다.
+
+현재 동작하는 공급원은 다음과 같습니다.
+
+| source | 지원 범위 | 네트워크 |
+|--------|-----------|----------|
+| `local` | 이 저장소에서 제작한 고양이(걷기 2모양), 강아지, 자동차, 로켓, 운석, 우주 배경과 전자음 | 불필요 |
+| `user` | 사용자가 사용 권한을 확보한 로컬 자산의 manifest (`ENTRY_VIBE_OBJECT_LIBRARY` 설정 시) | 불필요 |
+| `entry` | 공식 카탈로그 연동 미지원, 명시적 오류 반환 | 호출하지 않음 |
+
+예를 들어 “고양이랑 강아지 캐릭터로 대화 게임 만들어줘”라는 요청은 다음처럼 처리합니다. 사용자는 내부 ID를 알 필요가 없습니다.
+
+```text
+get_build_guide({ request: "고양이랑 강아지 캐릭터로 대화 게임 만들어줘" })
+search_objects({ query: "고양이", source: "local" })
+get_object_info({ objectId: "local:cat" })
+add_library_object({ ir: { objects: [] }, objectId: "local:cat", name: "고양이", x: -120 })
+search_objects({ query: "강아지" })
+add_library_object({ ir: <앞 단계의 ir>, objectId: "local:dog", x: 120 })
+get_block_schema({ types: [...] })
+patch_object / patch_script → validate_project → verify_project → compile_project
+```
+
+검색은 실제 이름·별칭·카테고리를 사용한 키워드 순위입니다. 임베딩이나 외부 AI 검색은 사용하지 않습니다. 결과가 없으면 요구에 맞는 자산을 준비하거나 지원 가능한 대안을 알립니다. 모양의 순서·이름과 공급원 소리는 보존하며, 같은 파일은 아카이브에서 중복 제거합니다. 배경 객체는 잠금·무대 맞춤 크기로 가져옵니다.
+
+바로 실행: `npm run example -- library-movement`, `library-dialogue`, `library-space`. 원본 자산의 출처와 재생성 방법은 [assets/library/](assets/library/), 사용자 manifest와 공급원 확장은 [객체 라이브러리 안내](docs/object-library.md)를 참고하세요. 기존 엔트리봇·커스텀 프로젝트는 계속 오프라인으로 컴파일할 수 있습니다.
 
 ### 커스텀 미디어 (`assets/`)
 
@@ -344,7 +380,7 @@ flowchart LR
 ```
 
 - 경로는 `assets/` 아래만 허용합니다 (`..` 금지).
-- `pictures` / `sounds`를 생략하면 기본 엔트리봇 모양·bark 소리를 씁니다.
+- 기존 `entrybot`·`custom`의 기본 미디어 동작은 유지됩니다. `library`는 공급원이 가진 모양·소리만 사용하며 빈 소리 목록에 bark를 추가하지 않습니다.
 - SVG만 넣을 때 같은 stem의 `.png`가 있으면 썸네일로 사용합니다.
 - `compile_project` 실행 시 `assets/` 폴더가 없으면 만들어 둡니다.
 
@@ -455,6 +491,8 @@ temp/ab/cd/sound/{fileId}.mp3
 ```
 catalog/          블록 스키마 (entryjs AST 추출)
 assets/media/     .ent에 패킹되는 엔트리봇 이미지·소리
+assets/library/   원본 제작 로컬 객체 카탈로그·미디어
+src/library/      공급원 추상화·검색·자산 검증
 compiler/         IR → project.json → .ent
 server/           MCP stdio 서버
 scripts/          추출기, fetch, 예제 컴파일 스크립트
@@ -478,3 +516,5 @@ npm run extract:catalog
 MIT입니다.
 
 `assets/media/`의 엔트리봇 이미지와 소리는 [entrylabs/entryjs](https://github.com/entrylabs/entryjs)에서 가져온 파일로 Apache-2.0을 따릅니다. 자세한 내용은 [assets/media/NOTICE.md](assets/media/NOTICE.md)를 참고하세요.
+
+`assets/library/`의 새 객체는 공식 Entry 객체의 복사본이 아닌 원본 제작 자산입니다. 개별 라이선스·출처는 해당 카탈로그와 NOTICE를 따릅니다. 사용자 자산은 사용자가 권한을 확인해야 하며, manifest의 라이선스 표기는 서버가 법적 권한을 보증한다는 뜻이 아닙니다.
