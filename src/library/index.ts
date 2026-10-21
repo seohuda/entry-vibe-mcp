@@ -71,7 +71,7 @@ function score(object: LibraryObject, query: string): number {
   let rank = 0;
   for (const term of terms) {
     if (query === term) rank = Math.max(rank, 100);
-    else if (term.includes(query)) rank = Math.max(rank, 70);
+    else if (query.length >= 2 && term.includes(query)) rank = Math.max(rank, 70);
     else if (term.length >= 2 && (/^[a-z0-9 -]+$/.test(term)
       ? (` ${query.replace(/[^a-z0-9]+/g, ' ')} `).includes(` ${term} `)
       : query.includes(term))) rank = Math.max(rank, 50);

@@ -34,6 +34,8 @@ describe('real offline object catalog', () => {
     expect(library.searchObjects('자동차 경주 게임 만들어줘. 자동차랑 장애물을 넣어.').map((object) => object.id)).toContain('local:car');
     expect(library.searchObjects('고양이랑 강아지 캐릭터로 대화 게임').map((object) => object.id)).toEqual(expect.arrayContaining(['local:cat', 'local:dog']));
     expect(library.searchObjects('nonexistent-abcxyz')).toEqual([]);
+    expect(library.searchObjects('a')).toEqual([]);
+    expect(library.searchObjects('개').map((object) => object.id)).toEqual(['local:dog']);
   });
   it('filters actual categories, providers, and enforces result bounds', () => {
     const library = getObjectLibrary();
