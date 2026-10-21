@@ -270,14 +270,16 @@ function isEntrybotSprite(
   return false;
 }
 
-function isBackgroundObject(obj: Record<string, unknown>, scripts: unknown[][]): boolean {
+function isBackgroundObject(obj: Record<string, unknown>): boolean {
   if (obj.objectType !== 'sprite') return false;
+  const sprite = obj.sprite as { category?: { main?: string } } | undefined;
+  if (sprite?.category?.main === 'background') return true;
   if (obj.lock !== true) return false;
   const name = String(obj.name ?? '');
-  if (BACKGROUND_NAMES.has(name) || name.startsWith('배경')) return true;
-  // Backgrounds may animate or respond to events; locking/rotation identify the
-  // layer independently of its display name and scripts.
-  return obj.rotateMethod === 'none';
+  // Legacy projects predate sprite.category. Keep a name-based fallback, but
+  // never infer a background from write lock or rotation alone — ordinary
+  // sprites commonly use both.
+  return BACKGROUND_NAMES.has(name) || name.startsWith('배경');
 }
 
 function decompileObject(
@@ -297,7 +299,7 @@ function decompileObject(
     name: String(obj.name ?? 'object'),
     scripts,
   };
-  if (isBackgroundObject(obj, parseScript(obj.script))) base.background = true;
+  if (isBackgroundObject(obj)) base.background = true;
 
   if (typeof entity.x === 'number') base.x = entity.x;
   if (typeof entity.y === 'number') base.y = entity.y;
@@ -366,11 +368,11 @@ function decompileSceneBackgrounds(
 ): Map<string, EntryIRScene['background']> {
   const backgrounds = new Map<string, EntryIRScene['background']>();
   // A background-only project still needs an object in IR; retain its layers below.
-  if (!project.objects.some((obj) => !isBackgroundObject(obj, parseScript(obj.script)))) return backgrounds;
+  if (!project.objects.some((obj) => !isBackgroundObject(obj))) return backgrounds;
   for (const obj of project.objects ?? []) {
     const rec = obj as Record<string, unknown>;
     const scripts = parseScript(rec.script);
-    if (!isBackgroundObject(rec, scripts)) continue;
+    if (!isBackgroundObject(rec)) continue;
     const sceneId = String(rec.scene ?? '');
     const sceneName = sceneIdToName.get(sceneId);
     if (!sceneName) continue;

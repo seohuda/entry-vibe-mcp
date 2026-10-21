@@ -149,6 +149,7 @@ function createIdFactory(reserved: Iterable<string> = []): () => string {
 }
 
 interface SkeletonSprite {
+  category?: { main?: string };
   pictures: Array<Record<string, unknown>>;
   sounds: Array<Record<string, unknown>>;
 }
@@ -419,6 +420,7 @@ function compileBackgroundObject(
     active: true,
     selectedPictureId: picture.id,
     sprite: {
+      category: { main: 'background' },
       sounds: [],
       pictures: [picture],
     },
@@ -534,6 +536,7 @@ function compileSpriteObject(
     const scale = Math.max(480 / entity.width, 270 / entity.height);
     entity.scaleX = scale;
     entity.scaleY = scale;
+    sprite.category = { main: 'background' };
     base.lock = true;
     base.rotateMethod = 'none';
   }
@@ -727,12 +730,17 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
 
   const template = project.objects[0];
   const compiledObjects: Record<string, unknown>[] = [];
+  // EntryJS stores the backmost objects last in the project object array, so
+  // both scene backgrounds and library backgrounds must follow foregrounds.
   const libraryBackgrounds: Record<string, unknown>[] = [];
+  // A legacy scene backdrop is the stage floor, so it stays behind a library
+  // background object; otherwise the library background would be hidden.
+  const sceneBackgrounds: Record<string, unknown>[] = [];
 
   for (const scene of irScenes) {
     const sceneId = sceneIdFor(scene.name);
     if (scene.background) {
-      compiledObjects.push(compileBackgroundObject(sceneId, scene.background, nextId));
+      sceneBackgrounds.push(compileBackgroundObject(sceneId, scene.background, nextId));
     }
   }
 
@@ -743,13 +751,12 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     } else {
       const libraryObject = resolvedLibraries.get(obj);
       const compiled = compileSpriteObject(obj, sceneId, template, ctx, nextId, project, libraryObject);
-      // EntryJS stores the backmost objects last in the project object array.
       if (obj.background || libraryObject?.object.kind === 'background') libraryBackgrounds.push(compiled);
       else compiledObjects.push(compiled);
     }
   }
 
-  project.objects = [...compiledObjects, ...libraryBackgrounds];
+  project.objects = [...compiledObjects, ...libraryBackgrounds, ...sceneBackgrounds];
 
   const extensions = collectExtensionModules(ir, index);
   project.aiUtilizeBlocks = extensions.aiUtilizeBlocks;
