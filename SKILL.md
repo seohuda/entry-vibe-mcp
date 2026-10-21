@@ -7,6 +7,7 @@ Use the **entry-vibe** MCP tools to turn a natural-language Entry request into a
 ## Workflow (mandatory)
 
 1. `get_build_guide({ request })` — includes `agentContract` with never-do rules
+   `search_objects({ query })` → `get_object_info({ objectId })` — 요청한 캐릭터·배경을 실제 메타데이터로 선택합니다. `local` 원본 자산과 설정된 `user` 자산을 지원하며 공식 온라인 `entry` 카탈로그는 미지원입니다.
 2. `search_blocks({ query, scope: "core" })` — default **core**; `ai` / `hardware` only when needed
 3. `get_block_schema({ types })`
 4. `validate_project({ ir })` — follow `hints`
@@ -22,6 +23,7 @@ For an existing `.ent` from another tool: `audit_ent({ filename })` first.
 - Search with `scope: "all"` unless the user asks for hardware/AI specifically
 - Put `function_create` in object scripts (use `ir.functions` + `function_call`)
 - Skip validation before compile
+- Invent library IDs or replace a requested character with Entrybot without searching
 - Retry `compile_project` with the same IR after failure — fix using `hints` first
 
 ## Quick references

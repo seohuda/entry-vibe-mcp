@@ -1,0 +1,60 @@
+{
+  "scenes": [{ "name": "우주" }],
+  "objects": [
+    {
+      "name": "우주 배경",
+      "sprite": "library",
+      "library": { "source": "local", "objectId": "local:space" },
+      "scene": "우주",
+      "scripts": []
+    },
+    {
+      "name": "로켓",
+      "sprite": "library",
+      "library": { "source": "local", "objectId": "local:rocket" },
+      "scene": "우주",
+      "x": -200,
+      "y": -80,
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "direction_absolute", "params": { "VALUE": 0 } },
+          {
+            "type": "repeat_basic",
+            "params": { "VALUE": 10 },
+            "statements": {
+              "DO": [
+                { "type": "move_direction", "params": { "VALUE": 10 } },
+                { "type": "wait_second", "params": { "SECOND": 0.1 } }
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "운석",
+      "sprite": "library",
+      "library": { "source": "local", "objectId": "local:meteor" },
+      "scene": "우주",
+      "x": 180,
+      "y": 100,
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          { "type": "direction_absolute", "params": { "VALUE": 225 } },
+          {
+            "type": "repeat_basic",
+            "params": { "VALUE": 10 },
+            "statements": {
+              "DO": [
+                { "type": "move_direction", "params": { "VALUE": 8 } },
+                { "type": "wait_second", "params": { "SECOND": 0.1 } }
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

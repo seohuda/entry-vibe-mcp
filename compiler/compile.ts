@@ -28,6 +28,14 @@ import {
 } from './validate.ts';
 import type { EntryIRFunction } from '../src/types/ir.ts';
 import { compileLearning } from './learning.ts';
+import {
+  addLibraryAttribution,
+  addLibraryMedia,
+  copyLibraryMedia,
+  createLibraryResolutionContext,
+  parseLibraryAttributions,
+  resolveIRLibraryObject,
+} from './library-media.ts';
 
 /** Collect Entry extension module lists from every block referenced in the IR. */
 export function collectExtensionModules(
@@ -141,6 +149,7 @@ function createIdFactory(reserved: Iterable<string> = []): () => string {
 }
 
 interface SkeletonSprite {
+  category?: { main?: string };
   pictures: Array<Record<string, unknown>>;
   sounds: Array<Record<string, unknown>>;
 }
@@ -411,6 +420,7 @@ function compileBackgroundObject(
     active: true,
     selectedPictureId: picture.id,
     sprite: {
+      category: { main: 'background' },
       sounds: [],
       pictures: [picture],
     },
@@ -437,6 +447,8 @@ function compileSpriteObject(
   template: Record<string, unknown>,
   ctx: CompileContext,
   nextId: () => string,
+  project: EntryProject,
+  libraryObject?: NonNullable<ReturnType<typeof resolveIRLibraryObject>>,
 ): Record<string, unknown> {
   const base = structuredClone(template) as Record<string, unknown>;
   base.id = nextId();
@@ -448,7 +460,34 @@ function compileSpriteObject(
   const sprite = base.sprite as SkeletonSprite;
   const useCustom = obj.sprite === 'custom' || (obj.pictures && obj.pictures.length > 0);
 
-  if (useCustom && obj.pictures && obj.pictures.length > 0) {
+  if (libraryObject) {
+    sprite.pictures = libraryObject.costumes.map((picture) => {
+      const marker = addLibraryMedia(project, {
+        kind: 'picture',
+        bytes: picture.bytes,
+        imageType: picture.imageType,
+        thumbnailBytes: picture.thumbnailBytes,
+      });
+      return {
+        id: nextId(),
+        name: picture.name,
+        imageType: picture.imageType,
+        dimension: picture.dimension,
+        fileurl: marker,
+        thumbUrl: marker,
+      };
+    });
+    const dimension = libraryObject.costumes[0].dimension;
+    const entity = base.entity as Record<string, number>;
+    Object.assign(entity, {
+      width: dimension.width,
+      height: dimension.height,
+      regX: dimension.width / 2,
+      regY: dimension.height / 2,
+      scaleX: 1,
+      scaleY: 1,
+    });
+  } else if (useCustom && obj.pictures && obj.pictures.length > 0) {
     sprite.pictures = obj.pictures.map((pic) => buildHostPicture(pic, nextId));
     const first = sprite.pictures[0];
     const dim = first.dimension as { width: number; height: number };
@@ -465,7 +504,15 @@ function compileSpriteObject(
     });
   }
 
-  if (obj.sounds && obj.sounds.length > 0) {
+  if (libraryObject) {
+    sprite.sounds = libraryObject.sounds.map((sound) => ({
+      id: nextId(),
+      name: sound.name,
+      duration: sound.duration,
+      ext: sound.ext,
+      fileurl: addLibraryMedia(project, { kind: 'sound', bytes: sound.bytes }),
+    }));
+  } else if (obj.sounds !== undefined) {
     sprite.sounds = obj.sounds.map((snd) => {
       const resolved = resolveHostSound(snd.path);
       return {
@@ -484,6 +531,15 @@ function compileSpriteObject(
   base.selectedPictureId = sprite.pictures[0]?.id;
 
   const entity = base.entity as Record<string, number>;
+  if (obj.background || libraryObject?.object.kind === 'background') {
+    // EntryJS initEntity fits library backgrounds to its 480×270 logical stage.
+    const scale = Math.max(480 / entity.width, 270 / entity.height);
+    entity.scaleX = scale;
+    entity.scaleY = scale;
+    sprite.category = { main: 'background' };
+    base.lock = true;
+    base.rotateMethod = 'none';
+  }
   if (typeof obj.x === 'number') entity.x = obj.x;
   if (typeof obj.y === 'number') entity.y = obj.y;
 
@@ -551,8 +607,37 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     throw new CompileError(validation.errors, validation.hints);
   }
 
-  const index = catalogIndex(catalog);
+  // Library references are always fail-closed, including the legacy strict:false mode.
+  const resolvedLibraries = new Map<EntryIRObject, NonNullable<ReturnType<typeof resolveIRLibraryObject>>>();
+  const libraryContext = createLibraryResolutionContext();
   const project = createStartProjectSkeleton();
+  try {
+    for (const attribution of parseLibraryAttributions(ir.assetAttributions ?? [])) addLibraryAttribution(project, attribution);
+  } catch (err) {
+    throw new CompileError([`invalid assetAttributions: ${err instanceof Error ? err.message : String(err)}`]);
+  }
+  for (const obj of ir.objects) {
+    try {
+      const resolved = resolveIRLibraryObject(obj, libraryContext);
+      if (resolved) {
+        addLibraryAttribution(project, resolved.object);
+        // Apply a project-wide unique-byte budget before retaining more providers' media.
+        for (const picture of resolved.costumes) addLibraryMedia(project, {
+          kind: 'picture', bytes: picture.bytes, imageType: picture.imageType,
+          thumbnailBytes: picture.thumbnailBytes,
+        });
+        for (const sound of resolved.sounds) addLibraryMedia(project, { kind: 'sound', bytes: sound.bytes });
+        resolvedLibraries.set(obj, resolved);
+      }
+    } catch (err) {
+      throw new CompileError(
+        [`object ${JSON.stringify(obj.name)}: ${err instanceof Error ? err.message : String(err)}`],
+        ['Search available objects with search_objects and use the exact returned source/objectId.'],
+      );
+    }
+  }
+
+  const index = catalogIndex(catalog);
   project.name = ir.objects[0]?.name ? `${ir.objects[0].name} 프로젝트` : '엔트리 프로젝트';
   if (typeof ir.speed === 'number' && ir.speed > 0) {
     project.speed = ir.speed;
@@ -645,11 +730,17 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
 
   const template = project.objects[0];
   const compiledObjects: Record<string, unknown>[] = [];
+  // EntryJS stores the backmost objects last in the project object array, so
+  // both scene backgrounds and library backgrounds must follow foregrounds.
+  const libraryBackgrounds: Record<string, unknown>[] = [];
+  // A legacy scene backdrop is the stage floor, so it stays behind a library
+  // background object; otherwise the library background would be hidden.
+  const sceneBackgrounds: Record<string, unknown>[] = [];
 
   for (const scene of irScenes) {
     const sceneId = sceneIdFor(scene.name);
     if (scene.background) {
-      compiledObjects.push(compileBackgroundObject(sceneId, scene.background, nextId));
+      sceneBackgrounds.push(compileBackgroundObject(sceneId, scene.background, nextId));
     }
   }
 
@@ -658,11 +749,14 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
     if (obj.kind === 'text') {
       compiledObjects.push(compileTextObject(obj, sceneId, ctx, nextId));
     } else {
-      compiledObjects.push(compileSpriteObject(obj, sceneId, template, ctx, nextId));
+      const libraryObject = resolvedLibraries.get(obj);
+      const compiled = compileSpriteObject(obj, sceneId, template, ctx, nextId, project, libraryObject);
+      if (obj.background || libraryObject?.object.kind === 'background') libraryBackgrounds.push(compiled);
+      else compiledObjects.push(compiled);
     }
   }
 
-  project.objects = compiledObjects;
+  project.objects = [...compiledObjects, ...libraryBackgrounds, ...sceneBackgrounds];
 
   const extensions = collectExtensionModules(ir, index);
   project.aiUtilizeBlocks = extensions.aiUtilizeBlocks;
@@ -679,6 +773,7 @@ export function compileProject(ir: EntryIR, options: CompileOptions = {}): Entry
  */
 export function projectForExport(project: EntryProject): EntryProject {
   const cloned = structuredClone(project);
+  copyLibraryMedia(project, cloned);
   for (const obj of cloned.objects) {
     if (Array.isArray(obj.script)) {
       obj.script = JSON.stringify(obj.script);

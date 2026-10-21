@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "objects": [
+    {
+      "id": "cat",
+      "name": "고양이",
+      "aliases": [
+        "cat",
+        "kitten",
+        "고양이 캐릭터",
+        "고양이 걷기",
+        "walk",
+        "walking",
+        "걷기",
+        "걸어가는 애니메이션"
+      ],
+      "category": "animals",
+      "categoryName": "동물",
+      "description": "두 가지 걷기 모양이 있는 주황색 고양이",
+      "kind": "sprite",
+      "license": {
+        "spdx": "MIT",
+        "attribution": "EntryVibe MCP contributors — original geometric illustrations and synthesized tone",
+        "url": "https://github.com/seohuda/entry-vibe-mcp/blob/main/LICENSE",
+        "text": "MIT License\n\nCopyright (c) 2026 EntryVibe MCP contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      },
+      "costumes": [
+        {
+          "id": "walk1",
+          "name": "고양이_걷기1",
+          "path": "media/cat-walk1.png",
+          "format": "png",
+          "width": 160,
+          "height": 160
+        },
+        {
+          "id": "walk2",
+          "name": "고양이_걷기2",
+          "path": "media/cat-walk2.png",
+          "format": "png",
+          "width": 160,
+          "height": 160
+        }
+      ],
+      "sounds": [
+        {
+          "id": "beep",
+          "name": "알림음",
+          "path": "media/beep.mp3",
+          "format": "mp3",
+          "duration": 0.444082
+        }
+      ]
+    },
+    {
+      "id": "dog",
+      "name": "강아지",
+      "aliases": [
+        "dog",
+        "puppy",
+        "개",
+        "강아지 캐릭터"
+      ],
+      "category": "animals",
+      "categoryName": "동물",
+      "description": "귀가 늘어진 갈색 강아지",
+      "kind": "sprite",
+      "license": {
+        "spdx": "MIT",
+        "attribution": "EntryVibe MCP contributors — original geometric illustrations and synthesized tone",
+        "url": "https://github.com/seohuda/entry-vibe-mcp/blob/main/LICENSE",
+        "text": "MIT License\n\nCopyright (c) 2026 EntryVibe MCP contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      },
+      "costumes": [
+        {
+          "id": "idle",
+          "name": "강아지",
+          "path": "media/dog.png",
+          "format": "png",
+          "width": 160,
+          "height": 160
+        }
+      ],
+      "sounds": [
+        {
+          "id": "beep",
+          "name": "알림음",
+          "path": "media/beep.mp3",
+          "format": "mp3",
+          "duration": 0.444082
+        }
+      ]
+    },
+    {
+      "id": "car",
+      "name": "자동차",
+      "aliases": [
+        "car",
+        "race car",
+        "racing",
+        "자동차 경주",
+        "경주용 자동차"
+      ],
+      "category": "vehicles",
+      "categoryName": "탈것",
+      "description": "경주 게임에 사용할 수 있는 빨간색 자동차",
+      "kind": "sprite",
+      "license": {
+        "spdx": "MIT",
+        "attribution": "EntryVibe MCP contributors — original geometric illustrations and synthesized tone",
+        "url": "https://github.com/seohuda/entry-vibe-mcp/blob/main/LICENSE",
+        "text": "MIT License\n\nCopyright (c) 2026 EntryVibe MCP contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      },
+      "costumes": [
+        {
+          "id": "idle",
+          "name": "자동차",
+          "path": "media/car.png",
+          "format": "png",
+          "width": 160,
+          "height": 160
+        }
+      ],
+      "sounds": []
+    },
+    {
+      "id": "rocket",
+      "name": "로켓",
+      "aliases": [
+        "rocket",
+        "spaceship",
+        "우주선"
+      ],
+      "category": "space",
+      "categoryName": "우주",
+      "description": "빨간 날개와 불꽃이 있는 로켓",
+      "kind": "sprite",
+      "license": {
+        "spdx": "MIT",
+        "attribution": "EntryVibe MCP contributors — original geometric illustrations and synthesized tone",
+        "url": "https://github.com/seohuda/entry-vibe-mcp/blob/main/LICENSE",
+        "text": "MIT License\n\nCopyright (c) 2026 EntryVibe MCP contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      },
+      "costumes": [
+        {
+          "id": "idle",
+          "name": "로켓",
+          "path": "media/rocket.png",
+          "format": "png",
+          "width": 160,
+          "height": 160
+        }
+      ],
+      "sounds": []
+    },
+    {
+      "id": "meteor",
+      "name": "운석",
+      "aliases": [
+        "meteor",
+        "asteroid",
+        "장애물",
+        "obstacle"
+      ],
+      "category": "space",
+      "categoryName": "우주",
+      "description": "우주 게임의 장애물로 사용할 수 있는 운석",
+      "kind": "sprite",
+      "license": {
+        "spdx": "MIT",
+        "attribution": "EntryVibe MCP contributors — original geometric illustrations and synthesized tone",
+        "url": "https://github.com/seohuda/entry-vibe-mcp/blob/main/LICENSE",
+        "text": "MIT License\n\nCopyright (c) 2026 EntryVibe MCP contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      },
+      "costumes": [
+        {
+          "id": "idle",
+          "name": "운석",
+          "path": "media/meteor.png",
+          "format": "png",
+          "width": 160,
+          "height": 160
+        }
+      ],
+      "sounds": []
+    },
+    {
+      "id": "space",
+      "name": "우주 배경",
+      "aliases": [
+        "space",
+        "space background",
+        "우주",
+        "별 배경",
+        "background"
+      ],
+      "category": "backgrounds",
+      "categoryName": "배경",
+      "description": "별과 행성이 있는 우주 무대 배경",
+      "kind": "background",
+      "license": {
+        "spdx": "MIT",
+        "attribution": "EntryVibe MCP contributors — original geometric illustrations and synthesized tone",
+        "url": "https://github.com/seohuda/entry-vibe-mcp/blob/main/LICENSE",
+        "text": "MIT License\n\nCopyright (c) 2026 EntryVibe MCP contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      },
+      "costumes": [
+        {
+          "id": "background",
+          "name": "우주 배경",
+          "path": "media/space.png",
+          "format": "png",
+          "width": 960,
+          "height": 540
+        }
+      ],
+      "sounds": []
+    }
+  ]
+}

@@ -1,4 +1,13 @@
 /** Intermediate representation produced by the host LLM. */
+import type { LibraryLicense } from '../library/types.ts';
+
+/** Resource notices retained when a library project is imported as custom media. */
+export interface IRAssetAttribution {
+  id: string;
+  source: string;
+  name: string;
+  license: LibraryLicense;
+}
 
 export type IRParamValue = string | number | boolean | IRBlock;
 
@@ -55,8 +64,17 @@ export interface EntryIRObject {
   /**
    * Built-in Entrybot when omitted or `"entrybot"`.
    * `"custom"` requires {@link pictures}; compiler keeps entity defaults unless pictures override size.
+   * `"library"` resolves {@link library} through a registered object provider.
    */
-  sprite?: 'entrybot' | 'custom';
+  sprite?: 'entrybot' | 'custom' | 'library';
+  /** Exact provider reference returned by search_objects; unresolved IDs are errors. */
+  library?: {
+    source: string;
+    /** Qualified stable identifier, e.g. `local:cat`. */
+    objectId: string;
+  };
+  /** Locked background layer fitted to Entry's 480×270 stage. Library backgrounds set this automatically. */
+  background?: boolean;
   /** Text box body when kind is `text`. */
   text?: string;
   /** Custom costumes from `assets/` (required when sprite is `custom`). */
@@ -133,6 +151,8 @@ export interface EntryIRLearning {
 }
 
 export interface EntryIR {
+  /** Preserve these notices when editing or re-exporting imported assets. */
+  assetAttributions?: IRAssetAttribution[];
   /** Scenes; defaults to a single "장면 1" when omitted. */
   scenes?: EntryIRScene[];
   objects: EntryIRObject[];

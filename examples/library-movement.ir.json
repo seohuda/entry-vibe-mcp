@@ -1,0 +1,27 @@
+{
+  "objects": [
+    {
+      "name": "산책하는 고양이",
+      "sprite": "library",
+      "library": { "source": "local", "objectId": "local:cat" },
+      "x": -160,
+      "y": -40,
+      "scripts": [
+        [
+          { "type": "when_run_button_click" },
+          {
+            "type": "repeat_basic",
+            "params": { "VALUE": 8 },
+            "statements": {
+              "DO": [
+                { "type": "move_direction", "params": { "VALUE": 20 } },
+                { "type": "change_to_next_shape", "params": { "DRIECTION": "next" } },
+                { "type": "wait_second", "params": { "SECOND": 0.15 } }
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

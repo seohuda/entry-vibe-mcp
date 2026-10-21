@@ -35,6 +35,9 @@ import {
   type PatchScriptMode,
 } from './ir-edit.ts';
 import { buildGuide } from './recipes.ts';
+import { getObjectLibrary } from '../src/library/index.ts';
+import { addLibraryObjectValidated } from './library-api.ts';
+import { libraryAttributionsSchema } from '../compiler/library-media.ts';
 
 const catalogScopeSchema = z
   .enum(['core', 'ai', 'hardware', 'all'])
@@ -60,13 +63,21 @@ const irObjectSchema = z.object({
   name: z.string(),
   kind: z.enum(['sprite', 'text']).optional().describe('Default sprite; use text for text boxes'),
   sprite: z
-    .enum(['entrybot', 'custom'])
+    .enum(['entrybot', 'custom', 'library'])
     .optional()
-    .describe('Default entrybot; custom requires pictures[]'),
+    .describe('Default entrybot; custom requires pictures[]; library requires library reference'),
+  library: z
+    .object({
+      source: z.string().min(1),
+      objectId: z.string().min(1),
+    })
+    .optional()
+    .describe('Exact provider source and qualified objectId returned by search_objects'),
   text: z.string().optional().describe('Required when kind=text'),
   x: z.number().optional(),
   y: z.number().optional(),
   scene: z.string().optional().describe('Scene name from ir.scenes (default: first scene)'),
+  background: z.boolean().optional().describe('고정 배경으로 무대에 맞춰 배치 (라이브러리 배경은 자동 적용)'),
   pictures: z.array(irPictureSchema).min(1).optional(),
   sounds: z
     .array(
@@ -116,6 +127,9 @@ const irSceneSchema = z.object({
 export const entryIRSchema = z.object({
   scenes: z.array(irSceneSchema).optional(),
   objects: z.array(irObjectSchema).min(1),
+  assetAttributions: libraryAttributionsSchema
+    .optional()
+    .describe('import_ent가 반환한 자산 출처·라이선스 고지를 수정/삭제하지 말고 그대로 유지하세요'),
   variables: z
     .array(
       z.object({
@@ -191,13 +205,17 @@ function errorResult(message: string) {
   };
 }
 
+function errorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
+}
+
 export function registerTools(server: McpServer): void {
   assertCatalogPresent();
 
   server.registerTool(
     'get_build_guide',
     {
-      description: `FIRST tool for any Entry build request. Matches the user's Korean/English request to recipes, recommended blocks, and an IR sketch. Then follow search_blocks → get_block_schema → validate_project → compile_project.\n\n${IR_SCHEMA_DOC}`,
+      description: `FIRST tool for any Entry build request. Matches the user's Korean/English request to recipes, real object candidates, recommended blocks, and an IR sketch. For requested characters/backgrounds follow search_objects → get_object_info before choosing a sprite, then search_blocks → get_block_schema → validate_project → verify_project → compile_project.\n\n${IR_SCHEMA_DOC}`,
       inputSchema: {
         request: z
           .string()
@@ -205,6 +223,96 @@ export function registerTools(server: McpServer): void {
       },
     },
     async ({ request }) => textResult(buildGuide(request)),
+  );
+
+  server.registerTool(
+    'search_objects',
+    {
+      description:
+        '캐릭터·배경을 한국어/영어 이름과 실제 별칭으로 검색합니다. 자동차·고양이 등 구체적인 시각 요소를 요청받으면 먼저 호출하세요. 결과는 실제 공급원 메타데이터와 안정적인 objectId입니다. 공식 Entry 온라인 라이브러리는 현재 지원하지 않으며 local은 별도 제작한 오프라인 자산입니다. 검색 실패를 Entrybot으로 조용히 대체하지 마세요.',
+      inputSchema: {
+        query: z.string().max(512).describe('이름 또는 자연어 요청: 고양이, car, 우주 배경'),
+        category: z.string().optional().describe('list_object_categories가 반환한 category id'),
+        limit: z.number().int().min(1).max(50).optional().describe('최대 결과 수 (기본 20)'),
+        source: z.string().optional().describe('공급원 필터: local, user (설정된 경우). entry는 미지원'),
+      },
+    },
+    async ({ query, category, limit, source }) => {
+      try {
+        const library = getObjectLibrary();
+        return textResult({
+          query,
+          objects: library.searchObjects(query, { category, limit, source }),
+          providers: library.listProviders(),
+        });
+      } catch (err) {
+        return errorResult(JSON.stringify({ ok: false, errors: [errorMessage(err)] }));
+      }
+    },
+  );
+
+  server.registerTool(
+    'get_object_info',
+    {
+      description:
+        '검색 결과의 정확한 objectId로 이름·분류·모든 모양/소리·크기·자산 경로·라이선스와 출처를 조회합니다. 내부 ID를 추측하지 말고 search_objects의 결과를 사용하세요. 이 도구는 가져오기 성공을 보장하지 않으며 add_library_object에서 실제 파일도 검증합니다.',
+      inputSchema: {
+        objectId: z.string().min(1).describe('search_objects가 반환한 ID, 예: local:cat'),
+      },
+    },
+    async ({ objectId }) => {
+      try {
+        return textResult({ object: getObjectLibrary().getObject(objectId) });
+      } catch (err) {
+        return errorResult(JSON.stringify({ ok: false, errors: [errorMessage(err)] }));
+      }
+    },
+  );
+
+  server.registerTool(
+    'list_object_categories',
+    {
+      description:
+        '실제 객체 공급원 데이터에서 분류와 객체 수를 조회합니다. 블록 분류를 반환하는 list_categories와 별개입니다. providers에 공식 Entry 공급원의 미지원 상태도 명시합니다.',
+      inputSchema: {
+        source: z.string().optional().describe('선택적 객체 공급원 필터'),
+      },
+    },
+    async ({ source }) => {
+      try {
+        const library = getObjectLibrary();
+        return textResult({ categories: library.listCategories(source), providers: library.listProviders() });
+      } catch (err) {
+        return errorResult(JSON.stringify({ ok: false, errors: [errorMessage(err)] }));
+      }
+    },
+  );
+
+  server.registerTool(
+    'add_library_object',
+    {
+      description: `검색한 실제 객체를 EntryIR에 추가합니다. 모양·소리 파일을 검증하고 공급원 참조를 보존하며 갱신된 ir과 validation을 반환합니다. 이름 생략 시 충돌 없는 이름을 생성하고, scene 생략 시 첫 장면에 추가합니다. 초기 프로젝트는 {objects:[]}로 시작할 수 있습니다. 캐릭터에는 시작 이벤트만 생성하므로 patch_script로 동작을 추가하세요. 배경 공급원 객체는 컴파일 시 고정된 배경으로 처리합니다. 실패 시 Entrybot을 추가하지 않습니다.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: entryIRSchema.extend({ objects: z.array(irObjectSchema) }).describe('현재 EntryIR (초기 추가 시 빈 objects 허용)'),
+        objectId: z.string().min(1).describe('search_objects가 반환한 정확한 ID'),
+        name: z.string().trim().min(1).optional().describe('선택적 표시 이름 (기존 객체와 중복 불가)'),
+        x: z.number().optional(),
+        y: z.number().optional(),
+        scene: z.string().optional().describe('ir.scenes에 선언된 장면 이름'),
+      },
+    },
+    async ({ ir, objectId, name, x, y, scene }) => {
+      try {
+        const result = addLibraryObjectValidated(ir as EntryIR, { objectId, name, x, y, scene });
+        return textResult({ ok: result.validation.valid, ...result });
+      } catch (err) {
+        return errorResult(JSON.stringify({
+          ok: false,
+          errors: [errorMessage(err)],
+          hints: ['search_objects와 get_object_info에서 실제 ID·공급원·파일을 확인하고 장면과 이름을 수정하세요.'],
+        }));
+      }
+    },
   );
 
   server.registerTool(

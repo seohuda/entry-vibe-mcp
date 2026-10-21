@@ -3,6 +3,7 @@
  */
 import {
   existsSync,
+  lstatSync,
   mkdirSync,
   readFileSync,
   readdirSync,
@@ -15,6 +16,8 @@ import { tmpdir } from 'node:os';
 import * as tar from 'tar';
 import type { EntryProject } from './skeleton.ts';
 import { ensureAssetsDir } from './assets.ts';
+import { addLibraryAttribution, parseLibraryAttributions } from './library-media.ts';
+import { MAX_LIBRARY_MANIFEST_BYTES, MAX_LIBRARY_PROJECT_BYTES, readLibraryFile } from '../src/library/media.ts';
 
 export interface UnpackedMedia {
   /** Path relative to host assets/, e.g. imported/abc.svg */
@@ -24,6 +27,10 @@ export interface UnpackedMedia {
   ext: string;
   fileId: string;
 }
+
+// node-tar names regular files File (typeflag 0), OldFile (NUL) or
+// ContiguousFile (7); devices, FIFOs and links are deliberately excluded.
+const REGULAR_FILE_TYPES = new Set(['File', 'OldFile', 'ContiguousFile']);
 
 export interface UnpackResult {
   project: EntryProject;
@@ -74,23 +81,100 @@ export function resolveEntPath(filename: string, cwd = process.cwd()): string {
  */
 export async function unpackEnt(
   entPath: string,
-  options: { cwd?: string; keepTemp?: boolean } = {},
+  options: {
+    cwd?: string;
+    keepTemp?: boolean;
+    maxEntryBytes?: number;
+    maxTotalBytes?: number;
+  } = {},
 ): Promise<UnpackResult> {
   const cwd = options.cwd ?? process.cwd();
   const absEnt =
     entPath.includes('/') || entPath.includes('\\') ? resolve(entPath) : resolveEntPath(entPath, cwd);
 
+  const maxEntryBytes = options.maxEntryBytes ?? MAX_LIBRARY_PROJECT_BYTES;
+  const maxTotalBytes = options.maxTotalBytes ?? MAX_LIBRARY_PROJECT_BYTES;
+  if (
+    !Number.isInteger(maxEntryBytes) || maxEntryBytes < 1 ||
+    !Number.isInteger(maxTotalBytes) || maxTotalBytes < 1
+  ) {
+    throw new Error('unpack byte limits must be positive integers');
+  }
+
   const stagingRoot = mkdtempSync(join(tmpdir(), 'entry-vibe-unpack-'));
   const tempDir = join(stagingRoot, 'temp');
+  let extractedBytes = 0;
+  let unsafeReason: string | undefined;
 
   try {
-    await tar.x({ file: absEnt, cwd: stagingRoot });
+    await tar.x({
+      file: absEnt,
+      cwd: stagingRoot,
+      filter: (path, entry) => {
+        if (unsafeReason) return false;
+        const reject = (reason: string): false => {
+          unsafeReason = reason;
+          return false;
+        };
+        const normalized = path.replace(/\\/g, '/');
+        if (path.includes('\0')) {
+          return reject('unsafe .ent entry: NUL byte in path');
+        }
+        if (normalized.startsWith('/') || /^[a-z]:/i.test(normalized)) {
+          return reject(`unsafe .ent entry: absolute path ${JSON.stringify(path)}`);
+        }
+        if (normalized.split('/').includes('..')) {
+          return reject(`unsafe .ent entry: path traversal ${JSON.stringify(path)}`);
+        }
+        const type = 'type' in entry ? String(entry.type) : '';
+        if (type === 'SymbolicLink' || type === 'Link') {
+          return reject(`unsafe .ent entry: link ${JSON.stringify(path)}`);
+        }
+        if (!REGULAR_FILE_TYPES.has(type) && type !== 'Directory') {
+          return reject(`unsafe .ent entry: unsupported type ${type}`);
+        }
+        const size = Number(entry.size ?? 0);
+        if (!Number.isSafeInteger(size) || size < 0) {
+          return reject(`unsafe .ent entry: invalid size for ${JSON.stringify(path)}`);
+        }
+        if (size > maxEntryBytes) {
+          return reject(`.ent entry exceeds ${maxEntryBytes} bytes: ${JSON.stringify(path)}`);
+        }
+        extractedBytes += size;
+        if (extractedBytes > maxTotalBytes) {
+          return reject(`.ent archive exceeds ${maxTotalBytes} extracted bytes`);
+        }
+        return true;
+      },
+    });
+    if (unsafeReason) {
+      throw new Error(unsafeReason);
+    }
     const projectPath = join(tempDir, 'project.json');
     if (!existsSync(projectPath)) {
       throw new Error(`invalid .ent: missing temp/project.json in ${basename(absEnt)}`);
     }
+    if (!lstatSync(projectPath).isFile()) {
+      throw new Error('invalid .ent: temp/project.json must be a regular file');
+    }
 
     const project = JSON.parse(readFileSync(projectPath, 'utf8')) as EntryProject;
+    const attributionPath = join(tempDir, 'library-attribution.json');
+    if (existsSync(attributionPath)) {
+      if (!lstatSync(attributionPath).isFile()) {
+        throw new Error('invalid library attribution: expected a regular file');
+      }
+      const document: unknown = JSON.parse(
+        readLibraryFile(tempDir, 'library-attribution.json', MAX_LIBRARY_MANIFEST_BYTES).toString('utf8'),
+      );
+      if (!document || typeof document !== 'object' ||
+          !('version' in document) || document.version !== 1 || !('objects' in document)) {
+        throw new Error('invalid library attribution document');
+      }
+      for (const attribution of parseLibraryAttributions(document.objects)) {
+        addLibraryAttribution(project, attribution);
+      }
+    }
     const assetsRoot = ensureAssetsDir(cwd);
     mkdirSync(join(assetsRoot, 'imported'), { recursive: true });
 

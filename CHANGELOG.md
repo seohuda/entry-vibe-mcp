@@ -7,6 +7,13 @@
 
 ### Added
 
+- 객체 라이브러리 공급원 추상화와 한국어·영어 메타데이터 검색, `sprite:library` IR 참조
+- MCP `search_objects`, `get_object_info`, `add_library_object`, `list_object_categories`
+- 원본 제작 로컬 객체(고양이 2모양·강아지·자동차·로켓·운석·우주 배경)와 사용자 manifest 공급원
+- 라이브러리 모양·소리 보존, 콘텐츠 해시 미디어 중복 제거, 파일·객체·프로젝트 자산 한도와 경로 검증
+- `background: true`로 배경 미디어 왕복 보존, `.ent` 라이선스 고지와 `assetAttributions` 재내보내기 지원
+- 라이브러리 이동·대화·우주 장면 예제와 오프라인 검색·가져오기·아카이브·왕복 검증 테스트
+- 공식 Entry 카탈로그 조사 기록: 공개 API 계약·재배포 권한 미확인으로 `entry` 온라인 공급원은 명시적 미지원
 - **`AGENT-GUIDE.md`** — MCP 호스트 LLM용 전체 계약 (금지 사항, 재시도 루프, OpenCode 프롬프트 템플릿)
 - 예제 `function-list.ir.json` — 함수 + 리스트 + `show_list`
 - npm 패키지 `files`에 `AGENT-GUIDE.md`, `SKILL.md` 포함
@@ -32,6 +39,15 @@
 - 컴파일 시 `aiUtilizeBlocks` / `expansionBlocks` / `hardwareLiteBlocks` /
   `externalModules` 자동 채움 (사용된 확장 블록 기준)
 - `getBlocks` 할당형(`Entry.X.getBlocks = function…`) 추출 지원
+
+### Fixed
+
+- 배경 판별을 EntryJS 계약(`sprite.category.main === "background"`)으로 통일하고, 레거시 이름 추론은 잠긴 객체에만 적용
+- 장면 배경과 라이브러리 배경을 전경 객체 뒤(최하위 레이어)에 배치 — 이전에는 배경이 전경을 가렸습니다
+- `.ent` 가져오기에서 절대 경로·`..`·심볼릭/하드 링크·비정규 항목과 누적 64 MiB 초과를 거부
+- 한 글자 검색어가 모든 객체를 부분 일치로 반환하던 문제 수정 (정확한 별칭 일치만 허용)
+- `.ent` 가져오기가 tar typeflag `0`·NUL·`7`로 기록된 일반 파일을 모두 허용하고, FIFO·장치 같은 특수 항목만 거부
+- 장면 배경과 라이브러리 배경을 함께 쓰면 라이브러리 배경이 앞, 장면 배경이 뒤에 놓이도록 층 순서 정리
 
 ## [0.1.0] - 2026-08-05
 

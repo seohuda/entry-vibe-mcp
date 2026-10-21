@@ -27,6 +27,14 @@ import {
   siblingPngPath,
   type ImageType,
 } from './assets.ts';
+import {
+  getLibraryAttributions,
+  getLibraryMedia,
+  libraryMediaKey,
+  LIBRARY_ASSET_PREFIX,
+  parseLibraryAttributions,
+  type LibraryAttribution,
+} from './library-media.ts';
 
 export interface PackOptions {
   /** Destination .ent path */
@@ -66,16 +74,32 @@ export type PendingHostSound = {
   source: { type: 'host'; absolutePath: string };
 };
 
+export type PendingLibraryPicture = {
+  kind: 'picture';
+  fileId: string;
+  source: { type: 'library'; bytes: Buffer; imageType: ImageType; thumbnailBytes?: Buffer };
+};
+
+export type PendingLibrarySound = {
+  kind: 'sound';
+  fileId: string;
+  source: { type: 'library'; bytes: Buffer };
+};
+
 export type PendingAsset =
   | PendingBuiltinPicture
   | PendingHostPicture
   | PendingBuiltinSound
-  | PendingHostSound;
+  | PendingHostSound
+  | PendingLibraryPicture
+  | PendingLibrarySound;
 
 /** Project JSON already rewritten to hash paths, plus the bytes still to stage. */
 export interface PreparedExport {
   project: EntryProject;
   assets: PendingAsset[];
+  /** Resource notices embedded beside project.json without changing Entry's schema. */
+  libraryAttributions?: LibraryAttribution[];
 }
 
 /** Entry-style opaque file id (32 hex chars; first 4 drive the ab/cd folders). */
@@ -157,14 +181,51 @@ export function prepareExport(
   options: { createFileId?: () => string } = {},
 ): PreparedExport {
   const exportable = projectForExport(project);
-  const nextFileId = options.createFileId ?? createFileId;
+  const generateFileId = options.createFileId ?? createFileId;
   const assets: PendingAsset[] = [];
+  const usedFileIds = new Set<string>();
+  const libraryIds = new Map<string, string>();
+  const reserveFileId = (id: string): string => {
+    if (!/^[0-9a-f]{32}$/.test(id)) throw new Error('media file ID must be 32 lowercase hexadecimal characters');
+    if (usedFileIds.has(id)) throw new Error('duplicate media file ID');
+    usedFileIds.add(id);
+    return id;
+  };
+  const nextFileId = () => reserveFileId(generateFileId());
+  const libraryAsset = (marker: string, kind: 'picture' | 'sound') => {
+    const media = getLibraryMedia(project, marker);
+    if (media.kind !== kind) throw new Error('library media type does not match its reference');
+    const key = libraryMediaKey(media);
+    let fileId = libraryIds.get(key);
+    if (!fileId) {
+      fileId = reserveFileId(key.slice(0, 32));
+      libraryIds.set(key, fileId);
+      if (media.kind === 'picture') {
+        assets.push({ kind: 'picture', fileId, source: {
+          type: 'library', bytes: Buffer.from(media.bytes), imageType: media.imageType,
+          thumbnailBytes: media.thumbnailBytes ? Buffer.from(media.thumbnailBytes) : undefined,
+        } });
+      } else {
+        assets.push({ kind: 'sound', fileId, source: { type: 'library', bytes: Buffer.from(media.bytes) } });
+      }
+    }
+    return { fileId, media };
+  };
 
   for (const obj of exportable.objects) {
     const sprite = obj.sprite as { pictures?: PictureAsset[]; sounds?: SoundAsset[] } | undefined;
     if (!sprite) continue;
 
     for (const picture of sprite.pictures ?? []) {
+      if (picture.fileurl?.startsWith(LIBRARY_ASSET_PREFIX)) {
+        const { fileId, media } = libraryAsset(picture.fileurl, 'picture');
+        if (media.kind !== 'picture') throw new Error('invalid library picture reference');
+        picture.filename = fileId;
+        picture.imageType = media.imageType;
+        picture.fileurl = hashFileUrl(fileId, 'image', media.imageType);
+        picture.thumbUrl = hashFileUrl(fileId, 'thumb', 'png');
+        continue;
+      }
       const fileId = nextFileId();
       const hostRel = parseHostAssetMarker(picture.fileurl) ?? parseHostAssetMarker(picture.thumbUrl);
 
@@ -203,6 +264,13 @@ export function prepareExport(
     }
 
     for (const sound of sprite.sounds ?? []) {
+      if (sound.fileurl?.startsWith(LIBRARY_ASSET_PREFIX)) {
+        const { fileId } = libraryAsset(sound.fileurl, 'sound');
+        sound.filename = fileId;
+        sound.ext = '.mp3';
+        sound.fileurl = hashFileUrl(fileId, 'sound', 'mp3');
+        continue;
+      }
       const fileId = nextFileId();
       const hostRel = parseHostAssetMarker(sound.fileurl);
 
@@ -235,7 +303,8 @@ export function prepareExport(
     }
   }
 
-  return { project: exportable, assets };
+  const libraryAttributions = parseLibraryAttributions(getLibraryAttributions(project));
+  return { project: exportable, assets, ...(libraryAttributions.length ? { libraryAttributions } : {}) };
 }
 
 /** Write hash-layout media files for a previously prepared export. */
@@ -244,15 +313,34 @@ export function writePendingAssets(
   tempDir: string,
   mediaSource: string,
 ): void {
+  // File IDs also determine archive directories; never accept caller-supplied paths.
+  const ids = new Set<string>();
+  for (const asset of assets) {
+    if (!/^[0-9a-f]{32}$/.test(asset.fileId)) throw new Error('unsafe media file ID');
+    if (ids.has(asset.fileId)) throw new Error('duplicate media file ID');
+    ids.add(asset.fileId);
+  }
   for (const asset of assets) {
     const dir = join(tempDir, subDir(asset.fileId));
     if (asset.kind === 'sound') {
-      if (asset.source.type === 'builtin') {
+      if (asset.source.type === 'library') {
+        writeBinary(join(dir, 'sound', `${asset.fileId}.mp3`), asset.source.bytes);
+      } else if (asset.source.type === 'builtin') {
         const mp3 = readFileSync(requireMedia(mediaSource, `${asset.source.stem}.mp3`));
         writeBinary(join(dir, 'sound', `${asset.fileId}.mp3`), mp3);
       } else {
         writeBinary(join(dir, 'sound', `${asset.fileId}.mp3`), readFileSync(asset.source.absolutePath));
       }
+      continue;
+    }
+
+    if (asset.source.type === 'library') {
+      const { bytes, imageType, thumbnailBytes } = asset.source;
+      const thumbnail = imageType === 'png' ? bytes : thumbnailBytes;
+      if (!thumbnail) throw new Error('library SVG requires a validated PNG thumbnail');
+      writeBinary(join(dir, 'image', `${asset.fileId}.${imageType}`), bytes);
+      writeBinary(join(dir, 'thumb', `${asset.fileId}.png`), thumbnail);
+      if (imageType === 'svg') writeBinary(join(dir, 'image', `${asset.fileId}.png`), thumbnail);
       continue;
     }
 
@@ -304,6 +392,11 @@ export async function packPrepared(
     mkdirSync(tempDir, { recursive: true });
     writePendingAssets(prepared.assets, tempDir, mediaSource);
     writeFileSync(join(tempDir, 'project.json'), JSON.stringify(prepared.project), 'utf8');
+    if (prepared.libraryAttributions?.length) {
+      const notices = parseLibraryAttributions(prepared.libraryAttributions);
+      writeFileSync(join(tempDir, 'library-attribution.json'),
+        JSON.stringify({ version: 1, objects: notices }) + '\n', 'utf8');
+    }
 
     await tar.c(
       {

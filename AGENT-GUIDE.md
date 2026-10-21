@@ -20,7 +20,9 @@
 
 ```
 1. get_build_guide({ request })     ← 항상 첫 호출
-2. search_blocks({ query, scope: "core" })
+2. search_objects({ query }) → get_object_info({ objectId })
+   add_library_object({ ir, objectId, name?, x?, y?, scene? }) ← 필요 시 증분 추가
+   search_blocks({ query, scope: "core" })
 3. get_block_schema({ types: [...] })   ← 쓸 블록마다
 4. validate_project({ ir })
 5. verify_project({ ir })               ← compile 전 권장
@@ -59,7 +61,9 @@ audit_ent({ filename })   ← name 누락, 잘못된 미디어 경로, 끊긴 fu
 | `function_create`를 오브젝트 스크립트에 넣기 | 함수는 `ir.functions[]` + `function_call`로만 정의 |
 | `validate_project` 생략하고 `compile_project` | 컴파일은 되도 Entry 런타임에서 조용히 실패할 수 있음 |
 | 검증 실패 시 같은 IR로 재시도만 반복 | `hints`를 적용하지 않으면 무한 루프만 남음 |
-| IR 전체를 매번 처음부터 다시 쓰기 | `patch_script`, `add_object` 등 **증분 편집** 툴 사용 |
+| IR 전체를 매번 처음부터 다시 쓰기 | `patch_script`, `add_object`, `add_library_object` 등 **증분 편집** 툴 사용 |
+| 자동차·고양이 요청에 이름만 바꾼 엔트리봇 넣기 | `search_objects`의 실제 객체·모양을 확인하고 선택해야 함 |
+| 공식 카탈로그 ID·다운로드 성공을 추측하기 | `entry` 공급원은 현재 미지원. 검색 결과와 공급원 상태를 그대로 전달 |
 
 ---
 
@@ -149,6 +153,32 @@ MCP 툴 호출이 불안정하거나 컨텍스트가 짧다면:
 - IR에서 `"path": "assets/파일명.png"` 형태로 참조  
 - 컴파일러가 Entry 해시 폴더(`temp/ab/cd/image/...`)로 패킹함 — **직접 경로 쓰지 말 것**
 
+### 4.7 라이브러리 객체
+
+```json
+{
+  "name": "플레이어",
+  "sprite": "library",
+  "library": { "source": "local", "objectId": "local:cat" },
+  "x": -100,
+  "scripts": [[
+    { "type": "when_run_button_click" },
+    { "type": "move_direction", "params": { "VALUE": 10 } }
+  ]]
+}
+```
+
+- 사용자의 자연어에서 객체를 골라 `search_objects`로 검색하고 `get_object_info`에서 이름·카테고리·모양·소리·라이선스를 확인합니다. 사용자가 ID를 알 필요는 없습니다.
+- 검색은 한국어·영어 이름/별칭에 대한 키워드 검색입니다. 일치하지 않는 대상을 만들어 내지 않습니다.
+- `local`은 이 저장소의 원본 제작 객체, `user`는 설정된 사용자 manifest, `entry`는 공식 온라인 카탈로그 미지원 상태입니다. 로컬 객체를 공식 Entry 객체라고 소개하지 않습니다.
+- ID와 `source`는 검색 결과 그대로 사용합니다. `library`와 `pictures`/`sounds`를 함께 설정하지 않습니다. 컴파일러가 공급원의 모양 순서·이름·소리를 보존합니다.
+- `add_library_object`는 새 IR과 검증 결과를 반환합니다. 첫 객체만 추가할 때 `ir: { "objects": [] }`를 사용할 수 있고, 일반 검증·컴파일에는 한 개 이상의 객체가 필요합니다.
+- 걷기 애니메이션은 먼저 모양이 여러 개인지 확인한 뒤 `change_to_next_shape` 등 실제 블록 스키마를 조회합니다.
+- 배경은 검색된 `kind: "background"` 객체를 사용합니다. 해당 장면의 배경으로 잠금·크기 조정됩니다.
+- `add_library_object`는 캐릭터에 시작 이벤트만 만듭니다. 반환된 IR의 첫 스레드에 `patch_script`로 동작을 추가합니다.
+- 검색 실패/알 수 없는 ID/손상된 파일은 오류입니다. 엔트리봇으로 조용히 대체하지 말고 사용할 수 있는 자산이나 지원 가능한 대안을 알립니다.
+- [공급원·manifest 안내](docs/object-library.md), [공식 Entry 조사](docs/entry-library-research.md)를 참고하세요.
+
 ---
 
 ## 5. 검색 범위 (`scope`)
@@ -193,6 +223,8 @@ MCP 툴 호출이 불안정하거나 컨텍스트가 짧다면:
 ```
 guide = get_build_guide(request)
 ir = guide.matchedRecipes[0].irSketch  // 있으면 시작점
+objects = search_objects(사용자가_요청한_객체)
+// 실제 후보를 get_object_info로 확인하고 ir의 라이브러리 참조를 구성
 
 loop:
   schemas = get_block_schema(모든_블록_타입)
@@ -228,6 +260,9 @@ compile_project({ ir, filename: "작품이름.ent" })
 | `function-list.ir.json` | 함수 + 리스트 + `show_list` (실행 결과가 무대에 보임) |
 | `two-objects.ir.json` | 오브젝트 2개 |
 | `custom-media.ir.json` | 커스텀 png/mp3 |
+| `library-movement.ir.json` | 원본 고양이의 2모양 걷기 애니메이션 |
+| `library-dialogue.ir.json` | 원본 고양이·강아지 신호 대화 |
+| `library-space.ir.json` | 원본 우주 배경·로켓·운석 |
 
 로컬 확인: `npm run example -- function-list`
 
@@ -236,6 +271,7 @@ compile_project({ ir, filename: "작품이름.ent" })
 ## 10. 체크리스트 (컴파일 직전)
 
 - [ ] `get_build_guide`를 호출했는가  
+- [ ] 요청한 객체를 `search_objects`로 찾고 `get_object_info`에서 실제 미디어·출처를 확인했는가
 - [ ] 쓴 모든 `type`에 대해 `get_block_schema`를 호출했는가  
 - [ ] `params` 키가 스키마와 일치하는가 (`VALUE`, `VARIABLE`, `LIST`, …)  
 - [ ] `statements` 키가 `DO` 등 스키마와 일치하는가  
@@ -259,12 +295,13 @@ You build Entry (playentry.org) projects ONLY through the entry-vibe MCP server.
 Rules:
 1. ALWAYS call get_build_guide({ request }) first for every new build.
 2. NEVER hand-write project.json or create .ent archives yourself — only compile_project.
-3. Workflow: get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project.
+3. Workflow: get_build_guide → search_objects → get_object_info → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project.
 4. NEVER guess block param keys — get_block_schema for every block type you emit.
 5. Functions: declare in ir.functions[]; call with function_call + NAME — never function_create in object scripts.
 6. On validate/verify failure: read errors and hints, fix IR only, re-validate — do not retry unchanged IR.
 7. Foreign .ent files: audit_ent(filename) before import_ent.
 8. For list + function patterns, start from examples/function-list.ir.json in the repo.
+9. Choose real search results for requested characters. Native online Entry catalog is unsupported; local original assets and configured user assets work. Never fabricate IDs or silently substitute Entrybot.
 
 If the repo is available, read AGENT-GUIDE.md before your first tool call.
 ```
@@ -277,12 +314,13 @@ Entry(playentry.org) 작품은 entry-vibe MCP 툴만으로 만듭니다.
 규칙:
 1. 새 작품마다 반드시 get_build_guide({ request })를 첫 호출로 실행합니다.
 2. project.json을 직접 쓰거나 .ent zip/tar를 만들지 않습니다 — compile_project만 사용합니다.
-3. 순서: get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project.
+3. 순서: get_build_guide → search_objects → get_object_info → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project.
 4. 블록 param 키를 추측하지 않습니다 — 쓸 블록마다 get_block_schema를 호출합니다.
 5. 함수는 ir.functions[]에 선언하고 function_call로 호출합니다 — 오브젝트 스크립트에 function_create 금지.
 6. validate/verify 실패 시 errors·hints를 보고 IR만 고친 뒤 재검증합니다 — 같은 IR로 compile_project 재시도 금지.
 7. 다른 도구가 만든 .ent는 import_ent 전에 audit_ent(filename)로 검사합니다.
 8. 리스트+함수 패턴은 레포의 examples/function-list.ir.json을 참고합니다.
+9. 요청한 캐릭터는 실제 검색 결과에서 고릅니다. 공식 온라인 Entry 카탈로그는 미지원이며 원본 로컬 자산·설정된 사용자 자산을 사용합니다. ID를 지어내거나 엔트리봇으로 조용히 대체하지 않습니다.
 
 레포를 읽을 수 있으면 첫 툴 호출 전 AGENT-GUIDE.md를 읽으세요.
 ```

@@ -4,6 +4,12 @@ import type { EntryIR, EntryIRObject, IRBlock, IRParamValue, Thread } from '../s
 import { catalogPath } from '../src/paths.ts';
 import { normalizeAssetRelPath, resolveHostAsset, resolveHostSound } from './assets.ts';
 import { isValidLearningType, loadLearningModelFile } from './learning.ts';
+import {
+  createLibraryResolutionContext,
+  parseLibraryAttributions,
+  resolveIRLibraryObject,
+  type LibraryResolutionContext,
+} from './library-media.ts';
 
 const DEFAULT_CATALOG = catalogPath();
 
@@ -70,6 +76,7 @@ interface ValidateContext {
   functionNames: Set<string>;
   errors: string[];
   hints: string[];
+  library: LibraryResolutionContext;
 }
 
 function validateBlock(
@@ -305,6 +312,14 @@ export function validateProject(
   const hints: string[] = [];
   const index = catalogIndex(catalog);
 
+  if (ir?.assetAttributions !== undefined) {
+    try { parseLibraryAttributions(ir.assetAttributions); }
+    catch (err) {
+      errors.push(`assetAttributions: ${err instanceof Error ? err.message : String(err)}`);
+      hints.push('Preserve valid source/id/name/license notices from imported resources.');
+    }
+  }
+
   if (!ir || !Array.isArray(ir.objects) || ir.objects.length === 0) {
     return {
       valid: false,
@@ -412,6 +427,7 @@ export function validateProject(
     functionNames,
     errors,
     hints,
+    library: createLibraryResolutionContext(),
   };
 
   (ir.functions ?? []).forEach((fn, fi) => {
@@ -513,6 +529,13 @@ function validateObject(
   sceneNames: Set<string>,
 ): void {
   const prefix = `objects[${oi}]`;
+  let libraryObject: ReturnType<typeof resolveIRLibraryObject>;
+  try {
+    libraryObject = resolveIRLibraryObject(obj, ctx.library);
+  } catch (err) {
+    pushError(ctx, `${prefix}: ${err instanceof Error ? err.message : String(err)}`,
+      'Call search_objects/get_object_info and use the exact provider source and objectId.');
+  }
   if (!obj.name || typeof obj.name !== 'string') {
     pushError(ctx, `${prefix}.name is required`);
   }
@@ -529,6 +552,9 @@ function validateObject(
   if (obj.y !== undefined && typeof obj.y !== 'number') {
     pushError(ctx, `${prefix}.y must be a number when provided`);
   }
+  if (obj.background !== undefined && typeof obj.background !== 'boolean') {
+    pushError(ctx, `${prefix}.background must be a boolean when provided`);
+  }
 
   const kind = obj.kind ?? 'sprite';
   if (kind !== 'sprite' && kind !== 'text') {
@@ -537,10 +563,11 @@ function validateObject(
   }
 
   if (kind === 'text') {
+    if (obj.background) pushError(ctx, `${prefix}: text objects cannot be backgrounds`);
     if (obj.text === undefined || typeof obj.text !== 'string') {
       pushError(ctx, `${prefix}.text is required when kind is "text"`);
     }
-    if (obj.sprite === 'custom' || obj.pictures?.length) {
+    if (obj.sprite === 'custom' || obj.sprite === 'library' || obj.library || obj.pictures?.length) {
       pushError(ctx, `${prefix}: text objects do not use sprite/pictures`);
     }
     if (!Array.isArray(obj.scripts)) {
@@ -557,11 +584,11 @@ function validateObject(
   }
 
   const sprite = obj.sprite ?? 'entrybot';
-  if (sprite !== 'entrybot' && sprite !== 'custom') {
+  if (sprite !== 'entrybot' && sprite !== 'custom' && sprite !== 'library') {
     pushError(
       ctx,
-      `${prefix}.sprite must be "entrybot" or "custom" (got ${JSON.stringify(sprite)})`,
-      'Use sprite: "entrybot" or sprite: "custom" with pictures[].',
+      `${prefix}.sprite must be "entrybot", "custom", or "library" (got ${JSON.stringify(sprite)})`,
+      'Use entrybot, custom with pictures[], or library with a verified provider reference.',
     );
   }
   if (sprite === 'custom') {
@@ -570,6 +597,8 @@ function validateObject(
     validatePictures(prefix, obj.pictures, ctx);
   }
   validateSounds(prefix, obj.sounds, ctx);
+
+  if ((obj.background || libraryObject?.object.kind === 'background') && Array.isArray(obj.scripts) && obj.scripts.length === 0) return;
 
   if (!Array.isArray(obj.scripts) || obj.scripts.length === 0) {
     pushError(
