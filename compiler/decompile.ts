@@ -449,5 +449,5 @@ export function decompileProject(
   if (!ir.learning) delete ir.learning;
   if (ir.speed === undefined) delete ir.speed;
 
-  return { ir, warnings: [...warnings, ...ctx.warnings] };
+  return { ir, warnings: [...new Set(warnings)] };
 }

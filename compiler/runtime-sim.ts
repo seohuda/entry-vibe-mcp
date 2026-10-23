@@ -32,6 +32,7 @@ interface SimContext {
   objects: Map<string, SimObjectState>;
   variables: Map<string, number | string | boolean>;
   lists: Map<string, Array<string | number>>;
+  messageQueue: string[];
   maxSteps: number;
   maxLoopIterations: number;
   steps: number;
@@ -87,6 +88,12 @@ function runBlock(block: IRBlock, ctx: SimContext, objectName: string): void {
     case 'when_run_button_click':
     case 'when_message_cast':
       return;
+    case 'message_cast':
+    case 'message_cast_wait': {
+      const message = str(block.params?.VALUE);
+      if (message) ctx.messageQueue.push(message);
+      return;
+    }
     case 'move_direction': {
       const steps = num(block.params?.VALUE, 10);
       const dx = Math.cos(rad(obj.direction - 90)) * steps;
@@ -195,6 +202,7 @@ export function simulateProject(ir: EntryIR, options: SimulateOptions = {}): Sim
     objects,
     variables,
     lists,
+    messageQueue: [],
     maxSteps,
     maxLoopIterations,
     steps: 0,
@@ -202,19 +210,62 @@ export function simulateProject(ir: EntryIR, options: SimulateOptions = {}): Sim
     warnings,
   };
 
+  const startThreads: Array<{ objectName: string; thread: Thread }> = [];
+  const messageHandlers = new Map<string, Array<{ objectName: string; thread: Thread }>>();
+
   for (const obj of ir.objects) {
     if ((obj.kind ?? 'sprite') === 'text') continue;
     for (const thread of obj.scripts) {
       if (thread.length === 0) continue;
-      const hat = index.get(thread[0].type);
+      const first = thread[0]!;
+      const hat = index.get(first.type);
       if (!hat?.isHat) {
         warnings.push(`object "${obj.name}": first block is not an event hat — skipped thread`);
         continue;
       }
-      runThread(thread.slice(1), ctx, obj.name);
+      if (first.type === 'when_run_button_click') {
+        startThreads.push({ objectName: obj.name, thread });
+        continue;
+      }
+      if (first.type === 'when_message_cast') {
+        const message = str(first.params?.VALUE);
+        if (!message) {
+          warnings.push(
+            `object "${obj.name}": when_message_cast has no message name — skipped thread`,
+          );
+          continue;
+        }
+        const handlers = messageHandlers.get(message) ?? [];
+        handlers.push({ objectName: obj.name, thread });
+        messageHandlers.set(message, handlers);
+        continue;
+      }
+      warnings.push(
+        `object "${obj.name}": event "${first.type}" is not simulated — only run-button and message events run`,
+      );
+    }
+  }
+
+  for (const start of startThreads) {
+    runThread(start.thread.slice(1), ctx, start.objectName);
+    if (ctx.truncated) break;
+  }
+
+  const missingMessages = new Set<string>();
+  while (!ctx.truncated && ctx.messageQueue.length > 0) {
+    const message = ctx.messageQueue.shift()!;
+    const handlers = messageHandlers.get(message);
+    if (!handlers || handlers.length === 0) {
+      if (!missingMessages.has(message)) {
+        missingMessages.add(message);
+        warnings.push(`message "${message}" was cast but no when_message_cast receiver handles it`);
+      }
+      continue;
+    }
+    for (const handler of handlers) {
+      runThread(handler.thread.slice(1), ctx, handler.objectName);
       if (ctx.truncated) break;
     }
-    if (ctx.truncated) break;
   }
 
   return {

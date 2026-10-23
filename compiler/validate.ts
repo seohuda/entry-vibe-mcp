@@ -29,11 +29,19 @@ const MESSAGE_BLOCK_TYPES = new Set([
   'when_message_cast',
 ]);
 
+/** Params of these types hold plain strings; anything else compiles to garbage. */
+const STRING_PARAM_TYPES = new Set(['Dropdown', 'DropdownDynamic', 'Keyboard']);
+
 export interface ValidationResult {
   valid: boolean;
   errors: string[];
   /** Repair hints aligned with errors (host LLM should apply these and retry). */
   hints: string[];
+}
+
+export interface ValidateOptions {
+  /** Assets dir to resolve picture/sound/background paths from. Overrides the host assets/ dir. */
+  assetsRoot?: string;
 }
 
 let cachedCatalog: BlockCatalog | null = null;
@@ -62,14 +70,23 @@ function pushError(ctx: ValidateContext, message: string, hint?: string): void {
   ctx.hints.push(hint ?? 'Fix the IR and call validate_project again.');
 }
 
+function nameProblem(name: unknown): string | null {
+  if (typeof name !== 'string' || name.length === 0) return 'is required';
+  if (name.trim().length === 0) return 'must not be blank';
+  if (name !== name.trim()) return 'must not start or end with whitespace';
+  return null;
+}
+
 interface ValidateContext {
   index: Map<string, BlockSchema>;
   variableNames: Set<string>;
   listNames: Set<string>;
   messageNames: Set<string>;
   functionNames: Set<string>;
+  objectNames: Set<string>;
   errors: string[];
   hints: string[];
+  assetsRoot?: string;
 }
 
 function validateBlock(
@@ -141,7 +158,44 @@ function validateBlock(
         continue;
       }
       const value = block.params[key];
-      if (isIRBlock(value)) {
+      if (STRING_PARAM_TYPES.has(paramSchema.type) && typeof value !== 'string') {
+        pushError(
+          ctx,
+          `${path}: param "${key}" (${paramSchema.type}) must be a string (got ${JSON.stringify(value)})`,
+          `Set "${key}" to a string — see get_block_schema(["${block.type}"]).`,
+        );
+        continue;
+      }
+      if (
+        paramSchema.type === 'Dropdown' &&
+        paramSchema.options?.length &&
+        typeof value === 'string' &&
+        !paramSchema.options.some((o) => o.value === value)
+      ) {
+        pushError(
+          ctx,
+          `${path}: param "${key}" (Dropdown) must be one of: ${paramSchema.options.map((o) => o.value).join(', ')} (got ${JSON.stringify(value)})`,
+          `Use an allowed ${key} value from get_block_schema(["${block.type}"]).`,
+        );
+        continue;
+      }
+      if (typeof value === 'object') {
+        if (!isIRBlock(value)) {
+          pushError(
+            ctx,
+            `${path}: param "${key}" must be a string, number, boolean, or nested block`,
+            'Replace null/array/object values with a literal or a nested IR block.',
+          );
+          continue;
+        }
+        if (typeof value.type !== 'string') {
+          pushError(
+            ctx,
+            `${path}: param "${key}" nested block "type" must be a string`,
+            'Use { "type": "<block_type>", "params": ... }.',
+          );
+          continue;
+        }
         validateBlock(value, `${path}.params.${key}`, ctx, { allowHat: false });
         continue;
       }
@@ -286,6 +340,21 @@ function validateLearning(
   }
   if (!Array.isArray(ir.learning.labels) || ir.learning.labels.length === 0) {
     errors.push('learning.labels must be a non-empty array');
+  } else {
+    const badLabel = ir.learning.labels.findIndex((label) => nameProblem(label) !== null);
+    if (badLabel >= 0) {
+      errors.push(`learning.labels[${badLabel}] ${nameProblem(ir.learning.labels[badLabel])}`);
+      hints.push('Label names must be non-empty strings with no leading/trailing spaces.');
+    }
+  }
+  const tableData = ir.learning.tableData;
+  if (
+    tableData !== undefined &&
+    tableData !== null &&
+    (typeof tableData !== 'object' || Array.isArray(tableData))
+  ) {
+    errors.push('learning.tableData must be an object (the Entry dataTable) or null');
+    hints.push('Omit tableData, pass null, or provide the trained model dataTable object.');
   }
   if (ir.learning.modelPath) {
     try {
@@ -300,6 +369,7 @@ function validateLearning(
 export function validateProject(
   ir: EntryIR,
   catalog: BlockCatalog = loadCatalog(),
+  options: ValidateOptions = {},
 ): ValidationResult {
   const errors: string[] = [];
   const hints: string[] = [];
@@ -315,9 +385,10 @@ export function validateProject(
 
   const sceneNames = new Set<string>();
   (ir.scenes ?? [{ name: '장면 1' }]).forEach((scene, si) => {
-    if (!scene?.name || typeof scene.name !== 'string') {
-      errors.push(`scenes[${si}].name is required`);
-      hints.push('Each scene needs a non-empty name string.');
+    const nameIssue = nameProblem(scene?.name);
+    if (nameIssue) {
+      errors.push(`scenes[${si}].name ${nameIssue}`);
+      hints.push('Each scene needs a non-empty name string with no leading/trailing spaces.');
       return;
     }
     if (sceneNames.has(scene.name)) {
@@ -333,7 +404,7 @@ export function validateProject(
       } else {
         try {
           normalizeAssetRelPath(scene.background.path, 'image');
-          resolveHostAsset(scene.background.path);
+          resolveHostAsset(scene.background.path, options.assetsRoot);
         } catch (err) {
           errors.push(
             `${prefix}: ${err instanceof Error ? err.message : String(err)}`,
@@ -346,9 +417,10 @@ export function validateProject(
 
   const variableNames = new Set<string>();
   (ir.variables ?? []).forEach((v, vi) => {
-    if (!v?.name || typeof v.name !== 'string') {
-      errors.push(`variables[${vi}].name is required`);
-      hints.push('Each variable needs a non-empty name string.');
+    const nameIssue = nameProblem(v?.name);
+    if (nameIssue) {
+      errors.push(`variables[${vi}].name ${nameIssue}`);
+      hints.push('Each variable needs a non-empty name string with no leading/trailing spaces.');
       return;
     }
     if (variableNames.has(v.name)) {
@@ -361,9 +433,10 @@ export function validateProject(
 
   const listNames = new Set<string>();
   (ir.lists ?? []).forEach((l, li) => {
-    if (!l?.name || typeof l.name !== 'string') {
-      errors.push(`lists[${li}].name is required`);
-      hints.push('Each list needs a non-empty name string.');
+    const nameIssue = nameProblem(l?.name);
+    if (nameIssue) {
+      errors.push(`lists[${li}].name ${nameIssue}`);
+      hints.push('Each list needs a non-empty name string with no leading/trailing spaces.');
       return;
     }
     if (listNames.has(l.name)) {
@@ -376,9 +449,10 @@ export function validateProject(
 
   const messageNames = new Set<string>();
   (ir.messages ?? []).forEach((m, mi) => {
-    if (!m?.name || typeof m.name !== 'string') {
-      errors.push(`messages[${mi}].name is required`);
-      hints.push('Each message needs a non-empty name string.');
+    const nameIssue = nameProblem(m?.name);
+    if (nameIssue) {
+      errors.push(`messages[${mi}].name ${nameIssue}`);
+      hints.push('Each message needs a non-empty name string with no leading/trailing spaces.');
       return;
     }
     if (messageNames.has(m.name)) {
@@ -391,9 +465,10 @@ export function validateProject(
 
   const functionNames = new Set<string>();
   (ir.functions ?? []).forEach((fn, fi) => {
-    if (!fn?.name || typeof fn.name !== 'string') {
-      errors.push(`functions[${fi}].name is required`);
-      hints.push('Each function needs a non-empty name string.');
+    const nameIssue = nameProblem(fn?.name);
+    if (nameIssue) {
+      errors.push(`functions[${fi}].name ${nameIssue}`);
+      hints.push('Each function needs a non-empty name string with no leading/trailing spaces.');
       return;
     }
     if (functionNames.has(fn.name)) {
@@ -410,8 +485,10 @@ export function validateProject(
     listNames,
     messageNames,
     functionNames,
+    objectNames: new Set<string>(),
     errors,
     hints,
+    assetsRoot: options.assetsRoot,
   };
 
   (ir.functions ?? []).forEach((fn, fi) => {
@@ -471,7 +548,7 @@ function validatePictures(prefix: string, pictures: EntryIRObject['pictures'], c
     }
     try {
       normalizeAssetRelPath(pic.path, 'image');
-      resolveHostAsset(pic.path);
+      resolveHostAsset(pic.path, ctx.assetsRoot);
     } catch (err) {
       pushError(
         ctx,
@@ -495,7 +572,7 @@ function validateSounds(prefix: string, sounds: EntryIRObject['sounds'], ctx: Va
     }
     try {
       normalizeAssetRelPath(snd.path, 'sound');
-      resolveHostSound(snd.path);
+      resolveHostSound(snd.path, ctx.assetsRoot);
     } catch (err) {
       pushError(
         ctx,
@@ -513,8 +590,17 @@ function validateObject(
   sceneNames: Set<string>,
 ): void {
   const prefix = `objects[${oi}]`;
-  if (!obj.name || typeof obj.name !== 'string') {
-    pushError(ctx, `${prefix}.name is required`);
+  const nameIssue = nameProblem(obj.name);
+  if (nameIssue) {
+    pushError(ctx, `${prefix}.name ${nameIssue}`);
+  } else if (ctx.objectNames.has(obj.name)) {
+    pushError(
+      ctx,
+      `${prefix}: duplicate object name ${JSON.stringify(obj.name)}`,
+      'Object names must be unique — editing tools address objects by name.',
+    );
+  } else {
+    ctx.objectNames.add(obj.name);
   }
   if (obj.scene !== undefined && !sceneNames.has(obj.scene)) {
     pushError(

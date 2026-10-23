@@ -5,12 +5,14 @@ import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { compileProject, CompileError } from '../compiler/compile.ts';
 import { auditCompiledProject } from '../compiler/audit-export.ts';
 import { decompileProject } from '../compiler/decompile.ts';
-import { packPrepared, prepareExport, writePreparedJson } from '../compiler/pack.ts';
+import { prepareExport, writePreparedOutputs } from '../compiler/pack.ts';
 import { smokeTestProject } from '../compiler/smoke.ts';
 import { simulateProject } from '../compiler/runtime-sim.ts';
 import { verifyProject } from '../compiler/verify.ts';
 import { unpackEnt, resolveEntPath } from '../compiler/unpack.ts';
 import { validateProject } from '../compiler/validate.ts';
+import { diffProjects } from '../compiler/diff.ts';
+import { repairProject } from '../compiler/repair.ts';
 import type { EntryIR, EntryIRLearning, EntryIRObject, EntryIRScene, Thread } from '../src/types/ir.ts';
 import { outputDir } from '../src/paths.ts';
 import { ensureAssetsDir } from '../compiler/assets.ts';
@@ -102,6 +104,11 @@ const irLearningSchema = z.object({
   version: z.number().optional(),
   recordTime: z.number().optional(),
   trainParam: z.record(z.union([z.string(), z.number()])).optional(),
+  tableData: z
+    .record(z.unknown())
+    .nullable()
+    .optional()
+    .describe('Optional Entry dataTable (columns/records) for the trained model'),
   modelPath: z
     .string()
     .optional()
@@ -278,6 +285,66 @@ export function registerTools(server: McpServer): void {
   );
 
   server.registerTool(
+    'repair_project',
+    {
+      description: `Propose deterministic, non-destructive IR repairs. Defaults to dryRun=true and never guesses block types, params, media, or semantic declarations unless allowSemanticAdditions=true. Review changes/remainingErrors, apply repairedIR, then re-validate.\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        ir: z.record(z.unknown()).describe('Full EntryIR project to inspect and repair'),
+        dryRun: z
+          .boolean()
+          .optional()
+          .describe('Return the proposal without applying it (default true)'),
+        allowSemanticAdditions: z
+          .boolean()
+          .optional()
+          .describe('Add missing scenes, variables, lists, and messages (default false)'),
+      },
+    },
+    async ({ ir, dryRun, allowSemanticAdditions }) => {
+      try {
+        return textResult(
+          repairProject(ir, {
+            dryRun: dryRun ?? true,
+            policy: { allowSemanticAdditions: allowSemanticAdditions ?? false },
+          }),
+        );
+      } catch (err) {
+        return errorResult(
+          JSON.stringify(
+            {
+              ok: false,
+              errors: [err instanceof Error ? err.message : String(err)],
+              hints: ['Inspect the IR shape and retry; repair_project never mutates the input.'],
+            },
+            null,
+            2,
+          ),
+        );
+      }
+    },
+  );
+
+  server.registerTool(
+    'diff_project',
+    {
+      description: `Compare two EntryIR versions structurally. Returns added/removed/modified changes, per-section summary, media changes, warnings, and truncation info. Set maxChanges to bound each change list (default 200).\n\n${IR_SCHEMA_DOC}`,
+      inputSchema: {
+        before: entryIRSchema.describe('Baseline EntryIR project'),
+        after: entryIRSchema.describe('Updated EntryIR project'),
+        maxChanges: z
+          .number()
+          .int()
+          .min(1)
+          .max(2000)
+          .optional()
+          .describe('Max changes per added/removed/modified list (default 200)'),
+      },
+    },
+    async ({ before, after, maxChanges }) =>
+      textResult(diffProjects(before, after, { maxChanges })),
+  );
+
+  server.registerTool(
     'compile_project',
     {
       description: `Compile EntryIR into an Entry .ent file (tar.gz) plus matching .json sidecar in the host cwd. On failure returns { ok:false, errors, hints } — fix IR and retry. Pass overwrite:true to replace existing files.\n\n${IR_SCHEMA_DOC}`,
@@ -326,8 +393,11 @@ export function registerTools(server: McpServer): void {
 
         const project = compileProject(ir as EntryIR);
         const prepared = prepareExport(project);
-        writePreparedJson(prepared, jsonPath);
-        await packPrepared(prepared, { outputPath: entPath });
+        await writePreparedOutputs(prepared, {
+          entPath,
+          jsonPath,
+          overwrite: overwrite === true,
+        });
         return textResult({
           ok: true,
           entPath,
@@ -374,10 +444,28 @@ export function registerTools(server: McpServer): void {
     async ({ filename }) => {
       try {
         const entPath = resolveEntPath(filename);
-        ensureAssetsDir();
-        const { project, media } = await unpackEnt(entPath);
-        const exportAudit = auditCompiledProject(project);
-        const { ir, warnings } = decompileProject(project, { media });
+        // Audit archive members before copying any media into the host assets directory.
+        const inspected = await unpackEnt(entPath, { extractMedia: false });
+        const exportAudit = auditCompiledProject(inspected.project, {
+          tarPaths: inspected.tarPaths,
+        });
+        if (!exportAudit.ok) {
+          return errorResult(
+            JSON.stringify(
+              {
+                ok: false,
+                errors: exportAudit.errors,
+                hints: exportAudit.hints,
+                audit: exportAudit,
+              },
+              null,
+              2,
+            ),
+          );
+        }
+        // Only a fully audited archive is allowed to populate assets/imported/.
+        const { media } = await unpackEnt(entPath);
+        const { ir, warnings } = decompileProject(inspected.project, { media });
         return textResult({
           ok: true,
           ir,
@@ -620,8 +708,8 @@ export function registerTools(server: McpServer): void {
     async ({ filename }) => {
       try {
         const entPath = resolveEntPath(filename);
-        const { project } = await unpackEnt(entPath);
-        const audit = auditCompiledProject(project);
+        const { project, tarPaths } = await unpackEnt(entPath, { extractMedia: false });
+        const audit = auditCompiledProject(project, { tarPaths });
         return textResult({ ok: audit.ok, audit });
       } catch (err) {
         return errorResult(

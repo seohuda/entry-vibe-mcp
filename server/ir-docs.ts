@@ -51,6 +51,7 @@ EntryIR JSON schema:
   "learning"?: {
     "type": "image"|"speech"|"text"|"number"|"regression"|"logisticRegression"|"cluster"|"decisiontree"|"svm",
     "labels": string[],
+    "tableData"?: object,
     "modelPath"?: "assets/learning/model.json"
   },
   "speed"?: number

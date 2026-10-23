@@ -87,10 +87,10 @@ export function normalizeAssetRelPath(
 function resolveUnderAssets(
   input: string,
   kind: AssetKind,
-  root?: string,
+  assetsRoot?: string,
 ): { relativePath: string; absolutePath: string; fileName: string } {
   const relativePath = normalizeAssetRelPath(input, kind);
-  const dir = assetsDir(root);
+  const dir = assetsRoot ?? assetsDir();
   const absolutePath = join(dir, ...relativePath.split('/'));
 
   const relToAssets = relative(dir, absolutePath);
@@ -128,8 +128,8 @@ function resolveUnderAssets(
   };
 }
 
-export function resolveHostAsset(input: string, root?: string): ResolvedHostAsset {
-  const base = resolveUnderAssets(input, 'image', root);
+export function resolveHostAsset(input: string, assetsRoot?: string): ResolvedHostAsset {
+  const base = resolveUnderAssets(input, 'image', assetsRoot);
   const ext = extname(base.relativePath).toLowerCase() as '.png' | '.svg';
   return {
     ...base,
@@ -137,8 +137,8 @@ export function resolveHostAsset(input: string, root?: string): ResolvedHostAsse
   };
 }
 
-export function resolveHostSound(input: string, root?: string): ResolvedHostSound {
-  return resolveUnderAssets(input, 'sound', root);
+export function resolveHostSound(input: string, assetsRoot?: string): ResolvedHostSound {
+  return resolveUnderAssets(input, 'sound', assetsRoot);
 }
 
 /** Marker prefix stored on picture/sound fileurl before prepareExport rewrites it. */

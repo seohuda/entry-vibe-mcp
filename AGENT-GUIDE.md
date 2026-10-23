@@ -10,7 +10,7 @@
 ## 0. 한 줄 요약
 
 **IR JSON을 직접 조립해서 zip/tar로 묶지 마세요.**  
-반드시 MCP 툴 `validate_project` → `verify_project` → `compile_project`로 `.ent`를 만드세요.
+반드시 MCP 툴 `validate_project` → `(repair_project)` → `verify_project` → `compile_project`로 `.ent`를 만드세요.
 
 ---
 
@@ -23,16 +23,18 @@
 2. search_blocks({ query, scope: "core" })
 3. get_block_schema({ types: [...] })   ← 쓸 블록마다
 4. validate_project({ ir })
-5. verify_project({ ir })               ← compile 전 권장
-6. compile_project({ ir, filename? })
+5. repair_project({ ir })               ← 검증 실패 시 선택, dryRun 기본 true
+6. verify_project({ ir })               ← compile 전 권장
+7. compile_project({ ir, filename? })
 ```
 
 `validate_project` 또는 `verify_project`가 `ok: false`이면:
 
 1. `errors`와 `hints`를 **전부** 읽는다  
-2. IR만 수정한다 (project.json / .ent 직접 수정 금지)  
-3. 4번부터 **다시** 호출한다  
-4. `ok: true`가 될 때까지 반복한 뒤에만 `compile_project`
+2. 자동 수정이 가능한 구조 문제는 `repair_project`로 제안을 받고 `changes`·`remainingErrors`를 확인한다  
+3. IR만 수정한다 (project.json / .ent 직접 수정 금지)  
+4. 4번부터 **다시** 호출한다  
+5. `ok: true`가 될 때까지 반복한 뒤에만 `compile_project`
 
 기존 `.ent`를 고칠 때:
 
@@ -167,6 +169,8 @@ MCP 툴 호출이 불안정하거나 컨텍스트가 짧다면:
 | 툴 | 하는 일 |
 |----|---------|
 | `validate_project` | IR ↔ 카탈로그 (param 키, hat, 참조) |
+| `repair_project` | 안전한 IR 자동 수정 제안 (`dryRun` 기본 true, 선택적 선언 추가) |
+| `diff_project` | 두 IR의 구조적 차이 (`added`/`removed`/`modified`/`warnings`) |
 | `smoke_test_project` | validate + 컴파일 + 구조 |
 | `verify_project` | smoke + export 감사 + pack 왕복 + (선택) 시뮬 |
 | `audit_ent` | **이미 만든** `.ent` 파일만 검사 (수정 안 함) |
@@ -259,10 +263,10 @@ You build Entry (playentry.org) projects ONLY through the entry-vibe MCP server.
 Rules:
 1. ALWAYS call get_build_guide({ request }) first for every new build.
 2. NEVER hand-write project.json or create .ent archives yourself — only compile_project.
-3. Workflow: get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project.
+3. Workflow: get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → (repair_project) → verify_project → compile_project.
 4. NEVER guess block param keys — get_block_schema for every block type you emit.
 5. Functions: declare in ir.functions[]; call with function_call + NAME — never function_create in object scripts.
-6. On validate/verify failure: read errors and hints, fix IR only, re-validate — do not retry unchanged IR.
+6. On validate/verify failure: read errors and hints, fix IR only (or use repair_project for safe suggestions), re-validate — do not retry unchanged IR.
 7. Foreign .ent files: audit_ent(filename) before import_ent.
 8. For list + function patterns, start from examples/function-list.ir.json in the repo.
 
@@ -277,10 +281,10 @@ Entry(playentry.org) 작품은 entry-vibe MCP 툴만으로 만듭니다.
 규칙:
 1. 새 작품마다 반드시 get_build_guide({ request })를 첫 호출로 실행합니다.
 2. project.json을 직접 쓰거나 .ent zip/tar를 만들지 않습니다 — compile_project만 사용합니다.
-3. 순서: get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project.
+3. 순서: get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → (repair_project) → verify_project → compile_project.
 4. 블록 param 키를 추측하지 않습니다 — 쓸 블록마다 get_block_schema를 호출합니다.
 5. 함수는 ir.functions[]에 선언하고 function_call로 호출합니다 — 오브젝트 스크립트에 function_create 금지.
-6. validate/verify 실패 시 errors·hints를 보고 IR만 고친 뒤 재검증합니다 — 같은 IR로 compile_project 재시도 금지.
+6. validate/verify 실패 시 errors·hints를 보고 IR만 고치거나 repair_project의 안전한 제안을 적용한 뒤 재검증합니다 — 같은 IR로 compile_project 재시도 금지.
 7. 다른 도구가 만든 .ent는 import_ent 전에 audit_ent(filename)로 검사합니다.
 8. 리스트+함수 패턴은 레포의 examples/function-list.ir.json을 참고합니다.
 

@@ -230,10 +230,10 @@ Windsurf, Cline 등 다수 호스트는 Claude Desktop과 동일하게 `mcpServe
 호스트 LLM은 **반드시** 다음 순서로 툴을 호출합니다 (Unity/Adobe MCP처럼 AI가 툴만으로 작업을 끝내는 계약입니다).
 
 ```
-get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → verify_project → compile_project
+get_build_guide → search_blocks(scope=core) → get_block_schema → validate_project → (repair_project) → verify_project → compile_project
 ```
 
-`validate_project` / `compile_project`가 `errors`와 `hints`를 반환하면 힌트대로 IR을 고친 뒤 다시 검증·컴파일합니다. 사람이 IR을 손댈 필요는 없습니다.
+`validate_project` / `compile_project`가 `errors`와 `hints`를 반환하면 힌트대로 IR을 고친 뒤 다시 검증·컴파일합니다. 구조적인 문제는 `repair_project`로 안전한 자동 수정 제안을 받을 수 있습니다 (`dryRun` 기본 `true`, 블록 타입·param 추측 없음). 두 버전의 IR을 비교할 때는 `diff_project`를 사용합니다.
 
 결과물은 MCP 호스트가 서버를 실행한 디렉터리에 `<이름>.ent`와 확인용 `<이름>.json`으로 바로 저장됩니다(별도의 `output/` 하위 폴더를 만들지 않습니다). 같은 이름의 파일이 이미 있으면 실수로 덮어쓰지 않도록 컴파일을 거부합니다 — 다른 이름을 쓰거나 `overwrite: true`를 넘기면 됩니다. `.ent`는 [엔트리 오프라인](https://playentry.org/download)에서 열거나 playentry.org에 업로드하면 됩니다.
 
@@ -254,6 +254,8 @@ OpenCode 등 다른 호스트에서는 시스템 프롬프트나 `@AGENT-GUIDE.m
 | `search_blocks` | 블록 검색 (`query`, `scope` 기본 core, `category`, `limit`) |
 | `get_block_schema` | 블록 상세 스키마 (param 키, statement 키, 기본값) |
 | `validate_project` | IR 검증 — `{ valid, errors, hints }` |
+| `repair_project` | 안전한 IR 자동 수정 제안 — `dryRun` 기본 `true`, 선택적 선언 추가 |
+| `diff_project` | 두 IR의 구조적 차이 — `added`/`removed`/`modified`/`warnings` |
 | `smoke_test_project` | validate + compile + 구조 검사 |
 | `verify_project` | smoke + roundtrip + 시뮬레이션 (권장) |
 | `simulate_project` | 코어 블록 실행 예측 (x/y/변수) |
@@ -275,7 +277,9 @@ flowchart LR
   Guide --> Search[search_blocks scope=core]
   Search --> Schema[get_block_schema]
   Schema --> Validate[validate_project]
-  Validate --> Compile[compile_project]
+  Validate --> Repair[repair_project optional]
+  Repair --> Compile[compile_project]
+  Validate --> Compile
   Compile --> Out[.ent]
 
   Catalog[blocks.json] --> Validate
